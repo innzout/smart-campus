@@ -1,0 +1,57 @@
+[
+  {
+    "id": "evt-1",
+    "title": "Parent–Teacher Meeting",
+    "description": "Class-wise meetings with subject teachers. Quarterly report cards are handed over in person.",
+    "category": "PTM",
+    "date": "2026-10-14",
+    "time": "09:30",
+    "venue": "Respective classrooms",
+    "organiser": "School Office",
+    "forClasses": "all"
+  },
+  {
+    "id": "evt-2",
+    "title": "Deepavali Celebration",
+    "description": "Cultural programmes by students, followed by sweets distribution. Students may wear traditional dress.",
+    "category": "Cultural",
+    "date": "2026-10-16",
+    "time": "10:00",
+    "venue": "School Assembly Ground",
+    "organiser": "Cultural Committee",
+    "forClasses": "all"
+  },
+  {
+    "id": "evt-3",
+    "title": "Inter-House Sports Meet",
+    "description": "Track and field events for classes 6 to 10. Parents are welcome to attend and cheer.",
+    "category": "Sports",
+    "date": "2026-10-29",
+    "time": "08:00",
+    "venue": "School Playground",
+    "organiser": "Physical Education Dept",
+    "forClasses": "all"
+  },
+  {
+    "id": "evt-4",
+    "title": "Science Exhibition",
+    "description": "Students present working models and charts. Judged by teachers from neighbouring schools.",
+    "category": "Academic",
+    "date": "2026-11-06",
+    "time": "09:30",
+    "venue": "School Auditorium",
+    "organiser": "Science Department",
+    "forClasses": "all"
+  },
+  {
+    "id": "evt-5",
+    "title": "Annual Day",
+    "description": "The school’s flagship celebration — dance, drama, prize distribution and the Chief Guest’s address.",
+    "category": "Cultural",
+    "date": "2026-11-20",
+    "time": "17:00",
+    "venue": "School Auditorium",
+    "organiser": "Cultural Committee",
+    "forClasses": "all"
+  }
+]

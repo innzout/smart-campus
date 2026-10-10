@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ntf-1",
+    "userId": "par-8A-10",
+    "title": "Vimal was marked absent",
+    "body": "Your child was not present at morning attendance. If this is unexpected, please contact the class teacher.",
+    "kind": "attendance",
+    "createdOn": "2026-10-07",
+    "read": false,
+    "link": "/attendance"
+  },
+  {
+    "id": "ntf-2",
+    "userId": "par-8A-10",
+    "title": "Term 2 fees are due",
+    "body": "Tuition and bus fees for Term 2 are due shortly. You can pay online from the Fees page.",
+    "kind": "fee",
+    "createdOn": "2026-10-10",
+    "read": false,
+    "link": "/fees"
+  },
+  {
+    "id": "ntf-3",
+    "userId": "par-8A-10",
+    "title": "Quarterly report card published",
+    "body": "The Quarterly Examination report card is now available to view and download.",
+    "kind": "result",
+    "createdOn": "2026-10-07",
+    "read": true,
+    "link": "/results"
+  },
+  {
+    "id": "ntf-4",
+    "userId": "par-8A-10",
+    "title": "Parent–Teacher Meeting this Saturday",
+    "body": "Class 8-A meets at 9:30 AM in Room 21. Report cards will be handed over in person.",
+    "kind": "event",
+    "createdOn": "2026-10-09",
+    "read": false,
+    "link": "/circulars"
+  },
+  {
+    "id": "ntf-5",
+    "userId": "par-8A-10",
+    "title": "Bus Route 3 timing changed",
+    "body": "The Kalapatti Road stop will now be reached ten minutes earlier from Monday.",
+    "kind": "transport",
+    "createdOn": "2026-09-26",
+    "read": true,
+    "link": "/transport"
+  },
+  {
+    "id": "ntf-6",
+    "userId": "par-8A-10",
+    "title": "New homework in Mathematics",
+    "body": "Exercise 4.2 — Linear Equations, due in two days.",
+    "kind": "homework",
+    "createdOn": "2026-10-11",
+    "read": false,
+    "link": "/homework"
+  },
+  {
+    "id": "ntf-7",
+    "userId": "all",
+    "title": "Deepavali holidays announced",
+    "body": "The school will remain closed for Deepavali. Buses will not operate.",
+    "kind": "system",
+    "createdOn": "2026-10-05",
+    "read": true,
+    "link": "/circulars"
+  }
+]

@@ -1,0 +1,8642 @@
+[
+  {
+    "id": "hws-hw-1-stu-6A-01",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-02",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-03",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-04",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-05",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-06",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-07",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-08",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-09",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-10",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-11",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-12",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-13",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-14",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-15",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-16",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-17",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-18",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-19",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-20",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-21",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-22",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-23",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-24",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-25",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-26",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-27",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-28",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-1-stu-6A-29",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-1-stu-6A-30",
+    "homeworkId": "hw-1",
+    "studentId": "stu-6A-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-01",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-02",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-03",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-04",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-05",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-06",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-07",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-08",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-09",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-10",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-11",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-12",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-13",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-14",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-15",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-16",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-17",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-18",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-19",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-20",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-21",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-22",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-23",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-24",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-2-stu-6A-25",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-26",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-27",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-28",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-29",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-2-stu-6A-30",
+    "homeworkId": "hw-2",
+    "studentId": "stu-6A-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-3-stu-6A-01",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-02",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-03",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-04",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-05",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-06",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-07",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-08",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-09",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-10",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-11",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-12",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-13",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-14",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-15",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-16",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-17",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-18",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-19",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-20",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-21",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-22",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-23",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-24",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-25",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-26",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-27",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-28",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-29",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-3-stu-6A-30",
+    "homeworkId": "hw-3",
+    "studentId": "stu-6A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-01",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-02",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-03",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-04",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-05",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-06",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-07",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-08",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-09",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-10",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-11",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-12",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-13",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-14",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-15",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-16",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-17",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-18",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-19",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-20",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-21",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-22",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-23",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-24",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-25",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-26",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-27",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-28",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-29",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-4-stu-6A-30",
+    "homeworkId": "hw-4",
+    "studentId": "stu-6A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-01",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-02",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-03",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-04",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-05",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-06",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-07",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-08",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-09",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-10",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-11",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-12",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-13",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-14",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-15",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-16",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-17",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-18",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-19",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-20",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-21",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-22",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-23",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-24",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-25",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-26",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-27",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-28",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-29",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-5-stu-6A-30",
+    "homeworkId": "hw-5",
+    "studentId": "stu-6A-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-01",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-02",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-03",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-04",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-05",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-06",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-07",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-08",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-09",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-10",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-11",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-12",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-13",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-14",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-15",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-16",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-17",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-18",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-19",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-20",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-21",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-22",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-23",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-24",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-25",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-26",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-27",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-28",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-29",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-6-stu-6A-30",
+    "homeworkId": "hw-6",
+    "studentId": "stu-6A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-01",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-02",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-03",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-04",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-05",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-06",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-07",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-08",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-09",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-10",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-11",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-12",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-13",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-14",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-15",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-16",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-17",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-18",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-19",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-20",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-21",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-22",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-23",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-24",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-25",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-26",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-27",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-28",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-7-stu-7A-29",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-7-stu-7A-30",
+    "homeworkId": "hw-7",
+    "studentId": "stu-7A-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-01",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-02",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-03",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-04",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-05",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-06",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-07",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-08",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-09",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-10",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-11",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-12",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-13",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-14",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-15",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-16",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-17",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-18",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-19",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-20",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-21",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-22",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-23",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-24",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-8-stu-7A-25",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-26",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-27",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-28",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-29",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-8-stu-7A-30",
+    "homeworkId": "hw-8",
+    "studentId": "stu-7A-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-9-stu-7A-01",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-02",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-03",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-04",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-05",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-06",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-07",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-08",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-09",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-10",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-11",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-12",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-13",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-14",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-15",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-16",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-17",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-18",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-19",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-20",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-21",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-22",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-23",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-24",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-25",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-26",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-27",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-28",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-29",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-9-stu-7A-30",
+    "homeworkId": "hw-9",
+    "studentId": "stu-7A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-01",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-02",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-03",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-04",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-05",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-06",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-07",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-08",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-09",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-10",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-11",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-12",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-13",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-14",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-15",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-16",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-17",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-18",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-19",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-20",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-21",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-22",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-23",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-24",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-25",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-26",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-27",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-28",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-29",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-10-stu-7A-30",
+    "homeworkId": "hw-10",
+    "studentId": "stu-7A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-01",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-02",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-03",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-04",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-05",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-06",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-07",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-08",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-09",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-10",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-11",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-12",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-13",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-14",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-15",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-16",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-17",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-18",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-19",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-20",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-21",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-22",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-23",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-24",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-25",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-26",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-27",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-28",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-29",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-11-stu-7A-30",
+    "homeworkId": "hw-11",
+    "studentId": "stu-7A-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-01",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-02",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-03",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-04",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-05",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-06",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-07",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-08",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-09",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-10",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-11",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-12",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-13",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-14",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-15",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-16",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-17",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-18",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-19",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-20",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-21",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-22",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-23",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-24",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-25",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-26",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-27",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-28",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-29",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-12-stu-7A-30",
+    "homeworkId": "hw-12",
+    "studentId": "stu-7A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-01",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-02",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-03",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-04",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-05",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-06",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-07",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-08",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-09",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-10",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-11",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-12",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-13",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-14",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-15",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-16",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-17",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-18",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-19",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-20",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-21",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-22",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-23",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-24",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-25",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-13-stu-8A-26",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-27",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-28",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-29",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-13-stu-8A-30",
+    "homeworkId": "hw-13",
+    "studentId": "stu-8A-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-01",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-02",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-03",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-04",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-05",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-06",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-07",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-08",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-09",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-10",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-11",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-12",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-13",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-14",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-15",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-16",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-17",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-18",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-19",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-20",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-21",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-22",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-23",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-24",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-25",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-26",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-27",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-14-stu-8A-28",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-29",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-14-stu-8A-30",
+    "homeworkId": "hw-14",
+    "studentId": "stu-8A-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-15-stu-8A-01",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-02",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-03",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-04",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-05",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-06",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-07",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-08",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-09",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-10",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-11",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-12",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-13",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-14",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-15",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-16",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-17",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-18",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-19",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-20",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-21",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-22",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-23",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-24",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-25",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-26",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-27",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-28",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-29",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-15-stu-8A-30",
+    "homeworkId": "hw-15",
+    "studentId": "stu-8A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-01",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-02",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-03",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-04",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-05",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-06",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-07",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-08",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-09",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-10",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-11",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-12",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-13",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-14",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-15",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-16",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-17",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-18",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-19",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-20",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-21",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-22",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-23",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-24",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-25",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-26",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-27",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-28",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-29",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-16-stu-8A-30",
+    "homeworkId": "hw-16",
+    "studentId": "stu-8A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-01",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-02",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-03",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-04",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-05",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-06",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-07",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-08",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-09",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-10",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-11",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-12",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-13",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-14",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-15",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-16",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-17",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-18",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-19",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-20",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-21",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-22",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-23",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-24",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-25",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-26",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-27",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-28",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-29",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-17-stu-8A-30",
+    "homeworkId": "hw-17",
+    "studentId": "stu-8A-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-01",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-02",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-03",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-04",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-05",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-06",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-07",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-08",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-09",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-10",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-11",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-12",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-13",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-14",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-15",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-16",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-17",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-18",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-19",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-20",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-21",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-22",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-23",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-24",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-25",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-26",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-27",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-28",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-29",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-18-stu-8A-30",
+    "homeworkId": "hw-18",
+    "studentId": "stu-8A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-01",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-02",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-03",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-04",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-05",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-06",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-07",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-08",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-09",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-10",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-11",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-12",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-13",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-14",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-15",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-16",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-17",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-18",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-19",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-20",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-21",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-22",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-23",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-24",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-25",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-19-stu-8B-26",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-27",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-28",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-29",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-19-stu-8B-30",
+    "homeworkId": "hw-19",
+    "studentId": "stu-8B-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-01",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-02",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-03",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-04",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-05",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-06",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-07",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-08",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-09",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-10",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-11",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-12",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-13",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-14",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-15",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-16",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-17",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-18",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-19",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-20",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-21",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-22",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-23",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-24",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-25",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-26",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-27",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-20-stu-8B-28",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-29",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-20-stu-8B-30",
+    "homeworkId": "hw-20",
+    "studentId": "stu-8B-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-21-stu-8B-01",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-02",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-03",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-04",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-05",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-06",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-07",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-08",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-09",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-10",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-11",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-12",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-13",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-14",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-15",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-16",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-17",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-18",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-19",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-20",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-21",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-22",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-23",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-24",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-25",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-26",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-27",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-28",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-29",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-21-stu-8B-30",
+    "homeworkId": "hw-21",
+    "studentId": "stu-8B-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-01",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-02",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-03",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-04",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-05",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-06",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-07",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-08",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-09",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-10",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-11",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-12",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-13",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-14",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-15",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-16",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-17",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-18",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-19",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-20",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-21",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-22",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-23",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-24",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-25",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-26",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-27",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-28",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-29",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-22-stu-8B-30",
+    "homeworkId": "hw-22",
+    "studentId": "stu-8B-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-01",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-02",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-03",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-04",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-05",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-06",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-07",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-08",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-09",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-10",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-11",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-12",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-13",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-14",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-15",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-16",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-17",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-18",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-19",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-20",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-21",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-22",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-23",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-24",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-25",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-26",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-27",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-28",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-29",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-23-stu-8B-30",
+    "homeworkId": "hw-23",
+    "studentId": "stu-8B-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-01",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-02",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-03",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-04",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-05",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-06",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-07",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-08",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-09",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-10",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-11",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-12",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-13",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-14",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-15",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-16",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-17",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-18",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-19",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-20",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-21",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-22",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-23",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-24",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-25",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-26",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-27",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-28",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-29",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-24-stu-8B-30",
+    "homeworkId": "hw-24",
+    "studentId": "stu-8B-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-01",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-02",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-03",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-04",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-05",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-06",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-07",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-08",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-09",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-10",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-11",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-12",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-13",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-14",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-15",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-16",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-17",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-18",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-19",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-20",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-21",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-22",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-23",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-24",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-25",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-26",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-27",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-25-stu-9A-28",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-29",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-25-stu-9A-30",
+    "homeworkId": "hw-25",
+    "studentId": "stu-9A-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-01",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-02",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-03",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-04",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-05",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-06",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-07",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-08",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-09",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-10",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-11",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-12",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-13",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-14",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-15",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-16",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-17",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-18",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-19",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-20",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-21",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-22",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-23",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-24",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-25",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-26",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-27",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-28",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-26-stu-9A-29",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-26-stu-9A-30",
+    "homeworkId": "hw-26",
+    "studentId": "stu-9A-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-27-stu-9A-01",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-02",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-03",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-04",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-05",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-06",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-07",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-08",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-09",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-10",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-11",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-12",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-13",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-14",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-15",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-16",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-17",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-18",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-19",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-20",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-21",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-22",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-23",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-24",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-25",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-26",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-27",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-28",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-29",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-27-stu-9A-30",
+    "homeworkId": "hw-27",
+    "studentId": "stu-9A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-01",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-02",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-03",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-04",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-05",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-06",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-07",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-08",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-09",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-10",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-11",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-12",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-13",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-14",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-15",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-16",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-17",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-18",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-19",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-20",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-21",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-22",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-23",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-24",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-25",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-26",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-27",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-28",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-29",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-28-stu-9A-30",
+    "homeworkId": "hw-28",
+    "studentId": "stu-9A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-01",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-02",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-03",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-04",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-05",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-06",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-07",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-08",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-09",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-10",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-11",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-12",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-13",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-14",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-15",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-16",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-17",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-18",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-19",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-20",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-21",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-22",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-23",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-24",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-25",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-26",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-27",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-28",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-29",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-29-stu-9A-30",
+    "homeworkId": "hw-29",
+    "studentId": "stu-9A-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-01",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-02",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-03",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-04",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-05",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-06",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-07",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-08",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-09",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-10",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-11",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-12",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-13",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-14",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-15",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-16",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-17",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-18",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-19",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-20",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-21",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-22",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-23",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-24",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-25",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-26",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-27",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-28",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-29",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-30-stu-9A-30",
+    "homeworkId": "hw-30",
+    "studentId": "stu-9A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-01",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-02",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-02",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-03",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-03",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-04",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-04",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-05",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-05",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-06",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-06",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-07",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-07",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-08",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-08",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-09",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-10",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-10",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-11",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-11",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-12",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-12",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-13",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-13",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-14",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-14",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-15",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-15",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-16",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-16",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-17",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-18",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-18",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-19",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-19",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-20",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-20",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-21",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-21",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-22",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-22",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-23",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-23",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-24",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-24",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-25",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-26",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-26",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-31-stu-10A-27",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-27",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-28",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-28",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-29",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-29",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-31-stu-10A-30",
+    "homeworkId": "hw-31",
+    "studentId": "stu-10A-30",
+    "done": true,
+    "submittedOn": "2026-10-09",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-01",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-01",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-02",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-02",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-03",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-03",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-04",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-04",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-05",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-05",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-06",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-06",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-07",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-07",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-08",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-09",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-09",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-10",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-10",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-11",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-11",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-12",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-12",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-13",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-13",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-14",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-14",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-15",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-15",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-16",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-17",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-17",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-18",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-18",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-19",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-19",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-20",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-20",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-21",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-21",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-22",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-22",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-23",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-23",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-24",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-32-stu-10A-25",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-25",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Well done"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-26",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-26",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Good"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-27",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-27",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-28",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-28",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-29",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-29",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-32-stu-10A-30",
+    "homeworkId": "hw-32",
+    "studentId": "stu-10A-30",
+    "done": true,
+    "submittedOn": "2026-10-10",
+    "remark": "Neat work"
+  },
+  {
+    "id": "hws-hw-33-stu-10A-01",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-02",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-02",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-03",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-04",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-05",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-05",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-06",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-07",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-08",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-08",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-09",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-10",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-11",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-11",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-12",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-13",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-14",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-14",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-15",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-16",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-17",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-17",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-18",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-19",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-20",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-20",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-21",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-22",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-23",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-23",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-24",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-25",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-26",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-26",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-27",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-28",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-29",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-29",
+    "done": true,
+    "submittedOn": "2026-10-11",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-33-stu-10A-30",
+    "homeworkId": "hw-33",
+    "studentId": "stu-10A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-01",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-01",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-02",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-03",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-04",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-04",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-05",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-06",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-07",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-07",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-08",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-09",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-10",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-10",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-11",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-12",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-13",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-13",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-14",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-15",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-16",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-16",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-17",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-18",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-19",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-19",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-20",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-21",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-22",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-22",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-23",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-24",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-25",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-25",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-26",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-27",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-28",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-28",
+    "done": true,
+    "submittedOn": "2026-10-12",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-29",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-34-stu-10A-30",
+    "homeworkId": "hw-34",
+    "studentId": "stu-10A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-01",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-02",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-02",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-03",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-03",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-04",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-05",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-05",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-06",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-06",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-07",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-08",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-08",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-09",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-09",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-10",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-11",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-11",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-12",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-12",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-13",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-14",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-14",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-15",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-15",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-16",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-17",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-17",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-18",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-18",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-19",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-20",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-20",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-21",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-21",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-22",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-23",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-23",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-24",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-24",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-25",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-26",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-26",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-27",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-27",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-28",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-29",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-29",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-35-stu-10A-30",
+    "homeworkId": "hw-35",
+    "studentId": "stu-10A-30",
+    "done": true,
+    "submittedOn": "2026-10-13",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-01",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-01",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-02",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-02",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-03",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-03",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-04",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-04",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-05",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-05",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-06",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-06",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-07",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-07",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-08",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-08",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-09",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-09",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-10",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-10",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-11",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-11",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-12",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-12",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-13",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-13",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-14",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-14",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-15",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-15",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-16",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-16",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-17",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-17",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-18",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-18",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-19",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-19",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-20",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-20",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-21",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-21",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-22",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-22",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-23",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-23",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-24",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-24",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-25",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-25",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-26",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-26",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-27",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-27",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-28",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-28",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-29",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-29",
+    "done": true,
+    "submittedOn": "2026-10-14",
+    "remark": ""
+  },
+  {
+    "id": "hws-hw-36-stu-10A-30",
+    "homeworkId": "hw-36",
+    "studentId": "stu-10A-30",
+    "done": false,
+    "submittedOn": null,
+    "remark": ""
+  }
+]

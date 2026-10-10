@@ -1,0 +1,108 @@
+[
+  {
+    "id": "bok-1",
+    "title": "Ponniyin Selvan (Part 1)",
+    "author": "Kalki Krishnamurthy",
+    "category": "Tamil Literature",
+    "copies": 5,
+    "shelf": "A-01",
+    "forGrades": [
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bok-2",
+    "title": "Thirukkural with Explanation",
+    "author": "Thiruvalluvar",
+    "category": "Tamil Literature",
+    "copies": 8,
+    "shelf": "A-02",
+    "forGrades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bok-3",
+    "title": "Wings of Fire",
+    "author": "A.P.J. Abdul Kalam",
+    "category": "Biography",
+    "copies": 6,
+    "shelf": "B-03",
+    "forGrades": [
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bok-4",
+    "title": "The Jungle Book",
+    "author": "Rudyard Kipling",
+    "category": "Fiction",
+    "copies": 4,
+    "shelf": "C-01",
+    "forGrades": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": "bok-5",
+    "title": "Malgudi Days",
+    "author": "R.K. Narayan",
+    "category": "Fiction",
+    "copies": 5,
+    "shelf": "C-02",
+    "forGrades": [
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "bok-6",
+    "title": "Tell Me Why — Science",
+    "author": "Arvind Gupta",
+    "category": "Science",
+    "copies": 7,
+    "shelf": "D-01",
+    "forGrades": [
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "id": "bok-7",
+    "title": "Atlas of India",
+    "author": "Oxford",
+    "category": "Reference",
+    "copies": 3,
+    "shelf": "D-04",
+    "forGrades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "bok-8",
+    "title": "Mathematics Olympiad Workbook",
+    "author": "RMO Trust",
+    "category": "Mathematics",
+    "copies": 4,
+    "shelf": "E-02",
+    "forGrades": [
+      9,
+      10
+    ]
+  }
+]

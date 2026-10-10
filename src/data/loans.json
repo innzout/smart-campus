@@ -1,0 +1,326 @@
+[
+  {
+    "id": "lon-stu-6A-01",
+    "bookId": "bok-1",
+    "studentId": "stu-6A-01",
+    "borrowedOn": "2026-10-07",
+    "dueOn": "2026-10-21",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-6A-06",
+    "bookId": "bok-6",
+    "studentId": "stu-6A-06",
+    "borrowedOn": "2026-09-28",
+    "dueOn": "2026-10-12",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-6A-11",
+    "bookId": "bok-3",
+    "studentId": "stu-6A-11",
+    "borrowedOn": "2026-09-25",
+    "dueOn": "2026-10-09",
+    "returnedOn": null,
+    "fine": 4
+  },
+  {
+    "id": "lon-stu-6A-16",
+    "bookId": "bok-8",
+    "studentId": "stu-6A-16",
+    "borrowedOn": "2026-10-08",
+    "dueOn": "2026-10-22",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-6A-21",
+    "bookId": "bok-5",
+    "studentId": "stu-6A-21",
+    "borrowedOn": "2026-10-01",
+    "dueOn": "2026-10-15",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-6A-26",
+    "bookId": "bok-2",
+    "studentId": "stu-6A-26",
+    "borrowedOn": "2026-09-30",
+    "dueOn": "2026-10-14",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-7A-01",
+    "bookId": "bok-7",
+    "studentId": "stu-7A-01",
+    "borrowedOn": "2026-09-21",
+    "dueOn": "2026-10-05",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-7A-06",
+    "bookId": "bok-4",
+    "studentId": "stu-7A-06",
+    "borrowedOn": "2026-09-23",
+    "dueOn": "2026-10-07",
+    "returnedOn": null,
+    "fine": 8
+  },
+  {
+    "id": "lon-stu-7A-11",
+    "bookId": "bok-1",
+    "studentId": "stu-7A-11",
+    "borrowedOn": "2026-09-29",
+    "dueOn": "2026-10-13",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-7A-16",
+    "bookId": "bok-6",
+    "studentId": "stu-7A-16",
+    "borrowedOn": "2026-09-21",
+    "dueOn": "2026-10-05",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-7A-21",
+    "bookId": "bok-3",
+    "studentId": "stu-7A-21",
+    "borrowedOn": "2026-10-01",
+    "dueOn": "2026-10-15",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-7A-26",
+    "bookId": "bok-8",
+    "studentId": "stu-7A-26",
+    "borrowedOn": "2026-10-01",
+    "dueOn": "2026-10-15",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8A-01",
+    "bookId": "bok-5",
+    "studentId": "stu-8A-01",
+    "borrowedOn": "2026-09-23",
+    "dueOn": "2026-10-07",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8A-06",
+    "bookId": "bok-2",
+    "studentId": "stu-8A-06",
+    "borrowedOn": "2026-10-03",
+    "dueOn": "2026-10-17",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8A-11",
+    "bookId": "bok-7",
+    "studentId": "stu-8A-11",
+    "borrowedOn": "2026-09-25",
+    "dueOn": "2026-10-09",
+    "returnedOn": null,
+    "fine": 4
+  },
+  {
+    "id": "lon-stu-8A-16",
+    "bookId": "bok-4",
+    "studentId": "stu-8A-16",
+    "borrowedOn": "2026-10-02",
+    "dueOn": "2026-10-16",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8A-21",
+    "bookId": "bok-1",
+    "studentId": "stu-8A-21",
+    "borrowedOn": "2026-10-06",
+    "dueOn": "2026-10-20",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8A-26",
+    "bookId": "bok-6",
+    "studentId": "stu-8A-26",
+    "borrowedOn": "2026-10-08",
+    "dueOn": "2026-10-22",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8B-01",
+    "bookId": "bok-3",
+    "studentId": "stu-8B-01",
+    "borrowedOn": "2026-09-29",
+    "dueOn": "2026-10-13",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8B-06",
+    "bookId": "bok-8",
+    "studentId": "stu-8B-06",
+    "borrowedOn": "2026-10-07",
+    "dueOn": "2026-10-21",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8B-11",
+    "bookId": "bok-5",
+    "studentId": "stu-8B-11",
+    "borrowedOn": "2026-09-21",
+    "dueOn": "2026-10-05",
+    "returnedOn": null,
+    "fine": 12
+  },
+  {
+    "id": "lon-stu-8B-16",
+    "bookId": "bok-2",
+    "studentId": "stu-8B-16",
+    "borrowedOn": "2026-09-30",
+    "dueOn": "2026-10-14",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-8B-21",
+    "bookId": "bok-7",
+    "studentId": "stu-8B-21",
+    "borrowedOn": "2026-09-24",
+    "dueOn": "2026-10-08",
+    "returnedOn": null,
+    "fine": 6
+  },
+  {
+    "id": "lon-stu-8B-26",
+    "bookId": "bok-4",
+    "studentId": "stu-8B-26",
+    "borrowedOn": "2026-09-23",
+    "dueOn": "2026-10-07",
+    "returnedOn": null,
+    "fine": 8
+  },
+  {
+    "id": "lon-stu-9A-01",
+    "bookId": "bok-1",
+    "studentId": "stu-9A-01",
+    "borrowedOn": "2026-09-29",
+    "dueOn": "2026-10-13",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-9A-06",
+    "bookId": "bok-6",
+    "studentId": "stu-9A-06",
+    "borrowedOn": "2026-09-27",
+    "dueOn": "2026-10-11",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-9A-11",
+    "bookId": "bok-3",
+    "studentId": "stu-9A-11",
+    "borrowedOn": "2026-09-27",
+    "dueOn": "2026-10-11",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-9A-16",
+    "bookId": "bok-8",
+    "studentId": "stu-9A-16",
+    "borrowedOn": "2026-10-08",
+    "dueOn": "2026-10-22",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-9A-21",
+    "bookId": "bok-5",
+    "studentId": "stu-9A-21",
+    "borrowedOn": "2026-10-01",
+    "dueOn": "2026-10-15",
+    "returnedOn": null,
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-9A-26",
+    "bookId": "bok-2",
+    "studentId": "stu-9A-26",
+    "borrowedOn": "2026-09-23",
+    "dueOn": "2026-10-07",
+    "returnedOn": null,
+    "fine": 8
+  },
+  {
+    "id": "lon-stu-10A-01",
+    "bookId": "bok-7",
+    "studentId": "stu-10A-01",
+    "borrowedOn": "2026-09-29",
+    "dueOn": "2026-10-13",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-10A-06",
+    "bookId": "bok-4",
+    "studentId": "stu-10A-06",
+    "borrowedOn": "2026-09-26",
+    "dueOn": "2026-10-10",
+    "returnedOn": null,
+    "fine": 2
+  },
+  {
+    "id": "lon-stu-10A-11",
+    "bookId": "bok-1",
+    "studentId": "stu-10A-11",
+    "borrowedOn": "2026-09-23",
+    "dueOn": "2026-10-07",
+    "returnedOn": null,
+    "fine": 8
+  },
+  {
+    "id": "lon-stu-10A-16",
+    "bookId": "bok-6",
+    "studentId": "stu-10A-16",
+    "borrowedOn": "2026-10-08",
+    "dueOn": "2026-10-22",
+    "returnedOn": "2026-10-10",
+    "fine": 0
+  },
+  {
+    "id": "lon-stu-10A-21",
+    "bookId": "bok-3",
+    "studentId": "stu-10A-21",
+    "borrowedOn": "2026-09-22",
+    "dueOn": "2026-10-06",
+    "returnedOn": null,
+    "fine": 10
+  },
+  {
+    "id": "lon-stu-10A-26",
+    "bookId": "bok-8",
+    "studentId": "stu-10A-26",
+    "borrowedOn": "2026-09-30",
+    "dueOn": "2026-10-14",
+    "returnedOn": null,
+    "fine": 0
+  }
+]

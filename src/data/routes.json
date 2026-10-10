@@ -1,0 +1,106 @@
+[
+  {
+    "id": "rt-1",
+    "name": "Route 1 — Gandhipuram",
+    "busNo": "TN 38 AX 1204",
+    "driverName": "R. Murugesan",
+    "driverPhone": "+91 99445 21001",
+    "fee": 9000,
+    "stops": [
+      {
+        "name": "Gandhipuram Bus Stand",
+        "time": "07:00"
+      },
+      {
+        "name": "Cross Cut Road",
+        "time": "07:12"
+      },
+      {
+        "name": "Sivananda Colony",
+        "time": "07:24"
+      },
+      {
+        "name": "Thudiyalur Road",
+        "time": "07:36"
+      }
+    ]
+  },
+  {
+    "id": "rt-2",
+    "name": "Route 2 — Peelamedu",
+    "busNo": "TN 38 AX 1205",
+    "driverName": "K. Chinnasamy",
+    "driverPhone": "+91 99445 21002",
+    "fee": 9000,
+    "stops": [
+      {
+        "name": "Peelamedu Signal",
+        "time": "07:00"
+      },
+      {
+        "name": "Hope College",
+        "time": "07:12"
+      },
+      {
+        "name": "Nehru Stadium",
+        "time": "07:24"
+      },
+      {
+        "name": "Avinashi Road",
+        "time": "07:36"
+      }
+    ]
+  },
+  {
+    "id": "rt-3",
+    "name": "Route 3 — Saravanampatti",
+    "busNo": "TN 38 AX 1206",
+    "driverName": "S. Velmurugan",
+    "driverPhone": "+91 99445 21003",
+    "fee": 7500,
+    "stops": [
+      {
+        "name": "Saravanampatti Junction",
+        "time": "07:00"
+      },
+      {
+        "name": "Kalapatti Road",
+        "time": "07:12"
+      },
+      {
+        "name": "KCT Gate",
+        "time": "07:24"
+      },
+      {
+        "name": "Vilankurichi",
+        "time": "07:36"
+      }
+    ]
+  },
+  {
+    "id": "rt-4",
+    "name": "Route 4 — R.S. Puram",
+    "busNo": "TN 38 AX 1207",
+    "driverName": "M. Palanivel",
+    "driverPhone": "+91 99445 21004",
+    "fee": 10500,
+    "stops": [
+      {
+        "name": "R.S. Puram West",
+        "time": "07:00"
+      },
+      {
+        "name": "DB Road",
+        "time": "07:12"
+      },
+      {
+        "name": "Race Course",
+        "time": "07:24"
+      },
+      {
+        "name": "Puliakulam",
+        "time": "07:36"
+      }
+    ]
+  }
+]

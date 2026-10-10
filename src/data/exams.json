@@ -1,0 +1,202 @@
+[
+  {
+    "id": "exm-6-ut1",
+    "name": "Unit Test 1",
+    "shortName": "UT1",
+    "term": 1,
+    "grade": 6,
+    "startsOn": "2026-06-13",
+    "endsOn": "2026-06-19",
+    "published": true
+  },
+  {
+    "id": "exm-6-quarterly",
+    "name": "Quarterly Examination",
+    "shortName": "Quarterly",
+    "term": 1,
+    "grade": 6,
+    "startsOn": "2026-09-01",
+    "endsOn": "2026-09-07",
+    "published": true
+  },
+  {
+    "id": "exm-6-halfyearly",
+    "name": "Half-Yearly Examination",
+    "shortName": "Half-Yearly",
+    "term": 2,
+    "grade": 6,
+    "startsOn": "2026-12-05",
+    "endsOn": "2026-12-11",
+    "published": false
+  },
+  {
+    "id": "exm-6-annual",
+    "name": "Annual Examination",
+    "shortName": "Annual",
+    "term": 3,
+    "grade": 6,
+    "startsOn": "2027-04-09",
+    "endsOn": "2027-04-15",
+    "published": false
+  },
+  {
+    "id": "exm-7-ut1",
+    "name": "Unit Test 1",
+    "shortName": "UT1",
+    "term": 1,
+    "grade": 7,
+    "startsOn": "2026-06-13",
+    "endsOn": "2026-06-19",
+    "published": true
+  },
+  {
+    "id": "exm-7-quarterly",
+    "name": "Quarterly Examination",
+    "shortName": "Quarterly",
+    "term": 1,
+    "grade": 7,
+    "startsOn": "2026-09-01",
+    "endsOn": "2026-09-07",
+    "published": true
+  },
+  {
+    "id": "exm-7-halfyearly",
+    "name": "Half-Yearly Examination",
+    "shortName": "Half-Yearly",
+    "term": 2,
+    "grade": 7,
+    "startsOn": "2026-12-05",
+    "endsOn": "2026-12-11",
+    "published": false
+  },
+  {
+    "id": "exm-7-annual",
+    "name": "Annual Examination",
+    "shortName": "Annual",
+    "term": 3,
+    "grade": 7,
+    "startsOn": "2027-04-09",
+    "endsOn": "2027-04-15",
+    "published": false
+  },
+  {
+    "id": "exm-8-ut1",
+    "name": "Unit Test 1",
+    "shortName": "UT1",
+    "term": 1,
+    "grade": 8,
+    "startsOn": "2026-06-13",
+    "endsOn": "2026-06-19",
+    "published": true
+  },
+  {
+    "id": "exm-8-quarterly",
+    "name": "Quarterly Examination",
+    "shortName": "Quarterly",
+    "term": 1,
+    "grade": 8,
+    "startsOn": "2026-09-01",
+    "endsOn": "2026-09-07",
+    "published": true
+  },
+  {
+    "id": "exm-8-halfyearly",
+    "name": "Half-Yearly Examination",
+    "shortName": "Half-Yearly",
+    "term": 2,
+    "grade": 8,
+    "startsOn": "2026-12-05",
+    "endsOn": "2026-12-11",
+    "published": false
+  },
+  {
+    "id": "exm-8-annual",
+    "name": "Annual Examination",
+    "shortName": "Annual",
+    "term": 3,
+    "grade": 8,
+    "startsOn": "2027-04-09",
+    "endsOn": "2027-04-15",
+    "published": false
+  },
+  {
+    "id": "exm-9-ut1",
+    "name": "Unit Test 1",
+    "shortName": "UT1",
+    "term": 1,
+    "grade": 9,
+    "startsOn": "2026-06-13",
+    "endsOn": "2026-06-19",
+    "published": true
+  },
+  {
+    "id": "exm-9-quarterly",
+    "name": "Quarterly Examination",
+    "shortName": "Quarterly",
+    "term": 1,
+    "grade": 9,
+    "startsOn": "2026-09-01",
+    "endsOn": "2026-09-07",
+    "published": true
+  },
+  {
+    "id": "exm-9-halfyearly",
+    "name": "Half-Yearly Examination",
+    "shortName": "Half-Yearly",
+    "term": 2,
+    "grade": 9,
+    "startsOn": "2026-12-05",
+    "endsOn": "2026-12-11",
+    "published": false
+  },
+  {
+    "id": "exm-9-annual",
+    "name": "Annual Examination",
+    "shortName": "Annual",
+    "term": 3,
+    "grade": 9,
+    "startsOn": "2027-04-09",
+    "endsOn": "2027-04-15",
+    "published": false
+  },
+  {
+    "id": "exm-10-ut1",
+    "name": "Unit Test 1",
+    "shortName": "UT1",
+    "term": 1,
+    "grade": 10,
+    "startsOn": "2026-06-13",
+    "endsOn": "2026-06-19",
+    "published": true
+  },
+  {
+    "id": "exm-10-quarterly",
+    "name": "Quarterly Examination",
+    "shortName": "Quarterly",
+    "term": 1,
+    "grade": 10,
+    "startsOn": "2026-09-01",
+    "endsOn": "2026-09-07",
+    "published": true
+  },
+  {
+    "id": "exm-10-halfyearly",
+    "name": "Half-Yearly Examination",
+    "shortName": "Half-Yearly",
+    "term": 2,
+    "grade": 10,
+    "startsOn": "2026-12-05",
+    "endsOn": "2026-12-11",
+    "published": false
+  },
+  {
+    "id": "exm-10-annual",
+    "name": "Annual Examination",
+    "shortName": "Annual",
+    "term": 3,
+    "grade": 10,
+    "startsOn": "2027-04-09",
+    "endsOn": "2027-04-15",
+    "published": false
+  }
+]

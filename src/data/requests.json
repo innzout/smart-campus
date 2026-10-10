@@ -1,0 +1,68 @@
+[
+  {
+    "id": "req-1",
+    "ref": "REQ/2026/101",
+    "raisedBy": "par-8A-10",
+    "aboutStudentId": "stu-8A-10",
+    "title": "Leave for two days — family function",
+    "category": "Leave",
+    "description": "Requesting leave on Thursday and Friday for a family wedding in Madurai. Kindly permit.",
+    "status": "in-progress",
+    "createdOn": "2026-10-08",
+    "updates": [
+      {
+        "on": "2026-10-09",
+        "note": "Acknowledged by the school office."
+      }
+    ]
+  },
+  {
+    "id": "req-2",
+    "ref": "REQ/2026/102",
+    "raisedBy": "par-8A-10",
+    "aboutStudentId": "stu-8A-10",
+    "title": "Bonafide certificate required",
+    "category": "Certificate",
+    "description": "Bonafide certificate needed for a bank scholarship application. Kindly issue at the earliest.",
+    "status": "resolved",
+    "createdOn": "2026-09-29",
+    "updates": [
+      {
+        "on": "2026-09-30",
+        "note": "Received at the school office."
+      },
+      {
+        "on": "2026-10-01",
+        "note": "Certificate issued. Please collect from the office."
+      }
+    ]
+  },
+  {
+    "id": "req-3",
+    "ref": "REQ/2026/103",
+    "raisedBy": "par-6A-05",
+    "aboutStudentId": "stu-6A-05",
+    "title": "Request to change bus stop",
+    "category": "Transport",
+    "description": "We have shifted house to Vilankurichi. Requesting a change of boarding point on Route 3.",
+    "status": "open",
+    "createdOn": "2026-10-09",
+    "updates": []
+  },
+  {
+    "id": "req-4",
+    "ref": "REQ/2026/104",
+    "raisedBy": "usr-t1",
+    "title": "Fan not working in Room 21",
+    "category": "Facility",
+    "description": "The ceiling fan near the last bench has not been working for a week. Children are finding it difficult in the afternoon.",
+    "status": "in-progress",
+    "createdOn": "2026-10-06",
+    "updates": [
+      {
+        "on": "2026-10-07",
+        "note": "Acknowledged by the school office."
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Smart Campus Companion — timetable, attendance, assignments, results, fees, events and campus services in one place."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Smart Campus Companion</title>
+    <script>
+      // Apply the stored theme before first paint so there is no flash of the wrong mode.
+      (function () {
+        try {
+          var stored = localStorage.getItem('scc.theme');
+          var theme =
+            stored && stored !== 'system'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {
+          /* private mode — fall through to the light default */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

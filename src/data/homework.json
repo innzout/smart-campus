@@ -1,0 +1,362 @@
+[
+  {
+    "id": "hw-1",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-2",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-3",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-4",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-5",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-6",
+    "classId": "cls-6A",
+    "subjectId": "sub-6-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  },
+  {
+    "id": "hw-7",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-8",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-9",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-10",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-11",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-12",
+    "classId": "cls-7A",
+    "subjectId": "sub-7-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  },
+  {
+    "id": "hw-13",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-14",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-15",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-16",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-17",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-18",
+    "classId": "cls-8A",
+    "subjectId": "sub-8-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  },
+  {
+    "id": "hw-19",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-20",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-21",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-22",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-23",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-24",
+    "classId": "cls-8B",
+    "subjectId": "sub-8-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  },
+  {
+    "id": "hw-25",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-26",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-27",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-28",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-29",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-30",
+    "classId": "cls-9A",
+    "subjectId": "sub-9-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  },
+  {
+    "id": "hw-31",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-tam",
+    "title": "திருக்குறள் 10 பாடல்கள் மனப்பாடம்",
+    "description": "Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-09",
+    "assignedById": "usr-t1"
+  },
+  {
+    "id": "hw-32",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-mat",
+    "title": "Exercise 4.2 — Linear Equations",
+    "description": "Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.",
+    "assignedOn": "2026-10-07",
+    "dueOn": "2026-10-10",
+    "assignedById": "usr-t2"
+  },
+  {
+    "id": "hw-33",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-sci",
+    "title": "Diagram: Parts of a Flower",
+    "description": "Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.",
+    "assignedOn": "2026-10-08",
+    "dueOn": "2026-10-11",
+    "assignedById": "usr-t4"
+  },
+  {
+    "id": "hw-34",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-eng",
+    "title": "Letter to the Headmaster",
+    "description": "Write a formal letter requesting leave for two days. Minimum 120 words.",
+    "assignedOn": "2026-10-09",
+    "dueOn": "2026-10-12",
+    "assignedById": "usr-t3"
+  },
+  {
+    "id": "hw-35",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-soc",
+    "title": "Map work — Rivers of Tamil Nadu",
+    "description": "Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-13",
+    "assignedById": "usr-t5"
+  },
+  {
+    "id": "hw-36",
+    "classId": "cls-10A",
+    "subjectId": "sub-10-csc",
+    "title": "HTML practice",
+    "description": "Create a simple web page about your favourite festival using headings, lists and an image.",
+    "assignedOn": "2026-10-11",
+    "dueOn": "2026-10-14",
+    "assignedById": "usr-t6"
+  }
+]

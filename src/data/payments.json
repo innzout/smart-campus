@@ -1,0 +1,6712 @@
+[
+  {
+    "id": "pay-stu-6A-01-0",
+    "studentId": "stu-6A-01",
+    "feeId": "fee-stu-6A-01-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026878012",
+    "receiptNo": "RCP/2026/101"
+  },
+  {
+    "id": "pay-stu-6A-01-2",
+    "studentId": "stu-6A-01",
+    "feeId": "fee-stu-6A-01-2",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026115600",
+    "receiptNo": "RCP/2026/102"
+  },
+  {
+    "id": "pay-stu-6A-01-3",
+    "studentId": "stu-6A-01",
+    "feeId": "fee-stu-6A-01-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026524207",
+    "receiptNo": "RCP/2026/103"
+  },
+  {
+    "id": "pay-stu-6A-01-4",
+    "studentId": "stu-6A-01",
+    "feeId": "fee-stu-6A-01-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-28",
+    "reference": "TXN2026834671",
+    "receiptNo": "RCP/2026/104"
+  },
+  {
+    "id": "pay-stu-6A-02-0",
+    "studentId": "stu-6A-02",
+    "feeId": "fee-stu-6A-02-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026605545",
+    "receiptNo": "RCP/2026/105"
+  },
+  {
+    "id": "pay-stu-6A-02-1",
+    "studentId": "stu-6A-02",
+    "feeId": "fee-stu-6A-02-1",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026943363",
+    "receiptNo": "RCP/2026/106"
+  },
+  {
+    "id": "pay-stu-6A-02-3",
+    "studentId": "stu-6A-02",
+    "feeId": "fee-stu-6A-02-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026736261",
+    "receiptNo": "RCP/2026/107"
+  },
+  {
+    "id": "pay-stu-6A-02-5",
+    "studentId": "stu-6A-02",
+    "feeId": "fee-stu-6A-02-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026250401",
+    "receiptNo": "RCP/2026/108"
+  },
+  {
+    "id": "pay-stu-6A-03-0",
+    "studentId": "stu-6A-03",
+    "feeId": "fee-stu-6A-03-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026243281",
+    "receiptNo": "RCP/2026/109"
+  },
+  {
+    "id": "pay-stu-6A-03-2",
+    "studentId": "stu-6A-03",
+    "feeId": "fee-stu-6A-03-2",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2027-01-24",
+    "reference": "TXN2026377420",
+    "receiptNo": "RCP/2026/110"
+  },
+  {
+    "id": "pay-stu-6A-03-3",
+    "studentId": "stu-6A-03",
+    "feeId": "fee-stu-6A-03-3",
+    "amount": 2100,
+    "method": "cash",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026931762",
+    "receiptNo": "RCP/2026/111"
+  },
+  {
+    "id": "pay-stu-6A-03-5",
+    "studentId": "stu-6A-03",
+    "feeId": "fee-stu-6A-03-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026296778",
+    "receiptNo": "RCP/2026/112"
+  },
+  {
+    "id": "pay-stu-6A-03-6",
+    "studentId": "stu-6A-03",
+    "feeId": "fee-stu-6A-03-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026129523",
+    "receiptNo": "RCP/2026/113"
+  },
+  {
+    "id": "pay-stu-6A-04-0",
+    "studentId": "stu-6A-04",
+    "feeId": "fee-stu-6A-04-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026627911",
+    "receiptNo": "RCP/2026/114"
+  },
+  {
+    "id": "pay-stu-6A-04-3",
+    "studentId": "stu-6A-04",
+    "feeId": "fee-stu-6A-04-3",
+    "amount": 1100,
+    "method": "netbanking",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026856461",
+    "receiptNo": "RCP/2026/115"
+  },
+  {
+    "id": "pay-stu-6A-05-0",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026124932",
+    "receiptNo": "RCP/2026/116"
+  },
+  {
+    "id": "pay-stu-6A-05-2",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-2",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026926692",
+    "receiptNo": "RCP/2026/117"
+  },
+  {
+    "id": "pay-stu-6A-05-3",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-3",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026575668",
+    "receiptNo": "RCP/2026/118"
+  },
+  {
+    "id": "pay-stu-6A-05-4",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026308452",
+    "receiptNo": "RCP/2026/119"
+  },
+  {
+    "id": "pay-stu-6A-05-5",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026754803",
+    "receiptNo": "RCP/2026/120"
+  },
+  {
+    "id": "pay-stu-6A-05-6",
+    "studentId": "stu-6A-05",
+    "feeId": "fee-stu-6A-05-6",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026916836",
+    "receiptNo": "RCP/2026/121"
+  },
+  {
+    "id": "pay-stu-6A-06-0",
+    "studentId": "stu-6A-06",
+    "feeId": "fee-stu-6A-06-0",
+    "amount": 2700,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026868613",
+    "receiptNo": "RCP/2026/122"
+  },
+  {
+    "id": "pay-stu-6A-06-3",
+    "studentId": "stu-6A-06",
+    "feeId": "fee-stu-6A-06-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026746770",
+    "receiptNo": "RCP/2026/123"
+  },
+  {
+    "id": "pay-stu-6A-06-5",
+    "studentId": "stu-6A-06",
+    "feeId": "fee-stu-6A-06-5",
+    "amount": 1800,
+    "method": "upi",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026554021",
+    "receiptNo": "RCP/2026/124"
+  },
+  {
+    "id": "pay-stu-6A-07-0",
+    "studentId": "stu-6A-07",
+    "feeId": "fee-stu-6A-07-0",
+    "amount": 1400,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026226345",
+    "receiptNo": "RCP/2026/125"
+  },
+  {
+    "id": "pay-stu-6A-07-3",
+    "studentId": "stu-6A-07",
+    "feeId": "fee-stu-6A-07-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026137212",
+    "receiptNo": "RCP/2026/126"
+  },
+  {
+    "id": "pay-stu-6A-08-0",
+    "studentId": "stu-6A-08",
+    "feeId": "fee-stu-6A-08-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026127838",
+    "receiptNo": "RCP/2026/127"
+  },
+  {
+    "id": "pay-stu-6A-08-1",
+    "studentId": "stu-6A-08",
+    "feeId": "fee-stu-6A-08-1",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026698373",
+    "receiptNo": "RCP/2026/128"
+  },
+  {
+    "id": "pay-stu-6A-08-3",
+    "studentId": "stu-6A-08",
+    "feeId": "fee-stu-6A-08-3",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026221300",
+    "receiptNo": "RCP/2026/129"
+  },
+  {
+    "id": "pay-stu-6A-08-5",
+    "studentId": "stu-6A-08",
+    "feeId": "fee-stu-6A-08-5",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026376897",
+    "receiptNo": "RCP/2026/130"
+  },
+  {
+    "id": "pay-stu-6A-09-0",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026117146",
+    "receiptNo": "RCP/2026/131"
+  },
+  {
+    "id": "pay-stu-6A-09-2",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-2",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026108999",
+    "receiptNo": "RCP/2026/132"
+  },
+  {
+    "id": "pay-stu-6A-09-3",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026281239",
+    "receiptNo": "RCP/2026/133"
+  },
+  {
+    "id": "pay-stu-6A-09-4",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026830425",
+    "receiptNo": "RCP/2026/134"
+  },
+  {
+    "id": "pay-stu-6A-09-5",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026305559",
+    "receiptNo": "RCP/2026/135"
+  },
+  {
+    "id": "pay-stu-6A-09-6",
+    "studentId": "stu-6A-09",
+    "feeId": "fee-stu-6A-09-6",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026432390",
+    "receiptNo": "RCP/2026/136"
+  },
+  {
+    "id": "pay-stu-6A-10-0",
+    "studentId": "stu-6A-10",
+    "feeId": "fee-stu-6A-10-0",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026291981",
+    "receiptNo": "RCP/2026/137"
+  },
+  {
+    "id": "pay-stu-6A-10-3",
+    "studentId": "stu-6A-10",
+    "feeId": "fee-stu-6A-10-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026666790",
+    "receiptNo": "RCP/2026/138"
+  },
+  {
+    "id": "pay-stu-6A-11-0",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026510539",
+    "receiptNo": "RCP/2026/139"
+  },
+  {
+    "id": "pay-stu-6A-11-2",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-2",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026180971",
+    "receiptNo": "RCP/2026/140"
+  },
+  {
+    "id": "pay-stu-6A-11-3",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026177456",
+    "receiptNo": "RCP/2026/141"
+  },
+  {
+    "id": "pay-stu-6A-11-4",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-26",
+    "reference": "TXN2026771220",
+    "receiptNo": "RCP/2026/142"
+  },
+  {
+    "id": "pay-stu-6A-11-5",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026752863",
+    "receiptNo": "RCP/2026/143"
+  },
+  {
+    "id": "pay-stu-6A-11-6",
+    "studentId": "stu-6A-11",
+    "feeId": "fee-stu-6A-11-6",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026814337",
+    "receiptNo": "RCP/2026/144"
+  },
+  {
+    "id": "pay-stu-6A-12-0",
+    "studentId": "stu-6A-12",
+    "feeId": "fee-stu-6A-12-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026169827",
+    "receiptNo": "RCP/2026/145"
+  },
+  {
+    "id": "pay-stu-6A-12-1",
+    "studentId": "stu-6A-12",
+    "feeId": "fee-stu-6A-12-1",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026853300",
+    "receiptNo": "RCP/2026/146"
+  },
+  {
+    "id": "pay-stu-6A-12-3",
+    "studentId": "stu-6A-12",
+    "feeId": "fee-stu-6A-12-3",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026152701",
+    "receiptNo": "RCP/2026/147"
+  },
+  {
+    "id": "pay-stu-6A-12-5",
+    "studentId": "stu-6A-12",
+    "feeId": "fee-stu-6A-12-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026668634",
+    "receiptNo": "RCP/2026/148"
+  },
+  {
+    "id": "pay-stu-6A-13-0",
+    "studentId": "stu-6A-13",
+    "feeId": "fee-stu-6A-13-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026604633",
+    "receiptNo": "RCP/2026/149"
+  },
+  {
+    "id": "pay-stu-6A-13-3",
+    "studentId": "stu-6A-13",
+    "feeId": "fee-stu-6A-13-3",
+    "amount": 2100,
+    "method": "cash",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026597407",
+    "receiptNo": "RCP/2026/150"
+  },
+  {
+    "id": "pay-stu-6A-13-4",
+    "studentId": "stu-6A-13",
+    "feeId": "fee-stu-6A-13-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026255042",
+    "receiptNo": "RCP/2026/151"
+  },
+  {
+    "id": "pay-stu-6A-14-0",
+    "studentId": "stu-6A-14",
+    "feeId": "fee-stu-6A-14-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026493965",
+    "receiptNo": "RCP/2026/152"
+  },
+  {
+    "id": "pay-stu-6A-14-3",
+    "studentId": "stu-6A-14",
+    "feeId": "fee-stu-6A-14-3",
+    "amount": 1100,
+    "method": "netbanking",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026995095",
+    "receiptNo": "RCP/2026/153"
+  },
+  {
+    "id": "pay-stu-6A-14-5",
+    "studentId": "stu-6A-14",
+    "feeId": "fee-stu-6A-14-5",
+    "amount": 900,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026487650",
+    "receiptNo": "RCP/2026/154"
+  },
+  {
+    "id": "pay-stu-6A-15-0",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026665871",
+    "receiptNo": "RCP/2026/155"
+  },
+  {
+    "id": "pay-stu-6A-15-2",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-2",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026908030",
+    "receiptNo": "RCP/2026/156"
+  },
+  {
+    "id": "pay-stu-6A-15-3",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-3",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026756135",
+    "receiptNo": "RCP/2026/157"
+  },
+  {
+    "id": "pay-stu-6A-15-4",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026522565",
+    "receiptNo": "RCP/2026/158"
+  },
+  {
+    "id": "pay-stu-6A-15-5",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026512444",
+    "receiptNo": "RCP/2026/159"
+  },
+  {
+    "id": "pay-stu-6A-15-6",
+    "studentId": "stu-6A-15",
+    "feeId": "fee-stu-6A-15-6",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026205934",
+    "receiptNo": "RCP/2026/160"
+  },
+  {
+    "id": "pay-stu-6A-16-0",
+    "studentId": "stu-6A-16",
+    "feeId": "fee-stu-6A-16-0",
+    "amount": 2700,
+    "method": "upi",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026270006",
+    "receiptNo": "RCP/2026/161"
+  },
+  {
+    "id": "pay-stu-6A-16-1",
+    "studentId": "stu-6A-16",
+    "feeId": "fee-stu-6A-16-1",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026691175",
+    "receiptNo": "RCP/2026/162"
+  },
+  {
+    "id": "pay-stu-6A-16-3",
+    "studentId": "stu-6A-16",
+    "feeId": "fee-stu-6A-16-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026343552",
+    "receiptNo": "RCP/2026/163"
+  },
+  {
+    "id": "pay-stu-6A-17-0",
+    "studentId": "stu-6A-17",
+    "feeId": "fee-stu-6A-17-0",
+    "amount": 1400,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026447058",
+    "receiptNo": "RCP/2026/164"
+  },
+  {
+    "id": "pay-stu-6A-17-3",
+    "studentId": "stu-6A-17",
+    "feeId": "fee-stu-6A-17-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026321072",
+    "receiptNo": "RCP/2026/165"
+  },
+  {
+    "id": "pay-stu-6A-17-5",
+    "studentId": "stu-6A-17",
+    "feeId": "fee-stu-6A-17-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026713389",
+    "receiptNo": "RCP/2026/166"
+  },
+  {
+    "id": "pay-stu-6A-18-0",
+    "studentId": "stu-6A-18",
+    "feeId": "fee-stu-6A-18-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026884790",
+    "receiptNo": "RCP/2026/167"
+  },
+  {
+    "id": "pay-stu-6A-18-1",
+    "studentId": "stu-6A-18",
+    "feeId": "fee-stu-6A-18-1",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026185120",
+    "receiptNo": "RCP/2026/168"
+  },
+  {
+    "id": "pay-stu-6A-18-3",
+    "studentId": "stu-6A-18",
+    "feeId": "fee-stu-6A-18-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026934056",
+    "receiptNo": "RCP/2026/169"
+  },
+  {
+    "id": "pay-stu-6A-18-5",
+    "studentId": "stu-6A-18",
+    "feeId": "fee-stu-6A-18-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026361413",
+    "receiptNo": "RCP/2026/170"
+  },
+  {
+    "id": "pay-stu-6A-19-0",
+    "studentId": "stu-6A-19",
+    "feeId": "fee-stu-6A-19-0",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026440466",
+    "receiptNo": "RCP/2026/171"
+  },
+  {
+    "id": "pay-stu-6A-19-2",
+    "studentId": "stu-6A-19",
+    "feeId": "fee-stu-6A-19-2",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026392453",
+    "receiptNo": "RCP/2026/172"
+  },
+  {
+    "id": "pay-stu-6A-19-3",
+    "studentId": "stu-6A-19",
+    "feeId": "fee-stu-6A-19-3",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026668955",
+    "receiptNo": "RCP/2026/173"
+  },
+  {
+    "id": "pay-stu-6A-19-4",
+    "studentId": "stu-6A-19",
+    "feeId": "fee-stu-6A-19-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026721510",
+    "receiptNo": "RCP/2026/174"
+  },
+  {
+    "id": "pay-stu-6A-20-0",
+    "studentId": "stu-6A-20",
+    "feeId": "fee-stu-6A-20-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026948771",
+    "receiptNo": "RCP/2026/175"
+  },
+  {
+    "id": "pay-stu-6A-20-1",
+    "studentId": "stu-6A-20",
+    "feeId": "fee-stu-6A-20-1",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026702308",
+    "receiptNo": "RCP/2026/176"
+  },
+  {
+    "id": "pay-stu-6A-20-3",
+    "studentId": "stu-6A-20",
+    "feeId": "fee-stu-6A-20-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026992342",
+    "receiptNo": "RCP/2026/177"
+  },
+  {
+    "id": "pay-stu-6A-20-5",
+    "studentId": "stu-6A-20",
+    "feeId": "fee-stu-6A-20-5",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026253128",
+    "receiptNo": "RCP/2026/178"
+  },
+  {
+    "id": "pay-stu-6A-21-0",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026744116",
+    "receiptNo": "RCP/2026/179"
+  },
+  {
+    "id": "pay-stu-6A-21-2",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-2",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026803387",
+    "receiptNo": "RCP/2026/180"
+  },
+  {
+    "id": "pay-stu-6A-21-3",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-3",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026475327",
+    "receiptNo": "RCP/2026/181"
+  },
+  {
+    "id": "pay-stu-6A-21-4",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-29",
+    "reference": "TXN2026243551",
+    "receiptNo": "RCP/2026/182"
+  },
+  {
+    "id": "pay-stu-6A-21-5",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026718670",
+    "receiptNo": "RCP/2026/183"
+  },
+  {
+    "id": "pay-stu-6A-21-6",
+    "studentId": "stu-6A-21",
+    "feeId": "fee-stu-6A-21-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026842854",
+    "receiptNo": "RCP/2026/184"
+  },
+  {
+    "id": "pay-stu-6A-22-0",
+    "studentId": "stu-6A-22",
+    "feeId": "fee-stu-6A-22-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026195515",
+    "receiptNo": "RCP/2026/185"
+  },
+  {
+    "id": "pay-stu-6A-22-1",
+    "studentId": "stu-6A-22",
+    "feeId": "fee-stu-6A-22-1",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026977207",
+    "receiptNo": "RCP/2026/186"
+  },
+  {
+    "id": "pay-stu-6A-22-3",
+    "studentId": "stu-6A-22",
+    "feeId": "fee-stu-6A-22-3",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026228824",
+    "receiptNo": "RCP/2026/187"
+  },
+  {
+    "id": "pay-stu-6A-23-0",
+    "studentId": "stu-6A-23",
+    "feeId": "fee-stu-6A-23-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026555538",
+    "receiptNo": "RCP/2026/188"
+  },
+  {
+    "id": "pay-stu-6A-23-2",
+    "studentId": "stu-6A-23",
+    "feeId": "fee-stu-6A-23-2",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026311890",
+    "receiptNo": "RCP/2026/189"
+  },
+  {
+    "id": "pay-stu-6A-23-3",
+    "studentId": "stu-6A-23",
+    "feeId": "fee-stu-6A-23-3",
+    "amount": 2100,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026234976",
+    "receiptNo": "RCP/2026/190"
+  },
+  {
+    "id": "pay-stu-6A-23-5",
+    "studentId": "stu-6A-23",
+    "feeId": "fee-stu-6A-23-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026797266",
+    "receiptNo": "RCP/2026/191"
+  },
+  {
+    "id": "pay-stu-6A-23-6",
+    "studentId": "stu-6A-23",
+    "feeId": "fee-stu-6A-23-6",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026130562",
+    "receiptNo": "RCP/2026/192"
+  },
+  {
+    "id": "pay-stu-6A-24-0",
+    "studentId": "stu-6A-24",
+    "feeId": "fee-stu-6A-24-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026637345",
+    "receiptNo": "RCP/2026/193"
+  },
+  {
+    "id": "pay-stu-6A-24-3",
+    "studentId": "stu-6A-24",
+    "feeId": "fee-stu-6A-24-3",
+    "amount": 1100,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026423634",
+    "receiptNo": "RCP/2026/194"
+  },
+  {
+    "id": "pay-stu-6A-24-5",
+    "studentId": "stu-6A-24",
+    "feeId": "fee-stu-6A-24-5",
+    "amount": 1100,
+    "method": "netbanking",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026905183",
+    "receiptNo": "RCP/2026/195"
+  },
+  {
+    "id": "pay-stu-6A-25-0",
+    "studentId": "stu-6A-25",
+    "feeId": "fee-stu-6A-25-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026901744",
+    "receiptNo": "RCP/2026/196"
+  },
+  {
+    "id": "pay-stu-6A-25-2",
+    "studentId": "stu-6A-25",
+    "feeId": "fee-stu-6A-25-2",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026636957",
+    "receiptNo": "RCP/2026/197"
+  },
+  {
+    "id": "pay-stu-6A-25-3",
+    "studentId": "stu-6A-25",
+    "feeId": "fee-stu-6A-25-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026356930",
+    "receiptNo": "RCP/2026/198"
+  },
+  {
+    "id": "pay-stu-6A-25-4",
+    "studentId": "stu-6A-25",
+    "feeId": "fee-stu-6A-25-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026166640",
+    "receiptNo": "RCP/2026/199"
+  },
+  {
+    "id": "pay-stu-6A-26-0",
+    "studentId": "stu-6A-26",
+    "feeId": "fee-stu-6A-26-0",
+    "amount": 2700,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026934592",
+    "receiptNo": "RCP/2026/200"
+  },
+  {
+    "id": "pay-stu-6A-26-3",
+    "studentId": "stu-6A-26",
+    "feeId": "fee-stu-6A-26-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026104255",
+    "receiptNo": "RCP/2026/201"
+  },
+  {
+    "id": "pay-stu-6A-26-5",
+    "studentId": "stu-6A-26",
+    "feeId": "fee-stu-6A-26-5",
+    "amount": 1800,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026795787",
+    "receiptNo": "RCP/2026/202"
+  },
+  {
+    "id": "pay-stu-6A-27-0",
+    "studentId": "stu-6A-27",
+    "feeId": "fee-stu-6A-27-0",
+    "amount": 1400,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026777413",
+    "receiptNo": "RCP/2026/203"
+  },
+  {
+    "id": "pay-stu-6A-27-3",
+    "studentId": "stu-6A-27",
+    "feeId": "fee-stu-6A-27-3",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026517229",
+    "receiptNo": "RCP/2026/204"
+  },
+  {
+    "id": "pay-stu-6A-27-5",
+    "studentId": "stu-6A-27",
+    "feeId": "fee-stu-6A-27-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026702101",
+    "receiptNo": "RCP/2026/205"
+  },
+  {
+    "id": "pay-stu-6A-28-0",
+    "studentId": "stu-6A-28",
+    "feeId": "fee-stu-6A-28-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026104637",
+    "receiptNo": "RCP/2026/206"
+  },
+  {
+    "id": "pay-stu-6A-28-1",
+    "studentId": "stu-6A-28",
+    "feeId": "fee-stu-6A-28-1",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026853494",
+    "receiptNo": "RCP/2026/207"
+  },
+  {
+    "id": "pay-stu-6A-28-3",
+    "studentId": "stu-6A-28",
+    "feeId": "fee-stu-6A-28-3",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026154231",
+    "receiptNo": "RCP/2026/208"
+  },
+  {
+    "id": "pay-stu-6A-29-0",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026605388",
+    "receiptNo": "RCP/2026/209"
+  },
+  {
+    "id": "pay-stu-6A-29-2",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-2",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026201591",
+    "receiptNo": "RCP/2026/210"
+  },
+  {
+    "id": "pay-stu-6A-29-3",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-3",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026803329",
+    "receiptNo": "RCP/2026/211"
+  },
+  {
+    "id": "pay-stu-6A-29-4",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026997796",
+    "receiptNo": "RCP/2026/212"
+  },
+  {
+    "id": "pay-stu-6A-29-5",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026348849",
+    "receiptNo": "RCP/2026/213"
+  },
+  {
+    "id": "pay-stu-6A-29-6",
+    "studentId": "stu-6A-29",
+    "feeId": "fee-stu-6A-29-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026813973",
+    "receiptNo": "RCP/2026/214"
+  },
+  {
+    "id": "pay-stu-6A-30-0",
+    "studentId": "stu-6A-30",
+    "feeId": "fee-stu-6A-30-0",
+    "amount": 4500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026127992",
+    "receiptNo": "RCP/2026/215"
+  },
+  {
+    "id": "pay-stu-6A-30-3",
+    "studentId": "stu-6A-30",
+    "feeId": "fee-stu-6A-30-3",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026235484",
+    "receiptNo": "RCP/2026/216"
+  },
+  {
+    "id": "pay-stu-6A-30-5",
+    "studentId": "stu-6A-30",
+    "feeId": "fee-stu-6A-30-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026227144",
+    "receiptNo": "RCP/2026/217"
+  },
+  {
+    "id": "pay-stu-7A-01-0",
+    "studentId": "stu-7A-01",
+    "feeId": "fee-stu-7A-01-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026372536",
+    "receiptNo": "RCP/2026/218"
+  },
+  {
+    "id": "pay-stu-7A-01-2",
+    "studentId": "stu-7A-01",
+    "feeId": "fee-stu-7A-01-2",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026689402",
+    "receiptNo": "RCP/2026/219"
+  },
+  {
+    "id": "pay-stu-7A-01-3",
+    "studentId": "stu-7A-01",
+    "feeId": "fee-stu-7A-01-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026695430",
+    "receiptNo": "RCP/2026/220"
+  },
+  {
+    "id": "pay-stu-7A-01-4",
+    "studentId": "stu-7A-01",
+    "feeId": "fee-stu-7A-01-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026303660",
+    "receiptNo": "RCP/2026/221"
+  },
+  {
+    "id": "pay-stu-7A-02-0",
+    "studentId": "stu-7A-02",
+    "feeId": "fee-stu-7A-02-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026970398",
+    "receiptNo": "RCP/2026/222"
+  },
+  {
+    "id": "pay-stu-7A-02-1",
+    "studentId": "stu-7A-02",
+    "feeId": "fee-stu-7A-02-1",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026113155",
+    "receiptNo": "RCP/2026/223"
+  },
+  {
+    "id": "pay-stu-7A-02-3",
+    "studentId": "stu-7A-02",
+    "feeId": "fee-stu-7A-02-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026350796",
+    "receiptNo": "RCP/2026/224"
+  },
+  {
+    "id": "pay-stu-7A-02-5",
+    "studentId": "stu-7A-02",
+    "feeId": "fee-stu-7A-02-5",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026868938",
+    "receiptNo": "RCP/2026/225"
+  },
+  {
+    "id": "pay-stu-7A-03-0",
+    "studentId": "stu-7A-03",
+    "feeId": "fee-stu-7A-03-0",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026267838",
+    "receiptNo": "RCP/2026/226"
+  },
+  {
+    "id": "pay-stu-7A-03-3",
+    "studentId": "stu-7A-03",
+    "feeId": "fee-stu-7A-03-3",
+    "amount": 2300,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026987620",
+    "receiptNo": "RCP/2026/227"
+  },
+  {
+    "id": "pay-stu-7A-03-4",
+    "studentId": "stu-7A-03",
+    "feeId": "fee-stu-7A-03-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026155919",
+    "receiptNo": "RCP/2026/228"
+  },
+  {
+    "id": "pay-stu-7A-03-5",
+    "studentId": "stu-7A-03",
+    "feeId": "fee-stu-7A-03-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026561008",
+    "receiptNo": "RCP/2026/229"
+  },
+  {
+    "id": "pay-stu-7A-05-0",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026854233",
+    "receiptNo": "RCP/2026/230"
+  },
+  {
+    "id": "pay-stu-7A-05-2",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-2",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026327958",
+    "receiptNo": "RCP/2026/231"
+  },
+  {
+    "id": "pay-stu-7A-05-3",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-3",
+    "amount": 3850,
+    "method": "upi",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026958457",
+    "receiptNo": "RCP/2026/232"
+  },
+  {
+    "id": "pay-stu-7A-05-4",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026707395",
+    "receiptNo": "RCP/2026/233"
+  },
+  {
+    "id": "pay-stu-7A-05-5",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026688354",
+    "receiptNo": "RCP/2026/234"
+  },
+  {
+    "id": "pay-stu-7A-05-6",
+    "studentId": "stu-7A-05",
+    "feeId": "fee-stu-7A-05-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026291661",
+    "receiptNo": "RCP/2026/235"
+  },
+  {
+    "id": "pay-stu-7A-06-0",
+    "studentId": "stu-7A-06",
+    "feeId": "fee-stu-7A-06-0",
+    "amount": 3200,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026703281",
+    "receiptNo": "RCP/2026/236"
+  },
+  {
+    "id": "pay-stu-7A-06-1",
+    "studentId": "stu-7A-06",
+    "feeId": "fee-stu-7A-06-1",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026649958",
+    "receiptNo": "RCP/2026/237"
+  },
+  {
+    "id": "pay-stu-7A-06-3",
+    "studentId": "stu-7A-06",
+    "feeId": "fee-stu-7A-06-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026123268",
+    "receiptNo": "RCP/2026/238"
+  },
+  {
+    "id": "pay-stu-7A-06-5",
+    "studentId": "stu-7A-06",
+    "feeId": "fee-stu-7A-06-5",
+    "amount": 2100,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026918791",
+    "receiptNo": "RCP/2026/239"
+  },
+  {
+    "id": "pay-stu-7A-07-0",
+    "studentId": "stu-7A-07",
+    "feeId": "fee-stu-7A-07-0",
+    "amount": 1600,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026676843",
+    "receiptNo": "RCP/2026/240"
+  },
+  {
+    "id": "pay-stu-7A-07-3",
+    "studentId": "stu-7A-07",
+    "feeId": "fee-stu-7A-07-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026142239",
+    "receiptNo": "RCP/2026/241"
+  },
+  {
+    "id": "pay-stu-7A-08-0",
+    "studentId": "stu-7A-08",
+    "feeId": "fee-stu-7A-08-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026462866",
+    "receiptNo": "RCP/2026/242"
+  },
+  {
+    "id": "pay-stu-7A-08-1",
+    "studentId": "stu-7A-08",
+    "feeId": "fee-stu-7A-08-1",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026579090",
+    "receiptNo": "RCP/2026/243"
+  },
+  {
+    "id": "pay-stu-7A-08-3",
+    "studentId": "stu-7A-08",
+    "feeId": "fee-stu-7A-08-3",
+    "amount": 3850,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026465532",
+    "receiptNo": "RCP/2026/244"
+  },
+  {
+    "id": "pay-stu-7A-08-5",
+    "studentId": "stu-7A-08",
+    "feeId": "fee-stu-7A-08-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026200163",
+    "receiptNo": "RCP/2026/245"
+  },
+  {
+    "id": "pay-stu-7A-09-0",
+    "studentId": "stu-7A-09",
+    "feeId": "fee-stu-7A-09-0",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026207321",
+    "receiptNo": "RCP/2026/246"
+  },
+  {
+    "id": "pay-stu-7A-09-2",
+    "studentId": "stu-7A-09",
+    "feeId": "fee-stu-7A-09-2",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026784838",
+    "receiptNo": "RCP/2026/247"
+  },
+  {
+    "id": "pay-stu-7A-09-3",
+    "studentId": "stu-7A-09",
+    "feeId": "fee-stu-7A-09-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026965587",
+    "receiptNo": "RCP/2026/248"
+  },
+  {
+    "id": "pay-stu-7A-09-5",
+    "studentId": "stu-7A-09",
+    "feeId": "fee-stu-7A-09-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026584102",
+    "receiptNo": "RCP/2026/249"
+  },
+  {
+    "id": "pay-stu-7A-09-6",
+    "studentId": "stu-7A-09",
+    "feeId": "fee-stu-7A-09-6",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026595699",
+    "receiptNo": "RCP/2026/250"
+  },
+  {
+    "id": "pay-stu-7A-10-0",
+    "studentId": "stu-7A-10",
+    "feeId": "fee-stu-7A-10-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026632426",
+    "receiptNo": "RCP/2026/251"
+  },
+  {
+    "id": "pay-stu-7A-10-3",
+    "studentId": "stu-7A-10",
+    "feeId": "fee-stu-7A-10-3",
+    "amount": 1200,
+    "method": "cash",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026915913",
+    "receiptNo": "RCP/2026/252"
+  },
+  {
+    "id": "pay-stu-7A-11-0",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026851067",
+    "receiptNo": "RCP/2026/253"
+  },
+  {
+    "id": "pay-stu-7A-11-2",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-2",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2027-01-25",
+    "reference": "TXN2026103277",
+    "receiptNo": "RCP/2026/254"
+  },
+  {
+    "id": "pay-stu-7A-11-3",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026480771",
+    "receiptNo": "RCP/2026/255"
+  },
+  {
+    "id": "pay-stu-7A-11-4",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026120387",
+    "receiptNo": "RCP/2026/256"
+  },
+  {
+    "id": "pay-stu-7A-11-5",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026733980",
+    "receiptNo": "RCP/2026/257"
+  },
+  {
+    "id": "pay-stu-7A-11-6",
+    "studentId": "stu-7A-11",
+    "feeId": "fee-stu-7A-11-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026161979",
+    "receiptNo": "RCP/2026/258"
+  },
+  {
+    "id": "pay-stu-7A-12-0",
+    "studentId": "stu-7A-12",
+    "feeId": "fee-stu-7A-12-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026854136",
+    "receiptNo": "RCP/2026/259"
+  },
+  {
+    "id": "pay-stu-7A-12-1",
+    "studentId": "stu-7A-12",
+    "feeId": "fee-stu-7A-12-1",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026280621",
+    "receiptNo": "RCP/2026/260"
+  },
+  {
+    "id": "pay-stu-7A-12-3",
+    "studentId": "stu-7A-12",
+    "feeId": "fee-stu-7A-12-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026291857",
+    "receiptNo": "RCP/2026/261"
+  },
+  {
+    "id": "pay-stu-7A-12-5",
+    "studentId": "stu-7A-12",
+    "feeId": "fee-stu-7A-12-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026159624",
+    "receiptNo": "RCP/2026/262"
+  },
+  {
+    "id": "pay-stu-7A-13-0",
+    "studentId": "stu-7A-13",
+    "feeId": "fee-stu-7A-13-0",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026118519",
+    "receiptNo": "RCP/2026/263"
+  },
+  {
+    "id": "pay-stu-7A-13-2",
+    "studentId": "stu-7A-13",
+    "feeId": "fee-stu-7A-13-2",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026642156",
+    "receiptNo": "RCP/2026/264"
+  },
+  {
+    "id": "pay-stu-7A-13-3",
+    "studentId": "stu-7A-13",
+    "feeId": "fee-stu-7A-13-3",
+    "amount": 2300,
+    "method": "netbanking",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026669398",
+    "receiptNo": "RCP/2026/265"
+  },
+  {
+    "id": "pay-stu-7A-14-0",
+    "studentId": "stu-7A-14",
+    "feeId": "fee-stu-7A-14-0",
+    "amount": 1600,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026773728",
+    "receiptNo": "RCP/2026/266"
+  },
+  {
+    "id": "pay-stu-7A-14-3",
+    "studentId": "stu-7A-14",
+    "feeId": "fee-stu-7A-14-3",
+    "amount": 1200,
+    "method": "cash",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026608521",
+    "receiptNo": "RCP/2026/267"
+  },
+  {
+    "id": "pay-stu-7A-15-0",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026891588",
+    "receiptNo": "RCP/2026/268"
+  },
+  {
+    "id": "pay-stu-7A-15-2",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-2",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026969622",
+    "receiptNo": "RCP/2026/269"
+  },
+  {
+    "id": "pay-stu-7A-15-3",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-3",
+    "amount": 3850,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026829694",
+    "receiptNo": "RCP/2026/270"
+  },
+  {
+    "id": "pay-stu-7A-15-4",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-24",
+    "reference": "TXN2026736205",
+    "receiptNo": "RCP/2026/271"
+  },
+  {
+    "id": "pay-stu-7A-15-5",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026530580",
+    "receiptNo": "RCP/2026/272"
+  },
+  {
+    "id": "pay-stu-7A-15-6",
+    "studentId": "stu-7A-15",
+    "feeId": "fee-stu-7A-15-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026767552",
+    "receiptNo": "RCP/2026/273"
+  },
+  {
+    "id": "pay-stu-7A-16-0",
+    "studentId": "stu-7A-16",
+    "feeId": "fee-stu-7A-16-0",
+    "amount": 3200,
+    "method": "netbanking",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026406688",
+    "receiptNo": "RCP/2026/274"
+  },
+  {
+    "id": "pay-stu-7A-16-3",
+    "studentId": "stu-7A-16",
+    "feeId": "fee-stu-7A-16-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026245543",
+    "receiptNo": "RCP/2026/275"
+  },
+  {
+    "id": "pay-stu-7A-17-0",
+    "studentId": "stu-7A-17",
+    "feeId": "fee-stu-7A-17-0",
+    "amount": 1600,
+    "method": "netbanking",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026634607",
+    "receiptNo": "RCP/2026/276"
+  },
+  {
+    "id": "pay-stu-7A-17-3",
+    "studentId": "stu-7A-17",
+    "feeId": "fee-stu-7A-17-3",
+    "amount": 3850,
+    "method": "cash",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026597964",
+    "receiptNo": "RCP/2026/277"
+  },
+  {
+    "id": "pay-stu-7A-17-5",
+    "studentId": "stu-7A-17",
+    "feeId": "fee-stu-7A-17-5",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026494126",
+    "receiptNo": "RCP/2026/278"
+  },
+  {
+    "id": "pay-stu-7A-18-0",
+    "studentId": "stu-7A-18",
+    "feeId": "fee-stu-7A-18-0",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026560782",
+    "receiptNo": "RCP/2026/279"
+  },
+  {
+    "id": "pay-stu-7A-18-1",
+    "studentId": "stu-7A-18",
+    "feeId": "fee-stu-7A-18-1",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026225929",
+    "receiptNo": "RCP/2026/280"
+  },
+  {
+    "id": "pay-stu-7A-18-3",
+    "studentId": "stu-7A-18",
+    "feeId": "fee-stu-7A-18-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026575483",
+    "receiptNo": "RCP/2026/281"
+  },
+  {
+    "id": "pay-stu-7A-18-5",
+    "studentId": "stu-7A-18",
+    "feeId": "fee-stu-7A-18-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026719450",
+    "receiptNo": "RCP/2026/282"
+  },
+  {
+    "id": "pay-stu-7A-19-0",
+    "studentId": "stu-7A-19",
+    "feeId": "fee-stu-7A-19-0",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026403476",
+    "receiptNo": "RCP/2026/283"
+  },
+  {
+    "id": "pay-stu-7A-19-3",
+    "studentId": "stu-7A-19",
+    "feeId": "fee-stu-7A-19-3",
+    "amount": 3850,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026609060",
+    "receiptNo": "RCP/2026/284"
+  },
+  {
+    "id": "pay-stu-7A-19-4",
+    "studentId": "stu-7A-19",
+    "feeId": "fee-stu-7A-19-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-24",
+    "reference": "TXN2026171858",
+    "receiptNo": "RCP/2026/285"
+  },
+  {
+    "id": "pay-stu-7A-20-0",
+    "studentId": "stu-7A-20",
+    "feeId": "fee-stu-7A-20-0",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026246767",
+    "receiptNo": "RCP/2026/286"
+  },
+  {
+    "id": "pay-stu-7A-20-3",
+    "studentId": "stu-7A-20",
+    "feeId": "fee-stu-7A-20-3",
+    "amount": 1200,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026619723",
+    "receiptNo": "RCP/2026/287"
+  },
+  {
+    "id": "pay-stu-7A-20-5",
+    "studentId": "stu-7A-20",
+    "feeId": "fee-stu-7A-20-5",
+    "amount": 900,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026184029",
+    "receiptNo": "RCP/2026/288"
+  },
+  {
+    "id": "pay-stu-7A-21-0",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026746450",
+    "receiptNo": "RCP/2026/289"
+  },
+  {
+    "id": "pay-stu-7A-21-2",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-2",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2027-01-25",
+    "reference": "TXN2026434294",
+    "receiptNo": "RCP/2026/290"
+  },
+  {
+    "id": "pay-stu-7A-21-3",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026444230",
+    "receiptNo": "RCP/2026/291"
+  },
+  {
+    "id": "pay-stu-7A-21-4",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026216080",
+    "receiptNo": "RCP/2026/292"
+  },
+  {
+    "id": "pay-stu-7A-21-5",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-5",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026435205",
+    "receiptNo": "RCP/2026/293"
+  },
+  {
+    "id": "pay-stu-7A-21-6",
+    "studentId": "stu-7A-21",
+    "feeId": "fee-stu-7A-21-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026298263",
+    "receiptNo": "RCP/2026/294"
+  },
+  {
+    "id": "pay-stu-7A-22-0",
+    "studentId": "stu-7A-22",
+    "feeId": "fee-stu-7A-22-0",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026547927",
+    "receiptNo": "RCP/2026/295"
+  },
+  {
+    "id": "pay-stu-7A-22-1",
+    "studentId": "stu-7A-22",
+    "feeId": "fee-stu-7A-22-1",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-10-13",
+    "reference": "TXN2026471408",
+    "receiptNo": "RCP/2026/296"
+  },
+  {
+    "id": "pay-stu-7A-22-3",
+    "studentId": "stu-7A-22",
+    "feeId": "fee-stu-7A-22-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026852114",
+    "receiptNo": "RCP/2026/297"
+  },
+  {
+    "id": "pay-stu-7A-23-0",
+    "studentId": "stu-7A-23",
+    "feeId": "fee-stu-7A-23-0",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026450650",
+    "receiptNo": "RCP/2026/298"
+  },
+  {
+    "id": "pay-stu-7A-23-3",
+    "studentId": "stu-7A-23",
+    "feeId": "fee-stu-7A-23-3",
+    "amount": 2300,
+    "method": "cash",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026365299",
+    "receiptNo": "RCP/2026/299"
+  },
+  {
+    "id": "pay-stu-7A-23-4",
+    "studentId": "stu-7A-23",
+    "feeId": "fee-stu-7A-23-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026281309",
+    "receiptNo": "RCP/2026/300"
+  },
+  {
+    "id": "pay-stu-7A-23-5",
+    "studentId": "stu-7A-23",
+    "feeId": "fee-stu-7A-23-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026308880",
+    "receiptNo": "RCP/2026/301"
+  },
+  {
+    "id": "pay-stu-7A-24-0",
+    "studentId": "stu-7A-24",
+    "feeId": "fee-stu-7A-24-0",
+    "amount": 1600,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026278562",
+    "receiptNo": "RCP/2026/302"
+  },
+  {
+    "id": "pay-stu-7A-24-3",
+    "studentId": "stu-7A-24",
+    "feeId": "fee-stu-7A-24-3",
+    "amount": 1200,
+    "method": "upi",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026589597",
+    "receiptNo": "RCP/2026/303"
+  },
+  {
+    "id": "pay-stu-7A-24-5",
+    "studentId": "stu-7A-24",
+    "feeId": "fee-stu-7A-24-5",
+    "amount": 900,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026114925",
+    "receiptNo": "RCP/2026/304"
+  },
+  {
+    "id": "pay-stu-7A-25-0",
+    "studentId": "stu-7A-25",
+    "feeId": "fee-stu-7A-25-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026766509",
+    "receiptNo": "RCP/2026/305"
+  },
+  {
+    "id": "pay-stu-7A-25-2",
+    "studentId": "stu-7A-25",
+    "feeId": "fee-stu-7A-25-2",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026195599",
+    "receiptNo": "RCP/2026/306"
+  },
+  {
+    "id": "pay-stu-7A-25-3",
+    "studentId": "stu-7A-25",
+    "feeId": "fee-stu-7A-25-3",
+    "amount": 3850,
+    "method": "card",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026219084",
+    "receiptNo": "RCP/2026/307"
+  },
+  {
+    "id": "pay-stu-7A-25-4",
+    "studentId": "stu-7A-25",
+    "feeId": "fee-stu-7A-25-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-27",
+    "reference": "TXN2026434021",
+    "receiptNo": "RCP/2026/308"
+  },
+  {
+    "id": "pay-stu-7A-26-0",
+    "studentId": "stu-7A-26",
+    "feeId": "fee-stu-7A-26-0",
+    "amount": 3200,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026453016",
+    "receiptNo": "RCP/2026/309"
+  },
+  {
+    "id": "pay-stu-7A-26-1",
+    "studentId": "stu-7A-26",
+    "feeId": "fee-stu-7A-26-1",
+    "amount": 5250,
+    "method": "cash",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026485384",
+    "receiptNo": "RCP/2026/310"
+  },
+  {
+    "id": "pay-stu-7A-26-3",
+    "studentId": "stu-7A-26",
+    "feeId": "fee-stu-7A-26-3",
+    "amount": 3850,
+    "method": "upi",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026899636",
+    "receiptNo": "RCP/2026/311"
+  },
+  {
+    "id": "pay-stu-7A-26-5",
+    "studentId": "stu-7A-26",
+    "feeId": "fee-stu-7A-26-5",
+    "amount": 2100,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026937145",
+    "receiptNo": "RCP/2026/312"
+  },
+  {
+    "id": "pay-stu-7A-27-0",
+    "studentId": "stu-7A-27",
+    "feeId": "fee-stu-7A-27-0",
+    "amount": 1600,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026263445",
+    "receiptNo": "RCP/2026/313"
+  },
+  {
+    "id": "pay-stu-7A-27-3",
+    "studentId": "stu-7A-27",
+    "feeId": "fee-stu-7A-27-3",
+    "amount": 3850,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026578844",
+    "receiptNo": "RCP/2026/314"
+  },
+  {
+    "id": "pay-stu-7A-27-5",
+    "studentId": "stu-7A-27",
+    "feeId": "fee-stu-7A-27-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026130772",
+    "receiptNo": "RCP/2026/315"
+  },
+  {
+    "id": "pay-stu-7A-28-0",
+    "studentId": "stu-7A-28",
+    "feeId": "fee-stu-7A-28-0",
+    "amount": 5250,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026999994",
+    "receiptNo": "RCP/2026/316"
+  },
+  {
+    "id": "pay-stu-7A-28-1",
+    "studentId": "stu-7A-28",
+    "feeId": "fee-stu-7A-28-1",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026270682",
+    "receiptNo": "RCP/2026/317"
+  },
+  {
+    "id": "pay-stu-7A-28-3",
+    "studentId": "stu-7A-28",
+    "feeId": "fee-stu-7A-28-3",
+    "amount": 3850,
+    "method": "upi",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026986937",
+    "receiptNo": "RCP/2026/318"
+  },
+  {
+    "id": "pay-stu-7A-29-0",
+    "studentId": "stu-7A-29",
+    "feeId": "fee-stu-7A-29-0",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026934831",
+    "receiptNo": "RCP/2026/319"
+  },
+  {
+    "id": "pay-stu-7A-29-2",
+    "studentId": "stu-7A-29",
+    "feeId": "fee-stu-7A-29-2",
+    "amount": 5250,
+    "method": "netbanking",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026655090",
+    "receiptNo": "RCP/2026/320"
+  },
+  {
+    "id": "pay-stu-7A-29-3",
+    "studentId": "stu-7A-29",
+    "feeId": "fee-stu-7A-29-3",
+    "amount": 3850,
+    "method": "cash",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026415156",
+    "receiptNo": "RCP/2026/321"
+  },
+  {
+    "id": "pay-stu-7A-29-5",
+    "studentId": "stu-7A-29",
+    "feeId": "fee-stu-7A-29-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026984544",
+    "receiptNo": "RCP/2026/322"
+  },
+  {
+    "id": "pay-stu-7A-29-6",
+    "studentId": "stu-7A-29",
+    "feeId": "fee-stu-7A-29-6",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026998024",
+    "receiptNo": "RCP/2026/323"
+  },
+  {
+    "id": "pay-stu-7A-30-0",
+    "studentId": "stu-7A-30",
+    "feeId": "fee-stu-7A-30-0",
+    "amount": 5250,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026823995",
+    "receiptNo": "RCP/2026/324"
+  },
+  {
+    "id": "pay-stu-7A-30-3",
+    "studentId": "stu-7A-30",
+    "feeId": "fee-stu-7A-30-3",
+    "amount": 1200,
+    "method": "upi",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026715340",
+    "receiptNo": "RCP/2026/325"
+  },
+  {
+    "id": "pay-stu-7A-30-5",
+    "studentId": "stu-7A-30",
+    "feeId": "fee-stu-7A-30-5",
+    "amount": 1100,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026534739",
+    "receiptNo": "RCP/2026/326"
+  },
+  {
+    "id": "pay-stu-8A-01-0",
+    "studentId": "stu-8A-01",
+    "feeId": "fee-stu-8A-01-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026502983",
+    "receiptNo": "RCP/2026/327"
+  },
+  {
+    "id": "pay-stu-8A-01-2",
+    "studentId": "stu-8A-01",
+    "feeId": "fee-stu-8A-01-2",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026967558",
+    "receiptNo": "RCP/2026/328"
+  },
+  {
+    "id": "pay-stu-8A-01-3",
+    "studentId": "stu-8A-01",
+    "feeId": "fee-stu-8A-01-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026952650",
+    "receiptNo": "RCP/2026/329"
+  },
+  {
+    "id": "pay-stu-8A-01-4",
+    "studentId": "stu-8A-01",
+    "feeId": "fee-stu-8A-01-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026437528",
+    "receiptNo": "RCP/2026/330"
+  },
+  {
+    "id": "pay-stu-8A-02-0",
+    "studentId": "stu-8A-02",
+    "feeId": "fee-stu-8A-02-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026562205",
+    "receiptNo": "RCP/2026/331"
+  },
+  {
+    "id": "pay-stu-8A-02-1",
+    "studentId": "stu-8A-02",
+    "feeId": "fee-stu-8A-02-1",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-10-13",
+    "reference": "TXN2026717475",
+    "receiptNo": "RCP/2026/332"
+  },
+  {
+    "id": "pay-stu-8A-02-3",
+    "studentId": "stu-8A-02",
+    "feeId": "fee-stu-8A-02-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026788683",
+    "receiptNo": "RCP/2026/333"
+  },
+  {
+    "id": "pay-stu-8A-02-5",
+    "studentId": "stu-8A-02",
+    "feeId": "fee-stu-8A-02-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026455892",
+    "receiptNo": "RCP/2026/334"
+  },
+  {
+    "id": "pay-stu-8A-03-0",
+    "studentId": "stu-8A-03",
+    "feeId": "fee-stu-8A-03-0",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026448407",
+    "receiptNo": "RCP/2026/335"
+  },
+  {
+    "id": "pay-stu-8A-03-2",
+    "studentId": "stu-8A-03",
+    "feeId": "fee-stu-8A-03-2",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2027-01-24",
+    "reference": "TXN2026889626",
+    "receiptNo": "RCP/2026/336"
+  },
+  {
+    "id": "pay-stu-8A-03-3",
+    "studentId": "stu-8A-03",
+    "feeId": "fee-stu-8A-03-3",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026393271",
+    "receiptNo": "RCP/2026/337"
+  },
+  {
+    "id": "pay-stu-8A-03-5",
+    "studentId": "stu-8A-03",
+    "feeId": "fee-stu-8A-03-5",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026208405",
+    "receiptNo": "RCP/2026/338"
+  },
+  {
+    "id": "pay-stu-8A-03-6",
+    "studentId": "stu-8A-03",
+    "feeId": "fee-stu-8A-03-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026174821",
+    "receiptNo": "RCP/2026/339"
+  },
+  {
+    "id": "pay-stu-8A-04-0",
+    "studentId": "stu-8A-04",
+    "feeId": "fee-stu-8A-04-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026361839",
+    "receiptNo": "RCP/2026/340"
+  },
+  {
+    "id": "pay-stu-8A-04-3",
+    "studentId": "stu-8A-04",
+    "feeId": "fee-stu-8A-04-3",
+    "amount": 1300,
+    "method": "cash",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026322494",
+    "receiptNo": "RCP/2026/341"
+  },
+  {
+    "id": "pay-stu-8A-05-0",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026367418",
+    "receiptNo": "RCP/2026/342"
+  },
+  {
+    "id": "pay-stu-8A-05-2",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-2",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026996134",
+    "receiptNo": "RCP/2026/343"
+  },
+  {
+    "id": "pay-stu-8A-05-3",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026371526",
+    "receiptNo": "RCP/2026/344"
+  },
+  {
+    "id": "pay-stu-8A-05-4",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026140282",
+    "receiptNo": "RCP/2026/345"
+  },
+  {
+    "id": "pay-stu-8A-05-5",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026225627",
+    "receiptNo": "RCP/2026/346"
+  },
+  {
+    "id": "pay-stu-8A-05-6",
+    "studentId": "stu-8A-05",
+    "feeId": "fee-stu-8A-05-6",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026113701",
+    "receiptNo": "RCP/2026/347"
+  },
+  {
+    "id": "pay-stu-8A-06-0",
+    "studentId": "stu-8A-06",
+    "feeId": "fee-stu-8A-06-0",
+    "amount": 3600,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026780248",
+    "receiptNo": "RCP/2026/348"
+  },
+  {
+    "id": "pay-stu-8A-06-3",
+    "studentId": "stu-8A-06",
+    "feeId": "fee-stu-8A-06-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026162696",
+    "receiptNo": "RCP/2026/349"
+  },
+  {
+    "id": "pay-stu-8A-06-5",
+    "studentId": "stu-8A-06",
+    "feeId": "fee-stu-8A-06-5",
+    "amount": 1800,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026185041",
+    "receiptNo": "RCP/2026/350"
+  },
+  {
+    "id": "pay-stu-8A-07-0",
+    "studentId": "stu-8A-07",
+    "feeId": "fee-stu-8A-07-0",
+    "amount": 1800,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026366809",
+    "receiptNo": "RCP/2026/351"
+  },
+  {
+    "id": "pay-stu-8A-07-3",
+    "studentId": "stu-8A-07",
+    "feeId": "fee-stu-8A-07-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026373767",
+    "receiptNo": "RCP/2026/352"
+  },
+  {
+    "id": "pay-stu-8A-08-0",
+    "studentId": "stu-8A-08",
+    "feeId": "fee-stu-8A-08-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026893024",
+    "receiptNo": "RCP/2026/353"
+  },
+  {
+    "id": "pay-stu-8A-08-1",
+    "studentId": "stu-8A-08",
+    "feeId": "fee-stu-8A-08-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026430016",
+    "receiptNo": "RCP/2026/354"
+  },
+  {
+    "id": "pay-stu-8A-08-3",
+    "studentId": "stu-8A-08",
+    "feeId": "fee-stu-8A-08-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026353827",
+    "receiptNo": "RCP/2026/355"
+  },
+  {
+    "id": "pay-stu-8A-08-5",
+    "studentId": "stu-8A-08",
+    "feeId": "fee-stu-8A-08-5",
+    "amount": 3500,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026475314",
+    "receiptNo": "RCP/2026/356"
+  },
+  {
+    "id": "pay-stu-8A-09-0",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026288039",
+    "receiptNo": "RCP/2026/357"
+  },
+  {
+    "id": "pay-stu-8A-09-2",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-25",
+    "reference": "TXN2026713199",
+    "receiptNo": "RCP/2026/358"
+  },
+  {
+    "id": "pay-stu-8A-09-3",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026459619",
+    "receiptNo": "RCP/2026/359"
+  },
+  {
+    "id": "pay-stu-8A-09-4",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-24",
+    "reference": "TXN2026505602",
+    "receiptNo": "RCP/2026/360"
+  },
+  {
+    "id": "pay-stu-8A-09-5",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026582614",
+    "receiptNo": "RCP/2026/361"
+  },
+  {
+    "id": "pay-stu-8A-09-6",
+    "studentId": "stu-8A-09",
+    "feeId": "fee-stu-8A-09-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026714249",
+    "receiptNo": "RCP/2026/362"
+  },
+  {
+    "id": "pay-stu-8A-10-0",
+    "studentId": "stu-8A-10",
+    "feeId": "fee-stu-8A-10-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026296687",
+    "receiptNo": "RCP/2026/363"
+  },
+  {
+    "id": "pay-stu-8A-10-3",
+    "studentId": "stu-8A-10",
+    "feeId": "fee-stu-8A-10-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026153666",
+    "receiptNo": "RCP/2026/364"
+  },
+  {
+    "id": "pay-stu-8A-10-5",
+    "studentId": "stu-8A-10",
+    "feeId": "fee-stu-8A-10-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026109511",
+    "receiptNo": "RCP/2026/365"
+  },
+  {
+    "id": "pay-stu-8A-11-0",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-0",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026370312",
+    "receiptNo": "RCP/2026/366"
+  },
+  {
+    "id": "pay-stu-8A-11-2",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-2",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026959724",
+    "receiptNo": "RCP/2026/367"
+  },
+  {
+    "id": "pay-stu-8A-11-3",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026809525",
+    "receiptNo": "RCP/2026/368"
+  },
+  {
+    "id": "pay-stu-8A-11-4",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026130903",
+    "receiptNo": "RCP/2026/369"
+  },
+  {
+    "id": "pay-stu-8A-11-5",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026883184",
+    "receiptNo": "RCP/2026/370"
+  },
+  {
+    "id": "pay-stu-8A-11-6",
+    "studentId": "stu-8A-11",
+    "feeId": "fee-stu-8A-11-6",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026821668",
+    "receiptNo": "RCP/2026/371"
+  },
+  {
+    "id": "pay-stu-8A-12-0",
+    "studentId": "stu-8A-12",
+    "feeId": "fee-stu-8A-12-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026321065",
+    "receiptNo": "RCP/2026/372"
+  },
+  {
+    "id": "pay-stu-8A-12-1",
+    "studentId": "stu-8A-12",
+    "feeId": "fee-stu-8A-12-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026847589",
+    "receiptNo": "RCP/2026/373"
+  },
+  {
+    "id": "pay-stu-8A-12-3",
+    "studentId": "stu-8A-12",
+    "feeId": "fee-stu-8A-12-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026182274",
+    "receiptNo": "RCP/2026/374"
+  },
+  {
+    "id": "pay-stu-8A-12-5",
+    "studentId": "stu-8A-12",
+    "feeId": "fee-stu-8A-12-5",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026898696",
+    "receiptNo": "RCP/2026/375"
+  },
+  {
+    "id": "pay-stu-8A-13-0",
+    "studentId": "stu-8A-13",
+    "feeId": "fee-stu-8A-13-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026877462",
+    "receiptNo": "RCP/2026/376"
+  },
+  {
+    "id": "pay-stu-8A-13-3",
+    "studentId": "stu-8A-13",
+    "feeId": "fee-stu-8A-13-3",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026643477",
+    "receiptNo": "RCP/2026/377"
+  },
+  {
+    "id": "pay-stu-8A-13-4",
+    "studentId": "stu-8A-13",
+    "feeId": "fee-stu-8A-13-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026912520",
+    "receiptNo": "RCP/2026/378"
+  },
+  {
+    "id": "pay-stu-8A-14-0",
+    "studentId": "stu-8A-14",
+    "feeId": "fee-stu-8A-14-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026944654",
+    "receiptNo": "RCP/2026/379"
+  },
+  {
+    "id": "pay-stu-8A-14-3",
+    "studentId": "stu-8A-14",
+    "feeId": "fee-stu-8A-14-3",
+    "amount": 1300,
+    "method": "cash",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026918484",
+    "receiptNo": "RCP/2026/380"
+  },
+  {
+    "id": "pay-stu-8A-14-5",
+    "studentId": "stu-8A-14",
+    "feeId": "fee-stu-8A-14-5",
+    "amount": 900,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026169071",
+    "receiptNo": "RCP/2026/381"
+  },
+  {
+    "id": "pay-stu-8A-15-0",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026508223",
+    "receiptNo": "RCP/2026/382"
+  },
+  {
+    "id": "pay-stu-8A-15-2",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026698742",
+    "receiptNo": "RCP/2026/383"
+  },
+  {
+    "id": "pay-stu-8A-15-3",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026585176",
+    "receiptNo": "RCP/2026/384"
+  },
+  {
+    "id": "pay-stu-8A-15-4",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026463967",
+    "receiptNo": "RCP/2026/385"
+  },
+  {
+    "id": "pay-stu-8A-15-5",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026926727",
+    "receiptNo": "RCP/2026/386"
+  },
+  {
+    "id": "pay-stu-8A-15-6",
+    "studentId": "stu-8A-15",
+    "feeId": "fee-stu-8A-15-6",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026105910",
+    "receiptNo": "RCP/2026/387"
+  },
+  {
+    "id": "pay-stu-8A-16-0",
+    "studentId": "stu-8A-16",
+    "feeId": "fee-stu-8A-16-0",
+    "amount": 3600,
+    "method": "netbanking",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026204188",
+    "receiptNo": "RCP/2026/388"
+  },
+  {
+    "id": "pay-stu-8A-16-1",
+    "studentId": "stu-8A-16",
+    "feeId": "fee-stu-8A-16-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026883466",
+    "receiptNo": "RCP/2026/389"
+  },
+  {
+    "id": "pay-stu-8A-16-3",
+    "studentId": "stu-8A-16",
+    "feeId": "fee-stu-8A-16-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026457092",
+    "receiptNo": "RCP/2026/390"
+  },
+  {
+    "id": "pay-stu-8A-17-0",
+    "studentId": "stu-8A-17",
+    "feeId": "fee-stu-8A-17-0",
+    "amount": 1800,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026637701",
+    "receiptNo": "RCP/2026/391"
+  },
+  {
+    "id": "pay-stu-8A-17-3",
+    "studentId": "stu-8A-17",
+    "feeId": "fee-stu-8A-17-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026668101",
+    "receiptNo": "RCP/2026/392"
+  },
+  {
+    "id": "pay-stu-8A-17-5",
+    "studentId": "stu-8A-17",
+    "feeId": "fee-stu-8A-17-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026550686",
+    "receiptNo": "RCP/2026/393"
+  },
+  {
+    "id": "pay-stu-8A-18-0",
+    "studentId": "stu-8A-18",
+    "feeId": "fee-stu-8A-18-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026728124",
+    "receiptNo": "RCP/2026/394"
+  },
+  {
+    "id": "pay-stu-8A-18-1",
+    "studentId": "stu-8A-18",
+    "feeId": "fee-stu-8A-18-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026216984",
+    "receiptNo": "RCP/2026/395"
+  },
+  {
+    "id": "pay-stu-8A-18-3",
+    "studentId": "stu-8A-18",
+    "feeId": "fee-stu-8A-18-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026284252",
+    "receiptNo": "RCP/2026/396"
+  },
+  {
+    "id": "pay-stu-8A-18-5",
+    "studentId": "stu-8A-18",
+    "feeId": "fee-stu-8A-18-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026584220",
+    "receiptNo": "RCP/2026/397"
+  },
+  {
+    "id": "pay-stu-8A-19-0",
+    "studentId": "stu-8A-19",
+    "feeId": "fee-stu-8A-19-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026146134",
+    "receiptNo": "RCP/2026/398"
+  },
+  {
+    "id": "pay-stu-8A-19-2",
+    "studentId": "stu-8A-19",
+    "feeId": "fee-stu-8A-19-2",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026686491",
+    "receiptNo": "RCP/2026/399"
+  },
+  {
+    "id": "pay-stu-8A-19-3",
+    "studentId": "stu-8A-19",
+    "feeId": "fee-stu-8A-19-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026250128",
+    "receiptNo": "RCP/2026/400"
+  },
+  {
+    "id": "pay-stu-8A-19-4",
+    "studentId": "stu-8A-19",
+    "feeId": "fee-stu-8A-19-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026459461",
+    "receiptNo": "RCP/2026/401"
+  },
+  {
+    "id": "pay-stu-8A-20-0",
+    "studentId": "stu-8A-20",
+    "feeId": "fee-stu-8A-20-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026573968",
+    "receiptNo": "RCP/2026/402"
+  },
+  {
+    "id": "pay-stu-8A-20-1",
+    "studentId": "stu-8A-20",
+    "feeId": "fee-stu-8A-20-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026478034",
+    "receiptNo": "RCP/2026/403"
+  },
+  {
+    "id": "pay-stu-8A-20-3",
+    "studentId": "stu-8A-20",
+    "feeId": "fee-stu-8A-20-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026129659",
+    "receiptNo": "RCP/2026/404"
+  },
+  {
+    "id": "pay-stu-8A-20-5",
+    "studentId": "stu-8A-20",
+    "feeId": "fee-stu-8A-20-5",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026661012",
+    "receiptNo": "RCP/2026/405"
+  },
+  {
+    "id": "pay-stu-8A-21-0",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026558463",
+    "receiptNo": "RCP/2026/406"
+  },
+  {
+    "id": "pay-stu-8A-21-2",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026305111",
+    "receiptNo": "RCP/2026/407"
+  },
+  {
+    "id": "pay-stu-8A-21-3",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026243888",
+    "receiptNo": "RCP/2026/408"
+  },
+  {
+    "id": "pay-stu-8A-21-4",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-24",
+    "reference": "TXN2026437581",
+    "receiptNo": "RCP/2026/409"
+  },
+  {
+    "id": "pay-stu-8A-21-5",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026850023",
+    "receiptNo": "RCP/2026/410"
+  },
+  {
+    "id": "pay-stu-8A-21-6",
+    "studentId": "stu-8A-21",
+    "feeId": "fee-stu-8A-21-6",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026919475",
+    "receiptNo": "RCP/2026/411"
+  },
+  {
+    "id": "pay-stu-8A-22-0",
+    "studentId": "stu-8A-22",
+    "feeId": "fee-stu-8A-22-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026977591",
+    "receiptNo": "RCP/2026/412"
+  },
+  {
+    "id": "pay-stu-8A-22-1",
+    "studentId": "stu-8A-22",
+    "feeId": "fee-stu-8A-22-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026430601",
+    "receiptNo": "RCP/2026/413"
+  },
+  {
+    "id": "pay-stu-8A-22-3",
+    "studentId": "stu-8A-22",
+    "feeId": "fee-stu-8A-22-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026908382",
+    "receiptNo": "RCP/2026/414"
+  },
+  {
+    "id": "pay-stu-8A-23-0",
+    "studentId": "stu-8A-23",
+    "feeId": "fee-stu-8A-23-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026727072",
+    "receiptNo": "RCP/2026/415"
+  },
+  {
+    "id": "pay-stu-8A-23-2",
+    "studentId": "stu-8A-23",
+    "feeId": "fee-stu-8A-23-2",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026449645",
+    "receiptNo": "RCP/2026/416"
+  },
+  {
+    "id": "pay-stu-8A-23-3",
+    "studentId": "stu-8A-23",
+    "feeId": "fee-stu-8A-23-3",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026901356",
+    "receiptNo": "RCP/2026/417"
+  },
+  {
+    "id": "pay-stu-8A-23-5",
+    "studentId": "stu-8A-23",
+    "feeId": "fee-stu-8A-23-5",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026570253",
+    "receiptNo": "RCP/2026/418"
+  },
+  {
+    "id": "pay-stu-8A-23-6",
+    "studentId": "stu-8A-23",
+    "feeId": "fee-stu-8A-23-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026518387",
+    "receiptNo": "RCP/2026/419"
+  },
+  {
+    "id": "pay-stu-8A-24-0",
+    "studentId": "stu-8A-24",
+    "feeId": "fee-stu-8A-24-0",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026712248",
+    "receiptNo": "RCP/2026/420"
+  },
+  {
+    "id": "pay-stu-8A-24-3",
+    "studentId": "stu-8A-24",
+    "feeId": "fee-stu-8A-24-3",
+    "amount": 1300,
+    "method": "cash",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026192565",
+    "receiptNo": "RCP/2026/421"
+  },
+  {
+    "id": "pay-stu-8A-24-5",
+    "studentId": "stu-8A-24",
+    "feeId": "fee-stu-8A-24-5",
+    "amount": 1100,
+    "method": "cash",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026294888",
+    "receiptNo": "RCP/2026/422"
+  },
+  {
+    "id": "pay-stu-8A-25-0",
+    "studentId": "stu-8A-25",
+    "feeId": "fee-stu-8A-25-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026346071",
+    "receiptNo": "RCP/2026/423"
+  },
+  {
+    "id": "pay-stu-8A-25-2",
+    "studentId": "stu-8A-25",
+    "feeId": "fee-stu-8A-25-2",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026607105",
+    "receiptNo": "RCP/2026/424"
+  },
+  {
+    "id": "pay-stu-8A-25-3",
+    "studentId": "stu-8A-25",
+    "feeId": "fee-stu-8A-25-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026280593",
+    "receiptNo": "RCP/2026/425"
+  },
+  {
+    "id": "pay-stu-8A-25-4",
+    "studentId": "stu-8A-25",
+    "feeId": "fee-stu-8A-25-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-27",
+    "reference": "TXN2026235908",
+    "receiptNo": "RCP/2026/426"
+  },
+  {
+    "id": "pay-stu-8A-26-0",
+    "studentId": "stu-8A-26",
+    "feeId": "fee-stu-8A-26-0",
+    "amount": 3600,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026236459",
+    "receiptNo": "RCP/2026/427"
+  },
+  {
+    "id": "pay-stu-8A-26-3",
+    "studentId": "stu-8A-26",
+    "feeId": "fee-stu-8A-26-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026295538",
+    "receiptNo": "RCP/2026/428"
+  },
+  {
+    "id": "pay-stu-8A-26-5",
+    "studentId": "stu-8A-26",
+    "feeId": "fee-stu-8A-26-5",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026676609",
+    "receiptNo": "RCP/2026/429"
+  },
+  {
+    "id": "pay-stu-8A-27-0",
+    "studentId": "stu-8A-27",
+    "feeId": "fee-stu-8A-27-0",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026643600",
+    "receiptNo": "RCP/2026/430"
+  },
+  {
+    "id": "pay-stu-8A-27-3",
+    "studentId": "stu-8A-27",
+    "feeId": "fee-stu-8A-27-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026709454",
+    "receiptNo": "RCP/2026/431"
+  },
+  {
+    "id": "pay-stu-8A-27-5",
+    "studentId": "stu-8A-27",
+    "feeId": "fee-stu-8A-27-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026439074",
+    "receiptNo": "RCP/2026/432"
+  },
+  {
+    "id": "pay-stu-8A-28-0",
+    "studentId": "stu-8A-28",
+    "feeId": "fee-stu-8A-28-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026820024",
+    "receiptNo": "RCP/2026/433"
+  },
+  {
+    "id": "pay-stu-8A-28-1",
+    "studentId": "stu-8A-28",
+    "feeId": "fee-stu-8A-28-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026205678",
+    "receiptNo": "RCP/2026/434"
+  },
+  {
+    "id": "pay-stu-8A-28-3",
+    "studentId": "stu-8A-28",
+    "feeId": "fee-stu-8A-28-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026291603",
+    "receiptNo": "RCP/2026/435"
+  },
+  {
+    "id": "pay-stu-8A-29-0",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026613859",
+    "receiptNo": "RCP/2026/436"
+  },
+  {
+    "id": "pay-stu-8A-29-2",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026383716",
+    "receiptNo": "RCP/2026/437"
+  },
+  {
+    "id": "pay-stu-8A-29-3",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026556744",
+    "receiptNo": "RCP/2026/438"
+  },
+  {
+    "id": "pay-stu-8A-29-4",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-28",
+    "reference": "TXN2026606807",
+    "receiptNo": "RCP/2026/439"
+  },
+  {
+    "id": "pay-stu-8A-29-5",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026365925",
+    "receiptNo": "RCP/2026/440"
+  },
+  {
+    "id": "pay-stu-8A-29-6",
+    "studentId": "stu-8A-29",
+    "feeId": "fee-stu-8A-29-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026977241",
+    "receiptNo": "RCP/2026/441"
+  },
+  {
+    "id": "pay-stu-8A-30-0",
+    "studentId": "stu-8A-30",
+    "feeId": "fee-stu-8A-30-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026783154",
+    "receiptNo": "RCP/2026/442"
+  },
+  {
+    "id": "pay-stu-8A-30-3",
+    "studentId": "stu-8A-30",
+    "feeId": "fee-stu-8A-30-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026500822",
+    "receiptNo": "RCP/2026/443"
+  },
+  {
+    "id": "pay-stu-8A-30-5",
+    "studentId": "stu-8A-30",
+    "feeId": "fee-stu-8A-30-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026174999",
+    "receiptNo": "RCP/2026/444"
+  },
+  {
+    "id": "pay-stu-8B-01-0",
+    "studentId": "stu-8B-01",
+    "feeId": "fee-stu-8B-01-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026313365",
+    "receiptNo": "RCP/2026/445"
+  },
+  {
+    "id": "pay-stu-8B-01-2",
+    "studentId": "stu-8B-01",
+    "feeId": "fee-stu-8B-01-2",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026295309",
+    "receiptNo": "RCP/2026/446"
+  },
+  {
+    "id": "pay-stu-8B-01-3",
+    "studentId": "stu-8B-01",
+    "feeId": "fee-stu-8B-01-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026446074",
+    "receiptNo": "RCP/2026/447"
+  },
+  {
+    "id": "pay-stu-8B-01-4",
+    "studentId": "stu-8B-01",
+    "feeId": "fee-stu-8B-01-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026406800",
+    "receiptNo": "RCP/2026/448"
+  },
+  {
+    "id": "pay-stu-8B-02-0",
+    "studentId": "stu-8B-02",
+    "feeId": "fee-stu-8B-02-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026797196",
+    "receiptNo": "RCP/2026/449"
+  },
+  {
+    "id": "pay-stu-8B-02-1",
+    "studentId": "stu-8B-02",
+    "feeId": "fee-stu-8B-02-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026615496",
+    "receiptNo": "RCP/2026/450"
+  },
+  {
+    "id": "pay-stu-8B-02-3",
+    "studentId": "stu-8B-02",
+    "feeId": "fee-stu-8B-02-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026553749",
+    "receiptNo": "RCP/2026/451"
+  },
+  {
+    "id": "pay-stu-8B-02-5",
+    "studentId": "stu-8B-02",
+    "feeId": "fee-stu-8B-02-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026938252",
+    "receiptNo": "RCP/2026/452"
+  },
+  {
+    "id": "pay-stu-8B-03-0",
+    "studentId": "stu-8B-03",
+    "feeId": "fee-stu-8B-03-0",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026154312",
+    "receiptNo": "RCP/2026/453"
+  },
+  {
+    "id": "pay-stu-8B-03-3",
+    "studentId": "stu-8B-03",
+    "feeId": "fee-stu-8B-03-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026157248",
+    "receiptNo": "RCP/2026/454"
+  },
+  {
+    "id": "pay-stu-8B-03-5",
+    "studentId": "stu-8B-03",
+    "feeId": "fee-stu-8B-03-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026546313",
+    "receiptNo": "RCP/2026/455"
+  },
+  {
+    "id": "pay-stu-8B-05-0",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026803953",
+    "receiptNo": "RCP/2026/456"
+  },
+  {
+    "id": "pay-stu-8B-05-2",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-24",
+    "reference": "TXN2026277907",
+    "receiptNo": "RCP/2026/457"
+  },
+  {
+    "id": "pay-stu-8B-05-3",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026759417",
+    "receiptNo": "RCP/2026/458"
+  },
+  {
+    "id": "pay-stu-8B-05-4",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-29",
+    "reference": "TXN2026712521",
+    "receiptNo": "RCP/2026/459"
+  },
+  {
+    "id": "pay-stu-8B-05-5",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026166708",
+    "receiptNo": "RCP/2026/460"
+  },
+  {
+    "id": "pay-stu-8B-05-6",
+    "studentId": "stu-8B-05",
+    "feeId": "fee-stu-8B-05-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026566227",
+    "receiptNo": "RCP/2026/461"
+  },
+  {
+    "id": "pay-stu-8B-06-0",
+    "studentId": "stu-8B-06",
+    "feeId": "fee-stu-8B-06-0",
+    "amount": 3600,
+    "method": "netbanking",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026170282",
+    "receiptNo": "RCP/2026/462"
+  },
+  {
+    "id": "pay-stu-8B-06-1",
+    "studentId": "stu-8B-06",
+    "feeId": "fee-stu-8B-06-1",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026843959",
+    "receiptNo": "RCP/2026/463"
+  },
+  {
+    "id": "pay-stu-8B-06-3",
+    "studentId": "stu-8B-06",
+    "feeId": "fee-stu-8B-06-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026195437",
+    "receiptNo": "RCP/2026/464"
+  },
+  {
+    "id": "pay-stu-8B-06-5",
+    "studentId": "stu-8B-06",
+    "feeId": "fee-stu-8B-06-5",
+    "amount": 2100,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026346317",
+    "receiptNo": "RCP/2026/465"
+  },
+  {
+    "id": "pay-stu-8B-08-0",
+    "studentId": "stu-8B-08",
+    "feeId": "fee-stu-8B-08-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026896454",
+    "receiptNo": "RCP/2026/466"
+  },
+  {
+    "id": "pay-stu-8B-08-1",
+    "studentId": "stu-8B-08",
+    "feeId": "fee-stu-8B-08-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026198325",
+    "receiptNo": "RCP/2026/467"
+  },
+  {
+    "id": "pay-stu-8B-08-3",
+    "studentId": "stu-8B-08",
+    "feeId": "fee-stu-8B-08-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026185867",
+    "receiptNo": "RCP/2026/468"
+  },
+  {
+    "id": "pay-stu-8B-08-5",
+    "studentId": "stu-8B-08",
+    "feeId": "fee-stu-8B-08-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026628717",
+    "receiptNo": "RCP/2026/469"
+  },
+  {
+    "id": "pay-stu-8B-09-0",
+    "studentId": "stu-8B-09",
+    "feeId": "fee-stu-8B-09-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026971214",
+    "receiptNo": "RCP/2026/470"
+  },
+  {
+    "id": "pay-stu-8B-09-2",
+    "studentId": "stu-8B-09",
+    "feeId": "fee-stu-8B-09-2",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026499316",
+    "receiptNo": "RCP/2026/471"
+  },
+  {
+    "id": "pay-stu-8B-09-3",
+    "studentId": "stu-8B-09",
+    "feeId": "fee-stu-8B-09-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026425664",
+    "receiptNo": "RCP/2026/472"
+  },
+  {
+    "id": "pay-stu-8B-09-5",
+    "studentId": "stu-8B-09",
+    "feeId": "fee-stu-8B-09-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026441847",
+    "receiptNo": "RCP/2026/473"
+  },
+  {
+    "id": "pay-stu-8B-09-6",
+    "studentId": "stu-8B-09",
+    "feeId": "fee-stu-8B-09-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026789195",
+    "receiptNo": "RCP/2026/474"
+  },
+  {
+    "id": "pay-stu-8B-10-0",
+    "studentId": "stu-8B-10",
+    "feeId": "fee-stu-8B-10-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026177494",
+    "receiptNo": "RCP/2026/475"
+  },
+  {
+    "id": "pay-stu-8B-10-3",
+    "studentId": "stu-8B-10",
+    "feeId": "fee-stu-8B-10-3",
+    "amount": 1300,
+    "method": "upi",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026304162",
+    "receiptNo": "RCP/2026/476"
+  },
+  {
+    "id": "pay-stu-8B-11-0",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-0",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026467165",
+    "receiptNo": "RCP/2026/477"
+  },
+  {
+    "id": "pay-stu-8B-11-2",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-23",
+    "reference": "TXN2026138448",
+    "receiptNo": "RCP/2026/478"
+  },
+  {
+    "id": "pay-stu-8B-11-3",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026217182",
+    "receiptNo": "RCP/2026/479"
+  },
+  {
+    "id": "pay-stu-8B-11-4",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026847646",
+    "receiptNo": "RCP/2026/480"
+  },
+  {
+    "id": "pay-stu-8B-11-5",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026552694",
+    "receiptNo": "RCP/2026/481"
+  },
+  {
+    "id": "pay-stu-8B-11-6",
+    "studentId": "stu-8B-11",
+    "feeId": "fee-stu-8B-11-6",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026820543",
+    "receiptNo": "RCP/2026/482"
+  },
+  {
+    "id": "pay-stu-8B-12-0",
+    "studentId": "stu-8B-12",
+    "feeId": "fee-stu-8B-12-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026661259",
+    "receiptNo": "RCP/2026/483"
+  },
+  {
+    "id": "pay-stu-8B-12-3",
+    "studentId": "stu-8B-12",
+    "feeId": "fee-stu-8B-12-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026879634",
+    "receiptNo": "RCP/2026/484"
+  },
+  {
+    "id": "pay-stu-8B-12-5",
+    "studentId": "stu-8B-12",
+    "feeId": "fee-stu-8B-12-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026825675",
+    "receiptNo": "RCP/2026/485"
+  },
+  {
+    "id": "pay-stu-8B-13-0",
+    "studentId": "stu-8B-13",
+    "feeId": "fee-stu-8B-13-0",
+    "amount": 1800,
+    "method": "cash",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026117950",
+    "receiptNo": "RCP/2026/486"
+  },
+  {
+    "id": "pay-stu-8B-13-3",
+    "studentId": "stu-8B-13",
+    "feeId": "fee-stu-8B-13-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026714288",
+    "receiptNo": "RCP/2026/487"
+  },
+  {
+    "id": "pay-stu-8B-14-0",
+    "studentId": "stu-8B-14",
+    "feeId": "fee-stu-8B-14-0",
+    "amount": 1800,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026125454",
+    "receiptNo": "RCP/2026/488"
+  },
+  {
+    "id": "pay-stu-8B-14-3",
+    "studentId": "stu-8B-14",
+    "feeId": "fee-stu-8B-14-3",
+    "amount": 1300,
+    "method": "cash",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026832590",
+    "receiptNo": "RCP/2026/489"
+  },
+  {
+    "id": "pay-stu-8B-15-0",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026590134",
+    "receiptNo": "RCP/2026/490"
+  },
+  {
+    "id": "pay-stu-8B-15-2",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-27",
+    "reference": "TXN2026913610",
+    "receiptNo": "RCP/2026/491"
+  },
+  {
+    "id": "pay-stu-8B-15-3",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026262921",
+    "receiptNo": "RCP/2026/492"
+  },
+  {
+    "id": "pay-stu-8B-15-4",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026205719",
+    "receiptNo": "RCP/2026/493"
+  },
+  {
+    "id": "pay-stu-8B-15-5",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026700612",
+    "receiptNo": "RCP/2026/494"
+  },
+  {
+    "id": "pay-stu-8B-15-6",
+    "studentId": "stu-8B-15",
+    "feeId": "fee-stu-8B-15-6",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026244701",
+    "receiptNo": "RCP/2026/495"
+  },
+  {
+    "id": "pay-stu-8B-16-0",
+    "studentId": "stu-8B-16",
+    "feeId": "fee-stu-8B-16-0",
+    "amount": 3600,
+    "method": "upi",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026199395",
+    "receiptNo": "RCP/2026/496"
+  },
+  {
+    "id": "pay-stu-8B-16-3",
+    "studentId": "stu-8B-16",
+    "feeId": "fee-stu-8B-16-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026983464",
+    "receiptNo": "RCP/2026/497"
+  },
+  {
+    "id": "pay-stu-8B-17-0",
+    "studentId": "stu-8B-17",
+    "feeId": "fee-stu-8B-17-0",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026955700",
+    "receiptNo": "RCP/2026/498"
+  },
+  {
+    "id": "pay-stu-8B-17-3",
+    "studentId": "stu-8B-17",
+    "feeId": "fee-stu-8B-17-3",
+    "amount": 1300,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026756947",
+    "receiptNo": "RCP/2026/499"
+  },
+  {
+    "id": "pay-stu-8B-18-0",
+    "studentId": "stu-8B-18",
+    "feeId": "fee-stu-8B-18-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026919120",
+    "receiptNo": "RCP/2026/500"
+  },
+  {
+    "id": "pay-stu-8B-18-1",
+    "studentId": "stu-8B-18",
+    "feeId": "fee-stu-8B-18-1",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-10-13",
+    "reference": "TXN2026429659",
+    "receiptNo": "RCP/2026/501"
+  },
+  {
+    "id": "pay-stu-8B-18-3",
+    "studentId": "stu-8B-18",
+    "feeId": "fee-stu-8B-18-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026188915",
+    "receiptNo": "RCP/2026/502"
+  },
+  {
+    "id": "pay-stu-8B-18-5",
+    "studentId": "stu-8B-18",
+    "feeId": "fee-stu-8B-18-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026483677",
+    "receiptNo": "RCP/2026/503"
+  },
+  {
+    "id": "pay-stu-8B-19-0",
+    "studentId": "stu-8B-19",
+    "feeId": "fee-stu-8B-19-0",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026271594",
+    "receiptNo": "RCP/2026/504"
+  },
+  {
+    "id": "pay-stu-8B-19-3",
+    "studentId": "stu-8B-19",
+    "feeId": "fee-stu-8B-19-3",
+    "amount": 4200,
+    "method": "cash",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026932424",
+    "receiptNo": "RCP/2026/505"
+  },
+  {
+    "id": "pay-stu-8B-19-4",
+    "studentId": "stu-8B-19",
+    "feeId": "fee-stu-8B-19-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026265182",
+    "receiptNo": "RCP/2026/506"
+  },
+  {
+    "id": "pay-stu-8B-20-0",
+    "studentId": "stu-8B-20",
+    "feeId": "fee-stu-8B-20-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026313373",
+    "receiptNo": "RCP/2026/507"
+  },
+  {
+    "id": "pay-stu-8B-20-3",
+    "studentId": "stu-8B-20",
+    "feeId": "fee-stu-8B-20-3",
+    "amount": 1300,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026633247",
+    "receiptNo": "RCP/2026/508"
+  },
+  {
+    "id": "pay-stu-8B-20-5",
+    "studentId": "stu-8B-20",
+    "feeId": "fee-stu-8B-20-5",
+    "amount": 900,
+    "method": "upi",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026485835",
+    "receiptNo": "RCP/2026/509"
+  },
+  {
+    "id": "pay-stu-8B-21-0",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026664497",
+    "receiptNo": "RCP/2026/510"
+  },
+  {
+    "id": "pay-stu-8B-21-2",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-2",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026243853",
+    "receiptNo": "RCP/2026/511"
+  },
+  {
+    "id": "pay-stu-8B-21-3",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-3",
+    "amount": 4200,
+    "method": "netbanking",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026160844",
+    "receiptNo": "RCP/2026/512"
+  },
+  {
+    "id": "pay-stu-8B-21-4",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026965484",
+    "receiptNo": "RCP/2026/513"
+  },
+  {
+    "id": "pay-stu-8B-21-5",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026591410",
+    "receiptNo": "RCP/2026/514"
+  },
+  {
+    "id": "pay-stu-8B-21-6",
+    "studentId": "stu-8B-21",
+    "feeId": "fee-stu-8B-21-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026370871",
+    "receiptNo": "RCP/2026/515"
+  },
+  {
+    "id": "pay-stu-8B-22-0",
+    "studentId": "stu-8B-22",
+    "feeId": "fee-stu-8B-22-0",
+    "amount": 6000,
+    "method": "cash",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026203898",
+    "receiptNo": "RCP/2026/516"
+  },
+  {
+    "id": "pay-stu-8B-22-1",
+    "studentId": "stu-8B-22",
+    "feeId": "fee-stu-8B-22-1",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026439702",
+    "receiptNo": "RCP/2026/517"
+  },
+  {
+    "id": "pay-stu-8B-22-3",
+    "studentId": "stu-8B-22",
+    "feeId": "fee-stu-8B-22-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026330723",
+    "receiptNo": "RCP/2026/518"
+  },
+  {
+    "id": "pay-stu-8B-23-0",
+    "studentId": "stu-8B-23",
+    "feeId": "fee-stu-8B-23-0",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026539674",
+    "receiptNo": "RCP/2026/519"
+  },
+  {
+    "id": "pay-stu-8B-23-3",
+    "studentId": "stu-8B-23",
+    "feeId": "fee-stu-8B-23-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026340002",
+    "receiptNo": "RCP/2026/520"
+  },
+  {
+    "id": "pay-stu-8B-23-5",
+    "studentId": "stu-8B-23",
+    "feeId": "fee-stu-8B-23-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026566069",
+    "receiptNo": "RCP/2026/521"
+  },
+  {
+    "id": "pay-stu-8B-24-0",
+    "studentId": "stu-8B-24",
+    "feeId": "fee-stu-8B-24-0",
+    "amount": 1800,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026991577",
+    "receiptNo": "RCP/2026/522"
+  },
+  {
+    "id": "pay-stu-8B-24-3",
+    "studentId": "stu-8B-24",
+    "feeId": "fee-stu-8B-24-3",
+    "amount": 1300,
+    "method": "cash",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026247930",
+    "receiptNo": "RCP/2026/523"
+  },
+  {
+    "id": "pay-stu-8B-24-5",
+    "studentId": "stu-8B-24",
+    "feeId": "fee-stu-8B-24-5",
+    "amount": 900,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026352094",
+    "receiptNo": "RCP/2026/524"
+  },
+  {
+    "id": "pay-stu-8B-25-0",
+    "studentId": "stu-8B-25",
+    "feeId": "fee-stu-8B-25-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026145408",
+    "receiptNo": "RCP/2026/525"
+  },
+  {
+    "id": "pay-stu-8B-25-2",
+    "studentId": "stu-8B-25",
+    "feeId": "fee-stu-8B-25-2",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2027-01-23",
+    "reference": "TXN2026541499",
+    "receiptNo": "RCP/2026/526"
+  },
+  {
+    "id": "pay-stu-8B-25-3",
+    "studentId": "stu-8B-25",
+    "feeId": "fee-stu-8B-25-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026566211",
+    "receiptNo": "RCP/2026/527"
+  },
+  {
+    "id": "pay-stu-8B-25-4",
+    "studentId": "stu-8B-25",
+    "feeId": "fee-stu-8B-25-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026608664",
+    "receiptNo": "RCP/2026/528"
+  },
+  {
+    "id": "pay-stu-8B-26-0",
+    "studentId": "stu-8B-26",
+    "feeId": "fee-stu-8B-26-0",
+    "amount": 3600,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026430282",
+    "receiptNo": "RCP/2026/529"
+  },
+  {
+    "id": "pay-stu-8B-26-1",
+    "studentId": "stu-8B-26",
+    "feeId": "fee-stu-8B-26-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026425558",
+    "receiptNo": "RCP/2026/530"
+  },
+  {
+    "id": "pay-stu-8B-26-3",
+    "studentId": "stu-8B-26",
+    "feeId": "fee-stu-8B-26-3",
+    "amount": 4200,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026823903",
+    "receiptNo": "RCP/2026/531"
+  },
+  {
+    "id": "pay-stu-8B-26-5",
+    "studentId": "stu-8B-26",
+    "feeId": "fee-stu-8B-26-5",
+    "amount": 2100,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026996377",
+    "receiptNo": "RCP/2026/532"
+  },
+  {
+    "id": "pay-stu-8B-27-0",
+    "studentId": "stu-8B-27",
+    "feeId": "fee-stu-8B-27-0",
+    "amount": 1800,
+    "method": "netbanking",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026479180",
+    "receiptNo": "RCP/2026/533"
+  },
+  {
+    "id": "pay-stu-8B-27-3",
+    "studentId": "stu-8B-27",
+    "feeId": "fee-stu-8B-27-3",
+    "amount": 1300,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026191403",
+    "receiptNo": "RCP/2026/534"
+  },
+  {
+    "id": "pay-stu-8B-27-5",
+    "studentId": "stu-8B-27",
+    "feeId": "fee-stu-8B-27-5",
+    "amount": 900,
+    "method": "cash",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026636507",
+    "receiptNo": "RCP/2026/535"
+  },
+  {
+    "id": "pay-stu-8B-28-0",
+    "studentId": "stu-8B-28",
+    "feeId": "fee-stu-8B-28-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026453661",
+    "receiptNo": "RCP/2026/536"
+  },
+  {
+    "id": "pay-stu-8B-28-1",
+    "studentId": "stu-8B-28",
+    "feeId": "fee-stu-8B-28-1",
+    "amount": 6000,
+    "method": "upi",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026944588",
+    "receiptNo": "RCP/2026/537"
+  },
+  {
+    "id": "pay-stu-8B-28-3",
+    "studentId": "stu-8B-28",
+    "feeId": "fee-stu-8B-28-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026851332",
+    "receiptNo": "RCP/2026/538"
+  },
+  {
+    "id": "pay-stu-8B-29-0",
+    "studentId": "stu-8B-29",
+    "feeId": "fee-stu-8B-29-0",
+    "amount": 6000,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026406423",
+    "receiptNo": "RCP/2026/539"
+  },
+  {
+    "id": "pay-stu-8B-29-2",
+    "studentId": "stu-8B-29",
+    "feeId": "fee-stu-8B-29-2",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026924666",
+    "receiptNo": "RCP/2026/540"
+  },
+  {
+    "id": "pay-stu-8B-29-3",
+    "studentId": "stu-8B-29",
+    "feeId": "fee-stu-8B-29-3",
+    "amount": 4200,
+    "method": "card",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026586741",
+    "receiptNo": "RCP/2026/541"
+  },
+  {
+    "id": "pay-stu-8B-29-5",
+    "studentId": "stu-8B-29",
+    "feeId": "fee-stu-8B-29-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026786551",
+    "receiptNo": "RCP/2026/542"
+  },
+  {
+    "id": "pay-stu-8B-29-6",
+    "studentId": "stu-8B-29",
+    "feeId": "fee-stu-8B-29-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026702626",
+    "receiptNo": "RCP/2026/543"
+  },
+  {
+    "id": "pay-stu-8B-30-0",
+    "studentId": "stu-8B-30",
+    "feeId": "fee-stu-8B-30-0",
+    "amount": 6000,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026632859",
+    "receiptNo": "RCP/2026/544"
+  },
+  {
+    "id": "pay-stu-8B-30-3",
+    "studentId": "stu-8B-30",
+    "feeId": "fee-stu-8B-30-3",
+    "amount": 1300,
+    "method": "netbanking",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026487564",
+    "receiptNo": "RCP/2026/545"
+  },
+  {
+    "id": "pay-stu-8B-30-5",
+    "studentId": "stu-8B-30",
+    "feeId": "fee-stu-8B-30-5",
+    "amount": 1100,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026842209",
+    "receiptNo": "RCP/2026/546"
+  },
+  {
+    "id": "pay-stu-9A-01-0",
+    "studentId": "stu-9A-01",
+    "feeId": "fee-stu-9A-01-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026627163",
+    "receiptNo": "RCP/2026/547"
+  },
+  {
+    "id": "pay-stu-9A-01-2",
+    "studentId": "stu-9A-01",
+    "feeId": "fee-stu-9A-01-2",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2027-01-24",
+    "reference": "TXN2026202167",
+    "receiptNo": "RCP/2026/548"
+  },
+  {
+    "id": "pay-stu-9A-01-3",
+    "studentId": "stu-9A-01",
+    "feeId": "fee-stu-9A-01-3",
+    "amount": 4550,
+    "method": "upi",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026802934",
+    "receiptNo": "RCP/2026/549"
+  },
+  {
+    "id": "pay-stu-9A-01-4",
+    "studentId": "stu-9A-01",
+    "feeId": "fee-stu-9A-01-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026962716",
+    "receiptNo": "RCP/2026/550"
+  },
+  {
+    "id": "pay-stu-9A-02-0",
+    "studentId": "stu-9A-02",
+    "feeId": "fee-stu-9A-02-0",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026818537",
+    "receiptNo": "RCP/2026/551"
+  },
+  {
+    "id": "pay-stu-9A-02-1",
+    "studentId": "stu-9A-02",
+    "feeId": "fee-stu-9A-02-1",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026149210",
+    "receiptNo": "RCP/2026/552"
+  },
+  {
+    "id": "pay-stu-9A-02-3",
+    "studentId": "stu-9A-02",
+    "feeId": "fee-stu-9A-02-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026964286",
+    "receiptNo": "RCP/2026/553"
+  },
+  {
+    "id": "pay-stu-9A-02-5",
+    "studentId": "stu-9A-02",
+    "feeId": "fee-stu-9A-02-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026247798",
+    "receiptNo": "RCP/2026/554"
+  },
+  {
+    "id": "pay-stu-9A-03-0",
+    "studentId": "stu-9A-03",
+    "feeId": "fee-stu-9A-03-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026102746",
+    "receiptNo": "RCP/2026/555"
+  },
+  {
+    "id": "pay-stu-9A-03-2",
+    "studentId": "stu-9A-03",
+    "feeId": "fee-stu-9A-03-2",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026104942",
+    "receiptNo": "RCP/2026/556"
+  },
+  {
+    "id": "pay-stu-9A-03-3",
+    "studentId": "stu-9A-03",
+    "feeId": "fee-stu-9A-03-3",
+    "amount": 2700,
+    "method": "netbanking",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026698767",
+    "receiptNo": "RCP/2026/557"
+  },
+  {
+    "id": "pay-stu-9A-03-5",
+    "studentId": "stu-9A-03",
+    "feeId": "fee-stu-9A-03-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026542774",
+    "receiptNo": "RCP/2026/558"
+  },
+  {
+    "id": "pay-stu-9A-03-6",
+    "studentId": "stu-9A-03",
+    "feeId": "fee-stu-9A-03-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026380204",
+    "receiptNo": "RCP/2026/559"
+  },
+  {
+    "id": "pay-stu-9A-05-0",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026892502",
+    "receiptNo": "RCP/2026/560"
+  },
+  {
+    "id": "pay-stu-9A-05-2",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-2",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2027-01-23",
+    "reference": "TXN2026457708",
+    "receiptNo": "RCP/2026/561"
+  },
+  {
+    "id": "pay-stu-9A-05-3",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026407998",
+    "receiptNo": "RCP/2026/562"
+  },
+  {
+    "id": "pay-stu-9A-05-4",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026407027",
+    "receiptNo": "RCP/2026/563"
+  },
+  {
+    "id": "pay-stu-9A-05-5",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026494838",
+    "receiptNo": "RCP/2026/564"
+  },
+  {
+    "id": "pay-stu-9A-05-6",
+    "studentId": "stu-9A-05",
+    "feeId": "fee-stu-9A-05-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026213358",
+    "receiptNo": "RCP/2026/565"
+  },
+  {
+    "id": "pay-stu-9A-06-0",
+    "studentId": "stu-9A-06",
+    "feeId": "fee-stu-9A-06-0",
+    "amount": 4100,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026907011",
+    "receiptNo": "RCP/2026/566"
+  },
+  {
+    "id": "pay-stu-9A-06-3",
+    "studentId": "stu-9A-06",
+    "feeId": "fee-stu-9A-06-3",
+    "amount": 4550,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026665380",
+    "receiptNo": "RCP/2026/567"
+  },
+  {
+    "id": "pay-stu-9A-06-5",
+    "studentId": "stu-9A-06",
+    "feeId": "fee-stu-9A-06-5",
+    "amount": 1800,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026815652",
+    "receiptNo": "RCP/2026/568"
+  },
+  {
+    "id": "pay-stu-9A-07-0",
+    "studentId": "stu-9A-07",
+    "feeId": "fee-stu-9A-07-0",
+    "amount": 2000,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026600830",
+    "receiptNo": "RCP/2026/569"
+  },
+  {
+    "id": "pay-stu-9A-07-3",
+    "studentId": "stu-9A-07",
+    "feeId": "fee-stu-9A-07-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026190531",
+    "receiptNo": "RCP/2026/570"
+  },
+  {
+    "id": "pay-stu-9A-08-0",
+    "studentId": "stu-9A-08",
+    "feeId": "fee-stu-9A-08-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026311404",
+    "receiptNo": "RCP/2026/571"
+  },
+  {
+    "id": "pay-stu-9A-08-1",
+    "studentId": "stu-9A-08",
+    "feeId": "fee-stu-9A-08-1",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026314371",
+    "receiptNo": "RCP/2026/572"
+  },
+  {
+    "id": "pay-stu-9A-08-3",
+    "studentId": "stu-9A-08",
+    "feeId": "fee-stu-9A-08-3",
+    "amount": 4550,
+    "method": "cash",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026466040",
+    "receiptNo": "RCP/2026/573"
+  },
+  {
+    "id": "pay-stu-9A-08-5",
+    "studentId": "stu-9A-08",
+    "feeId": "fee-stu-9A-08-5",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026430909",
+    "receiptNo": "RCP/2026/574"
+  },
+  {
+    "id": "pay-stu-9A-09-0",
+    "studentId": "stu-9A-09",
+    "feeId": "fee-stu-9A-09-0",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026111275",
+    "receiptNo": "RCP/2026/575"
+  },
+  {
+    "id": "pay-stu-9A-09-3",
+    "studentId": "stu-9A-09",
+    "feeId": "fee-stu-9A-09-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026218627",
+    "receiptNo": "RCP/2026/576"
+  },
+  {
+    "id": "pay-stu-9A-09-4",
+    "studentId": "stu-9A-09",
+    "feeId": "fee-stu-9A-09-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-27",
+    "reference": "TXN2026793398",
+    "receiptNo": "RCP/2026/577"
+  },
+  {
+    "id": "pay-stu-9A-09-5",
+    "studentId": "stu-9A-09",
+    "feeId": "fee-stu-9A-09-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026424458",
+    "receiptNo": "RCP/2026/578"
+  },
+  {
+    "id": "pay-stu-9A-10-0",
+    "studentId": "stu-9A-10",
+    "feeId": "fee-stu-9A-10-0",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026941156",
+    "receiptNo": "RCP/2026/579"
+  },
+  {
+    "id": "pay-stu-9A-10-3",
+    "studentId": "stu-9A-10",
+    "feeId": "fee-stu-9A-10-3",
+    "amount": 1400,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026420524",
+    "receiptNo": "RCP/2026/580"
+  },
+  {
+    "id": "pay-stu-9A-11-0",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026329570",
+    "receiptNo": "RCP/2026/581"
+  },
+  {
+    "id": "pay-stu-9A-11-2",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-2",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026549646",
+    "receiptNo": "RCP/2026/582"
+  },
+  {
+    "id": "pay-stu-9A-11-3",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026151088",
+    "receiptNo": "RCP/2026/583"
+  },
+  {
+    "id": "pay-stu-9A-11-4",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026689688",
+    "receiptNo": "RCP/2026/584"
+  },
+  {
+    "id": "pay-stu-9A-11-5",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026382550",
+    "receiptNo": "RCP/2026/585"
+  },
+  {
+    "id": "pay-stu-9A-11-6",
+    "studentId": "stu-9A-11",
+    "feeId": "fee-stu-9A-11-6",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026722579",
+    "receiptNo": "RCP/2026/586"
+  },
+  {
+    "id": "pay-stu-9A-12-0",
+    "studentId": "stu-9A-12",
+    "feeId": "fee-stu-9A-12-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026861724",
+    "receiptNo": "RCP/2026/587"
+  },
+  {
+    "id": "pay-stu-9A-12-1",
+    "studentId": "stu-9A-12",
+    "feeId": "fee-stu-9A-12-1",
+    "amount": 6750,
+    "method": "cash",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026892361",
+    "receiptNo": "RCP/2026/588"
+  },
+  {
+    "id": "pay-stu-9A-12-3",
+    "studentId": "stu-9A-12",
+    "feeId": "fee-stu-9A-12-3",
+    "amount": 4550,
+    "method": "cash",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026680353",
+    "receiptNo": "RCP/2026/589"
+  },
+  {
+    "id": "pay-stu-9A-12-5",
+    "studentId": "stu-9A-12",
+    "feeId": "fee-stu-9A-12-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026423975",
+    "receiptNo": "RCP/2026/590"
+  },
+  {
+    "id": "pay-stu-9A-13-0",
+    "studentId": "stu-9A-13",
+    "feeId": "fee-stu-9A-13-0",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026703027",
+    "receiptNo": "RCP/2026/591"
+  },
+  {
+    "id": "pay-stu-9A-13-3",
+    "studentId": "stu-9A-13",
+    "feeId": "fee-stu-9A-13-3",
+    "amount": 2700,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026410858",
+    "receiptNo": "RCP/2026/592"
+  },
+  {
+    "id": "pay-stu-9A-13-4",
+    "studentId": "stu-9A-13",
+    "feeId": "fee-stu-9A-13-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026476847",
+    "receiptNo": "RCP/2026/593"
+  },
+  {
+    "id": "pay-stu-9A-14-0",
+    "studentId": "stu-9A-14",
+    "feeId": "fee-stu-9A-14-0",
+    "amount": 2000,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026751774",
+    "receiptNo": "RCP/2026/594"
+  },
+  {
+    "id": "pay-stu-9A-14-3",
+    "studentId": "stu-9A-14",
+    "feeId": "fee-stu-9A-14-3",
+    "amount": 1400,
+    "method": "upi",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026172959",
+    "receiptNo": "RCP/2026/595"
+  },
+  {
+    "id": "pay-stu-9A-15-0",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026754672",
+    "receiptNo": "RCP/2026/596"
+  },
+  {
+    "id": "pay-stu-9A-15-2",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-2",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026661195",
+    "receiptNo": "RCP/2026/597"
+  },
+  {
+    "id": "pay-stu-9A-15-3",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-3",
+    "amount": 4550,
+    "method": "upi",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026329209",
+    "receiptNo": "RCP/2026/598"
+  },
+  {
+    "id": "pay-stu-9A-15-4",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-28",
+    "reference": "TXN2026137074",
+    "receiptNo": "RCP/2026/599"
+  },
+  {
+    "id": "pay-stu-9A-15-5",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026147865",
+    "receiptNo": "RCP/2026/600"
+  },
+  {
+    "id": "pay-stu-9A-15-6",
+    "studentId": "stu-9A-15",
+    "feeId": "fee-stu-9A-15-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026852513",
+    "receiptNo": "RCP/2026/601"
+  },
+  {
+    "id": "pay-stu-9A-16-0",
+    "studentId": "stu-9A-16",
+    "feeId": "fee-stu-9A-16-0",
+    "amount": 4100,
+    "method": "upi",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026577132",
+    "receiptNo": "RCP/2026/602"
+  },
+  {
+    "id": "pay-stu-9A-16-1",
+    "studentId": "stu-9A-16",
+    "feeId": "fee-stu-9A-16-1",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026169822",
+    "receiptNo": "RCP/2026/603"
+  },
+  {
+    "id": "pay-stu-9A-16-3",
+    "studentId": "stu-9A-16",
+    "feeId": "fee-stu-9A-16-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026717016",
+    "receiptNo": "RCP/2026/604"
+  },
+  {
+    "id": "pay-stu-9A-17-0",
+    "studentId": "stu-9A-17",
+    "feeId": "fee-stu-9A-17-0",
+    "amount": 2000,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026486721",
+    "receiptNo": "RCP/2026/605"
+  },
+  {
+    "id": "pay-stu-9A-17-3",
+    "studentId": "stu-9A-17",
+    "feeId": "fee-stu-9A-17-3",
+    "amount": 4550,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026587966",
+    "receiptNo": "RCP/2026/606"
+  },
+  {
+    "id": "pay-stu-9A-17-5",
+    "studentId": "stu-9A-17",
+    "feeId": "fee-stu-9A-17-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026933443",
+    "receiptNo": "RCP/2026/607"
+  },
+  {
+    "id": "pay-stu-9A-18-0",
+    "studentId": "stu-9A-18",
+    "feeId": "fee-stu-9A-18-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026360726",
+    "receiptNo": "RCP/2026/608"
+  },
+  {
+    "id": "pay-stu-9A-18-1",
+    "studentId": "stu-9A-18",
+    "feeId": "fee-stu-9A-18-1",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026697755",
+    "receiptNo": "RCP/2026/609"
+  },
+  {
+    "id": "pay-stu-9A-18-3",
+    "studentId": "stu-9A-18",
+    "feeId": "fee-stu-9A-18-3",
+    "amount": 4550,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026162722",
+    "receiptNo": "RCP/2026/610"
+  },
+  {
+    "id": "pay-stu-9A-18-5",
+    "studentId": "stu-9A-18",
+    "feeId": "fee-stu-9A-18-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026563601",
+    "receiptNo": "RCP/2026/611"
+  },
+  {
+    "id": "pay-stu-9A-19-0",
+    "studentId": "stu-9A-19",
+    "feeId": "fee-stu-9A-19-0",
+    "amount": 6750,
+    "method": "cash",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026686710",
+    "receiptNo": "RCP/2026/612"
+  },
+  {
+    "id": "pay-stu-9A-19-2",
+    "studentId": "stu-9A-19",
+    "feeId": "fee-stu-9A-19-2",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026964898",
+    "receiptNo": "RCP/2026/613"
+  },
+  {
+    "id": "pay-stu-9A-19-3",
+    "studentId": "stu-9A-19",
+    "feeId": "fee-stu-9A-19-3",
+    "amount": 4550,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026281467",
+    "receiptNo": "RCP/2026/614"
+  },
+  {
+    "id": "pay-stu-9A-20-0",
+    "studentId": "stu-9A-20",
+    "feeId": "fee-stu-9A-20-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026288246",
+    "receiptNo": "RCP/2026/615"
+  },
+  {
+    "id": "pay-stu-9A-20-3",
+    "studentId": "stu-9A-20",
+    "feeId": "fee-stu-9A-20-3",
+    "amount": 1400,
+    "method": "cash",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026235269",
+    "receiptNo": "RCP/2026/616"
+  },
+  {
+    "id": "pay-stu-9A-20-5",
+    "studentId": "stu-9A-20",
+    "feeId": "fee-stu-9A-20-5",
+    "amount": 1100,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026500925",
+    "receiptNo": "RCP/2026/617"
+  },
+  {
+    "id": "pay-stu-9A-21-0",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026232494",
+    "receiptNo": "RCP/2026/618"
+  },
+  {
+    "id": "pay-stu-9A-21-2",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-2",
+    "amount": 6750,
+    "method": "cash",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026796287",
+    "receiptNo": "RCP/2026/619"
+  },
+  {
+    "id": "pay-stu-9A-21-3",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026417376",
+    "receiptNo": "RCP/2026/620"
+  },
+  {
+    "id": "pay-stu-9A-21-4",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-26",
+    "reference": "TXN2026163704",
+    "receiptNo": "RCP/2026/621"
+  },
+  {
+    "id": "pay-stu-9A-21-5",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026780178",
+    "receiptNo": "RCP/2026/622"
+  },
+  {
+    "id": "pay-stu-9A-21-6",
+    "studentId": "stu-9A-21",
+    "feeId": "fee-stu-9A-21-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026736764",
+    "receiptNo": "RCP/2026/623"
+  },
+  {
+    "id": "pay-stu-9A-22-0",
+    "studentId": "stu-9A-22",
+    "feeId": "fee-stu-9A-22-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026472149",
+    "receiptNo": "RCP/2026/624"
+  },
+  {
+    "id": "pay-stu-9A-22-1",
+    "studentId": "stu-9A-22",
+    "feeId": "fee-stu-9A-22-1",
+    "amount": 6750,
+    "method": "cash",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026788340",
+    "receiptNo": "RCP/2026/625"
+  },
+  {
+    "id": "pay-stu-9A-22-3",
+    "studentId": "stu-9A-22",
+    "feeId": "fee-stu-9A-22-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026906670",
+    "receiptNo": "RCP/2026/626"
+  },
+  {
+    "id": "pay-stu-9A-23-0",
+    "studentId": "stu-9A-23",
+    "feeId": "fee-stu-9A-23-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026815014",
+    "receiptNo": "RCP/2026/627"
+  },
+  {
+    "id": "pay-stu-9A-23-2",
+    "studentId": "stu-9A-23",
+    "feeId": "fee-stu-9A-23-2",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026509310",
+    "receiptNo": "RCP/2026/628"
+  },
+  {
+    "id": "pay-stu-9A-23-3",
+    "studentId": "stu-9A-23",
+    "feeId": "fee-stu-9A-23-3",
+    "amount": 2700,
+    "method": "netbanking",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026590956",
+    "receiptNo": "RCP/2026/629"
+  },
+  {
+    "id": "pay-stu-9A-23-5",
+    "studentId": "stu-9A-23",
+    "feeId": "fee-stu-9A-23-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026204032",
+    "receiptNo": "RCP/2026/630"
+  },
+  {
+    "id": "pay-stu-9A-23-6",
+    "studentId": "stu-9A-23",
+    "feeId": "fee-stu-9A-23-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026715453",
+    "receiptNo": "RCP/2026/631"
+  },
+  {
+    "id": "pay-stu-9A-24-0",
+    "studentId": "stu-9A-24",
+    "feeId": "fee-stu-9A-24-0",
+    "amount": 2000,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026122355",
+    "receiptNo": "RCP/2026/632"
+  },
+  {
+    "id": "pay-stu-9A-24-3",
+    "studentId": "stu-9A-24",
+    "feeId": "fee-stu-9A-24-3",
+    "amount": 1400,
+    "method": "netbanking",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026403419",
+    "receiptNo": "RCP/2026/633"
+  },
+  {
+    "id": "pay-stu-9A-24-5",
+    "studentId": "stu-9A-24",
+    "feeId": "fee-stu-9A-24-5",
+    "amount": 1100,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026957672",
+    "receiptNo": "RCP/2026/634"
+  },
+  {
+    "id": "pay-stu-9A-25-0",
+    "studentId": "stu-9A-25",
+    "feeId": "fee-stu-9A-25-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026933405",
+    "receiptNo": "RCP/2026/635"
+  },
+  {
+    "id": "pay-stu-9A-25-2",
+    "studentId": "stu-9A-25",
+    "feeId": "fee-stu-9A-25-2",
+    "amount": 6750,
+    "method": "cash",
+    "paidOn": "2027-01-21",
+    "reference": "TXN2026813781",
+    "receiptNo": "RCP/2026/636"
+  },
+  {
+    "id": "pay-stu-9A-25-3",
+    "studentId": "stu-9A-25",
+    "feeId": "fee-stu-9A-25-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026788961",
+    "receiptNo": "RCP/2026/637"
+  },
+  {
+    "id": "pay-stu-9A-25-4",
+    "studentId": "stu-9A-25",
+    "feeId": "fee-stu-9A-25-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026647033",
+    "receiptNo": "RCP/2026/638"
+  },
+  {
+    "id": "pay-stu-9A-26-0",
+    "studentId": "stu-9A-26",
+    "feeId": "fee-stu-9A-26-0",
+    "amount": 4100,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026114136",
+    "receiptNo": "RCP/2026/639"
+  },
+  {
+    "id": "pay-stu-9A-26-3",
+    "studentId": "stu-9A-26",
+    "feeId": "fee-stu-9A-26-3",
+    "amount": 4550,
+    "method": "cash",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026164829",
+    "receiptNo": "RCP/2026/640"
+  },
+  {
+    "id": "pay-stu-9A-26-5",
+    "studentId": "stu-9A-26",
+    "feeId": "fee-stu-9A-26-5",
+    "amount": 1800,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026639146",
+    "receiptNo": "RCP/2026/641"
+  },
+  {
+    "id": "pay-stu-9A-27-0",
+    "studentId": "stu-9A-27",
+    "feeId": "fee-stu-9A-27-0",
+    "amount": 2000,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026613853",
+    "receiptNo": "RCP/2026/642"
+  },
+  {
+    "id": "pay-stu-9A-27-3",
+    "studentId": "stu-9A-27",
+    "feeId": "fee-stu-9A-27-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026406540",
+    "receiptNo": "RCP/2026/643"
+  },
+  {
+    "id": "pay-stu-9A-27-5",
+    "studentId": "stu-9A-27",
+    "feeId": "fee-stu-9A-27-5",
+    "amount": 2500,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026633048",
+    "receiptNo": "RCP/2026/644"
+  },
+  {
+    "id": "pay-stu-9A-28-0",
+    "studentId": "stu-9A-28",
+    "feeId": "fee-stu-9A-28-0",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026629961",
+    "receiptNo": "RCP/2026/645"
+  },
+  {
+    "id": "pay-stu-9A-28-1",
+    "studentId": "stu-9A-28",
+    "feeId": "fee-stu-9A-28-1",
+    "amount": 6750,
+    "method": "upi",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026900488",
+    "receiptNo": "RCP/2026/646"
+  },
+  {
+    "id": "pay-stu-9A-28-3",
+    "studentId": "stu-9A-28",
+    "feeId": "fee-stu-9A-28-3",
+    "amount": 4550,
+    "method": "cash",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026572363",
+    "receiptNo": "RCP/2026/647"
+  },
+  {
+    "id": "pay-stu-9A-29-0",
+    "studentId": "stu-9A-29",
+    "feeId": "fee-stu-9A-29-0",
+    "amount": 6750,
+    "method": "netbanking",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026902952",
+    "receiptNo": "RCP/2026/648"
+  },
+  {
+    "id": "pay-stu-9A-29-3",
+    "studentId": "stu-9A-29",
+    "feeId": "fee-stu-9A-29-3",
+    "amount": 4550,
+    "method": "card",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026469302",
+    "receiptNo": "RCP/2026/649"
+  },
+  {
+    "id": "pay-stu-9A-29-4",
+    "studentId": "stu-9A-29",
+    "feeId": "fee-stu-9A-29-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-25",
+    "reference": "TXN2026863195",
+    "receiptNo": "RCP/2026/650"
+  },
+  {
+    "id": "pay-stu-9A-29-5",
+    "studentId": "stu-9A-29",
+    "feeId": "fee-stu-9A-29-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026619531",
+    "receiptNo": "RCP/2026/651"
+  },
+  {
+    "id": "pay-stu-9A-30-0",
+    "studentId": "stu-9A-30",
+    "feeId": "fee-stu-9A-30-0",
+    "amount": 6750,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026260446",
+    "receiptNo": "RCP/2026/652"
+  },
+  {
+    "id": "pay-stu-9A-30-3",
+    "studentId": "stu-9A-30",
+    "feeId": "fee-stu-9A-30-3",
+    "amount": 1400,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026966873",
+    "receiptNo": "RCP/2026/653"
+  },
+  {
+    "id": "pay-stu-9A-30-5",
+    "studentId": "stu-9A-30",
+    "feeId": "fee-stu-9A-30-5",
+    "amount": 900,
+    "method": "netbanking",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026764438",
+    "receiptNo": "RCP/2026/654"
+  },
+  {
+    "id": "pay-stu-10A-01-0",
+    "studentId": "stu-10A-01",
+    "feeId": "fee-stu-10A-01-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026351341",
+    "receiptNo": "RCP/2026/655"
+  },
+  {
+    "id": "pay-stu-10A-01-2",
+    "studentId": "stu-10A-01",
+    "feeId": "fee-stu-10A-01-2",
+    "amount": 7500,
+    "method": "netbanking",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026254830",
+    "receiptNo": "RCP/2026/656"
+  },
+  {
+    "id": "pay-stu-10A-01-3",
+    "studentId": "stu-10A-01",
+    "feeId": "fee-stu-10A-01-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026367695",
+    "receiptNo": "RCP/2026/657"
+  },
+  {
+    "id": "pay-stu-10A-01-4",
+    "studentId": "stu-10A-01",
+    "feeId": "fee-stu-10A-01-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026360878",
+    "receiptNo": "RCP/2026/658"
+  },
+  {
+    "id": "pay-stu-10A-02-0",
+    "studentId": "stu-10A-02",
+    "feeId": "fee-stu-10A-02-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026428908",
+    "receiptNo": "RCP/2026/659"
+  },
+  {
+    "id": "pay-stu-10A-02-1",
+    "studentId": "stu-10A-02",
+    "feeId": "fee-stu-10A-02-1",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-10-21",
+    "reference": "TXN2026927854",
+    "receiptNo": "RCP/2026/660"
+  },
+  {
+    "id": "pay-stu-10A-02-3",
+    "studentId": "stu-10A-02",
+    "feeId": "fee-stu-10A-02-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026298609",
+    "receiptNo": "RCP/2026/661"
+  },
+  {
+    "id": "pay-stu-10A-02-5",
+    "studentId": "stu-10A-02",
+    "feeId": "fee-stu-10A-02-5",
+    "amount": 3500,
+    "method": "netbanking",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026985460",
+    "receiptNo": "RCP/2026/662"
+  },
+  {
+    "id": "pay-stu-10A-03-0",
+    "studentId": "stu-10A-03",
+    "feeId": "fee-stu-10A-03-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026131284",
+    "receiptNo": "RCP/2026/663"
+  },
+  {
+    "id": "pay-stu-10A-03-3",
+    "studentId": "stu-10A-03",
+    "feeId": "fee-stu-10A-03-3",
+    "amount": 2900,
+    "method": "card",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026797139",
+    "receiptNo": "RCP/2026/664"
+  },
+  {
+    "id": "pay-stu-10A-03-4",
+    "studentId": "stu-10A-03",
+    "feeId": "fee-stu-10A-03-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026905255",
+    "receiptNo": "RCP/2026/665"
+  },
+  {
+    "id": "pay-stu-10A-03-5",
+    "studentId": "stu-10A-03",
+    "feeId": "fee-stu-10A-03-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026189269",
+    "receiptNo": "RCP/2026/666"
+  },
+  {
+    "id": "pay-stu-10A-04-0",
+    "studentId": "stu-10A-04",
+    "feeId": "fee-stu-10A-04-0",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026421063",
+    "receiptNo": "RCP/2026/667"
+  },
+  {
+    "id": "pay-stu-10A-04-3",
+    "studentId": "stu-10A-04",
+    "feeId": "fee-stu-10A-04-3",
+    "amount": 1500,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026367249",
+    "receiptNo": "RCP/2026/668"
+  },
+  {
+    "id": "pay-stu-10A-05-0",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026839665",
+    "receiptNo": "RCP/2026/669"
+  },
+  {
+    "id": "pay-stu-10A-05-2",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-2",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2027-01-20",
+    "reference": "TXN2026787112",
+    "receiptNo": "RCP/2026/670"
+  },
+  {
+    "id": "pay-stu-10A-05-3",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026156133",
+    "receiptNo": "RCP/2026/671"
+  },
+  {
+    "id": "pay-stu-10A-05-4",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026641486",
+    "receiptNo": "RCP/2026/672"
+  },
+  {
+    "id": "pay-stu-10A-05-5",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026951359",
+    "receiptNo": "RCP/2026/673"
+  },
+  {
+    "id": "pay-stu-10A-05-6",
+    "studentId": "stu-10A-05",
+    "feeId": "fee-stu-10A-05-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026303037",
+    "receiptNo": "RCP/2026/674"
+  },
+  {
+    "id": "pay-stu-10A-06-0",
+    "studentId": "stu-10A-06",
+    "feeId": "fee-stu-10A-06-0",
+    "amount": 4500,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026882902",
+    "receiptNo": "RCP/2026/675"
+  },
+  {
+    "id": "pay-stu-10A-06-1",
+    "studentId": "stu-10A-06",
+    "feeId": "fee-stu-10A-06-1",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-10-13",
+    "reference": "TXN2026399940",
+    "receiptNo": "RCP/2026/676"
+  },
+  {
+    "id": "pay-stu-10A-06-3",
+    "studentId": "stu-10A-06",
+    "feeId": "fee-stu-10A-06-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026279865",
+    "receiptNo": "RCP/2026/677"
+  },
+  {
+    "id": "pay-stu-10A-06-5",
+    "studentId": "stu-10A-06",
+    "feeId": "fee-stu-10A-06-5",
+    "amount": 2100,
+    "method": "upi",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026964834",
+    "receiptNo": "RCP/2026/678"
+  },
+  {
+    "id": "pay-stu-10A-07-0",
+    "studentId": "stu-10A-07",
+    "feeId": "fee-stu-10A-07-0",
+    "amount": 2300,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026759488",
+    "receiptNo": "RCP/2026/679"
+  },
+  {
+    "id": "pay-stu-10A-07-3",
+    "studentId": "stu-10A-07",
+    "feeId": "fee-stu-10A-07-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026910007",
+    "receiptNo": "RCP/2026/680"
+  },
+  {
+    "id": "pay-stu-10A-08-0",
+    "studentId": "stu-10A-08",
+    "feeId": "fee-stu-10A-08-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026154128",
+    "receiptNo": "RCP/2026/681"
+  },
+  {
+    "id": "pay-stu-10A-08-1",
+    "studentId": "stu-10A-08",
+    "feeId": "fee-stu-10A-08-1",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-10-18",
+    "reference": "TXN2026878008",
+    "receiptNo": "RCP/2026/682"
+  },
+  {
+    "id": "pay-stu-10A-08-3",
+    "studentId": "stu-10A-08",
+    "feeId": "fee-stu-10A-08-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026633828",
+    "receiptNo": "RCP/2026/683"
+  },
+  {
+    "id": "pay-stu-10A-08-5",
+    "studentId": "stu-10A-08",
+    "feeId": "fee-stu-10A-08-5",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-07-27",
+    "reference": "TXN2026910057",
+    "receiptNo": "RCP/2026/684"
+  },
+  {
+    "id": "pay-stu-10A-09-0",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026774911",
+    "receiptNo": "RCP/2026/685"
+  },
+  {
+    "id": "pay-stu-10A-09-2",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-2",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2027-01-27",
+    "reference": "TXN2026644697",
+    "receiptNo": "RCP/2026/686"
+  },
+  {
+    "id": "pay-stu-10A-09-3",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026810592",
+    "receiptNo": "RCP/2026/687"
+  },
+  {
+    "id": "pay-stu-10A-09-4",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-26",
+    "reference": "TXN2026288468",
+    "receiptNo": "RCP/2026/688"
+  },
+  {
+    "id": "pay-stu-10A-09-5",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-5",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026600003",
+    "receiptNo": "RCP/2026/689"
+  },
+  {
+    "id": "pay-stu-10A-09-6",
+    "studentId": "stu-10A-09",
+    "feeId": "fee-stu-10A-09-6",
+    "amount": 2500,
+    "method": "cash",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026381750",
+    "receiptNo": "RCP/2026/690"
+  },
+  {
+    "id": "pay-stu-10A-10-0",
+    "studentId": "stu-10A-10",
+    "feeId": "fee-stu-10A-10-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026377001",
+    "receiptNo": "RCP/2026/691"
+  },
+  {
+    "id": "pay-stu-10A-10-1",
+    "studentId": "stu-10A-10",
+    "feeId": "fee-stu-10A-10-1",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026995088",
+    "receiptNo": "RCP/2026/692"
+  },
+  {
+    "id": "pay-stu-10A-10-3",
+    "studentId": "stu-10A-10",
+    "feeId": "fee-stu-10A-10-3",
+    "amount": 4900,
+    "method": "card",
+    "paidOn": "2026-07-11",
+    "reference": "TXN2026960617",
+    "receiptNo": "RCP/2026/693"
+  },
+  {
+    "id": "pay-stu-10A-11-0",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026700208",
+    "receiptNo": "RCP/2026/694"
+  },
+  {
+    "id": "pay-stu-10A-11-2",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-2",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2027-01-25",
+    "reference": "TXN2026869223",
+    "receiptNo": "RCP/2026/695"
+  },
+  {
+    "id": "pay-stu-10A-11-3",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026224525",
+    "receiptNo": "RCP/2026/696"
+  },
+  {
+    "id": "pay-stu-10A-11-4",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-4",
+    "amount": 600,
+    "method": "upi",
+    "paidOn": "2026-10-26",
+    "reference": "TXN2026617171",
+    "receiptNo": "RCP/2026/697"
+  },
+  {
+    "id": "pay-stu-10A-11-5",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026551388",
+    "receiptNo": "RCP/2026/698"
+  },
+  {
+    "id": "pay-stu-10A-11-6",
+    "studentId": "stu-10A-11",
+    "feeId": "fee-stu-10A-11-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026155865",
+    "receiptNo": "RCP/2026/699"
+  },
+  {
+    "id": "pay-stu-10A-12-0",
+    "studentId": "stu-10A-12",
+    "feeId": "fee-stu-10A-12-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026483697",
+    "receiptNo": "RCP/2026/700"
+  },
+  {
+    "id": "pay-stu-10A-12-1",
+    "studentId": "stu-10A-12",
+    "feeId": "fee-stu-10A-12-1",
+    "amount": 7500,
+    "method": "netbanking",
+    "paidOn": "2026-10-20",
+    "reference": "TXN2026821519",
+    "receiptNo": "RCP/2026/701"
+  },
+  {
+    "id": "pay-stu-10A-12-3",
+    "studentId": "stu-10A-12",
+    "feeId": "fee-stu-10A-12-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026821106",
+    "receiptNo": "RCP/2026/702"
+  },
+  {
+    "id": "pay-stu-10A-12-5",
+    "studentId": "stu-10A-12",
+    "feeId": "fee-stu-10A-12-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026680640",
+    "receiptNo": "RCP/2026/703"
+  },
+  {
+    "id": "pay-stu-10A-13-0",
+    "studentId": "stu-10A-13",
+    "feeId": "fee-stu-10A-13-0",
+    "amount": 7500,
+    "method": "netbanking",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026396921",
+    "receiptNo": "RCP/2026/704"
+  },
+  {
+    "id": "pay-stu-10A-13-2",
+    "studentId": "stu-10A-13",
+    "feeId": "fee-stu-10A-13-2",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026627841",
+    "receiptNo": "RCP/2026/705"
+  },
+  {
+    "id": "pay-stu-10A-13-3",
+    "studentId": "stu-10A-13",
+    "feeId": "fee-stu-10A-13-3",
+    "amount": 2900,
+    "method": "card",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026478007",
+    "receiptNo": "RCP/2026/706"
+  },
+  {
+    "id": "pay-stu-10A-14-0",
+    "studentId": "stu-10A-14",
+    "feeId": "fee-stu-10A-14-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026640584",
+    "receiptNo": "RCP/2026/707"
+  },
+  {
+    "id": "pay-stu-10A-14-3",
+    "studentId": "stu-10A-14",
+    "feeId": "fee-stu-10A-14-3",
+    "amount": 1500,
+    "method": "netbanking",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026661982",
+    "receiptNo": "RCP/2026/708"
+  },
+  {
+    "id": "pay-stu-10A-14-5",
+    "studentId": "stu-10A-14",
+    "feeId": "fee-stu-10A-14-5",
+    "amount": 1100,
+    "method": "card",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026791581",
+    "receiptNo": "RCP/2026/709"
+  },
+  {
+    "id": "pay-stu-10A-15-0",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-0",
+    "amount": 7500,
+    "method": "netbanking",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026890446",
+    "receiptNo": "RCP/2026/710"
+  },
+  {
+    "id": "pay-stu-10A-15-2",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-2",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2027-01-28",
+    "reference": "TXN2026154122",
+    "receiptNo": "RCP/2026/711"
+  },
+  {
+    "id": "pay-stu-10A-15-3",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026956797",
+    "receiptNo": "RCP/2026/712"
+  },
+  {
+    "id": "pay-stu-10A-15-4",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-4",
+    "amount": 600,
+    "method": "netbanking",
+    "paidOn": "2026-10-26",
+    "reference": "TXN2026185625",
+    "receiptNo": "RCP/2026/713"
+  },
+  {
+    "id": "pay-stu-10A-15-5",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026459741",
+    "receiptNo": "RCP/2026/714"
+  },
+  {
+    "id": "pay-stu-10A-15-6",
+    "studentId": "stu-10A-15",
+    "feeId": "fee-stu-10A-15-6",
+    "amount": 3000,
+    "method": "netbanking",
+    "paidOn": "2026-10-14",
+    "reference": "TXN2026367339",
+    "receiptNo": "RCP/2026/715"
+  },
+  {
+    "id": "pay-stu-10A-16-0",
+    "studentId": "stu-10A-16",
+    "feeId": "fee-stu-10A-16-0",
+    "amount": 4500,
+    "method": "cash",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026974629",
+    "receiptNo": "RCP/2026/716"
+  },
+  {
+    "id": "pay-stu-10A-16-3",
+    "studentId": "stu-10A-16",
+    "feeId": "fee-stu-10A-16-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-15",
+    "reference": "TXN2026791755",
+    "receiptNo": "RCP/2026/717"
+  },
+  {
+    "id": "pay-stu-10A-17-0",
+    "studentId": "stu-10A-17",
+    "feeId": "fee-stu-10A-17-0",
+    "amount": 2300,
+    "method": "upi",
+    "paidOn": "2026-07-25",
+    "reference": "TXN2026165874",
+    "receiptNo": "RCP/2026/718"
+  },
+  {
+    "id": "pay-stu-10A-17-3",
+    "studentId": "stu-10A-17",
+    "feeId": "fee-stu-10A-17-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026572074",
+    "receiptNo": "RCP/2026/719"
+  },
+  {
+    "id": "pay-stu-10A-17-5",
+    "studentId": "stu-10A-17",
+    "feeId": "fee-stu-10A-17-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026566530",
+    "receiptNo": "RCP/2026/720"
+  },
+  {
+    "id": "pay-stu-10A-18-0",
+    "studentId": "stu-10A-18",
+    "feeId": "fee-stu-10A-18-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026842087",
+    "receiptNo": "RCP/2026/721"
+  },
+  {
+    "id": "pay-stu-10A-18-1",
+    "studentId": "stu-10A-18",
+    "feeId": "fee-stu-10A-18-1",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-10-19",
+    "reference": "TXN2026423028",
+    "receiptNo": "RCP/2026/722"
+  },
+  {
+    "id": "pay-stu-10A-18-3",
+    "studentId": "stu-10A-18",
+    "feeId": "fee-stu-10A-18-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026551988",
+    "receiptNo": "RCP/2026/723"
+  },
+  {
+    "id": "pay-stu-10A-18-5",
+    "studentId": "stu-10A-18",
+    "feeId": "fee-stu-10A-18-5",
+    "amount": 3500,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026809077",
+    "receiptNo": "RCP/2026/724"
+  },
+  {
+    "id": "pay-stu-10A-19-0",
+    "studentId": "stu-10A-19",
+    "feeId": "fee-stu-10A-19-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026880173",
+    "receiptNo": "RCP/2026/725"
+  },
+  {
+    "id": "pay-stu-10A-19-2",
+    "studentId": "stu-10A-19",
+    "feeId": "fee-stu-10A-19-2",
+    "amount": 7500,
+    "method": "netbanking",
+    "paidOn": "2027-01-25",
+    "reference": "TXN2026121855",
+    "receiptNo": "RCP/2026/726"
+  },
+  {
+    "id": "pay-stu-10A-19-3",
+    "studentId": "stu-10A-19",
+    "feeId": "fee-stu-10A-19-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026795277",
+    "receiptNo": "RCP/2026/727"
+  },
+  {
+    "id": "pay-stu-10A-19-4",
+    "studentId": "stu-10A-19",
+    "feeId": "fee-stu-10A-19-4",
+    "amount": 600,
+    "method": "cash",
+    "paidOn": "2026-10-23",
+    "reference": "TXN2026912614",
+    "receiptNo": "RCP/2026/728"
+  },
+  {
+    "id": "pay-stu-10A-20-0",
+    "studentId": "stu-10A-20",
+    "feeId": "fee-stu-10A-20-0",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-07-19",
+    "reference": "TXN2026490921",
+    "receiptNo": "RCP/2026/729"
+  },
+  {
+    "id": "pay-stu-10A-20-3",
+    "studentId": "stu-10A-20",
+    "feeId": "fee-stu-10A-20-3",
+    "amount": 4900,
+    "method": "card",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026646903",
+    "receiptNo": "RCP/2026/730"
+  },
+  {
+    "id": "pay-stu-10A-20-5",
+    "studentId": "stu-10A-20",
+    "feeId": "fee-stu-10A-20-5",
+    "amount": 3000,
+    "method": "card",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026433169",
+    "receiptNo": "RCP/2026/731"
+  },
+  {
+    "id": "pay-stu-10A-21-0",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026768513",
+    "receiptNo": "RCP/2026/732"
+  },
+  {
+    "id": "pay-stu-10A-21-2",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-2",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2027-01-26",
+    "reference": "TXN2026962220",
+    "receiptNo": "RCP/2026/733"
+  },
+  {
+    "id": "pay-stu-10A-21-3",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026545773",
+    "receiptNo": "RCP/2026/734"
+  },
+  {
+    "id": "pay-stu-10A-21-4",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-27",
+    "reference": "TXN2026887385",
+    "receiptNo": "RCP/2026/735"
+  },
+  {
+    "id": "pay-stu-10A-21-5",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-5",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026637154",
+    "receiptNo": "RCP/2026/736"
+  },
+  {
+    "id": "pay-stu-10A-21-6",
+    "studentId": "stu-10A-21",
+    "feeId": "fee-stu-10A-21-6",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026711545",
+    "receiptNo": "RCP/2026/737"
+  },
+  {
+    "id": "pay-stu-10A-22-0",
+    "studentId": "stu-10A-22",
+    "feeId": "fee-stu-10A-22-0",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026955753",
+    "receiptNo": "RCP/2026/738"
+  },
+  {
+    "id": "pay-stu-10A-22-1",
+    "studentId": "stu-10A-22",
+    "feeId": "fee-stu-10A-22-1",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-10-13",
+    "reference": "TXN2026676878",
+    "receiptNo": "RCP/2026/739"
+  },
+  {
+    "id": "pay-stu-10A-22-3",
+    "studentId": "stu-10A-22",
+    "feeId": "fee-stu-10A-22-3",
+    "amount": 4900,
+    "method": "upi",
+    "paidOn": "2026-07-12",
+    "reference": "TXN2026158454",
+    "receiptNo": "RCP/2026/740"
+  },
+  {
+    "id": "pay-stu-10A-23-0",
+    "studentId": "stu-10A-23",
+    "feeId": "fee-stu-10A-23-0",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026920784",
+    "receiptNo": "RCP/2026/741"
+  },
+  {
+    "id": "pay-stu-10A-23-3",
+    "studentId": "stu-10A-23",
+    "feeId": "fee-stu-10A-23-3",
+    "amount": 2900,
+    "method": "upi",
+    "paidOn": "2026-07-17",
+    "reference": "TXN2026185392",
+    "receiptNo": "RCP/2026/742"
+  },
+  {
+    "id": "pay-stu-10A-23-4",
+    "studentId": "stu-10A-23",
+    "feeId": "fee-stu-10A-23-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-22",
+    "reference": "TXN2026391771",
+    "receiptNo": "RCP/2026/743"
+  },
+  {
+    "id": "pay-stu-10A-23-5",
+    "studentId": "stu-10A-23",
+    "feeId": "fee-stu-10A-23-5",
+    "amount": 3000,
+    "method": "upi",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026223457",
+    "receiptNo": "RCP/2026/744"
+  },
+  {
+    "id": "pay-stu-10A-24-0",
+    "studentId": "stu-10A-24",
+    "feeId": "fee-stu-10A-24-0",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026922958",
+    "receiptNo": "RCP/2026/745"
+  },
+  {
+    "id": "pay-stu-10A-24-3",
+    "studentId": "stu-10A-24",
+    "feeId": "fee-stu-10A-24-3",
+    "amount": 1500,
+    "method": "card",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026118968",
+    "receiptNo": "RCP/2026/746"
+  },
+  {
+    "id": "pay-stu-10A-24-5",
+    "studentId": "stu-10A-24",
+    "feeId": "fee-stu-10A-24-5",
+    "amount": 900,
+    "method": "card",
+    "paidOn": "2026-07-23",
+    "reference": "TXN2026601469",
+    "receiptNo": "RCP/2026/747"
+  },
+  {
+    "id": "pay-stu-10A-25-0",
+    "studentId": "stu-10A-25",
+    "feeId": "fee-stu-10A-25-0",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026937440",
+    "receiptNo": "RCP/2026/748"
+  },
+  {
+    "id": "pay-stu-10A-25-2",
+    "studentId": "stu-10A-25",
+    "feeId": "fee-stu-10A-25-2",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2027-01-22",
+    "reference": "TXN2026657757",
+    "receiptNo": "RCP/2026/749"
+  },
+  {
+    "id": "pay-stu-10A-25-3",
+    "studentId": "stu-10A-25",
+    "feeId": "fee-stu-10A-25-3",
+    "amount": 4900,
+    "method": "card",
+    "paidOn": "2026-07-09",
+    "reference": "TXN2026890818",
+    "receiptNo": "RCP/2026/750"
+  },
+  {
+    "id": "pay-stu-10A-25-4",
+    "studentId": "stu-10A-25",
+    "feeId": "fee-stu-10A-25-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-30",
+    "reference": "TXN2026908854",
+    "receiptNo": "RCP/2026/751"
+  },
+  {
+    "id": "pay-stu-10A-26-0",
+    "studentId": "stu-10A-26",
+    "feeId": "fee-stu-10A-26-0",
+    "amount": 4500,
+    "method": "upi",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026817167",
+    "receiptNo": "RCP/2026/752"
+  },
+  {
+    "id": "pay-stu-10A-26-1",
+    "studentId": "stu-10A-26",
+    "feeId": "fee-stu-10A-26-1",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026829572",
+    "receiptNo": "RCP/2026/753"
+  },
+  {
+    "id": "pay-stu-10A-26-3",
+    "studentId": "stu-10A-26",
+    "feeId": "fee-stu-10A-26-3",
+    "amount": 4900,
+    "method": "card",
+    "paidOn": "2026-07-08",
+    "reference": "TXN2026827895",
+    "receiptNo": "RCP/2026/754"
+  },
+  {
+    "id": "pay-stu-10A-26-5",
+    "studentId": "stu-10A-26",
+    "feeId": "fee-stu-10A-26-5",
+    "amount": 2100,
+    "method": "card",
+    "paidOn": "2026-07-26",
+    "reference": "TXN2026181199",
+    "receiptNo": "RCP/2026/755"
+  },
+  {
+    "id": "pay-stu-10A-27-0",
+    "studentId": "stu-10A-27",
+    "feeId": "fee-stu-10A-27-0",
+    "amount": 2300,
+    "method": "netbanking",
+    "paidOn": "2026-07-20",
+    "reference": "TXN2026367360",
+    "receiptNo": "RCP/2026/756"
+  },
+  {
+    "id": "pay-stu-10A-27-3",
+    "studentId": "stu-10A-27",
+    "feeId": "fee-stu-10A-27-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-10",
+    "reference": "TXN2026651585",
+    "receiptNo": "RCP/2026/757"
+  },
+  {
+    "id": "pay-stu-10A-27-5",
+    "studentId": "stu-10A-27",
+    "feeId": "fee-stu-10A-27-5",
+    "amount": 3000,
+    "method": "cash",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026857091",
+    "receiptNo": "RCP/2026/758"
+  },
+  {
+    "id": "pay-stu-10A-28-0",
+    "studentId": "stu-10A-28",
+    "feeId": "fee-stu-10A-28-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-22",
+    "reference": "TXN2026328791",
+    "receiptNo": "RCP/2026/759"
+  },
+  {
+    "id": "pay-stu-10A-28-1",
+    "studentId": "stu-10A-28",
+    "feeId": "fee-stu-10A-28-1",
+    "amount": 7500,
+    "method": "card",
+    "paidOn": "2026-10-16",
+    "reference": "TXN2026829918",
+    "receiptNo": "RCP/2026/760"
+  },
+  {
+    "id": "pay-stu-10A-28-3",
+    "studentId": "stu-10A-28",
+    "feeId": "fee-stu-10A-28-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-13",
+    "reference": "TXN2026895259",
+    "receiptNo": "RCP/2026/761"
+  },
+  {
+    "id": "pay-stu-10A-29-0",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026997581",
+    "receiptNo": "RCP/2026/762"
+  },
+  {
+    "id": "pay-stu-10A-29-2",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-2",
+    "amount": 7500,
+    "method": "cash",
+    "paidOn": "2027-01-19",
+    "reference": "TXN2026835420",
+    "receiptNo": "RCP/2026/763"
+  },
+  {
+    "id": "pay-stu-10A-29-3",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-3",
+    "amount": 4900,
+    "method": "netbanking",
+    "paidOn": "2026-07-16",
+    "reference": "TXN2026343929",
+    "receiptNo": "RCP/2026/764"
+  },
+  {
+    "id": "pay-stu-10A-29-4",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-4",
+    "amount": 600,
+    "method": "card",
+    "paidOn": "2026-10-28",
+    "reference": "TXN2026436913",
+    "receiptNo": "RCP/2026/765"
+  },
+  {
+    "id": "pay-stu-10A-29-5",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-5",
+    "amount": 2500,
+    "method": "upi",
+    "paidOn": "2026-07-24",
+    "reference": "TXN2026745336",
+    "receiptNo": "RCP/2026/766"
+  },
+  {
+    "id": "pay-stu-10A-29-6",
+    "studentId": "stu-10A-29",
+    "feeId": "fee-stu-10A-29-6",
+    "amount": 2500,
+    "method": "card",
+    "paidOn": "2026-10-15",
+    "reference": "TXN2026919769",
+    "receiptNo": "RCP/2026/767"
+  },
+  {
+    "id": "pay-stu-10A-30-0",
+    "studentId": "stu-10A-30",
+    "feeId": "fee-stu-10A-30-0",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-07-21",
+    "reference": "TXN2026301326",
+    "receiptNo": "RCP/2026/768"
+  },
+  {
+    "id": "pay-stu-10A-30-1",
+    "studentId": "stu-10A-30",
+    "feeId": "fee-stu-10A-30-1",
+    "amount": 7500,
+    "method": "upi",
+    "paidOn": "2026-10-17",
+    "reference": "TXN2026624819",
+    "receiptNo": "RCP/2026/769"
+  },
+  {
+    "id": "pay-stu-10A-30-3",
+    "studentId": "stu-10A-30",
+    "feeId": "fee-stu-10A-30-3",
+    "amount": 4900,
+    "method": "cash",
+    "paidOn": "2026-07-14",
+    "reference": "TXN2026468109",
+    "receiptNo": "RCP/2026/770"
+  },
+  {
+    "id": "pay-stu-10A-30-5",
+    "studentId": "stu-10A-30",
+    "feeId": "fee-stu-10A-30-5",
+    "amount": 3500,
+    "method": "upi",
+    "paidOn": "2026-07-18",
+    "reference": "TXN2026454197",
+    "receiptNo": "RCP/2026/771"
+  }
+]

@@ -1,0 +1,728 @@
+[
+  {
+    "id": "stt-stu-6A-02",
+    "studentId": "stu-6A-02",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-6A-03",
+    "studentId": "stu-6A-03",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-6A-05",
+    "studentId": "stu-6A-05",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-6A-06",
+    "studentId": "stu-6A-06",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-6A-08",
+    "studentId": "stu-6A-08",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-6A-09",
+    "studentId": "stu-6A-09",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-6A-11",
+    "studentId": "stu-6A-11",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-6A-12",
+    "studentId": "stu-6A-12",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-6A-14",
+    "studentId": "stu-6A-14",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-6A-15",
+    "studentId": "stu-6A-15",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-6A-17",
+    "studentId": "stu-6A-17",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-6A-18",
+    "studentId": "stu-6A-18",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-6A-20",
+    "studentId": "stu-6A-20",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-6A-21",
+    "studentId": "stu-6A-21",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-6A-23",
+    "studentId": "stu-6A-23",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-6A-24",
+    "studentId": "stu-6A-24",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-6A-26",
+    "studentId": "stu-6A-26",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-6A-27",
+    "studentId": "stu-6A-27",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-6A-29",
+    "studentId": "stu-6A-29",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-6A-30",
+    "studentId": "stu-6A-30",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-7A-02",
+    "studentId": "stu-7A-02",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-7A-03",
+    "studentId": "stu-7A-03",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-7A-05",
+    "studentId": "stu-7A-05",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-7A-06",
+    "studentId": "stu-7A-06",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-7A-08",
+    "studentId": "stu-7A-08",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-7A-09",
+    "studentId": "stu-7A-09",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-7A-11",
+    "studentId": "stu-7A-11",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-7A-12",
+    "studentId": "stu-7A-12",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-7A-14",
+    "studentId": "stu-7A-14",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-7A-15",
+    "studentId": "stu-7A-15",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-7A-17",
+    "studentId": "stu-7A-17",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-7A-18",
+    "studentId": "stu-7A-18",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-7A-20",
+    "studentId": "stu-7A-20",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-7A-21",
+    "studentId": "stu-7A-21",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-7A-23",
+    "studentId": "stu-7A-23",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-7A-24",
+    "studentId": "stu-7A-24",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-7A-26",
+    "studentId": "stu-7A-26",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-7A-27",
+    "studentId": "stu-7A-27",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-7A-29",
+    "studentId": "stu-7A-29",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-7A-30",
+    "studentId": "stu-7A-30",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8A-02",
+    "studentId": "stu-8A-02",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8A-03",
+    "studentId": "stu-8A-03",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8A-05",
+    "studentId": "stu-8A-05",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8A-06",
+    "studentId": "stu-8A-06",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8A-08",
+    "studentId": "stu-8A-08",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8A-09",
+    "studentId": "stu-8A-09",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8A-10",
+    "studentId": "stu-8A-10",
+    "routeId": "rt-3",
+    "stop": "Kalapatti Road"
+  },
+  {
+    "id": "stt-stu-8A-11",
+    "studentId": "stu-8A-11",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8A-12",
+    "studentId": "stu-8A-12",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8A-14",
+    "studentId": "stu-8A-14",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8A-15",
+    "studentId": "stu-8A-15",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8A-17",
+    "studentId": "stu-8A-17",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8A-18",
+    "studentId": "stu-8A-18",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8A-20",
+    "studentId": "stu-8A-20",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8A-21",
+    "studentId": "stu-8A-21",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8A-23",
+    "studentId": "stu-8A-23",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8A-24",
+    "studentId": "stu-8A-24",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8A-26",
+    "studentId": "stu-8A-26",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8A-27",
+    "studentId": "stu-8A-27",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8A-29",
+    "studentId": "stu-8A-29",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8A-30",
+    "studentId": "stu-8A-30",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8B-02",
+    "studentId": "stu-8B-02",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8B-03",
+    "studentId": "stu-8B-03",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8B-05",
+    "studentId": "stu-8B-05",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8B-06",
+    "studentId": "stu-8B-06",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8B-08",
+    "studentId": "stu-8B-08",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8B-09",
+    "studentId": "stu-8B-09",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8B-11",
+    "studentId": "stu-8B-11",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8B-12",
+    "studentId": "stu-8B-12",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8B-14",
+    "studentId": "stu-8B-14",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8B-15",
+    "studentId": "stu-8B-15",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8B-17",
+    "studentId": "stu-8B-17",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8B-18",
+    "studentId": "stu-8B-18",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8B-20",
+    "studentId": "stu-8B-20",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8B-21",
+    "studentId": "stu-8B-21",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8B-23",
+    "studentId": "stu-8B-23",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8B-24",
+    "studentId": "stu-8B-24",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-8B-26",
+    "studentId": "stu-8B-26",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-8B-27",
+    "studentId": "stu-8B-27",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-8B-29",
+    "studentId": "stu-8B-29",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-8B-30",
+    "studentId": "stu-8B-30",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-9A-02",
+    "studentId": "stu-9A-02",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-9A-03",
+    "studentId": "stu-9A-03",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-9A-05",
+    "studentId": "stu-9A-05",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-9A-06",
+    "studentId": "stu-9A-06",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-9A-08",
+    "studentId": "stu-9A-08",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-9A-09",
+    "studentId": "stu-9A-09",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-9A-11",
+    "studentId": "stu-9A-11",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-9A-12",
+    "studentId": "stu-9A-12",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-9A-14",
+    "studentId": "stu-9A-14",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-9A-15",
+    "studentId": "stu-9A-15",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-9A-17",
+    "studentId": "stu-9A-17",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-9A-18",
+    "studentId": "stu-9A-18",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-9A-20",
+    "studentId": "stu-9A-20",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-9A-21",
+    "studentId": "stu-9A-21",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-9A-23",
+    "studentId": "stu-9A-23",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-9A-24",
+    "studentId": "stu-9A-24",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-9A-26",
+    "studentId": "stu-9A-26",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-9A-27",
+    "studentId": "stu-9A-27",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-9A-29",
+    "studentId": "stu-9A-29",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-9A-30",
+    "studentId": "stu-9A-30",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-10A-02",
+    "studentId": "stu-10A-02",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-10A-03",
+    "studentId": "stu-10A-03",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-10A-05",
+    "studentId": "stu-10A-05",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-10A-06",
+    "studentId": "stu-10A-06",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-10A-08",
+    "studentId": "stu-10A-08",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-10A-09",
+    "studentId": "stu-10A-09",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-10A-11",
+    "studentId": "stu-10A-11",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-10A-12",
+    "studentId": "stu-10A-12",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-10A-14",
+    "studentId": "stu-10A-14",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-10A-15",
+    "studentId": "stu-10A-15",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-10A-17",
+    "studentId": "stu-10A-17",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-10A-18",
+    "studentId": "stu-10A-18",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-10A-20",
+    "studentId": "stu-10A-20",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-10A-21",
+    "studentId": "stu-10A-21",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-10A-23",
+    "studentId": "stu-10A-23",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-10A-24",
+    "studentId": "stu-10A-24",
+    "routeId": "rt-2",
+    "stop": "Hope College"
+  },
+  {
+    "id": "stt-stu-10A-26",
+    "studentId": "stu-10A-26",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  },
+  {
+    "id": "stt-stu-10A-27",
+    "studentId": "stu-10A-27",
+    "routeId": "rt-1",
+    "stop": "Gandhipuram Bus Stand"
+  },
+  {
+    "id": "stt-stu-10A-29",
+    "studentId": "stu-10A-29",
+    "routeId": "rt-3",
+    "stop": "KCT Gate"
+  },
+  {
+    "id": "stt-stu-10A-30",
+    "studentId": "stu-10A-30",
+    "routeId": "rt-4",
+    "stop": "Puliakulam"
+  }
+]

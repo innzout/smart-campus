@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cls-6A",
+    "grade": 6,
+    "section": "A",
+    "label": "6-A",
+    "classTeacherId": "usr-t7",
+    "room": "Room 12",
+    "strength": 30
+  },
+  {
+    "id": "cls-7A",
+    "grade": 7,
+    "section": "A",
+    "label": "7-A",
+    "classTeacherId": "usr-t9",
+    "room": "Room 14",
+    "strength": 30
+  },
+  {
+    "id": "cls-8A",
+    "grade": 8,
+    "section": "A",
+    "label": "8-A",
+    "classTeacherId": "usr-t1",
+    "room": "Room 21",
+    "strength": 30
+  },
+  {
+    "id": "cls-8B",
+    "grade": 8,
+    "section": "B",
+    "label": "8-B",
+    "classTeacherId": "usr-t5",
+    "room": "Room 22",
+    "strength": 30
+  },
+  {
+    "id": "cls-9A",
+    "grade": 9,
+    "section": "A",
+    "label": "9-A",
+    "classTeacherId": "usr-t2",
+    "room": "Room 31",
+    "strength": 30
+  },
+  {
+    "id": "cls-10A",
+    "grade": 10,
+    "section": "A",
+    "label": "10-A",
+    "classTeacherId": "usr-t4",
+    "room": "Room 33",
+    "strength": 30
+  }
+]

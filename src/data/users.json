@@ -1,0 +1,6337 @@
+[
+  {
+    "id": "usr-admin",
+    "name": "Mr. V. Ramanathan",
+    "email": "admin@school.edu",
+    "password": "Admin@123",
+    "role": "admin",
+    "employeeId": "EMP-001",
+    "designation": "Correspondent",
+    "phone": "+91 98430 10001",
+    "status": "active",
+    "joinedOn": "2014-06-01",
+    "avatarHue": 258
+  },
+  {
+    "id": "usr-principal",
+    "name": "Mrs. R. Chitra",
+    "email": "principal@school.edu",
+    "password": "Principal@123",
+    "role": "principal",
+    "employeeId": "EMP-002",
+    "designation": "Principal",
+    "phone": "+91 98430 10002",
+    "status": "active",
+    "joinedOn": "2018-06-01",
+    "avatarHue": 320
+  },
+  {
+    "id": "usr-accounts",
+    "name": "Mr. A. Saravanan",
+    "email": "accounts@school.edu",
+    "password": "Accounts@123",
+    "role": "accountant",
+    "employeeId": "EMP-003",
+    "designation": "Accounts Officer",
+    "phone": "+91 98430 10003",
+    "status": "active",
+    "joinedOn": "2021-06-01",
+    "avatarHue": 150
+  },
+  {
+    "id": "usr-t1",
+    "email": "teacher@school.edu",
+    "name": "Mrs. S. Revathi",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-10",
+    "designation": "Senior Teacher",
+    "phone": "+91 98430 2100",
+    "status": "active",
+    "joinedOn": "2018-06-01",
+    "avatarHue": 30,
+    "subjectIds": [
+      "sub-6-tam",
+      "sub-7-tam",
+      "sub-8-tam",
+      "sub-9-tam",
+      "sub-10-tam"
+    ]
+  },
+  {
+    "id": "usr-t2",
+    "email": "senthilkumar@school.edu",
+    "name": "Mr. K. Senthilkumar",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-11",
+    "designation": "Senior Teacher",
+    "phone": "+91 98430 2110",
+    "status": "active",
+    "joinedOn": "2019-06-01",
+    "avatarHue": 83,
+    "subjectIds": [
+      "sub-6-mat",
+      "sub-7-mat",
+      "sub-8-mat",
+      "sub-9-mat",
+      "sub-10-mat"
+    ]
+  },
+  {
+    "id": "usr-t3",
+    "email": "jayanthi@school.edu",
+    "name": "Mrs. P. Jayanthi",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-12",
+    "designation": "Senior Teacher",
+    "phone": "+91 98430 2120",
+    "status": "active",
+    "joinedOn": "2019-06-01",
+    "avatarHue": 136,
+    "subjectIds": [
+      "sub-6-eng",
+      "sub-7-eng",
+      "sub-8-eng",
+      "sub-9-eng",
+      "sub-10-eng"
+    ]
+  },
+  {
+    "id": "usr-t4",
+    "email": "anbarasan@school.edu",
+    "name": "Mr. R. Anbarasan",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-13",
+    "designation": "Senior Teacher",
+    "phone": "+91 98430 2130",
+    "status": "active",
+    "joinedOn": "2019-06-01",
+    "avatarHue": 189,
+    "subjectIds": [
+      "sub-6-sci",
+      "sub-7-sci",
+      "sub-8-sci",
+      "sub-9-sci",
+      "sub-10-sci"
+    ]
+  },
+  {
+    "id": "usr-t5",
+    "email": "kalaiselvi@school.edu",
+    "name": "Mrs. G. Kalaiselvi",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-14",
+    "designation": "Teacher",
+    "phone": "+91 98430 2140",
+    "status": "active",
+    "joinedOn": "2025-06-01",
+    "avatarHue": 242,
+    "subjectIds": [
+      "sub-6-soc",
+      "sub-7-soc",
+      "sub-8-soc",
+      "sub-9-soc",
+      "sub-10-soc"
+    ]
+  },
+  {
+    "id": "usr-t6",
+    "email": "dhanasekaran@school.edu",
+    "name": "Mr. M. Dhanasekaran",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-15",
+    "designation": "Teacher",
+    "phone": "+91 98430 2150",
+    "status": "active",
+    "joinedOn": "2017-06-01",
+    "avatarHue": 295,
+    "subjectIds": [
+      "sub-6-csc",
+      "sub-7-csc",
+      "sub-8-csc",
+      "sub-9-csc",
+      "sub-10-csc"
+    ]
+  },
+  {
+    "id": "usr-t7",
+    "email": "umamaheswari@school.edu",
+    "name": "Mrs. V. Umamaheswari",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-16",
+    "designation": "Teacher",
+    "phone": "+91 98430 2160",
+    "status": "active",
+    "joinedOn": "2023-06-01",
+    "avatarHue": 348,
+    "subjectIds": []
+  },
+  {
+    "id": "usr-t8",
+    "email": "prabhakaran@school.edu",
+    "name": "Mr. S. Prabhakaran",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-17",
+    "designation": "Teacher",
+    "phone": "+91 98430 2170",
+    "status": "active",
+    "joinedOn": "2023-06-01",
+    "avatarHue": 41,
+    "subjectIds": []
+  },
+  {
+    "id": "usr-t9",
+    "email": "bhuvaneswari@school.edu",
+    "name": "Mrs. N. Bhuvaneswari",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-18",
+    "designation": "Teacher",
+    "phone": "+91 98430 2180",
+    "status": "active",
+    "joinedOn": "2024-06-01",
+    "avatarHue": 94,
+    "subjectIds": []
+  },
+  {
+    "id": "usr-t10",
+    "email": "ilangovan@school.edu",
+    "name": "Mr. T. Ilangovan",
+    "password": "Teacher@123",
+    "role": "teacher",
+    "employeeId": "EMP-19",
+    "designation": "Physical Education",
+    "phone": "+91 98430 2190",
+    "status": "active",
+    "joinedOn": "2021-06-01",
+    "avatarHue": 147,
+    "subjectIds": []
+  },
+  {
+    "id": "stu-6A-01",
+    "name": "Pavithra T.",
+    "email": "pavithra.1001@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261001",
+    "rollNo": 1,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-12-28",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-6A-01"
+    ],
+    "phone": "+91 98398 66214",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 103
+  },
+  {
+    "id": "stu-6A-02",
+    "name": "Vignesh A.",
+    "email": "vignesh.1002@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261002",
+    "rollNo": 2,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-11-27",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-02"
+    ],
+    "phone": "+91 99400 93765",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 140
+  },
+  {
+    "id": "stu-6A-03",
+    "name": "Bhavani N.",
+    "email": "bhavani.1003@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261003",
+    "rollNo": 3,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-05-18",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-03"
+    ],
+    "phone": "+91 96230 97004",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 177
+  },
+  {
+    "id": "stu-6A-04",
+    "name": "Vimal R.",
+    "email": "vimal.1004@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261004",
+    "rollNo": 4,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-12-25",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-04"
+    ],
+    "phone": "+91 94178 82040",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "stu-6A-05",
+    "name": "Pavithra K.",
+    "email": "pavithra.1005@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261005",
+    "rollNo": 5,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-07-13",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-05"
+    ],
+    "phone": "+91 98090 15823",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 251
+  },
+  {
+    "id": "stu-6A-06",
+    "name": "Kavin S.",
+    "email": "kavin.1006@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261006",
+    "rollNo": 6,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-08-08",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-06"
+    ],
+    "phone": "+91 98940 37557",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 288
+  },
+  {
+    "id": "stu-6A-07",
+    "name": "Bhavani M.",
+    "email": "bhavani.1007@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261007",
+    "rollNo": 7,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-09-08",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-07"
+    ],
+    "phone": "+91 97404 63245",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "stu-6A-08",
+    "name": "Sanjay P.",
+    "email": "sanjay.1008@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261008",
+    "rollNo": 8,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-02-24",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-08"
+    ],
+    "phone": "+91 96207 28044",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 2
+  },
+  {
+    "id": "stu-6A-09",
+    "name": "Pavithra V.",
+    "email": "pavithra.1009@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261009",
+    "rollNo": 9,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-12-12",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-09"
+    ],
+    "phone": "+91 95880 30431",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 39
+  },
+  {
+    "id": "stu-6A-10",
+    "name": "Mohanraj G.",
+    "email": "mohanraj.1010@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261010",
+    "rollNo": 10,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-10-02",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-10"
+    ],
+    "phone": "+91 94371 68690",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 76
+  },
+  {
+    "id": "stu-6A-11",
+    "name": "Bhavani T.",
+    "email": "bhavani.1011@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261011",
+    "rollNo": 11,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-08-23",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-6A-11"
+    ],
+    "phone": "+91 98166 53488",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 113
+  },
+  {
+    "id": "stu-6A-12",
+    "name": "Dinesh A.",
+    "email": "dinesh.1012@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261012",
+    "rollNo": 12,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-11-27",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-6A-12"
+    ],
+    "phone": "+91 98717 30220",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 150
+  },
+  {
+    "id": "stu-6A-13",
+    "name": "Pavithra N.",
+    "email": "pavithra.1013@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261013",
+    "rollNo": 13,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-03-04",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-13"
+    ],
+    "phone": "+91 99427 30788",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 187
+  },
+  {
+    "id": "stu-6A-14",
+    "name": "Prakash R.",
+    "email": "prakash.1014@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261014",
+    "rollNo": 14,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-04-23",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-14"
+    ],
+    "phone": "+91 98593 61445",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 224
+  },
+  {
+    "id": "stu-6A-15",
+    "name": "Bhavani K.",
+    "email": "bhavani.1015@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261015",
+    "rollNo": 15,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-08-12",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-15"
+    ],
+    "phone": "+91 95210 84705",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 261
+  },
+  {
+    "id": "stu-6A-16",
+    "name": "Balaji S.",
+    "email": "balaji.1016@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261016",
+    "rollNo": 16,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-12-15",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-6A-16"
+    ],
+    "phone": "+91 97850 89243",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 298
+  },
+  {
+    "id": "stu-6A-17",
+    "name": "Pavithra M.",
+    "email": "pavithra.1017@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261017",
+    "rollNo": 17,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-03-25",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-6A-17"
+    ],
+    "phone": "+91 94237 87184",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 335
+  },
+  {
+    "id": "stu-6A-18",
+    "name": "Aravind P.",
+    "email": "aravind.1018@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261018",
+    "rollNo": 18,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-04-17",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-6A-18"
+    ],
+    "phone": "+91 99213 12777",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 12
+  },
+  {
+    "id": "stu-6A-19",
+    "name": "Bhavani V.",
+    "email": "bhavani.1019@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261019",
+    "rollNo": 19,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-04-24",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-19"
+    ],
+    "phone": "+91 98746 46458",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 49
+  },
+  {
+    "id": "stu-6A-20",
+    "name": "Manikandan G.",
+    "email": "manikandan.1020@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261020",
+    "rollNo": 20,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-12-24",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-20"
+    ],
+    "phone": "+91 94587 97176",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 86
+  },
+  {
+    "id": "stu-6A-21",
+    "name": "Pavithra T.",
+    "email": "pavithra.1021@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261021",
+    "rollNo": 21,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-03-14",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-6A-21"
+    ],
+    "phone": "+91 98559 29488",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 123
+  },
+  {
+    "id": "stu-6A-22",
+    "name": "Vignesh A.",
+    "email": "vignesh.1022@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261022",
+    "rollNo": 22,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-06-20",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-6A-22"
+    ],
+    "phone": "+91 98345 85006",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 160
+  },
+  {
+    "id": "stu-6A-23",
+    "name": "Bhavani N.",
+    "email": "bhavani.1023@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261023",
+    "rollNo": 23,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-07-11",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-6A-23"
+    ],
+    "phone": "+91 95108 50721",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "stu-6A-24",
+    "name": "Vimal R.",
+    "email": "vimal.1024@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261024",
+    "rollNo": 24,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-07-24",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-6A-24"
+    ],
+    "phone": "+91 96558 11474",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 234
+  },
+  {
+    "id": "stu-6A-25",
+    "name": "Pavithra K.",
+    "email": "pavithra.1025@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261025",
+    "rollNo": 25,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-06-06",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-6A-25"
+    ],
+    "phone": "+91 99329 61330",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 271
+  },
+  {
+    "id": "stu-6A-26",
+    "name": "Kavin S.",
+    "email": "kavin.1026@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261026",
+    "rollNo": 26,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-07-03",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-26"
+    ],
+    "phone": "+91 96051 94324",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 308
+  },
+  {
+    "id": "stu-6A-27",
+    "name": "Bhavani M.",
+    "email": "bhavani.1027@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261027",
+    "rollNo": 27,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-09-17",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-6A-27"
+    ],
+    "phone": "+91 95261 31561",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 345
+  },
+  {
+    "id": "stu-6A-28",
+    "name": "Sanjay P.",
+    "email": "sanjay.1028@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261028",
+    "rollNo": 28,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-03-16",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-6A-28"
+    ],
+    "phone": "+91 94556 99264",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 22
+  },
+  {
+    "id": "stu-6A-29",
+    "name": "Pavithra V.",
+    "email": "pavithra.1029@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261029",
+    "rollNo": 29,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-01-21",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-6A-29"
+    ],
+    "phone": "+91 97052 26409",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 59
+  },
+  {
+    "id": "stu-6A-30",
+    "name": "Mohanraj G.",
+    "email": "mohanraj.1030@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261030",
+    "rollNo": 30,
+    "classId": "cls-6A",
+    "dateOfBirth": "2015-06-08",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-6A-30"
+    ],
+    "phone": "+91 97481 89270",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 96
+  },
+  {
+    "id": "stu-7A-01",
+    "name": "Sanjay A.",
+    "email": "sanjay.1031@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261031",
+    "rollNo": 1,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-10-19",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-01"
+    ],
+    "phone": "+91 97440 13962",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 114
+  },
+  {
+    "id": "stu-7A-02",
+    "name": "Keerthana N.",
+    "email": "keerthana.1032@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261032",
+    "rollNo": 2,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-08-05",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-7A-02"
+    ],
+    "phone": "+91 99266 70680",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 151
+  },
+  {
+    "id": "stu-7A-03",
+    "name": "Mohanraj R.",
+    "email": "mohanraj.1033@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261033",
+    "rollNo": 3,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-07-14",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-03"
+    ],
+    "phone": "+91 95592 82073",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 188
+  },
+  {
+    "id": "stu-7A-04",
+    "name": "Lavanya K.",
+    "email": "lavanya.1034@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261034",
+    "rollNo": 4,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-06-16",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-04"
+    ],
+    "phone": "+91 95624 70514",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 225
+  },
+  {
+    "id": "stu-7A-05",
+    "name": "Dinesh S.",
+    "email": "dinesh.1035@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261035",
+    "rollNo": 5,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-01-26",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-7A-05"
+    ],
+    "phone": "+91 96259 22172",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 262
+  },
+  {
+    "id": "stu-7A-06",
+    "name": "Keerthana M.",
+    "email": "keerthana.1036@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261036",
+    "rollNo": 6,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-03-08",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-06"
+    ],
+    "phone": "+91 95928 64845",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 299
+  },
+  {
+    "id": "stu-7A-07",
+    "name": "Prakash P.",
+    "email": "prakash.1037@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261037",
+    "rollNo": 7,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-01-15",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-7A-07"
+    ],
+    "phone": "+91 97938 74421",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 336
+  },
+  {
+    "id": "stu-7A-08",
+    "name": "Lavanya V.",
+    "email": "lavanya.1038@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261038",
+    "rollNo": 8,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-10-24",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-08"
+    ],
+    "phone": "+91 97810 81766",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 13
+  },
+  {
+    "id": "stu-7A-09",
+    "name": "Balaji G.",
+    "email": "balaji.1039@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261039",
+    "rollNo": 9,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-26",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-09"
+    ],
+    "phone": "+91 96330 48826",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 50
+  },
+  {
+    "id": "stu-7A-10",
+    "name": "Keerthana T.",
+    "email": "keerthana.1040@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261040",
+    "rollNo": 10,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-12-01",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-7A-10"
+    ],
+    "phone": "+91 98900 13091",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 87
+  },
+  {
+    "id": "stu-7A-11",
+    "name": "Aravind A.",
+    "email": "aravind.1041@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261041",
+    "rollNo": 11,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-08",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-7A-11"
+    ],
+    "phone": "+91 98209 42373",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 124
+  },
+  {
+    "id": "stu-7A-12",
+    "name": "Lavanya N.",
+    "email": "lavanya.1042@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261042",
+    "rollNo": 12,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-03-27",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-7A-12"
+    ],
+    "phone": "+91 99050 45623",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 161
+  },
+  {
+    "id": "stu-7A-13",
+    "name": "Manikandan R.",
+    "email": "manikandan.1043@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261043",
+    "rollNo": 13,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-05-03",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-7A-13"
+    ],
+    "phone": "+91 99838 42866",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 198
+  },
+  {
+    "id": "stu-7A-14",
+    "name": "Keerthana K.",
+    "email": "keerthana.1044@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261044",
+    "rollNo": 14,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-04-15",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-14"
+    ],
+    "phone": "+91 97195 41676",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 235
+  },
+  {
+    "id": "stu-7A-15",
+    "name": "Vignesh S.",
+    "email": "vignesh.1045@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261045",
+    "rollNo": 15,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-23",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-7A-15"
+    ],
+    "phone": "+91 95433 70338",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "stu-7A-16",
+    "name": "Lavanya M.",
+    "email": "lavanya.1046@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261046",
+    "rollNo": 16,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-05-05",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-7A-16"
+    ],
+    "phone": "+91 94649 47776",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 309
+  },
+  {
+    "id": "stu-7A-17",
+    "name": "Vimal P.",
+    "email": "vimal.1047@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261047",
+    "rollNo": 17,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-05",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-7A-17"
+    ],
+    "phone": "+91 95921 91649",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 346
+  },
+  {
+    "id": "stu-7A-18",
+    "name": "Keerthana V.",
+    "email": "keerthana.1048@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261048",
+    "rollNo": 18,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-10-20",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-7A-18"
+    ],
+    "phone": "+91 99970 68912",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "stu-7A-19",
+    "name": "Kavin G.",
+    "email": "kavin.1049@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261049",
+    "rollNo": 19,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-09-18",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-7A-19"
+    ],
+    "phone": "+91 97852 65642",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 60
+  },
+  {
+    "id": "stu-7A-20",
+    "name": "Lavanya T.",
+    "email": "lavanya.1050@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261050",
+    "rollNo": 20,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-11-22",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-7A-20"
+    ],
+    "phone": "+91 96973 41059",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 97
+  },
+  {
+    "id": "stu-7A-21",
+    "name": "Sanjay A.",
+    "email": "sanjay.1051@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261051",
+    "rollNo": 21,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-12-13",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-21"
+    ],
+    "phone": "+91 99261 13119",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 134
+  },
+  {
+    "id": "stu-7A-22",
+    "name": "Keerthana N.",
+    "email": "keerthana.1052@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261052",
+    "rollNo": 22,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-06-09",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-22"
+    ],
+    "phone": "+91 95734 85818",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 171
+  },
+  {
+    "id": "stu-7A-23",
+    "name": "Mohanraj R.",
+    "email": "mohanraj.1053@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261053",
+    "rollNo": 23,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-05-21",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-23"
+    ],
+    "phone": "+91 95754 14526",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 208
+  },
+  {
+    "id": "stu-7A-24",
+    "name": "Lavanya K.",
+    "email": "lavanya.1054@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261054",
+    "rollNo": 24,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-07-10",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-7A-24"
+    ],
+    "phone": "+91 99688 12345",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 245
+  },
+  {
+    "id": "stu-7A-25",
+    "name": "Dinesh S.",
+    "email": "dinesh.1055@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261055",
+    "rollNo": 25,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-09",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-7A-25"
+    ],
+    "phone": "+91 99722 78778",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 282
+  },
+  {
+    "id": "stu-7A-26",
+    "name": "Keerthana M.",
+    "email": "keerthana.1056@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261056",
+    "rollNo": 26,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-10-28",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-7A-26"
+    ],
+    "phone": "+91 94144 65230",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 319
+  },
+  {
+    "id": "stu-7A-27",
+    "name": "Prakash P.",
+    "email": "prakash.1057@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261057",
+    "rollNo": 27,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-12-24",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-7A-27"
+    ],
+    "phone": "+91 96913 21684",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 356
+  },
+  {
+    "id": "stu-7A-28",
+    "name": "Lavanya V.",
+    "email": "lavanya.1058@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261058",
+    "rollNo": 28,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-07-16",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-28"
+    ],
+    "phone": "+91 94001 69542",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 33
+  },
+  {
+    "id": "stu-7A-29",
+    "name": "Balaji G.",
+    "email": "balaji.1059@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261059",
+    "rollNo": 29,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-02-01",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-7A-29"
+    ],
+    "phone": "+91 99595 80260",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 70
+  },
+  {
+    "id": "stu-7A-30",
+    "name": "Keerthana T.",
+    "email": "keerthana.1060@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261060",
+    "rollNo": 30,
+    "classId": "cls-7A",
+    "dateOfBirth": "2014-08-07",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-7A-30"
+    ],
+    "phone": "+91 94806 21546",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 107
+  },
+  {
+    "id": "stu-8A-01",
+    "name": "Sandhya N.",
+    "email": "sandhya.1061@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261061",
+    "rollNo": 1,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-04-22",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-01"
+    ],
+    "phone": "+91 96729 43808",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 125
+  },
+  {
+    "id": "stu-8A-02",
+    "name": "Balaji R.",
+    "email": "balaji.1062@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261062",
+    "rollNo": 2,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-01-15",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-02"
+    ],
+    "phone": "+91 96577 32809",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 162
+  },
+  {
+    "id": "stu-8A-03",
+    "name": "Gayathri K.",
+    "email": "gayathri.1063@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261063",
+    "rollNo": 3,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-07-27",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8A-03"
+    ],
+    "phone": "+91 94095 81988",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 199
+  },
+  {
+    "id": "stu-8A-04",
+    "name": "Aravind S.",
+    "email": "aravind.1064@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261064",
+    "rollNo": 4,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-03-11",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-04"
+    ],
+    "phone": "+91 94236 34449",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 236
+  },
+  {
+    "id": "stu-8A-05",
+    "name": "Sandhya M.",
+    "email": "sandhya.1065@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261065",
+    "rollNo": 5,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-05-23",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-05"
+    ],
+    "phone": "+91 97782 47272",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 273
+  },
+  {
+    "id": "stu-8A-06",
+    "name": "Manikandan P.",
+    "email": "manikandan.1066@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261066",
+    "rollNo": 6,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-09-05",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8A-06"
+    ],
+    "phone": "+91 96190 51683",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 310
+  },
+  {
+    "id": "stu-8A-07",
+    "name": "Gayathri V.",
+    "email": "gayathri.1067@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261067",
+    "rollNo": 7,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-01-27",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-07"
+    ],
+    "phone": "+91 99852 12703",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 347
+  },
+  {
+    "id": "stu-8A-08",
+    "name": "Vignesh G.",
+    "email": "vignesh.1068@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261068",
+    "rollNo": 8,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-05-21",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-08"
+    ],
+    "phone": "+91 95659 16566",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 24
+  },
+  {
+    "id": "stu-8A-09",
+    "name": "Sandhya T.",
+    "email": "sandhya.1069@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261069",
+    "rollNo": 9,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-03-13",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-09"
+    ],
+    "phone": "+91 97402 42679",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 61
+  },
+  {
+    "id": "stu-8A-10",
+    "name": "Vimal A.",
+    "email": "student@school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261070",
+    "rollNo": 10,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-04-02",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8A-10"
+    ],
+    "phone": "+91 99666 13732",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "stu-8A-11",
+    "name": "Gayathri N.",
+    "email": "gayathri.1071@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261071",
+    "rollNo": 11,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-09-09",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-11"
+    ],
+    "phone": "+91 97540 37788",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 135
+  },
+  {
+    "id": "stu-8A-12",
+    "name": "Kavin R.",
+    "email": "kavin.1072@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261072",
+    "rollNo": 12,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-03-24",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8A-12"
+    ],
+    "phone": "+91 95773 52415",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 172
+  },
+  {
+    "id": "stu-8A-13",
+    "name": "Sandhya K.",
+    "email": "sandhya.1073@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261073",
+    "rollNo": 13,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-04-15",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-13"
+    ],
+    "phone": "+91 98846 54131",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "stu-8A-14",
+    "name": "Sanjay S.",
+    "email": "sanjay.1074@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261074",
+    "rollNo": 14,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-05-02",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-14"
+    ],
+    "phone": "+91 96359 47863",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 246
+  },
+  {
+    "id": "stu-8A-15",
+    "name": "Gayathri M.",
+    "email": "gayathri.1075@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261075",
+    "rollNo": 15,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-06-23",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-15"
+    ],
+    "phone": "+91 98501 68729",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 283
+  },
+  {
+    "id": "stu-8A-16",
+    "name": "Mohanraj P.",
+    "email": "mohanraj.1076@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261076",
+    "rollNo": 16,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-09-09",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-16"
+    ],
+    "phone": "+91 99056 42692",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 320
+  },
+  {
+    "id": "stu-8A-17",
+    "name": "Sandhya V.",
+    "email": "sandhya.1077@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261077",
+    "rollNo": 17,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-04-28",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-17"
+    ],
+    "phone": "+91 99633 78498",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 357
+  },
+  {
+    "id": "stu-8A-18",
+    "name": "Dinesh G.",
+    "email": "dinesh.1078@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261078",
+    "rollNo": 18,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-07-01",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-18"
+    ],
+    "phone": "+91 98976 22821",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 34
+  },
+  {
+    "id": "stu-8A-19",
+    "name": "Gayathri T.",
+    "email": "gayathri.1079@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261079",
+    "rollNo": 19,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-11-06",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-19"
+    ],
+    "phone": "+91 98871 69726",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 71
+  },
+  {
+    "id": "stu-8A-20",
+    "name": "Prakash A.",
+    "email": "prakash.1080@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261080",
+    "rollNo": 20,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-12-21",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8A-20"
+    ],
+    "phone": "+91 98816 75195",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 108
+  },
+  {
+    "id": "stu-8A-21",
+    "name": "Sandhya N.",
+    "email": "sandhya.1081@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261081",
+    "rollNo": 21,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-07-23",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8A-21"
+    ],
+    "phone": "+91 97742 85895",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 145
+  },
+  {
+    "id": "stu-8A-22",
+    "name": "Balaji R.",
+    "email": "balaji.1082@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261082",
+    "rollNo": 22,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-10-18",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8A-22"
+    ],
+    "phone": "+91 94010 68753",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 182
+  },
+  {
+    "id": "stu-8A-23",
+    "name": "Gayathri K.",
+    "email": "gayathri.1083@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261083",
+    "rollNo": 23,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-02-01",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8A-23"
+    ],
+    "phone": "+91 99704 25338",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 219
+  },
+  {
+    "id": "stu-8A-24",
+    "name": "Aravind S.",
+    "email": "aravind.1084@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261084",
+    "rollNo": 24,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-08-24",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8A-24"
+    ],
+    "phone": "+91 97469 61682",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 256
+  },
+  {
+    "id": "stu-8A-25",
+    "name": "Sandhya M.",
+    "email": "sandhya.1085@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261085",
+    "rollNo": 25,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-09-24",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8A-25"
+    ],
+    "phone": "+91 94144 25981",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 293
+  },
+  {
+    "id": "stu-8A-26",
+    "name": "Manikandan P.",
+    "email": "manikandan.1086@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261086",
+    "rollNo": 26,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-01-01",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8A-26"
+    ],
+    "phone": "+91 98358 35473",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "stu-8A-27",
+    "name": "Gayathri V.",
+    "email": "gayathri.1087@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261087",
+    "rollNo": 27,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-09-02",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-27"
+    ],
+    "phone": "+91 97147 98047",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 7
+  },
+  {
+    "id": "stu-8A-28",
+    "name": "Vignesh G.",
+    "email": "vignesh.1088@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261088",
+    "rollNo": 28,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-06-15",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-28"
+    ],
+    "phone": "+91 98734 82707",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 44
+  },
+  {
+    "id": "stu-8A-29",
+    "name": "Sandhya T.",
+    "email": "sandhya.1089@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261089",
+    "rollNo": 29,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-12-13",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8A-29"
+    ],
+    "phone": "+91 94154 74444",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "stu-8A-30",
+    "name": "Vimal A.",
+    "email": "vimal.1090@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261090",
+    "rollNo": 30,
+    "classId": "cls-8A",
+    "dateOfBirth": "2013-03-23",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8A-30"
+    ],
+    "phone": "+91 95050 45277",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 118
+  },
+  {
+    "id": "stu-8B-01",
+    "name": "Sandhya N.",
+    "email": "sandhya.1091@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261091",
+    "rollNo": 1,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-02-28",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-01"
+    ],
+    "phone": "+91 98796 19390",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 125
+  },
+  {
+    "id": "stu-8B-02",
+    "name": "Balaji R.",
+    "email": "balaji.1092@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261092",
+    "rollNo": 2,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-06-28",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8B-02"
+    ],
+    "phone": "+91 95599 96185",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 162
+  },
+  {
+    "id": "stu-8B-03",
+    "name": "Gayathri K.",
+    "email": "gayathri.1093@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261093",
+    "rollNo": 3,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-05-25",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8B-03"
+    ],
+    "phone": "+91 95865 70506",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 199
+  },
+  {
+    "id": "stu-8B-04",
+    "name": "Aravind S.",
+    "email": "aravind.1094@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261094",
+    "rollNo": 4,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-04-26",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-04"
+    ],
+    "phone": "+91 99448 33831",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 236
+  },
+  {
+    "id": "stu-8B-05",
+    "name": "Sandhya M.",
+    "email": "sandhya.1095@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261095",
+    "rollNo": 5,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-05-11",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-05"
+    ],
+    "phone": "+91 95959 42192",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 273
+  },
+  {
+    "id": "stu-8B-06",
+    "name": "Manikandan P.",
+    "email": "manikandan.1096@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261096",
+    "rollNo": 6,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-10-22",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-8B-06"
+    ],
+    "phone": "+91 95087 47809",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 310
+  },
+  {
+    "id": "stu-8B-07",
+    "name": "Gayathri V.",
+    "email": "gayathri.1097@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261097",
+    "rollNo": 7,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-11-25",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8B-07"
+    ],
+    "phone": "+91 94812 20548",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 347
+  },
+  {
+    "id": "stu-8B-08",
+    "name": "Vignesh G.",
+    "email": "vignesh.1098@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261098",
+    "rollNo": 8,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-11-03",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8B-08"
+    ],
+    "phone": "+91 97985 94335",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 24
+  },
+  {
+    "id": "stu-8B-09",
+    "name": "Sandhya T.",
+    "email": "sandhya.1099@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261099",
+    "rollNo": 9,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-01-19",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8B-09"
+    ],
+    "phone": "+91 95479 15368",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 61
+  },
+  {
+    "id": "stu-8B-10",
+    "name": "Vimal A.",
+    "email": "vimal.1100@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261100",
+    "rollNo": 10,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-11-16",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8B-10"
+    ],
+    "phone": "+91 97052 96130",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "stu-8B-11",
+    "name": "Gayathri N.",
+    "email": "gayathri.1101@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261101",
+    "rollNo": 11,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-12-21",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8B-11"
+    ],
+    "phone": "+91 98539 76718",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 135
+  },
+  {
+    "id": "stu-8B-12",
+    "name": "Kavin R.",
+    "email": "kavin.1102@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261102",
+    "rollNo": 12,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-05-22",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-12"
+    ],
+    "phone": "+91 97090 21973",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 172
+  },
+  {
+    "id": "stu-8B-13",
+    "name": "Sandhya K.",
+    "email": "sandhya.1103@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261103",
+    "rollNo": 13,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-05-08",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8B-13"
+    ],
+    "phone": "+91 98666 69885",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "stu-8B-14",
+    "name": "Sanjay S.",
+    "email": "sanjay.1104@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261104",
+    "rollNo": 14,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-03",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8B-14"
+    ],
+    "phone": "+91 96752 10781",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 246
+  },
+  {
+    "id": "stu-8B-15",
+    "name": "Gayathri M.",
+    "email": "gayathri.1105@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261105",
+    "rollNo": 15,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-18",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8B-15"
+    ],
+    "phone": "+91 96809 23588",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 283
+  },
+  {
+    "id": "stu-8B-16",
+    "name": "Mohanraj P.",
+    "email": "mohanraj.1106@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261106",
+    "rollNo": 16,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-05",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-16"
+    ],
+    "phone": "+91 95161 43036",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 320
+  },
+  {
+    "id": "stu-8B-17",
+    "name": "Sandhya V.",
+    "email": "sandhya.1107@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261107",
+    "rollNo": 17,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-03-17",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-8B-17"
+    ],
+    "phone": "+91 98349 76744",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 357
+  },
+  {
+    "id": "stu-8B-18",
+    "name": "Dinesh G.",
+    "email": "dinesh.1108@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261108",
+    "rollNo": 18,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-09-16",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-8B-18"
+    ],
+    "phone": "+91 99136 25513",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 34
+  },
+  {
+    "id": "stu-8B-19",
+    "name": "Gayathri T.",
+    "email": "gayathri.1109@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261109",
+    "rollNo": 19,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-11-21",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-19"
+    ],
+    "phone": "+91 96556 48904",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 71
+  },
+  {
+    "id": "stu-8B-20",
+    "name": "Prakash A.",
+    "email": "prakash.1110@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261110",
+    "rollNo": 20,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-05-18",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-20"
+    ],
+    "phone": "+91 95816 93809",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 108
+  },
+  {
+    "id": "stu-8B-21",
+    "name": "Sandhya N.",
+    "email": "sandhya.1111@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261111",
+    "rollNo": 21,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-20",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8B-21"
+    ],
+    "phone": "+91 97077 72126",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 145
+  },
+  {
+    "id": "stu-8B-22",
+    "name": "Balaji R.",
+    "email": "balaji.1112@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261112",
+    "rollNo": 22,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-03",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-8B-22"
+    ],
+    "phone": "+91 99250 98984",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 182
+  },
+  {
+    "id": "stu-8B-23",
+    "name": "Gayathri K.",
+    "email": "gayathri.1113@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261113",
+    "rollNo": 23,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-10-14",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8B-23"
+    ],
+    "phone": "+91 97103 97731",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 219
+  },
+  {
+    "id": "stu-8B-24",
+    "name": "Aravind S.",
+    "email": "aravind.1114@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261114",
+    "rollNo": 24,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-10-07",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-8B-24"
+    ],
+    "phone": "+91 96310 60852",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 256
+  },
+  {
+    "id": "stu-8B-25",
+    "name": "Sandhya M.",
+    "email": "sandhya.1115@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261115",
+    "rollNo": 25,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-12",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-8B-25"
+    ],
+    "phone": "+91 94020 78149",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 293
+  },
+  {
+    "id": "stu-8B-26",
+    "name": "Manikandan P.",
+    "email": "manikandan.1116@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261116",
+    "rollNo": 26,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-08-02",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-26"
+    ],
+    "phone": "+91 98872 11784",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "stu-8B-27",
+    "name": "Gayathri V.",
+    "email": "gayathri.1117@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261117",
+    "rollNo": 27,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-05",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-8B-27"
+    ],
+    "phone": "+91 96633 38584",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 7
+  },
+  {
+    "id": "stu-8B-28",
+    "name": "Vignesh G.",
+    "email": "vignesh.1118@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261118",
+    "rollNo": 28,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-03-16",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-8B-28"
+    ],
+    "phone": "+91 98060 87113",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 44
+  },
+  {
+    "id": "stu-8B-29",
+    "name": "Sandhya T.",
+    "email": "sandhya.1119@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261119",
+    "rollNo": 29,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-07-19",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-8B-29"
+    ],
+    "phone": "+91 96945 43439",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "stu-8B-30",
+    "name": "Vimal A.",
+    "email": "vimal.1120@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261120",
+    "rollNo": 30,
+    "classId": "cls-8B",
+    "dateOfBirth": "2013-08-20",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-8B-30"
+    ],
+    "phone": "+91 94728 56525",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 118
+  },
+  {
+    "id": "stu-9A-01",
+    "name": "Vignesh R.",
+    "email": "vignesh.1121@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261121",
+    "rollNo": 1,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-06-13",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-9A-01"
+    ],
+    "phone": "+91 98284 91260",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 136
+  },
+  {
+    "id": "stu-9A-02",
+    "name": "Aishwarya K.",
+    "email": "aishwarya.1122@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261122",
+    "rollNo": 2,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-07-13",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-9A-02"
+    ],
+    "phone": "+91 98934 87419",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 173
+  },
+  {
+    "id": "stu-9A-03",
+    "name": "Vimal S.",
+    "email": "vimal.1123@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261123",
+    "rollNo": 3,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-08-09",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-9A-03"
+    ],
+    "phone": "+91 99245 76458",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 210
+  },
+  {
+    "id": "stu-9A-04",
+    "name": "Nandhini M.",
+    "email": "nandhini.1124@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261124",
+    "rollNo": 4,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-06-19",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-04"
+    ],
+    "phone": "+91 96076 50647",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 247
+  },
+  {
+    "id": "stu-9A-05",
+    "name": "Kavin P.",
+    "email": "kavin.1125@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261125",
+    "rollNo": 5,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-04-21",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-05"
+    ],
+    "phone": "+91 96424 31902",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "stu-9A-06",
+    "name": "Aishwarya V.",
+    "email": "aishwarya.1126@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261126",
+    "rollNo": 6,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-10-28",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-9A-06"
+    ],
+    "phone": "+91 96828 56412",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 321
+  },
+  {
+    "id": "stu-9A-07",
+    "name": "Sanjay G.",
+    "email": "sanjay.1127@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261127",
+    "rollNo": 7,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-11-04",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-07"
+    ],
+    "phone": "+91 99994 59559",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 358
+  },
+  {
+    "id": "stu-9A-08",
+    "name": "Nandhini T.",
+    "email": "nandhini.1128@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261128",
+    "rollNo": 8,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-04-21",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-9A-08"
+    ],
+    "phone": "+91 95166 49580",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 35
+  },
+  {
+    "id": "stu-9A-09",
+    "name": "Mohanraj A.",
+    "email": "mohanraj.1129@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261129",
+    "rollNo": 9,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-02-27",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-09"
+    ],
+    "phone": "+91 97878 71810",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 72
+  },
+  {
+    "id": "stu-9A-10",
+    "name": "Aishwarya N.",
+    "email": "aishwarya.1130@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261130",
+    "rollNo": 10,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-06-17",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-9A-10"
+    ],
+    "phone": "+91 99915 96068",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 109
+  },
+  {
+    "id": "stu-9A-11",
+    "name": "Dinesh R.",
+    "email": "dinesh.1131@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261131",
+    "rollNo": 11,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-01-01",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-9A-11"
+    ],
+    "phone": "+91 94865 18768",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 146
+  },
+  {
+    "id": "stu-9A-12",
+    "name": "Nandhini K.",
+    "email": "nandhini.1132@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261132",
+    "rollNo": 12,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-05-03",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-12"
+    ],
+    "phone": "+91 95057 68082",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 183
+  },
+  {
+    "id": "stu-9A-13",
+    "name": "Prakash S.",
+    "email": "prakash.1133@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261133",
+    "rollNo": 13,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-12-28",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-13"
+    ],
+    "phone": "+91 99672 91053",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 220
+  },
+  {
+    "id": "stu-9A-14",
+    "name": "Aishwarya M.",
+    "email": "aishwarya.1134@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261134",
+    "rollNo": 14,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-12-17",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-14"
+    ],
+    "phone": "+91 98393 94530",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 257
+  },
+  {
+    "id": "stu-9A-15",
+    "name": "Balaji P.",
+    "email": "balaji.1135@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261135",
+    "rollNo": 15,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-07",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-9A-15"
+    ],
+    "phone": "+91 95540 13904",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 294
+  },
+  {
+    "id": "stu-9A-16",
+    "name": "Nandhini V.",
+    "email": "nandhini.1136@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261136",
+    "rollNo": 16,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-04-19",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-16"
+    ],
+    "phone": "+91 98074 35353",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 331
+  },
+  {
+    "id": "stu-9A-17",
+    "name": "Aravind G.",
+    "email": "aravind.1137@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261137",
+    "rollNo": 17,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-03-27",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-9A-17"
+    ],
+    "phone": "+91 99715 95435",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 8
+  },
+  {
+    "id": "stu-9A-18",
+    "name": "Aishwarya T.",
+    "email": "aishwarya.1138@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261138",
+    "rollNo": 18,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-07",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-18"
+    ],
+    "phone": "+91 94422 40975",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 45
+  },
+  {
+    "id": "stu-9A-19",
+    "name": "Manikandan A.",
+    "email": "manikandan.1139@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261139",
+    "rollNo": 19,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-06-12",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-19"
+    ],
+    "phone": "+91 96096 69749",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 82
+  },
+  {
+    "id": "stu-9A-20",
+    "name": "Nandhini N.",
+    "email": "nandhini.1140@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261140",
+    "rollNo": 20,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-05",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-9A-20"
+    ],
+    "phone": "+91 98496 20043",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 119
+  },
+  {
+    "id": "stu-9A-21",
+    "name": "Vignesh R.",
+    "email": "vignesh.1141@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261141",
+    "rollNo": 21,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-04-13",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-9A-21"
+    ],
+    "phone": "+91 96607 54679",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "stu-9A-22",
+    "name": "Aishwarya K.",
+    "email": "aishwarya.1142@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261142",
+    "rollNo": 22,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-06",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-9A-22"
+    ],
+    "phone": "+91 94020 69715",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 193
+  },
+  {
+    "id": "stu-9A-23",
+    "name": "Vimal S.",
+    "email": "vimal.1143@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261143",
+    "rollNo": 23,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-23",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-9A-23"
+    ],
+    "phone": "+91 96588 94112",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 230
+  },
+  {
+    "id": "stu-9A-24",
+    "name": "Nandhini M.",
+    "email": "nandhini.1144@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261144",
+    "rollNo": 24,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-05-16",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-24"
+    ],
+    "phone": "+91 96961 46530",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "stu-9A-25",
+    "name": "Kavin P.",
+    "email": "kavin.1145@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261145",
+    "rollNo": 25,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-09-02",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-25"
+    ],
+    "phone": "+91 98901 95109",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 304
+  },
+  {
+    "id": "stu-9A-26",
+    "name": "Aishwarya V.",
+    "email": "aishwarya.1146@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261146",
+    "rollNo": 26,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-07-10",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-9A-26"
+    ],
+    "phone": "+91 99722 87465",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 341
+  },
+  {
+    "id": "stu-9A-27",
+    "name": "Sanjay G.",
+    "email": "sanjay.1147@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261147",
+    "rollNo": 27,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-01-24",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-27"
+    ],
+    "phone": "+91 95456 16213",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 18
+  },
+  {
+    "id": "stu-9A-28",
+    "name": "Nandhini T.",
+    "email": "nandhini.1148@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261148",
+    "rollNo": 28,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-10-19",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-9A-28"
+    ],
+    "phone": "+91 98467 70882",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 55
+  },
+  {
+    "id": "stu-9A-29",
+    "name": "Mohanraj A.",
+    "email": "mohanraj.1149@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261149",
+    "rollNo": 29,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-12-01",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-9A-29"
+    ],
+    "phone": "+91 99224 61759",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 92
+  },
+  {
+    "id": "stu-9A-30",
+    "name": "Aishwarya N.",
+    "email": "aishwarya.1150@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261150",
+    "rollNo": 30,
+    "classId": "cls-9A",
+    "dateOfBirth": "2012-04-14",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-9A-30"
+    ],
+    "phone": "+91 95756 96253",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 129
+  },
+  {
+    "id": "stu-10A-01",
+    "name": "Vaishnavi K.",
+    "email": "vaishnavi.1151@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261151",
+    "rollNo": 1,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-04-09",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-10A-01"
+    ],
+    "phone": "+91 99046 82029",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 147
+  },
+  {
+    "id": "stu-10A-02",
+    "name": "Mohanraj S.",
+    "email": "mohanraj.1152@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261152",
+    "rollNo": 2,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-06-27",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-02"
+    ],
+    "phone": "+91 97962 62522",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 184
+  },
+  {
+    "id": "stu-10A-03",
+    "name": "Janani M.",
+    "email": "janani.1153@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261153",
+    "rollNo": 3,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-02-10",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-03"
+    ],
+    "phone": "+91 97757 28427",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 221
+  },
+  {
+    "id": "stu-10A-04",
+    "name": "Dinesh P.",
+    "email": "dinesh.1154@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261154",
+    "rollNo": 4,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-10-20",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-04"
+    ],
+    "phone": "+91 95748 82259",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 258
+  },
+  {
+    "id": "stu-10A-05",
+    "name": "Vaishnavi V.",
+    "email": "vaishnavi.1155@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261155",
+    "rollNo": 5,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-03-17",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-05"
+    ],
+    "phone": "+91 95081 88672",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 295
+  },
+  {
+    "id": "stu-10A-06",
+    "name": "Prakash G.",
+    "email": "prakash.1156@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261156",
+    "rollNo": 6,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-08-15",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-06"
+    ],
+    "phone": "+91 99081 60486",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 332
+  },
+  {
+    "id": "stu-10A-07",
+    "name": "Janani T.",
+    "email": "janani.1157@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261157",
+    "rollNo": 7,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-03-13",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-07"
+    ],
+    "phone": "+91 97880 67037",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 9
+  },
+  {
+    "id": "stu-10A-08",
+    "name": "Balaji A.",
+    "email": "balaji.1158@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261158",
+    "rollNo": 8,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-10-10",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-08"
+    ],
+    "phone": "+91 97955 86861",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 46
+  },
+  {
+    "id": "stu-10A-09",
+    "name": "Vaishnavi N.",
+    "email": "vaishnavi.1159@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261159",
+    "rollNo": 9,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-06-01",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-10A-09"
+    ],
+    "phone": "+91 97716 67303",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 83
+  },
+  {
+    "id": "stu-10A-10",
+    "name": "Aravind R.",
+    "email": "aravind.1160@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261160",
+    "rollNo": 10,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-01-21",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-10A-10"
+    ],
+    "phone": "+91 95402 65945",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 120
+  },
+  {
+    "id": "stu-10A-11",
+    "name": "Janani K.",
+    "email": "janani.1161@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261161",
+    "rollNo": 11,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-05-22",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-11"
+    ],
+    "phone": "+91 95848 59110",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 157
+  },
+  {
+    "id": "stu-10A-12",
+    "name": "Manikandan S.",
+    "email": "manikandan.1162@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261162",
+    "rollNo": 12,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-09-21",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-12"
+    ],
+    "phone": "+91 96941 30937",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 194
+  },
+  {
+    "id": "stu-10A-13",
+    "name": "Vaishnavi M.",
+    "email": "vaishnavi.1163@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261163",
+    "rollNo": 13,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-02-15",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-13"
+    ],
+    "phone": "+91 97198 10965",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 231
+  },
+  {
+    "id": "stu-10A-14",
+    "name": "Vignesh P.",
+    "email": "vignesh.1164@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261164",
+    "rollNo": 14,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-03-20",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-14"
+    ],
+    "phone": "+91 99532 59134",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 268
+  },
+  {
+    "id": "stu-10A-15",
+    "name": "Janani V.",
+    "email": "janani.1165@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261165",
+    "rollNo": 15,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-06-18",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-10A-15"
+    ],
+    "phone": "+91 95453 56220",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 305
+  },
+  {
+    "id": "stu-10A-16",
+    "name": "Vimal G.",
+    "email": "vimal.1166@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261166",
+    "rollNo": 16,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-03-12",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-16"
+    ],
+    "phone": "+91 97567 56775",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "stu-10A-17",
+    "name": "Vaishnavi T.",
+    "email": "vaishnavi.1167@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261167",
+    "rollNo": 17,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-09-23",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-17"
+    ],
+    "phone": "+91 98920 86195",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 19
+  },
+  {
+    "id": "stu-10A-18",
+    "name": "Kavin A.",
+    "email": "kavin.1168@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261168",
+    "rollNo": 18,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-12-01",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-10A-18"
+    ],
+    "phone": "+91 98024 26025",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 56
+  },
+  {
+    "id": "stu-10A-19",
+    "name": "Janani N.",
+    "email": "janani.1169@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261169",
+    "rollNo": 19,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-01-11",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-10A-19"
+    ],
+    "phone": "+91 94657 79813",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 93
+  },
+  {
+    "id": "stu-10A-20",
+    "name": "Sanjay R.",
+    "email": "sanjay.1170@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261170",
+    "rollNo": 20,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-02-20",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-20"
+    ],
+    "phone": "+91 97450 78320",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 130
+  },
+  {
+    "id": "stu-10A-21",
+    "name": "Vaishnavi K.",
+    "email": "vaishnavi.1171@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261171",
+    "rollNo": 21,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-12-01",
+    "bloodGroup": "A-",
+    "guardianIds": [
+      "par-10A-21"
+    ],
+    "phone": "+91 99319 89684",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 167
+  },
+  {
+    "id": "stu-10A-22",
+    "name": "Mohanraj S.",
+    "email": "mohanraj.1172@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261172",
+    "rollNo": 22,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-02-27",
+    "bloodGroup": "O-",
+    "guardianIds": [
+      "par-10A-22"
+    ],
+    "phone": "+91 97337 75192",
+    "status": "active",
+    "joinedOn": "2023-06-05",
+    "avatarHue": 204
+  },
+  {
+    "id": "stu-10A-23",
+    "name": "Janani M.",
+    "email": "janani.1173@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261173",
+    "rollNo": 23,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-05-08",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-23"
+    ],
+    "phone": "+91 96360 30928",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 241
+  },
+  {
+    "id": "stu-10A-24",
+    "name": "Dinesh P.",
+    "email": "dinesh.1174@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261174",
+    "rollNo": 24,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-05-09",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-10A-24"
+    ],
+    "phone": "+91 96521 89026",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 278
+  },
+  {
+    "id": "stu-10A-25",
+    "name": "Vaishnavi V.",
+    "email": "vaishnavi.1175@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261175",
+    "rollNo": 25,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-11-04",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-25"
+    ],
+    "phone": "+91 97408 28863",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 315
+  },
+  {
+    "id": "stu-10A-26",
+    "name": "Prakash G.",
+    "email": "prakash.1176@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261176",
+    "rollNo": 26,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-09-13",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-10A-26"
+    ],
+    "phone": "+91 97971 11103",
+    "status": "active",
+    "joinedOn": "2024-06-05",
+    "avatarHue": 352
+  },
+  {
+    "id": "stu-10A-27",
+    "name": "Janani T.",
+    "email": "janani.1177@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261177",
+    "rollNo": 27,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-03-25",
+    "bloodGroup": "A+",
+    "guardianIds": [
+      "par-10A-27"
+    ],
+    "phone": "+91 99671 33048",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 29
+  },
+  {
+    "id": "stu-10A-28",
+    "name": "Balaji A.",
+    "email": "balaji.1178@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261178",
+    "rollNo": 28,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-01-01",
+    "bloodGroup": "AB+",
+    "guardianIds": [
+      "par-10A-28"
+    ],
+    "phone": "+91 95767 11927",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 66
+  },
+  {
+    "id": "stu-10A-29",
+    "name": "Vaishnavi N.",
+    "email": "vaishnavi.1179@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261179",
+    "rollNo": 29,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-04-26",
+    "bloodGroup": "B+",
+    "guardianIds": [
+      "par-10A-29"
+    ],
+    "phone": "+91 94982 75738",
+    "status": "active",
+    "joinedOn": "2022-06-05",
+    "avatarHue": 103
+  },
+  {
+    "id": "stu-10A-30",
+    "name": "Aravind R.",
+    "email": "aravind.1180@student.school.edu",
+    "password": "Student@123",
+    "role": "student",
+    "admissionNo": "SVM20261180",
+    "rollNo": 30,
+    "classId": "cls-10A",
+    "dateOfBirth": "2011-07-14",
+    "bloodGroup": "O+",
+    "guardianIds": [
+      "par-10A-30"
+    ],
+    "phone": "+91 98889 12200",
+    "status": "active",
+    "joinedOn": "2025-06-05",
+    "avatarHue": 140
+  },
+  {
+    "id": "par-6A-01",
+    "name": "T. Devi",
+    "email": "parent.1001@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-01"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 95673 78414",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-6A-02",
+    "name": "A. Natarajan",
+    "email": "parent.1002@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-02"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 95620 95981",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-6A-03",
+    "name": "N. Vasanthi",
+    "email": "parent.1003@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-03"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 95429 36380",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-6A-04",
+    "name": "R. Murugan",
+    "email": "parent.1004@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-04"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 98189 45702",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-6A-05",
+    "name": "K. Shanthi",
+    "email": "parent.1005@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-05"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 99689 32638",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-6A-06",
+    "name": "S. Selvam",
+    "email": "parent.1006@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-06"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 97321 31357",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-6A-07",
+    "name": "M. Lakshmi",
+    "email": "parent.1007@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-07"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 98033 33138",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-6A-08",
+    "name": "P. Palanisamy",
+    "email": "parent.1008@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-08"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 98655 39054",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-6A-09",
+    "name": "V. Kalaivani",
+    "email": "parent.1009@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-09"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 97227 66028",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-6A-10",
+    "name": "G. Thangavel",
+    "email": "parent.1010@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-10"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96912 75538",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-6A-11",
+    "name": "T. Devi",
+    "email": "parent.1011@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-11"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 99201 78561",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-6A-12",
+    "name": "A. Natarajan",
+    "email": "parent.1012@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-12"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 96627 28166",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-6A-13",
+    "name": "N. Vasanthi",
+    "email": "parent.1013@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-13"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 94242 53031",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-6A-14",
+    "name": "R. Murugan",
+    "email": "parent.1014@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-14"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 98091 48585",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-6A-15",
+    "name": "K. Shanthi",
+    "email": "parent.1015@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-15"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 95754 21552",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-6A-16",
+    "name": "S. Selvam",
+    "email": "parent.1016@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-16"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95742 20654",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-6A-17",
+    "name": "M. Lakshmi",
+    "email": "parent.1017@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-17"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 96361 47621",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-6A-18",
+    "name": "P. Palanisamy",
+    "email": "parent.1018@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-18"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 99940 14199",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-6A-19",
+    "name": "V. Kalaivani",
+    "email": "parent.1019@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-19"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 96074 14894",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-6A-20",
+    "name": "G. Thangavel",
+    "email": "parent.1020@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-20"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94714 28965",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-6A-21",
+    "name": "T. Devi",
+    "email": "parent.1021@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-21"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 96304 43675",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-6A-22",
+    "name": "A. Natarajan",
+    "email": "parent.1022@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-22"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 98470 57873",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-6A-23",
+    "name": "N. Vasanthi",
+    "email": "parent.1023@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-23"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 99822 46188",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-6A-24",
+    "name": "R. Murugan",
+    "email": "parent.1024@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-24"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 98334 22609",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-6A-25",
+    "name": "K. Shanthi",
+    "email": "parent.1025@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-25"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 96078 92634",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-6A-26",
+    "name": "S. Selvam",
+    "email": "parent.1026@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-26"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 99491 90271",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-6A-27",
+    "name": "M. Lakshmi",
+    "email": "parent.1027@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-27"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 98632 96042",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-6A-28",
+    "name": "P. Palanisamy",
+    "email": "parent.1028@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-28"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 97705 84373",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-6A-29",
+    "name": "V. Kalaivani",
+    "email": "parent.1029@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-29"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 98926 16925",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-6A-30",
+    "name": "G. Thangavel",
+    "email": "parent.1030@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-6A-30"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 99509 70689",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "par-7A-01",
+    "name": "A. Pushpa",
+    "email": "parent.1031@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-01"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 96481 36763",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-7A-02",
+    "name": "N. Velmurugan",
+    "email": "parent.1032@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-02"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 95723 14071",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-7A-03",
+    "name": "R. Amudha",
+    "email": "parent.1033@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-03"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 96154 93327",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-7A-04",
+    "name": "K. Rajendran",
+    "email": "parent.1034@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-04"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 99227 10970",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-7A-05",
+    "name": "S. Malathi",
+    "email": "parent.1035@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-05"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95452 43394",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-7A-06",
+    "name": "M. Kumaresan",
+    "email": "parent.1036@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-06"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 94375 75883",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-7A-07",
+    "name": "P. Saroja",
+    "email": "parent.1037@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-07"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 98272 37587",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-7A-08",
+    "name": "V. Ganesan",
+    "email": "parent.1038@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-08"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 96334 83548",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-7A-09",
+    "name": "G. Rajeswari",
+    "email": "parent.1039@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-09"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96201 17448",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-7A-10",
+    "name": "T. Arumugam",
+    "email": "parent.1040@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-10"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 99712 29601",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-7A-11",
+    "name": "A. Pushpa",
+    "email": "parent.1041@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-11"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 95207 14914",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-7A-12",
+    "name": "N. Velmurugan",
+    "email": "parent.1042@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-12"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 98518 86275",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-7A-13",
+    "name": "R. Amudha",
+    "email": "parent.1043@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-13"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 96156 52117",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-7A-14",
+    "name": "K. Rajendran",
+    "email": "parent.1044@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-14"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 96538 56862",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-7A-15",
+    "name": "S. Malathi",
+    "email": "parent.1045@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-15"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 96232 74232",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-7A-16",
+    "name": "M. Kumaresan",
+    "email": "parent.1046@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-16"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 95453 39891",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-7A-17",
+    "name": "P. Saroja",
+    "email": "parent.1047@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-17"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 99908 58517",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-7A-18",
+    "name": "V. Ganesan",
+    "email": "parent.1048@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-18"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 96323 78796",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-7A-19",
+    "name": "G. Rajeswari",
+    "email": "parent.1049@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-19"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 95513 67743",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-7A-20",
+    "name": "T. Arumugam",
+    "email": "parent.1050@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-20"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 94008 23950",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-7A-21",
+    "name": "A. Pushpa",
+    "email": "parent.1051@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-21"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 97508 51897",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-7A-22",
+    "name": "N. Velmurugan",
+    "email": "parent.1052@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-22"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 97230 69736",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-7A-23",
+    "name": "R. Amudha",
+    "email": "parent.1053@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-23"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 98123 70741",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-7A-24",
+    "name": "K. Rajendran",
+    "email": "parent.1054@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-24"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 95275 78403",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-7A-25",
+    "name": "S. Malathi",
+    "email": "parent.1055@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-25"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 94895 84565",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-7A-26",
+    "name": "M. Kumaresan",
+    "email": "parent.1056@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-26"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 99889 99870",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-7A-27",
+    "name": "P. Saroja",
+    "email": "parent.1057@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-27"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 99247 90965",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-7A-28",
+    "name": "V. Ganesan",
+    "email": "parent.1058@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-28"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 94299 78579",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-7A-29",
+    "name": "G. Rajeswari",
+    "email": "parent.1059@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-29"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 98304 26028",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-7A-30",
+    "name": "T. Arumugam",
+    "email": "parent.1060@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-7A-30"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 98721 21544",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "par-8A-01",
+    "name": "N. Lakshmi",
+    "email": "parent.1061@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-01"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 95112 99221",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-8A-02",
+    "name": "R. Murugan",
+    "email": "parent.1062@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-02"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 94211 96567",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-8A-03",
+    "name": "K. Kalaivani",
+    "email": "parent.1063@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-03"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 96069 59014",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-8A-04",
+    "name": "S. Selvam",
+    "email": "parent.1064@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-04"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95597 93265",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-8A-05",
+    "name": "M. Devi",
+    "email": "parent.1065@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-05"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 98670 44980",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-8A-06",
+    "name": "P. Palanisamy",
+    "email": "parent.1066@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-06"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94923 59402",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-8A-07",
+    "name": "V. Vasanthi",
+    "email": "parent.1067@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-07"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 99897 12402",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-8A-08",
+    "name": "G. Thangavel",
+    "email": "parent.1068@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-08"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 98633 11451",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-8A-09",
+    "name": "T. Shanthi",
+    "email": "parent.1069@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-09"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 94854 66061",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-8A-10",
+    "name": "A. Devi",
+    "email": "parent@school.edu",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-10"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 99529 95113",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-8A-11",
+    "name": "N. Lakshmi",
+    "email": "parent.1071@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-11"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 98694 67989",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-8A-12",
+    "name": "R. Murugan",
+    "email": "parent.1072@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-12"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 95670 14908",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-8A-13",
+    "name": "K. Kalaivani",
+    "email": "parent.1073@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-13"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 99093 39865",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-8A-14",
+    "name": "S. Selvam",
+    "email": "parent.1074@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-14"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95905 44612",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-8A-15",
+    "name": "M. Devi",
+    "email": "parent.1075@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-15"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 97438 43447",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-8A-16",
+    "name": "P. Palanisamy",
+    "email": "parent.1076@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-16"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 97425 23000",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-8A-17",
+    "name": "V. Vasanthi",
+    "email": "parent.1077@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-17"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 97032 56792",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-8A-18",
+    "name": "G. Thangavel",
+    "email": "parent.1078@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-18"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 98510 74171",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-8A-19",
+    "name": "T. Shanthi",
+    "email": "parent.1079@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-19"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 98761 91381",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-8A-20",
+    "name": "A. Natarajan",
+    "email": "parent.1080@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-20"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 95634 83069",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-8A-21",
+    "name": "N. Lakshmi",
+    "email": "parent.1081@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-21"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 94789 42269",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-8A-22",
+    "name": "R. Murugan",
+    "email": "parent.1082@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-22"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 95238 15376",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-8A-23",
+    "name": "K. Kalaivani",
+    "email": "parent.1083@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-23"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 94966 43750",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-8A-24",
+    "name": "S. Selvam",
+    "email": "parent.1084@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-24"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 98066 93620",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-8A-25",
+    "name": "M. Devi",
+    "email": "parent.1085@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-25"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 95904 13082",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-8A-26",
+    "name": "P. Palanisamy",
+    "email": "parent.1086@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-26"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94545 65752",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-8A-27",
+    "name": "V. Vasanthi",
+    "email": "parent.1087@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-27"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95614 22387",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-8A-28",
+    "name": "G. Thangavel",
+    "email": "parent.1088@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-28"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 95734 20755",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-8A-29",
+    "name": "T. Shanthi",
+    "email": "parent.1089@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-29"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 95929 96815",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-8A-30",
+    "name": "A. Natarajan",
+    "email": "parent.1090@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8A-30"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 97555 69710",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "par-8B-01",
+    "name": "N. Lakshmi",
+    "email": "parent.1091@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-01"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 96531 39766",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-8B-02",
+    "name": "R. Murugan",
+    "email": "parent.1092@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-02"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 99789 97647",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-8B-03",
+    "name": "K. Kalaivani",
+    "email": "parent.1093@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-03"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 98141 20857",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-8B-04",
+    "name": "S. Selvam",
+    "email": "parent.1094@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-04"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 98738 35108",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-8B-05",
+    "name": "M. Devi",
+    "email": "parent.1095@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-05"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 94444 70673",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-8B-06",
+    "name": "P. Palanisamy",
+    "email": "parent.1096@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-06"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94434 75847",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-8B-07",
+    "name": "V. Vasanthi",
+    "email": "parent.1097@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-07"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95746 92782",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-8B-08",
+    "name": "G. Thangavel",
+    "email": "parent.1098@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-08"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96854 66922",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-8B-09",
+    "name": "T. Shanthi",
+    "email": "parent.1099@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-09"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 97080 84211",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-8B-10",
+    "name": "A. Natarajan",
+    "email": "parent.1100@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-10"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 99187 71456",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-8B-11",
+    "name": "N. Lakshmi",
+    "email": "parent.1101@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-11"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 96886 83738",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-8B-12",
+    "name": "R. Murugan",
+    "email": "parent.1102@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-12"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 96761 20346",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-8B-13",
+    "name": "K. Kalaivani",
+    "email": "parent.1103@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-13"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 98864 50963",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-8B-14",
+    "name": "S. Selvam",
+    "email": "parent.1104@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-14"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95894 35643",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-8B-15",
+    "name": "M. Devi",
+    "email": "parent.1105@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-15"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 96408 58232",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-8B-16",
+    "name": "P. Palanisamy",
+    "email": "parent.1106@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-16"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 97352 27915",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-8B-17",
+    "name": "V. Vasanthi",
+    "email": "parent.1107@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-17"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95585 27655",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-8B-18",
+    "name": "G. Thangavel",
+    "email": "parent.1108@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-18"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94057 51527",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-8B-19",
+    "name": "T. Shanthi",
+    "email": "parent.1109@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-19"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 94593 11005",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-8B-20",
+    "name": "A. Natarajan",
+    "email": "parent.1110@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-20"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 96279 23031",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-8B-21",
+    "name": "N. Lakshmi",
+    "email": "parent.1111@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-21"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 97809 54804",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-8B-22",
+    "name": "R. Murugan",
+    "email": "parent.1112@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-22"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 95250 36904",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-8B-23",
+    "name": "K. Kalaivani",
+    "email": "parent.1113@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-23"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 95151 12740",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-8B-24",
+    "name": "S. Selvam",
+    "email": "parent.1114@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-24"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 97176 82335",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-8B-25",
+    "name": "M. Devi",
+    "email": "parent.1115@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-25"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 98087 49953",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-8B-26",
+    "name": "P. Palanisamy",
+    "email": "parent.1116@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-26"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94526 79846",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-8B-27",
+    "name": "V. Vasanthi",
+    "email": "parent.1117@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-27"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95711 58740",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-8B-28",
+    "name": "G. Thangavel",
+    "email": "parent.1118@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-28"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94328 13120",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-8B-29",
+    "name": "T. Shanthi",
+    "email": "parent.1119@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-29"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 95744 37443",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-8B-30",
+    "name": "A. Natarajan",
+    "email": "parent.1120@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-8B-30"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 95525 23467",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "par-9A-01",
+    "name": "R. Saroja",
+    "email": "parent.1121@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-01"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 94586 57738",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-9A-02",
+    "name": "K. Rajendran",
+    "email": "parent.1122@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-02"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 94119 60780",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-9A-03",
+    "name": "S. Rajeswari",
+    "email": "parent.1123@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-03"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 94142 51858",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-9A-04",
+    "name": "M. Kumaresan",
+    "email": "parent.1124@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-04"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 96428 86994",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-9A-05",
+    "name": "P. Pushpa",
+    "email": "parent.1125@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-05"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 97367 37701",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-9A-06",
+    "name": "V. Ganesan",
+    "email": "parent.1126@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-06"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 94041 62623",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-9A-07",
+    "name": "G. Amudha",
+    "email": "parent.1127@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-07"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96086 35813",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-9A-08",
+    "name": "T. Arumugam",
+    "email": "parent.1128@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-08"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 97482 49724",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-9A-09",
+    "name": "A. Malathi",
+    "email": "parent.1129@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-09"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 99427 64941",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-9A-10",
+    "name": "N. Velmurugan",
+    "email": "parent.1130@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-10"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 97514 76141",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-9A-11",
+    "name": "R. Saroja",
+    "email": "parent.1131@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-11"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 94437 72977",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-9A-12",
+    "name": "K. Rajendran",
+    "email": "parent.1132@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-12"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 99447 47476",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-9A-13",
+    "name": "S. Rajeswari",
+    "email": "parent.1133@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-13"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 98842 18780",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-9A-14",
+    "name": "M. Kumaresan",
+    "email": "parent.1134@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-14"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 96688 91067",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-9A-15",
+    "name": "P. Pushpa",
+    "email": "parent.1135@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-15"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94784 23976",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-9A-16",
+    "name": "V. Ganesan",
+    "email": "parent.1136@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-16"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95253 95933",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-9A-17",
+    "name": "G. Amudha",
+    "email": "parent.1137@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-17"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94720 44296",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-9A-18",
+    "name": "T. Arumugam",
+    "email": "parent.1138@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-18"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 99123 42863",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-9A-19",
+    "name": "A. Malathi",
+    "email": "parent.1139@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-19"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 96537 17475",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-9A-20",
+    "name": "N. Velmurugan",
+    "email": "parent.1140@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-20"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 99910 90760",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-9A-21",
+    "name": "R. Saroja",
+    "email": "parent.1141@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-21"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 97084 71438",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-9A-22",
+    "name": "K. Rajendran",
+    "email": "parent.1142@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-22"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 99488 39071",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-9A-23",
+    "name": "S. Rajeswari",
+    "email": "parent.1143@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-23"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 98218 11196",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-9A-24",
+    "name": "M. Kumaresan",
+    "email": "parent.1144@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-24"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 96482 18642",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-9A-25",
+    "name": "P. Pushpa",
+    "email": "parent.1145@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-25"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94359 28900",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-9A-26",
+    "name": "V. Ganesan",
+    "email": "parent.1146@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-26"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 99876 66210",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-9A-27",
+    "name": "G. Amudha",
+    "email": "parent.1147@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-27"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94601 80091",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-9A-28",
+    "name": "T. Arumugam",
+    "email": "parent.1148@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-28"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 97431 95714",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-9A-29",
+    "name": "A. Malathi",
+    "email": "parent.1149@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-29"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 94274 19498",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-9A-30",
+    "name": "N. Velmurugan",
+    "email": "parent.1150@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-9A-30"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 96188 24398",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  },
+  {
+    "id": "par-10A-01",
+    "name": "K. Vasanthi",
+    "email": "parent.1151@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-01"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 94346 40373",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 209
+  },
+  {
+    "id": "par-10A-02",
+    "name": "S. Selvam",
+    "email": "parent.1152@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-02"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 98368 59362",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 238
+  },
+  {
+    "id": "par-10A-03",
+    "name": "M. Shanthi",
+    "email": "parent.1153@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-03"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 98085 89014",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 267
+  },
+  {
+    "id": "par-10A-04",
+    "name": "P. Palanisamy",
+    "email": "parent.1154@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-04"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 94054 75205",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 296
+  },
+  {
+    "id": "par-10A-05",
+    "name": "V. Lakshmi",
+    "email": "parent.1155@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-05"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 97390 37123",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 325
+  },
+  {
+    "id": "par-10A-06",
+    "name": "G. Thangavel",
+    "email": "parent.1156@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-06"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 94147 83693",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 354
+  },
+  {
+    "id": "par-10A-07",
+    "name": "T. Kalaivani",
+    "email": "parent.1157@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-07"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 98610 14495",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 23
+  },
+  {
+    "id": "par-10A-08",
+    "name": "A. Natarajan",
+    "email": "parent.1158@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-08"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 95914 68312",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 52
+  },
+  {
+    "id": "par-10A-09",
+    "name": "N. Devi",
+    "email": "parent.1159@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-09"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 95262 18182",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 81
+  },
+  {
+    "id": "par-10A-10",
+    "name": "R. Murugan",
+    "email": "parent.1160@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-10"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 98915 55501",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 110
+  },
+  {
+    "id": "par-10A-11",
+    "name": "K. Vasanthi",
+    "email": "parent.1161@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-11"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 98409 12187",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 139
+  },
+  {
+    "id": "par-10A-12",
+    "name": "S. Selvam",
+    "email": "parent.1162@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-12"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 95595 42767",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 168
+  },
+  {
+    "id": "par-10A-13",
+    "name": "M. Shanthi",
+    "email": "parent.1163@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-13"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 97767 67328",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 197
+  },
+  {
+    "id": "par-10A-14",
+    "name": "P. Palanisamy",
+    "email": "parent.1164@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-14"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 95899 75821",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 226
+  },
+  {
+    "id": "par-10A-15",
+    "name": "V. Lakshmi",
+    "email": "parent.1165@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-15"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 95084 11861",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 255
+  },
+  {
+    "id": "par-10A-16",
+    "name": "G. Thangavel",
+    "email": "parent.1166@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-16"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96761 70258",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 284
+  },
+  {
+    "id": "par-10A-17",
+    "name": "T. Kalaivani",
+    "email": "parent.1167@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-17"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 96752 47746",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 313
+  },
+  {
+    "id": "par-10A-18",
+    "name": "A. Natarajan",
+    "email": "parent.1168@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-18"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 96710 81523",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 342
+  },
+  {
+    "id": "par-10A-19",
+    "name": "N. Devi",
+    "email": "parent.1169@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-19"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 98747 93187",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 11
+  },
+  {
+    "id": "par-10A-20",
+    "name": "R. Murugan",
+    "email": "parent.1170@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-20"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 96043 74187",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 40
+  },
+  {
+    "id": "par-10A-21",
+    "name": "K. Vasanthi",
+    "email": "parent.1171@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-21"
+    ],
+    "occupation": "Textile business",
+    "phone": "+91 94285 18567",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 69
+  },
+  {
+    "id": "par-10A-22",
+    "name": "S. Selvam",
+    "email": "parent.1172@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-22"
+    ],
+    "occupation": "Auto driver",
+    "phone": "+91 99090 76979",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 98
+  },
+  {
+    "id": "par-10A-23",
+    "name": "M. Shanthi",
+    "email": "parent.1173@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-23"
+    ],
+    "occupation": "Teacher",
+    "phone": "+91 95096 29270",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 127
+  },
+  {
+    "id": "par-10A-24",
+    "name": "P. Palanisamy",
+    "email": "parent.1174@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-24"
+    ],
+    "occupation": "Shop owner",
+    "phone": "+91 95109 57662",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 156
+  },
+  {
+    "id": "par-10A-25",
+    "name": "V. Lakshmi",
+    "email": "parent.1175@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-25"
+    ],
+    "occupation": "Mechanic",
+    "phone": "+91 97051 60828",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 185
+  },
+  {
+    "id": "par-10A-26",
+    "name": "G. Thangavel",
+    "email": "parent.1176@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-26"
+    ],
+    "occupation": "Nurse",
+    "phone": "+91 96279 58370",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 214
+  },
+  {
+    "id": "par-10A-27",
+    "name": "T. Kalaivani",
+    "email": "parent.1177@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-27"
+    ],
+    "occupation": "Tailor",
+    "phone": "+91 95019 62643",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 243
+  },
+  {
+    "id": "par-10A-28",
+    "name": "A. Natarajan",
+    "email": "parent.1178@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-28"
+    ],
+    "occupation": "Software engineer",
+    "phone": "+91 94064 66410",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 272
+  },
+  {
+    "id": "par-10A-29",
+    "name": "N. Devi",
+    "email": "parent.1179@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-29"
+    ],
+    "occupation": "Government employee",
+    "phone": "+91 97162 19514",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 301
+  },
+  {
+    "id": "par-10A-30",
+    "name": "R. Murugan",
+    "email": "parent.1180@gmail.com",
+    "password": "Parent@123",
+    "role": "parent",
+    "childIds": [
+      "stu-10A-30"
+    ],
+    "occupation": "Farmer",
+    "phone": "+91 94371 43843",
+    "status": "active",
+    "joinedOn": "2026-06-05",
+    "avatarHue": 330
+  }
+]
