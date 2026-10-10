@@ -142,7 +142,10 @@ export default function Login() {
             </span>
             <span className="min-w-0">
               <span className="block text-[15px] font-semibold text-ink">{school.shortName}</span>
-              <span className="block text-[12px] text-ink-3">{school.tagline}</span>
+              <span className="block text-[12px] text-ink-3">
+                {school.tagline}
+                <span className="ml-1.5 opacity-70">· {school.taglineEn}</span>
+              </span>
             </span>
           </div>
 

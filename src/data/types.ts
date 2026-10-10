@@ -15,7 +15,10 @@ export interface School {
   id: string;
   name: string;
   shortName: string;
+  /** School motto, in Tamil. */
   tagline: string;
+  /** The same motto in English, shown alongside. */
+  taglineEn: string;
   board: string;
   address: string;
   phone: string;
