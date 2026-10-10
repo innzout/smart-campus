@@ -37,6 +37,7 @@ import { Modal } from '@/components/ui/Modal';
 import { DataTable, type Column } from '@/components/ui/Table';
 import { Avatar, EmptyState, PageHeader, Progress } from '@/components/ui/misc';
 import { BarList } from '@/components/charts/Charts';
+import { CollectFeeDialog } from '@/components/CollectFeeDialog';
 import { DonutChart } from '@/components/charts/RingChart';
 import { Legend } from '@/components/charts/ChartKit';
 import { cn, formatDate, money, moneyCompact, num, pct, relativeDay } from '@/lib/utils';
@@ -337,6 +338,8 @@ function ChildFees({ student }: { student: User }) {
 
 function OfficeFees() {
   const db = useDatabase();
+  const can = useCan();
+  const [collecting, setCollecting] = useState<User | null>(null);
   const totals = collectionSummary(db);
   const list = defaulters(db);
 
@@ -391,6 +394,17 @@ function OfficeFees() {
       align: 'right',
       sortBy: (r) => r.overdue,
       cell: (r) => <StatusPill status={r.overdue > 0 ? 'due' : r.pending > 0 ? 'partial' : 'paid'} />,
+    },
+    {
+      key: 'collect',
+      header: '',
+      align: 'right',
+      cell: (r) =>
+        can('fee.collect') && r.pending > 0 ? (
+          <Button size="sm" onClick={() => setCollecting(r.student)}>
+            Collect
+          </Button>
+        ) : null,
     },
   ];
 
@@ -454,11 +468,16 @@ function OfficeFees() {
       </MotionCard>
 
       <MotionCard delay={0.24} className="mt-5">
-        <CardHeader title="Student ledger" subtitle="Sort by outstanding to prioritise" />
+        <CardHeader
+          title="Student ledger"
+          subtitle={can('fee.collect') ? 'Sort by outstanding, then collect at the counter' : 'Sort by outstanding to prioritise'}
+        />
         <CardBody className="pt-4">
           <DataTable columns={columns} rows={rows} initialSort={{ key: 'pending', dir: 'desc' }} />
         </CardBody>
       </MotionCard>
+
+      {collecting ? <CollectFeeDialog student={collecting} onClose={() => setCollecting(null)} /> : null}
     </>
   );
 }

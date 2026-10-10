@@ -64,6 +64,11 @@ pass with its pass number. *"Parents book, the office approves, the gate checks 
 overdue, and how many to follow up. 8-B flagged red for attendance. Outstanding by
 class shows where to chase. *"This is your Monday morning."*
 
+**8 · Fees → Student ledger → Collect.** A parent pays cash at the office: pick the
+head, take the money, receipt issued, parent notified in the app. *"Your clerk
+never writes a manual receipt again."* This is the one admin feature a
+correspondent will test themselves.
+
 ## What to say when asked
 
 **"Does it work without internet?"** This prototype does. The real product syncs to
