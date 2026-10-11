@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "description": "Smart Campus — a school ERP for Tamil Nadu matriculation schools, running entirely in the browser on a JSON database.",
   "scripts": {
     "dev": "vite",
