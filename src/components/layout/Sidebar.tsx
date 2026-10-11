@@ -55,7 +55,7 @@ function SidebarContent({ user, onNavigate }: { user: AuthUser; onNavigate?: () 
           return (
             <div key={group} className="mb-5">
               <p className="mb-1.5 px-3 text-[10.5px] font-semibold tracking-[0.08em] text-ink-3 uppercase">
-                {groupLabel(group, user.role)}
+                {groupLabel(group, user.roles)}
               </p>
               <ul className="space-y-0.5">
                 {groupItems.map(({ to, label, icon: Icon }) => (
@@ -114,7 +114,7 @@ function SidebarContent({ user, onNavigate }: { user: AuthUser; onNavigate?: () 
           <span className="min-w-0 leading-tight">
             <span className="block truncate text-[13px] font-semibold text-ink">{user.name}</span>
             <span className="block truncate text-[11.5px] text-ink-3 capitalize">
-              {user.rollNo ?? user.employeeId ?? user.role}
+              {user.rollNo ?? user.employeeId ?? user.roleName}
             </span>
           </span>
         </div>

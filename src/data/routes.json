@@ -1,10 +1,9 @@
 [
   {
     "id": "rt-1",
+    "schoolId": "sch-1",
     "name": "Route 1 — Gandhipuram",
-    "busNo": "TN 38 AX 1204",
-    "driverName": "R. Murugesan",
-    "driverPhone": "+91 99445 21001",
+    "vehicleId": "veh-1",
     "fee": 9000,
     "stops": [
       {
@@ -27,10 +26,9 @@
   },
   {
     "id": "rt-2",
+    "schoolId": "sch-1",
     "name": "Route 2 — Peelamedu",
-    "busNo": "TN 38 AX 1205",
-    "driverName": "K. Chinnasamy",
-    "driverPhone": "+91 99445 21002",
+    "vehicleId": "veh-2",
     "fee": 9000,
     "stops": [
       {
@@ -53,10 +51,9 @@
   },
   {
     "id": "rt-3",
+    "schoolId": "sch-1",
     "name": "Route 3 — Saravanampatti",
-    "busNo": "TN 38 AX 1206",
-    "driverName": "S. Velmurugan",
-    "driverPhone": "+91 99445 21003",
+    "vehicleId": "veh-3",
     "fee": 7500,
     "stops": [
       {
@@ -79,10 +76,9 @@
   },
   {
     "id": "rt-4",
+    "schoolId": "sch-1",
     "name": "Route 4 — R.S. Puram",
-    "busNo": "TN 38 AX 1207",
-    "driverName": "M. Palanivel",
-    "driverPhone": "+91 99445 21004",
+    "vehicleId": "veh-4",
     "fee": 10500,
     "stops": [
       {
@@ -100,6 +96,31 @@
       {
         "name": "Puliakulam",
         "time": "07:36"
+      }
+    ]
+  },
+  {
+    "id": "rt-m1",
+    "schoolId": "sch-2",
+    "name": "Route 1 — Annur Road",
+    "vehicleId": "veh-m1",
+    "fee": 6000,
+    "stops": [
+      {
+        "name": "Annur Road Junction",
+        "time": "07:00"
+      },
+      {
+        "name": "Sirumugai Road",
+        "time": "07:10"
+      },
+      {
+        "name": "Karamadai Bypass",
+        "time": "07:20"
+      },
+      {
+        "name": "Mettupalayam Bus Stand",
+        "time": "07:30"
       }
     ]
   }

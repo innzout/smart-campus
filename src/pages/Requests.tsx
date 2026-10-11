@@ -55,7 +55,11 @@ export default function Requests() {
     defaultValues: { title: '', category: 'Leave', description: '' },
   });
 
-  const scope = isStaff ? allRequests(db) : requestsFor(db, user.id);
+  const scope = isStaff
+    ? allRequests(db)
+    : can('request.view.self')
+      ? requestsFor(db, user.id)
+      : [];
   const list = scope.filter((r) => filter === 'all' || r.status === filter);
 
   return (

@@ -17,6 +17,8 @@ import { Modal } from '@/components/ui/Modal';
 import { DataTable, type Column } from '@/components/ui/Table';
 import { Avatar, EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
 import { ATTENDANCE_THRESHOLD, cn, money, num, pct, todayISO } from '@/lib/utils';
+import { primaryRole, roleName } from '@/services/auth.service';
+import { DESIGNATION_LABEL } from '@/data/types';
 import type { User } from '@/data/types';
 
 const schema = z.object({
@@ -41,6 +43,9 @@ export default function People() {
   const can = useCan();
 
   const [tab, setTab] = useState<'students' | 'staff'>('students');
+  // Seeing the staff register is a separate matter from seeing the children —
+  // a librarian has business with one and not the other.
+  const canSeeStaff = can('staff.view');
   const [classId, setClassId] = useState<'all' | string>('all');
   const [query, setQuery] = useState('');
   const [admitOpen, setAdmitOpen] = useState(false);
@@ -60,7 +65,7 @@ export default function People() {
   const students = useMemo(() => {
     const q = query.trim().toLowerCase();
     return db.users
-      .filter((u) => u.role === 'student')
+      .filter((u) => u.roles.includes('student'))
       .filter((u) => (classId === 'all' ? true : u.classId === classId))
       .filter(
         (u) =>
@@ -74,7 +79,7 @@ export default function People() {
   const staff = useMemo(() => {
     const q = query.trim().toLowerCase();
     return db.users
-      .filter((u) => !['student', 'parent'].includes(u.role))
+      .filter((u) => !!u.employeeId)
       .filter((u) => !q || u.name.toLowerCase().includes(q) || (u.employeeId ?? '').toLowerCase().includes(q));
   }, [db.users, query]);
 
@@ -144,7 +149,37 @@ export default function People() {
       ),
     },
     { key: 'employeeId', header: 'Employee ID', hideOnMobile: true, sortBy: (u) => u.employeeId ?? '', cell: (u) => <span className="tnum">{u.employeeId}</span> },
-    { key: 'designation', header: 'Designation', sortBy: (u) => u.designation ?? '', cell: (u) => u.designation ?? '—' },
+    {
+      key: 'designation',
+      header: 'Designation',
+      sortBy: (u) => u.designation ?? '',
+      cell: (u) => (
+        <span>
+          <span className="block text-[13px] text-ink">
+            {u.designation ? DESIGNATION_LABEL[u.designation] : '—'}
+          </span>
+          {u.qualification ? (
+            <span className="block text-[11.5px] text-ink-3">{u.qualification}</span>
+          ) : null}
+        </span>
+      ),
+    },
+    {
+      // Designation is what they are employed as; roles are what they may do,
+      // and in a school this size one person routinely holds several.
+      key: 'roles',
+      header: 'Roles',
+      hideOnMobile: true,
+      cell: (u) => (
+        <span className="flex flex-wrap gap-1">
+          {u.roles.map((r) => (
+            <Badge key={r} tone={r === primaryRole(u.roles) ? 'brand' : 'neutral'}>
+              {roleName(r)}
+            </Badge>
+          ))}
+        </span>
+      ),
+    },
     {
       key: 'classTeacher',
       header: 'Class teacher of',
@@ -176,7 +211,7 @@ export default function People() {
     },
   ];
 
-  const allStudents = db.users.filter((u) => u.role === 'student');
+  const allStudents = db.users.filter((u) => u.roles.includes('student'));
 
   return (
     <>
@@ -194,8 +229,8 @@ export default function People() {
 
       <StatGrid>
         <StatTile label="Students on roll" value={num(allStudents.length)} note={`Across ${db.classes.length} classes`} icon={Users} />
-        <StatTile label="Teaching staff" value={num(db.users.filter((u) => u.role === 'teacher').length)} note="Class and subject teachers" icon={GraduationCap} delay={0.06} />
-        <StatTile label="Parent accounts" value={num(db.users.filter((u) => u.role === 'parent').length)} note="Using the mobile app" icon={UserCheck} tone="good" delay={0.12} />
+        <StatTile label="Teaching staff" value={num(db.users.filter((u) => u.roles.includes('subject-teacher') || u.roles.includes('class-teacher')).length)} note="Class and subject teachers" icon={GraduationCap} delay={0.06} />
+        <StatTile label="Parent accounts" value={num(db.users.filter((u) => u.roles.includes('parent')).length)} note="Using the mobile app" icon={UserCheck} tone="good" delay={0.12} />
         <StatTile label="Inactive" value={num(db.users.filter((u) => u.status === 'inactive').length)} note="Cannot sign in" icon={UserX} tone={db.users.some((u) => u.status === 'inactive') ? 'warning' : 'good'} delay={0.18} />
       </StatGrid>
 
@@ -219,7 +254,7 @@ export default function People() {
                 onChange={setTab}
                 options={[
                   { value: 'students', label: 'Students' },
-                  { value: 'staff', label: 'Staff' },
+                  ...(canSeeStaff ? [{ value: 'staff' as const, label: 'Staff' }] : []),
                 ]}
               />
             </div>

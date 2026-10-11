@@ -14,7 +14,7 @@ import {
   Sun,
   User as UserIcon,
 } from 'lucide-react';
-import { useAuth, useCurrentUser } from '@/app/auth';
+import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useTheme, type ThemePref } from '@/app/theme';
 import { resetDatabase, useDatabase } from '@/lib/store';
 import { updateUser } from '@/lib/actions';
@@ -24,6 +24,9 @@ import { Button } from '@/components/ui/Button';
 import { Field, Input } from '@/components/ui/Field';
 import { Modal } from '@/components/ui/Modal';
 import { Avatar, PageHeader } from '@/components/ui/misc';
+import { Badge } from '@/components/ui/Badge';
+import { primaryRole, roleName } from '@/services/auth.service';
+import { DESIGNATION_LABEL } from '@/data/types';
 import { cn, formatDate, num } from '@/lib/utils';
 
 const profileSchema = z.object({
@@ -61,13 +64,14 @@ function strengthOf(value: string) {
 
 export default function Settings() {
   const user = useCurrentUser();
+  const can = useCan();
   const { logout, setActiveChild } = useAuth();
   const { preference, setPreference, resolved } = useTheme();
   const db = useDatabase();
   const school = theSchool(db);
   const [resetOpen, setResetOpen] = useState(false);
 
-  const children = user.role === 'parent' ? childrenOf(db, user) : [];
+  const children = user.roles.includes('parent') ? childrenOf(db, user) : [];
 
   const profileForm = useForm<z.infer<typeof profileSchema>>({
     resolver: zodResolver(profileSchema),
@@ -100,10 +104,21 @@ export default function Settings() {
                 <div className="min-w-0">
                   <p className="truncate text-[15px] font-semibold text-ink">{user.name}</p>
                   <p className="mt-0.5 truncate text-[12.5px] text-ink-3">
-                    {user.roleName}
+                    {user.designation ? DESIGNATION_LABEL[user.designation] : user.roleName}
                     {user.employeeId ? ` · ${user.employeeId}` : ''}
                     {user.admissionNo ? ` · ${user.admissionNo}` : ''}
                   </p>
+                  {/* Every role, not only the senior one — someone who is both
+                      Accounts and Payroll Officer should see both. */}
+                  {user.roles.length > 1 ? (
+                    <span className="mt-1.5 flex flex-wrap gap-1">
+                      {user.roles.map((r) => (
+                        <Badge key={r} tone={r === primaryRole(user.roles) ? 'brand' : 'neutral'}>
+                          {roleName(r)}
+                        </Badge>
+                      ))}
+                    </span>
+                  ) : null}
                   <p className="mt-0.5 text-[11.5px] text-ink-3">Joined {formatDate(user.joinedOn)}</p>
                 </div>
               </div>
@@ -325,9 +340,17 @@ export default function Settings() {
                 >
                   Export data
                 </Button>
-                <Button variant="outline" icon={<RotateCcw className="size-4" />} onClick={() => setResetOpen(true)}>
-                  Reset demo
-                </Button>
+                {/* Wiping the school's data back to the seed is not something
+                    every account should be able to do. */}
+                {can('settings.manage') ? (
+                  <Button
+                    variant="outline"
+                    icon={<RotateCcw className="size-4" />}
+                    onClick={() => setResetOpen(true)}
+                  >
+                    Reset demo
+                  </Button>
+                ) : null}
               </div>
             </CardBody>
           </MotionCard>

@@ -1,5 +1,455 @@
 [
   {
+    "id": "ms-cls-1A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-1A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-s1",
+    "classId": "cls-1A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-2A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-s2",
+    "classId": "cls-2A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-3A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-s3",
+    "classId": "cls-3A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-4A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-s4",
+    "classId": "cls-4A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-5A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-s5",
+    "classId": "cls-5A",
+    "capacity": 3
+  },
+  {
     "id": "ms-cls-6A-1",
     "date": "2026-10-14",
     "start": "09:30",
@@ -537,6 +987,366 @@
     "end": "12:30",
     "teacherId": "usr-t4",
     "classId": "cls-10A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-p2",
+    "classId": "cls-11A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-11B-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-p7",
+    "classId": "cls-11B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12A-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-p3",
+    "classId": "cls-12A",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-1",
+    "date": "2026-10-14",
+    "start": "09:30",
+    "end": "09:45",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-2",
+    "date": "2026-10-14",
+    "start": "09:45",
+    "end": "10:00",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-3",
+    "date": "2026-10-14",
+    "start": "10:00",
+    "end": "10:15",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-4",
+    "date": "2026-10-14",
+    "start": "10:15",
+    "end": "10:30",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-5",
+    "date": "2026-10-14",
+    "start": "10:45",
+    "end": "11:00",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-6",
+    "date": "2026-10-14",
+    "start": "11:00",
+    "end": "11:15",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-7",
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "11:30",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-8",
+    "date": "2026-10-14",
+    "start": "11:30",
+    "end": "11:45",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-9",
+    "date": "2026-10-14",
+    "start": "12:00",
+    "end": "12:15",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
+    "capacity": 3
+  },
+  {
+    "id": "ms-cls-12B-10",
+    "date": "2026-10-14",
+    "start": "12:15",
+    "end": "12:30",
+    "teacherId": "usr-p8",
+    "classId": "cls-12B",
     "capacity": 3
   }
 ]

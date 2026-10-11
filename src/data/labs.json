@@ -1,0 +1,52 @@
+[
+  {
+    "id": "lab-physics",
+    "schoolId": "sch-1",
+    "name": "Physics Laboratory",
+    "kind": "physics",
+    "room": "Lab 1",
+    "capacity": 24,
+    "inChargeId": "usr-p2",
+    "assistantId": "usr-lab1"
+  },
+  {
+    "id": "lab-chemistry",
+    "schoolId": "sch-1",
+    "name": "Chemistry Laboratory",
+    "kind": "chemistry",
+    "room": "Lab 2",
+    "capacity": 24,
+    "inChargeId": "usr-p3",
+    "assistantId": "usr-lab2"
+  },
+  {
+    "id": "lab-botany",
+    "schoolId": "sch-1",
+    "name": "Botany Laboratory",
+    "kind": "botany",
+    "room": "Lab 3",
+    "capacity": 20,
+    "inChargeId": "usr-p5",
+    "assistantId": "usr-lab2"
+  },
+  {
+    "id": "lab-zoology",
+    "schoolId": "sch-1",
+    "name": "Zoology Laboratory",
+    "kind": "zoology",
+    "room": "Lab 4",
+    "capacity": 20,
+    "inChargeId": "usr-p4",
+    "assistantId": "usr-lab2"
+  },
+  {
+    "id": "lab-computer",
+    "schoolId": "sch-1",
+    "name": "Computer Laboratory",
+    "kind": "computer",
+    "room": "Lab 5",
+    "capacity": 30,
+    "inChargeId": "usr-p6",
+    "assistantId": "usr-lab1"
+  }
+]

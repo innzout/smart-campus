@@ -57,14 +57,17 @@ export function StatTile({
       )}
     >
       <div className="flex items-start justify-between gap-3">
-        <span className="text-[13px] font-medium text-ink-3">{label}</span>
+        <span className="min-w-0 text-[13px] font-medium text-ink-3">{label}</span>
         <span className={cn('grid size-9 shrink-0 place-items-center rounded-xl', TONE_ICON[tone])}>
           <Icon className="size-[18px]" />
         </span>
       </div>
 
-      <div className="mt-3 flex items-end gap-2">
-        <span className="text-[28px] leading-none font-semibold tracking-tight text-ink">
+      <div className="mt-3 flex flex-wrap items-end gap-x-2 gap-y-1">
+        {/* The card clips its overflow, so the figure must be free to shrink and
+            wrap. A whole-school money total at 28px is wider than a quarter of
+            the grid, and was being cut off at the card edge. */}
+        <span className="min-w-0 text-[24px] leading-none font-semibold tracking-tight break-words text-ink sm:text-[26px] xl:text-[28px]">
           {value}
         </span>
         {delta ? (
@@ -80,7 +83,7 @@ export function StatTile({
         ) : null}
       </div>
 
-      {note ? <p className="mt-2 text-[12.5px] text-ink-3">{note}</p> : null}
+      {note ? <p className="mt-2 text-[12.5px] break-words text-ink-3">{note}</p> : null}
       {delta ? (
         <p className="mt-1 text-[11.5px] text-ink-3">vs {delta.period}</p>
       ) : null}

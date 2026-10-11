@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hsc-g1",
+    "code": "G1",
+    "name": "Group 1 — Maths & Biology",
+    "description": "Keeps both engineering and medicine open.",
+    "subjectIds": [
+      "sub-mat3",
+      "sub-phy",
+      "sub-che",
+      "sub-bio"
+    ]
+  },
+  {
+    "id": "hsc-g2",
+    "code": "G2",
+    "name": "Group 2 — Maths & Computer Science",
+    "description": "Engineering and computing.",
+    "subjectIds": [
+      "sub-mat3",
+      "sub-phy",
+      "sub-che",
+      "sub-cshs"
+    ]
+  },
+  {
+    "id": "hsc-g3",
+    "code": "G3",
+    "name": "Group 3 — Pure Biology",
+    "description": "Botany and Zoology taken as separate subjects.",
+    "subjectIds": [
+      "sub-phy",
+      "sub-che",
+      "sub-bot",
+      "sub-zoo"
+    ]
+  },
+  {
+    "id": "hsc-g4",
+    "code": "G4",
+    "name": "Group 4 — Commerce",
+    "description": "Accountancy, Commerce, Economics and Business Maths.",
+    "subjectIds": [
+      "sub-acc",
+      "sub-com",
+      "sub-eco",
+      "sub-bma"
+    ]
+  },
+  {
+    "id": "hsc-g5",
+    "code": "G5",
+    "name": "Group 5 — Arts",
+    "description": "History, Economics, Commerce and Political Science.",
+    "subjectIds": [
+      "sub-his",
+      "sub-eco",
+      "sub-com",
+      "sub-pol"
+    ]
+  }
+]

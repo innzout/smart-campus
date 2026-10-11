@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sch-1",
+    "groupId": "grp-1",
+    "name": "Sri Vidya Mandir Matriculation Higher Secondary School",
+    "shortName": "Sri Vidya Mandir",
+    "code": "33124508",
+    "board": "Tamil Nadu State Board (Matriculation)",
+    "tagline": "அறிவே ஆற்றல்",
+    "taglineEn": "Knowledge is power",
+    "address": "Saravanampatti Main Road",
+    "city": "Coimbatore",
+    "phone": "+91 422 265 4400",
+    "email": "office@srividyamandir.edu.in",
+    "academicYear": "2026-27",
+    "currentTerm": 2,
+    "isMain": true,
+    "seededOn": "2026-10-11"
+  },
+  {
+    "id": "sch-2",
+    "groupId": "grp-1",
+    "name": "Sri Vidya Mandir Matriculation School, Mettupalayam",
+    "shortName": "Sri Vidya Mandir — Mettupalayam",
+    "code": "33124921",
+    "board": "Tamil Nadu State Board (Matriculation)",
+    "tagline": "அறிவே ஆற்றல்",
+    "taglineEn": "Knowledge is power",
+    "address": "Annur Road",
+    "city": "Mettupalayam",
+    "phone": "+91 4254 222 118",
+    "email": "mettupalayam@srividyamandir.edu.in",
+    "academicYear": "2026-27",
+    "currentTerm": 2,
+    "isMain": false,
+    "seededOn": "2026-10-11"
+  }
+]

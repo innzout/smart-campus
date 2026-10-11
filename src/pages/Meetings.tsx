@@ -65,6 +65,7 @@ function ParentMeetings({ student }: { student: User }) {
   const db = useDatabase();
   const [note, setNote] = useState('');
   const [choosing, setChoosing] = useState<MeetingSlot | null>(null);
+  const canBook = useCan()('meeting.book');
 
   const cls = classById(db, student.classId);
   const slots = db.meetingSlots.filter((s) => s.classId === student.classId);
@@ -137,7 +138,7 @@ function ParentMeetings({ student }: { student: User }) {
                   <button
                     key={slot.id}
                     disabled={full && !mine}
-                    onClick={() => setChoosing(slot)}
+                    onClick={() => (canBook ? setChoosing(slot) : undefined)}
                     className={cn(
                       'rounded-xl border px-3 py-3 text-left transition-colors disabled:cursor-not-allowed disabled:opacity-50',
                       mine
@@ -235,7 +236,7 @@ function StaffMeetings() {
   const can = useCan();
 
   const myClass = db.classes.find((c) => c.classTeacherId === user.id);
-  const [classId, setClassId] = useState(myClass?.id ?? db.classes[0]!.id);
+  const [classId, setClassId] = useState(myClass?.id ?? db.classes[0]?.id ?? '');
   const slots = db.meetingSlots.filter((s) => s.classId === classId);
   const [noting, setNoting] = useState<string | null>(null);
   const [note, setNote] = useState('');
@@ -269,7 +270,7 @@ function StaffMeetings() {
       <StatGrid>
         <StatTile label="Appointments" value={booked.length} note={`Across ${slots.length} slots`} icon={CalendarCheck} />
         <StatTile label="Slots free" value={slots.filter((s) => bookingsFor(s.id).length < s.capacity).length} note="Still bookable" icon={Clock} delay={0.06} />
-        <StatTile label="Parents yet to book" value={Math.max(0, db.users.filter((u) => u.role === 'student' && u.classId === classId).length - booked.length)} note="Consider a reminder circular" icon={Users} tone="warning" delay={0.12} />
+        <StatTile label="Parents yet to book" value={Math.max(0, db.users.filter((u) => u.roles.includes('student') && u.classId === classId).length - booked.length)} note="Consider a reminder circular" icon={Users} tone="warning" delay={0.12} />
         <StatTile label="Remarks recorded" value={db.meetingBookings.filter((b) => b.teacherNote).length} note="After the meeting" icon={MessageSquare} delay={0.18} />
       </StatGrid>
 
@@ -380,7 +381,7 @@ export default function Meetings() {
   const user = useCurrentUser();
   const { subject } = useAuth();
 
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) return <EmptyState icon={<Users className="size-6" />} title="No student linked to this account" />;
     return <ParentMeetings student={subject} />;
   }

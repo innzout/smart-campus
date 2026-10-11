@@ -3,14 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Smart Campus Companion — a frontend-only college campus portal running on a JSON mock database.",
+  "description": "Smart Campus — a school ERP for Tamil Nadu matriculation schools, running entirely in the browser on a JSON database.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "node scripts/seed.mjs && tsc --noEmit && vite build",
-    "seed": "node scripts/seed.mjs"
+    "vercel-build": "node scripts/seed.mjs && node scripts/check-data.mjs && tsc --noEmit && vite build",
+    "seed": "node scripts/seed.mjs && node scripts/check-data.mjs",
+    "check-data": "node scripts/check-data.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

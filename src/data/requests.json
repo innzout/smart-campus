@@ -40,8 +40,8 @@
   {
     "id": "req-3",
     "ref": "REQ/2026/103",
-    "raisedBy": "par-6A-05",
-    "aboutStudentId": "stu-6A-05",
+    "raisedBy": "par-1A-05",
+    "aboutStudentId": "stu-1A-05",
     "title": "Request to change bus stop",
     "category": "Transport",
     "description": "We have shifted house to Vilankurichi. Requesting a change of boarding point on Route 3.",
@@ -64,5 +64,16 @@
         "note": "Acknowledged by the school office."
       }
     ]
+  },
+  {
+    "id": "req-5",
+    "ref": "REQ/2026/105",
+    "raisedBy": "usr-p3",
+    "title": "Burette replacement for Chemistry lab",
+    "category": "Facility",
+    "description": "Six burettes are cracked and cannot be used for volumetric analysis. Requesting replacement before the practical examination.",
+    "status": "open",
+    "createdOn": "2026-10-07",
+    "updates": []
   }
 ]

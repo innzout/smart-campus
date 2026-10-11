@@ -118,6 +118,7 @@ function ParentVisits({ student }: { student: User }) {
     .sort((a, b) => b.date.localeCompare(a.date));
   const upcoming = mine.filter((v) => v.date >= todayISO() && v.status !== 'completed');
   const next = upcoming[upcoming.length - 1];
+  const canRequest = useCan()('visit.request');
 
   const {
     register,
@@ -136,9 +137,11 @@ function ParentVisits({ student }: { student: User }) {
         title="School Visits"
         subtitle="Request an appointment and carry your gate pass on your phone."
         action={
-          <Button onClick={() => setOpen(true)} icon={<Plus className="size-4" />}>
-            Request a visit
-          </Button>
+          canRequest ? (
+            <Button onClick={() => setOpen(true)} icon={<Plus className="size-4" />}>
+              Request a visit
+            </Button>
+          ) : null
         }
       />
 
@@ -196,7 +199,11 @@ function ParentVisits({ student }: { student: User }) {
               icon={<DoorOpen className="size-6" />}
               title="No visits yet"
               description="Request an appointment and your gate pass appears here."
-              action={<Button onClick={() => setOpen(true)}>Request a visit</Button>}
+              action={
+                canRequest ? (
+                  <Button onClick={() => setOpen(true)}>Request a visit</Button>
+                ) : null
+              }
             />
           ) : (
             <ul className="divide-y divide-line">
@@ -404,7 +411,7 @@ export default function Visits() {
   const { subject } = useAuth();
 
   if (can('visit.approve')) return <GateRegister />;
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) return <EmptyState icon={<DoorOpen className="size-6" />} title="No student linked to this account" />;
     return <ParentVisits student={subject} />;
   }

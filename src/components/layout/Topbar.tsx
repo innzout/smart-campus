@@ -1,16 +1,127 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { Bell, Menu, Monitor, Moon, Search, Sun } from 'lucide-react';
+import { Bell, Building2, Check, ChevronDown, Menu, Monitor, Moon, Search, Sun } from 'lucide-react';
 import { NAV } from '@/app/nav';
 import { useTheme, type ThemePref } from '@/app/theme';
-import { useSelector } from '@/lib/store';
+import { setActiveBranch, useActiveBranch, useWholeDatabase, useSelector } from '@/lib/store';
 import { notificationsFor, unreadCount } from '@/lib/queries';
 import { markAllNotificationsRead, markNotificationRead } from '@/lib/actions';
 import { Avatar, Segmented } from '@/components/ui/misc';
 import { Button } from '@/components/ui/Button';
 import { cn, relativeTime } from '@/lib/utils';
 import type { AuthUser } from '@/services/auth.service';
+
+/**
+ * Branch switcher.
+ *
+ * A trust with several schools wants one account that can move between them.
+ * Everyone else is pinned to their own school when they sign in, so for them
+ * this is a label rather than a control — which is the right answer: a teacher
+ * seeing a dropdown of other people's schools would be a bug, not a feature.
+ */
+function BranchSwitcher({ user }: { user: AuthUser }) {
+  const db = useWholeDatabase();
+  const activeId = useActiveBranch();
+  const [open, setOpen] = useState(false);
+
+  const active = db.schools.find((b) => b.id === activeId) ?? db.schools[0];
+  // Only the trust's own account may look at a branch that is not its own.
+  const canSwitch = user.permissions.includes('org.view') && db.schools.length > 1;
+
+  if (!active) return null;
+
+  if (!canSwitch) {
+    // One school, so name it rather than offering a choice.
+    return db.schools.length > 1 ? (
+      <span className="hidden items-center gap-2 rounded-xl border border-line bg-surface-2 px-3 py-1.5 lg:inline-flex">
+        <Building2 className="size-3.5 shrink-0 text-ink-3" aria-hidden />
+        <span className="max-w-[13rem] truncate text-[12.5px] font-medium text-ink-2">
+          {active.shortName}
+        </span>
+      </span>
+    ) : null;
+  }
+
+  return (
+    <div className="relative shrink-0">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className="flex items-center gap-2 rounded-xl border border-line bg-surface-2 px-3 py-1.5 transition-colors hover:border-line-strong"
+      >
+        <Building2 className="size-3.5 shrink-0 text-ink-3" aria-hidden />
+        <span className="max-w-[9rem] truncate text-[12.5px] font-medium text-ink sm:max-w-[13rem]">
+          {active.shortName}
+        </span>
+        <ChevronDown
+          className={cn('size-3.5 shrink-0 text-ink-3 transition-transform', open && 'rotate-180')}
+          aria-hidden
+        />
+      </button>
+
+      <AnimatePresence>
+        {open ? (
+          <>
+            <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+            <motion.ul
+              role="listbox"
+              aria-label="Branch"
+              initial={{ opacity: 0, y: -6, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -6, scale: 0.98 }}
+              transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute left-0 z-50 mt-2 w-[19rem] overflow-hidden rounded-2xl border border-line bg-surface shadow-pop"
+            >
+              <li className="border-b border-line px-4 py-2.5">
+                <p className="text-[11px] font-semibold tracking-wider text-ink-3 uppercase">
+                  {db.group[0]?.name ?? 'Branches'}
+                </p>
+              </li>
+              {db.schools.map((branch) => {
+                const onRoll = db.users.filter(
+                  (u) => u.schoolId === branch.id && u.roles.includes('student'),
+                ).length;
+                return (
+                  <li key={branch.id}>
+                    <button
+                      type="button"
+                      role="option"
+                      aria-selected={branch.id === activeId}
+                      onClick={() => {
+                        setActiveBranch(branch.id);
+                        setOpen(false);
+                      }}
+                      className={cn(
+                        'flex w-full items-start gap-3 px-4 py-3 text-left transition-colors hover:bg-surface-hover',
+                        branch.id === activeId && 'bg-brand-500/[0.07]',
+                      )}
+                    >
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[13px] font-semibold text-ink">
+                          {branch.shortName}
+                        </span>
+                        <span className="mt-0.5 block truncate text-[11.5px] text-ink-3">
+                          {branch.city} · {onRoll ? `${onRoll} on roll` : 'no students yet'}
+                          {branch.isMain ? ' · main campus' : ''}
+                        </span>
+                      </span>
+                      {branch.id === activeId ? (
+                        <Check className="mt-0.5 size-4 shrink-0 text-brand-600 dark:text-brand-300" aria-hidden />
+                      ) : null}
+                    </button>
+                  </li>
+                );
+              })}
+            </motion.ul>
+          </>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 function ThemeSwitch() {
   const { preference, setPreference } = useTheme();
@@ -149,9 +260,11 @@ export function Topbar({
           <Menu className="size-5" />
         </Button>
 
-        <p className="hidden truncate text-[15px] font-semibold text-ink lg:block">
+        <p className="hidden min-w-0 truncate text-[15px] font-semibold text-ink lg:block">
           {current?.label ?? 'Dashboard'}
         </p>
+
+        <BranchSwitcher user={user} />
 
         {/* The search button opens the command palette rather than being a live input. */}
         <button
@@ -177,7 +290,7 @@ export function Topbar({
             <span className="block max-w-[10rem] truncate text-[13px] font-semibold text-ink">
               {user.name}
             </span>
-            <span className="block text-[11px] text-ink-3 capitalize">{user.role}</span>
+            <span className="block text-[11px] text-ink-3">{user.roleName}</span>
           </span>
         </Link>
       </div>

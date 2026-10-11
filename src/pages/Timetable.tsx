@@ -1,12 +1,29 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { CalendarDays, Clock, MapPin, User as UserIcon } from 'lucide-react';
-import { useAuth, useCurrentUser } from '@/app/auth';
+import { CalendarDays, Clock, MapPin, Pencil, TriangleAlert, User as UserIcon } from 'lucide-react';
+import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { classById, classesForTeacher, teacherDay, timetableForClass } from '@/lib/queries';
+import {
+  allClashes,
+  classById,
+  classSubjectsOf,
+  classesByStage,
+  classesForTeacher,
+  periodBalance,
+  slotClash,
+  subjectById,
+  teacherDay,
+  timetableForClass,
+  userById,
+} from '@/lib/queries';
+import { createBlankWeek, setTimetableSlot } from '@/lib/actions';
+import { Button } from '@/components/ui/Button';
+import { useDatabase as useDb } from '@/lib/store';
+import { toast } from 'sonner';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
+import { Select } from '@/components/ui/Field';
 import { useNow } from '@/lib/clock';
 import { DAY_NAMES, DAY_SHORT, TEACHING_DAYS, cn, formatTime } from '@/lib/utils';
 
@@ -17,15 +34,33 @@ export default function Timetable() {
   const clock = useNow();
   const today = clock.getDay();
 
-  const isStaff = user.role !== 'parent' && user.role !== 'student';
+  const can = useCan();
+  const isStaff = !user.roles.includes('parent') && !user.roles.includes('student');
   const myClasses = isStaff ? classesForTeacher(db, user.id) : [];
 
+  /**
+   * Whose timetable you may look at. A teacher gets their own classes; anyone
+   * who can see the whole school gets every registered class, grouped by stage
+   * — with fifteen sections a row of buttons no longer fits, and a reader
+   * looking for 11-B should not have to scan a strip to find it.
+   */
+  const wholeSchool = can('attendance.view.school') || can('academic.view');
+  const stages = classesByStage(db);
+  const pickable = wholeSchool ? db.classes : myClasses;
+
   const [classId, setClassId] = useState(
-    subject?.classId ?? db.classes.find((c) => c.classTeacherId === user.id)?.id ?? myClasses[0]?.id ?? db.classes[0]!.id,
+    subject?.classId ??
+      db.classes.find((c) => c.classTeacherId === user.id)?.id ??
+      myClasses[0]?.id ??
+      db.classes[0]?.id ?? '',
   );
   // On a Sunday there is nothing to show, so open on Monday instead.
   const [day, setDay] = useState<number>(today === 0 ? 1 : today);
   const [view, setView] = useState<'day' | 'week'>('day');
+  const [editing, setEditing] = useState(false);
+  // Building the week is an academic-setup job, not something a subject teacher
+  // should be able to do to someone else's class.
+  const canEdit = can('academic.manage');
 
   const cls = classById(db, classId);
   const slotsFor = (d: number) => timetableForClass(db, classId, d);
@@ -43,8 +78,47 @@ export default function Timetable() {
         }
         action={
           <div className="flex flex-wrap gap-2">
-            {isStaff && myClasses.length > 1 ? (
-              <Segmented size="sm" value={classId} onChange={setClassId} options={myClasses.map((c) => ({ value: c.id, label: c.label }))} />
+            {isStaff && pickable.length > 1 ? (
+              wholeSchool ? (
+                <Select
+                  aria-label="Class"
+                  value={classId}
+                  onChange={(e) => setClassId(e.target.value)}
+                  className="h-9 min-w-[13rem] text-[13px]"
+                >
+                  {/* The teacher's own classes first — that is what they open
+                      this page for — then every other section by stage. */}
+                  {myClasses.length > 0 ? (
+                    <optgroup label="My classes">
+                      {myClasses.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          Class {c.label} · {c.room}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ) : null}
+                  {stages.map(({ stage, label, classes }) => {
+                    const rest = classes.filter((c) => !myClasses.some((m) => m.id === c.id));
+                    if (rest.length === 0) return null;
+                    return (
+                      <optgroup key={stage} label={label}>
+                        {rest.map((c) => (
+                          <option key={c.id} value={c.id}>
+                            Class {c.label} · {c.room}
+                          </option>
+                        ))}
+                      </optgroup>
+                    );
+                  })}
+                </Select>
+              ) : (
+                <Segmented
+                  size="sm"
+                  value={classId}
+                  onChange={setClassId}
+                  options={myClasses.map((c) => ({ value: c.id, label: c.label }))}
+                />
+              )
             ) : null}
             <Segmented
               value={view}
@@ -54,9 +128,21 @@ export default function Timetable() {
                 { value: 'week', label: 'Week' },
               ]}
             />
+            {canEdit && classId ? (
+              <Button
+                size="sm"
+                variant={editing ? 'primary' : 'secondary'}
+                icon={<Pencil className="size-3.5" />}
+                onClick={() => setEditing((e) => !e)}
+              >
+                {editing ? 'Done editing' : 'Edit periods'}
+              </Button>
+            ) : null}
           </div>
         }
       />
+
+      {editing && cls ? <PeriodScheduler classId={cls.id} /> : null}
 
       {view === 'day' ? (
         <>
@@ -201,5 +287,213 @@ export default function Timetable() {
         </MotionCard>
       )}
     </>
+  );
+}
+
+/* ── building the week ────────────────────────────────────────────────── */
+
+const SCHED_DAYS = [1, 2, 3, 4, 5, 6];
+
+/**
+ * The period scheduler.
+ *
+ * Assigning a teacher to a subject happens once, on Academic Setup. This screen
+ * is the other half: putting those subjects into the week. The teacher follows
+ * from the subject, so a cell asks only "what is taught here" — which is how a
+ * school actually builds a timetable, and keeps thirty-five cells from each
+ * needing two decisions.
+ *
+ * The part that earns its place is clash detection. Without it a double-booking
+ * is discovered on Monday morning, with two classes waiting for one person.
+ */
+function PeriodScheduler({ classId }: { classId: string }) {
+  const db = useDb();
+  const cls = classById(db, classId);
+  const offered = classSubjectsOf(db, classId);
+  const balance = periodBalance(db, classId);
+  const clashes = allClashes(db).filter((c) => c.classLabel === cls?.label);
+
+  // One row per period, so the week reads as a grid the way a notice board does.
+  const slots = db.timetable.filter((s) => s.classId === classId);
+  const periodNumbers = [...new Set(slots.map((s) => s.period))].sort((a, b) => a - b);
+
+  if (!cls) return null;
+
+  // A class can exist without a week laid out — one created before the app
+  // started doing that, or an import. The editor fills periods in, it does not
+  // invent them, so offer to lay the week out rather than showing empty rows.
+  if (periodNumbers.length === 0) {
+    return (
+      <MotionCard className="mb-5">
+        <CardHeader
+          title={`Build the week — ${cls.label}`}
+          subtitle="This class has no periods laid out yet"
+        />
+        <CardBody className="pt-4">
+          <EmptyState
+            icon={<CalendarDays className="size-6" />}
+            title="No week to edit yet"
+            description="Lay out the school day for this class — breaks and lunch fixed, lessons empty — and then choose what is taught in each period."
+            action={
+              <Button
+                onClick={() => {
+                  const made = createBlankWeek(cls.id);
+                  toast.success(`Week laid out for ${cls.label}`, {
+                    description: `${made} periods ready to fill in.`,
+                  });
+                }}
+              >
+                Lay out the week
+              </Button>
+            }
+          />
+        </CardBody>
+      </MotionCard>
+    );
+  }
+
+  return (
+    <MotionCard className="mb-5">
+      <CardHeader
+        title={`Build the week — ${cls.label}`}
+        subtitle="Choose what is taught in each period. The teacher comes from Academic Setup."
+      />
+      <CardBody className="pt-4">
+        {/* Periods a week against what the subject offering asks for. */}
+        <div className="mb-4 flex flex-wrap gap-1.5">
+          {balance.map(({ subject, want, got }) => (
+            <Badge
+              key={subject!.id}
+              tone={got === want ? 'good' : got > want ? 'warning' : 'critical'}
+            >
+              {subject!.name} {got}/{want}
+            </Badge>
+          ))}
+        </div>
+
+        {clashes.length > 0 ? (
+          <p className="mb-4 flex items-start gap-2.5 rounded-xl bg-[--color-critical]/10 px-4 py-3 text-[12.5px] text-ink-2">
+            <TriangleAlert className="mt-px size-4 shrink-0 text-[--color-critical]" aria-hidden />
+            <span>
+              <span className="font-semibold text-ink">
+                {clashes.length} double-booking{clashes.length === 1 ? '' : 's'}.
+              </span>{' '}
+              {clashes
+                .slice(0, 3)
+                .map((c) => `${c.teacherName} is also with ${c.other}`)
+                .join('; ')}
+              {clashes.length > 3 ? '…' : ''}
+            </span>
+          </p>
+        ) : null}
+
+        <div className="-mx-1 overflow-x-auto px-1">
+          <table className="w-full min-w-[46rem] border-separate border-spacing-1">
+            <thead>
+              <tr>
+                <th className="w-16 text-left text-[11px] font-semibold tracking-wider text-ink-3 uppercase">
+                  Period
+                </th>
+                {SCHED_DAYS.map((d) => (
+                  <th
+                    key={d}
+                    className="text-left text-[11px] font-semibold tracking-wider text-ink-3 uppercase"
+                  >
+                    {DAY_SHORT[d]}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {periodNumbers.map((period) => (
+                <tr key={period}>
+                  <td className="align-middle text-[12px] font-semibold text-ink-2 tnum">
+                    P{period}
+                  </td>
+                  {SCHED_DAYS.map((day) => {
+                    const slot = slots.find((x) => x.day === day && x.period === period);
+
+                    if (!slot) {
+                      return (
+                        <td key={day} className="rounded-lg bg-surface-2/50 px-2 py-2 text-center text-[11.5px] text-ink-3">
+                          —
+                        </td>
+                      );
+                    }
+
+                    // Breaks and lunch are fixed by the school day, not chosen.
+                    if (slot.kind === 'break' || slot.kind === 'lunch') {
+                      return (
+                        <td
+                          key={day}
+                          className="rounded-lg bg-surface-2 px-2 py-2 text-center text-[11.5px] text-ink-3"
+                        >
+                          {slot.title}
+                        </td>
+                      );
+                    }
+
+                    const clash = slotClash(db, slot.id);
+                    const teacher = userById(db, slot.teacherId ?? undefined);
+
+                    return (
+                      <td key={day} className="align-top">
+                        <Select
+                          aria-label={`${DAY_NAMES[day]} period ${period}`}
+                          value={slot.subjectId ?? ''}
+                          onChange={(e) => {
+                            setTimetableSlot({
+                              slotId: slot.id,
+                              subjectId: e.target.value || null,
+                            });
+                            const name = e.target.value
+                              ? (subjectById(db, e.target.value)?.name ?? 'Subject')
+                              : 'Free period';
+                            toast.success(`${DAY_SHORT[day]} P${period}: ${name}`);
+                          }}
+                          className={cn(
+                            'h-9 w-full text-[12.5px]',
+                            clash && 'ring-2 ring-[--color-critical]/50',
+                          )}
+                        >
+                          <option value="">Free period</option>
+                          {offered.map((cs) => {
+                            const sub = subjectById(db, cs.subjectId);
+                            return (
+                              <option key={cs.id} value={cs.subjectId}>
+                                {sub?.name}
+                                {sub?.hasPractical ? ' (practical)' : ''}
+                              </option>
+                            );
+                          })}
+                        </Select>
+
+                        {slot.subjectId ? (
+                          <p
+                            className={cn(
+                              'mt-1 truncate text-[11px]',
+                              clash ? 'font-medium text-[--color-critical]' : 'text-ink-3',
+                            )}
+                            title={clash ? `Also with ${clash.classLabel}` : teacher?.name}
+                          >
+                            {clash ? `Clash · also ${clash.classLabel}` : (teacher?.name ?? '—')}
+                          </p>
+                        ) : null}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mt-4 text-[11.5px] leading-relaxed text-ink-3">
+          A subject with no teacher against it on Academic Setup will leave the period unstaffed.
+          Placing a practical puts the class in the matching laboratory and gives it the first
+          batch — adjust batches from the Laboratories page.
+        </p>
+      </CardBody>
+    </MotionCard>
   );
 }

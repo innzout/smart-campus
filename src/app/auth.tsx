@@ -6,8 +6,14 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { useDatabase } from '@/lib/store';
-import { authService, permissionsForRole, roleName, type AuthUser } from '@/services/auth.service';
+import { useWholeDatabase } from '@/lib/store';
+import {
+  authService,
+  permissionsFor,
+  primaryRole,
+  roleName,
+  type AuthUser,
+} from '@/services/auth.service';
 import type { User } from '@/data/types';
 
 interface AuthValue {
@@ -23,7 +29,10 @@ interface AuthValue {
 const AuthContext = createContext<AuthValue | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const db = useDatabase();
+  // Deliberately unscoped. Who you are is not branch data: resolving identity
+  // from the branch-scoped copy signed the trust's own account out the moment
+  // it switched to a school it did not itself belong to.
+  const db = useWholeDatabase();
   const [userId, setUserId] = useState<string | null>(() => authService.restore()?.id ?? null);
   const [activeChildId, setActiveChildId] = useState<string | null>(null);
 
@@ -34,8 +43,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!found) return null;
     return {
       ...found,
-      permissions: permissionsForRole(found.role),
-      roleName: roleName(found.role),
+      permissions: permissionsFor(found.roles),
+      roleName: roleName(primaryRole(found.roles)),
       activeChildId: activeChildId ?? found.childIds?.[0],
     };
   }, [db.users, userId, activeChildId]);
@@ -47,8 +56,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
    */
   const subject = useMemo<User | null>(() => {
     if (!user) return null;
-    if (user.role === 'student') return user;
-    if (user.role === 'parent') {
+    if (user.roles.includes('student')) return user;
+    if (user.roles.includes('parent')) {
       const id = activeChildId ?? user.childIds?.[0];
       return db.users.find((u) => u.id === id) ?? null;
     }

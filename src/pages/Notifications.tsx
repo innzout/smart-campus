@@ -12,6 +12,7 @@ import {
   GraduationCap,
   PartyPopper,
   Settings2,
+  Users,
   Trash2,
   WalletCards,
 } from 'lucide-react';
@@ -36,6 +37,7 @@ const KIND: Record<Notification['kind'], { icon: typeof Bell; tone: string; labe
   event: { icon: PartyPopper, tone: 'bg-brand-500/12 text-brand-600 dark:text-brand-300', label: 'Event' },
   result: { icon: GraduationCap, tone: 'bg-[--color-good]/12 text-[--color-good]', label: 'Result' },
   transport: { icon: Bus, tone: 'bg-[--s4]/16 text-[#8a5d00] dark:text-[#f5c451]', label: 'Transport' },
+  staff: { icon: Users, tone: 'bg-[--s6]/14 text-[--s6]', label: 'Staff' },
   system: { icon: Settings2, tone: 'bg-surface-2 text-ink-2', label: 'System' },
 };
 

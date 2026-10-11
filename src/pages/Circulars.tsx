@@ -47,7 +47,7 @@ export default function Circulars() {
 
   const canPost = can('circular.post');
   const canDelete = can('circular.delete');
-  const isParent = user.role === 'parent';
+  const isParent = user.roles.includes('parent');
 
   const [category, setCategory] = useState<'all' | (typeof CATEGORIES)[number]>('all');
   const [query, setQuery] = useState('');

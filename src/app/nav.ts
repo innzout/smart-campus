@@ -1,19 +1,26 @@
 import {
+  BadgeIndianRupee,
   BarChart3,
   Bell,
   BookMarked,
+  Building2,
   Bus,
   CalendarCheck,
   CalendarDays,
   ClipboardList,
   DoorOpen,
+  FlaskConical,
   GraduationCap,
   LayoutDashboard,
+  Library,
   LifeBuoy,
   Map,
   Megaphone,
   PartyPopper,
+  Repeat2,
   Settings,
+  ShieldCheck,
+  UserPlus,
   Users,
   WalletCards,
 } from 'lucide-react';
@@ -52,6 +59,13 @@ export const NAV: NavItem[] = [
   { to: '/notifications', label: 'Notifications', icon: Bell, permissions: ['notification.view'], group: 'School', keywords: 'alerts inbox unread' },
 
   { to: '/students', label: 'Students & Staff', icon: Users, permissions: ['student.view', 'student.manage'], group: 'Manage', keywords: 'admission roll directory people' },
+  { to: '/academics', label: 'Academic Setup', icon: Library, permissions: ['academic.view', 'academic.manage'], group: 'Manage', keywords: 'classes sections subjects groups assign teacher stage curriculum' },
+  { to: '/substitutions', label: 'Cover & Adjustments', icon: Repeat2, permissions: ['substitution.view', 'substitution.manage', 'leave.request'], group: 'Manage', keywords: 'absent leave swap substitute free period adjustment' },
+  { to: '/labs', label: 'Laboratories', icon: FlaskConical, permissions: ['lab.view', 'lab.manage'], group: 'Manage', keywords: 'physics chemistry botany zoology computer practical batch apparatus breakage' },
+  { to: '/recruitment', label: 'Staff Recruitment', icon: UserPlus, permissions: ['recruitment.view', 'recruitment.review'], group: 'Manage', keywords: 'application appoint documents certificate tet approve hire' },
+  { to: '/payroll', label: 'Payroll', icon: BadgeIndianRupee, permissions: ['payroll.view', 'payroll.manage'], group: 'Manage', keywords: 'salary payslip pf esi deduction net pay' },
+  { to: '/roles', label: 'Roles & Permissions', icon: ShieldCheck, permissions: ['role.view', 'role.manage'], group: 'Manage', keywords: 'permission access designation correspondent principal grant' },
+  { to: '/branches', label: 'Branches', icon: Building2, permissions: ['org.view', 'org.manage'], group: 'Manage', keywords: 'trust group campus school multi branch administrator' },
   { to: '/settings', label: 'Settings', icon: Settings, permissions: ['dashboard.view'], group: 'Manage', keywords: 'profile theme password' },
 ];
 
@@ -66,5 +80,7 @@ export const permissionsForPath = (path: string) =>
 export const GROUP_ORDER: NavItem['group'][] = ['My Child', 'School', 'Manage'];
 
 /** Parents and students see "My Child"; staff see the same block as academics. */
-export const groupLabel = (group: NavItem['group'], role: string) =>
-  group === 'My Child' && role !== 'parent' && role !== 'student' ? 'Academics' : group;
+export const groupLabel = (group: NavItem['group'], roles: readonly string[]) =>
+  group === 'My Child' && !roles.includes('parent') && !roles.includes('student')
+    ? 'Academics'
+    : group;

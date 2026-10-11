@@ -141,7 +141,7 @@ function TeacherHomework() {
   const can = useCan();
 
   const myClasses = classesForTeacher(db, user.id);
-  const [classId, setClassId] = useState(myClasses[0]?.id ?? db.classes[0]!.id);
+  const [classId, setClassId] = useState(myClasses[0]?.id ?? db.classes[0]?.id ?? '');
   const [open, setOpen] = useState(false);
   const [reviewing, setReviewing] = useState<string | null>(null);
 
@@ -235,7 +235,7 @@ function TeacherHomework() {
         <ul className="grid gap-2 sm:grid-cols-2">
           {reviewRows.map(({ student, status }) => (
             <li key={student.id} className="flex items-center gap-3 rounded-xl border border-line px-3 py-2.5">
-              <span className="tnum w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">{student.rollNo}</span>
+              <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">{student.rollNo}</span>
               <Avatar name={student.name} hue={student.avatarHue} size="sm" />
               <span className="min-w-0 flex-1 truncate text-[13px] text-ink">{student.name}</span>
               {status?.done ? (
@@ -323,7 +323,7 @@ export default function Homework() {
   const { subject } = useAuth();
   const can = useCan();
 
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) return <EmptyState icon={<ClipboardList className="size-6" />} title="No student linked to this account" />;
     return <ChildHomework student={subject} canTick={can('homework.update')} />;
   }

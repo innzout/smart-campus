@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Building2, Clock, Dumbbell, MapPin, Search, UtensilsCrossed } from 'lucide-react';
+import {
+  Building2,
+  Clock,
+  Dumbbell,
+  FlaskConical,
+  MapPin,
+  Search,
+  UtensilsCrossed,
+} from 'lucide-react';
 import { useDatabase } from '@/lib/store';
 import { theSchool } from '@/lib/queries';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
@@ -18,6 +26,7 @@ const KIND: Record<
   amenity: { tone: 'warning', label: 'Amenity', fill: 'var(--s4)', icon: UtensilsCrossed },
   sports: { tone: 'good', label: 'Sports', fill: 'var(--s3)', icon: Dumbbell },
   admin: { tone: 'brand', label: 'Office', fill: 'var(--s7)', icon: MapPin },
+  lab: { tone: 'info', label: 'Laboratory', fill: 'var(--s2)', icon: FlaskConical },
 };
 
 export default function SchoolMap() {

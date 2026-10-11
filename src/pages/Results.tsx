@@ -213,7 +213,10 @@ function ClassMarks() {
 
   const myClasses = classesForTeacher(db, user.id);
   const [classId, setClassId] = useState(
-    db.classes.find((c) => c.classTeacherId === user.id)?.id ?? myClasses[0]?.id ?? db.classes[0]!.id,
+    db.classes.find((c) => c.classTeacherId === user.id)?.id ??
+      myClasses[0]?.id ??
+      db.classes[0]?.id ??
+      '',
   );
   const cls = classById(db, classId)!;
   const exams = examsForGrade(db, cls.grade);
@@ -329,7 +332,7 @@ function ClassMarks() {
             <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
               {roster.map((s) => (
                 <label key={s.id} className="flex items-center gap-3 rounded-xl border border-line px-3 py-2">
-                  <span className="tnum w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">{s.rollNo}</span>
+                  <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">{s.rollNo}</span>
                   <span className="min-w-0 flex-1 truncate text-[13px] text-ink">{s.name}</span>
                   <input
                     type="number"
@@ -382,7 +385,7 @@ export default function Results() {
   const user = useCurrentUser();
   const { subject } = useAuth();
 
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) return <EmptyState icon={<GraduationCap className="size-6" />} title="No student linked to this account" />;
     return <ChildReport student={subject} />;
   }

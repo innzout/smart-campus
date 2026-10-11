@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sbt-1",
+    "date": "2026-10-11",
+    "slotId": "slot-23",
+    "classId": "cls-9A",
+    "absentTeacherId": "usr-t4",
+    "coverTeacherId": "usr-t2",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — Science teacher unavailable."
+  },
+  {
+    "id": "sbt-2",
+    "date": "2026-10-11",
+    "slotId": "slot-104",
+    "classId": "cls-6A",
+    "absentTeacherId": "usr-t4",
+    "coverTeacherId": "usr-t3",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — Science teacher unavailable."
+  },
+  {
+    "id": "sbt-3",
+    "date": "2026-10-11",
+    "slotId": "slot-115",
+    "classId": "cls-8A",
+    "absentTeacherId": "usr-t4",
+    "coverTeacherId": "usr-t1",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — Science teacher unavailable."
+  }
+]

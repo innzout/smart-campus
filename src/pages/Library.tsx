@@ -1,21 +1,46 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { AlertTriangle, BookMarked, BookOpen, Clock, IndianRupee, RotateCcw, Search } from 'lucide-react';
+import {
+  AlertTriangle,
+  BookMarked,
+  BookOpen,
+  BookPlus,
+  Clock,
+  IndianRupee,
+  Library as LibraryIcon,
+  RefreshCw,
+  RotateCcw,
+  Search,
+} from 'lucide-react';
 import { useAuth, useCan } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import { availableCopies, classById, classLabel, loansFor } from '@/lib/queries';
-import { borrowBook, returnBook } from '@/lib/actions';
+import { addBook, borrowBook, renewLoan, returnBook, settleLoan } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge, StatusPill } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Field';
+import { Field, Input, Select } from '@/components/ui/Field';
+import { Modal } from '@/components/ui/Modal';
+import { Avatar } from '@/components/ui/misc';
 import { DataTable, type Column } from '@/components/ui/Table';
 import { EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
 import { cn, formatDate, money, num, relativeDay } from '@/lib/utils';
-import type { Book, User } from '@/data/types';
+import type { Book, Loan, User } from '@/data/types';
 
-const MAX_LOANS = 3;
+const MAX_RENEWALS = 2;
+
+/**
+ * How many books a child may hold at once. A library that issues three novels
+ * to a seven-year-old gets none of them back, so the limit rises with the
+ * class, as it does in practice.
+ */
+function loanLimitFor(grade: number | undefined) {
+  if (grade == null) return 3;
+  if (grade <= 5) return 1;
+  if (grade <= 8) return 2;
+  return 3;
+}
 
 export default function Library() {
   const { subject } = useAuth();
@@ -33,6 +58,10 @@ export default function Library() {
   const fines = myLoans.reduce((t, l) => t + l.loan.fine, 0);
 
   const grade = student ? classById(db, student.classId)?.grade : undefined;
+  const maxLoans = loanLimitFor(grade);
+  const manage = can('library.manage');
+  const [accessionOpen, setAccessionOpen] = useState(false);
+  const [settling, setSettling] = useState<Loan | null>(null);
   const categories = ['all', ...new Set(db.books.map((b) => b.category))];
 
   const books = db.books.filter((b) => {
@@ -46,9 +75,9 @@ export default function Library() {
 
   const borrow = (book: Book) => {
     if (!student) return;
-    if (active.length >= MAX_LOANS) {
+    if (active.length >= maxLoans) {
       toast.error('Borrowing limit reached', {
-        description: `A student may hold ${MAX_LOANS} books. Please return one first.`,
+        description: `A pupil in class ${grade} may hold ${maxLoans} book${maxLoans === 1 ? '' : 's'}. Please return one first.`,
       });
       return;
     }
@@ -74,7 +103,7 @@ export default function Library() {
     },
     { key: 'category', header: 'Category', hideOnMobile: true, sortBy: (b) => b.category, cell: (b) => <Badge tone="neutral">{b.category}</Badge> },
     { key: 'grades', header: 'Classes', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum text-[12px]">{b.forGrades.join(', ')}</span> },
-    { key: 'shelf', header: 'Shelf', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum">{b.shelf}</span> },
+    { key: 'shelf', header: 'Shelf', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum">{b.rack}</span> },
     {
       key: 'available',
       header: 'Availability',
@@ -109,17 +138,24 @@ export default function Library() {
   return (
     <>
       <PageHeader
+        action={
+          manage ? (
+            <Button icon={<BookPlus className="size-4" />} onClick={() => setAccessionOpen(true)}>
+              Accession a title
+            </Button>
+          ) : null
+        }
         title="Library"
         subtitle={
           student
-            ? `${student.name} · ${classLabel(db, student.classId)} · up to ${MAX_LOANS} books at a time`
+            ? `${student.name} · ${classLabel(db, student.classId)} · up to ${maxLoans} book${maxLoans === 1 ? '' : 's'} at a time`
             : `${num(db.books.length)} titles · ${num(db.books.reduce((t, b) => t + b.copies, 0))} copies`
         }
       />
 
       {student ? (
         <StatGrid>
-          <StatTile label="Books with you" value={active.length} note={`Limit is ${MAX_LOANS}`} icon={BookOpen} />
+          <StatTile label="Books with you" value={active.length} note={`Limit is ${maxLoans} for class ${grade}`} icon={BookOpen} />
           <StatTile
             label="Due soon"
             value={active.filter((l) => l.daysLeft >= 0 && l.daysLeft <= 3).length}
@@ -132,6 +168,8 @@ export default function Library() {
           <StatTile label="Fine due" value={money(fines)} note={fines ? 'Payable at the library' : 'No fines'} icon={IndianRupee} tone={fines ? 'critical' : 'good'} delay={0.18} />
         </StatGrid>
       ) : null}
+
+      {!student ? <LibrarianBoard onSettle={setSettling} /> : null}
 
       {student ? (
         <MotionCard delay={0.1}>
@@ -170,17 +208,38 @@ export default function Library() {
                       ) : null}
                     </span>
                     {!loan.returnedOn && can('library.borrow') ? (
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        icon={<RotateCcw className="size-3.5" />}
-                        onClick={() => {
-                          returnBook(loan.id);
-                          toast.success('Returned', { description: `${book?.title} is back on shelf ${book?.shelf}.` });
-                        }}
-                      >
-                        Return
-                      </Button>
+                      <span className="flex gap-2">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          icon={<RefreshCw className="size-3.5" />}
+                          disabled={loan.renewals >= MAX_RENEWALS}
+                          onClick={() => {
+                            if (renewLoan(loan.id, MAX_RENEWALS)) {
+                              toast.success('Renewed for another fortnight', {
+                                description: `${loan.renewals + 1} of ${MAX_RENEWALS} renewals used.`,
+                              });
+                            } else {
+                              toast.error('Cannot renew', {
+                                description: 'This loan has already been renewed the maximum number of times.',
+                              });
+                            }
+                          }}
+                        >
+                          {loan.renewals >= MAX_RENEWALS ? 'No renewals left' : 'Renew'}
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          icon={<RotateCcw className="size-3.5" />}
+                          onClick={() => {
+                            returnBook(loan.id);
+                            toast.success('Returned', { description: `${book?.title} is back on shelf ${book?.rack}.` });
+                          }}
+                        >
+                          Return
+                        </Button>
+                      </span>
                     ) : null}
                   </li>
                 ))}
@@ -222,6 +281,356 @@ export default function Library() {
           />
         </CardBody>
       </MotionCard>
+
+      <AccessionDialog open={accessionOpen} onClose={() => setAccessionOpen(false)} />
+      {settling ? <SettleDialog loan={settling} onClose={() => setSettling(null)} /> : null}
     </>
+  );
+}
+
+/* ── what the librarian needs: what is out, and what is overdue ───────── */
+
+function LibrarianBoard({ onSettle }: { onSettle: (loan: Loan) => void }) {
+  const db = useDatabase();
+  const can = useCan();
+  const manage = can('library.manage');
+
+  const outstanding = db.loans.filter((l) => !l.returnedOn);
+  const overdue = outstanding.filter((l) => l.fine > 0);
+  const fines = db.loans.reduce((t, l) => t + (l.returnedOn ? 0 : l.fine), 0);
+  const copies = db.books.reduce((t, b) => t + b.copies, 0);
+
+  return (
+    <>
+      <StatGrid>
+        <StatTile
+          label="Titles"
+          value={num(db.books.length)}
+          note={`${num(copies)} copies accessioned`}
+          icon={LibraryIcon}
+        />
+        <StatTile
+          label="On loan"
+          value={outstanding.length}
+          note={`${Math.round((outstanding.length / Math.max(copies, 1)) * 100)}% of the stock is out`}
+          icon={BookOpen}
+          delay={0.06}
+        />
+        <StatTile
+          label="Overdue"
+          value={overdue.length}
+          note={overdue.length ? 'Fine of ₹2 a day' : 'Nothing overdue'}
+          icon={AlertTriangle}
+          tone={overdue.length ? 'critical' : 'good'}
+          delay={0.12}
+        />
+        <StatTile
+          label="Fines outstanding"
+          value={money(fines)}
+          note={fines ? 'Collectable at the counter' : 'Nothing outstanding'}
+          icon={IndianRupee}
+          tone={fines ? 'warning' : 'good'}
+          delay={0.18}
+        />
+      </StatGrid>
+
+      <MotionCard delay={0.1} className="mb-5">
+        <CardHeader
+          title="Out on loan"
+          subtitle="Overdue first — these are the ones to chase"
+        />
+        <CardBody className="pt-4">
+          {outstanding.length === 0 ? (
+            <EmptyState
+              icon={<BookMarked className="size-6" />}
+              title="Every copy is on the shelf"
+              description="Nothing is currently issued."
+            />
+          ) : (
+            <ul className="space-y-2">
+              {[...outstanding]
+                .sort((a, b) => b.fine - a.fine || a.dueOn.localeCompare(b.dueOn))
+                .slice(0, 25)
+                .map((loan) => {
+                  const book = db.books.find((b) => b.id === loan.bookId);
+                  const borrower = db.users.find((u) => u.id === loan.studentId);
+                  const isOverdue = loan.fine > 0;
+                  return (
+                    <li
+                      key={loan.id}
+                      className={cn(
+                        'flex flex-wrap items-center gap-3 rounded-xl border px-3.5 py-3',
+                        isOverdue
+                          ? 'border-[--color-critical]/35 bg-[--color-critical]/[0.04]'
+                          : 'border-line',
+                      )}
+                    >
+                      {borrower ? (
+                        <Avatar name={borrower.name} hue={borrower.avatarHue} size="md" />
+                      ) : null}
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[13.5px] font-semibold text-ink">
+                          {book?.title ?? 'Unknown title'}
+                        </span>
+                        <span className="mt-0.5 block truncate text-[12px] text-ink-3">
+                          {borrower?.name ?? '—'} · {classLabel(db, borrower?.classId)} · rack{' '}
+                          {book?.rack} · due {formatDate(loan.dueOn)} ({relativeDay(loan.dueOn)})
+                          {loan.renewals ? ` · renewed ${loan.renewals}×` : ''}
+                        </span>
+                      </span>
+
+                      {isOverdue ? (
+                        <Badge tone="critical">Fine {money(loan.fine)}</Badge>
+                      ) : (
+                        <Badge tone="neutral">On loan</Badge>
+                      )}
+
+                      {manage ? (
+                        <span className="flex gap-2">
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            onClick={() => {
+                              returnBook(loan.id);
+                              toast.success('Returned', {
+                                description: `${book?.title} is back on rack ${book?.rack}.`,
+                              });
+                            }}
+                          >
+                            Return
+                          </Button>
+                          <Button size="sm" variant="ghost" onClick={() => onSettle(loan)}>
+                            Lost or damaged
+                          </Button>
+                        </span>
+                      ) : null}
+                    </li>
+                  );
+                })}
+            </ul>
+          )}
+        </CardBody>
+      </MotionCard>
+    </>
+  );
+}
+
+/* ── closing a loan as lost or damaged ───────────────────────────────── */
+
+function SettleDialog({ loan, onClose }: { loan: Loan; onClose: () => void }) {
+  const db = useDatabase();
+  const book = db.books.find((b) => b.id === loan.bookId);
+  const borrower = db.users.find((u) => u.id === loan.studentId);
+  const [condition, setCondition] = useState<'damaged' | 'lost'>('damaged');
+
+  const charge = Math.round((book?.price ?? 0) * (condition === 'lost' ? 1 : 0.5));
+
+  return (
+    <Modal
+      open
+      onClose={onClose}
+      title={book?.title ?? 'Settle loan'}
+      description={`${borrower?.name ?? 'The borrower'} · ${classLabel(db, borrower?.classId)}`}
+      size="sm"
+      footer={
+        <>
+          <Button variant="secondary" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            onClick={() => {
+              settleLoan(loan.id, condition);
+              toast.success(`Recorded as ${condition}`, {
+                description: `₹${charge} charged to the fee account and the parent notified.`,
+              });
+              onClose();
+            }}
+          >
+            Charge {money(charge)}
+          </Button>
+        </>
+      }
+    >
+      <div className="space-y-4">
+        <Field label="Condition" htmlFor="sc">
+          <Select
+            id="sc"
+            value={condition}
+            onChange={(e) => setCondition(e.target.value as 'damaged' | 'lost')}
+          >
+            <option value="damaged">Damaged — charged at half price</option>
+            <option value="lost">Lost — charged at full price, copy written off</option>
+          </Select>
+        </Field>
+        <p className="rounded-xl bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-ink-2">
+          The book is priced at {money(book?.price ?? 0)}, so {money(charge)} will be added to the
+          fee account along with any fine already due.
+          {condition === 'lost'
+            ? ' The copy count falls by one, so the catalogue stays accurate.'
+            : ''}
+        </p>
+      </div>
+    </Modal>
+  );
+}
+
+/* ── accessioning a new title ────────────────────────────────────────── */
+
+function AccessionDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [publisher, setPublisher] = useState('');
+  const [isbn, setIsbn] = useState('');
+  const [category, setCategory] = useState('Fiction');
+  const [copies, setCopies] = useState(3);
+  const [rack, setRack] = useState('');
+  const [price, setPrice] = useState(200);
+  const [fromGrade, setFromGrade] = useState(6);
+  const [toGrade, setToGrade] = useState(10);
+
+  const valid = title.trim().length > 2 && author.trim().length > 2 && toGrade >= fromGrade;
+
+  return (
+    <Modal
+      open={open}
+      onClose={onClose}
+      title="Accession a title"
+      description="An accession number is allotted automatically, as the register does."
+      size="md"
+      footer={
+        <>
+          <Button variant="secondary" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            disabled={!valid}
+            onClick={() => {
+              addBook({
+                title: title.trim(),
+                author: author.trim(),
+                publisher: publisher.trim(),
+                isbn: isbn.trim(),
+                category,
+                copies,
+                rack: rack.trim() || 'Unshelved',
+                forGrades: Array.from(
+                  { length: toGrade - fromGrade + 1 },
+                  (_, i) => fromGrade + i,
+                ),
+                price,
+              });
+              toast.success(`${title.trim()} accessioned`, {
+                description: `${copies} copies on rack ${rack.trim() || 'Unshelved'}.`,
+              });
+              setTitle('');
+              setAuthor('');
+              onClose();
+            }}
+          >
+            Add to catalogue
+          </Button>
+        </>
+      }
+    >
+      <div className="space-y-4">
+        <Field label="Title" required htmlFor="bt2">
+          <Input id="bt2" value={title} onChange={(e) => setTitle(e.target.value)} />
+        </Field>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Field label="Author" required htmlFor="ba2">
+            <Input id="ba2" value={author} onChange={(e) => setAuthor(e.target.value)} />
+          </Field>
+          <Field label="Publisher" htmlFor="bp2">
+            <Input id="bp2" value={publisher} onChange={(e) => setPublisher(e.target.value)} />
+          </Field>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Field label="ISBN" htmlFor="bi2">
+            <Input id="bi2" value={isbn} onChange={(e) => setIsbn(e.target.value)} />
+          </Field>
+          <Field label="Category" htmlFor="bc2">
+            <Select id="bc2" value={category} onChange={(e) => setCategory(e.target.value)}>
+              {[
+                'Fiction',
+                'Children',
+                'Tamil Literature',
+                'Biography',
+                'Science',
+                'Mathematics',
+                'Social Science',
+                'Computer Science',
+                'Competitive',
+                'Reference',
+              ].map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </Select>
+          </Field>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-3">
+          <Field label="Copies" htmlFor="bcp">
+            <Input
+              id="bcp"
+              type="number"
+              min={1}
+              value={copies}
+              onChange={(e) => setCopies(Number(e.target.value))}
+            />
+          </Field>
+          <Field label="Rack" htmlFor="brk">
+            <Input
+              id="brk"
+              value={rack}
+              placeholder="C-04"
+              onChange={(e) => setRack(e.target.value)}
+            />
+          </Field>
+          <Field label="Price (₹)" htmlFor="bpr" hint="Used to charge for a lost copy.">
+            <Input
+              id="bpr"
+              type="number"
+              min={0}
+              step={10}
+              value={price}
+              onChange={(e) => setPrice(Number(e.target.value))}
+            />
+          </Field>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <Field label="Suitable from class" htmlFor="bfg">
+            <Select
+              id="bfg"
+              value={String(fromGrade)}
+              onChange={(e) => setFromGrade(Number(e.target.value))}
+            >
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
+                <option key={g} value={g}>
+                  Class {g}
+                </option>
+              ))}
+            </Select>
+          </Field>
+          <Field
+            label="up to class"
+            htmlFor="btg"
+            error={toGrade < fromGrade ? 'Must not be below the lower class.' : undefined}
+          >
+            <Select
+              id="btg"
+              value={String(toGrade)}
+              onChange={(e) => setToGrade(Number(e.target.value))}
+            >
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
+                <option key={g} value={g}>
+                  Class {g}
+                </option>
+              ))}
+            </Select>
+          </Field>
+        </div>
+      </div>
+    </Modal>
   );
 }

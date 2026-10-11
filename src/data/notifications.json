@@ -61,12 +61,43 @@
   },
   {
     "id": "ntf-7",
+    "userId": "usr-principal",
+    "title": "Three staff applications awaiting review",
+    "body": "Two are newly submitted and one is under review. Open Staff Recruitment to act on them.",
+    "kind": "staff",
+    "createdOn": "2026-10-11",
+    "read": false,
+    "link": "/recruitment"
+  },
+  {
+    "id": "ntf-8",
+    "userId": "usr-transport",
+    "title": "Fitness certificate expired — TN 38 AX 1207",
+    "body": "The FC for Bus 1207 has lapsed. The vehicle should not run until it is renewed.",
+    "kind": "transport",
+    "createdOn": "2026-10-10",
+    "read": false,
+    "link": "/transport"
+  },
+  {
+    "id": "ntf-9",
     "userId": "all",
+    "schoolId": "sch-1",
     "title": "Deepavali holidays announced",
     "body": "The school will remain closed for Deepavali. Buses will not operate.",
     "kind": "system",
     "createdOn": "2026-10-05",
     "read": true,
     "link": "/circulars"
+  },
+  {
+    "id": "ntf-10",
+    "userId": "usr-b2-hm",
+    "title": "Term 2 fee reminders are due",
+    "body": "Twenty-one families have Term 2 tuition outstanding. The office can send reminders from the Fees page.",
+    "kind": "fee",
+    "createdOn": "2026-10-10",
+    "read": false,
+    "link": "/fees"
   }
 ]

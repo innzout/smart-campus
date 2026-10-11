@@ -1,27 +1,40 @@
-import school from './school.json';
+import group from './group.json';
+import schools from './schools.json';
+import hscGroups from './hscGroups.json';
 import classes from './classes.json';
 import subjects from './subjects.json';
+import classSubjects from './classSubjects.json';
 import users from './users.json';
-import attendance from './attendance.json';
+import applications from './applications.json';
+import leaves from './leaves.json';
+import substitutions from './substitutions.json';
 import timetable from './timetable.json';
+import labs from './labs.json';
+import labBatches from './labBatches.json';
+import labItems from './labItems.json';
+import labBreakages from './labBreakages.json';
+import attendance from './attendance.json';
 import homework from './homework.json';
 import homeworkStatus from './homeworkStatus.json';
 import exams from './exams.json';
 import marks from './marks.json';
 import fees from './fees.json';
 import payments from './payments.json';
+import salaries from './salaries.json';
+import payslips from './payslips.json';
 import circulars from './circulars.json';
 import events from './events.json';
 import requests from './requests.json';
+import meetingSlots from './meetingSlots.json';
+import meetingBookings from './meetingBookings.json';
+import visits from './visits.json';
+import vehicles from './vehicles.json';
 import routes from './routes.json';
 import studentTransport from './studentTransport.json';
 import books from './books.json';
 import loans from './loans.json';
 import notifications from './notifications.json';
 import places from './places.json';
-import meetingSlots from './meetingSlots.json';
-import meetingBookings from './meetingBookings.json';
-import visits from './visits.json';
 
 import type { Database } from './types';
 
@@ -61,51 +74,67 @@ function shift(value: string, days: number): string {
 
 /** Every date-bearing field, by collection. */
 const DATE_FIELDS: Partial<Record<keyof Database, string[]>> = {
-  users: ['joinedOn'],
+  users: ['joinedOn', 'dateOfJoining'],
+  applications: ['submittedOn', 'reviewedOn'],
+  leaves: ['from', 'to'],
+  substitutions: ['date'],
+  labBreakages: ['date'],
   attendance: ['date'],
   homework: ['assignedOn', 'dueOn'],
   homeworkStatus: ['submittedOn'],
   exams: ['startsOn', 'endsOn'],
   fees: ['dueOn'],
   payments: ['paidOn'],
+  payslips: ['paidOn'],
   circulars: ['postedOn'],
   events: ['date'],
   requests: ['createdOn'],
-  loans: ['borrowedOn', 'dueOn', 'returnedOn'],
-  notifications: ['createdOn'],
   meetingSlots: ['date'],
   meetingBookings: ['bookedOn'],
   visits: ['date'],
+  vehicles: ['fcExpiry', 'insuranceExpiry', 'permitExpiry'],
+  studentTransport: ['requestedOn'],
+  books: ['addedOn'],
+  loans: ['borrowedOn', 'dueOn', 'returnedOn'],
+  notifications: ['createdOn'],
 };
 
 function rebase(db: Database): Database {
-  const days = weekShiftDays(db.school[0]?.seededOn ?? toISO(new Date()));
-  if (days === 0) return db;
+  const today = toISO(new Date());
+  const days = weekShiftDays(db.schools[0]?.seededOn ?? today);
 
-  for (const [collection, fields] of Object.entries(DATE_FIELDS)) {
-    const rows = db[collection as keyof Database] as unknown as Record<string, unknown>[];
-    if (!Array.isArray(rows)) continue;
-    for (const row of rows) {
-      for (const field of fields!) {
-        const value = row[field];
-        if (typeof value === 'string' && value) row[field] = shift(value, days);
+  if (days > 0) {
+    for (const [collection, fields] of Object.entries(DATE_FIELDS)) {
+      const rows = db[collection as keyof Database] as unknown as Record<string, unknown>[];
+      if (!Array.isArray(rows)) continue;
+      for (const row of rows) {
+        for (const field of fields!) {
+          const value = row[field];
+          if (typeof value === 'string' && value) row[field] = shift(value, days);
+        }
       }
+    }
+
+    // Help-desk updates carry their own dates.
+    for (const r of db.requests) {
+      for (const u of r.updates) u.on = shift(u.on, days);
+    }
+
+    // Application documents are uploaded before the application is reviewed.
+    for (const a of db.applications) {
+      for (const d of a.documents) d.uploadedOn = shift(d.uploadedOn, days);
     }
   }
 
-  // Help-desk updates carry their own dates.
-  for (const r of db.requests) {
-    for (const u of r.updates) u.on = shift(u.on, days);
-  }
-
   // Library fines follow from how overdue a loan is, so recompute them.
-  const today = toISO(new Date());
   for (const loan of db.loans) {
     if (loan.returnedOn) {
       loan.fine = 0;
       continue;
     }
-    const overdueDays = Math.round((startOfDay(parseISO(today)) - startOfDay(parseISO(loan.dueOn))) / DAY_MS);
+    const overdueDays = Math.round(
+      (startOfDay(parseISO(today)) - startOfDay(parseISO(loan.dueOn))) / DAY_MS,
+    );
     loan.fine = overdueDays > 0 ? overdueDays * 2 : 0;
   }
 
@@ -114,8 +143,12 @@ function rebase(db: Database): Database {
 
   // The term follows the calendar: June–Sept 1, Oct–Dec 2, Jan–May 3.
   const month = new Date().getMonth();
-  const term = month >= 5 && month <= 8 ? 1 : month >= 9 && month <= 11 ? 2 : 3;
-  if (db.school[0]) db.school[0].currentTerm = term as 1 | 2 | 3;
+  const term = (month >= 5 && month <= 8 ? 1 : month >= 9 && month <= 11 ? 2 : 3) as 1 | 2 | 3;
+  for (const school of db.schools) school.currentTerm = term;
+
+  // Substitutions are arranged for a single day, so only today's are relevant.
+  // Pull the whole set onto today rather than leaving a stale, empty board.
+  for (const s of db.substitutions) s.date = today;
 
   return db;
 }
@@ -123,29 +156,42 @@ function rebase(db: Database): Database {
 export const seedDatabase = (): Database =>
   rebase(
     structuredClone({
-      school,
+      group,
+      schools,
+      hscGroups,
       classes,
       subjects,
+      classSubjects,
       users,
-      attendance,
+      applications,
+      leaves,
+      substitutions,
       timetable,
+      labs,
+      labBatches,
+      labItems,
+      labBreakages,
+      attendance,
       homework,
       homeworkStatus,
       exams,
       marks,
       fees,
       payments,
+      salaries,
+      payslips,
       circulars,
       events,
       requests,
+      meetingSlots,
+      meetingBookings,
+      visits,
+      vehicles,
       routes,
       studentTransport,
       books,
       loans,
       notifications,
       places,
-      meetingSlots,
-      meetingBookings,
-      visits,
     }) as unknown as Database,
   );

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { CornerDownLeft, Search } from 'lucide-react';
 import { navFor } from '@/app/nav';
 import { useDatabase } from '@/lib/store';
+import { primaryRole, roleName } from '@/services/auth.service';
 import { cn } from '@/lib/utils';
 
 interface Hit {
@@ -102,7 +103,7 @@ export function CommandPalette({
     if (permissions.includes('user.view')) {
       for (const u of db.users) {
         if (matches(u.name, u.email, u.admissionNo, u.employeeId)) {
-          out.push({ id: `usr-${u.id}`, label: u.name, hint: u.admissionNo ?? u.employeeId ?? u.role, group: 'People', to: '/students' });
+          out.push({ id: `usr-${u.id}`, label: u.name, hint: u.admissionNo ?? u.employeeId ?? roleName(primaryRole(u.roles)), group: 'People', to: '/students' });
         }
       }
     }

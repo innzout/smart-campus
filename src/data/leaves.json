@@ -1,0 +1,51 @@
+[
+  {
+    "id": "lv-1",
+    "staffId": "usr-t4",
+    "kind": "medical",
+    "from": "2026-10-11",
+    "to": "2026-10-12",
+    "reason": "Viral fever. Medical certificate attached.",
+    "status": "approved",
+    "approvedById": "usr-principal"
+  },
+  {
+    "id": "lv-2",
+    "staffId": "usr-p5",
+    "kind": "casual",
+    "from": "2026-10-11",
+    "to": "2026-10-11",
+    "reason": "Family function at Pollachi.",
+    "status": "approved",
+    "approvedById": "usr-principal"
+  },
+  {
+    "id": "lv-3",
+    "staffId": "usr-t9",
+    "kind": "on-duty",
+    "from": "2026-10-13",
+    "to": "2026-10-13",
+    "reason": "Accompanying students to the district science fair.",
+    "status": "approved",
+    "approvedById": "usr-principal"
+  },
+  {
+    "id": "lv-4",
+    "staffId": "usr-s3",
+    "kind": "casual",
+    "from": "2026-10-12",
+    "to": "2026-10-12",
+    "reason": "Personal.",
+    "status": "requested"
+  },
+  {
+    "id": "lv-5",
+    "staffId": "usr-t8",
+    "kind": "earned",
+    "from": "2026-10-03",
+    "to": "2026-10-05",
+    "reason": "Pre-planned leave.",
+    "status": "approved",
+    "approvedById": "usr-principal"
+  }
+]

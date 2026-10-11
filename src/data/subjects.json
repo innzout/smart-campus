@@ -1,272 +1,409 @@
 [
   {
-    "id": "sub-6-tam",
-    "code": "TAM6",
+    "id": "sub-tam1",
+    "code": "TAM-P",
     "name": "Tamil",
     "nameTa": "தமிழ்",
-    "grade": 6,
-    "teacherId": "usr-t1",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-6-eng",
-    "code": "ENG6",
+    "id": "sub-eng1",
+    "code": "ENG-P",
     "name": "English",
     "nameTa": "ஆங்கிலம்",
-    "grade": 6,
-    "teacherId": "usr-t3",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-6-mat",
-    "code": "MAT6",
+    "id": "sub-mat1",
+    "code": "MAT-P",
     "name": "Mathematics",
     "nameTa": "கணிதம்",
-    "grade": 6,
-    "teacherId": "usr-t2",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-6-sci",
-    "code": "SCI6",
-    "name": "Science",
-    "nameTa": "அறிவியல்",
-    "grade": 6,
-    "teacherId": "usr-t4",
-    "maxMarks": 100
+    "id": "sub-evs",
+    "code": "EVS",
+    "name": "Environmental Science",
+    "nameTa": "சுற்றுச்சூழல் அறிவியல்",
+    "kind": "core",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-6-soc",
-    "code": "SOC6",
-    "name": "Social Science",
-    "nameTa": "சமூக அறிவியல்",
-    "grade": 6,
-    "teacherId": "usr-t5",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-6-csc",
-    "code": "CSC6",
-    "name": "Computer Science",
-    "nameTa": "கணினி அறிவியல்",
-    "grade": 6,
-    "teacherId": "usr-t6",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-7-tam",
-    "code": "TAM7",
+    "id": "sub-tam2",
+    "code": "TAM-M",
     "name": "Tamil",
     "nameTa": "தமிழ்",
-    "grade": 7,
-    "teacherId": "usr-t1",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-7-eng",
-    "code": "ENG7",
+    "id": "sub-eng2",
+    "code": "ENG-M",
     "name": "English",
     "nameTa": "ஆங்கிலம்",
-    "grade": 7,
-    "teacherId": "usr-t3",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-7-mat",
-    "code": "MAT7",
+    "id": "sub-mat2",
+    "code": "MAT-M",
     "name": "Mathematics",
     "nameTa": "கணிதம்",
-    "grade": 7,
-    "teacherId": "usr-t2",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-7-sci",
-    "code": "SCI7",
+    "id": "sub-sci",
+    "code": "SCI",
     "name": "Science",
     "nameTa": "அறிவியல்",
-    "grade": 7,
-    "teacherId": "usr-t4",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-7-soc",
-    "code": "SOC7",
+    "id": "sub-soc",
+    "code": "SOC",
     "name": "Social Science",
     "nameTa": "சமூக அறிவியல்",
-    "grade": 7,
-    "teacherId": "usr-t5",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-7-csc",
-    "code": "CSC7",
+    "id": "sub-csc",
+    "code": "CSC",
     "name": "Computer Science",
     "nameTa": "கணினி அறிவியல்",
-    "grade": 7,
-    "teacherId": "usr-t6",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      6,
+      7,
+      8
+    ],
+    "maxMarks": 100,
+    "hasPractical": true,
+    "practicalMarks": 25,
+    "labKind": "computer"
   },
   {
-    "id": "sub-8-tam",
-    "code": "TAM8",
+    "id": "sub-tam3",
+    "code": "TAM-H",
     "name": "Tamil",
     "nameTa": "தமிழ்",
-    "grade": 8,
-    "teacherId": "usr-t1",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-8-eng",
-    "code": "ENG8",
+    "id": "sub-eng3",
+    "code": "ENG-H",
     "name": "English",
     "nameTa": "ஆங்கிலம்",
-    "grade": 8,
-    "teacherId": "usr-t3",
-    "maxMarks": 100
+    "kind": "language",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-8-mat",
-    "code": "MAT8",
+    "id": "sub-mat3",
+    "code": "MAT-H",
     "name": "Mathematics",
     "nameTa": "கணிதம்",
-    "grade": 8,
-    "teacherId": "usr-t2",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-8-sci",
-    "code": "SCI8",
-    "name": "Science",
-    "nameTa": "அறிவியல்",
-    "grade": 8,
-    "teacherId": "usr-t4",
-    "maxMarks": 100
+    "id": "sub-phy",
+    "code": "PHY",
+    "name": "Physics",
+    "nameTa": "இயற்பியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "physics"
   },
   {
-    "id": "sub-8-soc",
-    "code": "SOC8",
-    "name": "Social Science",
-    "nameTa": "சமூக அறிவியல்",
-    "grade": 8,
-    "teacherId": "usr-t5",
-    "maxMarks": 100
+    "id": "sub-che",
+    "code": "CHE",
+    "name": "Chemistry",
+    "nameTa": "வேதியியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "chemistry"
   },
   {
-    "id": "sub-8-csc",
-    "code": "CSC8",
+    "id": "sub-bio",
+    "code": "BIO",
+    "name": "Biology",
+    "nameTa": "உயிரியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "zoology"
+  },
+  {
+    "id": "sub-bot",
+    "code": "BOT",
+    "name": "Botany",
+    "nameTa": "தாவரவியல்",
+    "kind": "elective",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "botany"
+  },
+  {
+    "id": "sub-zoo",
+    "code": "ZOO",
+    "name": "Zoology",
+    "nameTa": "விலங்கியல்",
+    "kind": "elective",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "zoology"
+  },
+  {
+    "id": "sub-cshs",
+    "code": "CS-H",
     "name": "Computer Science",
     "nameTa": "கணினி அறிவியல்",
-    "grade": 8,
-    "teacherId": "usr-t6",
-    "maxMarks": 100
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 70,
+    "hasPractical": true,
+    "practicalMarks": 30,
+    "labKind": "computer"
   },
   {
-    "id": "sub-9-tam",
-    "code": "TAM9",
-    "name": "Tamil",
-    "nameTa": "தமிழ்",
-    "grade": 9,
-    "teacherId": "usr-t1",
-    "maxMarks": 100
+    "id": "sub-acc",
+    "code": "ACC",
+    "name": "Accountancy",
+    "nameTa": "கணக்கியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-9-eng",
-    "code": "ENG9",
-    "name": "English",
-    "nameTa": "ஆங்கிலம்",
-    "grade": 9,
-    "teacherId": "usr-t3",
-    "maxMarks": 100
+    "id": "sub-com",
+    "code": "COM",
+    "name": "Commerce",
+    "nameTa": "வணிகவியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-9-mat",
-    "code": "MAT9",
-    "name": "Mathematics",
-    "nameTa": "கணிதம்",
-    "grade": 9,
-    "teacherId": "usr-t2",
-    "maxMarks": 100
+    "id": "sub-eco",
+    "code": "ECO",
+    "name": "Economics",
+    "nameTa": "பொருளியல்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-9-sci",
-    "code": "SCI9",
-    "name": "Science",
-    "nameTa": "அறிவியல்",
-    "grade": 9,
-    "teacherId": "usr-t4",
-    "maxMarks": 100
+    "id": "sub-bma",
+    "code": "BMA",
+    "name": "Business Mathematics",
+    "nameTa": "வணிகக் கணிதம்",
+    "kind": "core",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-9-soc",
-    "code": "SOC9",
-    "name": "Social Science",
-    "nameTa": "சமூக அறிவியல்",
-    "grade": 9,
-    "teacherId": "usr-t5",
-    "maxMarks": 100
+    "id": "sub-his",
+    "code": "HIS",
+    "name": "History",
+    "nameTa": "வரலாறு",
+    "kind": "elective",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-9-csc",
-    "code": "CSC9",
-    "name": "Computer Science",
-    "nameTa": "கணினி அறிவியல்",
-    "grade": 9,
-    "teacherId": "usr-t6",
-    "maxMarks": 100
+    "id": "sub-pol",
+    "code": "POL",
+    "name": "Political Science",
+    "nameTa": "அரசியல் அறிவியல்",
+    "kind": "elective",
+    "grades": [
+      11,
+      12
+    ],
+    "maxMarks": 100,
+    "hasPractical": false,
+    "practicalMarks": 0
   },
   {
-    "id": "sub-10-tam",
-    "code": "TAM10",
-    "name": "Tamil",
-    "nameTa": "தமிழ்",
-    "grade": 10,
-    "teacherId": "usr-t1",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-10-eng",
-    "code": "ENG10",
-    "name": "English",
-    "nameTa": "ஆங்கிலம்",
-    "grade": 10,
-    "teacherId": "usr-t3",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-10-mat",
-    "code": "MAT10",
-    "name": "Mathematics",
-    "nameTa": "கணிதம்",
-    "grade": 10,
-    "teacherId": "usr-t2",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-10-sci",
-    "code": "SCI10",
-    "name": "Science",
-    "nameTa": "அறிவியல்",
-    "grade": 10,
-    "teacherId": "usr-t4",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-10-soc",
-    "code": "SOC10",
-    "name": "Social Science",
-    "nameTa": "சமூக அறிவியல்",
-    "grade": 10,
-    "teacherId": "usr-t5",
-    "maxMarks": 100
-  },
-  {
-    "id": "sub-10-csc",
-    "code": "CSC10",
-    "name": "Computer Science",
-    "nameTa": "கணினி அறிவியல்",
-    "grade": 10,
-    "teacherId": "usr-t6",
-    "maxMarks": 100
+    "id": "sub-pe",
+    "code": "PE",
+    "name": "Physical Education",
+    "nameTa": "உடற்கல்வி",
+    "kind": "co-curricular",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "maxMarks": 50,
+    "hasPractical": false,
+    "practicalMarks": 0
   }
 ]

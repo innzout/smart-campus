@@ -15,7 +15,7 @@ import {
 import { Table2, ChartColumn } from 'lucide-react';
 import { CHART_INK, ChartTable, Legend, TooltipRow, TooltipShell } from './ChartKit';
 import { Button } from '@/components/ui/Button';
-import { num } from '@/lib/utils';
+import { compact, num } from '@/lib/utils';
 
 /* ── shared axis config ────────────────────────────────────────────────── */
 
@@ -104,9 +104,12 @@ export function ColumnChart({
           <XAxis dataKey="name" {...axisProps} interval={0} />
           <YAxis
             {...axisProps}
-            width={46}
+            width={52}
             domain={[0, maxValue ?? 'auto']}
-            tickFormatter={(v: number) => `${num(v)}${unit}`}
+            // Abbreviated, because a rupee total runs to eight characters
+            // ('4,59,750') and was being cut off by the axis. The tooltip and
+            // the table view still carry the exact figure.
+            tickFormatter={(v: number) => `${compact(v)}${unit}`}
           />
           <Tooltip
             cursor={{ fill: 'var(--surface-hover)', radius: 6 }}
@@ -189,7 +192,7 @@ export function GroupedColumnChart({
         <BarChart data={data} margin={{ top: 8, right: 6, bottom: 0, left: 0 }} barCategoryGap="26%" barGap={2}>
           <CartesianGrid vertical={false} stroke={CHART_INK.grid} />
           <XAxis dataKey="name" {...axisProps} interval={0} />
-          <YAxis {...axisProps} width={46} tickFormatter={(v: number) => `${num(v)}${unit}`} />
+          <YAxis {...axisProps} width={52} tickFormatter={(v: number) => `${compact(v)}${unit}`} />
           <Tooltip
             cursor={{ fill: 'var(--surface-hover)', radius: 6 }}
             content={({ active, payload, label }) =>
@@ -263,7 +266,7 @@ export function BarList({
           barCategoryGap="30%"
         >
           <CartesianGrid horizontal={false} stroke={CHART_INK.grid} />
-          <XAxis type="number" {...axisProps} tickFormatter={(v: number) => `${num(v)}${unit}`} />
+          <XAxis type="number" {...axisProps} tickFormatter={(v: number) => `${compact(v)}${unit}`} />
           <YAxis type="category" dataKey="name" {...axisProps} width={72} />
           <Tooltip
             cursor={{ fill: 'var(--surface-hover)', radius: 6 }}

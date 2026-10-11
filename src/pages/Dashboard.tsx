@@ -16,7 +16,7 @@ import {
   Users,
   WalletCards,
 } from 'lucide-react';
-import { useAuth, useCurrentUser } from '@/app/auth';
+import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
   attendanceFor,
@@ -281,7 +281,7 @@ function ChildDashboard({ student, forParent }: { student: User; forParent: bool
                     transition={{ duration: 0.3, delay: i * 0.04 }}
                     className="flex items-center gap-3 border-b border-line py-2.5 last:border-0"
                   >
-                    <span className="tnum w-14 shrink-0 text-[11.5px] font-medium text-ink-3">
+                    <span className="tnum min-w-14 shrink-0 whitespace-nowrap text-[11.5px] font-medium text-ink-3">
                       {formatTime(slot.start)}
                     </span>
                     <span
@@ -509,7 +509,7 @@ function TeacherDashboard() {
               <ul className="space-y-2">
                 {periods.map((p) => (
                   <li key={p.id} className="flex items-center gap-3 rounded-xl border border-line px-3.5 py-3">
-                    <span className="tnum w-16 shrink-0 text-[12.5px] font-semibold text-ink">
+                    <span className="tnum min-w-16 shrink-0 whitespace-nowrap text-[12.5px] font-semibold text-ink">
                       {formatTime(p.start)}
                     </span>
                     <span className="min-w-0 flex-1">
@@ -571,12 +571,13 @@ function TeacherDashboard() {
 function OfficeDashboard() {
   const user = useCurrentUser();
   const db = useDatabase();
+  const can = useCan();
   const { greeting, todayLabel, dayIndex } = useClock();
   const isSunday = dayIndex === 0;
   const school = theSchool(db);
 
   const students = studentsOf(db);
-  const staff = db.users.filter((u) => ['teacher', 'principal', 'admin', 'accountant'].includes(u.role));
+  const staff = db.users.filter((u) => !!u.employeeId);
   const today = todayISO();
   const todayAttendance = schoolAttendanceOn(db, today);
   const collection = collectionSummary(db);
@@ -684,12 +685,16 @@ function OfficeDashboard() {
       </div>
 
       <div className="mt-5 grid gap-5 xl:grid-cols-2">
-        <MotionCard delay={0.2}>
-          <CardHeader title="Outstanding by class" subtitle="Where to chase" />
-          <CardBody className="pt-2">
-            <BarList data={duesByClass(db)} valueLabel="Outstanding" height={230} />
-          </CardBody>
-        </MotionCard>
+        {/* A money report, so it follows report.view rather than being
+            shown to anyone who reaches the dashboard. */}
+        {can('report.view') ? (
+          <MotionCard delay={0.2}>
+            <CardHeader title="Outstanding by class" subtitle="Where to chase" />
+            <CardBody className="pt-2">
+              <BarList data={duesByClass(db)} valueLabel="Outstanding" height={230} />
+            </CardBody>
+          </MotionCard>
+        ) : null}
 
         <MotionCard delay={0.24}>
           <CardHeader title="School activity" subtitle="Circulars, events and the help desk" />
@@ -733,8 +738,9 @@ function OfficeDashboard() {
 export default function Dashboard() {
   const user = useCurrentUser();
   const { subject } = useAuth();
+  const can = useCan();
 
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) {
       return (
         <EmptyState
@@ -744,9 +750,13 @@ export default function Dashboard() {
         />
       );
     }
-    return <ChildDashboard student={subject} forParent={user.role === 'parent'} />;
+    return <ChildDashboard student={subject} forParent={user.roles.includes('parent')} />;
   }
 
-  if (user.role === 'teacher') return <TeacherDashboard />;
+  // Anyone who stands in front of a class, and cannot see the whole school,
+  // gets the teaching view rather than the office one.
+  if (!can('attendance.view.school') && (can('attendance.mark') || can('result.enter'))) {
+    return <TeacherDashboard />;
+  }
   return <OfficeDashboard />;
 }

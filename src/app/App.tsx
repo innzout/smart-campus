@@ -8,22 +8,29 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { Shell } from '@/components/layout/Shell';
 import { permissionsForPath } from './nav';
 import {
+  Academics,
   Attendance,
+  Branches,
   Circulars,
   Dashboard,
   Events,
   Fees,
   Homework,
+  Labs,
   Library,
   Login,
   Meetings,
   NotFound,
   Notifications,
+  Payroll,
   People,
+  Recruitment,
   Requests,
   Results,
+  Roles,
   SchoolMap,
   Settings,
+  Substitutions,
   Timetable,
   Transport,
   Visits,
@@ -99,6 +106,13 @@ function AppRoutes() {
         <Route path="campus" element={<Guard path="/campus"><SchoolMap /></Guard>} />
         <Route path="notifications" element={<Guard path="/notifications"><Notifications /></Guard>} />
         <Route path="students" element={<Guard path="/students"><People /></Guard>} />
+        <Route path="academics" element={<Guard path="/academics"><Academics /></Guard>} />
+        <Route path="recruitment" element={<Guard path="/recruitment"><Recruitment /></Guard>} />
+        <Route path="substitutions" element={<Guard path="/substitutions"><Substitutions /></Guard>} />
+        <Route path="labs" element={<Guard path="/labs"><Labs /></Guard>} />
+        <Route path="payroll" element={<Guard path="/payroll"><Payroll /></Guard>} />
+        <Route path="roles" element={<Guard path="/roles"><Roles /></Guard>} />
+        <Route path="branches" element={<Guard path="/branches"><Branches /></Guard>} />
         <Route path="settings" element={<Settings />} />
 
         <Route path="*" element={<NotFound />} />

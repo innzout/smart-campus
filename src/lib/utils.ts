@@ -143,3 +143,31 @@ export function humanise(value: string) {
   const s = value.replace(/[-_]/g, ' ');
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
+
+/**
+ * The school day, as a list of periods.
+ *
+ * Shared so that a class created in the app gets the same week-shape as one
+ * that came from the seed — a timetable the scheduler can then fill in.
+ */
+export const SCHOOL_PERIODS: { start: string; end: string; kind: 'period' | 'break' | 'lunch' }[] = [
+  { start: '09:00', end: '09:40', kind: 'period' },
+  { start: '09:40', end: '10:20', kind: 'period' },
+  { start: '10:20', end: '10:35', kind: 'break' },
+  { start: '10:35', end: '11:15', kind: 'period' },
+  { start: '11:15', end: '11:55', kind: 'period' },
+  { start: '11:55', end: '12:35', kind: 'lunch' },
+  { start: '12:35', end: '13:15', kind: 'period' },
+  { start: '13:15', end: '13:55', kind: 'period' },
+  { start: '13:55', end: '14:35', kind: 'period' },
+];
+
+/**
+ * Whether a class sits for a given period on a given day. Saturday is a half
+ * day for everyone, and the primary classes go home before the last two.
+ */
+export function classSitsFor(grade: number, day: number, index: number) {
+  if (day === 6 && index > 4) return false;
+  if (grade <= 5 && index > 6) return false;
+  return true;
+}

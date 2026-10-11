@@ -1,6 +1,7 @@
 [
   {
     "id": "evt-1",
+    "schoolId": "sch-1",
     "title": "Parent–Teacher Meeting",
     "description": "Class-wise meetings with subject teachers. Quarterly report cards are handed over in person.",
     "category": "PTM",
@@ -12,6 +13,7 @@
   },
   {
     "id": "evt-2",
+    "schoolId": "sch-1",
     "title": "Deepavali Celebration",
     "description": "Cultural programmes by students, followed by sweets distribution. Students may wear traditional dress.",
     "category": "Cultural",
@@ -23,8 +25,9 @@
   },
   {
     "id": "evt-3",
+    "schoolId": "sch-1",
     "title": "Inter-House Sports Meet",
-    "description": "Track and field events for classes 6 to 10. Parents are welcome to attend and cheer.",
+    "description": "Track and field events for all classes. Parents are welcome to attend and cheer.",
     "category": "Sports",
     "date": "2026-10-29",
     "time": "08:00",
@@ -34,6 +37,7 @@
   },
   {
     "id": "evt-4",
+    "schoolId": "sch-1",
     "title": "Science Exhibition",
     "description": "Students present working models and charts. Judged by teachers from neighbouring schools.",
     "category": "Academic",
@@ -45,6 +49,7 @@
   },
   {
     "id": "evt-5",
+    "schoolId": "sch-1",
     "title": "Annual Day",
     "description": "The school’s flagship celebration — dance, drama, prize distribution and the Chief Guest’s address.",
     "category": "Cultural",
@@ -52,6 +57,18 @@
     "time": "17:00",
     "venue": "School Auditorium",
     "organiser": "Cultural Committee",
+    "forClasses": "all"
+  },
+  {
+    "id": "evt-m1",
+    "schoolId": "sch-2",
+    "title": "Annual Day — Mettupalayam",
+    "description": "Dance, drama and prize distribution for classes 1 to 5.",
+    "category": "Cultural",
+    "date": "2026-11-01",
+    "time": "16:30",
+    "venue": "School Hall",
+    "organiser": "Headmistress’s Office",
     "forClasses": "all"
   }
 ]

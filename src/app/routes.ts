@@ -21,6 +21,13 @@ const loaders = {
   '/campus': () => import('@/pages/SchoolMap'),
   '/notifications': () => import('@/pages/Notifications'),
   '/students': () => import('@/pages/People'),
+  '/academics': () => import('@/pages/Academics'),
+  '/recruitment': () => import('@/pages/Recruitment'),
+  '/substitutions': () => import('@/pages/Substitutions'),
+  '/labs': () => import('@/pages/Labs'),
+  '/payroll': () => import('@/pages/Payroll'),
+  '/roles': () => import('@/pages/Roles'),
+  '/branches': () => import('@/pages/Branches'),
   '/settings': () => import('@/pages/Settings'),
 } as const;
 
@@ -74,6 +81,13 @@ export const Requests = lazy(loaders['/requests']);
 export const SchoolMap = lazy(loaders['/campus']);
 export const Notifications = lazy(loaders['/notifications']);
 export const People = lazy(loaders['/students']);
+export const Academics = lazy(loaders['/academics']);
+export const Recruitment = lazy(loaders['/recruitment']);
+export const Substitutions = lazy(loaders['/substitutions']);
+export const Labs = lazy(loaders['/labs']);
+export const Payroll = lazy(loaders['/payroll']);
+export const Roles = lazy(loaders['/roles']);
+export const Branches = lazy(loaders['/branches']);
 export const Settings = lazy(loaders['/settings']);
 
 export const Login = lazy(() => import('@/pages/Login'));

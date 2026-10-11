@@ -1,0 +1,800 @@
+[
+  {
+    "id": "csub-1",
+    "classId": "cls-1A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-s1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-2",
+    "classId": "cls-1A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-s1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-3",
+    "classId": "cls-1A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-s1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-4",
+    "classId": "cls-1A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-s1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-5",
+    "classId": "cls-1A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-6",
+    "classId": "cls-2A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-s2",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-7",
+    "classId": "cls-2A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-s2",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-8",
+    "classId": "cls-2A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-s2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-9",
+    "classId": "cls-2A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-s2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-10",
+    "classId": "cls-2A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-11",
+    "classId": "cls-3A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-s3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-12",
+    "classId": "cls-3A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-s3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-13",
+    "classId": "cls-3A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-s3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-14",
+    "classId": "cls-3A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-s3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-15",
+    "classId": "cls-3A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-16",
+    "classId": "cls-4A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-s4",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-17",
+    "classId": "cls-4A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-s4",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-18",
+    "classId": "cls-4A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-s4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-19",
+    "classId": "cls-4A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-s4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-20",
+    "classId": "cls-4A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-21",
+    "classId": "cls-5A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-s5",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-22",
+    "classId": "cls-5A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-s5",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-23",
+    "classId": "cls-5A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-s5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-24",
+    "classId": "cls-5A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-s5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-25",
+    "classId": "cls-5A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-26",
+    "classId": "cls-6A",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t7",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-27",
+    "classId": "cls-6A",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-28",
+    "classId": "cls-6A",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-29",
+    "classId": "cls-6A",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-30",
+    "classId": "cls-6A",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t11",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-31",
+    "classId": "cls-6A",
+    "subjectId": "sub-csc",
+    "teacherId": "usr-t6",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-32",
+    "classId": "cls-6A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-33",
+    "classId": "cls-7A",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-34",
+    "classId": "cls-7A",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-35",
+    "classId": "cls-7A",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-36",
+    "classId": "cls-7A",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t10",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-37",
+    "classId": "cls-7A",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-38",
+    "classId": "cls-7A",
+    "subjectId": "sub-csc",
+    "teacherId": "usr-t6",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-39",
+    "classId": "cls-7A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-40",
+    "classId": "cls-8A",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t7",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-41",
+    "classId": "cls-8A",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-42",
+    "classId": "cls-8A",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-43",
+    "classId": "cls-8A",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-44",
+    "classId": "cls-8A",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t11",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-45",
+    "classId": "cls-8A",
+    "subjectId": "sub-csc",
+    "teacherId": "usr-t6",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-46",
+    "classId": "cls-8A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-47",
+    "classId": "cls-8B",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-48",
+    "classId": "cls-8B",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-49",
+    "classId": "cls-8B",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-50",
+    "classId": "cls-8B",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t10",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-51",
+    "classId": "cls-8B",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-52",
+    "classId": "cls-8B",
+    "subjectId": "sub-csc",
+    "teacherId": "usr-t6",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-53",
+    "classId": "cls-8B",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-54",
+    "classId": "cls-9A",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t7",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-55",
+    "classId": "cls-9A",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-56",
+    "classId": "cls-9A",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-57",
+    "classId": "cls-9A",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-58",
+    "classId": "cls-9A",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t11",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-59",
+    "classId": "cls-9A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-60",
+    "classId": "cls-10A",
+    "subjectId": "sub-tam2",
+    "teacherId": "usr-t1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-61",
+    "classId": "cls-10A",
+    "subjectId": "sub-eng2",
+    "teacherId": "usr-t9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-62",
+    "classId": "cls-10A",
+    "subjectId": "sub-mat2",
+    "teacherId": "usr-t2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-63",
+    "classId": "cls-10A",
+    "subjectId": "sub-sci",
+    "teacherId": "usr-t10",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-64",
+    "classId": "cls-10A",
+    "subjectId": "sub-soc",
+    "teacherId": "usr-t5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-65",
+    "classId": "cls-10A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-pe1",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-66",
+    "classId": "cls-11A",
+    "subjectId": "sub-tam3",
+    "teacherId": "usr-p9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-67",
+    "classId": "cls-11A",
+    "subjectId": "sub-eng3",
+    "teacherId": "usr-p10",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-68",
+    "classId": "cls-11A",
+    "subjectId": "sub-mat3",
+    "teacherId": "usr-p1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-69",
+    "classId": "cls-11A",
+    "subjectId": "sub-phy",
+    "teacherId": "usr-p2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-70",
+    "classId": "cls-11A",
+    "subjectId": "sub-che",
+    "teacherId": "usr-p3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-71",
+    "classId": "cls-11A",
+    "subjectId": "sub-bio",
+    "teacherId": "usr-p4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-72",
+    "classId": "cls-11B",
+    "subjectId": "sub-tam3",
+    "teacherId": "usr-p9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-73",
+    "classId": "cls-11B",
+    "subjectId": "sub-eng3",
+    "teacherId": "usr-p10",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-74",
+    "classId": "cls-11B",
+    "subjectId": "sub-acc",
+    "teacherId": "usr-p7",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-75",
+    "classId": "cls-11B",
+    "subjectId": "sub-com",
+    "teacherId": "usr-p7",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-76",
+    "classId": "cls-11B",
+    "subjectId": "sub-eco",
+    "teacherId": "usr-p8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-77",
+    "classId": "cls-11B",
+    "subjectId": "sub-bma",
+    "teacherId": "usr-p8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-78",
+    "classId": "cls-12A",
+    "subjectId": "sub-tam3",
+    "teacherId": "usr-p9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-79",
+    "classId": "cls-12A",
+    "subjectId": "sub-eng3",
+    "teacherId": "usr-p10",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-80",
+    "classId": "cls-12A",
+    "subjectId": "sub-mat3",
+    "teacherId": "usr-p1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-81",
+    "classId": "cls-12A",
+    "subjectId": "sub-phy",
+    "teacherId": "usr-p2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-82",
+    "classId": "cls-12A",
+    "subjectId": "sub-che",
+    "teacherId": "usr-p3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-83",
+    "classId": "cls-12A",
+    "subjectId": "sub-bio",
+    "teacherId": "usr-p4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-84",
+    "classId": "cls-12B",
+    "subjectId": "sub-tam3",
+    "teacherId": "usr-p9",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-85",
+    "classId": "cls-12B",
+    "subjectId": "sub-eng3",
+    "teacherId": "usr-p10",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-86",
+    "classId": "cls-12B",
+    "subjectId": "sub-acc",
+    "teacherId": "usr-p7",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-87",
+    "classId": "cls-12B",
+    "subjectId": "sub-com",
+    "teacherId": "usr-p7",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-88",
+    "classId": "cls-12B",
+    "subjectId": "sub-eco",
+    "teacherId": "usr-p8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-89",
+    "classId": "cls-12B",
+    "subjectId": "sub-bma",
+    "teacherId": "usr-p8",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-90",
+    "classId": "cls-m1A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-b2-s1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-91",
+    "classId": "cls-m1A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-b2-s1",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-92",
+    "classId": "cls-m1A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-b2-s1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-93",
+    "classId": "cls-m1A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-b2-s1",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-94",
+    "classId": "cls-m1A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-b2-pe",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-95",
+    "classId": "cls-m2A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-b2-s2",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-96",
+    "classId": "cls-m2A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-b2-s2",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-97",
+    "classId": "cls-m2A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-b2-s2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-98",
+    "classId": "cls-m2A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-b2-s2",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-99",
+    "classId": "cls-m2A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-b2-pe",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-100",
+    "classId": "cls-m3A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-b2-s3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-101",
+    "classId": "cls-m3A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-b2-s3",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-102",
+    "classId": "cls-m3A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-b2-s3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-103",
+    "classId": "cls-m3A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-b2-s3",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-104",
+    "classId": "cls-m3A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-b2-pe",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-105",
+    "classId": "cls-m4A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-b2-s4",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-106",
+    "classId": "cls-m4A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-b2-s4",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-107",
+    "classId": "cls-m4A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-b2-s4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-108",
+    "classId": "cls-m4A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-b2-s4",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-109",
+    "classId": "cls-m4A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-b2-pe",
+    "periodsPerWeek": 2
+  },
+  {
+    "id": "csub-110",
+    "classId": "cls-m5A",
+    "subjectId": "sub-tam1",
+    "teacherId": "usr-b2-s5",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-111",
+    "classId": "cls-m5A",
+    "subjectId": "sub-eng1",
+    "teacherId": "usr-b2-s5",
+    "periodsPerWeek": 6
+  },
+  {
+    "id": "csub-112",
+    "classId": "cls-m5A",
+    "subjectId": "sub-mat1",
+    "teacherId": "usr-b2-s5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-113",
+    "classId": "cls-m5A",
+    "subjectId": "sub-evs",
+    "teacherId": "usr-b2-s5",
+    "periodsPerWeek": 5
+  },
+  {
+    "id": "csub-114",
+    "classId": "cls-m5A",
+    "subjectId": "sub-pe",
+    "teacherId": "usr-b2-pe",
+    "periodsPerWeek": 2
+  }
+]

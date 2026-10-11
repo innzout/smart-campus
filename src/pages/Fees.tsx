@@ -206,6 +206,7 @@ function ChildFees({ student }: { student: User }) {
   const summary = feeSummary(db, student.id);
   const history = paymentsFor(db, student.id);
   const [paying, setPaying] = useState<FeeItem | null>(null);
+  const canPay = useCan()('fee.pay');
 
   const slices = [
     { label: 'Paid', value: summary.paid, color: 'var(--s3)' },
@@ -246,8 +247,14 @@ function ChildFees({ student }: { student: User }) {
       header: '',
       align: 'right',
       cell: (r) =>
+        // A school that does not take online payment can withdraw fee.pay and
+        // the button goes with it, rather than failing at the gateway.
         r.paid < r.total ? (
-          <Button size="sm" onClick={() => setPaying(r)}>Pay</Button>
+          canPay ? (
+            <Button size="sm" onClick={() => setPaying(r)}>Pay</Button>
+          ) : (
+            <span className="text-[12px] text-ink-3">Pay at the office</span>
+          )
         ) : (
           <Button size="sm" variant="ghost" icon={<Receipt className="size-3.5" />} onClick={() => toast.info('Receipt download is simulated in this demo.')}>
             Receipt
@@ -344,7 +351,7 @@ function OfficeFees() {
   const list = defaulters(db);
 
   const rows = db.users
-    .filter((u) => u.role === 'student')
+    .filter((u) => u.roles.includes('student'))
     .map((student) => {
       const s = feeSummary(db, student.id);
       return {

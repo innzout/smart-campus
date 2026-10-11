@@ -224,7 +224,10 @@ function ClassRegister() {
 
   const myClasses = classesForTeacher(db, user.id);
   const [classId, setClassId] = useState(
-    db.classes.find((c) => c.classTeacherId === user.id)?.id ?? myClasses[0]?.id ?? db.classes[0]!.id,
+    db.classes.find((c) => c.classTeacherId === user.id)?.id ??
+      myClasses[0]?.id ??
+      db.classes[0]?.id ??
+      '',
   );
   const [date, setDate] = useState(todayISO());
   const roster = studentsInClass(db, classId);
@@ -328,7 +331,7 @@ function ClassRegister() {
                     status === 'leave' && 'border-line-strong bg-surface-2',
                   )}
                 >
-                  <span className="tnum w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">
+                  <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">
                     {s.rollNo}
                   </span>
                   <Avatar name={s.name} hue={s.avatarHue} size="sm" />
@@ -363,7 +366,7 @@ function ClassRegister() {
                   <span className="w-28 shrink-0">
                     <Progress value={r.summary.percent} tone="critical" className="h-1.5" label="Attendance" />
                   </span>
-                  <span className="tnum w-12 shrink-0 text-right text-[13px] font-semibold text-[--color-critical]">
+                  <span className="tnum min-w-12 shrink-0 text-right text-[13px] font-semibold whitespace-nowrap text-[--color-critical]">
                     {pct(r.summary.percent, 0)}
                   </span>
                 </li>
@@ -465,7 +468,7 @@ function SchoolAttendance() {
                     </span>
                   </span>
                   <StatusPill status="at-risk" />
-                  <span className="tnum w-12 shrink-0 text-right text-[13px] font-semibold text-[--color-critical]">
+                  <span className="tnum min-w-12 shrink-0 text-right text-[13px] font-semibold whitespace-nowrap text-[--color-critical]">
                     {pct(r.summary.percent, 0)}
                   </span>
                 </li>
@@ -483,9 +486,9 @@ export default function Attendance() {
   const { subject } = useAuth();
   const can = useCan();
 
-  if (user.role === 'parent' || user.role === 'student') {
+  if (user.roles.includes('parent') || user.roles.includes('student')) {
     if (!subject) return <EmptyState icon={<UserX className="size-6" />} title="No student linked to this account" />;
-    return <ChildAttendance student={subject} forParent={user.role === 'parent'} />;
+    return <ChildAttendance student={subject} forParent={user.roles.includes('parent')} />;
   }
   // Office roles get the whole-school picture; class teachers get the register.
   if (can('attendance.view.school')) return <SchoolAttendance />;

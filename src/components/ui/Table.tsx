@@ -72,7 +72,10 @@ export function DataTable<T extends { id: string }>({
                 scope="col"
                 style={col.width ? { width: col.width } : undefined}
                 className={cn(
-                  'pb-2.5 text-[11.5px] font-semibold tracking-wide text-ink-3 uppercase',
+                  // Horizontal padding so adjacent columns cannot touch. Without
+                  // it a right-aligned number sits flush against the next
+                  // column and reads as if it were hidden behind it.
+                  'px-3 pb-2.5 text-[11.5px] font-semibold tracking-wide text-ink-3 uppercase first:pl-0 last:pr-0',
                   alignClass(col.align),
                   col.hideOnMobile && 'hidden sm:table-cell',
                 )}
@@ -118,7 +121,7 @@ export function DataTable<T extends { id: string }>({
                 <td
                   key={col.key}
                   className={cn(
-                    'py-3.5 align-middle text-ink-2',
+                    'px-3 py-3.5 align-middle text-ink-2 first:pl-0 last:pr-0',
                     alignClass(col.align),
                     col.hideOnMobile && 'hidden sm:table-cell',
                   )}
