@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import { GraduationCap, Phone, Plus, Search, UserCheck, Users, UserX } from 'lucide-react';
 import { useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { attendanceFor, classLabel, feeSummary, summariseAttendance, userById } from '@/lib/queries';
+import { overallAttendance, sectionLabel, feeSummary, userById } from '@/lib/queries';
 import { admitStudent, toggleUserStatus } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
@@ -27,7 +27,7 @@ const schema = z.object({
     .trim()
     .min(3, 'Enter the student’s full name.')
     .regex(/^[A-Za-z.'\- ]+$/, 'Names use letters, spaces, hyphens and full stops only.'),
-  classId: z.string().min(1, 'Choose a class.'),
+  sectionId: z.string().min(1, 'Choose a class.'),
   rollNo: z.coerce.number({ message: 'Enter a roll number.' }).int().min(1).max(99),
   guardianName: z.string().trim().min(3, 'Enter the parent or guardian’s name.'),
   guardianPhone: z
@@ -46,7 +46,7 @@ export default function People() {
   // Seeing the staff register is a separate matter from seeing the children —
   // a librarian has business with one and not the other.
   const canSeeStaff = can('staff.view');
-  const [classId, setClassId] = useState<'all' | string>('all');
+  const [sectionId, setClassId] = useState<'all' | string>('all');
   const [query, setQuery] = useState('');
   const [admitOpen, setAdmitOpen] = useState(false);
   const [detail, setDetail] = useState<User | null>(null);
@@ -59,22 +59,22 @@ export default function People() {
   } = useForm<z.input<typeof schema>>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
-    defaultValues: { name: '', classId: db.classes[0]?.id ?? '', rollNo: 1, guardianName: '', guardianPhone: '', dateOfBirth: '' },
+    defaultValues: { name: '', sectionId: db.sections[0]?.id ?? '', rollNo: 1, guardianName: '', guardianPhone: '', dateOfBirth: '' },
   });
 
   const students = useMemo(() => {
     const q = query.trim().toLowerCase();
     return db.users
       .filter((u) => u.roles.includes('student'))
-      .filter((u) => (classId === 'all' ? true : u.classId === classId))
+      .filter((u) => (sectionId === 'all' ? true : u.sectionId === sectionId))
       .filter(
         (u) =>
           !q ||
           u.name.toLowerCase().includes(q) ||
-          (u.admissionNo ?? '').toLowerCase().includes(q) ||
+          (u.registerNo ?? '').toLowerCase().includes(q) ||
           String(u.rollNo ?? '').includes(q),
       );
-  }, [db.users, classId, query]);
+  }, [db.users, sectionId, query]);
 
   const staff = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -94,20 +94,20 @@ export default function People() {
           <Avatar name={u.name} hue={u.avatarHue} size="sm" />
           <div className="min-w-0">
             <p className="truncate font-semibold text-ink">{u.name}</p>
-            <p className="mt-0.5 truncate text-[11.5px] text-ink-3">{u.admissionNo}</p>
+            <p className="mt-0.5 truncate text-[11.5px] text-ink-3">{u.registerNo}</p>
           </div>
         </div>
       ),
     },
-    { key: 'class', header: 'Class', sortBy: (u) => classLabel(db, u.classId), cell: (u) => classLabel(db, u.classId) },
+    { key: 'class', header: 'Class', sortBy: (u) => sectionLabel(db, u.sectionId), cell: (u) => sectionLabel(db, u.sectionId) },
     {
       key: 'attendance',
       header: 'Attendance',
       align: 'right',
       hideOnMobile: true,
-      sortBy: (u) => summariseAttendance(attendanceFor(db, u.id)).percent,
+      sortBy: (u) => overallAttendance(db, u.id).percent,
       cell: (u) => {
-        const s = summariseAttendance(attendanceFor(db, u.id));
+        const s = overallAttendance(db, u.id);
         return (
           <span className={cn('tnum font-semibold', s.percent < ATTENDANCE_THRESHOLD ? 'text-[--color-critical]' : 'text-ink')}>
             {pct(s.percent, 0)}
@@ -186,7 +186,7 @@ export default function People() {
       align: 'center',
       hideOnMobile: true,
       cell: (u) => {
-        const cls = db.classes.find((c) => c.classTeacherId === u.id);
+        const cls = db.sections.find((c) => c.tutorId === u.id);
         return cls ? <Badge tone="info">{cls.label}</Badge> : <span className="text-ink-3">—</span>;
       },
     },
@@ -217,7 +217,7 @@ export default function People() {
     <>
       <PageHeader
         title="Students & Staff"
-        subtitle={`${num(allStudents.length)} students on roll · ${num(staff.length)} staff · ${db.classes.length} classes`}
+        subtitle={`${num(allStudents.length)} students on roll · ${num(staff.length)} staff · ${db.sections.length} classes`}
         action={
           can('student.manage') ? (
             <Button onClick={() => setAdmitOpen(true)} icon={<Plus className="size-4" />}>
@@ -228,8 +228,8 @@ export default function People() {
       />
 
       <StatGrid>
-        <StatTile label="Students on roll" value={num(allStudents.length)} note={`Across ${db.classes.length} classes`} icon={Users} />
-        <StatTile label="Teaching staff" value={num(db.users.filter((u) => u.roles.includes('subject-teacher') || u.roles.includes('class-teacher')).length)} note="Class and subject teachers" icon={GraduationCap} delay={0.06} />
+        <StatTile label="Students on roll" value={num(allStudents.length)} note={`Across ${db.sections.length} classes`} icon={Users} />
+        <StatTile label="Teaching staff" value={num(db.users.filter((u) => u.roles.includes('faculty') || u.roles.includes('tutor')).length)} note="Class and subject teachers" icon={GraduationCap} delay={0.06} />
         <StatTile label="Parent accounts" value={num(db.users.filter((u) => u.roles.includes('parent')).length)} note="Using the mobile app" icon={UserCheck} tone="good" delay={0.12} />
         <StatTile label="Inactive" value={num(db.users.filter((u) => u.status === 'inactive').length)} note="Cannot sign in" icon={UserX} tone={db.users.some((u) => u.status === 'inactive') ? 'warning' : 'good'} delay={0.18} />
       </StatGrid>
@@ -266,11 +266,11 @@ export default function People() {
               <div className="no-scrollbar mb-4 flex gap-2 overflow-x-auto pb-1">
                 <Segmented
                   size="sm"
-                  value={classId}
+                  value={sectionId}
                   onChange={setClassId}
                   options={[
                     { value: 'all' as const, label: 'All classes' },
-                    ...db.classes.map((c) => ({ value: c.id, label: c.label })),
+                    ...db.sections.map((c) => ({ value: c.id, label: c.label })),
                   ]}
                 />
               </div>
@@ -299,12 +299,12 @@ export default function People() {
           open
           onClose={() => setDetail(null)}
           title={detail.name}
-          description={`${classLabel(db, detail.classId)} · roll ${detail.rollNo} · ${detail.admissionNo}`}
+          description={`${sectionLabel(db, detail.sectionId)} · roll ${detail.rollNo} · ${detail.registerNo}`}
           footer={<Button onClick={() => setDetail(null)}>Close</Button>}
         >
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              ['Attendance', pct(summariseAttendance(attendanceFor(db, detail.id)).percent, 1)],
+              ['Attendance', pct(overallAttendance(db, detail.id).percent, 1)],
               ['Fees outstanding', money(feeSummary(db, detail.id).pending)],
               ['Date of birth', detail.dateOfBirth ?? '—'],
               ['Blood group', detail.bloodGroup ?? '—'],
@@ -347,7 +347,7 @@ export default function People() {
             await new Promise((r) => setTimeout(r, 400));
             admitStudent({
               name: values.name as string,
-              classId: values.classId as string,
+              sectionId: values.sectionId as string,
               rollNo: Number(values.rollNo),
               guardianName: values.guardianName as string,
               guardianPhone: values.guardianPhone as string,
@@ -363,9 +363,9 @@ export default function People() {
           </Field>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Class" error={errors.classId?.message} required htmlFor="s-class">
-              <Select id="s-class" invalid={!!errors.classId} {...register('classId')}>
-                {db.classes.map((c) => (
+            <Field label="Class" error={errors.sectionId?.message} required htmlFor="s-class">
+              <Select id="s-class" invalid={!!errors.sectionId} {...register('sectionId')}>
+                {db.sections.map((c) => (
                   <option key={c.id} value={c.id}>{c.label}</option>
                 ))}
               </Select>

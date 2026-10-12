@@ -305,7 +305,7 @@ export default function Payroll() {
         <CardBody className="pt-4">
           {(() => {
             const staff = db.users.filter(
-              (u) => !!u.employeeId && u.designation !== 'correspondent',
+              (u) => !!u.employeeId && u.designation !== 'chairman',
             );
             const without = staff.filter((u) => !db.salaries.some((s) => s.staffId === u.id));
             return (

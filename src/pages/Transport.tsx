@@ -3,7 +3,7 @@ import { Bus, Clock, MapPin, Phone, Users } from 'lucide-react';
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
-  classLabel,
+  sectionLabel,
   routeRiders,
   transportFor,
   vehicleCompliance,
@@ -77,7 +77,7 @@ function ChildTransport({ student }: { student: User }) {
   if (!link) {
     return (
       <>
-        <PageHeader title="Transport" subtitle={`${student.name} · ${classLabel(db, student.classId)}`} />
+        <PageHeader title="Transport" subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)}`} />
         <MotionCard>
           <EmptyState
             icon={<Bus className="size-6" />}
@@ -95,7 +95,7 @@ function ChildTransport({ student }: { student: User }) {
     <>
       <PageHeader
         title="Transport"
-        subtitle={`${student.name} · ${classLabel(db, student.classId)} · ${route.name}`}
+        subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)} · ${route.name}`}
       />
 
       <StatGrid>
@@ -308,7 +308,7 @@ function AllRoutes() {
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-semibold text-ink">{student!.name}</span>
                     <span className="block truncate text-[11.5px] text-ink-3">
-                      {classLabel(db, student!.classId)} · {link.stop}
+                      {sectionLabel(db, student!.sectionId)} · {link.stop}
                     </span>
                   </span>
                 </li>
@@ -358,7 +358,7 @@ function AllotDialog({ onClose }: { onClose: () => void }) {
   );
   const candidates = studentsOf(db)
     .filter((st) => !riding.has(st.id))
-    .sort((a, b) => classLabel(db, a.classId).localeCompare(classLabel(db, b.classId)));
+    .sort((a, b) => sectionLabel(db, a.sectionId).localeCompare(sectionLabel(db, b.sectionId)));
 
   return (
     <Modal
@@ -419,7 +419,7 @@ function AllotDialog({ onClose }: { onClose: () => void }) {
             <option value="">Choose a student…</option>
             {candidates.map((st) => (
               <option key={st.id} value={st.id}>
-                {classLabel(db, st.classId)} · {st.name} · roll {st.rollNo}
+                {sectionLabel(db, st.sectionId)} · {st.name} · roll {st.rollNo}
               </option>
             ))}
           </Select>
@@ -669,7 +669,7 @@ function RequestQueue({ canManage }: { canManage: boolean }) {
                     {student?.name ?? 'Student'}
                   </span>
                   <span className="mt-0.5 block truncate text-[12px] text-ink-3">
-                    {classLabel(db, student?.classId)} · {route?.name} · boarding at {link.stop} ·
+                    {sectionLabel(db, student?.sectionId)} · {route?.name} · boarding at {link.stop} ·
                     asked {formatDate(link.requestedOn)}
                   </span>
                 </span>
@@ -896,7 +896,7 @@ function RequestTransport({ student }: { student: User }) {
       <>
         <PageHeader
           title="Transport"
-          subtitle={`${student.name} · ${classLabel(db, student.classId)}`}
+          subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)}`}
         />
         <MotionCard delay={0.1}>
           <CardHeader title="Your request" subtitle="The school office will confirm a seat" />
@@ -929,7 +929,7 @@ function RequestTransport({ student }: { student: User }) {
     <>
       <PageHeader
         title="Transport"
-        subtitle={`${student.name} · ${classLabel(db, student.classId)}`}
+        subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)}`}
       />
       <MotionCard delay={0.1}>
         <CardHeader

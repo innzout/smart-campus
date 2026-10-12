@@ -1,10 +1,10 @@
 [
   {
     "id": "rt-1",
-    "schoolId": "sch-1",
+    "collegeId": "col-1",
     "name": "Route 1 — Gandhipuram",
     "vehicleId": "veh-1",
-    "fee": 9000,
+    "fee": 14000,
     "stops": [
       {
         "name": "Gandhipuram Bus Stand",
@@ -26,10 +26,10 @@
   },
   {
     "id": "rt-2",
-    "schoolId": "sch-1",
+    "collegeId": "col-1",
     "name": "Route 2 — Peelamedu",
     "vehicleId": "veh-2",
-    "fee": 9000,
+    "fee": 14000,
     "stops": [
       {
         "name": "Peelamedu Signal",
@@ -51,10 +51,10 @@
   },
   {
     "id": "rt-3",
-    "schoolId": "sch-1",
+    "collegeId": "col-1",
     "name": "Route 3 — Saravanampatti",
     "vehicleId": "veh-3",
-    "fee": 7500,
+    "fee": 11000,
     "stops": [
       {
         "name": "Saravanampatti Junction",
@@ -76,51 +76,26 @@
   },
   {
     "id": "rt-4",
-    "schoolId": "sch-1",
-    "name": "Route 4 — R.S. Puram",
+    "collegeId": "col-1",
+    "name": "Route 4 — Mettupalayam Road",
     "vehicleId": "veh-4",
-    "fee": 10500,
+    "fee": 16000,
     "stops": [
       {
-        "name": "R.S. Puram West",
+        "name": "Thudiyalur",
         "time": "07:00"
       },
       {
-        "name": "DB Road",
+        "name": "Periyanaickenpalayam",
         "time": "07:12"
       },
       {
-        "name": "Race Course",
+        "name": "Karamadai",
         "time": "07:24"
       },
       {
-        "name": "Puliakulam",
+        "name": "Mettupalayam Road",
         "time": "07:36"
-      }
-    ]
-  },
-  {
-    "id": "rt-m1",
-    "schoolId": "sch-2",
-    "name": "Route 1 — Annur Road",
-    "vehicleId": "veh-m1",
-    "fee": 6000,
-    "stops": [
-      {
-        "name": "Annur Road Junction",
-        "time": "07:00"
-      },
-      {
-        "name": "Sirumugai Road",
-        "time": "07:10"
-      },
-      {
-        "name": "Karamadai Bypass",
-        "time": "07:20"
-      },
-      {
-        "name": "Mettupalayam Bus Stand",
-        "time": "07:30"
       }
     ]
   }

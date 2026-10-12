@@ -1,11 +1,11 @@
 /**
- * Seed generator for the school demo database.
+ * Seed generator for the college demo database.
  *
- * Models a Tamil Nadu matriculation higher secondary school run by a trust:
- * classes 1 to 12 across four stages, Higher Secondary subject groups,
- * laboratories with practical batches, staff recruitment with documents,
- * daily attendance, term exams, fees, transport with vehicle compliance,
- * and a simulated payroll.
+ * Models a Tamil Nadu autonomous arts and science college affiliated to
+ * Bharathiar University: departments, programmes, batches moving through
+ * semesters, courses carrying credits, per-hour attendance, internal plus
+ * end-semester assessment producing a GPA and a CGPA, arrears, placements and
+ * a hostel.
  *
  * Dates are generated relative to today, so the demo is always current.
  * Run with `node scripts/seed.mjs`.
@@ -18,14 +18,14 @@ const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data');
 mkdirSync(OUT, { recursive: true });
 
 /* Seeded PRNG so every regeneration is identical. */
-let seed = 20261011;
+let seed = 20261012;
 const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff);
 const pick = (a) => a[Math.floor(rnd() * a.length)];
 const between = (min, max) => min + Math.floor(rnd() * (max - min + 1));
 const write = (name, data) =>
   writeFileSync(join(OUT, `${name}.json`), JSON.stringify(data, null, 2) + '\n');
 
-const pad = (n) => String(n).padStart(2, '0');
+const pad = (n, w = 2) => String(n).padStart(w, '0');
 const TODAY = new Date();
 const iso = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 const shift = (days) => {
@@ -35,20 +35,22 @@ const shift = (days) => {
 };
 const TODAY_ISO = iso(TODAY);
 
-/* TN academic year runs June to April. */
-const AY_START_YEAR = TODAY.getMonth() >= 5 ? TODAY.getFullYear() : TODAY.getFullYear() - 1;
-const ACADEMIC_YEAR = `${AY_START_YEAR}-${String(AY_START_YEAR + 1).slice(2)}`;
+/* A Tamil Nadu academic year runs June to April; odd semesters sit in it first. */
 const month = TODAY.getMonth();
-const CURRENT_TERM = month >= 5 && month <= 8 ? 1 : month >= 9 && month <= 11 ? 2 : 3;
+const AY_START = month >= 5 ? TODAY.getFullYear() : TODAY.getFullYear() - 1;
+const ACADEMIC_YEAR = `${AY_START}-${String(AY_START + 1).slice(2)}`;
+const TERM = month >= 5 && month <= 10 ? 'odd' : 'even';
+/** Semesters in session: the odd term teaches 1, 3, 5; the even term 2, 4, 6. */
+const SEM_OFFSET = TERM === 'odd' ? 1 : 2;
 
-/* ── the trust and its branches ──────────────────────────────────────── */
+/* ── the trust and the college ─────────────────────────────────────────── */
 
 const group = [
   {
     id: 'grp-1',
     name: 'Sri Vidya Educational Trust',
     trustName: 'Sri Vidya Educational and Charitable Trust',
-    registrationNo: `TN/CBE/TRUST/${AY_START_YEAR - 24}/318`,
+    registrationNo: `TN/CBE/TRUST/${AY_START - 24}/318`,
     chairman: 'Mr. V. Ramanathan',
     address: 'Saravanampatti, Coimbatore 641035, Tamil Nadu',
     phone: '+91 422 265 4400',
@@ -56,416 +58,630 @@ const group = [
   },
 ];
 
-const schools = [
+const COLLEGE_ID = 'col-1';
+
+const colleges = [
   {
-    id: 'sch-1',
+    id: COLLEGE_ID,
     groupId: 'grp-1',
-    name: 'Sri Vidya Mandir Matriculation Higher Secondary School',
-    shortName: 'Sri Vidya Mandir',
-    code: '33124508',
-    board: 'Tamil Nadu State Board (Matriculation)',
+    name: 'Sri Vidya Arts and Science College (Autonomous)',
+    shortName: 'Sri Vidya College',
+    code: 'C-41238',
+    affiliatedTo: 'Bharathiar University, Coimbatore',
+    autonomous: true,
+    naacGrade: 'A+ (CGPA 3.41)',
     tagline: 'அறிவே ஆற்றல்',
     taglineEn: 'Knowledge is power',
     address: 'Saravanampatti Main Road',
     city: 'Coimbatore',
     phone: '+91 422 265 4400',
-    email: 'office@srividyamandir.edu.in',
+    email: 'office@srividyacollege.ac.in',
     academicYear: ACADEMIC_YEAR,
-    currentTerm: CURRENT_TERM,
+    currentTerm: TERM,
     isMain: true,
     // The date this data was generated. The app shifts every date forward by
     // whole weeks from here, so a deployed demo never goes stale.
     seededOn: TODAY_ISO,
   },
-  {
-    id: 'sch-2',
-    groupId: 'grp-1',
-    name: 'Sri Vidya Mandir Matriculation School, Mettupalayam',
-    shortName: 'Sri Vidya Mandir — Mettupalayam',
-    code: '33124921',
-    board: 'Tamil Nadu State Board (Matriculation)',
-    tagline: 'அறிவே ஆற்றல்',
-    taglineEn: 'Knowledge is power',
-    address: 'Annur Road',
-    city: 'Mettupalayam',
-    phone: '+91 4254 222 118',
-    email: 'mettupalayam@srividyamandir.edu.in',
-    academicYear: ACADEMIC_YEAR,
-    currentTerm: CURRENT_TERM,
-    isMain: false,
-    seededOn: TODAY_ISO,
-  },
 ];
 
-const SCHOOL_ID = 'sch-1';
+/* ── departments and programmes ────────────────────────────────────────── */
 
-/* ── Higher Secondary groups ─────────────────────────────────────────── */
-
-const hscGroups = [
-  ['G1', 'Group 1 — Maths & Biology', 'Keeps both engineering and medicine open.', ['sub-mat3', 'sub-phy', 'sub-che', 'sub-bio']],
-  ['G2', 'Group 2 — Maths & Computer Science', 'Engineering and computing.', ['sub-mat3', 'sub-phy', 'sub-che', 'sub-cshs']],
-  ['G3', 'Group 3 — Pure Biology', 'Botany and Zoology taken as separate subjects.', ['sub-phy', 'sub-che', 'sub-bot', 'sub-zoo']],
-  ['G4', 'Group 4 — Commerce', 'Accountancy, Commerce, Economics and Business Maths.', ['sub-acc', 'sub-com', 'sub-eco', 'sub-bma']],
-  ['G5', 'Group 5 — Arts', 'History, Economics, Commerce and Political Science.', ['sub-his', 'sub-eco', 'sub-com', 'sub-pol']],
-].map(([code, name, description, subjectIds]) => ({
-  id: `hsc-${code.toLowerCase()}`,
-  code,
-  name,
-  description,
-  subjectIds,
-}));
-
-/* ── subject templates ───────────────────────────────────────────────── */
-
-const PRIMARY = [1, 2, 3, 4, 5];
-const MIDDLE = [6, 7, 8];
-const SECONDARY = [9, 10];
-const HSC = [11, 12];
-
-const subjectSpec = [
-  ['tam1', 'TAM-P', 'Tamil', 'தமிழ்', 'language', PRIMARY, null],
-  ['eng1', 'ENG-P', 'English', 'ஆங்கிலம்', 'language', PRIMARY, null],
-  ['mat1', 'MAT-P', 'Mathematics', 'கணிதம்', 'core', PRIMARY, null],
-  ['evs', 'EVS', 'Environmental Science', 'சுற்றுச்சூழல் அறிவியல்', 'core', PRIMARY, null],
-
-  ['tam2', 'TAM-M', 'Tamil', 'தமிழ்', 'language', [...MIDDLE, ...SECONDARY], null],
-  ['eng2', 'ENG-M', 'English', 'ஆங்கிலம்', 'language', [...MIDDLE, ...SECONDARY], null],
-  ['mat2', 'MAT-M', 'Mathematics', 'கணிதம்', 'core', [...MIDDLE, ...SECONDARY], null],
-  ['sci', 'SCI', 'Science', 'அறிவியல்', 'core', [...MIDDLE, ...SECONDARY], null],
-  ['soc', 'SOC', 'Social Science', 'சமூக அறிவியல்', 'core', [...MIDDLE, ...SECONDARY], null],
-  ['csc', 'CSC', 'Computer Science', 'கணினி அறிவியல்', 'core', MIDDLE, 'computer'],
-
-  ['tam3', 'TAM-H', 'Tamil', 'தமிழ்', 'language', HSC, null],
-  ['eng3', 'ENG-H', 'English', 'ஆங்கிலம்', 'language', HSC, null],
-  ['mat3', 'MAT-H', 'Mathematics', 'கணிதம்', 'core', HSC, null],
-  ['phy', 'PHY', 'Physics', 'இயற்பியல்', 'core', HSC, 'physics'],
-  ['che', 'CHE', 'Chemistry', 'வேதியியல்', 'core', HSC, 'chemistry'],
-  ['bio', 'BIO', 'Biology', 'உயிரியல்', 'core', HSC, 'zoology'],
-  ['bot', 'BOT', 'Botany', 'தாவரவியல்', 'elective', HSC, 'botany'],
-  ['zoo', 'ZOO', 'Zoology', 'விலங்கியல்', 'elective', HSC, 'zoology'],
-  ['cshs', 'CS-H', 'Computer Science', 'கணினி அறிவியல்', 'core', HSC, 'computer'],
-  ['acc', 'ACC', 'Accountancy', 'கணக்கியல்', 'core', HSC, null],
-  ['com', 'COM', 'Commerce', 'வணிகவியல்', 'core', HSC, null],
-  ['eco', 'ECO', 'Economics', 'பொருளியல்', 'core', HSC, null],
-  ['bma', 'BMA', 'Business Mathematics', 'வணிகக் கணிதம்', 'core', HSC, null],
-  ['his', 'HIS', 'History', 'வரலாறு', 'elective', HSC, null],
-  ['pol', 'POL', 'Political Science', 'அரசியல் அறிவியல்', 'elective', HSC, null],
-  ['pe', 'PE', 'Physical Education', 'உடற்கல்வி', 'co-curricular', [...PRIMARY, ...MIDDLE, ...SECONDARY], null],
+const departmentSpec = [
+  ['cs', 'Computer Science', 'CS', 1998],
+  ['com', 'Commerce', 'COM', 1992],
+  ['mgt', 'Management Studies', 'MGT', 2004],
+  ['mat', 'Mathematics', 'MAT', 1992],
+  ['eng', 'English', 'ENG', 1992],
 ];
 
-const subjects = subjectSpec.map(([id, code, name, nameTa, kind, grades, labKind]) => ({
-  id: `sub-${id}`,
-  code,
+const departments = departmentSpec.map(([id, name, shortName, establishedIn]) => ({
+  id: `dep-${id}`,
+  collegeId: COLLEGE_ID,
   name,
-  nameTa,
-  kind,
-  grades,
-  // Higher Secondary science is marked out of 70 theory plus 30 practical.
-  maxMarks: labKind && grades[0] >= 11 ? 70 : kind === 'co-curricular' ? 50 : 100,
-  hasPractical: !!labKind,
-  practicalMarks: labKind && grades[0] >= 11 ? 30 : labKind ? 25 : 0,
-  labKind: labKind ?? undefined,
+  shortName,
+  hodId: '',
+  establishedIn,
 }));
 
-const subjectById = (id) => subjects.find((s) => s.id === id);
+const programmeSpec = [
+  // id, dept, name, short, level, years, intake, register-number code
+  ['bsc-cs', 'cs', 'B.Sc. Computer Science', 'B.Sc. CS', 'ug', 3, 36, 'UCS'],
+  ['bca', 'cs', 'Bachelor of Computer Applications', 'B.C.A.', 'ug', 3, 36, 'UCA'],
+  ['bcom', 'com', 'B.Com. (Computer Applications)', 'B.Com. CA', 'ug', 3, 36, 'UCM'],
+  ['bba', 'mgt', 'Bachelor of Business Administration', 'B.B.A.', 'ug', 3, 36, 'UBA'],
+  ['msc-cs', 'cs', 'M.Sc. Computer Science', 'M.Sc. CS', 'pg', 2, 18, 'PCS'],
+];
 
-/* ── staff ───────────────────────────────────────────────────────────── */
+const programmes = programmeSpec.map(
+  ([id, dep, name, shortName, level, durationYears, intake, code]) => ({
+    id: `prg-${id}`,
+    collegeId: COLLEGE_ID,
+    departmentId: `dep-${dep}`,
+    name,
+    shortName,
+    level,
+    durationYears,
+    semesters: durationYears * 2,
+    totalCredits: level === 'pg' ? 90 : 140,
+    intake,
+    selfFinancing: true,
+    code,
+  }),
+);
+const programmeById = (id) => programmes.find((p) => p.id === id);
 
-const users = [];
-const ROLE = {
-  correspondent: ['correspondent'],
-  principal: ['principal'],
-  hm: ['headmaster'],
-  vp: ['vice-principal'],
-};
+/* ── the syllabus ──────────────────────────────────────────────────────── */
 
 /**
- * Leadership and office. Note that Accounts and Payroll are one person — in a
- * school this size they always are, which is why roles are held as a list.
+ * Courses by programme and semester. Real paper titles matter: a correspondent
+ * reads "Data Structures" and recognises their own syllabus, where "Core Paper
+ * III" tells them nothing.
+ *
+ * Each entry is [title, kind, credits, hours a week].
  */
+const SYLLABUS = {
+  'prg-bsc-cs': {
+    1: [
+      ['Tamil — Paper I', 'language', 3, 5],
+      ['Communicative English — Paper I', 'language', 3, 5],
+      ['Programming in C', 'core', 5, 5],
+      ['Digital Fundamentals and Computer Organisation', 'core', 4, 4],
+      ['Programming in C — Practical', 'practical', 3, 4],
+      ['Allied Mathematics — I', 'allied', 4, 4],
+    ],
+    2: [
+      ['Tamil — Paper II', 'language', 3, 5],
+      ['Communicative English — Paper II', 'language', 3, 5],
+      ['Object Oriented Programming with C++', 'core', 5, 5],
+      ['Data Structures', 'core', 4, 4],
+      ['C++ and Data Structures — Practical', 'practical', 3, 4],
+      ['Allied Mathematics — II', 'allied', 4, 4],
+    ],
+    3: [
+      ['Java Programming', 'core', 5, 5],
+      ['Database Management Systems', 'core', 5, 5],
+      ['Operating Systems', 'core', 4, 4],
+      ['Java and DBMS — Practical', 'practical', 3, 4],
+      ['Allied Statistics', 'allied', 4, 4],
+      ['Soft Skills and Personality Development', 'skill', 2, 2],
+    ],
+    4: [
+      ['Python Programming', 'core', 5, 5],
+      ['Computer Networks', 'core', 4, 4],
+      ['Software Engineering', 'core', 4, 4],
+      ['Python — Practical', 'practical', 3, 4],
+      ['Allied Numerical Methods', 'allied', 4, 4],
+      ['Environmental Studies', 'skill', 2, 2],
+    ],
+    5: [
+      ['Web Technology', 'core', 5, 5],
+      ['Data Mining and Warehousing', 'core', 4, 4],
+      ['Computer Graphics and Multimedia', 'core', 4, 4],
+      ['Web Technology — Practical', 'practical', 3, 4],
+      ['Elective — Cloud Computing', 'elective', 4, 4],
+      ['Elective — Mobile Application Development', 'elective', 4, 4],
+    ],
+    6: [
+      ['Artificial Intelligence and Machine Learning', 'core', 5, 5],
+      ['Cyber Security and Cryptography', 'core', 4, 4],
+      ['Project Work and Viva Voce', 'project', 8, 8],
+      ['Elective — Internet of Things', 'elective', 4, 4],
+      ['Elective — Big Data Analytics', 'elective', 4, 4],
+    ],
+  },
+  'prg-bca': {
+    1: [
+      ['Tamil — Paper I', 'language', 3, 5],
+      ['Communicative English — Paper I', 'language', 3, 5],
+      ['Fundamentals of Information Technology', 'core', 4, 5],
+      ['Programming in C', 'core', 5, 5],
+      ['Office Automation — Practical', 'practical', 3, 4],
+      ['Allied Business Mathematics', 'allied', 4, 4],
+    ],
+    2: [
+      ['Tamil — Paper II', 'language', 3, 5],
+      ['Communicative English — Paper II', 'language', 3, 5],
+      ['Data Structures using C', 'core', 5, 5],
+      ['Digital Computer Fundamentals', 'core', 4, 4],
+      ['Data Structures — Practical', 'practical', 3, 4],
+      ['Allied Statistics', 'allied', 4, 4],
+    ],
+    3: [
+      ['Object Oriented Programming with Java', 'core', 5, 5],
+      ['Relational Database Management Systems', 'core', 5, 5],
+      ['Visual Programming', 'core', 4, 4],
+      ['Java and RDBMS — Practical', 'practical', 3, 4],
+      ['Allied Financial Accounting', 'allied', 4, 4],
+      ['Soft Skills and Personality Development', 'skill', 2, 2],
+    ],
+    4: [
+      ['Web Design and Development', 'core', 5, 5],
+      ['Operating Systems', 'core', 4, 4],
+      ['Software Engineering', 'core', 4, 4],
+      ['Web Design — Practical', 'practical', 3, 4],
+      ['Allied Cost Accounting', 'allied', 4, 4],
+      ['Environmental Studies', 'skill', 2, 2],
+    ],
+    5: [
+      ['Python Programming', 'core', 5, 5],
+      ['Computer Networks', 'core', 4, 4],
+      ['Enterprise Resource Planning', 'core', 4, 4],
+      ['Python — Practical', 'practical', 3, 4],
+      ['Elective — Cloud Computing', 'elective', 4, 4],
+      ['Elective — Digital Marketing', 'elective', 4, 4],
+    ],
+    6: [
+      ['Mobile Application Development', 'core', 5, 5],
+      ['Information Security', 'core', 4, 4],
+      ['Project Work and Viva Voce', 'project', 8, 8],
+      ['Elective — Data Analytics', 'elective', 4, 4],
+      ['Elective — E-Commerce', 'elective', 4, 4],
+    ],
+  },
+  'prg-bcom': {
+    1: [
+      ['Tamil — Paper I', 'language', 3, 5],
+      ['Communicative English — Paper I', 'language', 3, 5],
+      ['Financial Accounting — I', 'core', 5, 5],
+      ['Principles of Commerce', 'core', 4, 4],
+      ['Computer Applications — Practical', 'practical', 3, 4],
+      ['Allied Business Economics', 'allied', 4, 4],
+    ],
+    2: [
+      ['Tamil — Paper II', 'language', 3, 5],
+      ['Communicative English — Paper II', 'language', 3, 5],
+      ['Financial Accounting — II', 'core', 5, 5],
+      ['Business Law', 'core', 4, 4],
+      ['Tally and Accounting Packages — Practical', 'practical', 3, 4],
+      ['Allied Business Statistics', 'allied', 4, 4],
+    ],
+    3: [
+      ['Corporate Accounting', 'core', 5, 5],
+      ['Banking Theory, Law and Practice', 'core', 4, 4],
+      ['Business Management', 'core', 4, 4],
+      ['Database and MIS — Practical', 'practical', 3, 4],
+      ['Allied Mathematics for Commerce', 'allied', 4, 4],
+      ['Soft Skills and Personality Development', 'skill', 2, 2],
+    ],
+    4: [
+      ['Cost Accounting', 'core', 5, 5],
+      ['Income Tax Law and Practice', 'core', 5, 5],
+      ['Entrepreneurial Development', 'core', 4, 4],
+      ['E-Commerce — Practical', 'practical', 3, 4],
+      ['Allied Marketing Management', 'allied', 4, 4],
+      ['Environmental Studies', 'skill', 2, 2],
+    ],
+    5: [
+      ['Management Accounting', 'core', 5, 5],
+      ['Auditing and Assurance', 'core', 4, 4],
+      ['Goods and Services Tax', 'core', 4, 4],
+      ['Computerised Accounting — Practical', 'practical', 3, 4],
+      ['Elective — Financial Markets', 'elective', 4, 4],
+      ['Elective — Human Resource Management', 'elective', 4, 4],
+    ],
+    6: [
+      ['Corporate Law and Secretarial Practice', 'core', 5, 5],
+      ['Financial Management', 'core', 4, 4],
+      ['Project Work and Viva Voce', 'project', 8, 8],
+      ['Elective — International Business', 'elective', 4, 4],
+      ['Elective — Investment Management', 'elective', 4, 4],
+    ],
+  },
+  'prg-bba': {
+    1: [
+      ['Tamil — Paper I', 'language', 3, 5],
+      ['Communicative English — Paper I', 'language', 3, 5],
+      ['Principles of Management', 'core', 5, 5],
+      ['Business Environment', 'core', 4, 4],
+      ['Computer Applications — Practical', 'practical', 3, 4],
+      ['Allied Business Economics', 'allied', 4, 4],
+    ],
+    2: [
+      ['Tamil — Paper II', 'language', 3, 5],
+      ['Communicative English — Paper II', 'language', 3, 5],
+      ['Organisational Behaviour', 'core', 5, 5],
+      ['Financial Accounting for Managers', 'core', 4, 4],
+      ['Business Analytics — Practical', 'practical', 3, 4],
+      ['Allied Business Statistics', 'allied', 4, 4],
+    ],
+    3: [
+      ['Marketing Management', 'core', 5, 5],
+      ['Human Resource Management', 'core', 5, 5],
+      ['Business Communication', 'core', 4, 4],
+      ['Spreadsheet Modelling — Practical', 'practical', 3, 4],
+      ['Allied Business Law', 'allied', 4, 4],
+      ['Soft Skills and Personality Development', 'skill', 2, 2],
+    ],
+    4: [
+      ['Financial Management', 'core', 5, 5],
+      ['Production and Operations Management', 'core', 4, 4],
+      ['Entrepreneurial Development', 'core', 4, 4],
+      ['Digital Marketing — Practical', 'practical', 3, 4],
+      ['Allied Cost and Management Accounting', 'allied', 4, 4],
+      ['Environmental Studies', 'skill', 2, 2],
+    ],
+    5: [
+      ['Strategic Management', 'core', 5, 5],
+      ['Services Marketing', 'core', 4, 4],
+      ['Supply Chain Management', 'core', 4, 4],
+      ['Business Research — Practical', 'practical', 3, 4],
+      ['Elective — Retail Management', 'elective', 4, 4],
+      ['Elective — Banking and Insurance', 'elective', 4, 4],
+    ],
+    6: [
+      ['International Business Management', 'core', 5, 5],
+      ['Project Management', 'core', 4, 4],
+      ['Project Work and Viva Voce', 'project', 8, 8],
+      ['Elective — Event Management', 'elective', 4, 4],
+      ['Elective — Rural Marketing', 'elective', 4, 4],
+    ],
+  },
+  'prg-msc-cs': {
+    1: [
+      ['Advanced Data Structures and Algorithms', 'core', 5, 5],
+      ['Advanced Java Programming', 'core', 5, 5],
+      ['Advanced Operating Systems', 'core', 4, 4],
+      ['Advanced Java — Practical', 'practical', 4, 5],
+      ['Elective — Machine Learning', 'elective', 4, 4],
+    ],
+    2: [
+      ['Design and Analysis of Algorithms', 'core', 5, 5],
+      ['Advanced Database Technology', 'core', 5, 5],
+      ['Distributed Computing', 'core', 4, 4],
+      ['Database Technology — Practical', 'practical', 4, 5],
+      ['Elective — Deep Learning', 'elective', 4, 4],
+    ],
+    3: [
+      ['Cloud Computing and Virtualisation', 'core', 5, 5],
+      ['Data Science and Analytics', 'core', 5, 5],
+      ['Compiler Design', 'core', 4, 4],
+      ['Data Science — Practical', 'practical', 4, 5],
+      ['Elective — Natural Language Processing', 'elective', 4, 4],
+    ],
+    4: [
+      ['Research Methodology', 'core', 4, 4],
+      ['Project Work and Viva Voce', 'project', 12, 12],
+      ['Elective — Blockchain Technology', 'elective', 4, 4],
+    ],
+  },
+};
+
+const courses = [];
+for (const [programmeId, bySem] of Object.entries(SYLLABUS)) {
+  const prog = programmeById(programmeId);
+  for (const [semStr, papers] of Object.entries(bySem)) {
+    const semester = Number(semStr);
+    papers.forEach(([title, kind, credits, hoursPerWeek], i) => {
+      const practical = kind === 'practical';
+      courses.push({
+        id: `crs-${programmeId.replace('prg-', '')}-${semester}-${i + 1}`,
+        // Autonomous course codes: year, level, department, semester, number.
+        code: `${String(AY_START).slice(2)}${prog.code}${semester}${pad(i + 1)}`,
+        title,
+        programmeId,
+        semester,
+        kind,
+        credits,
+        hoursPerWeek,
+        // A practical is marked 40 internal / 60 external; theory 25 / 75.
+        ciaMax: practical ? 40 : 25,
+        eseMax: practical ? 60 : 75,
+        labKind: practical ? 'computer' : undefined,
+      });
+    });
+  }
+}
+const courseById = (id) => courses.find((c) => c.id === id);
+const coursesFor = (programmeId, semester) =>
+  courses.filter((c) => c.programmeId === programmeId && c.semester === semester);
+
+/* ── staff ─────────────────────────────────────────────────────────────── */
+
+const users = [];
+
 const officeSpec = [
-  ['usr-admin', 'Mr. V. Ramanathan', 'admin@school.edu', 'Admin@123', ['group-admin', 'correspondent'], 'correspondent', 'M.Com., MBA', 258, 14],
-  ['usr-principal', 'Mrs. R. Chitra', 'principal@school.edu', 'Principal@123', ['principal'], 'principal', 'M.Sc., M.Ed., Ph.D.', 320, 9],
-  ['usr-hm', 'Mrs. K. Vasanthamani', 'hm@school.edu', 'Hm@123', ['headmaster'], 'headmaster', 'M.A., B.Ed.', 12, 11],
-  ['usr-vp', 'Mr. D. Sundaramoorthy', 'vp@school.edu', 'Vp@123', ['vice-principal'], 'vice-principal', 'M.Sc., B.Ed.', 200, 7],
-  ['usr-office', 'Mrs. L. Punithavathi', 'office@school.edu', 'Office@123', ['office-superintendent'], 'office-superintendent', 'B.Com.', 40, 6],
-  ['usr-accounts', 'Mr. A. Saravanan', 'accounts@school.edu', 'Accounts@123', ['accounts-officer', 'payroll-officer'], 'accounts-officer', 'B.Com., CA Inter', 150, 5],
-  ['usr-librarian', 'Mrs. S. Hemalatha', 'library@school.edu', 'Library@123', ['librarian'], 'librarian', 'M.L.I.Sc.', 95, 4],
-  ['usr-transport', 'Mr. P. Rajamani', 'transport@school.edu', 'Transport@123', ['transport-incharge'], 'attender', 'Diploma (Mech.)', 25, 8],
-  ['usr-lab1', 'Mr. C. Ezhilarasan', 'lab1@school.edu', 'Lab@123', ['lab-assistant'], 'lab-assistant', 'B.Sc. (Physics)', 280, 3],
-  ['usr-lab2', 'Mrs. J. Kanimozhi', 'lab2@school.edu', 'Lab@123', ['lab-assistant'], 'lab-assistant', 'B.Sc. (Chemistry)', 340, 2],
+  ['usr-admin', 'Mr. V. Ramanathan', 'admin@college.edu', 'Admin@123', ['group-admin', 'chairman'], 'chairman', '', 'M.Com., MBA', 258, 22],
+  ['usr-principal', 'Dr. R. Chitra', 'principal@college.edu', 'Principal@123', ['principal'], 'principal', 'dep-eng', 'M.A., M.Phil., Ph.D.', 320, 18],
+  ['usr-vp', 'Dr. D. Sundaramoorthy', 'vp@college.edu', 'Vp@123', ['vice-principal'], 'vice-principal', 'dep-mat', 'M.Sc., Ph.D.', 200, 15],
+  ['usr-coe', 'Dr. S. Meenakshi', 'coe@college.edu', 'Coe@123', ['controller-of-exams'], 'dean', 'dep-com', 'M.Com., Ph.D.', 12, 16],
+  ['usr-office', 'Mrs. L. Punithavathi', 'office@college.edu', 'Office@123', ['office-superintendent'], 'office-superintendent', '', 'B.Com.', 40, 11],
+  ['usr-accounts', 'Mr. A. Saravanan', 'accounts@college.edu', 'Accounts@123', ['accounts-officer', 'payroll-officer'], 'accounts-officer', '', 'B.Com., CA Inter', 150, 9],
+  ['usr-placement', 'Mr. K. Gowtham', 'placement@college.edu', 'Placement@123', ['placement-officer'], 'placement-officer', 'dep-mgt', 'MBA', 95, 7],
+  ['usr-librarian', 'Mrs. S. Hemalatha', 'library@college.edu', 'Library@123', ['librarian'], 'librarian', '', 'M.L.I.Sc., M.Phil.', 110, 8],
+  ['usr-transport', 'Mr. P. Rajamani', 'transport@college.edu', 'Transport@123', ['transport-incharge'], 'office-assistant', '', 'Diploma (Mech.)', 25, 12],
+  ['usr-warden-m', 'Mr. T. Elangovan', 'warden.men@college.edu', 'Warden@123', ['hostel-warden'], 'assistant-professor', 'dep-mat', 'M.Sc., M.Phil.', 180, 10],
+  ['usr-warden-w', 'Mrs. G. Anitha', 'warden.women@college.edu', 'Warden@123', ['hostel-warden'], 'assistant-professor', 'dep-eng', 'M.A., M.Phil.', 300, 9],
+  ['usr-lab1', 'Mr. C. Ezhilarasan', 'lab1@college.edu', 'Lab@123', ['lab-instructor'], 'lab-instructor', 'dep-cs', 'M.Sc. (CS)', 280, 6],
+  ['usr-lab2', 'Mrs. J. Kanimozhi', 'lab2@college.edu', 'Lab@123', ['lab-instructor'], 'lab-instructor', 'dep-cs', 'M.C.A.', 340, 4],
 ];
 
-officeSpec.forEach(([id, name, email, password, roles, designation, qualification, hue, years], i) => {
+officeSpec.forEach(([id, name, email, password, roles, designation, departmentId, qualification, hue, years], i) => {
   users.push({
     id,
-    schoolId: SCHOOL_ID,
+    collegeId: COLLEGE_ID,
     name,
     email,
     password,
     roles,
     phone: `+91 98430 1${pad(i)}0${i}`,
     status: 'active',
-    joinedOn: `${AY_START_YEAR - years}-06-01`,
+    joinedOn: `${AY_START - years}-06-01`,
     avatarHue: hue,
     employeeId: `EMP-${pad(i + 1)}`,
     designation,
+    departmentId: departmentId || undefined,
     qualification,
-    tetCleared: false,
-    dateOfJoining: `${AY_START_YEAR - years}-06-01`,
+    netCleared: ['principal', 'vice-principal', 'dean'].includes(designation),
+    experienceYears: years,
+    dateOfJoining: `${AY_START - years}-06-01`,
+    courseIds: [],
   });
 });
 
-/**
- * Teaching staff. The designation decides which grades a teacher may handle:
- * SGT for 1 to 5, B.T. Assistant for 6 to 10, P.G. Assistant for 11 and 12.
- */
-const teacherSpec = [
-  // id, name, designation, subject template ids they can teach
-  ['t1', 'Mrs. S. Revathi', 'bt-assistant', ['sub-tam2']],
-  ['t2', 'Mr. K. Senthilkumar', 'bt-assistant', ['sub-mat2']],
-  ['t3', 'Mrs. P. Jayanthi', 'bt-assistant', ['sub-eng2']],
-  ['t4', 'Mr. R. Anbarasan', 'bt-assistant', ['sub-sci']],
-  ['t5', 'Mrs. G. Kalaiselvi', 'bt-assistant', ['sub-soc']],
-  ['t6', 'Mr. M. Dhanasekaran', 'bt-assistant', ['sub-csc']],
-  ['t7', 'Mrs. V. Umamaheswari', 'bt-assistant', ['sub-tam2']],
-  ['t8', 'Mr. S. Prabhakaran', 'bt-assistant', ['sub-mat2']],
-  ['t9', 'Mrs. N. Bhuvaneswari', 'bt-assistant', ['sub-eng2']],
-  ['t10', 'Mrs. A. Sasirekha', 'bt-assistant', ['sub-sci']],
-  ['t11', 'Mr. B. Karunanidhi', 'bt-assistant', ['sub-soc']],
+/** Teaching staff belong to a department, and what they may teach follows. */
+const facultySpec = [
+  ['cs', 'f1', 'Dr. N. Chandrasekaran', 'professor', 'M.Sc., M.Phil., Ph.D.', true, 19],
+  ['cs', 'f2', 'Dr. S. Balasubramanian', 'associate-professor', 'M.C.A., Ph.D.', true, 14],
+  ['cs', 'f3', 'Mrs. R. Hemavathi', 'assistant-professor', 'M.Sc., M.Phil.', true, 9],
+  ['cs', 'f4', 'Mr. K. Arunkumar', 'assistant-professor', 'M.C.A., M.Phil.', false, 7],
+  ['cs', 'f5', 'Mrs. V. Shanthakumari', 'assistant-professor', 'M.Sc. (CS), NET', true, 6],
+  ['cs', 'f6', 'Mr. G. Ravichandran', 'assistant-professor', 'M.Sc. (IT)', false, 5],
+  ['cs', 'f7', 'Mrs. D. Kalaiselvi', 'assistant-professor', 'M.C.A.', false, 4],
 
-  ['s1', 'Mrs. M. Alamelu', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
-  ['s2', 'Mrs. R. Poongodi', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
-  ['s3', 'Mrs. T. Saraswathi', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
-  ['s4', 'Mrs. K. Nirmaladevi', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
-  ['s5', 'Mrs. G. Yamuna', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
-  ['s6', 'Mrs. P. Vijayalakshmi', 'sgt', ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs']],
+  ['com', 'f8', 'Dr. S. Muthukrishnan', 'professor', 'M.Com., M.Phil., Ph.D.', true, 21],
+  ['com', 'f9', 'Mrs. B. Lalithambikai', 'associate-professor', 'M.Com., M.Phil.', true, 13],
+  ['com', 'f10', 'Mr. P. Senthilnathan', 'assistant-professor', 'M.Com., NET', true, 8],
+  ['com', 'f11', 'Mrs. E. Thenmozhi', 'assistant-professor', 'M.Com., M.Phil.', false, 6],
+  ['com', 'f12', 'Mr. R. Vetrivel', 'assistant-professor', 'M.Com.', false, 4],
 
-  ['p1', 'Mr. N. Chandrasekaran', 'pg-assistant', ['sub-mat3']],
-  ['p2', 'Dr. S. Balasubramanian', 'pg-assistant', ['sub-phy']],
-  ['p3', 'Mrs. R. Hemavathi', 'pg-assistant', ['sub-che']],
-  ['p4', 'Mrs. V. Shanthakumari', 'pg-assistant', ['sub-bio', 'sub-zoo']],
-  ['p5', 'Mrs. D. Meenakshi', 'pg-assistant', ['sub-bot']],
-  ['p6', 'Mr. K. Arunkumar', 'pg-assistant', ['sub-cshs']],
-  ['p7', 'Mr. S. Muthukrishnan', 'pg-assistant', ['sub-acc', 'sub-com']],
-  ['p8', 'Mrs. B. Lalithambikai', 'pg-assistant', ['sub-eco', 'sub-bma']],
-  ['p9', 'Mrs. E. Thenmozhi', 'pg-assistant', ['sub-tam3']],
-  ['p10', 'Mrs. C. Shobana', 'pg-assistant', ['sub-eng3']],
-  ['p11', 'Mr. G. Ravichandran', 'pg-assistant', ['sub-his', 'sub-pol']],
+  ['mgt', 'f13', 'Dr. C. Shobana', 'associate-professor', 'MBA, Ph.D.', true, 12],
+  ['mgt', 'f14', 'Mr. S. Prabhakaran', 'assistant-professor', 'MBA, M.Phil.', false, 7],
+  ['mgt', 'f15', 'Mrs. A. Sasirekha', 'assistant-professor', 'MBA, NET', true, 5],
 
-  ['pe1', 'Mr. T. Ilangovan', 'pet', ['sub-pe']],
+  ['mat', 'f16', 'Dr. K. Senthilkumar', 'professor', 'M.Sc., M.Phil., Ph.D.', true, 20],
+  ['mat', 'f17', 'Mrs. M. Alamelu', 'assistant-professor', 'M.Sc., M.Phil.', false, 8],
+
+  ['eng', 'f18', 'Dr. P. Jayanthi', 'associate-professor', 'M.A., M.Phil., Ph.D.', true, 15],
+  ['eng', 'f19', 'Mrs. N. Bhuvaneswari', 'assistant-professor', 'M.A., B.Ed.', false, 6],
+  ['eng', 'f20', 'Mrs. S. Revathi', 'assistant-professor', 'M.A., NET', true, 5],
 ];
 
-const QUALIFICATION = {
-  sgt: 'D.T.Ed., B.A.',
-  'bt-assistant': 'B.Sc., B.Ed.',
-  'pg-assistant': 'M.Sc., M.Ed.',
-  pet: 'B.P.Ed.',
-};
-
-teacherSpec.forEach(([key, name, designation, subjectIds], i) => {
+facultySpec.forEach(([dep, key, name, designation, qualification, netCleared, years], i) => {
   const surname = name.split('. ').at(-1).toLowerCase();
   users.push({
     id: `usr-${key}`,
-    schoolId: SCHOOL_ID,
+    collegeId: COLLEGE_ID,
     name,
-    // The first B.T. Assistant is the demo teacher account.
-    email: key === 't1' ? 'teacher@school.edu' : `${surname}@school.edu`,
-    password: 'Teacher@123',
-    roles: ['subject-teacher'],
+    // The first Computer Science assistant professor is the demo faculty login.
+    email: key === 'f3' ? 'faculty@college.edu' : `${surname}@college.edu`,
+    password: 'Faculty@123',
+    roles: ['faculty'],
     phone: `+91 98430 2${pad(i + 10)}0`,
     status: 'active',
-    joinedOn: `${AY_START_YEAR - between(1, 9)}-06-01`,
-    avatarHue: (i * 53 + 30) % 360,
+    joinedOn: `${AY_START - years}-06-01`,
+    avatarHue: (i * 47 + 30) % 360,
     employeeId: `EMP-${pad(20 + i)}`,
     designation,
-    qualification: QUALIFICATION[designation] ?? 'M.A., B.Ed.',
-    // TET applies to the teaching grades, not to P.G. Assistants.
-    tetCleared: designation === 'sgt' || designation === 'bt-assistant',
-    dateOfJoining: `${AY_START_YEAR - between(1, 9)}-06-01`,
-    subjectIds,
+    departmentId: `dep-${dep}`,
+    qualification,
+    netCleared,
+    experienceYears: years,
+    dateOfJoining: `${AY_START - years}-06-01`,
+    courseIds: [],
   });
 });
 
-const teachers = users.filter((u) => u.roles.includes('subject-teacher'));
-/** Teachers qualified for a grade, by designation. */
-const teachersFor = (grade, subjectId) =>
-  teachers.filter(
-    (t) =>
-      t.subjectIds.includes(subjectId) &&
-      ((grade <= 5 && t.designation === 'sgt') ||
-        (grade >= 6 && grade <= 10 && t.designation === 'bt-assistant') ||
-        (grade >= 11 && t.designation === 'pg-assistant') ||
-        t.designation === 'pet'),
+const faculty = users.filter((u) => u.roles.includes('faculty'));
+const facultyOf = (departmentId) => faculty.filter((f) => f.departmentId === departmentId);
+
+/* The senior-most member of each department heads it. */
+const RANK = { professor: 0, 'associate-professor': 1, 'assistant-professor': 2 };
+for (const dep of departments) {
+  const staff = facultyOf(dep.id).sort(
+    (a, b) => RANK[a.designation] - RANK[b.designation] || b.experienceYears - a.experienceYears,
   );
-
-/* ── classes ─────────────────────────────────────────────────────────── */
-
-const stageFor = (grade) =>
-  grade <= 5 ? 'primary' : grade <= 8 ? 'middle' : grade <= 10 ? 'secondary' : 'higher-secondary';
-
-/** grade, section, class teacher, room, HSc group */
-const classSpec = [
-  [1, 'A', 'usr-s1', 'Room 101', null],
-  [2, 'A', 'usr-s2', 'Room 102', null],
-  [3, 'A', 'usr-s3', 'Room 103', null],
-  [4, 'A', 'usr-s4', 'Room 104', null],
-  [5, 'A', 'usr-s5', 'Room 105', null],
-  [6, 'A', 'usr-t7', 'Room 12', null],
-  [7, 'A', 'usr-t9', 'Room 14', null],
-  [8, 'A', 'usr-t1', 'Room 21', null],
-  [8, 'B', 'usr-t5', 'Room 22', null],
-  [9, 'A', 'usr-t2', 'Room 31', null],
-  [10, 'A', 'usr-t4', 'Room 33', null],
-  [11, 'A', 'usr-p2', 'Room 41', 'hsc-g1'],
-  [11, 'B', 'usr-p7', 'Room 42', 'hsc-g4'],
-  [12, 'A', 'usr-p3', 'Room 43', 'hsc-g1'],
-  [12, 'B', 'usr-p8', 'Room 44', 'hsc-g4'],
-];
-
-const classes = classSpec.map(([grade, section, classTeacherId, room, hscGroupId]) => ({
-  id: `cls-${grade}${section}`,
-  schoolId: SCHOOL_ID,
-  grade,
-  section,
-  label: `${grade}-${section}`,
-  stage: stageFor(grade),
-  hscGroupId: hscGroupId ?? undefined,
-  classTeacherId,
-  room,
-  // Primary classes run larger; Higher Secondary groups are smaller.
-  strength: grade <= 5 ? 32 : grade <= 10 ? 30 : 24,
-}));
-
-// Class teachers also hold the class-teacher role.
-for (const cls of classes) {
-  const t = users.find((u) => u.id === cls.classTeacherId);
-  if (t && !t.roles.includes('class-teacher')) t.roles.push('class-teacher');
-}
-
-/* ── subjects offered to each class, with their teacher ──────────────── */
-
-/** The subject template ids a class actually studies. */
-function subjectIdsForClass(cls) {
-  if (cls.stage === 'higher-secondary') {
-    const grp = hscGroups.find((g) => g.id === cls.hscGroupId);
-    return ['sub-tam3', 'sub-eng3', ...(grp?.subjectIds ?? [])];
+  const head = staff[0];
+  if (head) {
+    dep.hodId = head.id;
+    if (!head.roles.includes('hod')) head.roles.push('hod');
   }
-  if (cls.stage === 'primary') return ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs', 'sub-pe'];
-  if (cls.stage === 'middle')
-    return ['sub-tam2', 'sub-eng2', 'sub-mat2', 'sub-sci', 'sub-soc', 'sub-csc', 'sub-pe'];
-  return ['sub-tam2', 'sub-eng2', 'sub-mat2', 'sub-sci', 'sub-soc', 'sub-pe'];
 }
 
-const classSubjects = [];
-let csSeq = 0;
-classes.forEach((cls, ci) => {
-  subjectIdsForClass(cls).forEach((subjectId, si) => {
-    const pool = teachersFor(cls.grade, subjectId);
-    const sub = subjectById(subjectId);
-    const teacher =
-      // A Secondary Grade Teacher handles every subject of their own class.
-      cls.stage === 'primary' && sub.kind !== 'co-curricular'
-        ? users.find((u) => u.id === cls.classTeacherId)
-        : (pool[(ci + si) % Math.max(pool.length, 1)] ?? pool[0]);
-    classSubjects.push({
-      id: `csub-${++csSeq}`,
-      classId: cls.id,
-      subjectId,
-      teacherId: teacher?.id ?? cls.classTeacherId,
-      periodsPerWeek: sub.kind === 'co-curricular' ? 2 : sub.kind === 'language' ? 6 : 5,
+/* ── sections: a batch of a programme, in the semester it has reached ───── */
+
+const sections = [];
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
+
+for (const prog of programmes) {
+  for (let year = 1; year <= prog.durationYears; year++) {
+    const batch = AY_START - (year - 1);
+    const semester = (year - 1) * 2 + SEM_OFFSET;
+    if (semester > prog.semesters) continue;
+    sections.push({
+      id: `sec-${prog.id.replace('prg-', '')}-${batch}`,
+      collegeId: COLLEGE_ID,
+      programmeId: prog.id,
+      batch,
+      section: 'A',
+      semester,
+      label: `${ROMAN[year]} ${prog.shortName}`,
+      tutorId: '',
+      room: `${prog.departmentId === 'dep-cs' ? 'CS' : prog.departmentId === 'dep-com' ? 'C' : 'M'}-${year}01`,
+      strength: prog.intake,
     });
-  });
+  }
+}
+
+/* Each section has a tutor from its own department, as a college does it. */
+sections.forEach((sec, i) => {
+  const prog = programmeById(sec.programmeId);
+  const pool = facultyOf(prog.departmentId);
+  const tutor = pool[i % pool.length];
+  sec.tutorId = tutor.id;
+  if (!tutor.roles.includes('tutor')) tutor.roles.push('tutor');
 });
 
-const classSubjectsOf = (classId) => classSubjects.filter((cs) => cs.classId === classId);
+/* ── offerings: who teaches what, to whom, this semester ───────────────── */
 
-/* ── students and parents ────────────────────────────────────────────── */
+const offerings = [];
+let offSeq = 0;
 
-const boyNames = ['Aravind', 'Karthik', 'Dinesh', 'Hariharan', 'Kavin', 'Logesh', 'Manikandan', 'Naveen', 'Prakash', 'Ragul', 'Sanjay', 'Tamilselvan', 'Vignesh', 'Yuvaraj', 'Balaji', 'Gokul', 'Mohanraj', 'Surya', 'Vimal', 'Jeyaraman'];
-const girlNames = ['Abinaya', 'Bhavani', 'Divya', 'Gayathri', 'Ilakkiya', 'Janani', 'Kavya', 'Lavanya', 'Meena', 'Nandhini', 'Oviya', 'Pavithra', 'Ramya', 'Sandhya', 'Thamarai', 'Vaishnavi', 'Yazhini', 'Keerthana', 'Swetha', 'Aishwarya'];
-const surnameInitials = ['R', 'K', 'S', 'M', 'P', 'V', 'G', 'T', 'A', 'N'];
+for (const sec of sections) {
+  const prog = programmeById(sec.programmeId);
+  for (const course of coursesFor(sec.programmeId, sec.semester)) {
+    // A language paper goes to English, an allied maths or statistics paper to
+    // Mathematics, and everything else to the programme's own department.
+    const deptId = course.title.includes('English')
+      ? 'dep-eng'
+      : course.kind === 'allied' && /Mathematic|Statistic/.test(course.title)
+        ? 'dep-mat'
+        : prog.departmentId;
+    let pool = facultyOf(deptId);
+    // Only a Ph.D. or NET-cleared member of staff takes a postgraduate paper.
+    if (prog.level === 'pg') {
+      const qualified = pool.filter((f) => f.netCleared || f.qualification.includes('Ph.D.'));
+      if (qualified.length) pool = qualified;
+    }
+    if (!pool.length) pool = faculty;
+    const teacher = pool[(offSeq + sec.batch) % pool.length];
+    if (!teacher.courseIds.includes(course.id)) teacher.courseIds.push(course.id);
+
+    offerings.push({
+      id: `off-${++offSeq}`,
+      sectionId: sec.id,
+      courseId: course.id,
+      facultyId: teacher.id,
+      isElective: course.kind === 'elective',
+      enrolledIds: [],
+    });
+  }
+}
+const offeringsOf = (sectionId) => offerings.filter((o) => o.sectionId === sectionId);
+
+/* ── students and parents ──────────────────────────────────────────────── */
+
+const maleNames = ['Aravind', 'Karthik', 'Dinesh', 'Hariharan', 'Kavin', 'Logesh', 'Manikandan', 'Naveen', 'Prakash', 'Ragul', 'Sanjay', 'Tamilselvan', 'Vignesh', 'Yuvaraj', 'Balaji', 'Gokul', 'Mohanraj', 'Surya', 'Vimal', 'Jeyaraman'];
+const femaleNames = ['Abinaya', 'Bhavani', 'Divya', 'Gayathri', 'Ilakkiya', 'Janani', 'Kavya', 'Lavanya', 'Meena', 'Nandhini', 'Oviya', 'Pavithra', 'Ramya', 'Sandhya', 'Thamarai', 'Vaishnavi', 'Yazhini', 'Keerthana', 'Swetha', 'Aishwarya'];
+const initials = ['R', 'K', 'S', 'M', 'P', 'V', 'G', 'T', 'A', 'N'];
 const fatherNames = ['Murugan', 'Rajendran', 'Selvam', 'Kumaresan', 'Palanisamy', 'Ganesan', 'Thangavel', 'Arumugam', 'Natarajan', 'Velmurugan'];
 const motherNames = ['Lakshmi', 'Saroja', 'Vasanthi', 'Amudha', 'Kalaivani', 'Rajeswari', 'Shanthi', 'Malathi', 'Devi', 'Pushpa'];
 const occupations = ['Farmer', 'Textile business', 'Auto driver', 'Teacher', 'Shop owner', 'Mechanic', 'Nurse', 'Tailor', 'Software engineer', 'Government employee'];
 const bloodGroups = ['A+', 'B+', 'O+', 'AB+', 'A-', 'O-'];
+const quotas = ['management', 'government', 'government', 'first-graduate', 'sports'];
 
 const students = [];
 const parents = [];
-let admissionSeq = 1000;
 
-classes.forEach((cls) => {
-  for (let r = 1; r <= cls.strength; r++) {
-    const isBoy = (r + cls.grade) % 2 === 0;
-    const first = isBoy
-      ? boyNames[(r * 3 + cls.grade) % boyNames.length]
-      : girlNames[(r * 5 + cls.grade) % girlNames.length];
-    const initial = surnameInitials[(r + cls.grade) % surnameInitials.length];
-    const sid = `stu-${cls.grade}${cls.section}-${pad(r)}`;
-    const pid = `par-${cls.grade}${cls.section}-${pad(r)}`;
-    admissionSeq += 1;
+sections.forEach((sec) => {
+  const prog = programmeById(sec.programmeId);
+  const deptFaculty = facultyOf(prog.departmentId);
 
-    const father = `${initial}. ${fatherNames[(r + cls.grade) % fatherNames.length]}`;
-    const mother = `${initial}. ${motherNames[(r * 2 + cls.grade) % motherNames.length]}`;
-    // The demo parent is the mother of 8-A roll 10.
-    const isDemoStudent = cls.id === 'cls-8A' && r === 10;
+  for (let r = 1; r <= sec.strength; r++) {
+    const isMale = (r + sec.batch) % 2 === 0;
+    const first = isMale
+      ? maleNames[(r * 3 + sec.batch) % maleNames.length]
+      : femaleNames[(r * 5 + sec.batch) % femaleNames.length];
+    const initial = initials[(r + sec.batch) % initials.length];
+    const sid = `stu-${sec.id.replace('sec-', '')}-${pad(r, 3)}`;
+    const pid = `par-${sec.id.replace('sec-', '')}-${pad(r, 3)}`;
+
+    // The demo student is in the third-year B.Sc. Computer Science cohort —
+    // the one with placements, arrears and a project to show.
+    const isDemo = sec.id === `sec-bsc-cs-${AY_START - 2}` && r === 7;
 
     students.push({
       id: sid,
-      schoolId: SCHOOL_ID,
+      collegeId: COLLEGE_ID,
       name: `${first} ${initial}.`,
-      email: isDemoStudent
-        ? 'student@school.edu'
-        : `${first.toLowerCase()}.${admissionSeq}@student.school.edu`,
+      email: isDemo ? 'student@college.edu' : `${first.toLowerCase()}.${sid.slice(-7)}@student.college.edu`,
       password: 'Student@123',
       roles: ['student'],
-      admissionNo: `SVM${AY_START_YEAR}${admissionSeq}`,
+      registerNo: `${String(sec.batch).slice(2)}${prog.code}${pad(r, 3)}`,
       rollNo: r,
-      classId: cls.id,
-      dateOfBirth: `${AY_START_YEAR - cls.grade - 5}-${pad(between(1, 12))}-${pad(between(1, 28))}`,
+      sectionId: sec.id,
+      programmeId: sec.programmeId,
+      dateOfBirth: `${sec.batch - 18}-${pad(between(1, 12))}-${pad(between(1, 28))}`,
       bloodGroup: pick(bloodGroups),
       guardianIds: [pid],
+      mentorId: deptFaculty[r % deptFaculty.length].id,
+      admissionQuota: quotas[(r + sec.batch) % quotas.length],
       phone: `+91 9${between(4000, 9999)} ${between(10000, 99999)}`,
       status: 'active',
-      joinedOn: `${AY_START_YEAR - between(0, 4)}-06-05`,
-      avatarHue: (r * 37 + cls.grade * 11) % 360,
+      joinedOn: `${sec.batch}-07-01`,
+      avatarHue: (r * 37 + sec.batch * 11) % 360,
+      isMale,
     });
 
     parents.push({
       id: pid,
-      schoolId: SCHOOL_ID,
-      name: isDemoStudent ? mother : r % 2 === 0 ? father : mother,
-      email: isDemoStudent ? 'parent@school.edu' : `parent.${admissionSeq}@gmail.com`,
+      collegeId: COLLEGE_ID,
+      name: `${initial}. ${r % 2 === 0 ? fatherNames[(r + sec.batch) % fatherNames.length] : motherNames[(r * 2 + sec.batch) % motherNames.length]}`,
+      email: isDemo ? 'parent@college.edu' : `parent.${sid.slice(-7)}@gmail.com`,
       password: 'Parent@123',
       roles: ['parent'],
       childIds: [sid],
-      occupation: occupations[(r + cls.grade) % occupations.length],
+      occupation: occupations[(r + sec.batch) % occupations.length],
       phone: `+91 9${between(4000, 9999)} ${between(10000, 99999)}`,
       status: 'active',
-      joinedOn: `${AY_START_YEAR}-06-05`,
+      joinedOn: `${sec.batch}-07-01`,
       avatarHue: (r * 29 + 180) % 360,
     });
   }
 });
 
 users.push(...students, ...parents);
-const DEMO_STUDENT = students.find((s) => s.email === 'student@school.edu');
-const demoParent = parents.find((p) => p.email === 'parent@school.edu');
-const studentsOf = (classId) => students.filter((s) => s.classId === classId);
+const DEMO_STUDENT = students.find((s) => s.email === 'student@college.edu');
+const demoParent = parents.find((p) => p.email === 'parent@college.edu');
+const studentsOf = (sectionId) => students.filter((s) => s.sectionId === sectionId);
 
-/* ── laboratories ────────────────────────────────────────────────────── */
+/* Electives: a student takes one of those offered, not all of them. */
+for (const sec of sections) {
+  const roll = studentsOf(sec.id);
+  const electives = offeringsOf(sec.id).filter((o) => o.isElective);
+  for (const o of offeringsOf(sec.id).filter((x) => !x.isElective)) {
+    o.enrolledIds = roll.map((s) => s.id);
+  }
+  roll.forEach((s, i) => {
+    if (!electives.length) return;
+    const choice = s.id === DEMO_STUDENT?.id ? electives[0] : electives[i % electives.length];
+    choice.enrolledIds.push(s.id);
+  });
+}
+const enrolledIn = (offeringId) => offerings.find((o) => o.id === offeringId)?.enrolledIds ?? [];
 
-const labSpec = [
-  ['physics', 'Physics Laboratory', 'Lab 1', 24, 'usr-p2', 'usr-lab1'],
-  ['chemistry', 'Chemistry Laboratory', 'Lab 2', 24, 'usr-p3', 'usr-lab2'],
-  ['botany', 'Botany Laboratory', 'Lab 3', 20, 'usr-p5', 'usr-lab2'],
-  ['zoology', 'Zoology Laboratory', 'Lab 4', 20, 'usr-p4', 'usr-lab2'],
-  ['computer', 'Computer Laboratory', 'Lab 5', 30, 'usr-p6', 'usr-lab1'],
-];
+/* ── laboratories ──────────────────────────────────────────────────────── */
 
-const labs = labSpec.map(([kind, name, room, capacity, inChargeId, assistantId], i) => ({
-  id: `lab-${kind}`,
-  schoolId: SCHOOL_ID,
+const labs = [
+  ['computer', 'Computer Laboratory I', 'dep-cs', 'Lab 1', 36, 'usr-f2', 'usr-lab1'],
+  ['computer', 'Computer Laboratory II', 'dep-cs', 'Lab 2', 36, 'usr-f4', 'usr-lab2'],
+  ['computer', 'Commerce Computing Laboratory', 'dep-com', 'Lab 3', 36, 'usr-f10', 'usr-lab2'],
+  ['computer', 'Management Computing Laboratory', 'dep-mgt', 'Lab 4', 36, 'usr-f14', 'usr-lab1'],
+  ['language', 'Language Laboratory', 'dep-eng', 'Lab 5', 30, 'usr-f18', 'usr-lab1'],
+].map(([kind, name, departmentId, room, capacity, inChargeId, assistantId], i) => ({
+  id: `lab-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  departmentId,
   name,
   kind,
   room,
@@ -474,433 +690,1017 @@ const labs = labSpec.map(([kind, name, room, capacity, inChargeId, assistantId],
   assistantId,
 }));
 
-// Lab in-charges hold the matching role.
 for (const lab of labs) {
   const inCharge = users.find((u) => u.id === lab.inChargeId);
-  if (inCharge && !inCharge.roles.includes('lab-incharge')) inCharge.roles.push('lab-incharge');
+  if (inCharge && !inCharge.roles.includes('lab-instructor')) inCharge.roles.push('lab-instructor');
 }
 
-/**
- * A class larger than the lab splits into batches that attend on different
- * days. This is the real constraint — 30 pupils cannot share 24 benches.
- */
 const labBatches = [];
-classes
-  .filter((c) => subjectIdsForClass(c).some((id) => subjectById(id).hasPractical))
-  .forEach((cls) => {
-    const roll = studentsOf(cls.id);
-    const smallest = Math.min(
-      ...subjectIdsForClass(cls)
-        .map((id) => subjectById(id))
-        .filter((s) => s.hasPractical)
-        .map((s) => labs.find((l) => l.kind === s.labKind)?.capacity ?? 30),
-    );
-    const count = Math.ceil(roll.length / smallest);
-    for (let b = 0; b < count; b++) {
-      labBatches.push({
-        id: `batch-${cls.id}-${b + 1}`,
-        classId: cls.id,
-        name: `Batch ${String.fromCharCode(65 + b)}`,
-        studentIds: roll.filter((_, i) => i % count === b).map((s) => s.id),
-      });
-    }
-  });
+for (const sec of sections) {
+  const hasPractical = offeringsOf(sec.id).some((o) => courseById(o.courseId)?.kind === 'practical');
+  if (!hasPractical) continue;
+  const roll = studentsOf(sec.id);
+  const capacity = Math.min(...labs.map((l) => l.capacity));
+  const count = Math.max(1, Math.ceil(roll.length / capacity));
+  for (let b = 0; b < count; b++) {
+    labBatches.push({
+      id: `batch-${sec.id}-${b + 1}`,
+      sectionId: sec.id,
+      name: `Batch ${String.fromCharCode(65 + b)}`,
+      studentIds: roll.filter((_, i) => i % count === b).map((s) => s.id),
+    });
+  }
+}
 
-const apparatusSpec = {
-  physics: [['Vernier calliper', 30, 'nos'], ['Screw gauge', 30, 'nos'], ['Travelling microscope', 8, 'nos'], ['Spectrometer', 6, 'nos'], ['Resistance box', 20, 'nos'], ['Galvanometer', 15, 'nos']],
-  chemistry: [['Burette 50 ml', 40, 'nos'], ['Pipette 20 ml', 40, 'nos'], ['Conical flask 250 ml', 60, 'nos'], ['Sodium hydroxide', 2, 'kg'], ['Oxalic acid', 1, 'kg'], ['Litmus paper', 25, 'books']],
-  botany: [['Compound microscope', 12, 'nos'], ['Permanent slides', 80, 'nos'], ['Herbarium sheets', 200, 'nos'], ['Dissection kit', 20, 'nos']],
-  zoology: [['Compound microscope', 12, 'nos'], ['Preserved specimens', 35, 'nos'], ['Dissection tray', 20, 'nos'], ['Hand lens', 30, 'nos']],
-  computer: [['Desktop computer', 30, 'nos'], ['UPS 1 kVA', 4, 'nos'], ['Laser printer', 2, 'nos'], ['Network switch', 3, 'nos']],
-};
-
+const apparatus = [
+  ['Desktop workstation', 36, 'nos'],
+  ['UPS 3 kVA', 4, 'nos'],
+  ['Laser printer', 2, 'nos'],
+  ['Network switch 24-port', 3, 'nos'],
+  ['Projector', 1, 'nos'],
+];
 const labItems = [];
 let itemSeq = 0;
 labs.forEach((lab) => {
-  apparatusSpec[lab.kind].forEach(([name, quantity, unit], i) => {
+  apparatus.forEach(([name, quantity, unit], i) => {
     labItems.push({
       id: `labit-${++itemSeq}`,
       labId: lab.id,
       name,
       quantity,
       unit,
-      condition: i === 2 && lab.kind !== 'computer' ? 'needs-repair' : 'good',
+      condition: i === 1 ? 'needs-repair' : 'good',
     });
   });
 });
 
-const labBreakages = [];
-let brkSeq = 0;
-// A handful of breakages this term, as every lab register has.
-[
-  ['lab-chemistry', 2, 120],
-  ['lab-physics', 1, 350],
-  ['lab-chemistry', 3, 180],
-  ['lab-botany', 1, 450],
-].forEach(([labId, quantity, amount], i) => {
+const labBreakages = [
+  ['lab-1', 1, 2400, 'Keyboard damaged during a practical.'],
+  ['lab-2', 1, 850, 'Mouse and cable broken.'],
+  ['lab-3', 1, 1200, 'Monitor stand cracked.'],
+].map(([labId, quantity, amount, note], i) => {
   const item = labItems.find((it) => it.labId === labId);
-  const hsc = students.filter((s) => s.classId.startsWith('cls-11') || s.classId.startsWith('cls-12'));
-  const student = hsc[(i * 13) % hsc.length];
-  labBreakages.push({
-    id: `brk-${++brkSeq}`,
+  return {
+    id: `brk-${i + 1}`,
     labId,
     itemId: item.id,
-    studentId: student.id,
-    date: shift(-between(4, 30)),
+    studentId: students[(i * 37) % students.length].id,
+    date: shift(-between(5, 30)),
     quantity,
-    note: pick(['Slipped while titrating.', 'Dropped during the practical.', 'Cracked on heating.']),
+    note,
     amount,
     recovered: i % 2 === 0,
-  });
+  };
 });
 
-/* ── timetable ───────────────────────────────────────────────────────── */
+/* ── timetable ─────────────────────────────────────────────────────────── */
 
-const periods = [
-  ['09:00', '09:40', 'period'],
-  ['09:40', '10:20', 'period'],
-  ['10:20', '10:35', 'break'],
-  ['10:35', '11:15', 'period'],
-  ['11:15', '11:55', 'period'],
-  ['11:55', '12:35', 'lunch'],
-  ['12:35', '13:15', 'period'],
-  ['13:15', '13:55', 'period'],
-  ['13:55', '14:35', 'period'],
+/** The college day: eight hours with a short break and lunch. */
+const HOURS = [
+  ['09:00', '09:50', 'hour'],
+  ['09:50', '10:40', 'hour'],
+  ['10:40', '10:55', 'break'],
+  ['10:55', '11:45', 'hour'],
+  ['11:45', '12:35', 'hour'],
+  ['12:35', '13:25', 'lunch'],
+  ['13:25', '14:15', 'hour'],
+  ['14:15', '15:05', 'hour'],
+  ['15:05', '15:55', 'hour'],
 ];
 
 const timetable = [];
-let slotSeq = 0;
+let hourSeq = 0;
 
 /**
- * Who is already standing in front of a class, and which lab is in use, keyed
- * by day and period.
+ * Build the week for every section at once.
  *
- * The timetable used to be generated one class at a time, which produced 234
- * double-bookings across the school — the same P.E. teacher in three classes at
- * once. Nothing surfaced it until the period scheduler started checking, and it
- * also made the cover board's idea of a "free" teacher wrong. So the week is
- * now built with a single busy map that every class is placed against.
+ * Doing it per section independently double-books faculty, which is the error
+ * that makes a timetable useless — two cohorts waiting for the same person. So
+ * every hour is placed against one shared busy map.
  */
-const busyTeacher = new Map();
-const busyLab = new Map();
-const at = (day, period) => `${day}-${period}`;
+{
+  const busyFaculty = new Map();
+  const busyLab = new Map();
+  const at = (day, hour) => `${day}-${hour}`;
+  const isFree = (map, day, hour, id) => !id || !(map.get(at(day, hour)) ?? new Set()).has(id);
+  const occupy = (map, day, hour, id) => {
+    if (!id) return;
+    if (!map.has(at(day, hour))) map.set(at(day, hour), new Set());
+    map.get(at(day, hour)).add(id);
+  };
 
-const teacherFree = (day, period, teacherId) =>
-  !teacherId || !(busyTeacher.get(at(day, period)) ?? new Set()).has(teacherId);
-const labFree = (day, period, labId) =>
-  !labId || !(busyLab.get(at(day, period)) ?? new Set()).has(labId);
-
-function occupy(day, period, teacherId, labId) {
-  const key = at(day, period);
-  if (teacherId) {
-    if (!busyTeacher.has(key)) busyTeacher.set(key, new Set());
-    busyTeacher.get(key).add(teacherId);
-  }
-  if (labId) {
-    if (!busyLab.has(key)) busyLab.set(key, new Set());
-    busyLab.get(key).add(labId);
-  }
-}
-
-/**
- * Build a clash-free week for a set of classes.
- *
- * Each class owes a number of periods per subject. For every slot in the week
- * the class is offered whichever of its own subjects is furthest behind its
- * quota and whose teacher is actually free — so quotas fill up without anyone
- * being booked twice. Where nothing fits, the period is left free, which is
- * honest: a real timetable has gaps too.
- */
-function buildWeek(forClasses) {
-  // How many periods each class still owes each subject.
   const owed = new Map();
-  for (const cls of forClasses) {
+  for (const sec of sections) {
     const quota = new Map();
-    for (const cs of classSubjects.filter((x) => x.classId === cls.id)) {
-      quota.set(cs.subjectId, cs.periodsPerWeek);
-    }
-    owed.set(cls.id, quota);
+    for (const o of offeringsOf(sec.id)) quota.set(o.id, courseById(o.courseId).hoursPerWeek);
+    owed.set(sec.id, quota);
   }
+
+  const labFor = (sec) =>
+    labs.find((l) => l.departmentId === programmeById(sec.programmeId).departmentId) ?? labs[0];
 
   for (let day = 1; day <= 6; day++) {
-    periods.forEach(([startAt, endAt, kind], pi) => {
-      const period = pi + 1;
+    HOURS.forEach(([start, end, kind], hi) => {
+      const hour = hi + 1;
+      // Saturday is a half day, as it is in most Tamil Nadu colleges.
+      if (day === 6 && hi > 3) return;
 
-      // Rotate which class gets first pick, so the same class is not always the
-      // one left with a free period when a teacher is taken.
-      const order = forClasses.map((_, i) => forClasses[(i + day + pi) % forClasses.length]);
+      const order = sections.map((_, i) => sections[(i + day + hi) % sections.length]);
 
-      for (const cls of order) {
-        if (day === 6 && pi > 4) continue; // half-day Saturday
-        if (cls.grade <= 5 && pi > 6) continue; // primary goes home earlier
-
-        if (kind !== 'period') {
+      for (const sec of order) {
+        if (kind !== 'hour') {
           timetable.push({
-            id: `slot-${++slotSeq}`,
-            classId: cls.id,
+            id: `hr-${++hourSeq}`,
+            sectionId: sec.id,
             day,
-            period,
-            start: startAt,
-            end: endAt,
-            subjectId: null,
-            teacherId: null,
+            hour,
+            start,
+            end,
+            offeringId: null,
+            facultyId: null,
+            room: sec.room,
             title: kind === 'break' ? 'Short Break' : 'Lunch Break',
             kind,
           });
           continue;
         }
 
-        const quota = owed.get(cls.id);
-        const offered = classSubjects.filter((x) => x.classId === cls.id);
-
-        // Practicals belong in the last periods of Tuesday and Thursday, where
-        // a double period is available and the lab can take one batch.
-        const practicalWindow = (day === 2 || day === 4) && pi >= 7;
-
-        const candidates = offered
-          .map((cs) => {
-            const sub = subjectById(cs.subjectId);
-            const lab = sub.hasPractical ? labs.find((l) => l.kind === sub.labKind) : undefined;
-            return { cs, sub, lab, left: quota.get(cs.subjectId) ?? 0 };
-          })
-          .filter(({ sub, lab, cs }) => {
-            if (sub.hasPractical !== practicalWindow) return false;
-            if (!teacherFree(day, period, cs.teacherId)) return false;
-            if (!labFree(day, period, lab?.id)) return false;
-            return true;
-          })
-          // Furthest behind its quota first; a subject already satisfied is a
-          // last resort rather than forbidden, so gaps stay rare.
+        const quota = owed.get(sec.id);
+        const lab = labFor(sec);
+        const candidates = offeringsOf(sec.id)
+          .map((o) => ({ o, course: courseById(o.courseId), left: quota.get(o.id) ?? 0 }))
+          .filter(
+            ({ o, course }) =>
+              isFree(busyFaculty, day, hour, o.facultyId) &&
+              (course.kind !== 'practical' || isFree(busyLab, day, hour, lab?.id)),
+          )
           .sort((a, b) => b.left - a.left);
 
-        const pick = candidates.find((c) => c.left > 0) ?? candidates[0];
+        // Only a paper that still owes hours. Once every quota for the week is
+        // met the remaining hours are library or mentoring time, which is what a
+        // college actually does with them — and what stops one paper absorbing
+        // every spare hour in the week.
+        const choice = candidates.find((c) => c.left > 0);
 
-        if (!pick) {
+        if (!choice) {
+          // A mentoring hour needs the tutor in the room, so it books them like
+          // any other hour — otherwise a tutor ends up mentoring one cohort
+          // while teaching another, which is a clash the board would not show.
+          const wantsMentoring = day === 5 && hour >= 7;
+          const isMentoring = wantsMentoring && isFree(busyFaculty, day, hour, sec.tutorId);
           timetable.push({
-            id: `slot-${++slotSeq}`,
-            classId: cls.id,
+            id: `hr-${++hourSeq}`,
+            sectionId: sec.id,
             day,
-            period,
-            start: startAt,
-            end: endAt,
-            subjectId: null,
-            teacherId: null,
-            title: 'Free period',
-            kind: 'period',
+            hour,
+            start,
+            end,
+            offeringId: null,
+            facultyId: isMentoring ? sec.tutorId : null,
+            room: sec.room,
+            title: isMentoring ? 'Mentoring hour' : 'Library hour',
+            kind: isMentoring ? 'mentoring' : 'library',
           });
+          if (isMentoring) occupy(busyFaculty, day, hour, sec.tutorId);
           continue;
         }
 
-        const batch = labBatches.filter((b) => b.classId === cls.id)[day === 2 ? 0 : 1];
-        const isLab = pick.sub.hasPractical;
+        const isLab = choice.course.kind === 'practical';
+        const batch = labBatches.find((b) => b.sectionId === sec.id);
 
         timetable.push({
-          id: `slot-${++slotSeq}`,
-          classId: cls.id,
+          id: `hr-${++hourSeq}`,
+          sectionId: sec.id,
           day,
-          period,
-          start: startAt,
-          end: endAt,
-          subjectId: pick.cs.subjectId,
-          teacherId: pick.cs.teacherId,
-          title: isLab ? `${pick.sub.name} Practical` : undefined,
-          kind: isLab ? 'lab' : 'period',
-          labId: isLab ? pick.lab?.id : undefined,
-          batchId: isLab ? (batch?.id ?? labBatches.find((b) => b.classId === cls.id)?.id) : undefined,
+          hour,
+          start,
+          end,
+          offeringId: choice.o.id,
+          facultyId: choice.o.facultyId,
+          room: isLab ? (lab?.room ?? sec.room) : sec.room,
+          title: isLab ? choice.course.title : undefined,
+          kind: isLab ? 'lab' : 'hour',
+          labId: isLab ? lab?.id : undefined,
+          batchId: isLab ? batch?.id : undefined,
         });
 
-        occupy(day, period, pick.cs.teacherId, isLab ? pick.lab?.id : undefined);
-        quota.set(pick.cs.subjectId, Math.max(0, (quota.get(pick.cs.subjectId) ?? 0) - 1));
+        occupy(busyFaculty, day, hour, choice.o.facultyId);
+        if (isLab) occupy(busyLab, day, hour, lab?.id);
+        quota.set(choice.o.id, Math.max(0, (quota.get(choice.o.id) ?? 0) - 1));
       }
     });
   }
 }
 
-buildWeek(classes);
+/* ── working days and per-hour attendance ──────────────────────────────── */
 
-/* ── school days and daily attendance ────────────────────────────────── */
-
-const schoolDays = [];
-for (let back = 0; schoolDays.length < 35; back++) {
+/**
+ * Attendance follows the timetable: for each working day, every scheduled hour
+ * produces a record for each student enrolled in that offering. That is what
+ * makes a per-course percentage mean something rather than be invented.
+ */
+const workingDays = [];
+for (let back = 0; workingDays.length < 12; back++) {
   const d = new Date(TODAY);
   d.setDate(d.getDate() - back);
   if (d.getDay() === 0) continue; // Sunday
-  schoolDays.push(iso(d));
+  workingDays.push(iso(d));
 }
-schoolDays.reverse();
+workingDays.reverse();
 
-/**
- * Each class has its own attendance culture — 8-B is the weak one, 12-A the
- * strongest. Without this every class lands on the same percentage and the
- * dashboard charts are a row of identical bars.
- */
-const CLASS_ABSENCE = {
-  'cls-1A': 8, 'cls-2A': 7, 'cls-3A': 6, 'cls-4A': 6, 'cls-5A': 5,
-  'cls-6A': 5, 'cls-7A': 7, 'cls-8A': 6, 'cls-8B': 13, 'cls-9A': 9,
-  'cls-10A': 3, 'cls-11A': 4, 'cls-11B': 8, 'cls-12A': 2, 'cls-12B': 6,
-};
+/** Final years attend worst, as every college registrar will tell you. */
+const SECTION_ABSENCE = {};
+sections.forEach((sec) => {
+  const year = Math.floor((sec.semester - 1) / 2) + 1;
+  SECTION_ABSENCE[sec.id] = year === 1 ? 7 : year === 2 ? 11 : 16;
+});
 
 const attendance = [];
-students.forEach((st, si) => {
-  const absenceRate = CLASS_ABSENCE[st.classId] ?? 6;
-  // A few children in every class are persistently irregular.
-  const irregular = si % 11 === 0 ? 10 : si % 7 === 0 ? 4 : 0;
-  schoolDays.forEach((date, di) => {
-    const roll = (si * 7 + di * 13 + di * si) % 100;
-    let status = 'present';
-    if (st.id === DEMO_STUDENT?.id) {
-      status =
-        di === schoolDays.length - 4 ? 'absent'
-        : di === schoolDays.length - 11 ? 'leave'
-        : di === schoolDays.length - 2 ? 'late'
-        : 'present';
-    } else if (roll < absenceRate + irregular) status = 'absent';
-    else if (roll < absenceRate + irregular + 3) status = 'late';
-    else if (roll === 99) status = 'leave';
+let attSeq = 0;
+/**
+ * The paper the demo student is deliberately short in — the first ordinary
+ * theory paper of whatever semester they are actually in, so this holds whether
+ * the demo is shown in the odd term or the even one.
+ */
+const demoShort = DEMO_STUDENT
+  ? offeringsOf(DEMO_STUDENT.sectionId).find((o) => {
+      const c = courseById(o.courseId);
+      return c.kind === 'core' && c.hoursPerWeek >= 4;
+    })
+  : undefined;
+const DEMO_SHORT_OFFERING = demoShort?.id ?? null;
+let demoShortSeen = 0;
+const DEMO_SHORT_TITLE = demoShort ? courseById(demoShort.courseId).title : 'one paper';
 
-    attendance.push({
-      id: `att-${st.id}-${date}`,
-      studentId: st.id,
-      date,
-      status,
-      reason:
-        status === 'leave' ? pick(['Family function', 'Medical', 'Out of station']) : undefined,
-      markedBy: classes.find((c) => c.id === st.classId)?.classTeacherId,
-    });
-  });
-});
+for (const date of workingDays) {
+  const dow = new Date(date).getDay();
+  for (const slot of timetable) {
+    if (slot.day !== dow || !slot.offeringId) continue;
+    const roll = enrolledIn(slot.offeringId);
+    const rate = SECTION_ABSENCE[slot.sectionId] ?? 10;
 
-/* ── homework ────────────────────────────────────────────────────────── */
-
-const homeworkSpec = [
-  ['sub-tam2', 'திருக்குறள் 10 பாடல்கள் மனப்பாடம்', 'Memorise Thirukkural couplets 101 to 110 and write their meaning in your notebook.'],
-  ['sub-mat2', 'Exercise 4.2 — Linear Equations', 'Complete sums 1 to 12 from Exercise 4.2. Show every step of the working.'],
-  ['sub-sci', 'Diagram: Parts of a Flower', 'Draw and label the parts of a flower on an unruled sheet. Bring it to the lab session.'],
-  ['sub-eng2', 'Letter to the Headmaster', 'Write a formal letter requesting leave for two days. Minimum 120 words.'],
-  ['sub-soc', 'Map work — Rivers of Tamil Nadu', 'Mark the Cauvery, Vaigai, Thamirabarani and Palar on the outline map provided.'],
-  ['sub-csc', 'HTML practice', 'Create a simple web page about your favourite festival using headings, lists and an image.'],
-  ['sub-tam1', 'எழுத்துப் பயிற்சி', 'Write the Tamil vowels five times each in your four-line notebook.'],
-  ['sub-mat1', 'Tables 12 to 15', 'Learn and write multiplication tables 12 to 15.'],
-  ['sub-evs', 'My Neighbourhood', 'Draw your street and label four places you can see from your house.'],
-  ['sub-eng1', 'Rhyming words', 'Write five pairs of rhyming words and one sentence using each pair.'],
-  ['sub-phy', 'Numericals — Laws of Motion', 'Solve problems 1 to 8 from the exercise. State the law used in each.'],
-  ['sub-che', 'Record: Volumetric Analysis', 'Complete the observation table and calculation for the titration done in the lab.'],
-  ['sub-mat3', 'Matrices — Exercise 1.3', 'Solve all sums. Verify your answers for questions 4 and 7.'],
-  ['sub-acc', 'Journal entries — 15 transactions', 'Pass journal entries for the transactions on page 48 and balance the ledger.'],
-  ['sub-eco', 'Essay: Demand and Supply', 'Explain the law of demand with a schedule and a diagram. 200 words.'],
-];
-
-const homework = [];
-const homeworkStatus = [];
-let hwSeq = 0;
-
-classes.forEach((cls) => {
-  const offered = classSubjectsOf(cls.id);
-  let i = -1;
-  homeworkSpec.forEach(([subjectId, title, description]) => {
-    const cs = offered.find((o) => o.subjectId === subjectId);
-    if (!cs) return;
-    i += 1;
-    const dueOffset = i - 2;
-    const hw = {
-      id: `hw-${++hwSeq}`,
-      classId: cls.id,
-      subjectId,
-      title,
-      description,
-      assignedOn: shift(dueOffset - 3),
-      dueOn: shift(dueOffset),
-      assignedById: cs.teacherId,
-    };
-    homework.push(hw);
-
-    studentsOf(cls.id).forEach((s, si) => {
-      const overdue = hw.dueOn < TODAY_ISO;
-      const done = overdue ? (si + i) % 8 !== 0 : (si + i) % 3 === 0;
-      homeworkStatus.push({
-        id: `hws-${hw.id}-${s.id}`,
-        homeworkId: hw.id,
-        studentId: s.id,
-        done,
-        submittedOn: done ? hw.dueOn : null,
-        remark: done && overdue ? pick(['Good', 'Well done', 'Neat work', '']) : '',
+    roll.forEach((studentId, si) => {
+      const n = attSeq + si;
+      let status = 'present';
+      if (studentId === DEMO_STUDENT?.id) {
+        // Short in exactly one paper, fine in the rest — the situation a parent
+        // is actually called about.
+        // Count the hours of this paper as they go by rather than hashing the
+        // day: the paper is held ten times in the window, so a hash is too
+        // coarse to land the figure between the 65% condonation floor and the
+        // 75% requirement, which is the only interesting place for it to be.
+        if (slot.offeringId === DEMO_SHORT_OFFERING) {
+          status = demoShortSeen % 10 < 3 ? 'absent' : 'present';
+          demoShortSeen += 1;
+        } else {
+          status = 'present';
+        }
+      } else {
+        const roll100 = (n * 7 + dow * 13 + slot.hour * 11) % 100;
+        if (roll100 < rate) status = 'absent';
+        else if (roll100 < rate + 2) status = 'od';
+      }
+      attendance.push({
+        id: `att-${++attSeq}`,
+        studentId,
+        offeringId: slot.offeringId,
+        date,
+        hour: slot.hour,
+        status,
       });
     });
-  });
-});
+  }
+}
 
-/* ── exams and marks ─────────────────────────────────────────────────── */
+/* ── condonation: who is short, and who has applied ────────────────────── */
 
-const examSpec = [
-  ['Unit Test 1', 'UT1', 1, -120],
-  ['Quarterly Examination', 'Quarterly', 1, -40],
-  ['Half-Yearly Examination', 'Half-Yearly', 2, 55],
-  ['Annual Examination', 'Annual', 3, 180],
-];
-
-const grades = [...new Set(classes.map((c) => c.grade))].sort((a, b) => a - b);
-const exams = [];
-grades.forEach((grade) => {
-  examSpec.forEach(([name, shortName, term, offset]) => {
-    exams.push({
-      id: `exm-${grade}-${shortName.toLowerCase().replace(/[^a-z0-9]/g, '')}`,
-      name,
-      shortName,
-      term,
-      grade,
-      startsOn: shift(offset),
-      endsOn: shift(offset + 6),
-      published: offset < 0,
+const condonations = [];
+{
+  const seen = new Map();
+  for (const row of attendance) {
+    const key = `${row.studentId}|${row.offeringId}`;
+    const agg = seen.get(key) ?? { held: 0, present: 0 };
+    agg.held += 1;
+    if (row.status !== 'absent') agg.present += 1;
+    seen.set(key, agg);
+  }
+  let cSeq = 0;
+  let considered = 0;
+  for (const [key, agg] of seen) {
+    const percent = Math.round((agg.present / agg.held) * 100);
+    // Between 65 and 75 a student may apply; below that nothing can be done.
+    if (percent >= 75 || percent < 65) continue;
+    considered += 1;
+    const [studentId, offeringId] = key.split('|');
+    if (considered % 4 !== 0 && studentId !== DEMO_STUDENT?.id) continue;
+    const sec = sections.find((s) => s.id === offerings.find((o) => o.id === offeringId)?.sectionId);
+    condonations.push({
+      id: `cond-${++cSeq}`,
+      studentId,
+      offeringId,
+      semester: sec?.semester ?? 1,
+      percent,
+      reason: pick([
+        'Hospitalised for a week with dengue; records enclosed.',
+        'Family bereavement.',
+        'Represented the college at the inter-zone tournament.',
+        'Prolonged illness; medical certificate submitted.',
+      ]),
+      status: cSeq % 3 === 0 ? 'approved' : 'requested',
+      fee: 500,
+      decidedById: cSeq % 3 === 0 ? 'usr-coe' : undefined,
     });
-  });
-});
+  }
+}
 
-const marks = [];
-students.forEach((st, si) => {
-  const cls = classes.find((c) => c.id === st.classId);
-  const offered = classSubjectsOf(cls.id).filter(
-    (cs) => subjectById(cs.subjectId).kind !== 'co-curricular',
-  );
-  exams
-    .filter((e) => e.grade === cls.grade && e.published)
-    .forEach((exam) => {
-      offered.forEach((cs, bi) => {
-        const sub = subjectById(cs.subjectId);
-        const span = sub.maxMarks;
-        const base = Math.round(span * (0.45 + ((si * 7 + bi * 17 + exam.shortName.length * 5) % 50) / 100));
-        const bump = exam.shortName === 'Quarterly' ? Math.round(span * 0.04) : 0;
-        marks.push({
-          id: `mk-${st.id}-${exam.id}-${cs.subjectId}`,
-          studentId: st.id,
-          examId: exam.id,
-          subjectId: cs.subjectId,
-          marks: Math.min(span, base + bump),
-          maxMarks: span,
-          // Practicals are marked generously, as they genuinely are.
-          practicalMarks: sub.hasPractical
-            ? Math.min(sub.practicalMarks, Math.round(sub.practicalMarks * 0.75) + (si % 7))
-            : null,
+/* ── assignments ───────────────────────────────────────────────────────── */
+
+const assignments = [];
+const assignmentStatus = [];
+let asgSeq = 0;
+
+for (const sec of sections) {
+  offeringsOf(sec.id)
+    .filter((o) => !o.isElective && courseById(o.courseId).kind !== 'project')
+    .slice(0, 3)
+    .forEach((o, i) => {
+      const course = courseById(o.courseId);
+      const dueOffset = i * 4 - 3;
+      const a = {
+        id: `asg-${++asgSeq}`,
+        offeringId: o.id,
+        title: `${course.title} — Assignment ${i + 1}`,
+        description: `Answer all questions from unit ${i + 1}. Hand-written submissions only, in the prescribed format, with the register number on every sheet.`,
+        assignedOn: shift(dueOffset - 7),
+        dueOn: shift(dueOffset),
+        maxMarks: 10,
+        assignedById: o.facultyId,
+      };
+      assignments.push(a);
+
+      enrolledIn(o.id).forEach((studentId, si) => {
+        const overdue = a.dueOn < TODAY_ISO;
+        const submitted = overdue ? (si + i) % 7 !== 0 : (si + i) % 4 === 0;
+        assignmentStatus.push({
+          id: `asgs-${a.id}-${studentId}`,
+          assignmentId: a.id,
+          studentId,
+          submittedOn: submitted ? a.dueOn : null,
+          marks: submitted && overdue ? between(5, 10) : null,
+          remark: submitted && overdue ? pick(['Good', 'Well presented', 'Incomplete working', '']) : '',
         });
       });
     });
+}
+
+/* ── internal assessment ───────────────────────────────────────────────── */
+
+const internalMarks = [];
+let imSeq = 0;
+
+for (const o of offerings) {
+  const course = courseById(o.courseId);
+  if (course.kind === 'project') continue;
+  const split =
+    course.ciaMax === 40
+      ? [['CIA-1', 15], ['CIA-2', 15], ['Assignment', 10]]
+      : [['CIA-1', 10], ['CIA-2', 10], ['Assignment', 5]];
+
+  enrolledIn(o.id).forEach((studentId, si) => {
+    split.forEach(([component, maxMarks], ci) => {
+      // The second internal has been held for some papers and not yet others.
+      const held = ci !== 1 || si % 5 !== 0;
+      internalMarks.push({
+        id: `im-${++imSeq}`,
+        studentId,
+        offeringId: o.id,
+        component,
+        marks: held
+          ? Math.min(maxMarks, Math.round(maxMarks * (0.55 + ((si * 7 + ci * 13) % 40) / 100)))
+          : null,
+        maxMarks,
+      });
+    });
+  });
+}
+
+/* ── examinations and results ──────────────────────────────────────────── */
+
+const exams = [];
+const results = [];
+let resSeq = 0;
+
+const gradeFor = (total) => {
+  if (total >= 91) return ['O', 10];
+  if (total >= 81) return ['D+', 9];
+  if (total >= 71) return ['D', 8];
+  if (total >= 61) return ['A+', 7];
+  if (total >= 51) return ['A', 6];
+  if (total >= 40) return ['B', 5];
+  return ['RA', 0];
+};
+
+const maxSemester = Math.max(...sections.map((s) => s.semester));
+for (let sem = 1; sem <= maxSemester; sem++) {
+  const past = sem < maxSemester;
+  exams.push({
+    id: `exm-${sem}`,
+    collegeId: COLLEGE_ID,
+    name: `End Semester Examination — Semester ${sem}`,
+    shortName: `ESE Sem ${sem}`,
+    semester: sem,
+    academicYear: ACADEMIC_YEAR,
+    startsOn: past ? shift(-180 * (maxSemester - sem) - 30) : shift(55),
+    endsOn: past ? shift(-180 * (maxSemester - sem) - 16) : shift(70),
+    published: past,
+  });
+}
+
+/**
+ * Results for every semester a student has already completed. This is what
+ * gives a CGPA something to be computed from, and what makes an arrear real: a
+ * paper failed in semester 1 is still carried in semester 5.
+ */
+students.forEach((st, si) => {
+  const sec = sections.find((s) => s.id === st.sectionId);
+  // Stable per student, so a transcript reads as one person's record. The
+  // demo student is deliberately strong — they hold a placement offer that
+  // carries a CGPA and arrear condition, and the two have to agree.
+  const ability = st.id === DEMO_STUDENT?.id ? 88 : (si * 13) % 100;
+
+  for (let sem = 1; sem < sec.semester; sem++) {
+    const exam = exams.find((e) => e.semester === sem);
+    for (const course of coursesFor(st.programmeId, sem)) {
+      // Assume one of the two electives offered in that semester.
+      if (course.kind === 'elective' && (si + course.semester) % 2 === 1) continue;
+
+      const base = 38 + Math.round(ability * 0.5);
+      const spread = ((si * 7 + course.semester * 11 + course.title.length) % 30) - 10;
+      const total = Math.max(14, Math.min(98, base + spread));
+      const [grade, point] = gradeFor(total);
+      const cia = Math.round(course.ciaMax * Math.min(1, (total + 12) / 100));
+      const ese = Math.max(0, total - cia);
+
+      results.push({
+        id: `res-${++resSeq}`,
+        studentId: st.id,
+        examId: exam.id,
+        courseId: course.id,
+        semester: sem,
+        cia,
+        ese,
+        total,
+        grade,
+        gradePoint: point,
+        credits: course.credits,
+        status: total >= 40 ? 'pass' : 'arrear',
+        attempt: 1,
+      });
+    }
+  }
 });
 
-/* ── transport ───────────────────────────────────────────────────────── */
+/* ── fees ──────────────────────────────────────────────────────────────── */
 
-const vehicleSpec = [
-  ['TN 38 AX 1204', 'Ashok Leyland Lynx 42', 42, 'R. Murugesan', '+91 99445 21001', 'TN38 20110004521', 'Mrs. A. Selvi', '+91 99445 31001', 95, 140, 410],
-  ['TN 38 AX 1205', 'Ashok Leyland Lynx 42', 42, 'K. Chinnasamy', '+91 99445 21002', 'TN38 20090011874', 'Mrs. R. Kavitha', '+91 99445 31002', 22, 60, 300],
-  ['TN 38 AX 1206', 'Eicher Skyline 36', 36, 'S. Velmurugan', '+91 99445 21003', 'TN38 20140007733', 'Mrs. M. Bhuvana', '+91 99445 31003', 210, 18, 520],
-  ['TN 38 AX 1207', 'Tata Starbus 40', 40, 'M. Palanivel', '+91 99445 21004', 'TN38 20120003290', 'Mrs. P. Nirmala', '+91 99445 31004', -12, 95, 260],
+const fees = [];
+const payments = [];
+let receiptSeq = 1000;
+
+const tuitionFor = (prog) =>
+  prog.level === 'pg' ? 42000 : prog.name.includes('B.Sc') ? 32000 : 28000;
+
+students.forEach((st, si) => {
+  const prog = programmeById(st.programmeId);
+  const sec = sections.find((s) => s.id === st.sectionId);
+  const heads = [
+    [`Tuition Fee — Semester ${sec.semester}`, sec.semester, tuitionFor(prog), -60],
+    ['Examination Fee', sec.semester, prog.level === 'pg' ? 2400 : 1800, 25],
+    ['Laboratory and Library Fee', sec.semester, 4500, -60],
+    ['College Development Fund', 0, 3000, -60],
+  ];
+
+  // Tamil Nadu students lean heavily on scholarships; some pay very little.
+  const scholar =
+    si % 9 === 0 ? 'First Graduate Scholarship' : si % 17 === 0 ? 'BC/MBC Scholarship' : undefined;
+
+  heads.forEach(([head, semester, total, dueOffset], hi) => {
+    const concession = scholar && hi === 0 ? Math.round(total * 0.5) : 0;
+    const payable = total - concession;
+    const past = dueOffset < 0;
+    const reliability = (si * 11) % 10 < 5 ? 0 : (si * 11) % 10 < 8 ? 1 : 2;
+    const state = past
+      ? reliability === 0
+        ? 'paid'
+        : reliability === 1
+          ? (si + hi) % 4 === 0
+            ? 'partial'
+            : 'paid'
+          : (si + hi) % 3 === 0
+            ? 'due'
+            : 'partial'
+      : reliability === 0
+        ? (si + hi) % 2 === 0
+          ? 'paid'
+          : 'due'
+        : 'due';
+    const paid =
+      state === 'paid' ? payable : state === 'partial' ? Math.round((payable * 0.5) / 100) * 100 : 0;
+    const id = `fee-${st.id}-${hi}`;
+
+    fees.push({
+      id,
+      studentId: st.id,
+      head,
+      semester,
+      total: payable,
+      paid,
+      dueOn: shift(dueOffset),
+      concession,
+      scholarship: concession ? scholar : undefined,
+    });
+
+    if (paid > 0) {
+      receiptSeq += 1;
+      payments.push({
+        id: `pay-${st.id}-${hi}`,
+        studentId: st.id,
+        feeId: id,
+        amount: paid,
+        method: pick(['upi', 'netbanking', 'dd', 'cash', 'card']),
+        paidOn: shift(dueOffset - between(1, 12)),
+        reference: `TXN${AY_START}${between(100000, 999999)}`,
+        receiptNo: `SVC/${AY_START}/${receiptSeq}`,
+      });
+    }
+  });
+});
+
+/* ── payroll ───────────────────────────────────────────────────────────── */
+
+/** Indicative UGC-style scales, not any college's sanctioned pay. */
+const SCALE = {
+  chairman: 0,
+  principal: 95000,
+  'vice-principal': 78000,
+  dean: 72000,
+  professor: 68000,
+  'associate-professor': 54000,
+  'assistant-professor': 38000,
+  'physical-director': 34000,
+  librarian: 32000,
+  'lab-instructor': 22000,
+  'office-superintendent': 28000,
+  'accounts-officer': 34000,
+  'placement-officer': 40000,
+  'office-assistant': 18000,
+};
+
+const salaries = [];
+const payslips = [];
+let slipSeq = 0;
+
+users
+  .filter((u) => u.employeeId)
+  .forEach((st, i) => {
+    const basic = SCALE[st.designation] ?? 25000;
+    if (basic === 0) return; // the Chairman draws no salary
+    const da = Math.round(basic * 0.18);
+    const hra = Math.round(basic * 0.1);
+    const conveyance = 1600;
+    const otherAllowance = st.netCleared ? 2000 : 0;
+    const pf = Math.round(Math.min(basic, 15000) * 0.12);
+    const esi = basic + da <= 21000 ? Math.round((basic + da) * 0.0075) : 0;
+    const professionalTax = basic >= 21000 ? 208 : 135;
+
+    salaries.push({
+      id: `sal-${st.id}`,
+      staffId: st.id,
+      basic,
+      da,
+      hra,
+      conveyance,
+      otherAllowance,
+      pf,
+      esi,
+      professionalTax,
+    });
+
+    const gross = basic + da + hra + conveyance + otherAllowance;
+    const deductions = pf + esi + professionalTax;
+    for (let back = 2; back >= 0; back--) {
+      const d = new Date(TODAY.getFullYear(), TODAY.getMonth() - back, 1);
+      const lopDays = back === 1 && i % 11 === 0 ? 1 : 0;
+      const lop = Math.round((gross / 30) * lopDays);
+      payslips.push({
+        id: `slip-${++slipSeq}`,
+        staffId: st.id,
+        month: `${d.getFullYear()}-${pad(d.getMonth() + 1)}`,
+        gross: gross - lop,
+        deductions,
+        net: gross - lop - deductions,
+        lopDays,
+        status: back === 0 ? 'draft' : 'paid',
+        paidOn: back === 0 ? undefined : iso(new Date(d.getFullYear(), d.getMonth() + 1, 1)),
+      });
+    }
+  });
+
+/* ── placements ────────────────────────────────────────────────────────── */
+
+const companies = [
+  ['Zoho Corporation', 'Software Products', 'zoho.com', 'Ms. R. Divya', 'campus@zoho.example'],
+  ['Cognizant', 'IT Services', 'cognizant.com', 'Mr. S. Arun', 'hiring@cognizant.example'],
+  ['Infosys BPM', 'Business Process', 'infosys.com', 'Ms. K. Nithya', 'campus@infosys.example'],
+  ['KGiSL', 'IT Services', 'kgisl.com', 'Mr. P. Vignesh', 'careers@kgisl.example'],
+  ['HDFC Bank', 'Banking', 'hdfcbank.com', 'Ms. A. Gayathri', 'campus@hdfc.example'],
+  ['Deloitte USI', 'Consulting', 'deloitte.com', 'Mr. M. Karthik', 'campus@deloitte.example'],
+].map(([name, sector, website, contactName, contactEmail], i) => ({
+  id: `cmp-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  name,
+  sector,
+  website,
+  contactName,
+  contactEmail,
+}));
+
+const finalYearSections = sections.filter(
+  (s) => s.semester >= (programmeById(s.programmeId).level === 'pg' ? 3 : 5),
+);
+const csProgrammes = programmes.filter((p) => p.departmentId === 'dep-cs').map((p) => p.id);
+const otherProgrammes = programmes.filter((p) => p.departmentId !== 'dep-cs').map((p) => p.id);
+const allProgrammeIds = programmes.map((p) => p.id);
+
+const drives = [
+  ['cmp-1', 'Member Technical Staff', 7.5, 'Chennai', csProgrammes, 7.0, 0, -12, -20, ['Aptitude', 'Technical', 'HR'], 'completed'],
+  ['cmp-2', 'Programmer Analyst Trainee', 4.5, 'Coimbatore', csProgrammes, 6.0, 1, 6, -2, ['Aptitude', 'Technical', 'HR'], 'registration-open'],
+  ['cmp-3', 'Process Executive', 3.2, 'Bengaluru', allProgrammeIds, 5.5, 2, 14, 6, ['Aptitude', 'Communication', 'HR'], 'announced'],
+  ['cmp-4', 'Junior Software Engineer', 4.0, 'Coimbatore', csProgrammes, 6.5, 0, 3, -4, ['Written', 'Technical', 'HR'], 'in-progress'],
+  ['cmp-5', 'Assistant Manager — Sales', 3.6, 'Coimbatore', otherProgrammes, 5.5, 2, 20, 11, ['Group Discussion', 'HR'], 'announced'],
+  ['cmp-6', 'Analyst — Audit', 5.5, 'Hyderabad', otherProgrammes, 7.5, 0, -25, -35, ['Aptitude', 'Case Study', 'Partner Round'], 'completed'],
+].map(
+  (
+    [companyId, role, packageLpa, location, programmeIds, minCgpa, maxArrears, driveOffset, closeOffset, rounds, status],
+    i,
+  ) => ({
+    id: `drv-${i + 1}`,
+    companyId,
+    role,
+    packageLpa,
+    location,
+    programmeIds,
+    minCgpa,
+    maxArrears,
+    driveOn: shift(driveOffset),
+    registrationCloses: shift(closeOffset),
+    rounds,
+    status,
+  }),
+);
+
+const driveApplications = [];
+let daSeq = 0;
+const finalYearStudents = finalYearSections.flatMap((s) => studentsOf(s.id));
+
+/** CGPA over the papers a student has passed, and the arrears still standing. */
+const academicStanding = (studentId) => {
+  const mine = results.filter((r) => r.studentId === studentId);
+  const passed = mine.filter((r) => r.status === 'pass');
+  const credits = passed.reduce((t, r) => t + r.credits, 0);
+  return {
+    cgpa: credits ? passed.reduce((t, r) => t + r.gradePoint * r.credits, 0) / credits : 0,
+    arrears: mine.filter((r) => r.status === 'arrear').length,
+  };
+};
+
+drives.forEach((drive, di) => {
+  finalYearStudents
+    .filter((s) => {
+      if (!drive.programmeIds.includes(s.programmeId)) return false;
+      // A recruiter's bar is a condition of registering, not something
+      // discovered afterwards, so the data respects it.
+      const { cgpa, arrears } = academicStanding(s.id);
+      return cgpa >= drive.minCgpa && arrears <= drive.maxArrears;
+    })
+    .forEach((s, i) => {
+      if ((i + di) % 3 === 0) return; // not everyone eligible applies
+      const stage =
+        drive.status === 'completed'
+          ? (i + di) % 11 === 0
+            ? 'selected'
+            : (i + di) % 4 === 0
+              ? 'hr'
+              : (i + di) % 2 === 0
+                ? 'technical'
+                : 'rejected'
+          : drive.status === 'in-progress'
+            ? (i + di) % 3 === 0
+              ? 'technical'
+              : 'shortlisted'
+            : 'applied';
+      driveApplications.push({
+        id: `dap-${++daSeq}`,
+        driveId: drive.id,
+        studentId: s.id,
+        appliedOn: drive.registrationCloses < TODAY_ISO ? shift(-30) : shift(-3),
+        stage,
+        note: stage === 'selected' ? `Offer letter issued — ₹${drive.packageLpa} LPA.` : '',
+      });
+    });
+});
+
+// The demo student has an offer in hand, which is what a parent wants to see.
+if (DEMO_STUDENT) {
+  const zoho = drives[0];
+  const existing = driveApplications.find(
+    (a) => a.driveId === zoho.id && a.studentId === DEMO_STUDENT.id,
+  );
+  const note = `Offer letter issued — ₹${zoho.packageLpa} LPA, Chennai.`;
+  if (existing) {
+    existing.stage = 'selected';
+    existing.note = note;
+  } else {
+    driveApplications.push({
+      id: `dap-${++daSeq}`,
+      driveId: zoho.id,
+      studentId: DEMO_STUDENT.id,
+      appliedOn: shift(-30),
+      stage: 'selected',
+      note,
+    });
+  }
+}
+
+/* ── hostel ────────────────────────────────────────────────────────────── */
+
+const hostelBlocks = [
+  ['Thiruvalluvar Block', 'men', 'usr-warden-m', 3, 3200],
+  ['Avvaiyar Block', 'women', 'usr-warden-w', 4, 3200],
+].map(([name, forGender, wardenId, floors, messCharge], i) => ({
+  id: `hbk-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  name,
+  forGender,
+  wardenId,
+  floors,
+  messCharge,
+}));
+
+const hostelRooms = [];
+hostelBlocks.forEach((block) => {
+  for (let floor = 1; floor <= block.floors; floor++) {
+    for (let n = 1; n <= 8; n++) {
+      const capacity = n % 3 === 0 ? 2 : n % 2 === 0 ? 3 : 4;
+      hostelRooms.push({
+        id: `hrm-${block.id}-${floor}${pad(n)}`,
+        blockId: block.id,
+        number: `${floor}${pad(n)}`,
+        floor,
+        capacity,
+        // Fewer to a room costs more, which is how every hostel prices it.
+        rentPerYear: capacity === 2 ? 48000 : capacity === 3 ? 38000 : 30000,
+      });
+    }
+  }
+});
+
+const hostelAllotments = [];
+let haSeq = 0;
+{
+  const menRooms = hostelRooms.filter((r) => r.blockId === 'hbk-1');
+  const womenRooms = hostelRooms.filter((r) => r.blockId === 'hbk-2');
+  const occupancy = new Map();
+
+  students.forEach((s, i) => {
+    // Roughly a quarter live in; those from nearby towns travel daily.
+    if (i % 4 !== 0) return;
+    const pool = s.isMale ? menRooms : womenRooms;
+    const room = pool.find((r) => (occupancy.get(r.id) ?? 0) < r.capacity);
+    if (!room) return;
+    occupancy.set(room.id, (occupancy.get(room.id) ?? 0) + 1);
+    hostelAllotments.push({
+      id: `hal-${++haSeq}`,
+      roomId: room.id,
+      studentId: s.id,
+      allottedOn: `${sections.find((x) => x.id === s.sectionId).batch}-07-05`,
+      status: i % 37 === 0 ? 'requested' : 'allotted',
+    });
+  });
+}
+
+/* ── mentoring ─────────────────────────────────────────────────────────── */
+
+const mentorNotes = [];
+let mnSeq = 0;
+students.forEach((s, i) => {
+  if (i % 6 !== 0) return;
+  const concern = i % 18 === 0 ? 'attendance' : i % 12 === 0 ? 'academic' : 'none';
+  mentorNotes.push({
+    id: `mnt-${++mnSeq}`,
+    mentorId: s.mentorId,
+    studentId: s.id,
+    on: shift(-between(3, 40)),
+    note:
+      concern === 'attendance'
+        ? 'Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.'
+        : concern === 'academic'
+          ? 'Struggling with the practical component. Advised to attend the remedial class on Saturdays.'
+          : pick([
+              'Monthly review. Progressing well; interested in placements.',
+              'Discussed the elective choice for the coming semester.',
+              'No concerns. Encouraged to take part in the symposium.',
+            ]),
+    concern,
+  });
+});
+
+/* ── circulars, events and the help desk ───────────────────────────────── */
+
+const circulars = [
+  ['End Semester Examination timetable published', 'தேர்வு அட்டவணை', 'Exam', 'The timetable for the forthcoming End Semester Examinations is now available. Students carrying arrears must register separately at the examination cell before the last date. Hall tickets will be issued only to students meeting the attendance requirement.', true, 2],
+  ['Zoho campus drive — registration open', 'வேலைவாய்ப்பு முகாம்', 'Placement', 'Zoho Corporation will conduct a campus drive for final year Computer Science and B.C.A. students. A minimum of 7.0 CGPA with no standing arrears is required. Register through the Placements page before the closing date.', true, 3],
+  ['Attendance shortage — condonation', 'வருகைப் பற்றாக்குறை', 'General', 'Students falling below 75% attendance in any paper must apply for condonation with supporting documents. Condonation is at the discretion of the Principal on payment of the prescribed fee. Below 65% no condonation is possible.', true, 5],
+  ['Semester fee — last date', 'கட்டணம் செலுத்தும் நாள்', 'Fee', 'The last date for payment of semester fees is approaching. Payment may be made online through the portal or by demand draft at the office counter. Hall tickets are withheld where dues are outstanding.', true, 7],
+  ['Hostel mess charges revised', 'விடுதி கட்டணம்', 'Hostel', 'Mess charges for the current semester have been revised with effect from the first of next month. Residents are requested to clear outstanding mess bills before the end of the month.', false, 9],
+  ['National conference on Data Science', 'கருத்தரங்கம்', 'Event', 'The Department of Computer Science is organising a two-day national conference. Students presenting papers will be granted on-duty. Registration is through the department office.', false, 12],
+  ['Bus Route 3 timing change', 'பேருந்து நேர மாற்றம்', 'Transport', 'From Monday, Route 3 will reach the Kalapatti Road stop ten minutes earlier. Students are requested to be at the stop accordingly.', false, 16],
+].map(([title, titleTa, category, body, pinned, daysAgo], i) => ({
+  id: `cir-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  title,
+  titleTa,
+  body,
+  category,
+  postedOn: shift(-daysAgo),
+  author: i % 2 === 0 ? 'Principal’s Office' : 'College Office',
+  pinned,
+  audience: 'all',
+  acknowledgedBy: parents.filter((_, pi) => (pi + i) % 5 === 0).map((p) => p.id),
+}));
+
+const events = [
+  ['Parent–Teacher Meeting', 'Academic', 'Tutors meet parents to discuss attendance, internal marks and arrears.', 4, '10:00', 'Respective classrooms', 'Office of the Principal'],
+  ['Zoho Campus Drive', 'Placement', 'Aptitude, technical and HR rounds for shortlisted final year students.', 6, '08:30', 'Seminar Hall', 'Placement Cell'],
+  ['National Conference on Data Science', 'Seminar', 'Two-day conference with paper presentations and invited talks.', 15, '09:30', 'Auditorium', 'Department of Computer Science'],
+  ['Inter-Department Sports Meet', 'Sports', 'Track and field events across all departments.', 24, '08:00', 'College Ground', 'Physical Education Department'],
+  ['Annual Day and Prize Distribution', 'Cultural', 'Cultural programmes, prize distribution and the Chief Guest’s address.', 42, '17:00', 'Auditorium', 'Cultural Committee'],
+].map(([title, category, description, daysAhead, time, venue, organiser], i) => ({
+  id: `evt-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  title,
+  description,
+  category,
+  date: shift(daysAhead),
+  time,
+  venue,
+  organiser,
+  forSections: 'all',
+}));
+
+const requests = [
+  ['Bonafide certificate for passport', 'Certificate', 'resolved', 'Bonafide certificate required for a passport application. Kindly issue at the earliest.', demoParent?.id, DEMO_STUDENT?.id, 11],
+  [`Attendance condonation — ${DEMO_SHORT_TITLE}`, 'Exam', 'in-progress', 'My ward was hospitalised for ten days. Requesting condonation of the attendance shortage in one paper. Medical records enclosed.', demoParent?.id, DEMO_STUDENT?.id, 4],
+  ['Change of elective', 'Other', 'open', 'Requesting a change of elective from Cloud Computing to Mobile Application Development before the internal assessment begins.', students[8]?.id, students[8]?.id, 2],
+  ['Hostel room change', 'Hostel', 'in-progress', 'Requesting a change of room owing to a persistent dust allergy. A ground floor room would be preferable.', students[20]?.id, students[20]?.id, 6],
+  ['Projector not working — CS-301', 'Facility', 'open', 'The projector in CS-301 has not been working for a week. Practical demonstrations are affected.', 'usr-f3', undefined, 3],
+].map(([title, category, status, description, raisedBy, aboutStudentId, daysAgo], i) => ({
+  id: `req-${i + 1}`,
+  ref: `REQ/${AY_START}/${pad(101 + i, 3)}`,
+  raisedBy,
+  aboutStudentId,
+  title,
+  category,
+  description,
+  status,
+  createdOn: shift(-daysAgo),
+  updates:
+    status === 'resolved'
+      ? [
+          { on: shift(-daysAgo + 1), note: 'Received at the college office.' },
+          { on: shift(-daysAgo + 3), note: 'Certificate issued. Please collect from the office.' },
+        ]
+      : status === 'in-progress'
+        ? [{ on: shift(-daysAgo + 1), note: 'Forwarded to the Principal for orders.' }]
+        : [],
+}));
+
+/* ── parent meetings and gate visits ───────────────────────────────────── */
+
+const ptmDate = shift(4);
+const slotTimes = [
+  ['10:00', '10:15'], ['10:15', '10:30'], ['10:30', '10:45'], ['10:45', '11:00'],
+  ['11:15', '11:30'], ['11:30', '11:45'], ['11:45', '12:00'], ['12:00', '12:15'],
 ];
 
-const vehicles = vehicleSpec.map(
+const meetingSlots = [];
+sections.forEach((sec) => {
+  slotTimes.forEach(([start, end], i) => {
+    meetingSlots.push({
+      id: `ms-${sec.id}-${i + 1}`,
+      date: ptmDate,
+      start,
+      end,
+      facultyId: sec.tutorId,
+      sectionId: sec.id,
+      capacity: 3,
+    });
+  });
+});
+
+const meetingBookings = [];
+students.forEach((st, i) => {
+  if (i % 4 !== 0) return;
+  const slots = meetingSlots.filter((m) => m.sectionId === st.sectionId);
+  const slot = slots[i % slots.length];
+  meetingBookings.push({
+    id: `mb-${st.id}`,
+    slotId: slot.id,
+    parentId: st.guardianIds[0],
+    studentId: st.id,
+    bookedOn: shift(-between(1, 6)),
+    status: 'booked',
+    note: pick(['Would like to discuss attendance.', 'About arrears.', '', 'Placement prospects.']),
+    facultyNote: '',
+  });
+});
+
+if (demoParent && DEMO_STUDENT && !meetingBookings.some((b) => b.studentId === DEMO_STUDENT.id)) {
+  const slot = meetingSlots.find((m) => m.sectionId === DEMO_STUDENT.sectionId);
+  if (slot) {
+    meetingBookings.push({
+      id: `mb-${DEMO_STUDENT.id}`,
+      slotId: slot.id,
+      parentId: demoParent.id,
+      studentId: DEMO_STUDENT.id,
+      bookedOn: shift(-2),
+      status: 'booked',
+      note: 'Would like to discuss the attendance shortage and the Zoho offer.',
+      facultyNote: '',
+    });
+  }
+}
+
+const visitPurposes = ['Parent-Teacher Meeting', 'Meet a faculty member', 'Fee payment', 'Hostel', 'Document collection'];
+const visits = [];
+let passSeq = 500;
+students.forEach((st, i) => {
+  if (i % 11 !== 0) return;
+  passSeq += 1;
+  const daysAgo = between(-6, 20);
+  const past = daysAgo > 0;
+  const guardian = users.find((u) => u.id === st.guardianIds[0]);
+  const tutor = users.find((u) => u.id === sections.find((s) => s.id === st.sectionId).tutorId);
+  visits.push({
+    id: `vis-${st.id}`,
+    passNo: `VP/${AY_START}/${passSeq}`,
+    parentId: st.guardianIds[0],
+    studentId: st.id,
+    visitorName: guardian ? guardian.name : 'Parent',
+    purpose: visitPurposes[i % visitPurposes.length],
+    date: shift(-daysAgo),
+    time: pick(['09:30', '10:00', '11:00', '14:00', '15:00']),
+    meetingWith: tutor ? tutor.name : '',
+    status: past ? 'completed' : i % 22 === 0 ? 'requested' : 'approved',
+    inTime: past ? '09:34' : undefined,
+    outTime: past ? '10:05' : undefined,
+    note: '',
+  });
+});
+
+if (demoParent && DEMO_STUDENT) {
+  passSeq += 1;
+  const tutor = users.find(
+    (u) => u.id === sections.find((s) => s.id === DEMO_STUDENT.sectionId).tutorId,
+  );
+  visits.unshift({
+    id: 'vis-demo-upcoming',
+    passNo: `VP/${AY_START}/${passSeq}`,
+    parentId: demoParent.id,
+    studentId: DEMO_STUDENT.id,
+    visitorName: demoParent.name,
+    purpose: 'Parent-Teacher Meeting',
+    date: ptmDate,
+    time: '10:30',
+    meetingWith: tutor?.name ?? '',
+    status: 'approved',
+    note: 'Attendance and placement discussion.',
+  });
+}
+
+/* ── transport ─────────────────────────────────────────────────────────── */
+
+const vehicles = [
+  ['TN 38 AX 1204', 'Ashok Leyland Lynx 54', 54, 'R. Murugesan', '+91 99445 21001', 'TN38 20110004521', 'Mr. A. Selvam', '+91 99445 31001', 95, 140, 410],
+  ['TN 38 AX 1205', 'Ashok Leyland Lynx 54', 54, 'K. Chinnasamy', '+91 99445 21002', 'TN38 20090011874', 'Mr. R. Kannan', '+91 99445 31002', 22, 60, 300],
+  ['TN 38 AX 1206', 'Eicher Skyline 48', 48, 'S. Velmurugan', '+91 99445 21003', 'TN38 20140007733', 'Mr. M. Bhuvan', '+91 99445 31003', 210, 18, 520],
+  ['TN 38 AX 1207', 'Tata Starbus 52', 52, 'M. Palanivel', '+91 99445 21004', 'TN38 20120003290', 'Mr. P. Nirmal', '+91 99445 31004', -12, 95, 260],
+].map(
   (
     [busNo, model, capacity, driverName, driverPhone, driverLicenceNo, attendantName, attendantPhone, fc, ins, permit],
     i,
   ) => ({
     id: `veh-${i + 1}`,
-    schoolId: SCHOOL_ID,
+    collegeId: COLLEGE_ID,
     busNo,
     model,
     capacity,
@@ -909,24 +1709,22 @@ const vehicles = vehicleSpec.map(
     driverLicenceNo,
     attendantName,
     attendantPhone,
-    // Bus 1207's fitness certificate has already lapsed — the office needs to
-    // see that, and a compliance screen with nothing wrong proves nothing.
+    // Bus 1207's fitness certificate has lapsed; a compliance screen with
+    // nothing wrong on it proves nothing.
     fcExpiry: shift(fc),
     insuranceExpiry: shift(ins),
     permitExpiry: shift(permit),
   }),
 );
 
-const routeSpec = [
-  ['Route 1 — Gandhipuram', 'veh-1', ['Gandhipuram Bus Stand', 'Cross Cut Road', 'Sivananda Colony', 'Thudiyalur Road'], 9000],
-  ['Route 2 — Peelamedu', 'veh-2', ['Peelamedu Signal', 'Hope College', 'Nehru Stadium', 'Avinashi Road'], 9000],
-  ['Route 3 — Saravanampatti', 'veh-3', ['Saravanampatti Junction', 'Kalapatti Road', 'KCT Gate', 'Vilankurichi'], 7500],
-  ['Route 4 — R.S. Puram', 'veh-4', ['R.S. Puram West', 'DB Road', 'Race Course', 'Puliakulam'], 10500],
-];
-
-const routes = routeSpec.map(([name, vehicleId, stopNames, fee], i) => ({
+const routes = [
+  ['Route 1 — Gandhipuram', 'veh-1', ['Gandhipuram Bus Stand', 'Cross Cut Road', 'Sivananda Colony', 'Thudiyalur Road'], 14000],
+  ['Route 2 — Peelamedu', 'veh-2', ['Peelamedu Signal', 'Hope College', 'Nehru Stadium', 'Avinashi Road'], 14000],
+  ['Route 3 — Saravanampatti', 'veh-3', ['Saravanampatti Junction', 'Kalapatti Road', 'KCT Gate', 'Vilankurichi'], 11000],
+  ['Route 4 — Mettupalayam Road', 'veh-4', ['Thudiyalur', 'Periyanaickenpalayam', 'Karamadai', 'Mettupalayam Road'], 16000],
+].map(([name, vehicleId, stopNames, fee], i) => ({
   id: `rt-${i + 1}`,
-  schoolId: SCHOOL_ID,
+  collegeId: COLLEGE_ID,
   name,
   vehicleId,
   fee,
@@ -937,247 +1735,155 @@ const routes = routeSpec.map(([name, vehicleId, stopNames, fee], i) => ({
 }));
 
 const studentTransport = [];
-
-/**
- * Seats are finite. The four buses seat 160 between them, so only that many
- * children can be allotted — the rest walk, cycle or come by private van, as
- * they do. Overfilling the routes would make every route read "bus full" on the
- * allotment screen, and the capacity figure would mean nothing.
- */
 const seatsLeft = new Map(
   routes.map((r) => [r.id, vehicles.find((v) => v.id === r.vehicleId).capacity]),
 );
+const hostellers = new Set(hostelAllotments.map((a) => a.studentId));
 
-const seat = (st, route, status, requestedOn) => {
-  studentTransport.push({
-    id: `stt-${st.id}`,
-    studentId: st.id,
-    routeId: route.id,
-    stop: route.stops[(st.rollNo ?? 0) % route.stops.length].name,
-    status,
-    requestedOn,
-  });
-  if (status === 'allotted') seatsLeft.set(route.id, seatsLeft.get(route.id) - 1);
-};
-
-// The demo child always rides, so the parent demo has a bus to show. Route 3 is
-// the one the timing-change circular is about.
 if (DEMO_STUDENT) {
   studentTransport.push({
     id: `stt-${DEMO_STUDENT.id}`,
     studentId: DEMO_STUDENT.id,
-    routeId: routes[2].id,
-    stop: routes[2].stops[1].name,
+    routeId: 'rt-3',
+    stop: 'Kalapatti Road',
     status: 'allotted',
-    requestedOn: shift(-between(20, 120)),
+    requestedOn: shift(-between(30, 120)),
   });
-  seatsLeft.set(routes[2].id, seatsLeft.get(routes[2].id) - 1);
+  seatsLeft.set('rt-3', seatsLeft.get('rt-3') - 1);
 }
 
 students.forEach((st, i) => {
   if (st.id === DEMO_STUDENT?.id) return;
-  if (i % 3 === 0) return; // not every family uses the bus
+  // Someone living in the hostel does not also take the bus.
+  if (hostellers.has(st.id)) return;
+  if (i % 3 === 0) return;
   const requestedOn = shift(-between(20, 120));
-
-  // A handful sit in the queue so the office has something to act on. These do
-  // not hold a seat — that is what makes the queue a queue.
-  if (i % 23 === 0) return seat(st, routes[i % routes.length], 'requested', requestedOn);
-  if (i % 37 === 0) return seat(st, routes[i % routes.length], 'approved', requestedOn);
-
-  // Otherwise take the first route with a seat free, starting from the one that
-  // falls to this child's turn so the buses fill evenly rather than front to back.
+  if (i % 29 === 0) {
+    const route = routes[i % routes.length];
+    studentTransport.push({
+      id: `stt-${st.id}`,
+      studentId: st.id,
+      routeId: route.id,
+      stop: route.stops[i % route.stops.length].name,
+      status: 'requested',
+      requestedOn,
+    });
+    return;
+  }
   for (let k = 0; k < routes.length; k++) {
     const route = routes[(i + k) % routes.length];
-    if (seatsLeft.get(route.id) > 0) return seat(st, route, 'allotted', requestedOn);
-  }
-  // Every bus is full, so this child does not use school transport.
-});
-
-const usesBus = new Set(
-  studentTransport.filter((t) => t.status === 'allotted').map((t) => t.studentId),
-);
-
-/* ── fees ────────────────────────────────────────────────────────────── */
-
-/** Tuition rises with the class, as it does in a real school. */
-const tuitionForGrade = (grade) =>
-  grade <= 5 ? 3200 + grade * 200 : grade <= 10 ? 4500 + (grade - 6) * 750 : 9500 + (grade - 11) * 1500;
-const booksForGrade = (grade) => (grade <= 5 ? 1800 + grade * 150 : 3500 + (grade - 6) * 350);
-
-const fees = [];
-const payments = [];
-let receiptSeq = 100;
-
-/** Some classes carry more fee pressure than others. */
-const CLASS_PRESSURE = { 'cls-8B': 2, 'cls-7A': 1, 'cls-9A': 1, 'cls-11B': 2, 'cls-2A': 1 };
-
-students.forEach((st, si) => {
-  const grade = classes.find((c) => c.id === st.classId).grade;
-  const tuition = tuitionForGrade(grade);
-  const heads = [
-    ['Tuition Fee — Term 1', 1, tuition, -75],
-    ['Tuition Fee — Term 2', 2, tuition, 12],
-    ['Tuition Fee — Term 3', 3, tuition, 110],
-    ['Books & Uniform', 0, booksForGrade(grade), -85],
-    ['Examination Fee', 2, grade >= 11 ? 1200 : 600, 20],
-  ];
-  // Higher Secondary science groups pay a lab fee, as they always do.
-  if (grade >= 11) {
-    const cls = classes.find((c) => c.id === st.classId);
-    const hasPractical = subjectIdsForClass(cls).some((id) => subjectById(id).hasPractical);
-    if (hasPractical) heads.push(['Laboratory Fee', 1, 2500, -75]);
-  }
-  if (usesBus.has(st.id)) {
-    const link = studentTransport.find((t) => t.studentId === st.id);
-    const route = routes.find((r) => r.id === link.routeId);
-    heads.push(['Bus Fee — Term 1', 1, Math.round(route.fee / 3), -75]);
-    heads.push(['Bus Fee — Term 2', 2, Math.round(route.fee / 3), 12]);
-  }
-
-  heads.forEach(([head, term, total, dueOffset], hi) => {
-    const dueOn = shift(dueOffset);
-    const past = dueOffset < 0;
-    // 0 = always pays on time, 3 = struggles. Stable per family.
-    const pressure = CLASS_PRESSURE[st.classId] ?? 0;
-    const score = ((si * 13) % 10) + pressure;
-    const reliability = score < 5 ? 0 : score < 8 ? 1 : score < 10 ? 2 : 3;
-    const state = past
-      ? reliability === 0 ? 'paid'
-        : reliability === 1 ? ((si + hi) % 5 === 0 ? 'partial' : 'paid')
-        : reliability === 2 ? ((si + hi) % 2 === 0 ? 'partial' : 'paid')
-        : ((si + hi) % 3 === 0 ? 'due' : 'partial')
-      : reliability === 0 ? ((si + hi) % 2 === 0 ? 'paid' : 'due')
-        : reliability === 1 ? ((si + hi) % 4 === 0 ? 'paid' : 'due')
-        : 'due';
-    const partialShare = reliability >= 2 ? 0.3 : 0.6;
-    const paid =
-      state === 'paid' ? total : state === 'partial' ? Math.round((total * partialShare) / 100) * 100 : 0;
-    // A few families hold a staff or sibling concession.
-    const concession = si % 37 === 0 && term === 1 ? 1000 : 0;
-    const id = `fee-${st.id}-${hi}`;
-    fees.push({ id, studentId: st.id, head, term, total: total - concession, paid, dueOn, concession });
-
-    if (paid > 0) {
-      receiptSeq += 1;
-      payments.push({
-        id: `pay-${st.id}-${hi}`,
+    if (seatsLeft.get(route.id) > 0) {
+      seatsLeft.set(route.id, seatsLeft.get(route.id) - 1);
+      studentTransport.push({
+        id: `stt-${st.id}`,
         studentId: st.id,
-        feeId: id,
-        amount: paid,
-        method: pick(['upi', 'cash', 'netbanking', 'card']),
-        paidOn: shift(dueOffset - between(1, 10)),
-        reference: `TXN${AY_START_YEAR}${between(100000, 999999)}`,
-        receiptNo: `RCP/${AY_START_YEAR}/${receiptSeq}`,
+        routeId: route.id,
+        stop: route.stops[i % route.stops.length].name,
+        status: 'allotted',
+        requestedOn,
       });
+      return;
     }
-  });
-});
-
-/* ── payroll (simulated) ─────────────────────────────────────────────── */
-
-/** Pay scales by designation — indicative, not any school's actual scale. */
-const SCALE = {
-  correspondent: 0,
-  principal: 62000,
-  headmaster: 48000,
-  'vice-principal': 45000,
-  'pg-assistant': 38000,
-  'bt-assistant': 30000,
-  sgt: 24000,
-  pet: 26000,
-  librarian: 22000,
-  'lab-assistant': 18000,
-  'office-superintendent': 26000,
-  'accounts-officer': 32000,
-  attender: 15000,
-};
-
-const staff = users.filter((u) => u.employeeId);
-const salaries = [];
-const payslips = [];
-let slipSeq = 0;
-
-staff.forEach((s, i) => {
-  const basic = SCALE[s.designation] ?? 20000;
-  if (basic === 0) return; // the Correspondent draws no salary
-  const da = Math.round(basic * 0.18);
-  const hra = Math.round(basic * 0.1);
-  const conveyance = 1600;
-  const otherAllowance = i % 3 === 0 ? 1000 : 0;
-  // Employee PF is 12% of basic, capped at the statutory ₹15,000 wage ceiling.
-  const pf = Math.round(Math.min(basic, 15000) * 0.12);
-  const esi = basic + da <= 21000 ? Math.round((basic + da) * 0.0075) : 0;
-  const professionalTax = basic >= 21000 ? 208 : 135;
-
-  salaries.push({
-    id: `sal-${s.id}`,
-    staffId: s.id,
-    basic,
-    da,
-    hra,
-    conveyance,
-    otherAllowance,
-    pf,
-    esi,
-    professionalTax,
-  });
-
-  const gross = basic + da + hra + conveyance + otherAllowance;
-  const deductions = pf + esi + professionalTax;
-  // Three months of payslips: two paid, the current month still in draft.
-  for (let back = 2; back >= 0; back--) {
-    const d = new Date(TODAY.getFullYear(), TODAY.getMonth() - back, 1);
-    const lopDays = back === 1 && i % 9 === 0 ? 1 : 0;
-    const lop = Math.round((gross / 30) * lopDays);
-    payslips.push({
-      id: `slip-${++slipSeq}`,
-      staffId: s.id,
-      month: `${d.getFullYear()}-${pad(d.getMonth() + 1)}`,
-      gross: gross - lop,
-      deductions,
-      net: gross - lop - deductions,
-      lopDays,
-      status: back === 0 ? 'draft' : 'paid',
-      paidOn: back === 0 ? undefined : iso(new Date(d.getFullYear(), d.getMonth() + 1, 1)),
-    });
   }
 });
 
-/* ── staff recruitment ───────────────────────────────────────────────── */
+/* ── library ───────────────────────────────────────────────────────────── */
 
-const ALL_DOCS = ['degree', 'bed', 'tet', 'aadhaar', 'pan', 'bank', 'experience'];
+const books = [
+  ['Let Us C', 'Yashavant Kanetkar', 'BPB Publications', '978-81-831-7944-6', 'Computer Science', 12, 'A-01', csProgrammes, 425],
+  ['Introduction to Algorithms', 'Cormen, Leiserson, Rivest', 'MIT Press', '978-02-620-3384-8', 'Computer Science', 6, 'A-04', csProgrammes, 1250],
+  ['Database System Concepts', 'Silberschatz, Korth', 'McGraw Hill', '978-00-725-1551-8', 'Computer Science', 8, 'A-06', csProgrammes, 980],
+  ['Java: The Complete Reference', 'Herbert Schildt', 'McGraw Hill', '978-12-605-4012-1', 'Computer Science', 10, 'A-08', csProgrammes, 875],
+  ['Operating System Concepts', 'Silberschatz, Galvin', 'Wiley', '978-11-190-4336-1', 'Computer Science', 7, 'A-11', csProgrammes, 920],
+  ['Advanced Accountancy — Volume I', 'S.P. Jain and K.L. Narang', 'Kalyani', '978-93-272-6109-4', 'Commerce', 14, 'B-01', otherProgrammes, 560],
+  ['Income Tax Law and Practice', 'V.P. Gaur and D.B. Narang', 'Kalyani', '978-93-272-6200-8', 'Commerce', 10, 'B-03', otherProgrammes, 640],
+  ['Principles of Management', 'Harold Koontz', 'McGraw Hill', '978-93-392-2286-4', 'Management', 9, 'B-07', otherProgrammes, 710],
+  ['Marketing Management', 'Philip Kotler', 'Pearson', '978-93-325-5718-5', 'Management', 8, 'B-09', otherProgrammes, 899],
+  ['Ponniyin Selvan (Part 1)', 'Kalki Krishnamurthy', 'Vanathi Pathippagam', '978-81-234-0011-2', 'Tamil Literature', 6, 'C-01', allProgrammeIds, 420],
+  ['Wings of Fire', 'A.P.J. Abdul Kalam', 'Universities Press', '978-81-732-5114-6', 'Biography', 8, 'C-03', allProgrammeIds, 295],
+  ['Quantitative Aptitude for Competitive Examinations', 'R.S. Aggarwal', 'S. Chand', '978-93-525-3402-9', 'Competitive', 15, 'D-01', allProgrammeIds, 545],
+].map(([title, author, publisher, isbn, category, copies, rack, forProgrammes, price], i) => ({
+  id: `bok-${i + 1}`,
+  collegeId: COLLEGE_ID,
+  accessionNo: `ACC/${pad(i + 1)}${between(100, 999)}`,
+  title,
+  author,
+  publisher,
+  isbn,
+  category,
+  copies,
+  rack,
+  forProgrammes,
+  price,
+  addedOn: shift(-between(90, 1200)),
+}));
 
-const applicationSpec = [
-  ['Mrs. K. Sumathi', 'sumathi.k@gmail.com', 'bt-assistant', 'B.Sc. (Maths), B.Ed.', true, 6, ['sub-mat2'], 'submitted', 2, ''],
-  ['Mr. R. Vetrivel', 'vetrivel.r@gmail.com', 'pg-assistant', 'M.Sc. (Physics), M.Ed.', false, 9, ['sub-phy'], 'under-review', 5, 'Qualification verified. Awaiting demonstration class.'],
-  ['Mrs. A. Priyadharshini', 'priya.a@gmail.com', 'sgt', 'D.T.Ed., B.A. (Tamil)', true, 3, ['sub-tam1', 'sub-evs'], 'submitted', 1, ''],
-  ['Mr. S. Bhuvanesh', 'bhuvanesh.s@gmail.com', 'pet', 'B.P.Ed., M.P.Ed.', false, 4, ['sub-pe'], 'approved', 18, 'Demonstration session satisfactory. Approved for appointment.'],
-  ['Mrs. N. Gowthami', 'gowthami.n@gmail.com', 'bt-assistant', 'B.A. (English), B.Ed.', false, 2, ['sub-eng2'], 'rejected', 24, 'TET not cleared. May reapply after clearing Paper II.'],
-  ['Mr. V. Ashokkumar', 'ashok.v@gmail.com', 'lab-assistant', 'B.Sc. (Chemistry)', false, 5, [], 'under-review', 8, 'Bank passbook copy still awaited.'],
-];
+const loans = [];
+students.forEach((st, i) => {
+  if (i % 7 !== 0) return;
+  const eligible = books.filter((b) => b.forProgrammes.includes(st.programmeId));
+  if (!eligible.length) return;
+  const book = eligible[i % eligible.length];
+  const ago = between(3, 25);
+  const returned = i % 21 === 0;
+  const dueOn = shift(-ago + 14);
+  const overdueDays =
+    !returned && dueOn < TODAY_ISO
+      ? Math.round((Date.parse(TODAY_ISO) - Date.parse(dueOn)) / 86400000)
+      : 0;
+  loans.push({
+    id: `lon-${st.id}`,
+    bookId: book.id,
+    studentId: st.id,
+    borrowedOn: shift(-ago),
+    dueOn,
+    returnedOn: returned ? shift(-1) : null,
+    fine: overdueDays > 0 ? overdueDays * 2 : 0,
+    renewals: i % 14 === 0 ? 1 : 0,
+    condition: i % 40 === 0 ? 'damaged' : 'good',
+  });
+});
 
-const applications = applicationSpec.map(
-  ([name, email, designation, qualification, tetCleared, experienceYears, subjectIds, status, daysAgo, reviewNote], i) => {
-    // An incomplete file is the normal case, and it is what the reviewer acts on.
+/* ── staff recruitment ─────────────────────────────────────────────────── */
+
+const ALL_DOCS = ['degree', 'pg', 'phd', 'net', 'aadhaar', 'pan', 'bank', 'experience', 'publications'];
+
+const applications = [
+  ['Dr. K. Sumathi', 'sumathi.k@gmail.com', 'assistant-professor', 'dep-cs', 'M.Sc., M.Phil., Ph.D.', true, true, 8, 11, 'submitted', 2, ''],
+  ['Mr. R. Vetrivelan', 'vetrivelan@gmail.com', 'assistant-professor', 'dep-com', 'M.Com., NET', true, false, 4, 2, 'under-review', 6, 'Qualification verified. Demonstration class scheduled.'],
+  ['Mrs. A. Priyadharshini', 'priya.a@gmail.com', 'assistant-professor', 'dep-eng', 'M.A., M.Phil.', false, false, 3, 0, 'submitted', 1, ''],
+  ['Dr. S. Bhuvanesh', 'bhuvanesh.s@gmail.com', 'associate-professor', 'dep-mgt', 'MBA, Ph.D.', true, true, 12, 19, 'approved', 20, 'Strong publication record. Approved for appointment.'],
+  ['Mr. V. Ashokkumar', 'ashok.v@gmail.com', 'lab-instructor', 'dep-cs', 'M.Sc. (CS)', false, false, 5, 0, 'under-review', 9, 'Bank passbook copy still awaited.'],
+  ['Mrs. N. Gowthami', 'gowthami.n@gmail.com', 'assistant-professor', 'dep-mat', 'M.Sc.', false, false, 1, 0, 'rejected', 26, 'NET not cleared and experience insufficient for the post.'],
+].map(
+  (
+    [name, email, designation, departmentId, qualification, netCleared, phd, experienceYears, publications, status, daysAgo, reviewNote],
+    i,
+  ) => {
     const missing = status === 'submitted' ? 2 : status === 'under-review' ? 1 : 0;
     const needed = ALL_DOCS.filter((k) => {
-      if (k === 'tet' && !tetCleared) return false;
-      if (k === 'bed' && (designation === 'lab-assistant' || designation === 'pet')) return false;
+      if (k === 'phd' && !phd) return false;
+      if (k === 'net' && !netCleared) return false;
       if (k === 'experience' && experienceYears === 0) return false;
+      if (k === 'publications' && publications === 0) return false;
+      if (k === 'pg' && designation === 'lab-instructor') return false;
       return true;
     });
     return {
       id: `app-${i + 1}`,
-      ref: `APP/${AY_START_YEAR}/${pad(31 + i)}`,
-      schoolId: SCHOOL_ID,
+      ref: `APP/${AY_START}/${pad(31 + i)}`,
+      collegeId: COLLEGE_ID,
       name,
       email,
       phone: `+91 9${between(4000, 9999)} ${between(10000, 99999)}`,
       designation,
+      departmentId,
       qualification,
-      tetCleared,
+      netCleared,
+      phd,
       experienceYears,
-      subjectIds,
+      publications,
+      courseIds: [],
       documents: needed.slice(0, needed.length - missing).map((kind) => ({
         kind,
         fileName: `${kind}-${name.split(' ').at(-1).toLowerCase()}.pdf`,
@@ -1187,20 +1893,19 @@ const applications = applicationSpec.map(
       status,
       submittedOn: shift(-daysAgo),
       reviewedById: status === 'submitted' ? undefined : 'usr-principal',
-      reviewedOn: status === 'submitted' ? undefined : shift(-daysAgo + 2),
+      reviewedOn: status === 'submitted' ? undefined : shift(-daysAgo + 3),
       reviewNote,
     };
   },
 );
 
-/* ── leave and substitution ──────────────────────────────────────────── */
+/* ── leave and cover ───────────────────────────────────────────────────── */
 
 const leaves = [
-  ['usr-t4', 'medical', 0, 1, 'Viral fever. Medical certificate attached.', 'approved'],
-  ['usr-p5', 'casual', 0, 0, 'Family function at Pollachi.', 'approved'],
-  ['usr-t9', 'on-duty', 2, 2, 'Accompanying students to the district science fair.', 'approved'],
-  ['usr-s3', 'casual', 1, 1, 'Personal.', 'requested'],
-  ['usr-t8', 'earned', -8, -6, 'Pre-planned leave.', 'approved'],
+  ['usr-f4', 'medical', 0, 1, 'Viral fever. Medical certificate attached.', 'approved'],
+  ['usr-f11', 'on-duty', 0, 0, 'Attending the Board of Studies meeting at the university.', 'approved'],
+  ['usr-f17', 'casual', 1, 1, 'Personal.', 'requested'],
+  ['usr-f20', 'academic', -9, -7, 'Presented a paper at the national conference, Madurai.', 'approved'],
 ].map(([staffId, kind, fromOffset, toOffset, reason, status], i) => ({
   id: `lv-${i + 1}`,
   staffId,
@@ -1212,10 +1917,6 @@ const leaves = [
   approvedById: status === 'approved' ? 'usr-principal' : undefined,
 }));
 
-/**
- * Today's adjustments. Two teachers are on approved leave, so every period they
- * were due to take has been handed to a teacher who is free that period.
- */
 const substitutions = [];
 let subSeq = 0;
 const todayDow = TODAY.getDay() === 0 ? 1 : TODAY.getDay();
@@ -1224,179 +1925,41 @@ const absentToday = leaves
   .map((l) => l.staffId);
 
 absentToday.forEach((absentId) => {
-  const slots = timetable.filter(
-    (s) => s.day === todayDow && s.teacherId === absentId && s.kind !== 'break' && s.kind !== 'lunch',
-  );
-  slots.forEach((slot) => {
-    const busy = new Set(
-      timetable.filter((s) => s.day === slot.day && s.period === slot.period).map((s) => s.teacherId),
-    );
-    const sub = subjectById(slot.subjectId);
-    const cls = classes.find((c) => c.id === slot.classId);
-    // Prefer a teacher who can actually take the subject, then anyone free.
-    const free = teachers.filter((t) => !busy.has(t.id) && t.id !== absentId);
-    const best = free.find((t) => t.subjectIds.includes(slot.subjectId) && teachersFor(cls.grade, slot.subjectId).includes(t)) ?? free[0];
-    if (!best) return;
-    substitutions.push({
-      id: `sbt-${++subSeq}`,
-      date: TODAY_ISO,
-      slotId: slot.id,
-      classId: slot.classId,
-      absentTeacherId: absentId,
-      coverTeacherId: best.id,
-      assignedById: 'usr-vp',
-      note: best.subjectIds.includes(slot.subjectId)
-        ? ''
-        : `Supervision only — ${sub?.name ?? 'subject'} teacher unavailable.`,
+  timetable
+    .filter((s) => s.day === todayDow && s.facultyId === absentId && s.kind !== 'break' && s.kind !== 'lunch')
+    .forEach((slot) => {
+      const busy = new Set(
+        timetable.filter((s) => s.day === slot.day && s.hour === slot.hour).map((s) => s.facultyId),
+      );
+      const absentSet = new Set(absentToday);
+      const course = courseById(offerings.find((o) => o.id === slot.offeringId)?.courseId);
+      const freeNow = faculty.filter((f) => !busy.has(f.id) && !absentSet.has(f.id));
+      const best = freeNow.find((f) => f.courseIds.includes(course?.id)) ?? freeNow[0];
+      if (!best) return;
+      substitutions.push({
+        id: `sbt-${++subSeq}`,
+        date: TODAY_ISO,
+        hourId: slot.id,
+        sectionId: slot.sectionId,
+        absentFacultyId: absentId,
+        coverFacultyId: best.id,
+        assignedById: 'usr-vp',
+        note: best.courseIds.includes(course?.id)
+          ? ''
+          : `Supervision only — not a ${course?.title ?? 'subject'} teacher.`,
+      });
     });
-  });
 });
 
-/* ── circulars ───────────────────────────────────────────────────────── */
-
-const circulars = [
-  ['Parent–Teacher Meeting — Saturday', 'பெற்றோர்–ஆசிரியர் சந்திப்பு', 'PTM', 'The Parent–Teacher Meeting for all classes will be held this Saturday from 9:30 AM to 12:30 PM in the respective classrooms. Quarterly report cards will be handed over in person. Parents are requested to attend without fail.', true, 2],
-  ['Quarterly Examination results published', 'காலாண்டுத் தேர்வு முடிவுகள்', 'Exam', 'Quarterly Examination results are now available in the app under Report Card. Subject teachers will discuss individual performance during the PTM. Re-evaluation requests close within seven days.', true, 4],
-  ['Class 11 — group change window closes', 'குழு மாற்றம்', 'General', 'Students of Class 11 who wish to change their subject group must submit a written request countersigned by a parent before the end of this month. Changes cannot be made after the Quarterly results are entered.', true, 5],
-  ['Deepavali holidays', 'தீபாவளி விடுமுறை', 'Holiday', 'The school will remain closed for Deepavali. Classes resume as usual the following working day. School buses will not operate during the holidays.', false, 6],
-  ['Term 2 fee due date', 'கட்டணம் செலுத்தும் நாள்', 'Fee', 'Term 2 tuition and bus fees are due shortly. Payment can be made online through the app or at the school office between 9:00 AM and 3:00 PM on working days. Kindly collect your receipt.', true, 8],
-  ['Practical batches — Classes 11 and 12', 'பயிற்சி வகுப்புகள்', 'General', 'Revised practical batch lists for Physics, Chemistry, Botany and Zoology are displayed on the laboratory notice board. Students must attend with their record notebook and apron on their allotted day only.', false, 9],
-  ['Annual Day — date announced', 'ஆண்டு விழா', 'Event', 'Our Annual Day will be celebrated in the school auditorium. Students selected for cultural programmes will have practice after school hours. Parents will receive a separate invitation.', false, 12],
-  ['Bus Route 3 timing change', 'பேருந்து நேர மாற்றம்', 'Transport', 'From Monday, Route 3 (Saravanampatti) will reach the Kalapatti Road stop ten minutes earlier. Parents are requested to send children to the stop accordingly.', false, 15],
-].map(([title, titleTa, category, body, pinned, daysAgo], i) => ({
-  id: `cir-${i + 1}`,
-  schoolId: SCHOOL_ID,
-  title,
-  titleTa,
-  body,
-  category,
-  postedOn: shift(-daysAgo),
-  author: i % 2 === 0 ? 'Principal’s Office' : 'School Office',
-  pinned,
-  audience: 'all',
-  acknowledgedBy: parents.filter((_, pi) => (pi + i) % 4 === 0).map((p) => p.id),
-}));
-
-/* ── events ──────────────────────────────────────────────────────────── */
-
-const events = [
-  ['Parent–Teacher Meeting', 'PTM', 'Class-wise meetings with subject teachers. Quarterly report cards are handed over in person.', 3, '09:30', 'Respective classrooms', 'School Office'],
-  ['Deepavali Celebration', 'Cultural', 'Cultural programmes by students, followed by sweets distribution. Students may wear traditional dress.', 5, '10:00', 'School Assembly Ground', 'Cultural Committee'],
-  ['Inter-House Sports Meet', 'Sports', 'Track and field events for all classes. Parents are welcome to attend and cheer.', 18, '08:00', 'School Playground', 'Physical Education Dept'],
-  ['Science Exhibition', 'Academic', 'Students present working models and charts. Judged by teachers from neighbouring schools.', 26, '09:30', 'School Auditorium', 'Science Department'],
-  ['Annual Day', 'Cultural', 'The school’s flagship celebration — dance, drama, prize distribution and the Chief Guest’s address.', 40, '17:00', 'School Auditorium', 'Cultural Committee'],
-].map(([title, category, description, daysAhead, time, venue, organiser], i) => ({
-  id: `evt-${i + 1}`,
-  schoolId: SCHOOL_ID,
-  title,
-  description,
-  category,
-  date: shift(daysAhead),
-  time,
-  venue,
-  organiser,
-  forClasses: 'all',
-}));
-
-/* ── help desk ───────────────────────────────────────────────────────── */
-
-const requests = [
-  ['Leave for two days — family function', 'Leave', 'in-progress', 'Requesting leave on Thursday and Friday for a family wedding in Madurai. Kindly permit.', demoParent?.id, DEMO_STUDENT?.id, 3],
-  ['Bonafide certificate required', 'Certificate', 'resolved', 'Bonafide certificate needed for a bank scholarship application. Kindly issue at the earliest.', demoParent?.id, DEMO_STUDENT?.id, 12],
-  ['Request to change bus stop', 'Transport', 'open', 'We have shifted house to Vilankurichi. Requesting a change of boarding point on Route 3.', parents[4]?.id, students[4]?.id, 2],
-  ['Fan not working in Room 21', 'Facility', 'in-progress', 'The ceiling fan near the last bench has not been working for a week. Children are finding it difficult in the afternoon.', 'usr-t1', undefined, 5],
-  ['Burette replacement for Chemistry lab', 'Facility', 'open', 'Six burettes are cracked and cannot be used for volumetric analysis. Requesting replacement before the practical examination.', 'usr-p3', undefined, 4],
-].map(([title, category, status, description, raisedBy, aboutStudentId, daysAgo], i) => ({
-  id: `req-${i + 1}`,
-  ref: `REQ/${AY_START_YEAR}/${pad(101 + i)}`,
-  raisedBy,
-  aboutStudentId,
-  title,
-  category,
-  description,
-  status,
-  createdOn: shift(-daysAgo),
-  updates:
-    status === 'resolved'
-      ? [
-          { on: shift(-daysAgo + 1), note: 'Received at the school office.' },
-          { on: shift(-daysAgo + 2), note: 'Certificate issued. Please collect from the office.' },
-        ]
-      : status === 'in-progress'
-        ? [{ on: shift(-daysAgo + 1), note: 'Acknowledged by the school office.' }]
-        : [],
-}));
-
-/* ── library ─────────────────────────────────────────────────────────── */
-
-const bookSpec = [
-  ['Ponniyin Selvan (Part 1)', 'Kalki Krishnamurthy', 'Vanathi Pathippagam', '978-81-234-0011-2', 'Tamil Literature', 5, 'A-01', [8, 9, 10, 11, 12], 420],
-  ['Thirukkural with Explanation', 'Thiruvalluvar', 'Sura Books', '978-81-234-0022-9', 'Tamil Literature', 8, 'A-02', [6, 7, 8, 9, 10, 11, 12], 180],
-  ['Wings of Fire', 'A.P.J. Abdul Kalam', 'Universities Press', '978-81-732-5114-6', 'Biography', 6, 'B-03', [8, 9, 10, 11, 12], 295],
-  ['The Jungle Book', 'Rudyard Kipling', 'Macmillan', '978-02-301-2345-1', 'Fiction', 4, 'C-01', [3, 4, 5, 6, 7], 150],
-  ['Panchatantra Stories', 'Vishnu Sharma', 'Children’s Book Trust', '978-81-704-5201-3', 'Children', 10, 'C-05', [1, 2, 3, 4, 5], 95],
-  ['Malgudi Days', 'R.K. Narayan', 'Indian Thought', '978-81-852-9001-7', 'Fiction', 5, 'C-02', [7, 8, 9, 10], 250],
-  ['Tell Me Why — Science', 'Arvind Gupta', 'NBT India', '978-81-237-4430-8', 'Science', 7, 'D-01', [6, 7, 8], 160],
-  ['Atlas of India', 'Oxford', 'Oxford University Press', '978-01-995-6789-0', 'Reference', 3, 'D-04', [6, 7, 8, 9, 10, 11, 12], 550],
-  ['Mathematics Olympiad Workbook', 'RMO Trust', 'Prism Books', '978-81-721-8830-4', 'Mathematics', 4, 'E-02', [9, 10, 11, 12], 380],
-  ['NEET Biology — Objective', 'Dr. S. Ravikumar', 'Sura Books', '978-81-234-9912-5', 'Competitive', 6, 'E-05', [11, 12], 695],
-  ['Tamil Nadu Economy — A Reader', 'M. Vijayabaskar', 'Orient Blackswan', '978-81-250-6612-1', 'Social Science', 3, 'F-01', [11, 12], 480],
-  ['Let Us C', 'Yashavant Kanetkar', 'BPB Publications', '978-81-831-7944-6', 'Computer Science', 5, 'E-08', [11, 12], 425],
-].map(([title, author, publisher, isbn, category, copies, rack, forGrades, price], i) => ({
-  id: `bok-${i + 1}`,
-  schoolId: SCHOOL_ID,
-  accessionNo: `ACC/${pad(i + 1)}${between(100, 999)}`,
-  title,
-  author,
-  publisher,
-  isbn,
-  category,
-  copies,
-  rack,
-  forGrades,
-  price,
-  addedOn: shift(-between(90, 900)),
-}));
-const books = bookSpec;
-
-const loans = [];
-students.forEach((st, i) => {
-  if (i % 6 !== 0) return;
-  const grade = classes.find((c) => c.id === st.classId).grade;
-  const eligible = books.filter((b) => b.forGrades.includes(grade));
-  if (!eligible.length) return;
-  const book = eligible[i % eligible.length];
-  const borrowedDaysAgo = between(3, 20);
-  const borrowedOn = shift(-borrowedDaysAgo);
-  const dueOn = shift(-borrowedDaysAgo + 14);
-  const returned = i % 18 === 0;
-  const overdueDays =
-    !returned && dueOn < TODAY_ISO
-      ? Math.round((Date.parse(TODAY_ISO) - Date.parse(dueOn)) / 86400000)
-      : 0;
-  loans.push({
-    id: `lon-${st.id}`,
-    bookId: book.id,
-    studentId: st.id,
-    borrowedOn,
-    dueOn,
-    returnedOn: returned ? shift(-1) : null,
-    fine: overdueDays > 0 ? overdueDays * 2 : 0,
-    renewals: i % 12 === 0 ? 1 : 0,
-    condition: i % 30 === 0 ? 'damaged' : 'good',
-  });
-});
-
-/* ── notifications ───────────────────────────────────────────────────── */
+/* ── notifications and the campus map ──────────────────────────────────── */
 
 const notifications = [];
 let nSeq = 0;
-const notify = (userId, title, body, kind, daysAgo, link, read = false, schoolId = SCHOOL_ID) =>
+const notify = (userId, title, body, kind, daysAgo, link, read = false) =>
   notifications.push({
     id: `ntf-${++nSeq}`,
     userId,
-    // A notice to everyone stays inside the branch that raised it.
-    schoolId: userId === 'all' ? schoolId : undefined,
+    collegeId: userId === 'all' ? COLLEGE_ID : undefined,
     title,
     body,
     kind,
@@ -1406,159 +1969,31 @@ const notify = (userId, title, body, kind, daysAgo, link, read = false, schoolId
   });
 
 if (demoParent && DEMO_STUDENT) {
-  const firstName = DEMO_STUDENT.name.split(' ')[0];
-  notify(demoParent.id, `${firstName} was marked absent`, 'Your child was not present at morning attendance. If this is unexpected, please contact the class teacher.', 'attendance', 4, '/attendance');
-  notify(demoParent.id, 'Term 2 fees are due', 'Tuition and bus fees for Term 2 are due shortly. You can pay online from the Fees page.', 'fee', 1, '/fees');
-  notify(demoParent.id, 'Quarterly report card published', 'The Quarterly Examination report card is now available to view and download.', 'result', 4, '/results', true);
-  notify(demoParent.id, 'Parent–Teacher Meeting this Saturday', 'Class 8-A meets at 9:30 AM in Room 21. Report cards will be handed over in person.', 'event', 2, '/circulars');
-  notify(demoParent.id, 'Bus Route 3 timing changed', 'The Kalapatti Road stop will now be reached ten minutes earlier from Monday.', 'transport', 15, '/transport', true);
-  notify(demoParent.id, 'New homework in Mathematics', 'Exercise 4.2 — Linear Equations, due in two days.', 'homework', 0, '/homework');
+  const first = DEMO_STUDENT.name.split(' ')[0];
+  notify(demoParent.id, `${first} is short of attendance in one paper`, `Attendance has fallen below 75% in ${DEMO_SHORT_TITLE}. A condonation application may be made with supporting documents.`, 'attendance', 3, '/attendance');
+  notify(demoParent.id, 'Semester fee is due', 'Tuition and examination fees for this semester are due shortly. Hall tickets are withheld where dues are outstanding.', 'fee', 1, '/fees');
+  notify(demoParent.id, `${first} has been selected by Zoho Corporation`, 'Offer letter issued — ₹7.5 LPA, Chennai. Congratulations.', 'placement', 12, '/placements', true);
+  notify(demoParent.id, 'Parent–Teacher Meeting on Saturday', 'The tutor will discuss attendance, internal marks and arrears. A slot may be booked through the app.', 'event', 2, '/meetings');
+  notify(demoParent.id, 'Previous semester results published', 'The results for the previous semester are now available under Results.', 'result', 20, '/results', true);
 }
 notify('usr-principal', 'Three staff applications awaiting review', 'Two are newly submitted and one is under review. Open Staff Recruitment to act on them.', 'staff', 0, '/recruitment');
-notify('usr-transport', 'Fitness certificate expired — TN 38 AX 1207', 'The FC for Bus 1207 has lapsed. The vehicle should not run until it is renewed.', 'transport', 1, '/transport');
-notify('all', 'Deepavali holidays announced', 'The school will remain closed for Deepavali. Buses will not operate.', 'system', 6, '/circulars', true);
-
-/* ── parent–teacher meetings ─────────────────────────────────────────── */
-
-// The PTM in three days — the one the circular announces.
-const ptmDate = shift(3);
-const slotTimes = [
-  ['09:30', '09:45'], ['09:45', '10:00'], ['10:00', '10:15'], ['10:15', '10:30'],
-  ['10:45', '11:00'], ['11:00', '11:15'], ['11:15', '11:30'], ['11:30', '11:45'],
-  ['12:00', '12:15'], ['12:15', '12:30'],
-];
-
-const meetingSlots = [];
-classes.forEach((cls) => {
-  slotTimes.forEach(([start, end], i) => {
-    meetingSlots.push({
-      id: `ms-${cls.id}-${i + 1}`,
-      date: ptmDate,
-      start,
-      end,
-      teacherId: cls.classTeacherId,
-      classId: cls.id,
-      capacity: 3,
-    });
-  });
-});
-
-const meetingBookings = [];
-students.forEach((st, i) => {
-  // Roughly a third of parents have already booked.
-  if (i % 3 !== 0) return;
-  const slots = meetingSlots.filter((m) => m.classId === st.classId);
-  const slot = slots[i % slots.length];
-  meetingBookings.push({
-    id: `mb-${st.id}`,
-    slotId: slot.id,
-    parentId: st.guardianIds[0],
-    studentId: st.id,
-    bookedOn: shift(-between(1, 6)),
-    status: 'booked',
-    note: pick(['Would like to discuss Mathematics.', 'About attendance.', '', 'Please advise on study habits.']),
-    teacherNote: '',
-  });
-});
-
-// The demo parent books a PTM slot so the booking flow has history.
-if (demoParent && DEMO_STUDENT && !meetingBookings.some((b) => b.studentId === DEMO_STUDENT.id)) {
-  const slot = meetingSlots.find((m) => m.classId === DEMO_STUDENT.classId && m.start === '10:00');
-  if (slot) {
-    meetingBookings.push({
-      id: `mb-${DEMO_STUDENT.id}`,
-      slotId: slot.id,
-      parentId: demoParent.id,
-      studentId: DEMO_STUDENT.id,
-      bookedOn: shift(-2),
-      status: 'booked',
-      note: 'Would like to discuss the Quarterly results.',
-      teacherNote: '',
-    });
-  }
-}
-
-/* ── gate visits ─────────────────────────────────────────────────────── */
-
-const visitPurposes = ['Parent-Teacher Meeting', 'Meet a teacher', 'Fee payment', 'Collect child', 'Document collection'];
-const visits = [];
-let passSeq = 500;
-
-students.forEach((st, i) => {
-  if (i % 9 !== 0) return;
-  passSeq += 1;
-  const daysAgo = between(-6, 20);
-  const past = daysAgo > 0;
-  const guardian = users.find((u) => u.id === st.guardianIds[0]);
-  const teacher = users.find(
-    (u) => u.id === classes.find((c) => c.id === st.classId).classTeacherId,
-  );
-  visits.push({
-    id: `vis-${st.id}`,
-    passNo: `VP/${AY_START_YEAR}/${passSeq}`,
-    parentId: st.guardianIds[0],
-    studentId: st.id,
-    visitorName: guardian ? guardian.name : 'Parent',
-    purpose: visitPurposes[i % visitPurposes.length],
-    date: shift(-daysAgo),
-    time: pick(['09:30', '10:00', '11:00', '14:00', '15:00']),
-    meetingWith: teacher ? teacher.name : '',
-    status: past ? 'completed' : i % 18 === 0 ? 'requested' : 'approved',
-    inTime: past ? '09:34' : undefined,
-    outTime: past ? '10:05' : undefined,
-    note: '',
-  });
-});
-
-// The demo parent has a visit coming up and one already made.
-if (demoParent && DEMO_STUDENT) {
-  passSeq += 1;
-  visits.unshift({
-    id: 'vis-demo-upcoming',
-    passNo: `VP/${AY_START_YEAR}/${passSeq}`,
-    parentId: demoParent.id,
-    studentId: DEMO_STUDENT.id,
-    visitorName: demoParent.name,
-    purpose: 'Parent-Teacher Meeting',
-    date: ptmDate,
-    time: '10:00',
-    meetingWith: 'Mrs. S. Revathi',
-    status: 'approved',
-    note: 'Quarterly report card discussion.',
-  });
-  passSeq += 1;
-  visits.push({
-    id: 'vis-demo-past',
-    passNo: `VP/${AY_START_YEAR}/${passSeq}`,
-    parentId: demoParent.id,
-    studentId: DEMO_STUDENT.id,
-    visitorName: demoParent.name,
-    purpose: 'Fee payment',
-    date: shift(-22),
-    time: '11:00',
-    meetingWith: 'Mr. A. Saravanan',
-    status: 'completed',
-    inTime: '11:02',
-    outTime: '11:20',
-    note: '',
-  });
-}
-
-/* ── school map ──────────────────────────────────────────────────────── */
+notify('usr-coe', 'Condonation applications pending', 'Attendance condonation applications are awaiting your orders ahead of hall ticket issue.', 'attendance', 1, '/attendance');
+notify('usr-placement', 'Zoho drive registration closes soon', 'Eligible students who have not yet registered should be reminded.', 'placement', 1, '/placements');
+notify('all', 'End Semester Examination timetable published', 'Hall tickets will be issued only to students meeting the attendance requirement and with no outstanding dues.', 'system', 2, '/circulars', true);
 
 const places = [
-  ['Main Block', 'academic', 32, 24, 32, 20, '08:30 – 16:30', 'Classrooms for 6 to 12, staff room and the Principal’s office.'],
-  ['Primary Block', 'academic', 32, 46, 32, 12, '08:45 – 15:30', 'Classrooms 1 to 5 with the Headmistress’s room and an activity hall.'],
-  ['Science Laboratories', 'lab', 70, 16, 24, 20, '09:00 – 16:00', 'Physics, Chemistry, Botany and Zoology labs with practical batches.'],
-  ['Computer Laboratory', 'lab', 70, 40, 24, 12, '09:00 – 16:00', '30 systems with broadband, used from Class 6 upward.'],
-  ['Library', 'academic', 6, 18, 20, 16, '09:00 – 16:00', 'Over 6,000 Tamil and English titles, with a quiet reading area.'],
-  ['School Office', 'admin', 6, 40, 20, 14, '09:00 – 15:30', 'Admissions, fee counter and certificate requests.'],
-  ['Assembly Ground', 'sports', 30, 62, 34, 16, '08:15 onwards', 'Morning assembly, Annual Day and the sports meet.'],
-  ['Canteen', 'amenity', 6, 60, 18, 14, '10:00 – 15:00', 'Mid-day meal counter and a snacks stall.'],
-  ['Bus Bay', 'amenity', 70, 58, 24, 14, '07:30 & 15:30', 'Four school buses; children board here under staff supervision.'],
+  ['Main Block', 'academic', 30, 20, 34, 18, '08:30 – 16:30', 'Administration, the Principal’s office and the Commerce department.'],
+  ['Science Block', 'academic', 30, 42, 34, 16, '08:30 – 16:30', 'Computer Science, Mathematics and the laboratories.'],
+  ['Computer Laboratories', 'lab', 68, 20, 26, 16, '09:00 – 17:00', 'Five laboratories with 174 workstations and broadband.'],
+  ['Central Library', 'academic', 4, 20, 22, 18, '08:30 – 18:00', 'Over 42,000 volumes, journals and a digital section.'],
+  ['Examination Cell', 'admin', 4, 42, 22, 14, '09:00 – 16:00', 'Hall tickets, arrear registration, revaluation and mark sheets.'],
+  ['Placement Cell', 'admin', 68, 40, 26, 12, '09:00 – 17:00', 'Training, drives and recruiter liaison.'],
+  ['Thiruvalluvar Hostel (Men)', 'hostel', 4, 62, 24, 16, 'Residential', '72 residents across three floors, with a mess.'],
+  ['Avvaiyar Hostel (Women)', 'hostel', 70, 60, 24, 18, 'Residential', '96 residents across four floors, with a mess.'],
+  ['Auditorium', 'amenity', 32, 62, 34, 14, 'On event days', 'Seats 800. Conferences, Annual Day and campus drives.'],
 ].map(([name, kind, x, y, w, h, open, detail], i) => ({
   id: `plc-${i + 1}`,
-  schoolId: SCHOOL_ID,
+  collegeId: COLLEGE_ID,
   name,
   kind,
   x,
@@ -1569,393 +2004,19 @@ const places = [
   detail,
 }));
 
-/* ── the Mettupalayam branch ──────────────────────────────────────────── */
+/* Strip the helper flag used only while generating hostel allotments. */
+for (const s of students) delete s.isMale;
 
-/**
- * The trust's second school, which is a primary school only — classes 1 to 5.
- *
- * It exists so the branch switcher has somewhere real to go. A switcher that
- * lands on an empty school proves nothing, and a second copy of the same school
- * would prove less: the point a trust cares about is that its branches differ,
- * and that figures do not bleed between them.
- */
-
-const B2 = 'sch-2';
-
-const b2StaffSpec = [
-  ['b2-hm', 'Mrs. S. Rajalakshmi', 'hm.mettupalayam@school.edu', ['correspondent'], 'headmaster', 'M.A., B.Ed.', 10],
-  ['b2-office', 'Mr. K. Thirumurugan', 'office.mettupalayam@school.edu', ['office-superintendent', 'accounts-officer'], 'office-superintendent', 'B.Com.', 6],
-  ['b2-s1', 'Mrs. A. Kousalya', 'kousalya@school.edu', ['subject-teacher'], 'sgt', 'D.T.Ed., B.A.', 8],
-  ['b2-s2', 'Mrs. M. Indirani', 'indirani@school.edu', ['subject-teacher'], 'sgt', 'D.T.Ed., B.Sc.', 5],
-  ['b2-s3', 'Mrs. R. Chandraleka', 'chandraleka@school.edu', ['subject-teacher'], 'sgt', 'D.T.Ed., B.A.', 4],
-  ['b2-s4', 'Mrs. P. Tamilarasi', 'tamilarasi@school.edu', ['subject-teacher'], 'sgt', 'D.T.Ed., B.A.', 7],
-  ['b2-s5', 'Mrs. G. Nithyakalyani', 'nithyakalyani@school.edu', ['subject-teacher'], 'sgt', 'D.T.Ed., B.Sc.', 3],
-  ['b2-pe', 'Mr. V. Sakthivel', 'sakthivel@school.edu', ['subject-teacher'], 'pet', 'B.P.Ed.', 2],
-];
-
-b2StaffSpec.forEach(([key, name, email, roles, designation, qualification, years], i) => {
-  users.push({
-    id: `usr-${key}`,
-    schoolId: B2,
-    name,
-    email,
-    password: 'Branch@123',
-    roles,
-    phone: `+91 98430 4${pad(i + 10)}0`,
-    status: 'active',
-    joinedOn: `${AY_START_YEAR - years}-06-01`,
-    avatarHue: (i * 61 + 140) % 360,
-    employeeId: `EMP-M${pad(i + 1)}`,
-    designation,
-    qualification,
-    tetCleared: designation === 'sgt',
-    dateOfJoining: `${AY_START_YEAR - years}-06-01`,
-    subjectIds: designation === 'pet' ? ['sub-pe'] : ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs'],
-  });
-});
-
-// Classes 1 to 5, one section each, a little smaller than the main campus.
-const b2Classes = [1, 2, 3, 4, 5].map((grade) => ({
-  id: `cls-m${grade}A`,
-  schoolId: B2,
-  grade,
-  section: 'A',
-  label: `${grade}-A`,
-  stage: 'primary',
-  hscGroupId: undefined,
-  classTeacherId: `usr-b2-s${grade}`,
-  room: `Room ${grade}`,
-  strength: 26,
-}));
-classes.push(...b2Classes);
-
-for (const cls of b2Classes) {
-  const t = users.find((u) => u.id === cls.classTeacherId);
-  if (t && !t.roles.includes('class-teacher')) t.roles.push('class-teacher');
-  // A Secondary Grade Teacher takes every subject of their own class; games
-  // goes to the PET, as it does everywhere.
-  ['sub-tam1', 'sub-eng1', 'sub-mat1', 'sub-evs', 'sub-pe'].forEach((subjectId) => {
-    const sub = subjectById(subjectId);
-    classSubjects.push({
-      id: `csub-${++csSeq}`,
-      classId: cls.id,
-      subjectId,
-      teacherId: subjectId === 'sub-pe' ? 'usr-b2-pe' : cls.classTeacherId,
-      periodsPerWeek: sub.kind === 'co-curricular' ? 2 : sub.kind === 'language' ? 6 : 5,
-    });
-  });
-}
-
-const b2Students = [];
-b2Classes.forEach((cls) => {
-  for (let r = 1; r <= cls.strength; r++) {
-    const isBoy = (r + cls.grade) % 2 === 1;
-    const first = isBoy
-      ? boyNames[(r * 7 + cls.grade) % boyNames.length]
-      : girlNames[(r * 11 + cls.grade) % girlNames.length];
-    const initial = surnameInitials[(r * 3 + cls.grade) % surnameInitials.length];
-    const sid = `stu-m${cls.grade}A-${pad(r)}`;
-    const pid = `par-m${cls.grade}A-${pad(r)}`;
-    admissionSeq += 1;
-
-    const student = {
-      id: sid,
-      schoolId: B2,
-      name: `${first} ${initial}.`,
-      email: `${first.toLowerCase()}.${admissionSeq}@student.school.edu`,
-      password: 'Student@123',
-      roles: ['student'],
-      // A branch issues its own admission numbers.
-      admissionNo: `SVMM${AY_START_YEAR}${admissionSeq}`,
-      rollNo: r,
-      classId: cls.id,
-      dateOfBirth: `${AY_START_YEAR - cls.grade - 5}-${pad(between(1, 12))}-${pad(between(1, 28))}`,
-      bloodGroup: pick(bloodGroups),
-      guardianIds: [pid],
-      phone: `+91 9${between(4000, 9999)} ${between(10000, 99999)}`,
-      status: 'active',
-      joinedOn: `${AY_START_YEAR - between(0, 3)}-06-05`,
-      avatarHue: (r * 41 + cls.grade * 17) % 360,
-    };
-    b2Students.push(student);
-    users.push(student);
-
-    users.push({
-      id: pid,
-      schoolId: B2,
-      name: `${initial}. ${r % 2 === 0 ? fatherNames[(r + cls.grade) % fatherNames.length] : motherNames[(r * 2 + cls.grade) % motherNames.length]}`,
-      email: `parent.${admissionSeq}@gmail.com`,
-      password: 'Parent@123',
-      roles: ['parent'],
-      childIds: [sid],
-      occupation: occupations[(r * 3 + cls.grade) % occupations.length],
-      phone: `+91 9${between(4000, 9999)} ${between(10000, 99999)}`,
-      status: 'active',
-      joinedOn: `${AY_START_YEAR}-06-05`,
-      avatarHue: (r * 23 + 90) % 360,
-    });
-  }
-});
-
-// The same clash-free builder, so this branch's week is sound too.
-buildWeek(b2Classes);
-
-// This branch keeps better attendance than the main campus — smaller, closer.
-const B2_ABSENCE = { 'cls-m1A': 6, 'cls-m2A': 5, 'cls-m3A': 4, 'cls-m4A': 4, 'cls-m5A': 3 };
-
-b2Students.forEach((st, si) => {
-  const absenceRate = B2_ABSENCE[st.classId] ?? 5;
-  const irregular = si % 13 === 0 ? 8 : 0;
-  schoolDays.forEach((date, di) => {
-    const roll = (si * 11 + di * 7 + di * si) % 100;
-    let status = 'present';
-    if (roll < absenceRate + irregular) status = 'absent';
-    else if (roll < absenceRate + irregular + 2) status = 'late';
-    attendance.push({
-      id: `att-${st.id}-${date}`,
-      studentId: st.id,
-      date,
-      status,
-      markedBy: b2Classes.find((c) => c.id === st.classId)?.classTeacherId,
-    });
-  });
-});
-
-// Marks for the exams already sat, so a report card is not blank.
-b2Students.forEach((st, si) => {
-  const cls = b2Classes.find((c) => c.id === st.classId);
-  const offered = classSubjects
-    .filter((cs) => cs.classId === cls.id)
-    .filter((cs) => subjectById(cs.subjectId).kind !== 'co-curricular');
-  exams
-    .filter((e) => e.grade === cls.grade && e.published)
-    .forEach((exam) => {
-      offered.forEach((cs, bi) => {
-        const span = subjectById(cs.subjectId).maxMarks;
-        const base = Math.round(span * (0.5 + ((si * 5 + bi * 13 + exam.shortName.length * 3) % 45) / 100));
-        marks.push({
-          id: `mk-${st.id}-${exam.id}-${cs.subjectId}`,
-          studentId: st.id,
-          examId: exam.id,
-          subjectId: cs.subjectId,
-          marks: Math.min(span, base),
-          maxMarks: span,
-          practicalMarks: null,
-        });
-      });
-    });
-});
-
-// Fees — this branch charges less than the main campus, as a smaller town does.
-b2Students.forEach((st, si) => {
-  const grade = b2Classes.find((c) => c.id === st.classId).grade;
-  const tuition = 2400 + grade * 150;
-  [
-    ['Tuition Fee — Term 1', 1, tuition, -75],
-    ['Tuition Fee — Term 2', 2, tuition, 12],
-    ['Tuition Fee — Term 3', 3, tuition, 110],
-    ['Books & Uniform', 0, 1500 + grade * 120, -85],
-  ].forEach(([head, term, total, dueOffset], hi) => {
-    const past = dueOffset < 0;
-    const reliability = ((si * 7) % 10) < 6 ? 0 : ((si * 7) % 10) < 9 ? 1 : 2;
-    const state = past
-      ? reliability === 0 ? 'paid' : reliability === 1 ? ((si + hi) % 4 === 0 ? 'partial' : 'paid') : ((si + hi) % 3 === 0 ? 'due' : 'partial')
-      : reliability === 0 ? ((si + hi) % 2 === 0 ? 'paid' : 'due') : 'due';
-    const paid = state === 'paid' ? total : state === 'partial' ? Math.round((total * 0.5) / 100) * 100 : 0;
-    const id = `fee-${st.id}-${hi}`;
-    fees.push({ id, studentId: st.id, head, term, total, paid, dueOn: shift(dueOffset), concession: 0 });
-    if (paid > 0) {
-      receiptSeq += 1;
-      payments.push({
-        id: `pay-${st.id}-${hi}`,
-        studentId: st.id,
-        feeId: id,
-        amount: paid,
-        method: pick(['upi', 'cash', 'netbanking']),
-        paidOn: shift(dueOffset - between(1, 8)),
-        reference: `TXN${AY_START_YEAR}${between(100000, 999999)}`,
-        receiptNo: `RCP/M/${AY_START_YEAR}/${receiptSeq}`,
-      });
-    }
-  });
-});
-
-// Salary and payslips for the branch's own staff.
-users
-  .filter((u) => u.schoolId === B2 && u.employeeId)
-  .forEach((st, i) => {
-    const basic = SCALE[st.designation] ?? 20000;
-    const da = Math.round(basic * 0.18);
-    const hra = Math.round(basic * 0.1);
-    const pf = Math.round(Math.min(basic, 15000) * 0.12);
-    const esi = basic + da <= 21000 ? Math.round((basic + da) * 0.0075) : 0;
-    const professionalTax = basic >= 21000 ? 208 : 135;
-    salaries.push({
-      id: `sal-${st.id}`,
-      staffId: st.id,
-      basic,
-      da,
-      hra,
-      conveyance: 1200,
-      otherAllowance: 0,
-      pf,
-      esi,
-      professionalTax,
-    });
-    const gross = basic + da + hra + 1200;
-    const deductions = pf + esi + professionalTax;
-    for (let back = 2; back >= 0; back--) {
-      const d = new Date(TODAY.getFullYear(), TODAY.getMonth() - back, 1);
-      payslips.push({
-        id: `slip-${++slipSeq}`,
-        staffId: st.id,
-        month: `${d.getFullYear()}-${pad(d.getMonth() + 1)}`,
-        gross,
-        deductions,
-        net: gross - deductions,
-        lopDays: 0,
-        status: back === 0 ? 'draft' : 'paid',
-        paidOn: back === 0 ? undefined : iso(new Date(d.getFullYear(), d.getMonth() + 1, 1)),
-      });
-    }
-  });
-
-// One bus, one route.
-vehicles.push({
-  id: 'veh-m1',
-  schoolId: B2,
-  busNo: 'TN 43 BX 7781',
-  model: 'Eicher Skyline 32',
-  capacity: 32,
-  driverName: 'N. Subramani',
-  driverPhone: '+91 99445 41001',
-  driverLicenceNo: 'TN43 20130004412',
-  attendantName: 'Mrs. S. Jothi',
-  attendantPhone: '+91 99445 51001',
-  fcExpiry: shift(175),
-  insuranceExpiry: shift(80),
-  permitExpiry: shift(390),
-});
-
-routes.push({
-  id: 'rt-m1',
-  schoolId: B2,
-  name: 'Route 1 — Annur Road',
-  vehicleId: 'veh-m1',
-  fee: 6000,
-  stops: ['Annur Road Junction', 'Sirumugai Road', 'Karamadai Bypass', 'Mettupalayam Bus Stand'].map(
-    (name, si) => ({ name, time: `0${7 + Math.floor((si * 10) / 60)}:${pad((si * 10) % 60)}` }),
-  ),
-});
-
-let b2Seats = 32;
-b2Students.forEach((st, i) => {
-  if (i % 4 !== 0) return;
-  const status = i % 20 === 0 ? 'requested' : b2Seats > 0 ? 'allotted' : null;
-  if (!status) return;
-  if (status === 'allotted') b2Seats -= 1;
-  studentTransport.push({
-    id: `stt-${st.id}`,
-    studentId: st.id,
-    routeId: 'rt-m1',
-    stop: routes.at(-1).stops[i % 4].name,
-    status,
-    requestedOn: shift(-between(20, 100)),
-  });
-});
-
-// A small library, and its own circulars.
-[
-  ['Panchatantra Stories', 'Vishnu Sharma', 'Children', 8, 'A-01', [1, 2, 3, 4, 5], 95],
-  ['Aesop’s Fables', 'Aesop', 'Children', 6, 'A-02', [1, 2, 3, 4, 5], 110],
-  ['Thirukkural for Children', 'Thiruvalluvar', 'Tamil Literature', 5, 'B-01', [3, 4, 5], 140],
-  ['My First Atlas', 'Oxford', 'Reference', 3, 'B-04', [3, 4, 5], 320],
-].forEach(([title, author, category, copies, rack, forGrades, price], i) => {
-  books.push({
-    id: `bok-m${i + 1}`,
-    schoolId: B2,
-    accessionNo: `ACM/${pad(i + 1)}${between(100, 999)}`,
-    title,
-    author,
-    publisher: 'Children’s Book Trust',
-    isbn: `978-81-704-${between(1000, 9999)}-${between(0, 9)}`,
-    category,
-    copies,
-    rack,
-    forGrades,
-    price,
-    addedOn: shift(-between(120, 700)),
-  });
-});
-
-b2Students.forEach((st, i) => {
-  if (i % 9 !== 0) return;
-  const book = books.filter((b) => b.schoolId === B2)[i % 4];
-  const ago = between(3, 18);
-  loans.push({
-    id: `lon-${st.id}`,
-    bookId: book.id,
-    studentId: st.id,
-    borrowedOn: shift(-ago),
-    dueOn: shift(-ago + 14),
-    returnedOn: null,
-    fine: 0,
-    renewals: 0,
-    condition: 'good',
-  });
-});
-
-[
-  ['Annual Day — Mettupalayam', 'ஆண்டு விழா', 'Event', 'Our branch Annual Day will be held in the school hall. Parents of all classes are invited. Children taking part in the dance items will have practice after school.', true, 3],
-  ['Summer uniform from Monday', 'கோடை சீருடை', 'General', 'Children may wear the summer uniform from Monday onward. Caps and water bottles are compulsory for the games period.', false, 9],
-].forEach(([title, titleTa, category, body, pinned, daysAgo], i) => {
-  circulars.push({
-    id: `cir-m${i + 1}`,
-    schoolId: B2,
-    title,
-    titleTa,
-    body,
-    category,
-    postedOn: shift(-daysAgo),
-    author: 'Headmistress’s Office',
-    pinned,
-    audience: 'all',
-    acknowledgedBy: [],
-  });
-});
-
-events.push({
-  id: 'evt-m1',
-  schoolId: B2,
-  title: 'Annual Day — Mettupalayam',
-  description: 'Dance, drama and prize distribution for classes 1 to 5.',
-  category: 'Cultural',
-  date: shift(21),
-  time: '16:30',
-  venue: 'School Hall',
-  organiser: 'Headmistress’s Office',
-  forClasses: 'all',
-});
-
-[
-  ['Main Block', 'academic', 30, 28, 36, 24, '08:45 – 15:30', 'Classrooms 1 to 5 and the Headmistress’s room.'],
-  ['School Office', 'admin', 6, 30, 20, 16, '09:00 – 15:30', 'Admissions and the fee counter.'],
-  ['Play Area', 'sports', 30, 58, 36, 20, '08:30 onwards', 'Morning assembly and the games period.'],
-  ['Library', 'academic', 72, 28, 22, 18, '09:30 – 15:00', 'A reading room for the primary classes.'],
-].forEach(([name, kind, x, y, w, h, open, detail], i) => {
-  places.push({ id: `plc-m${i + 1}`, schoolId: B2, name, kind, x, y, w, h, open, detail });
-});
-
-notify('usr-b2-hm', 'Term 2 fee reminders are due', 'Twenty-one families have Term 2 tuition outstanding. The office can send reminders from the Fees page.', 'fee', 1, '/fees');
-
-/* ── emit ────────────────────────────────────────────────────────────── */
+/* ── emit ──────────────────────────────────────────────────────────────── */
 
 const db = {
-  group, schools, hscGroups, classes, subjects, classSubjects, users,
-  applications, leaves, substitutions, timetable,
+  group, colleges, departments, programmes, sections, courses, offerings, users,
+  mentorNotes, applications, leaves, substitutions, timetable,
   labs, labBatches, labItems, labBreakages,
-  attendance, homework, homeworkStatus, exams, marks,
+  attendance, condonations, assignments, assignmentStatus, internalMarks, exams, results,
   fees, payments, salaries, payslips,
+  companies, drives, driveApplications,
+  hostelBlocks, hostelRooms, hostelAllotments,
   circulars, events, requests, meetingSlots, meetingBookings, visits,
   vehicles, routes, studentTransport, books, loans, notifications, places,
 };
@@ -1963,13 +2024,13 @@ const db = {
 for (const [name, rows] of Object.entries(db)) write(name, rows);
 
 console.log(
-  `Seeded ${ACADEMIC_YEAR}, term ${CURRENT_TERM}, ${classes.length} classes, ${students.length} students, ${schoolDays.length} school days\n`,
+  `Seeded ${ACADEMIC_YEAR}, ${TERM} semester · ${programmes.length} programmes · ${sections.length} sections · ${students.length} students · ${workingDays.length} working days\n`,
 );
 let total = 0;
 for (const [k, v] of Object.entries(db)) {
   total += v.length;
-  console.log(`  ${k.padEnd(18)} ${String(v.length).padStart(6)}`);
+  console.log(`  ${k.padEnd(20)} ${String(v.length).padStart(7)}`);
 }
-console.log(`  ${'TOTAL'.padEnd(18)} ${String(total).padStart(6)} rows`);
-console.log(`\nDemo child: ${DEMO_STUDENT?.name} (8-A, roll ${DEMO_STUDENT?.rollNo})`);
-console.log(`Substitutions arranged today: ${substitutions.length}`);
+console.log(`  ${'TOTAL'.padEnd(20)} ${String(total).padStart(7)} rows`);
+console.log(`\nDemo student: ${DEMO_STUDENT?.name} (${DEMO_STUDENT?.registerNo})`);
+console.log(`Cover arranged today: ${substitutions.length}`);

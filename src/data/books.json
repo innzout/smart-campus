@@ -1,325 +1,232 @@
 [
   {
     "id": "bok-1",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/01160",
-    "title": "Ponniyin Selvan (Part 1)",
-    "author": "Kalki Krishnamurthy",
-    "publisher": "Vanathi Pathippagam",
-    "isbn": "978-81-234-0011-2",
-    "category": "Tamil Literature",
-    "copies": 5,
-    "rack": "A-01",
-    "forGrades": [
-      8,
-      9,
-      10,
-      11,
-      12
-    ],
-    "price": 420,
-    "addedOn": "2026-03-27"
-  },
-  {
-    "id": "bok-2",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/02554",
-    "title": "Thirukkural with Explanation",
-    "author": "Thiruvalluvar",
-    "publisher": "Sura Books",
-    "isbn": "978-81-234-0022-9",
-    "category": "Tamil Literature",
-    "copies": 8,
-    "rack": "A-02",
-    "forGrades": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
-    ],
-    "price": 180,
-    "addedOn": "2026-06-16"
-  },
-  {
-    "id": "bok-3",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/03952",
-    "title": "Wings of Fire",
-    "author": "A.P.J. Abdul Kalam",
-    "publisher": "Universities Press",
-    "isbn": "978-81-732-5114-6",
-    "category": "Biography",
-    "copies": 6,
-    "rack": "B-03",
-    "forGrades": [
-      8,
-      9,
-      10,
-      11,
-      12
-    ],
-    "price": 295,
-    "addedOn": "2024-10-17"
-  },
-  {
-    "id": "bok-4",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/04641",
-    "title": "The Jungle Book",
-    "author": "Rudyard Kipling",
-    "publisher": "Macmillan",
-    "isbn": "978-02-301-2345-1",
-    "category": "Fiction",
-    "copies": 4,
-    "rack": "C-01",
-    "forGrades": [
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "price": 150,
-    "addedOn": "2025-06-25"
-  },
-  {
-    "id": "bok-5",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/05131",
-    "title": "Panchatantra Stories",
-    "author": "Vishnu Sharma",
-    "publisher": "Children’s Book Trust",
-    "isbn": "978-81-704-5201-3",
-    "category": "Children",
-    "copies": 10,
-    "rack": "C-05",
-    "forGrades": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "price": 95,
-    "addedOn": "2024-12-18"
-  },
-  {
-    "id": "bok-6",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/06761",
-    "title": "Malgudi Days",
-    "author": "R.K. Narayan",
-    "publisher": "Indian Thought",
-    "isbn": "978-81-852-9001-7",
-    "category": "Fiction",
-    "copies": 5,
-    "rack": "C-02",
-    "forGrades": [
-      7,
-      8,
-      9,
-      10
-    ],
-    "price": 250,
-    "addedOn": "2026-05-10"
-  },
-  {
-    "id": "bok-7",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/07350",
-    "title": "Tell Me Why — Science",
-    "author": "Arvind Gupta",
-    "publisher": "NBT India",
-    "isbn": "978-81-237-4430-8",
-    "category": "Science",
-    "copies": 7,
-    "rack": "D-01",
-    "forGrades": [
-      6,
-      7,
-      8
-    ],
-    "price": 160,
-    "addedOn": "2025-03-18"
-  },
-  {
-    "id": "bok-8",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/08259",
-    "title": "Atlas of India",
-    "author": "Oxford",
-    "publisher": "Oxford University Press",
-    "isbn": "978-01-995-6789-0",
-    "category": "Reference",
-    "copies": 3,
-    "rack": "D-04",
-    "forGrades": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
-    ],
-    "price": 550,
-    "addedOn": "2025-06-22"
-  },
-  {
-    "id": "bok-9",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/09283",
-    "title": "Mathematics Olympiad Workbook",
-    "author": "RMO Trust",
-    "publisher": "Prism Books",
-    "isbn": "978-81-721-8830-4",
-    "category": "Mathematics",
-    "copies": 4,
-    "rack": "E-02",
-    "forGrades": [
-      9,
-      10,
-      11,
-      12
-    ],
-    "price": 380,
-    "addedOn": "2025-05-21"
-  },
-  {
-    "id": "bok-10",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/10972",
-    "title": "NEET Biology — Objective",
-    "author": "Dr. S. Ravikumar",
-    "publisher": "Sura Books",
-    "isbn": "978-81-234-9912-5",
-    "category": "Competitive",
-    "copies": 6,
-    "rack": "E-05",
-    "forGrades": [
-      11,
-      12
-    ],
-    "price": 695,
-    "addedOn": "2025-06-18"
-  },
-  {
-    "id": "bok-11",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/11440",
-    "title": "Tamil Nadu Economy — A Reader",
-    "author": "M. Vijayabaskar",
-    "publisher": "Orient Blackswan",
-    "isbn": "978-81-250-6612-1",
-    "category": "Social Science",
-    "copies": 3,
-    "rack": "F-01",
-    "forGrades": [
-      11,
-      12
-    ],
-    "price": 480,
-    "addedOn": "2025-10-18"
-  },
-  {
-    "id": "bok-12",
-    "schoolId": "sch-1",
-    "accessionNo": "ACC/12272",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/01309",
     "title": "Let Us C",
     "author": "Yashavant Kanetkar",
     "publisher": "BPB Publications",
     "isbn": "978-81-831-7944-6",
     "category": "Computer Science",
-    "copies": 5,
-    "rack": "E-08",
-    "forGrades": [
-      11,
-      12
+    "copies": 12,
+    "rack": "A-01",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
     ],
     "price": 425,
-    "addedOn": "2025-10-28"
+    "addedOn": "2024-05-06"
   },
   {
-    "id": "bok-m1",
-    "schoolId": "sch-2",
-    "accessionNo": "ACM/01993",
-    "title": "Panchatantra Stories",
-    "author": "Vishnu Sharma",
-    "publisher": "Children’s Book Trust",
-    "isbn": "978-81-704-1043-8",
-    "category": "Children",
-    "copies": 8,
-    "rack": "A-01",
-    "forGrades": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "price": 95,
-    "addedOn": "2026-04-10"
-  },
-  {
-    "id": "bok-m2",
-    "schoolId": "sch-2",
-    "accessionNo": "ACM/02384",
-    "title": "Aesop’s Fables",
-    "author": "Aesop",
-    "publisher": "Children’s Book Trust",
-    "isbn": "978-81-704-6980-4",
-    "category": "Children",
+    "id": "bok-2",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/02210",
+    "title": "Introduction to Algorithms",
+    "author": "Cormen, Leiserson, Rivest",
+    "publisher": "MIT Press",
+    "isbn": "978-02-620-3384-8",
+    "category": "Computer Science",
     "copies": 6,
-    "rack": "A-02",
-    "forGrades": [
-      1,
-      2,
-      3,
-      4,
-      5
+    "rack": "A-04",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
     ],
-    "price": 110,
-    "addedOn": "2025-01-31"
+    "price": 1250,
+    "addedOn": "2024-12-28"
   },
   {
-    "id": "bok-m3",
-    "schoolId": "sch-2",
-    "accessionNo": "ACM/03628",
-    "title": "Thirukkural for Children",
-    "author": "Thiruvalluvar",
-    "publisher": "Children’s Book Trust",
-    "isbn": "978-81-704-9840-1",
-    "category": "Tamil Literature",
-    "copies": 5,
+    "id": "bok-3",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/03529",
+    "title": "Database System Concepts",
+    "author": "Silberschatz, Korth",
+    "publisher": "McGraw Hill",
+    "isbn": "978-00-725-1551-8",
+    "category": "Computer Science",
+    "copies": 8,
+    "rack": "A-06",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "price": 980,
+    "addedOn": "2024-02-20"
+  },
+  {
+    "id": "bok-4",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/04460",
+    "title": "Java: The Complete Reference",
+    "author": "Herbert Schildt",
+    "publisher": "McGraw Hill",
+    "isbn": "978-12-605-4012-1",
+    "category": "Computer Science",
+    "copies": 10,
+    "rack": "A-08",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "price": 875,
+    "addedOn": "2024-10-22"
+  },
+  {
+    "id": "bok-5",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/05584",
+    "title": "Operating System Concepts",
+    "author": "Silberschatz, Galvin",
+    "publisher": "Wiley",
+    "isbn": "978-11-190-4336-1",
+    "category": "Computer Science",
+    "copies": 7,
+    "rack": "A-11",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "price": 920,
+    "addedOn": "2023-10-08"
+  },
+  {
+    "id": "bok-6",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/06510",
+    "title": "Advanced Accountancy — Volume I",
+    "author": "S.P. Jain and K.L. Narang",
+    "publisher": "Kalyani",
+    "isbn": "978-93-272-6109-4",
+    "category": "Commerce",
+    "copies": 14,
     "rack": "B-01",
-    "forGrades": [
-      3,
-      4,
-      5
+    "forProgrammes": [
+      "prg-bcom",
+      "prg-bba"
     ],
-    "price": 140,
-    "addedOn": "2025-11-03"
+    "price": 560,
+    "addedOn": "2025-08-18"
   },
   {
-    "id": "bok-m4",
-    "schoolId": "sch-2",
-    "accessionNo": "ACM/04248",
-    "title": "My First Atlas",
-    "author": "Oxford",
-    "publisher": "Children’s Book Trust",
-    "isbn": "978-81-704-6767-9",
-    "category": "Reference",
-    "copies": 3,
-    "rack": "B-04",
-    "forGrades": [
-      3,
-      4,
-      5
+    "id": "bok-7",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/07551",
+    "title": "Income Tax Law and Practice",
+    "author": "V.P. Gaur and D.B. Narang",
+    "publisher": "Kalyani",
+    "isbn": "978-93-272-6200-8",
+    "category": "Commerce",
+    "copies": 10,
+    "rack": "B-03",
+    "forProgrammes": [
+      "prg-bcom",
+      "prg-bba"
     ],
-    "price": 320,
-    "addedOn": "2025-03-21"
+    "price": 640,
+    "addedOn": "2024-03-14"
+  },
+  {
+    "id": "bok-8",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/08503",
+    "title": "Principles of Management",
+    "author": "Harold Koontz",
+    "publisher": "McGraw Hill",
+    "isbn": "978-93-392-2286-4",
+    "category": "Management",
+    "copies": 9,
+    "rack": "B-07",
+    "forProgrammes": [
+      "prg-bcom",
+      "prg-bba"
+    ],
+    "price": 710,
+    "addedOn": "2024-10-07"
+  },
+  {
+    "id": "bok-9",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/09627",
+    "title": "Marketing Management",
+    "author": "Philip Kotler",
+    "publisher": "Pearson",
+    "isbn": "978-93-325-5718-5",
+    "category": "Management",
+    "copies": 8,
+    "rack": "B-09",
+    "forProgrammes": [
+      "prg-bcom",
+      "prg-bba"
+    ],
+    "price": 899,
+    "addedOn": "2024-09-17"
+  },
+  {
+    "id": "bok-10",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/10768",
+    "title": "Ponniyin Selvan (Part 1)",
+    "author": "Kalki Krishnamurthy",
+    "publisher": "Vanathi Pathippagam",
+    "isbn": "978-81-234-0011-2",
+    "category": "Tamil Literature",
+    "copies": 6,
+    "rack": "C-01",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-bcom",
+      "prg-bba",
+      "prg-msc-cs"
+    ],
+    "price": 420,
+    "addedOn": "2024-01-01"
+  },
+  {
+    "id": "bok-11",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/11769",
+    "title": "Wings of Fire",
+    "author": "A.P.J. Abdul Kalam",
+    "publisher": "Universities Press",
+    "isbn": "978-81-732-5114-6",
+    "category": "Biography",
+    "copies": 8,
+    "rack": "C-03",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-bcom",
+      "prg-bba",
+      "prg-msc-cs"
+    ],
+    "price": 295,
+    "addedOn": "2024-06-09"
+  },
+  {
+    "id": "bok-12",
+    "collegeId": "col-1",
+    "accessionNo": "ACC/12832",
+    "title": "Quantitative Aptitude for Competitive Examinations",
+    "author": "R.S. Aggarwal",
+    "publisher": "S. Chand",
+    "isbn": "978-93-525-3402-9",
+    "category": "Competitive",
+    "copies": 15,
+    "rack": "D-01",
+    "forProgrammes": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-bcom",
+      "prg-bba",
+      "prg-msc-cs"
+    ],
+    "price": 545,
+    "addedOn": "2025-05-03"
   }
 ]

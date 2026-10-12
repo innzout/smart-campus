@@ -1,380 +1,665 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { Award, Download, GraduationCap, Medal, Send, TrendingUp } from 'lucide-react';
+import {
+  Award,
+  BookOpen,
+  CheckCircle2,
+  GraduationCap,
+  Send,
+  TrendingUp,
+  TriangleAlert,
+} from 'lucide-react';
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
-  classById,
-  classLabel,
-  classRank,
-  classSubjectAverages,
-  classesForTeacher,
-  examsForGrade,
-  gradeDistribution,
-  publishedExamsFor,
-  reportCard,
-  reportTotals,
-  studentsInClass,
-  subjectsForClass,
-  theSchool,
+  academicStanding,
+  ciaFor,
+  coursePassRates,
+  courseById,
+  offeringsOf,
+  sectionById,
+  sectionLabel,
+  sectionRank,
+  sectionsForFaculty,
+  studentsInSection,
+  transcript,
+  userById,
 } from '@/lib/queries';
-import { publishExam, saveMarks } from '@/lib/actions';
+import { publishResults, saveInternalMarks, setElective } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge, type Tone } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { DataTable, type Column } from '@/components/ui/Table';
-import { Avatar, EmptyState, PageHeader, Progress, Segmented } from '@/components/ui/misc';
-import { ColumnChart } from '@/components/charts/Charts';
-import { RingGauge } from '@/components/charts/RingChart';
-import { formatDate, pct } from '@/lib/utils';
-import type { User } from '@/data/types';
+import { Field, Select } from '@/components/ui/Field';
+import { Avatar, EmptyState, PageHeader, Progress } from '@/components/ui/misc';
+import { BarList } from '@/components/charts/Charts';
+import { cn, formatDate } from '@/lib/utils';
+import type { CiaComponent, User } from '@/data/types';
+
+/**
+ * Results, the way a university records them.
+ *
+ * A college student does not have a percentage and a rank in class — they have
+ * a grade and grade points per paper, a GPA for the semester, a CGPA across the
+ * degree, and arrears. The arrears are the part that actually governs a life:
+ * they decide whether a student may sit a placement drive, and whether they
+ * graduate with their batch.
+ */
 
 const GRADE_TONE = (grade: string): Tone =>
-  grade === 'A1' || grade === 'A2' ? 'good'
-  : grade === 'B1' || grade === 'B2' ? 'info'
-  : grade === 'E' ? 'critical'
-  : 'warning';
+  grade === 'RA' ? 'critical' : grade === 'B' ? 'warning' : grade === 'O' ? 'good' : 'info';
 
-/* ── parent / student: the report card ────────────────────────────────── */
+/* ── a student's own record ───────────────────────────────────────────── */
 
-function ChildReport({ student }: { student: User }) {
+function StudentResults({ student }: { student: User }) {
   const db = useDatabase();
-  const school = theSchool(db);
-  const exams = publishedExamsFor(db, student);
-  const [examId, setExamId] = useState(exams.at(-1)?.id ?? '');
-  const exam = exams.find((e) => e.id === examId) ?? exams.at(-1);
+  const canChoose = useCan()('result.view.self');
+  const electives = offeringsOf(db, student.sectionId ?? '').filter((o) => o.isElective);
+  const semesters = transcript(db, student.id);
+  const standing = academicStanding(db, student.id);
+  const rank = sectionRank(db, student.id);
+  const section = sectionById(db, student.sectionId);
+  const [open, setOpen] = useState(semesters[0]?.semester ?? 1);
 
-  if (!exam) {
+  // What is being studied now has no end-semester result yet, only internals.
+  const current = offeringsOf(db, student.sectionId ?? '')
+    .filter((o) => o.enrolledIds.includes(student.id))
+    .map((offering) => ({
+      offering,
+      course: courseById(db, offering.courseId),
+      cia: ciaFor(db, student.id, offering.id),
+    }));
+
+  if (semesters.length === 0 && current.length === 0) {
     return (
-      <>
-        <PageHeader title="Report Card" subtitle={`${student.name} · ${classLabel(db, student.classId)}`} />
-        <MotionCard>
-          <EmptyState
-            icon={<GraduationCap className="size-6" />}
-            title="No results published yet"
-            description="Report cards appear here as soon as the school publishes them."
-          />
-        </MotionCard>
-      </>
+      <EmptyState
+        icon={<GraduationCap className="size-6" />}
+        title="No results yet"
+        description="Results appear here once the first end-semester examination has been published."
+      />
     );
   }
-
-  const lines = reportCard(db, student.id, exam.id);
-  const totals = reportTotals(lines);
-  const rank = classRank(db, student, exam.id);
-  const best = [...lines].sort((a, b) => b.percent - a.percent)[0];
-  const weakest = [...lines].sort((a, b) => a.percent - b.percent)[0];
-
-  // How the child has moved across published exams.
-  const progress = exams.map((e) => ({
-    name: e.shortName,
-    value: Number(reportTotals(reportCard(db, student.id, e.id)).percent.toFixed(1)),
-    meta: e.name,
-  }));
-
-  const columns: Column<(typeof lines)[number] & { id: string }>[] = [
-    {
-      key: 'subject',
-      header: 'Subject',
-      sortBy: (r) => r.subject?.name ?? '',
-      cell: (r) => (
-        <div>
-          <p className="font-semibold text-ink">{r.subject?.name}</p>
-          {r.subject?.nameTa ? <p className="mt-0.5 text-[11.5px] text-ink-3">{r.subject.nameTa}</p> : null}
-        </div>
-      ),
-    },
-    {
-      key: 'marks',
-      header: 'Marks',
-      align: 'right',
-      sortBy: (r) => r.marks ?? 0,
-      cell: (r) => (
-        <span className="tnum font-semibold text-ink">
-          {r.marks ?? '—'}<span className="font-normal text-ink-3"> / {r.maxMarks}</span>
-        </span>
-      ),
-    },
-    {
-      key: 'bar',
-      header: 'Performance',
-      align: 'right',
-      hideOnMobile: true,
-      sortBy: (r) => r.percent,
-      width: '10rem',
-      cell: (r) => (
-        <div className="ml-auto max-w-[8rem]">
-          <Progress
-            value={r.percent}
-            tone={r.percent >= 75 ? 'good' : r.percent >= 50 ? 'brand' : r.percent >= 35 ? 'warning' : 'critical'}
-            className="h-1.5"
-            label={`${r.subject?.name} score`}
-          />
-        </div>
-      ),
-    },
-    {
-      key: 'grade',
-      header: 'Grade',
-      align: 'right',
-      sortBy: (r) => r.percent,
-      cell: (r) => (
-        <div className="flex flex-col items-end gap-1">
-          <Badge tone={GRADE_TONE(r.grade)}>{r.grade}</Badge>
-          <span className="text-[11px] text-ink-3">{r.remark}</span>
-        </div>
-      ),
-    },
-  ];
 
   return (
     <>
       <PageHeader
-        title="Report Card"
-        subtitle={`${student.name} · ${classLabel(db, student.classId)} · roll ${student.rollNo}`}
-        action={
-          <>
-            {exams.length > 1 ? (
-              <Segmented
-                size="sm"
-                value={exam.id}
-                onChange={setExamId}
-                options={exams.map((e) => ({ value: e.id, label: e.shortName }))}
-              />
-            ) : null}
-            <Button variant="secondary" icon={<Download className="size-4" />} onClick={() => toast.info('Report card download is simulated in this demo.')}>
-              Download
-            </Button>
-          </>
-        }
+        title="Results"
+        subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)} · ${student.registerNo}`}
       />
 
       <StatGrid>
-        <StatTile label="Total marks" value={`${totals.obtained}/${totals.max}`} note={exam.name} icon={GraduationCap} />
-        <StatTile label="Percentage" value={pct(totals.percent, 1)} note={`Grade ${totals.grade} — ${totals.remark}`} icon={TrendingUp} tone={totals.percent >= 60 ? 'good' : totals.percent >= 35 ? 'warning' : 'critical'} delay={0.06} />
-        <StatTile label="Class rank" value={rank.rank ? `${rank.rank}` : '—'} note={`Out of ${rank.outOf} students in ${classLabel(db, student.classId)}`} icon={Medal} tone={rank.rank && rank.rank <= 5 ? 'good' : 'neutral'} delay={0.12} />
-        <StatTile label="Best subject" value={best?.grade ?? '—'} note={best?.subject?.name ?? '—'} icon={Award} tone="good" delay={0.18} />
+        <StatTile
+          label="CGPA"
+          value={standing.cgpa.toFixed(2)}
+          note={`Across ${standing.semestersCompleted} completed semester${standing.semestersCompleted === 1 ? '' : 's'}`}
+          icon={Award}
+          tone={standing.cgpa >= 7 ? 'good' : standing.cgpa >= 5 ? 'warning' : 'critical'}
+        />
+        <StatTile
+          label="Arrears"
+          value={standing.arrears}
+          note={
+            standing.arrears
+              ? 'Must be cleared to graduate — and they bar most recruiters'
+              : 'No paper outstanding'
+          }
+          icon={standing.arrears ? TriangleAlert : CheckCircle2}
+          tone={standing.arrears ? 'critical' : 'good'}
+          delay={0.06}
+        />
+        <StatTile
+          label="Credits earned"
+          value={standing.creditsEarned}
+          note="Counting only papers passed"
+          icon={BookOpen}
+          delay={0.12}
+        />
+        <StatTile
+          label="Rank in cohort"
+          value={rank ? `${rank.rank} of ${rank.of}` : '—'}
+          note="By CGPA"
+          icon={TrendingUp}
+          delay={0.18}
+        />
       </StatGrid>
 
-      <div className="grid gap-5 xl:grid-cols-[1fr_1.4fr]">
-        <MotionCard delay={0.1}>
-          <CardHeader title={exam.shortName} subtitle={`Held ${formatDate(exam.startsOn)}`} />
-          <CardBody className="flex flex-col items-center pt-2">
-            <RingGauge
-              value={totals.percent}
-              label={totals.grade}
-              sublabel={`${totals.obtained}/${totals.max}`}
-              tone={totals.percent >= 75 ? 'good' : totals.percent >= 50 ? 'brand' : totals.percent >= 35 ? 'warning' : 'critical'}
-              size={176}
-            />
-            <p className="mt-5 w-full rounded-xl bg-surface-2 px-4 py-3 text-center text-[12.5px] leading-relaxed text-ink-2">
-              {totals.failed > 0
-                ? `${totals.failed} subject${totals.failed > 1 ? 's' : ''} below the pass mark — ${weakest?.subject?.name} needs the most attention.`
-                : `All subjects passed. ${weakest?.subject?.name} has the most room to improve.`}
-            </p>
-          </CardBody>
-        </MotionCard>
+      {standing.arrears > 0 ? (
+        <div className="mb-5 flex gap-3 rounded-2xl border border-[--color-critical]/35 bg-[--color-critical]/[0.05] px-4 py-3.5">
+          <TriangleAlert className="mt-px size-4 shrink-0 text-[--color-critical]" aria-hidden />
+          <p className="text-[12.5px] leading-relaxed text-ink-2">
+            <span className="font-semibold text-ink">
+              {standing.arrears} paper{standing.arrears === 1 ? '' : 's'} to be cleared:
+            </span>{' '}
+            {standing.arrearPapers.map((c) => c.title).join(', ')}. Arrear examinations are held
+            alongside the end-semester examinations; registration is through the examination cell.
+          </p>
+        </div>
+      ) : null}
 
-        <MotionCard delay={0.16}>
-          <CardHeader title="Subject-wise marks" subtitle={`Out of ${lines[0]?.maxMarks ?? 100} each`} />
+      {electives.length > 1 && canChoose ? (
+        <MotionCard delay={0.08} className="mb-5">
+          <CardHeader
+            title="Your elective"
+            subtitle="Two students in the same cohort do not necessarily sit the same papers"
+          />
           <CardBody className="pt-4">
-            <DataTable
-              columns={columns}
-              rows={lines.map((l) => ({ ...l, id: l.subject?.id ?? l.grade }))}
-              initialSort={{ key: 'marks', dir: 'desc' }}
-            />
-          </CardBody>
-        </MotionCard>
-      </div>
-
-      {progress.length > 1 ? (
-        <MotionCard delay={0.2} className="mt-5">
-          <CardHeader title="Progress across exams" subtitle="Overall percentage each time" />
-          <CardBody className="pt-2">
-            <ColumnChart data={progress} unit="%" valueLabel="Percentage" maxValue={100} />
+            <Field label="Elective for this semester" htmlFor="el">
+              <Select
+                id="el"
+                value={electives.find((e) => e.enrolledIds.includes(student.id))?.id ?? ''}
+                onChange={(e) => {
+                  setElective(student.id, e.target.value);
+                  toast.success('Elective changed', {
+                    description: 'Your attendance and internal marks follow the paper you chose.',
+                  });
+                }}
+              >
+                {electives.map((o) => (
+                  <option key={o.id} value={o.id}>
+                    {courseById(db, o.courseId)?.title}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+            <p className="mt-2 text-[11.5px] text-ink-3">
+              A change is only possible before the internal assessment begins. After that it is a
+              written request to the Head of Department.
+            </p>
           </CardBody>
         </MotionCard>
       ) : null}
 
-      <p className="mt-5 text-center text-[11.5px] text-ink-3">
-        {school.name} · {school.academicYear} · grades follow the Tamil Nadu matriculation scale
-      </p>
+      {current.length > 0 ? (
+        <MotionCard delay={0.1} className="mb-5">
+          <CardHeader
+            title={`Semester ${section?.semester ?? ''} — internal assessment so far`}
+            subtitle="Continuous assessment counts towards the final mark; the end-semester paper is still to come"
+          />
+          <CardBody className="pt-4">
+            <ul className="space-y-2">
+              {current.map(({ offering, course, cia }) => (
+                <li
+                  key={offering.id}
+                  className="flex flex-wrap items-center gap-3 rounded-xl border border-line px-3.5 py-3"
+                >
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-[13.5px] font-semibold text-ink">
+                      {course?.title}
+                    </span>
+                    <span className="mt-0.5 block truncate text-[12px] text-ink-3">
+                      {course?.code} · {course?.credits} credits ·{' '}
+                      {userById(db, offering.facultyId)?.name ?? '—'}
+                    </span>
+                  </span>
+                  {cia.outOf > 0 ? (
+                    <>
+                      <span className="w-28 shrink-0">
+                        <Progress
+                          value={Math.round((cia.scored / cia.outOf) * 100)}
+                          tone={cia.scored / cia.outOf >= 0.5 ? 'good' : 'warning'}
+                          className="h-1.5"
+                          label="Internal assessment"
+                        />
+                      </span>
+                      <span className="tnum shrink-0 text-[13px] font-semibold text-ink">
+                        {cia.scored}/{cia.outOf}
+                      </span>
+                    </>
+                  ) : (
+                    <Badge tone="neutral">Not yet assessed</Badge>
+                  )}
+                  {cia.pending > 0 ? (
+                    <Badge tone="warning">{cia.pending} to come</Badge>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </CardBody>
+        </MotionCard>
+      ) : null}
+
+      {semesters.length > 0 ? (
+        <MotionCard delay={0.16}>
+          <CardHeader
+            title="Transcript"
+            subtitle="Every completed semester, newest first"
+            action={
+              <Select
+                aria-label="Semester"
+                value={String(open)}
+                onChange={(e) => setOpen(Number(e.target.value))}
+                className="h-9 min-w-[11rem] text-[13px]"
+              >
+                {semesters.map((s) => (
+                  <option key={s.semester} value={s.semester}>
+                    Semester {s.semester} · GPA {s.gpa.toFixed(2)}
+                  </option>
+                ))}
+              </Select>
+            }
+          />
+          <CardBody className="pt-4">
+            {semesters
+              .filter((s) => s.semester === open)
+              .map((sem) => (
+                <div key={sem.semester}>
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    <Badge tone={sem.gpa >= 7 ? 'good' : sem.gpa >= 5 ? 'warning' : 'critical'}>
+                      GPA {sem.gpa.toFixed(2)}
+                    </Badge>
+                    <Badge tone="neutral">
+                      {sem.earned} of {sem.credits} credits earned
+                    </Badge>
+                    {sem.arrears > 0 ? (
+                      <Badge tone="critical">{sem.arrears} arrear{sem.arrears === 1 ? '' : 's'}</Badge>
+                    ) : (
+                      <Badge tone="good">All cleared</Badge>
+                    )}
+                  </div>
+
+                  <ul className="space-y-2">
+                    {sem.lines.map(({ course, result }) => (
+                      <li
+                        key={result.id}
+                        className={cn(
+                          'flex flex-wrap items-center gap-3 rounded-xl border px-3.5 py-3',
+                          result.status === 'arrear'
+                            ? 'border-[--color-critical]/35 bg-[--color-critical]/[0.04]'
+                            : 'border-line',
+                        )}
+                      >
+                        <span className="min-w-0 flex-1">
+                          <span className="block truncate text-[13.5px] font-semibold text-ink">
+                            {course?.title ?? 'Paper'}
+                          </span>
+                          <span className="mt-0.5 block truncate text-[12px] text-ink-3">
+                            {course?.code} · {result.credits} credits · internal {result.cia}, external{' '}
+                            {result.ese ?? '—'}
+                            {result.attempt > 1 ? ` · attempt ${result.attempt}` : ''}
+                          </span>
+                        </span>
+                        <span className="tnum shrink-0 text-[13px] text-ink-2">{result.total}</span>
+                        <Badge tone={GRADE_TONE(result.grade)}>
+                          {result.grade} · {result.gradePoint}
+                        </Badge>
+                        {result.status === 'arrear' ? (
+                          <Badge tone="critical">Reappear</Badge>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+          </CardBody>
+        </MotionCard>
+      ) : null}
     </>
   );
 }
 
-/* ── teacher: enter and publish marks ─────────────────────────────────── */
+/* ── entering internal marks ──────────────────────────────────────────── */
 
-function ClassMarks() {
-  const user = useCurrentUser();
+const COMPONENTS: CiaComponent[] = ['CIA-1', 'CIA-2', 'Model', 'Assignment'];
+
+function MarksEntry() {
   const db = useDatabase();
+  const me = useCurrentUser();
   const can = useCan();
+  const mySections = sectionsForFaculty(db, me.id);
 
-  const myClasses = classesForTeacher(db, user.id);
-  const [classId, setClassId] = useState(
-    db.classes.find((c) => c.classTeacherId === user.id)?.id ??
-      myClasses[0]?.id ??
-      db.classes[0]?.id ??
-      '',
-  );
-  const cls = classById(db, classId)!;
-  const exams = examsForGrade(db, cls.grade);
-  const [examId, setExamId] = useState(exams.find((e) => e.published)?.id ?? exams[0]?.id ?? '');
-  const exam = exams.find((e) => e.id === examId);
+  const [sectionId, setSectionId] = useState(mySections[0]?.id ?? db.sections[0]?.id ?? '');
+  const offerings = offeringsOf(db, sectionId);
+  const [offeringId, setOfferingId] = useState(offerings[0]?.id ?? '');
+  const [component, setComponent] = useState<CiaComponent>('CIA-1');
 
-  const subjects = subjectsForClass(db, classId);
-  const [subjectId, setSubjectId] = useState(subjects[0]?.id ?? '');
-  const roster = studentsInClass(db, classId);
+  const offering = offerings.find((o) => o.id === offeringId) ?? offerings[0];
+  const course = courseById(db, offering?.courseId);
+  const roll = (offering?.enrolledIds ?? [])
+    .map((id) => userById(db, id))
+    .filter((u): u is User => !!u)
+    .sort((a, b) => (a.rollNo ?? 0) - (b.rollNo ?? 0));
 
-  const [draft, setDraft] = useState<Record<string, string> | null>(null);
-  const current = (studentId: string) => {
-    if (draft && studentId in draft) return draft[studentId]!;
-    const row = db.marks.find((m) => m.studentId === studentId && m.examId === examId && m.subjectId === subjectId);
-    return row?.marks == null ? '' : String(row.marks);
-  };
+  // Each component is marked out of its own maximum, which varies by paper.
+  const maxMarks = course?.ciaMax === 40 ? 15 : 10;
+  const [draft, setDraft] = useState<Record<string, string>>({});
 
-  const save = () => {
-    if (!draft) {
-      toast.info('No changes to save.');
-      return;
-    }
-    const parsed: Record<string, number | null> = {};
-    for (const [studentId, value] of Object.entries(draft)) {
-      const n = value.trim() === '' ? null : Number(value);
-      if (n != null && (Number.isNaN(n) || n < 0 || n > 100)) {
-        toast.error('Marks must be between 0 and 100.');
-        return;
-      }
-      parsed[studentId] = n;
-    }
-    saveMarks({ examId, subjectId, marks: parsed });
-    setDraft(null);
-    toast.success('Marks saved', { description: `${subjects.find((s) => s.id === subjectId)?.name} · ${cls.label}` });
-  };
+  const existingFor = (studentId: string) =>
+    db.internalMarks.find(
+      (m) =>
+        m.studentId === studentId && m.offeringId === (offering?.id ?? '') && m.component === component,
+    );
 
-  const averages = exam ? classSubjectAverages(db, classId, exam.id) : [];
-  const distribution = exam ? gradeDistribution(db, classId, exam.id) : [];
-
-  const rows = roster.map((s) => {
-    const totals = exam ? reportTotals(reportCard(db, s.id, exam.id)) : null;
-    return { id: s.id, student: s, name: s.name, roll: s.rollNo ?? 0, totals };
-  });
-
-  const columns: Column<(typeof rows)[number]>[] = [
-    { key: 'roll', header: 'Roll', align: 'right', sortBy: (r) => r.roll, cell: (r) => <span className="tnum">{r.roll}</span> },
-    {
-      key: 'name',
-      header: 'Student',
-      sortBy: (r) => r.name,
-      cell: (r) => (
-        <div className="flex items-center gap-3">
-          <Avatar name={r.student.name} hue={r.student.avatarHue} size="sm" />
-          <span className="truncate font-semibold text-ink">{r.name}</span>
-        </div>
-      ),
-    },
-    { key: 'total', header: 'Total', align: 'right', sortBy: (r) => r.totals?.obtained ?? 0, cell: (r) => <span className="tnum">{r.totals ? `${r.totals.obtained}/${r.totals.max}` : '—'}</span> },
-    { key: 'percent', header: 'Percentage', align: 'right', hideOnMobile: true, sortBy: (r) => r.totals?.percent ?? 0, cell: (r) => <span className="tnum font-semibold text-ink">{r.totals ? pct(r.totals.percent, 1) : '—'}</span> },
-    { key: 'grade', header: 'Grade', align: 'right', sortBy: (r) => r.totals?.percent ?? 0, cell: (r) => (r.totals ? <Badge tone={GRADE_TONE(r.totals.grade)}>{r.totals.grade}</Badge> : '—') },
-  ];
+  const unpublished = db.exams.filter((e) => !e.published);
+  const passRates = coursePassRates(db, sectionById(db, sectionId)?.semester ?? 1);
 
   return (
     <>
       <PageHeader
-        title="Marks & Report Cards"
-        subtitle="Enter subject marks, then publish the report card to parents."
+        title="Results"
+        subtitle={`${sectionLabel(db, sectionId)} · ${course?.title ?? 'paper'} · ${component}`}
         action={
-          <div className="flex flex-wrap gap-2">
-            <Segmented size="sm" value={classId} onChange={(v) => { setClassId(v); setDraft(null); }} options={myClasses.map((c) => ({ value: c.id, label: c.label }))} />
-            {exams.length ? (
-              <Segmented size="sm" value={examId} onChange={(v) => { setExamId(v); setDraft(null); }} options={exams.map((e) => ({ value: e.id, label: e.shortName }))} />
-            ) : null}
-          </div>
+          can('result.publish') && unpublished.length > 0 ? (
+            <Button
+              icon={<Send className="size-4" />}
+              onClick={() => {
+                publishResults(unpublished[0]!.id);
+                toast.success(`${unpublished[0]!.name} published`, {
+                  description: 'Every student and parent affected has been notified.',
+                });
+              }}
+            >
+              Publish {unpublished[0]!.shortName}
+            </Button>
+          ) : null
         }
       />
 
-      {exam ? (
-        <StatGrid>
-          <StatTile label="Students" value={roster.length} note={`Class ${cls.label}`} icon={GraduationCap} />
-          <StatTile label="Class average" value={averages.length ? pct(averages.reduce((t, a) => t + a.value, 0) / averages.length, 1) : '—'} note={exam.name} icon={TrendingUp} delay={0.06} />
-          <StatTile label="Below pass mark" value={rows.filter((r) => (r.totals?.failed ?? 0) > 0).length} note="In at least one subject" icon={Award} tone={rows.some((r) => (r.totals?.failed ?? 0) > 0) ? 'warning' : 'good'} delay={0.12} />
-          <StatTile label="Report card" value={exam.published ? 'Published' : 'Draft'} note={exam.published ? 'Visible to parents' : 'Not yet visible to parents'} icon={Send} tone={exam.published ? 'good' : 'neutral'} delay={0.18} />
-        </StatGrid>
-      ) : null}
+      <MotionCard className="mb-5">
+        <CardBody className="grid gap-3 pt-5 sm:grid-cols-3">
+          <Select
+            aria-label="Cohort"
+            value={sectionId}
+            onChange={(e) => {
+              setSectionId(e.target.value);
+              setOfferingId(offeringsOf(db, e.target.value)[0]?.id ?? '');
+              setDraft({});
+            }}
+          >
+            {(mySections.length ? mySections : db.sections).map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.label}
+              </option>
+            ))}
+          </Select>
+          <Select
+            aria-label="Paper"
+            value={offeringId}
+            onChange={(e) => {
+              setOfferingId(e.target.value);
+              setDraft({});
+            }}
+          >
+            {offerings.map((o) => (
+              <option key={o.id} value={o.id}>
+                {courseById(db, o.courseId)?.title}
+              </option>
+            ))}
+          </Select>
+          <Select
+            aria-label="Component"
+            value={component}
+            onChange={(e) => {
+              setComponent(e.target.value as CiaComponent);
+              setDraft({});
+            }}
+          >
+            {COMPONENTS.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </Select>
+        </CardBody>
+      </MotionCard>
 
-      {exam && can('result.enter') ? (
+      <div className="grid gap-5 xl:grid-cols-[1.3fr_1fr]">
         <MotionCard delay={0.1}>
           <CardHeader
-            title="Enter marks"
-            subtitle={`${exam.name} · out of 100`}
+            title={`${component} — out of ${maxMarks}`}
+            subtitle={`${roll.length} students enrolled in this paper`}
             action={
-              <div className="flex flex-wrap items-center gap-2">
-                <Segmented size="sm" value={subjectId} onChange={(v) => { setSubjectId(v); setDraft(null); }} options={subjects.map((s) => ({ value: s.id, label: s.code.replace(/\d+$/, '') }))} />
-                <Button size="sm" onClick={save}>Save marks</Button>
-                {can('result.publish') && !exam.published ? (
+              can('result.enter') ? (
+                <Button
+                  size="sm"
+                  disabled={!offering}
+                  onClick={() => {
+                    const marks: Record<string, number | null> = {};
+                    for (const s of roll) {
+                      const raw = draft[s.id] ?? existingFor(s.id)?.marks?.toString() ?? '';
+                      const value = raw === '' ? null : Number(raw);
+                      marks[s.id] =
+                        value == null || Number.isNaN(value)
+                          ? null
+                          : Math.max(0, Math.min(maxMarks, value));
+                    }
+                    saveInternalMarks({ offeringId: offering!.id, component, marks, maxMarks });
+                    setDraft({});
+                    toast.success(`${component} saved for ${roll.length} students`);
+                  }}
+                >
+                  Save marks
+                </Button>
+              ) : null
+            }
+          />
+          <CardBody className="pt-4">
+            {roll.length === 0 ? (
+              <EmptyState
+                icon={<GraduationCap className="size-6" />}
+                title="Nobody enrolled in this paper"
+                description="An elective has no roll until students opt into it."
+              />
+            ) : (
+              <ul className="space-y-1.5">
+                {roll.map((s) => {
+                  const existing = existingFor(s.id);
+                  const value = draft[s.id] ?? existing?.marks?.toString() ?? '';
+                  return (
+                    <li
+                      key={s.id}
+                      className="flex items-center gap-3 rounded-xl border border-line px-3 py-2"
+                    >
+                      <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">
+                        {s.rollNo}
+                      </span>
+                      <Avatar name={s.name} hue={s.avatarHue} size="sm" />
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[13px] font-medium text-ink">
+                          {s.name}
+                        </span>
+                        <span className="block truncate text-[11px] text-ink-3">{s.registerNo}</span>
+                      </span>
+                      <input
+                        aria-label={`${component} for ${s.name}`}
+                        inputMode="numeric"
+                        disabled={!can('result.enter')}
+                        value={value}
+                        placeholder="—"
+                        onChange={(e) => setDraft((d) => ({ ...d, [s.id]: e.target.value }))}
+                        className="tnum h-9 w-16 shrink-0 rounded-lg border border-line bg-surface px-2 text-right text-[13px] text-ink outline-none focus:border-brand-500 disabled:opacity-60"
+                      />
+                      <span className="shrink-0 text-[12px] text-ink-3">/ {maxMarks}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </CardBody>
+        </MotionCard>
+
+        <MotionCard delay={0.16}>
+          <CardHeader
+            title="Pass rate by paper"
+            subtitle={`Semester ${sectionById(db, sectionId)?.semester ?? ''} — where a department looks first`}
+          />
+          <CardBody className="pt-2">
+            {passRates.length === 0 ? (
+              <EmptyState
+                icon={<BookOpen className="size-6" />}
+                title="No results yet for this semester"
+              />
+            ) : (
+              <BarList data={passRates.slice(0, 8)} valueLabel="Pass rate" unit="%" height={260} />
+            )}
+          </CardBody>
+        </MotionCard>
+      </div>
+    </>
+  );
+}
+
+/* ── the examination cell's view ──────────────────────────────────────── */
+
+function ExamCell() {
+  const db = useDatabase();
+  const can = useCan();
+  const [sectionId, setSectionId] = useState(db.sections[0]?.id ?? '');
+  const section = sectionById(db, sectionId);
+  const roll = studentsInSection(db, sectionId);
+
+  const rows = roll
+    .map((student) => ({ student, standing: academicStanding(db, student.id) }))
+    .sort((a, b) => b.standing.cgpa - a.standing.cgpa);
+
+  const withArrears = rows.filter((r) => r.standing.arrears > 0).length;
+  const unpublished = db.exams.filter((e) => !e.published);
+
+  return (
+    <>
+      <PageHeader
+        title="Results"
+        subtitle="Grades, arrears and publication"
+        action={
+          can('result.publish') && unpublished.length > 0 ? (
+            <Button
+              icon={<Send className="size-4" />}
+              onClick={() => {
+                publishResults(unpublished[0]!.id);
+                toast.success(`${unpublished[0]!.name} published`);
+              }}
+            >
+              Publish {unpublished[0]!.shortName}
+            </Button>
+          ) : null
+        }
+      />
+
+      <StatGrid>
+        <StatTile
+          label="Cohort CGPA"
+          value={
+            rows.length
+              ? (rows.reduce((t, r) => t + r.standing.cgpa, 0) / rows.length).toFixed(2)
+              : '—'
+          }
+          note={section?.label ?? ''}
+          icon={Award}
+        />
+        <StatTile
+          label="Carrying arrears"
+          value={withArrears}
+          note={`of ${rows.length} in this cohort`}
+          icon={TriangleAlert}
+          tone={withArrears ? 'warning' : 'good'}
+          delay={0.06}
+        />
+        <StatTile
+          label="Examinations"
+          value={db.exams.length}
+          note={`${unpublished.length} not yet published`}
+          icon={GraduationCap}
+          delay={0.12}
+        />
+        <StatTile
+          label="Papers this semester"
+          value={offeringsOf(db, sectionId).length}
+          note="Including electives"
+          icon={BookOpen}
+          delay={0.18}
+        />
+      </StatGrid>
+
+      <MotionCard delay={0.1}>
+        <CardHeader
+          title="Cohort standing"
+          subtitle="By CGPA, with arrears — the two figures a recruiter screens on"
+          action={
+            <Select
+              aria-label="Cohort"
+              value={sectionId}
+              onChange={(e) => setSectionId(e.target.value)}
+              className="h-9 min-w-[12rem] text-[13px]"
+            >
+              {db.sections.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.label}
+                </option>
+              ))}
+            </Select>
+          }
+        />
+        <CardBody className="pt-4">
+          <ul className="space-y-2">
+            {rows.map((r, i) => (
+              <li
+                key={r.student.id}
+                className="flex flex-wrap items-center gap-3 rounded-xl border border-line px-3.5 py-2.5"
+              >
+                <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">
+                  {i + 1}
+                </span>
+                <Avatar name={r.student.name} hue={r.student.avatarHue} size="sm" />
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-[13px] font-semibold text-ink">
+                    {r.student.name}
+                  </span>
+                  <span className="block truncate text-[11.5px] text-ink-3">
+                    {r.student.registerNo}
+                  </span>
+                </span>
+                <span className="tnum shrink-0 text-[13px] font-semibold text-ink">
+                  {r.standing.cgpa.toFixed(2)}
+                </span>
+                {r.standing.arrears > 0 ? (
+                  <Badge tone="critical">{r.standing.arrears} arrear{r.standing.arrears === 1 ? '' : 's'}</Badge>
+                ) : (
+                  <Badge tone="good">clear</Badge>
+                )}
+              </li>
+            ))}
+          </ul>
+        </CardBody>
+      </MotionCard>
+
+      <MotionCard delay={0.16} className="mt-5">
+        <CardHeader title="Examinations" subtitle="Published results are visible to students at once" />
+        <CardBody className="pt-4">
+          <ul className="space-y-2">
+            {db.exams.map((exam) => (
+              <li
+                key={exam.id}
+                className="flex flex-wrap items-center gap-3 rounded-xl border border-line px-3.5 py-3"
+              >
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-[13.5px] font-semibold text-ink">
+                    {exam.name}
+                  </span>
+                  <span className="mt-0.5 block text-[12px] text-ink-3">
+                    {formatDate(exam.startsOn)} – {formatDate(exam.endsOn)} · {exam.academicYear}
+                  </span>
+                </span>
+                {exam.published ? (
+                  <Badge tone="good" icon={<CheckCircle2 className="size-3" />}>
+                    Published
+                  </Badge>
+                ) : (
+                  <Badge tone="warning">Withheld</Badge>
+                )}
+                {!exam.published && can('result.publish') ? (
                   <Button
                     size="sm"
                     variant="secondary"
-                    icon={<Send className="size-3.5" />}
                     onClick={() => {
-                      publishExam(exam.id);
-                      toast.success('Report card published', { description: 'Parents have been notified.' });
+                      publishResults(exam.id);
+                      toast.success(`${exam.name} published`);
                     }}
                   >
                     Publish
                   </Button>
                 ) : null}
-              </div>
-            }
-          />
-          <CardBody className="pt-4">
-            <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
-              {roster.map((s) => (
-                <label key={s.id} className="flex items-center gap-3 rounded-xl border border-line px-3 py-2">
-                  <span className="tnum min-w-6 shrink-0 text-[11.5px] font-semibold text-ink-3">{s.rollNo}</span>
-                  <span className="min-w-0 flex-1 truncate text-[13px] text-ink">{s.name}</span>
-                  <input
-                    type="number"
-                    min={0}
-                    max={100}
-                    value={current(s.id)}
-                    onChange={(e) => setDraft({ ...(draft ?? {}), [s.id]: e.target.value })}
-                    aria-label={`Marks for ${s.name}`}
-                    className="tnum h-9 w-16 shrink-0 rounded-lg border border-line bg-surface px-2 text-right text-[13px] text-ink outline-none focus:border-brand-500"
-                  />
-                </label>
-              ))}
-            </div>
-          </CardBody>
-        </MotionCard>
-      ) : null}
-
-      {exam?.published ? (
-        <div className="mt-5 grid gap-5 xl:grid-cols-2">
-          <MotionCard delay={0.16}>
-            <CardHeader title="Subject averages" subtitle="Where the class is strong and weak" />
-            <CardBody className="pt-2">
-              <ColumnChart data={averages} unit="%" valueLabel="Average" maxValue={100} />
-            </CardBody>
-          </MotionCard>
-          <MotionCard delay={0.2}>
-            <CardHeader title="Grade distribution" subtitle={`${cls.label} · ${exam.shortName}`} />
-            <CardBody className="pt-2">
-              <ColumnChart data={distribution} valueLabel="Students" />
-            </CardBody>
-          </MotionCard>
-        </div>
-      ) : null}
-
-      <MotionCard delay={0.24} className="mt-5">
-        <CardHeader title="Class results" subtitle={exam ? exam.name : 'Select an exam'} />
-        <CardBody className="pt-4">
-          {exam ? (
-            <DataTable columns={columns} rows={rows} initialSort={{ key: 'percent', dir: 'desc' }} />
-          ) : (
-            <EmptyState icon={<GraduationCap className="size-6" />} title="No exams for this class yet" />
-          )}
+              </li>
+            ))}
+          </ul>
         </CardBody>
       </MotionCard>
     </>
@@ -384,10 +669,21 @@ function ClassMarks() {
 export default function Results() {
   const user = useCurrentUser();
   const { subject } = useAuth();
+  const can = useCan();
 
   if (user.roles.includes('parent') || user.roles.includes('student')) {
-    if (!subject) return <EmptyState icon={<GraduationCap className="size-6" />} title="No student linked to this account" />;
-    return <ChildReport student={subject} />;
+    if (!subject) {
+      return (
+        <EmptyState
+          icon={<GraduationCap className="size-6" />}
+          title="No student linked to this account"
+          description="Please contact the college office."
+        />
+      );
+    }
+    return <StudentResults student={subject} />;
   }
-  return <ClassMarks />;
+
+  if (can('exam.manage')) return <ExamCell />;
+  return <MarksEntry />;
 }

@@ -1,12 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'sonner';
 import {
   BookOpen,
-  FlaskConical,
   BookPlus,
-  Pencil,
+  Building2,
+  FlaskConical,
   GraduationCap,
   Layers,
+  Pencil,
   Plus,
   TriangleAlert,
   UserCog,
@@ -14,81 +15,80 @@ import {
 import { useCan } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
-  classesByStage,
-  classSubjectsOf,
-  eligibleTeachers,
-  hscGroupOf,
-  studentsInClass,
-  subjectsOfferedTo,
+  courseById,
+  coursesOfProgramme,
+  departmentById,
+  eligibleFaculty,
+  offeringsOf,
+  programmeById,
+  programmesByDepartment,
+  sectionById,
+  sectionsOfProgramme,
+  studentsInSection,
   userById,
 } from '@/lib/queries';
 import {
-  assignClassSubject,
-  createClass,
-  createSubject,
-  removeClassSubject,
-  updateClass,
+  assignOffering,
+  createCourse,
+  createSection,
+  removeOffering,
+  updateSection,
 } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Checkbox, Field, Input, Select } from '@/components/ui/Field';
+import { Field, Input, Select } from '@/components/ui/Field';
 import { Modal } from '@/components/ui/Modal';
 import { EmptyState, PageHeader } from '@/components/ui/misc';
 import { cn, num } from '@/lib/utils';
-import { DESIGNATION_LABEL, STAGE_LABEL } from '@/data/types';
-import type { LabKind, SchoolClass, SubjectKind } from '@/data/types';
+import { COURSE_KIND_LABEL, DESIGNATION_LABEL, LEVEL_LABEL } from '@/data/types';
+import type { CourseKind, Section } from '@/data/types';
 
 /**
- * Academic setup — the structure every other module hangs off.
+ * Academic setup — the structure the rest of the college hangs off.
  *
- * The thing a school needs this screen to get right is that the subject set is
- * not uniform: classes 1 to 5 study four subjects, 6 to 8 study six, 9 and 10
- * drop Computer Science, and 11 and 12 study two languages plus whichever four
- * their Higher Secondary group dictates. So subjects are a catalogue scoped by
- * grade, and what a class studies is an explicit assignment with a teacher
- * against it — not something inferred from the grade number.
+ * A college is departments, each running programmes, each admitting a batch
+ * that moves through semesters as a cohort. What a cohort studies is the set of
+ * papers its programme prescribes for the semester it has reached, so a paper
+ * belongs to a programme and a semester, and an offering is a paper handed to a
+ * named member of staff for one cohort.
  */
 export default function Academics() {
   const db = useDatabase();
   const can = useCan();
   const manage = can('academic.manage');
 
-  const stages = classesByStage(db);
-  const [selectedId, setSelectedId] = useState<string>(
-    () => db.classes.find((c) => c.grade === 11)?.id ?? db.classes[0]?.id ?? '',
-  );
-  const [newClassOpen, setNewClassOpen] = useState(false);
-  const [addSubjectOpen, setAddSubjectOpen] = useState(false);
-  const [editClassOpen, setEditClassOpen] = useState(false);
-  const [newSubjectOpen, setNewSubjectOpen] = useState(false);
+  const tree = programmesByDepartment(db);
+  const [selectedId, setSelectedId] = useState<string>(() => db.sections[0]?.id ?? '');
+  const [newSectionOpen, setNewSectionOpen] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+  const [addPaperOpen, setAddPaperOpen] = useState(false);
+  const [newCourseOpen, setNewCourseOpen] = useState(false);
 
-  const cls = db.classes.find((c) => c.id === selectedId);
-  const offered = cls ? classSubjectsOf(db, cls.id) : [];
-  const group = hscGroupOf(db, cls);
+  const section = sectionById(db, selectedId);
+  const programme = programmeById(db, section?.programmeId);
+  const offered = section ? offeringsOf(db, section.id) : [];
 
-  const unstaffed = db.classSubjects.filter(
-    (cs) => !db.users.some((u) => u.id === cs.teacherId),
-  ).length;
+  const unstaffed = db.offerings.filter((o) => !db.users.some((u) => u.id === o.facultyId)).length;
 
   return (
     <>
       <PageHeader
         title="Academic setup"
-        subtitle={`${db.classes.length} classes across ${stages.length} stages · ${db.subjects.length} subjects in the catalogue`}
+        subtitle={`${db.departments.length} departments · ${db.programmes.length} programmes · ${db.sections.length} cohorts · ${db.courses.length} papers in the syllabus`}
         action={
           manage ? (
             <>
               <Button
                 variant="secondary"
                 icon={<BookPlus className="size-4" />}
-                onClick={() => setNewSubjectOpen(true)}
+                onClick={() => setNewCourseOpen(true)}
               >
-                Add subject to catalogue
+                Add a paper
               </Button>
-              <Button icon={<Plus className="size-4" />} onClick={() => setNewClassOpen(true)}>
-                New class
+              <Button icon={<Plus className="size-4" />} onClick={() => setNewSectionOpen(true)}>
+                New cohort
               </Button>
             </>
           ) : null
@@ -96,84 +96,103 @@ export default function Academics() {
       />
 
       <StatGrid>
-        <StatTile label="Classes" value={db.classes.length} note="Sections on roll" icon={Layers} />
+        <StatTile
+          label="Programmes"
+          value={db.programmes.length}
+          note="Undergraduate and postgraduate"
+          icon={GraduationCap}
+        />
         <StatTile
           label="Students"
           value={num(db.users.filter((u) => u.roles.includes('student')).length)}
-          note="Across all stages"
-          icon={GraduationCap}
+          note={`Across ${db.sections.length} cohorts`}
+          icon={Layers}
           delay={0.06}
         />
         <StatTile
-          label="Subject offerings"
-          value={db.classSubjects.length}
-          note="Subject–class–teacher links"
+          label="Papers offered"
+          value={db.offerings.length}
+          note="Paper–cohort–faculty links this semester"
           icon={BookOpen}
           delay={0.12}
         />
         <StatTile
-          label="Without a teacher"
+          label="Without faculty"
           value={unstaffed}
-          note={unstaffed ? 'Needs assigning' : 'Every subject is staffed'}
+          note={unstaffed ? 'Needs assigning' : 'Every paper is staffed'}
           icon={unstaffed ? TriangleAlert : UserCog}
           tone={unstaffed ? 'critical' : 'good'}
           delay={0.18}
         />
       </StatGrid>
 
-      <div className="grid gap-5 xl:grid-cols-[minmax(0,19rem)_1fr]">
-        {/* ── the school's structure, by stage ── */}
+      <div className="grid gap-5 xl:grid-cols-[minmax(0,21rem)_1fr]">
+        {/* ── departments, programmes, cohorts ── */}
         <MotionCard delay={0.1}>
-          <CardHeader title="Classes" subtitle="Grouped by stage, as a school thinks of them" />
+          <CardHeader title="Cohorts" subtitle="By department and programme" />
           <CardBody className="space-y-4 pt-4">
-            {stages.map(({ stage, label, classes }) => (
-              <div key={stage}>
-                <p className="mb-2 text-[11.5px] font-semibold tracking-wider text-ink-3 uppercase">
-                  {label}
-                  <span className="ml-1.5 font-normal tracking-normal normal-case opacity-70">
-                    {stage === 'primary'
-                      ? '· Secondary Grade Teachers'
-                      : stage === 'higher-secondary'
-                        ? '· P.G. Assistants, by group'
-                        : '· B.T. Assistants'}
-                  </span>
+            {tree.map(({ department, hod, programmes }) => (
+              <div key={department.id}>
+                <p className="mb-1 flex items-center gap-1.5 text-[11.5px] font-semibold tracking-wider text-ink-3 uppercase">
+                  <Building2 className="size-3.5" aria-hidden />
+                  {department.name}
                 </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {classes.map((c) => (
-                    <button
-                      key={c.id}
-                      type="button"
-                      onClick={() => setSelectedId(c.id)}
-                      className={cn(
-                        'rounded-lg border px-2.5 py-1.5 text-[13px] font-medium transition-colors',
-                        c.id === selectedId
-                          ? 'border-brand-500/50 bg-brand-500/12 text-brand-600 dark:text-brand-300'
-                          : 'border-line bg-surface-2 text-ink-2 hover:border-line-strong hover:text-ink',
-                      )}
-                    >
-                      {c.label}
-                    </button>
-                  ))}
+                {hod ? <p className="mb-2 text-[11.5px] text-ink-3">Head: {hod.name}</p> : null}
+
+                <div className="space-y-2">
+                  {programmes.map((prog) => {
+                    const cohorts = sectionsOfProgramme(db, prog.id);
+                    return (
+                      <div key={prog.id} className="rounded-xl bg-surface-2 px-3 py-2.5">
+                        <p className="text-[12.5px] font-semibold text-ink">
+                          {prog.shortName}
+                          <span className="ml-1.5 font-normal text-ink-3">
+                            {LEVEL_LABEL[prog.level]} · {prog.semesters} semesters
+                          </span>
+                        </p>
+                        <div className="mt-1.5 flex flex-wrap gap-1.5">
+                          {cohorts.map((c) => (
+                            <button
+                              key={c.id}
+                              type="button"
+                              onClick={() => setSelectedId(c.id)}
+                              className={cn(
+                                'rounded-lg border px-2.5 py-1 text-[12px] font-medium transition-colors',
+                                c.id === selectedId
+                                  ? 'border-brand-500/50 bg-brand-500/12 text-brand-600 dark:text-brand-300'
+                                  : 'border-line bg-surface text-ink-2 hover:border-line-strong hover:text-ink',
+                              )}
+                            >
+                              Sem {c.semester}
+                              <span className="ml-1 opacity-70">({c.batch})</span>
+                            </button>
+                          ))}
+                          {cohorts.length === 0 ? (
+                            <span className="text-[11.5px] text-ink-3">No cohort on roll</span>
+                          ) : null}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
           </CardBody>
         </MotionCard>
 
-        {/* ── the selected class's subject set ── */}
+        {/* ── the selected cohort's papers ── */}
         <MotionCard delay={0.16}>
-          {cls ? (
+          {section && programme ? (
             <>
               <CardHeader
-                title={`Class ${cls.label}`}
+                title={`${section.label} — semester ${section.semester}`}
                 subtitle={[
-                  STAGE_LABEL[cls.stage],
-                  cls.room,
-                  `${studentsInClass(db, cls.id).length} on roll`,
-                  group?.name,
-                ]
-                  .filter(Boolean)
-                  .join(' · ')}
+                  programme.name,
+                  `batch ${section.batch}`,
+                  section.room,
+                  `${studentsInSection(db, section.id).length} on roll`,
+                  `tutor ${userById(db, section.tutorId)?.name ?? '—'}`,
+                ].join(' · ')}
                 action={
                   manage ? (
                     <span className="flex gap-2">
@@ -181,106 +200,102 @@ export default function Academics() {
                         size="sm"
                         variant="ghost"
                         icon={<Pencil className="size-3.5" />}
-                        onClick={() => setEditClassOpen(true)}
+                        onClick={() => setEditOpen(true)}
                       >
-                        Edit class
+                        Edit cohort
                       </Button>
                       <Button
                         size="sm"
                         variant="secondary"
                         icon={<Plus className="size-3.5" />}
-                        onClick={() => setAddSubjectOpen(true)}
+                        onClick={() => setAddPaperOpen(true)}
                       >
-                        Add subject
+                        Add paper
                       </Button>
                     </span>
                   ) : null
                 }
               />
               <CardBody className="pt-4">
-                {group ? (
-                  <p className="mb-4 rounded-xl bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-ink-2">
-                    <span className="font-semibold text-ink">{group.code} — {group.name}.</span>{' '}
-                    {group.description} Tamil and English are compulsory alongside the four group
-                    subjects.
-                  </p>
-                ) : null}
-
                 {offered.length === 0 ? (
                   <EmptyState
                     icon={<BookOpen className="size-6" />}
-                    title="No subjects assigned yet"
-                    description="Add the subjects this class studies and name the teacher for each."
+                    title="No papers assigned yet"
+                    description="Add the papers this cohort studies and name the member of staff for each."
                   />
                 ) : (
                   <ul className="space-y-2">
-                    {offered.map((cs) => {
-                      const subject = db.subjects.find((s) => s.id === cs.subjectId);
-                      const teacher = userById(db, cs.teacherId);
-                      const pool = eligibleTeachers(db, cls.grade, cs.subjectId);
-                      // A teacher outside the eligible pool is worth flagging:
-                      // the wrong cadre in front of a class is an inspection
-                      // problem, not a cosmetic one.
-                      const mismatched = !!teacher && !pool.some((t) => t.id === teacher.id);
+                    {offered.map((offering) => {
+                      const course = courseById(db, offering.courseId);
+                      const faculty = userById(db, offering.facultyId);
+                      const pool = eligibleFaculty(db, offering.courseId);
+                      // Teaching a postgraduate paper without a doctorate or
+                      // NET is a university condition, not a preference.
+                      const mismatched = !!faculty && !pool.some((f) => f.id === faculty.id);
 
                       return (
                         <li
-                          key={cs.id}
+                          key={offering.id}
                           className="flex flex-wrap items-center gap-3 rounded-xl border border-line px-3.5 py-3"
                         >
                           <span className="min-w-0 flex-1">
-                            <span className="flex items-center gap-2">
+                            <span className="flex flex-wrap items-center gap-2">
                               <span className="truncate text-[13.5px] font-semibold text-ink">
-                                {subject?.name ?? 'Unknown subject'}
+                                {course?.title ?? 'Unknown paper'}
                               </span>
-                              {subject?.hasPractical ? (
+                              {course?.kind === 'practical' ? (
                                 <Badge tone="info" icon={<FlaskConical className="size-3" />}>
                                   Practical
                                 </Badge>
-                              ) : null}
-                              {subject?.kind === 'language' ? (
-                                <Badge tone="neutral">Language</Badge>
+                              ) : offering.isElective ? (
+                                <Badge tone="brand">Elective</Badge>
+                              ) : course ? (
+                                <Badge tone="neutral">{COURSE_KIND_LABEL[course.kind]}</Badge>
                               ) : null}
                             </span>
                             <span className="mt-0.5 block truncate text-[12px] text-ink-3">
-                              {subject?.nameTa ? `${subject.nameTa} · ` : ''}
-                              {subject?.code} · {cs.periodsPerWeek} periods a week ·{' '}
-                              {subject?.hasPractical
-                                ? `${subject.maxMarks} theory + ${subject.practicalMarks} practical`
-                                : `out of ${subject?.maxMarks ?? 100}`}
+                              {course?.code} · {course?.credits} credits · {course?.hoursPerWeek}{' '}
+                              hours a week · {course?.ciaMax} internal + {course?.eseMax} external
+                              {offering.isElective
+                                ? ` · ${offering.enrolledIds.length} opted in`
+                                : ''}
                             </span>
                           </span>
 
                           {manage ? (
                             <span className="flex items-center gap-2">
                               <Select
-                                aria-label={`Teacher for ${subject?.name}`}
-                                value={cs.teacherId}
+                                aria-label={`Faculty for ${course?.title}`}
+                                value={offering.facultyId}
                                 className="h-9 min-w-[13rem] text-[13px]"
                                 onChange={(e) => {
-                                  assignClassSubject({
-                                    classId: cls.id,
-                                    subjectId: cs.subjectId,
-                                    teacherId: e.target.value,
+                                  assignOffering({
+                                    sectionId: section.id,
+                                    courseId: offering.courseId,
+                                    facultyId: e.target.value,
                                   });
-                                  toast.success('Teacher assigned', {
+                                  toast.success('Faculty assigned', {
                                     description: 'The timetable has been updated to match.',
                                   });
                                 }}
                               >
-                                {/* The eligible cadre first, then everyone else
-                                    so an exception is possible but deliberate. */}
-                                <optgroup label={`Qualified for class ${cls.grade}`}>
-                                  {pool.map((t) => (
-                                    <option key={t.id} value={t.id}>
-                                      {t.name}
-                                      {t.designation ? ` · ${DESIGNATION_LABEL[t.designation]}` : ''}
+                                <optgroup
+                                  label={
+                                    programme.level === 'pg'
+                                      ? 'Qualified for postgraduate teaching'
+                                      : 'Teaching staff'
+                                  }
+                                >
+                                  {pool.map((f) => (
+                                    <option key={f.id} value={f.id}>
+                                      {f.name}
+                                      {f.designation ? ` · ${DESIGNATION_LABEL[f.designation]}` : ''}
                                     </option>
                                   ))}
                                 </optgroup>
-                                {mismatched && teacher ? (
+                                {mismatched && faculty ? (
                                   <optgroup label="Currently assigned">
-                                    <option value={teacher.id}>{teacher.name}</option>
+                                    <option value={faculty.id}>{faculty.name}</option>
                                   </optgroup>
                                 ) : null}
                               </Select>
@@ -288,20 +303,20 @@ export default function Academics() {
                                 size="sm"
                                 variant="ghost"
                                 onClick={() => {
-                                  removeClassSubject(cls.id, cs.subjectId);
-                                  toast.success(`${subject?.name} withdrawn from ${cls.label}`);
+                                  removeOffering(section.id, offering.courseId);
+                                  toast.success(`${course?.title} withdrawn from ${section.label}`);
                                 }}
                               >
                                 Remove
                               </Button>
                             </span>
                           ) : (
-                            <span className="text-[13px] text-ink-2">{teacher?.name ?? '—'}</span>
+                            <span className="text-[13px] text-ink-2">{faculty?.name ?? '—'}</span>
                           )}
 
                           {mismatched ? (
                             <Badge tone="warning" icon={<TriangleAlert className="size-3" />}>
-                              Outside the usual cadre for class {cls.grade}
+                              Not qualified for a postgraduate paper
                             </Badge>
                           ) : null}
                         </li>
@@ -315,58 +330,160 @@ export default function Academics() {
             <CardBody>
               <EmptyState
                 icon={<Layers className="size-6" />}
-                title="No class selected"
-                description="Pick a class to see the subjects it studies."
+                title="No cohort selected"
+                description="Pick a cohort to see the papers it studies this semester."
               />
             </CardBody>
           )}
         </MotionCard>
       </div>
 
-      {cls ? (
-        <AddSubjectDialog
-          open={addSubjectOpen}
-          onClose={() => setAddSubjectOpen(false)}
-          cls={cls}
+      {section ? (
+        <AddPaperDialog
+          open={addPaperOpen}
+          onClose={() => setAddPaperOpen(false)}
+          section={section}
         />
       ) : null}
-      <NewClassDialog
-        open={newClassOpen}
-        onClose={() => setNewClassOpen(false)}
+      {section && editOpen ? (
+        <EditCohortDialog section={section} onClose={() => setEditOpen(false)} />
+      ) : null}
+      <NewCohortDialog
+        open={newSectionOpen}
+        onClose={() => setNewSectionOpen(false)}
         onCreated={setSelectedId}
       />
-      {cls && editClassOpen ? (
-        <EditClassDialog cls={cls} onClose={() => setEditClassOpen(false)} />
-      ) : null}
-      <NewSubjectDialog open={newSubjectOpen} onClose={() => setNewSubjectOpen(false)} />
+      <NewCourseDialog open={newCourseOpen} onClose={() => setNewCourseOpen(false)} />
     </>
   );
 }
 
-/* ── editing a class once it exists ──────────────────────────────────── */
+/* ── adding a paper to a cohort ──────────────────────────────────────── */
 
-/**
- * Rooms get reallocated, a class teacher goes on long leave, and the sanctioned
- * strength changes at admission time. Being able to open a class but never
- * amend it is the kind of gap that turns into a phone call to us.
- */
-function EditClassDialog({ cls, onClose }: { cls: SchoolClass; onClose: () => void }) {
+function AddPaperDialog({
+  open,
+  onClose,
+  section,
+}: {
+  open: boolean;
+  onClose: () => void;
+  section: Section;
+}) {
   const db = useDatabase();
-  const [room, setRoom] = useState(cls.room);
-  const [strength, setStrength] = useState(cls.strength);
-  const [classTeacherId, setClassTeacherId] = useState(cls.classTeacherId);
-  const [hscGroupId, setHscGroupId] = useState(cls.hscGroupId ?? '');
+  const already = new Set(offeringsOf(db, section.id).map((o) => o.courseId));
+  // Only papers the syllabus prescribes for this programme and semester.
+  const available = coursesOfProgramme(db, section.programmeId, section.semester).filter(
+    (c) => !already.has(c.id),
+  );
 
-  const pool = eligibleTeachers(db, cls.grade);
-  const onRoll = studentsInClass(db, cls.id).length;
-  const current = userById(db, cls.classTeacherId);
+  const [courseId, setCourseId] = useState('');
+  const [facultyId, setFacultyId] = useState('');
+  const pool = eligibleFaculty(db, courseId || undefined);
+
+  return (
+    <Modal
+      open={open}
+      onClose={onClose}
+      title={`Add a paper to ${section.label}`}
+      description={`Only papers the syllabus prescribes for semester ${section.semester} are listed.`}
+      size="sm"
+      footer={
+        <>
+          <Button variant="secondary" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            disabled={!courseId || !facultyId}
+            onClick={() => {
+              assignOffering({ sectionId: section.id, courseId, facultyId });
+              toast.success('Paper added', {
+                description: `${courseById(db, courseId)?.title} is now part of ${section.label}.`,
+              });
+              setCourseId('');
+              setFacultyId('');
+              onClose();
+            }}
+          >
+            Add paper
+          </Button>
+        </>
+      }
+    >
+      {available.length === 0 ? (
+        <p className="text-[13.5px] text-ink-2">
+          This cohort already studies every paper the syllabus prescribes for semester{' '}
+          {section.semester}.
+        </p>
+      ) : (
+        <div className="space-y-4">
+          <Field label="Paper" required htmlFor="ap">
+            <Select
+              id="ap"
+              value={courseId}
+              onChange={(e) => {
+                setCourseId(e.target.value);
+                setFacultyId('');
+              }}
+            >
+              <option value="">Choose a paper…</option>
+              {available.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.title} ({c.code}) · {c.credits} credits
+                </option>
+              ))}
+            </Select>
+          </Field>
+
+          <Field
+            label="Faculty"
+            required
+            htmlFor="af"
+            hint={courseId ? `${pool.length} qualified to take this paper` : undefined}
+          >
+            <Select
+              id="af"
+              value={facultyId}
+              onChange={(e) => setFacultyId(e.target.value)}
+              disabled={!courseId}
+            >
+              <option value="">Choose a member of staff…</option>
+              {pool.map((f) => (
+                <option key={f.id} value={f.id}>
+                  {f.name}
+                  {f.designation ? ` · ${DESIGNATION_LABEL[f.designation]}` : ''}
+                </option>
+              ))}
+            </Select>
+          </Field>
+        </div>
+      )}
+    </Modal>
+  );
+}
+
+/* ── editing a cohort ─────────────────────────────────────────────────── */
+
+function EditCohortDialog({ section, onClose }: { section: Section; onClose: () => void }) {
+  const db = useDatabase();
+  const programme = programmeById(db, section.programmeId);
+  const pool = db.users.filter(
+    (u) =>
+      (u.roles.includes('faculty') || u.roles.includes('tutor')) &&
+      u.departmentId === programme?.departmentId,
+  );
+  const onRoll = studentsInSection(db, section.id).length;
+
+  const [room, setRoom] = useState(section.room);
+  const [strength, setStrength] = useState(section.strength);
+  const [tutorId, setTutorId] = useState(section.tutorId);
+  const [semester, setSemester] = useState(section.semester);
 
   return (
     <Modal
       open
       onClose={onClose}
-      title={`Class ${cls.label}`}
-      description={`${STAGE_LABEL[cls.stage]} · ${onRoll} on roll`}
+      title={section.label}
+      description={`${programme?.name} · batch ${section.batch} · ${onRoll} on roll`}
       size="sm"
       footer={
         <>
@@ -376,17 +493,11 @@ function EditClassDialog({ cls, onClose }: { cls: SchoolClass; onClose: () => vo
           <Button
             disabled={strength < onRoll}
             onClick={() => {
-              updateClass({
-                classId: cls.id,
-                room: room.trim() || cls.room,
-                strength,
-                classTeacherId,
-                hscGroupId: cls.stage === 'higher-secondary' ? hscGroupId : undefined,
-              });
-              toast.success(`Class ${cls.label} updated`, {
+              updateSection({ sectionId: section.id, room, strength, tutorId, semester });
+              toast.success(`${section.label} updated`, {
                 description:
-                  classTeacherId !== cls.classTeacherId
-                    ? `${userById(db, classTeacherId)?.name} is now the class teacher and has been notified.`
+                  tutorId !== section.tutorId
+                    ? `${userById(db, tutorId)?.name} is now the tutor and has been notified.`
                     : undefined,
               });
               onClose();
@@ -398,381 +509,63 @@ function EditClassDialog({ cls, onClose }: { cls: SchoolClass; onClose: () => vo
       }
     >
       <div className="space-y-4">
-        <Field label="Class teacher" htmlFor="ect">
-          <Select
-            id="ect"
-            value={classTeacherId}
-            onChange={(e) => setClassTeacherId(e.target.value)}
-          >
-            <optgroup label={`Qualified for class ${cls.grade}`}>
-              {pool.map((t) => (
-                <option key={t.id} value={t.id}>
-                  {t.name}
-                  {t.designation ? ` · ${DESIGNATION_LABEL[t.designation]}` : ''}
-                </option>
-              ))}
-            </optgroup>
-            {current && !pool.some((t) => t.id === current.id) ? (
-              <optgroup label="Currently assigned">
-                <option value={current.id}>{current.name}</option>
-              </optgroup>
-            ) : null}
+        <Field label="Tutor" htmlFor="et" hint="The class advisor for this cohort.">
+          <Select id="et" value={tutorId} onChange={(e) => setTutorId(e.target.value)}>
+            {pool.map((f) => (
+              <option key={f.id} value={f.id}>
+                {f.name}
+                {f.designation ? ` · ${DESIGNATION_LABEL[f.designation]}` : ''}
+              </option>
+            ))}
           </Select>
         </Field>
 
-        {cls.stage === 'higher-secondary' ? (
+        <div className="grid grid-cols-2 gap-3">
           <Field
-            label="Higher Secondary group"
-            htmlFor="ehg"
-            hint="Changing the group does not rewrite the subjects already assigned — withdraw and add those deliberately."
+            label="Semester"
+            htmlFor="es"
+            hint="Advancing a cohort changes which papers it studies."
           >
-            <Select id="ehg" value={hscGroupId} onChange={(e) => setHscGroupId(e.target.value)}>
-              {db.hscGroups.map((g) => (
-                <option key={g.id} value={g.id}>
-                  {g.code} — {g.name}
+            <Select
+              id="es"
+              value={String(semester)}
+              onChange={(e) => setSemester(Number(e.target.value))}
+            >
+              {Array.from({ length: programme?.semesters ?? 6 }, (_, i) => i + 1).map((s) => (
+                <option key={s} value={s}>
+                  Semester {s}
                 </option>
               ))}
             </Select>
           </Field>
-        ) : null}
-
-        <div className="grid grid-cols-2 gap-3">
-          <Field label="Room" htmlFor="erm">
-            <Input id="erm" value={room} onChange={(e) => setRoom(e.target.value)} />
-          </Field>
-          <Field
-            label="Sanctioned strength"
-            htmlFor="est"
-            error={strength < onRoll ? `${onRoll} children are already on roll.` : undefined}
-          >
-            <Input
-              id="est"
-              type="number"
-              min={1}
-              max={80}
-              value={strength}
-              invalid={strength < onRoll}
-              onChange={(e) => setStrength(Number(e.target.value))}
-            />
-          </Field>
-        </div>
-      </div>
-    </Modal>
-  );
-}
-
-/* ── adding a subject the school offers ──────────────────────────────── */
-
-/**
- * The catalogue ships with the Tamil Nadu state board subjects, but a school
- * teaching Hindi, French, Yoga or Moral Science has nowhere to put it otherwise
- * — and telling a correspondent "we will add that for you" is the wrong answer.
- */
-function NewSubjectDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const db = useDatabase();
-  const [code, setCode] = useState('');
-  const [name, setName] = useState('');
-  const [nameTa, setNameTa] = useState('');
-  const [kind, setKind] = useState<SubjectKind>('core');
-  const [fromGrade, setFromGrade] = useState(6);
-  const [toGrade, setToGrade] = useState(10);
-  const [maxMarks, setMaxMarks] = useState(100);
-  const [hasPractical, setHasPractical] = useState(false);
-  const [labKind, setLabKind] = useState<LabKind>('computer');
-  const [practicalMarks, setPracticalMarks] = useState(30);
-
-  const duplicate = db.subjects.some(
-    (sub) => sub.code.toLowerCase() === code.trim().toLowerCase() && code.trim() !== '',
-  );
-  const valid = name.trim().length > 1 && code.trim().length > 0 && !duplicate && toGrade >= fromGrade;
-
-  return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      title="Add a subject to the catalogue"
-      description="The grades you choose decide which classes may be given this subject."
-      size="md"
-      footer={
-        <>
-          <Button variant="secondary" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button
-            disabled={!valid}
-            onClick={() => {
-              createSubject({
-                code: code.trim().toUpperCase(),
-                name: name.trim(),
-                nameTa: nameTa.trim() || undefined,
-                kind,
-                grades: Array.from({ length: toGrade - fromGrade + 1 }, (_, i) => fromGrade + i),
-                maxMarks,
-                hasPractical,
-                practicalMarks: hasPractical ? practicalMarks : 0,
-                labKind: hasPractical ? labKind : undefined,
-              });
-              toast.success(`${name.trim()} added to the catalogue`, {
-                description: `Now offerable to classes ${fromGrade} to ${toGrade}.`,
-              });
-              setCode('');
-              setName('');
-              setNameTa('');
-              onClose();
-            }}
-          >
-            Add subject
-          </Button>
-        </>
-      }
-    >
-      <div className="space-y-4">
-        <div className="grid gap-3 sm:grid-cols-[1fr_8rem]">
-          <Field label="Subject name" required htmlFor="nsn">
-            <Input
-              id="nsn"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Hindi"
-            />
-          </Field>
-          <Field
-            label="Code"
-            required
-            htmlFor="nsc"
-            error={duplicate ? 'Already in use.' : undefined}
-          >
-            <Input
-              id="nsc"
-              value={code}
-              invalid={duplicate}
-              onChange={(e) => setCode(e.target.value.toUpperCase())}
-              placeholder="HIN"
-            />
+          <Field label="Room" htmlFor="er">
+            <Input id="er" value={room} onChange={(e) => setRoom(e.target.value)} />
           </Field>
         </div>
 
-        <Field label="Name in Tamil" htmlFor="nst" hint="Shown to parents alongside the English name.">
-          <Input id="nst" value={nameTa} onChange={(e) => setNameTa(e.target.value)} />
+        <Field
+          label="Sanctioned strength"
+          htmlFor="est"
+          error={strength < onRoll ? `${onRoll} students are already on roll.` : undefined}
+        >
+          <Input
+            id="est"
+            type="number"
+            min={1}
+            max={120}
+            value={strength}
+            invalid={strength < onRoll}
+            onChange={(e) => setStrength(Number(e.target.value))}
+          />
         </Field>
-
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Field label="Kind" htmlFor="nsk">
-            <Select id="nsk" value={kind} onChange={(e) => setKind(e.target.value as SubjectKind)}>
-              <option value="language">Language</option>
-              <option value="core">Core</option>
-              <option value="elective">Elective</option>
-              <option value="co-curricular">Co-curricular</option>
-            </Select>
-          </Field>
-          <Field label="Marks (theory)" htmlFor="nsm">
-            <Input
-              id="nsm"
-              type="number"
-              min={10}
-              max={200}
-              step={5}
-              value={maxMarks}
-              onChange={(e) => setMaxMarks(Number(e.target.value))}
-            />
-          </Field>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <Field label="Offered from class" htmlFor="nsf">
-            <Select
-              id="nsf"
-              value={String(fromGrade)}
-              onChange={(e) => setFromGrade(Number(e.target.value))}
-            >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
-                <option key={g} value={g}>
-                  Class {g}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field
-            label="up to class"
-            htmlFor="nstg"
-            error={toGrade < fromGrade ? 'Must not be below the lower class.' : undefined}
-          >
-            <Select
-              id="nstg"
-              value={String(toGrade)}
-              onChange={(e) => setToGrade(Number(e.target.value))}
-            >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
-                <option key={g} value={g}>
-                  Class {g}
-                </option>
-              ))}
-            </Select>
-          </Field>
-        </div>
-
-        <Checkbox
-          label="This subject has a practical component"
-          checked={hasPractical}
-          onChange={(e) => setHasPractical(e.target.checked)}
-        />
-
-        {hasPractical ? (
-          <div className="grid gap-3 sm:grid-cols-2">
-            <Field label="Practical runs in" htmlFor="nsl">
-              <Select
-                id="nsl"
-                value={labKind}
-                onChange={(e) => setLabKind(e.target.value as LabKind)}
-              >
-                {db.labs.map((l) => (
-                  <option key={l.id} value={l.kind}>
-                    {l.name}
-                  </option>
-                ))}
-              </Select>
-            </Field>
-            <Field label="Practical marks" htmlFor="nsp">
-              <Input
-                id="nsp"
-                type="number"
-                min={5}
-                max={100}
-                step={5}
-                value={practicalMarks}
-                onChange={(e) => setPracticalMarks(Number(e.target.value))}
-              />
-            </Field>
-          </div>
-        ) : null}
       </div>
     </Modal>
   );
 }
 
-/* ── adding a subject to a class ──────────────────────────────────────── */
+/* ── opening a cohort ─────────────────────────────────────────────────── */
 
-function AddSubjectDialog({
-  open,
-  onClose,
-  cls,
-}: {
-  open: boolean;
-  onClose: () => void;
-  cls: SchoolClass;
-}) {
-  const db = useDatabase();
-  const already = new Set(classSubjectsOf(db, cls.id).map((cs) => cs.subjectId));
-  // Only subjects the catalogue offers to this grade, minus what it already has.
-  const available = subjectsOfferedTo(db, cls.grade).filter((s) => !already.has(s.id));
-
-  const [subjectId, setSubjectId] = useState('');
-  const [teacherId, setTeacherId] = useState('');
-  const [periods, setPeriods] = useState(5);
-
-  const pool = useMemo(
-    () => eligibleTeachers(db, cls.grade, subjectId || undefined),
-    [db, cls.grade, subjectId],
-  );
-
-  const submit = () => {
-    if (!subjectId || !teacherId) return;
-    assignClassSubject({ classId: cls.id, subjectId, teacherId, periodsPerWeek: periods });
-    toast.success('Subject added', {
-      description: `${db.subjects.find((s) => s.id === subjectId)?.name} is now part of ${cls.label}.`,
-    });
-    setSubjectId('');
-    setTeacherId('');
-    onClose();
-  };
-
-  return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      title={`Add a subject to ${cls.label}`}
-      description={`Only subjects the school offers to class ${cls.grade} are listed.`}
-      size="sm"
-      footer={
-        <>
-          <Button variant="secondary" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button onClick={submit} disabled={!subjectId || !teacherId}>
-            Add subject
-          </Button>
-        </>
-      }
-    >
-      {available.length === 0 ? (
-        <p className="text-[13.5px] text-ink-2">
-          This class already studies every subject the catalogue offers to class {cls.grade}.
-        </p>
-      ) : (
-        <div className="space-y-4">
-          <Field label="Subject" required htmlFor="subject">
-            <Select
-              id="subject"
-              value={subjectId}
-              onChange={(e) => {
-                setSubjectId(e.target.value);
-                setTeacherId('');
-              }}
-            >
-              <option value="">Choose a subject…</option>
-              {available.map((s) => (
-                <option key={s.id} value={s.id}>
-                  {s.name} ({s.code}){s.hasPractical ? ' · with practical' : ''}
-                </option>
-              ))}
-            </Select>
-          </Field>
-
-          <Field
-            label="Teacher"
-            required
-            htmlFor="teacher"
-            hint={
-              subjectId
-                ? `${pool.length} member${pool.length === 1 ? '' : 's'} of staff qualified for class ${cls.grade}`
-                : undefined
-            }
-          >
-            <Select
-              id="teacher"
-              value={teacherId}
-              onChange={(e) => setTeacherId(e.target.value)}
-              disabled={!subjectId}
-            >
-              <option value="">Choose a teacher…</option>
-              {pool.map((t) => (
-                <option key={t.id} value={t.id}>
-                  {t.name}
-                  {t.designation ? ` · ${DESIGNATION_LABEL[t.designation]}` : ''}
-                </option>
-              ))}
-            </Select>
-          </Field>
-
-          <Field label="Periods a week" htmlFor="periods">
-            <Input
-              id="periods"
-              type="number"
-              min={1}
-              max={10}
-              value={periods}
-              onChange={(e) => setPeriods(Number(e.target.value))}
-            />
-          </Field>
-        </div>
-      )}
-    </Modal>
-  );
-}
-
-/* ── opening a new class ──────────────────────────────────────────────── */
-
-function NewClassDialog({
+function NewCohortDialog({
   open,
   onClose,
   onCreated,
@@ -782,148 +575,285 @@ function NewClassDialog({
   onCreated: (id: string) => void;
 }) {
   const db = useDatabase();
-  const [grade, setGrade] = useState(11);
-  const [section, setSection] = useState('C');
+  const [programmeId, setProgrammeId] = useState(db.programmes[0]?.id ?? '');
+  const programme = programmeById(db, programmeId);
+  const [batch, setBatch] = useState(new Date().getFullYear());
+  const [section, setSection] = useState('A');
+  const [semester, setSemester] = useState(1);
+  const [tutorId, setTutorId] = useState('');
   const [room, setRoom] = useState('');
-  const [hscGroupId, setHscGroupId] = useState(db.hscGroups[0]?.id ?? '');
-  const [classTeacherId, setClassTeacherId] = useState('');
-  const [strength, setStrength] = useState(30);
 
-  const pool = eligibleTeachers(db, grade);
-  const needsGroup = grade >= 11;
-  const duplicate = db.classes.some((c) => c.grade === grade && c.section === section);
-
-  const submit = () => {
-    if (!classTeacherId || duplicate) return;
-    const id = createClass({
-      grade,
-      section: section.toUpperCase(),
-      classTeacherId,
-      room: room || 'To be allotted',
-      hscGroupId: needsGroup ? hscGroupId : undefined,
-      strength,
-    });
-    onCreated(id);
-    toast.success(`Class ${grade}-${section.toUpperCase()} opened`, {
-      description: needsGroup
-        ? 'The group’s subjects have been assigned — set a teacher against each.'
-        : 'Add the subjects this class will study.',
-    });
-    onClose();
-  };
+  const pool = db.users.filter(
+    (u) =>
+      (u.roles.includes('faculty') || u.roles.includes('tutor')) &&
+      u.departmentId === programme?.departmentId,
+  );
+  const duplicate = db.sections.some(
+    (s) => s.programmeId === programmeId && s.batch === batch && s.section === section,
+  );
 
   return (
     <Modal
       open={open}
       onClose={onClose}
-      title="Open a new class"
-      description="A Higher Secondary class is defined by its subject group, so its subjects are set up with it."
+      title="Open a cohort"
+      description="The papers the syllabus prescribes for the semester are set up with it, along with a blank week."
       size="sm"
       footer={
         <>
           <Button variant="secondary" onClick={onClose}>
             Cancel
           </Button>
-          <Button onClick={submit} disabled={!classTeacherId || duplicate}>
-            Open class
+          <Button
+            disabled={!tutorId || duplicate}
+            onClick={() => {
+              const id = createSection({
+                programmeId,
+                batch,
+                section: section.toUpperCase(),
+                semester,
+                tutorId,
+                room: room || 'To be allotted',
+                strength: programme?.intake ?? 36,
+              });
+              onCreated(id);
+              toast.success('Cohort opened', {
+                description: 'Its papers have been created — set a member of staff against each.',
+              });
+              onClose();
+            }}
+          >
+            Open cohort
           </Button>
         </>
       }
     >
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
-          <Field label="Class" required htmlFor="grade">
-            <Select
-              id="grade"
-              value={String(grade)}
-              onChange={(e) => {
-                setGrade(Number(e.target.value));
-                setClassTeacherId('');
-              }}
-            >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
-                <option key={g} value={g}>
-                  Class {g}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field
-            label="Section"
-            required
-            htmlFor="section"
-            error={duplicate ? `Class ${grade}-${section.toUpperCase()} already exists.` : undefined}
+        <Field label="Programme" required htmlFor="np">
+          <Select
+            id="np"
+            value={programmeId}
+            onChange={(e) => {
+              setProgrammeId(e.target.value);
+              setTutorId('');
+            }}
           >
-            <Input
-              id="section"
-              maxLength={1}
-              value={section}
-              invalid={duplicate}
-              onChange={(e) => setSection(e.target.value.toUpperCase())}
-            />
-          </Field>
-        </div>
-
-        {needsGroup ? (
-          <Field
-            label="Higher Secondary group"
-            required
-            htmlFor="group"
-            hint="Decides the four subjects taken alongside Tamil and English."
-          >
-            <Select id="group" value={hscGroupId} onChange={(e) => setHscGroupId(e.target.value)}>
-              {db.hscGroups.map((g) => (
-                <option key={g.id} value={g.id}>
-                  {g.code} — {g.name}
-                </option>
-              ))}
-            </Select>
-          </Field>
-        ) : null}
-
-        <Field
-          label="Class teacher"
-          required
-          htmlFor="ct"
-          hint={
-            grade <= 5
-              ? 'Secondary Grade Teachers handle classes 1 to 5.'
-              : grade <= 10
-                ? 'B.T. Assistants handle classes 6 to 10.'
-                : 'P.G. Assistants handle classes 11 and 12.'
-          }
-        >
-          <Select id="ct" value={classTeacherId} onChange={(e) => setClassTeacherId(e.target.value)}>
-            <option value="">Choose a class teacher…</option>
-            {pool.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.name}
-                {t.designation ? ` · ${DESIGNATION_LABEL[t.designation]}` : ''}
+            {db.programmes.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name} · {departmentById(db, p.departmentId)?.shortName}
               </option>
             ))}
           </Select>
         </Field>
 
-        <div className="grid grid-cols-2 gap-3">
-          <Field label="Room" htmlFor="room">
+        <div className="grid grid-cols-3 gap-3">
+          <Field
+            label="Batch"
+            required
+            htmlFor="nb"
+            error={duplicate ? 'Already exists.' : undefined}
+          >
             <Input
-              id="room"
-              placeholder="Room 45"
-              value={room}
-              onChange={(e) => setRoom(e.target.value)}
+              id="nb"
+              type="number"
+              min={2015}
+              max={2100}
+              value={batch}
+              invalid={duplicate}
+              onChange={(e) => setBatch(Number(e.target.value))}
             />
           </Field>
-          <Field label="Sanctioned strength" htmlFor="strength">
+          <Field label="Section" required htmlFor="ns">
             <Input
-              id="strength"
-              type="number"
-              min={1}
-              max={60}
-              value={strength}
-              onChange={(e) => setStrength(Number(e.target.value))}
+              id="ns"
+              maxLength={1}
+              value={section}
+              onChange={(e) => setSection(e.target.value.toUpperCase())}
+            />
+          </Field>
+          <Field label="Semester" htmlFor="nsem">
+            <Select
+              id="nsem"
+              value={String(semester)}
+              onChange={(e) => setSemester(Number(e.target.value))}
+            >
+              {Array.from({ length: programme?.semesters ?? 6 }, (_, i) => i + 1).map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </Select>
+          </Field>
+        </div>
+
+        <Field label="Tutor" required htmlFor="nt" hint="From the programme's own department.">
+          <Select id="nt" value={tutorId} onChange={(e) => setTutorId(e.target.value)}>
+            <option value="">Choose a tutor…</option>
+            {pool.map((f) => (
+              <option key={f.id} value={f.id}>
+                {f.name}
+                {f.designation ? ` · ${DESIGNATION_LABEL[f.designation]}` : ''}
+              </option>
+            ))}
+          </Select>
+        </Field>
+
+        <Field label="Room" htmlFor="nr">
+          <Input
+            id="nr"
+            placeholder="CS-301"
+            value={room}
+            onChange={(e) => setRoom(e.target.value)}
+          />
+        </Field>
+      </div>
+    </Modal>
+  );
+}
+
+/* ── adding a paper to the syllabus ──────────────────────────────────── */
+
+function NewCourseDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const db = useDatabase();
+  const [programmeId, setProgrammeId] = useState(db.programmes[0]?.id ?? '');
+  const programme = programmeById(db, programmeId);
+  const [code, setCode] = useState('');
+  const [title, setTitle] = useState('');
+  const [semester, setSemester] = useState(1);
+  const [kind, setKind] = useState<CourseKind>('core');
+  const [credits, setCredits] = useState(4);
+  const [hoursPerWeek, setHoursPerWeek] = useState(4);
+
+  const practical = kind === 'practical';
+  const duplicate = db.courses.some(
+    (c) => c.code.toLowerCase() === code.trim().toLowerCase() && code.trim() !== '',
+  );
+  const valid = title.trim().length > 3 && code.trim().length > 0 && !duplicate;
+
+  return (
+    <Modal
+      open={open}
+      onClose={onClose}
+      title="Add a paper to the syllabus"
+      description="A paper belongs to one programme and one semester — that is what decides who studies it."
+      size="md"
+      footer={
+        <>
+          <Button variant="secondary" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            disabled={!valid}
+            onClick={() => {
+              createCourse({
+                code: code.trim().toUpperCase(),
+                title: title.trim(),
+                programmeId,
+                semester,
+                kind,
+                credits,
+                hoursPerWeek,
+                // A practical is marked 40 internal / 60 external; theory 25 / 75.
+                ciaMax: practical ? 40 : 25,
+                eseMax: practical ? 60 : 75,
+                labKind: practical ? 'computer' : undefined,
+              });
+              toast.success(`${title.trim()} added`, {
+                description: `Offerable to ${programme?.shortName} semester ${semester}.`,
+              });
+              setCode('');
+              setTitle('');
+              onClose();
+            }}
+          >
+            Add paper
+          </Button>
+        </>
+      }
+    >
+      <div className="space-y-4">
+        <div className="grid gap-3 sm:grid-cols-[1fr_9rem]">
+          <Field label="Title" required htmlFor="ct">
+            <Input
+              id="ct"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Advanced Database Technology"
+            />
+          </Field>
+          <Field label="Code" required htmlFor="cc" error={duplicate ? 'In use.' : undefined}>
+            <Input
+              id="cc"
+              value={code}
+              invalid={duplicate}
+              onChange={(e) => setCode(e.target.value.toUpperCase())}
+              placeholder="26UCS501"
             />
           </Field>
         </div>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Field label="Programme" required htmlFor="cp">
+            <Select id="cp" value={programmeId} onChange={(e) => setProgrammeId(e.target.value)}>
+              {db.programmes.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.shortName}
+                </option>
+              ))}
+            </Select>
+          </Field>
+          <Field label="Semester" htmlFor="cs">
+            <Select
+              id="cs"
+              value={String(semester)}
+              onChange={(e) => setSemester(Number(e.target.value))}
+            >
+              {Array.from({ length: programme?.semesters ?? 6 }, (_, i) => i + 1).map((s) => (
+                <option key={s} value={s}>
+                  Semester {s}
+                </option>
+              ))}
+            </Select>
+          </Field>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-3">
+          <Field label="Kind" htmlFor="ck">
+            <Select id="ck" value={kind} onChange={(e) => setKind(e.target.value as CourseKind)}>
+              {(Object.keys(COURSE_KIND_LABEL) as CourseKind[]).map((k) => (
+                <option key={k} value={k}>
+                  {COURSE_KIND_LABEL[k]}
+                </option>
+              ))}
+            </Select>
+          </Field>
+          <Field label="Credits" htmlFor="ccr">
+            <Input
+              id="ccr"
+              type="number"
+              min={1}
+              max={12}
+              value={credits}
+              onChange={(e) => setCredits(Number(e.target.value))}
+            />
+          </Field>
+          <Field label="Hours a week" htmlFor="chw">
+            <Input
+              id="chw"
+              type="number"
+              min={1}
+              max={12}
+              value={hoursPerWeek}
+              onChange={(e) => setHoursPerWeek(Number(e.target.value))}
+            />
+          </Field>
+        </div>
+
+        <p className="rounded-xl bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-ink-2">
+          {practical
+            ? 'A practical is marked 40 internal and 60 external, and is timetabled into a laboratory.'
+            : 'A theory paper is marked 25 internal and 75 external.'}
+        </p>
       </div>
     </Modal>
   );

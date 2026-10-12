@@ -1,50 +1,40 @@
 [
   {
     "id": "lv-1",
-    "staffId": "usr-t4",
+    "staffId": "usr-f4",
     "kind": "medical",
-    "from": "2026-10-11",
-    "to": "2026-10-12",
+    "from": "2026-10-12",
+    "to": "2026-10-13",
     "reason": "Viral fever. Medical certificate attached.",
     "status": "approved",
     "approvedById": "usr-principal"
   },
   {
     "id": "lv-2",
-    "staffId": "usr-p5",
-    "kind": "casual",
-    "from": "2026-10-11",
-    "to": "2026-10-11",
-    "reason": "Family function at Pollachi.",
+    "staffId": "usr-f11",
+    "kind": "on-duty",
+    "from": "2026-10-12",
+    "to": "2026-10-12",
+    "reason": "Attending the Board of Studies meeting at the university.",
     "status": "approved",
     "approvedById": "usr-principal"
   },
   {
     "id": "lv-3",
-    "staffId": "usr-t9",
-    "kind": "on-duty",
+    "staffId": "usr-f17",
+    "kind": "casual",
     "from": "2026-10-13",
     "to": "2026-10-13",
-    "reason": "Accompanying students to the district science fair.",
-    "status": "approved",
-    "approvedById": "usr-principal"
-  },
-  {
-    "id": "lv-4",
-    "staffId": "usr-s3",
-    "kind": "casual",
-    "from": "2026-10-12",
-    "to": "2026-10-12",
     "reason": "Personal.",
     "status": "requested"
   },
   {
-    "id": "lv-5",
-    "staffId": "usr-t8",
-    "kind": "earned",
+    "id": "lv-4",
+    "staffId": "usr-f20",
+    "kind": "academic",
     "from": "2026-10-03",
     "to": "2026-10-05",
-    "reason": "Pre-planned leave.",
+    "reason": "Presented a paper at the national conference, Madurai.",
     "status": "approved",
     "approvedById": "usr-principal"
   }

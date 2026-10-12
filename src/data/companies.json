@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cmp-1",
+    "collegeId": "col-1",
+    "name": "Zoho Corporation",
+    "sector": "Software Products",
+    "website": "zoho.com",
+    "contactName": "Ms. R. Divya",
+    "contactEmail": "campus@zoho.example"
+  },
+  {
+    "id": "cmp-2",
+    "collegeId": "col-1",
+    "name": "Cognizant",
+    "sector": "IT Services",
+    "website": "cognizant.com",
+    "contactName": "Mr. S. Arun",
+    "contactEmail": "hiring@cognizant.example"
+  },
+  {
+    "id": "cmp-3",
+    "collegeId": "col-1",
+    "name": "Infosys BPM",
+    "sector": "Business Process",
+    "website": "infosys.com",
+    "contactName": "Ms. K. Nithya",
+    "contactEmail": "campus@infosys.example"
+  },
+  {
+    "id": "cmp-4",
+    "collegeId": "col-1",
+    "name": "KGiSL",
+    "sector": "IT Services",
+    "website": "kgisl.com",
+    "contactName": "Mr. P. Vignesh",
+    "contactEmail": "careers@kgisl.example"
+  },
+  {
+    "id": "cmp-5",
+    "collegeId": "col-1",
+    "name": "HDFC Bank",
+    "sector": "Banking",
+    "website": "hdfcbank.com",
+    "contactName": "Ms. A. Gayathri",
+    "contactEmail": "campus@hdfc.example"
+  },
+  {
+    "id": "cmp-6",
+    "collegeId": "col-1",
+    "name": "Deloitte USI",
+    "sector": "Consulting",
+    "website": "deloitte.com",
+    "contactName": "Mr. M. Karthik",
+    "contactEmail": "campus@deloitte.example"
+  }
+]

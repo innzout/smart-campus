@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import { CheckCircle2, Clock, DoorOpen, LogIn, LogOut, Plus, QrCode, ShieldCheck } from 'lucide-react';
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { mutate, newId, useDatabase } from '@/lib/store';
-import { classLabel, userById } from '@/lib/queries';
+import { sectionLabel, userById } from '@/lib/queries';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge, type Tone } from '@/components/ui/Badge';
@@ -20,9 +20,9 @@ import type { User, Visit } from '@/data/types';
 
 const PURPOSES = [
   'Parent-Teacher Meeting',
-  'Meet a teacher',
+  'Meet a faculty member',
   'Fee payment',
-  'Collect child',
+  'Hostel',
   'Document collection',
   'Other',
 ] as const;
@@ -128,7 +128,7 @@ function ParentVisits({ student }: { student: User }) {
   } = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
     mode: 'onBlur',
-    defaultValues: { purpose: 'Meet a teacher', date: todayISO(), time: '10:00', meetingWith: '', note: '' },
+    defaultValues: { purpose: 'Meet a faculty member', date: todayISO(), time: '10:00', meetingWith: '', note: '' },
   });
 
   return (
@@ -155,7 +155,7 @@ function ParentVisits({ student }: { student: User }) {
         />
         <StatTile label="Awaiting approval" value={mine.filter((v) => v.status === 'requested').length} note="With the school office" icon={Clock} tone={mine.some((v) => v.status === 'requested') ? 'warning' : 'good'} delay={0.06} />
         <StatTile label="Visits this year" value={mine.filter((v) => v.status === 'completed').length} note="Completed" icon={CheckCircle2} delay={0.12} />
-        <StatTile label="Student" value={classLabel(db, student.classId)} note={`${student.name} · roll ${student.rollNo}`} icon={ShieldCheck} delay={0.18} />
+        <StatTile label="Student" value={sectionLabel(db, student.sectionId)} note={`${student.name} · roll ${student.rollNo}`} icon={ShieldCheck} delay={0.18} />
       </StatGrid>
 
       {next ? (
@@ -169,7 +169,7 @@ function ParentVisits({ student }: { student: User }) {
               <div className="min-w-0 flex-1">
                 <p className="tnum text-[18px] font-semibold text-ink">{next.passNo}</p>
                 <p className="mt-1 text-[13px] text-ink-2">
-                  {next.visitorName} · visiting for {student.name} ({classLabel(db, student.classId)})
+                  {next.visitorName} · visiting for {student.name} ({sectionLabel(db, student.sectionId)})
                 </p>
                 <dl className="mt-3 grid gap-x-6 gap-y-1.5 text-[12.5px] sm:grid-cols-2">
                   {[
@@ -319,7 +319,7 @@ function GateRegister() {
             <div className="min-w-0">
               <p className="truncate font-semibold text-ink">{r.visitorName}</p>
               <p className="mt-0.5 truncate text-[11.5px] text-ink-3">
-                {student ? `${student.name} · ${classLabel(db, student.classId)}` : '—'}
+                {student ? `${student.name} · ${sectionLabel(db, student.sectionId)}` : '—'}
               </p>
             </div>
           </div>

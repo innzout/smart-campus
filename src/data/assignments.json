@@ -1,0 +1,422 @@
+[
+  {
+    "id": "asg-1",
+    "offeringId": "off-1",
+    "title": "Tamil — Paper I — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f4"
+  },
+  {
+    "id": "asg-2",
+    "offeringId": "off-2",
+    "title": "Communicative English — Paper I — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f20"
+  },
+  {
+    "id": "asg-3",
+    "offeringId": "off-3",
+    "title": "Programming in C — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f6"
+  },
+  {
+    "id": "asg-4",
+    "offeringId": "off-7",
+    "title": "Java Programming — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f2"
+  },
+  {
+    "id": "asg-5",
+    "offeringId": "off-8",
+    "title": "Database Management Systems — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f3"
+  },
+  {
+    "id": "asg-6",
+    "offeringId": "off-9",
+    "title": "Operating Systems — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f4"
+  },
+  {
+    "id": "asg-7",
+    "offeringId": "off-13",
+    "title": "Web Technology — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f7"
+  },
+  {
+    "id": "asg-8",
+    "offeringId": "off-14",
+    "title": "Data Mining and Warehousing — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f1"
+  },
+  {
+    "id": "asg-9",
+    "offeringId": "off-15",
+    "title": "Computer Graphics and Multimedia — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f2"
+  },
+  {
+    "id": "asg-10",
+    "offeringId": "off-19",
+    "title": "Tamil — Paper I — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f1"
+  },
+  {
+    "id": "asg-11",
+    "offeringId": "off-20",
+    "title": "Communicative English — Paper I — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f20"
+  },
+  {
+    "id": "asg-12",
+    "offeringId": "off-21",
+    "title": "Fundamentals of Information Technology — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f3"
+  },
+  {
+    "id": "asg-13",
+    "offeringId": "off-25",
+    "title": "Object Oriented Programming with Java — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f6"
+  },
+  {
+    "id": "asg-14",
+    "offeringId": "off-26",
+    "title": "Relational Database Management Systems — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f7"
+  },
+  {
+    "id": "asg-15",
+    "offeringId": "off-27",
+    "title": "Visual Programming — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f1"
+  },
+  {
+    "id": "asg-16",
+    "offeringId": "off-31",
+    "title": "Python Programming — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f4"
+  },
+  {
+    "id": "asg-17",
+    "offeringId": "off-32",
+    "title": "Computer Networks — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f5"
+  },
+  {
+    "id": "asg-18",
+    "offeringId": "off-33",
+    "title": "Enterprise Resource Planning — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f6"
+  },
+  {
+    "id": "asg-19",
+    "offeringId": "off-37",
+    "title": "Tamil — Paper I — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f10"
+  },
+  {
+    "id": "asg-20",
+    "offeringId": "off-38",
+    "title": "Communicative English — Paper I — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f20"
+  },
+  {
+    "id": "asg-21",
+    "offeringId": "off-39",
+    "title": "Financial Accounting — I — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f12"
+  },
+  {
+    "id": "asg-22",
+    "offeringId": "off-43",
+    "title": "Corporate Accounting — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f10"
+  },
+  {
+    "id": "asg-23",
+    "offeringId": "off-44",
+    "title": "Banking Theory, Law and Practice — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f11"
+  },
+  {
+    "id": "asg-24",
+    "offeringId": "off-45",
+    "title": "Business Management — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f12"
+  },
+  {
+    "id": "asg-25",
+    "offeringId": "off-49",
+    "title": "Management Accounting — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f10"
+  },
+  {
+    "id": "asg-26",
+    "offeringId": "off-50",
+    "title": "Auditing and Assurance — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f11"
+  },
+  {
+    "id": "asg-27",
+    "offeringId": "off-51",
+    "title": "Goods and Services Tax — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f12"
+  },
+  {
+    "id": "asg-28",
+    "offeringId": "off-55",
+    "title": "Tamil — Paper I — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f14"
+  },
+  {
+    "id": "asg-29",
+    "offeringId": "off-56",
+    "title": "Communicative English — Paper I — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f20"
+  },
+  {
+    "id": "asg-30",
+    "offeringId": "off-57",
+    "title": "Principles of Management — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f13"
+  },
+  {
+    "id": "asg-31",
+    "offeringId": "off-61",
+    "title": "Marketing Management — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f13"
+  },
+  {
+    "id": "asg-32",
+    "offeringId": "off-62",
+    "title": "Human Resource Management — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f14"
+  },
+  {
+    "id": "asg-33",
+    "offeringId": "off-63",
+    "title": "Business Communication — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f15"
+  },
+  {
+    "id": "asg-34",
+    "offeringId": "off-67",
+    "title": "Strategic Management — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f15"
+  },
+  {
+    "id": "asg-35",
+    "offeringId": "off-68",
+    "title": "Services Marketing — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f13"
+  },
+  {
+    "id": "asg-36",
+    "offeringId": "off-69",
+    "title": "Supply Chain Management — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f14"
+  },
+  {
+    "id": "asg-37",
+    "offeringId": "off-73",
+    "title": "Advanced Data Structures and Algorithms — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f3"
+  },
+  {
+    "id": "asg-38",
+    "offeringId": "off-74",
+    "title": "Advanced Java Programming — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f5"
+  },
+  {
+    "id": "asg-39",
+    "offeringId": "off-75",
+    "title": "Advanced Operating Systems — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f1"
+  },
+  {
+    "id": "asg-40",
+    "offeringId": "off-78",
+    "title": "Cloud Computing and Virtualisation — Assignment 1",
+    "description": "Answer all questions from unit 1. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-02",
+    "dueOn": "2026-10-09",
+    "maxMarks": 10,
+    "assignedById": "usr-f3"
+  },
+  {
+    "id": "asg-41",
+    "offeringId": "off-79",
+    "title": "Data Science and Analytics — Assignment 2",
+    "description": "Answer all questions from unit 2. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-06",
+    "dueOn": "2026-10-13",
+    "maxMarks": 10,
+    "assignedById": "usr-f5"
+  },
+  {
+    "id": "asg-42",
+    "offeringId": "off-80",
+    "title": "Compiler Design — Assignment 3",
+    "description": "Answer all questions from unit 3. Hand-written submissions only, in the prescribed format, with the register number on every sheet.",
+    "assignedOn": "2026-10-10",
+    "dueOn": "2026-10-17",
+    "maxMarks": 10,
+    "assignedById": "usr-f1"
+  }
+]

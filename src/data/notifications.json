@@ -1,103 +1,93 @@
 [
   {
     "id": "ntf-1",
-    "userId": "par-8A-10",
-    "title": "Vimal was marked absent",
-    "body": "Your child was not present at morning attendance. If this is unexpected, please contact the class teacher.",
+    "userId": "par-bsc-cs-2024-007",
+    "title": "Aishwarya is short of attendance in one paper",
+    "body": "Attendance has fallen below 75% in Web Technology. A condonation application may be made with supporting documents.",
     "kind": "attendance",
-    "createdOn": "2026-10-07",
+    "createdOn": "2026-10-09",
     "read": false,
     "link": "/attendance"
   },
   {
     "id": "ntf-2",
-    "userId": "par-8A-10",
-    "title": "Term 2 fees are due",
-    "body": "Tuition and bus fees for Term 2 are due shortly. You can pay online from the Fees page.",
+    "userId": "par-bsc-cs-2024-007",
+    "title": "Semester fee is due",
+    "body": "Tuition and examination fees for this semester are due shortly. Hall tickets are withheld where dues are outstanding.",
     "kind": "fee",
-    "createdOn": "2026-10-10",
+    "createdOn": "2026-10-11",
     "read": false,
     "link": "/fees"
   },
   {
     "id": "ntf-3",
-    "userId": "par-8A-10",
-    "title": "Quarterly report card published",
-    "body": "The Quarterly Examination report card is now available to view and download.",
+    "userId": "par-bsc-cs-2024-007",
+    "title": "Aishwarya has been selected by Zoho Corporation",
+    "body": "Offer letter issued — ₹7.5 LPA, Chennai. Congratulations.",
+    "kind": "placement",
+    "createdOn": "2026-09-30",
+    "read": true,
+    "link": "/placements"
+  },
+  {
+    "id": "ntf-4",
+    "userId": "par-bsc-cs-2024-007",
+    "title": "Parent–Teacher Meeting on Saturday",
+    "body": "The tutor will discuss attendance, internal marks and arrears. A slot may be booked through the app.",
+    "kind": "event",
+    "createdOn": "2026-10-10",
+    "read": false,
+    "link": "/meetings"
+  },
+  {
+    "id": "ntf-5",
+    "userId": "par-bsc-cs-2024-007",
+    "title": "Previous semester results published",
+    "body": "The results for the previous semester are now available under Results.",
     "kind": "result",
-    "createdOn": "2026-10-07",
+    "createdOn": "2026-09-22",
     "read": true,
     "link": "/results"
   },
   {
-    "id": "ntf-4",
-    "userId": "par-8A-10",
-    "title": "Parent–Teacher Meeting this Saturday",
-    "body": "Class 8-A meets at 9:30 AM in Room 21. Report cards will be handed over in person.",
-    "kind": "event",
-    "createdOn": "2026-10-09",
-    "read": false,
-    "link": "/circulars"
-  },
-  {
-    "id": "ntf-5",
-    "userId": "par-8A-10",
-    "title": "Bus Route 3 timing changed",
-    "body": "The Kalapatti Road stop will now be reached ten minutes earlier from Monday.",
-    "kind": "transport",
-    "createdOn": "2026-09-26",
-    "read": true,
-    "link": "/transport"
-  },
-  {
     "id": "ntf-6",
-    "userId": "par-8A-10",
-    "title": "New homework in Mathematics",
-    "body": "Exercise 4.2 — Linear Equations, due in two days.",
-    "kind": "homework",
-    "createdOn": "2026-10-11",
-    "read": false,
-    "link": "/homework"
-  },
-  {
-    "id": "ntf-7",
     "userId": "usr-principal",
     "title": "Three staff applications awaiting review",
     "body": "Two are newly submitted and one is under review. Open Staff Recruitment to act on them.",
     "kind": "staff",
-    "createdOn": "2026-10-11",
+    "createdOn": "2026-10-12",
     "read": false,
     "link": "/recruitment"
   },
   {
-    "id": "ntf-8",
-    "userId": "usr-transport",
-    "title": "Fitness certificate expired — TN 38 AX 1207",
-    "body": "The FC for Bus 1207 has lapsed. The vehicle should not run until it is renewed.",
-    "kind": "transport",
-    "createdOn": "2026-10-10",
+    "id": "ntf-7",
+    "userId": "usr-coe",
+    "title": "Condonation applications pending",
+    "body": "Attendance condonation applications are awaiting your orders ahead of hall ticket issue.",
+    "kind": "attendance",
+    "createdOn": "2026-10-11",
     "read": false,
-    "link": "/transport"
+    "link": "/attendance"
+  },
+  {
+    "id": "ntf-8",
+    "userId": "usr-placement",
+    "title": "Zoho drive registration closes soon",
+    "body": "Eligible students who have not yet registered should be reminded.",
+    "kind": "placement",
+    "createdOn": "2026-10-11",
+    "read": false,
+    "link": "/placements"
   },
   {
     "id": "ntf-9",
     "userId": "all",
-    "schoolId": "sch-1",
-    "title": "Deepavali holidays announced",
-    "body": "The school will remain closed for Deepavali. Buses will not operate.",
+    "collegeId": "col-1",
+    "title": "End Semester Examination timetable published",
+    "body": "Hall tickets will be issued only to students meeting the attendance requirement and with no outstanding dues.",
     "kind": "system",
-    "createdOn": "2026-10-05",
+    "createdOn": "2026-10-10",
     "read": true,
     "link": "/circulars"
-  },
-  {
-    "id": "ntf-10",
-    "userId": "usr-b2-hm",
-    "title": "Term 2 fee reminders are due",
-    "body": "Twenty-one families have Term 2 tuition outstanding. The office can send reminders from the Fees page.",
-    "kind": "fee",
-    "createdOn": "2026-10-10",
-    "read": false,
-    "link": "/fees"
   }
 ]

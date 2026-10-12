@@ -1,52 +1,57 @@
 [
   {
-    "id": "lab-physics",
-    "schoolId": "sch-1",
-    "name": "Physics Laboratory",
-    "kind": "physics",
+    "id": "lab-1",
+    "collegeId": "col-1",
+    "departmentId": "dep-cs",
+    "name": "Computer Laboratory I",
+    "kind": "computer",
     "room": "Lab 1",
-    "capacity": 24,
-    "inChargeId": "usr-p2",
+    "capacity": 36,
+    "inChargeId": "usr-f2",
     "assistantId": "usr-lab1"
   },
   {
-    "id": "lab-chemistry",
-    "schoolId": "sch-1",
-    "name": "Chemistry Laboratory",
-    "kind": "chemistry",
-    "room": "Lab 2",
-    "capacity": 24,
-    "inChargeId": "usr-p3",
-    "assistantId": "usr-lab2"
-  },
-  {
-    "id": "lab-botany",
-    "schoolId": "sch-1",
-    "name": "Botany Laboratory",
-    "kind": "botany",
-    "room": "Lab 3",
-    "capacity": 20,
-    "inChargeId": "usr-p5",
-    "assistantId": "usr-lab2"
-  },
-  {
-    "id": "lab-zoology",
-    "schoolId": "sch-1",
-    "name": "Zoology Laboratory",
-    "kind": "zoology",
-    "room": "Lab 4",
-    "capacity": 20,
-    "inChargeId": "usr-p4",
-    "assistantId": "usr-lab2"
-  },
-  {
-    "id": "lab-computer",
-    "schoolId": "sch-1",
-    "name": "Computer Laboratory",
+    "id": "lab-2",
+    "collegeId": "col-1",
+    "departmentId": "dep-cs",
+    "name": "Computer Laboratory II",
     "kind": "computer",
+    "room": "Lab 2",
+    "capacity": 36,
+    "inChargeId": "usr-f4",
+    "assistantId": "usr-lab2"
+  },
+  {
+    "id": "lab-3",
+    "collegeId": "col-1",
+    "departmentId": "dep-com",
+    "name": "Commerce Computing Laboratory",
+    "kind": "computer",
+    "room": "Lab 3",
+    "capacity": 36,
+    "inChargeId": "usr-f10",
+    "assistantId": "usr-lab2"
+  },
+  {
+    "id": "lab-4",
+    "collegeId": "col-1",
+    "departmentId": "dep-mgt",
+    "name": "Management Computing Laboratory",
+    "kind": "computer",
+    "room": "Lab 4",
+    "capacity": 36,
+    "inChargeId": "usr-f14",
+    "assistantId": "usr-lab1"
+  },
+  {
+    "id": "lab-5",
+    "collegeId": "col-1",
+    "departmentId": "dep-eng",
+    "name": "Language Laboratory",
+    "kind": "language",
     "room": "Lab 5",
     "capacity": 30,
-    "inChargeId": "usr-p6",
+    "inChargeId": "usr-f18",
     "assistantId": "usr-lab1"
   }
 ]

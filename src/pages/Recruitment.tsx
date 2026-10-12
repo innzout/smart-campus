@@ -28,7 +28,7 @@ import { Modal } from '@/components/ui/Modal';
 import { Avatar, EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
 import { formatDate, relativeTime } from '@/lib/utils';
 import { DESIGNATION_LABEL, DOCUMENT_LABEL } from '@/data/types';
-import type { ApplicationStatus, Designation, StaffApplication } from '@/data/types';
+import type { ApplicationStatus, Designation, DocumentKind, StaffApplication } from '@/data/types';
 
 /**
  * Staff recruitment — application, documents, then the Principal's decision.
@@ -46,15 +46,15 @@ const STATUS: Record<ApplicationStatus, { label: string; tone: Tone }> = {
   rejected: { label: 'Not appointed', tone: 'critical' },
 };
 
-const TEACHING: Designation[] = ['sgt', 'bt-assistant', 'pg-assistant', 'pet'];
+const TEACHING: Designation[] = ['assistant-professor', 'assistant-professor', 'associate-professor', 'physical-director'];
 
 const POSTS: Designation[] = [
-  'sgt',
-  'bt-assistant',
-  'pg-assistant',
-  'pet',
+  'assistant-professor',
+  'assistant-professor',
+  'associate-professor',
+  'physical-director',
   'librarian',
-  'lab-assistant',
+  'lab-instructor',
   'office-superintendent',
   'accounts-officer',
 ];
@@ -167,7 +167,7 @@ export default function Recruitment() {
                         </span>
                       </span>
                       <span className="flex flex-wrap items-center gap-2">
-                        {app.tetCleared ? <Badge tone="good">TET cleared</Badge> : null}
+                        {app.netCleared ? <Badge tone="good">TET cleared</Badge> : null}
                         {missing.length > 0 ? (
                           <Badge tone="warning">{missing.length} document{missing.length === 1 ? '' : 's'} missing</Badge>
                         ) : (
@@ -278,7 +278,7 @@ function ApplicationDialog({
             ['Post applied for', DESIGNATION_LABEL[app.designation]],
             ['Qualification', app.qualification],
             ['Experience', `${app.experienceYears} years`],
-            ['TET', app.tetCleared ? 'Cleared' : 'Not cleared'],
+            ['TET', app.netCleared ? 'Cleared' : 'Not cleared'],
             ['Phone', app.phone],
             ['Email', app.email],
           ].map(([label, value]) => (
@@ -289,15 +289,15 @@ function ApplicationDialog({
           ))}
         </dl>
 
-        {app.subjectIds.length > 0 ? (
+        {app.courseIds.length > 0 ? (
           <div>
             <p className="mb-2 text-[11.5px] font-semibold tracking-wider text-ink-3 uppercase">
               Can teach
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {app.subjectIds.map((id) => (
+              {app.courseIds.map((id) => (
                 <Badge key={id} tone="brand">
-                  {db.subjects.find((s) => s.id === id)?.name ?? id}
+                  {db.courses.find((c) => c.id === id)?.title ?? id}
                 </Badge>
               ))}
             </div>
@@ -352,15 +352,15 @@ function ApplicationDialog({
               >
                 <Paperclip className="size-4 shrink-0 text-ink-3" aria-hidden />
                 <span className="min-w-0 flex-1 text-[13px] text-ink-3">
-                  {DOCUMENT_LABEL[kind]} — not received
+                  {DOCUMENT_LABEL[kind as DocumentKind]} — not received
                 </span>
                 {canReview && !decided ? (
                   <Button
                     size="sm"
                     variant="secondary"
                     onClick={() => {
-                      attachDocument(app.id, kind, `${kind}-${app.name.split(' ').at(-1)?.toLowerCase()}.pdf`);
-                      toast.success(`${DOCUMENT_LABEL[kind]} recorded as received`);
+                      attachDocument(app.id, kind as DocumentKind, `${kind}-${app.name.split(' ').at(-1)?.toLowerCase()}.pdf`);
+                      toast.success(`${DOCUMENT_LABEL[kind as DocumentKind]} recorded as received`);
                     }}
                   >
                     Record as received
@@ -416,16 +416,21 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [designation, setDesignation] = useState<Designation>('bt-assistant');
+  const [designation, setDesignation] = useState<Designation>('assistant-professor');
   const [qualification, setQualification] = useState('');
-  const [tetCleared, setTetCleared] = useState(false);
+  const [netCleared, setTetCleared] = useState(false);
   const [experienceYears, setExperienceYears] = useState(0);
-  const [subjectIds, setSubjectIds] = useState<string[]>([]);
+  const [courseIds, setCourseIds] = useState<string[]>([]);
 
   const teaching = TEACHING.includes(designation);
-  // Which subjects are even offerable depends on the cadre applied for.
-  const grades = designation === 'sgt' ? [1] : designation === 'pg-assistant' ? [11] : [6];
-  const offerable = db.subjects.filter((s) => grades.some((g) => s.grades.includes(g)));
+  const [departmentId, setDepartmentId] = useState(db.departments[0]?.id ?? '');
+  const [publications, setPublications] = useState(0);
+  // Which papers an applicant can be offered follows from the department they
+  // are applying to, since a college hires against a department.
+  const programmeIds = new Set(
+    db.programmes.filter((pr) => pr.departmentId === departmentId).map((pr) => pr.id),
+  );
+  const offerable = db.courses.filter((c) => programmeIds.has(c.programmeId));
 
   const valid = name.trim().length > 2 && /\S+@\S+\.\S+/.test(email) && qualification.trim();
 
@@ -437,9 +442,12 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
       phone: phone.trim(),
       designation,
       qualification: qualification.trim(),
-      tetCleared,
+      netCleared,
+      phd: qualification.includes('Ph.D.'),
+      departmentId,
+      publications,
       experienceYears,
-      subjectIds: teaching ? subjectIds : [],
+      courseIds: teaching ? courseIds : [],
     });
     toast.success('Application recorded', {
       description: 'The Principal has been notified. Attach documents from the file.',
@@ -448,7 +456,7 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
     setEmail('');
     setPhone('');
     setQualification('');
-    setSubjectIds([]);
+    setCourseIds([] as string[]);
     onClose();
   };
 
@@ -490,12 +498,12 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
             required
             htmlFor="ad"
             hint={
-              designation === 'sgt'
-                ? 'Classes 1 to 5'
-                : designation === 'bt-assistant'
-                  ? 'Classes 6 to 10'
-                  : designation === 'pg-assistant'
-                    ? 'Classes 11 and 12'
+              designation === 'assistant-professor'
+                ? 'Entry grade; NET or a doctorate is expected'
+                : designation === 'associate-professor'
+                  ? 'Requires a doctorate and a publication record'
+                  : designation === 'professor'
+                    ? 'Senior-most teaching post'
                     : undefined
             }
           >
@@ -504,7 +512,7 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
               value={designation}
               onChange={(e) => {
                 setDesignation(e.target.value as Designation);
-                setSubjectIds([]);
+                setCourseIds([] as string[]);
               }}
             >
               {POSTS.map((d) => (
@@ -513,6 +521,32 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
                 </option>
               ))}
             </Select>
+          </Field>
+          <Field label="Department" required htmlFor="adep">
+            <Select
+              id="adep"
+              value={departmentId}
+              onChange={(e) => {
+                setDepartmentId(e.target.value);
+                setCourseIds([] as string[]);
+              }}
+            >
+              {db.departments.map((d) => (
+                <option key={d.id} value={d.id}>
+                  {d.name}
+                </option>
+              ))}
+            </Select>
+          </Field>
+          <Field label="Publications" htmlFor="apub" hint="Papers in refereed journals.">
+            <Input
+              id="apub"
+              type="number"
+              min={0}
+              max={200}
+              value={publications}
+              onChange={(e) => setPublications(Number(e.target.value))}
+            />
           </Field>
           <Field label="Experience (years)" htmlFor="ax">
             <Input
@@ -539,20 +573,20 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
           <>
             <Checkbox
               label="Teacher Eligibility Test cleared"
-              checked={tetCleared}
+              checked={netCleared}
               onChange={(e) => setTetCleared(e.target.checked)}
             />
             <Field label="Subjects they can teach" htmlFor="as">
               <div className="flex flex-wrap gap-1.5">
                 {offerable.map((s) => {
-                  const on = subjectIds.includes(s.id);
+                  const on = courseIds.includes(s.id);
                   return (
                     <button
                       key={s.id}
                       type="button"
                       aria-pressed={on}
                       onClick={() =>
-                        setSubjectIds((prev) =>
+                        setCourseIds((prev) =>
                           on ? prev.filter((id) => id !== s.id) : [...prev, s.id],
                         )
                       }
@@ -562,7 +596,7 @@ function ApplyDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
                           : 'rounded-lg border border-line bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink-2 hover:border-line-strong hover:text-ink'
                       }
                     >
-                      {s.name}
+                      {s.title}
                     </button>
                   );
                 })}

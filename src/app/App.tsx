@@ -11,18 +11,21 @@ import {
   Academics,
   Attendance,
   Branches,
+  Hostel,
   Circulars,
   Dashboard,
   Events,
   Fees,
-  Homework,
+  Assignments,
   Labs,
   Library,
   Login,
   Meetings,
   NotFound,
   Notifications,
+  Mentoring,
   Payroll,
+  Placements,
   People,
   Recruitment,
   Requests,
@@ -92,7 +95,7 @@ function AppRoutes() {
       >
         <Route index element={<Dashboard />} />
         <Route path="attendance" element={<Guard path="/attendance"><Attendance /></Guard>} />
-        <Route path="homework" element={<Guard path="/homework"><Homework /></Guard>} />
+        <Route path="assignments" element={<Guard path="/assignments"><Assignments /></Guard>} />
         <Route path="results" element={<Guard path="/results"><Results /></Guard>} />
         <Route path="fees" element={<Guard path="/fees"><Fees /></Guard>} />
         <Route path="timetable" element={<Guard path="/timetable"><Timetable /></Guard>} />
@@ -113,6 +116,9 @@ function AppRoutes() {
         <Route path="payroll" element={<Guard path="/payroll"><Payroll /></Guard>} />
         <Route path="roles" element={<Guard path="/roles"><Roles /></Guard>} />
         <Route path="branches" element={<Guard path="/branches"><Branches /></Guard>} />
+        <Route path="placements" element={<Guard path="/placements"><Placements /></Guard>} />
+        <Route path="hostel" element={<Guard path="/hostel"><Hostel /></Guard>} />
+        <Route path="mentoring" element={<Guard path="/mentoring"><Mentoring /></Guard>} />
         <Route path="settings" element={<Settings />} />
 
         <Route path="*" element={<NotFound />} />

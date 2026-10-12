@@ -1,183 +1,183 @@
 [
   {
     "id": "labit-1",
-    "labId": "lab-physics",
-    "name": "Vernier calliper",
-    "quantity": 30,
+    "labId": "lab-1",
+    "name": "Desktop workstation",
+    "quantity": 36,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-2",
-    "labId": "lab-physics",
-    "name": "Screw gauge",
-    "quantity": 30,
-    "unit": "nos",
-    "condition": "good"
-  },
-  {
-    "id": "labit-3",
-    "labId": "lab-physics",
-    "name": "Travelling microscope",
-    "quantity": 8,
+    "labId": "lab-1",
+    "name": "UPS 3 kVA",
+    "quantity": 4,
     "unit": "nos",
     "condition": "needs-repair"
   },
   {
+    "id": "labit-3",
+    "labId": "lab-1",
+    "name": "Laser printer",
+    "quantity": 2,
+    "unit": "nos",
+    "condition": "good"
+  },
+  {
     "id": "labit-4",
-    "labId": "lab-physics",
-    "name": "Spectrometer",
-    "quantity": 6,
+    "labId": "lab-1",
+    "name": "Network switch 24-port",
+    "quantity": 3,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-5",
-    "labId": "lab-physics",
-    "name": "Resistance box",
-    "quantity": 20,
+    "labId": "lab-1",
+    "name": "Projector",
+    "quantity": 1,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-6",
-    "labId": "lab-physics",
-    "name": "Galvanometer",
-    "quantity": 15,
+    "labId": "lab-2",
+    "name": "Desktop workstation",
+    "quantity": 36,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-7",
-    "labId": "lab-chemistry",
-    "name": "Burette 50 ml",
-    "quantity": 40,
+    "labId": "lab-2",
+    "name": "UPS 3 kVA",
+    "quantity": 4,
     "unit": "nos",
-    "condition": "good"
+    "condition": "needs-repair"
   },
   {
     "id": "labit-8",
-    "labId": "lab-chemistry",
-    "name": "Pipette 20 ml",
-    "quantity": 40,
+    "labId": "lab-2",
+    "name": "Laser printer",
+    "quantity": 2,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-9",
-    "labId": "lab-chemistry",
-    "name": "Conical flask 250 ml",
-    "quantity": 60,
+    "labId": "lab-2",
+    "name": "Network switch 24-port",
+    "quantity": 3,
     "unit": "nos",
-    "condition": "needs-repair"
+    "condition": "good"
   },
   {
     "id": "labit-10",
-    "labId": "lab-chemistry",
-    "name": "Sodium hydroxide",
-    "quantity": 2,
-    "unit": "kg",
+    "labId": "lab-2",
+    "name": "Projector",
+    "quantity": 1,
+    "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-11",
-    "labId": "lab-chemistry",
-    "name": "Oxalic acid",
-    "quantity": 1,
-    "unit": "kg",
+    "labId": "lab-3",
+    "name": "Desktop workstation",
+    "quantity": 36,
+    "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-12",
-    "labId": "lab-chemistry",
-    "name": "Litmus paper",
-    "quantity": 25,
-    "unit": "books",
-    "condition": "good"
+    "labId": "lab-3",
+    "name": "UPS 3 kVA",
+    "quantity": 4,
+    "unit": "nos",
+    "condition": "needs-repair"
   },
   {
     "id": "labit-13",
-    "labId": "lab-botany",
-    "name": "Compound microscope",
-    "quantity": 12,
+    "labId": "lab-3",
+    "name": "Laser printer",
+    "quantity": 2,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-14",
-    "labId": "lab-botany",
-    "name": "Permanent slides",
-    "quantity": 80,
+    "labId": "lab-3",
+    "name": "Network switch 24-port",
+    "quantity": 3,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-15",
-    "labId": "lab-botany",
-    "name": "Herbarium sheets",
-    "quantity": 200,
+    "labId": "lab-3",
+    "name": "Projector",
+    "quantity": 1,
     "unit": "nos",
-    "condition": "needs-repair"
+    "condition": "good"
   },
   {
     "id": "labit-16",
-    "labId": "lab-botany",
-    "name": "Dissection kit",
-    "quantity": 20,
+    "labId": "lab-4",
+    "name": "Desktop workstation",
+    "quantity": 36,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-17",
-    "labId": "lab-zoology",
-    "name": "Compound microscope",
-    "quantity": 12,
+    "labId": "lab-4",
+    "name": "UPS 3 kVA",
+    "quantity": 4,
     "unit": "nos",
-    "condition": "good"
+    "condition": "needs-repair"
   },
   {
     "id": "labit-18",
-    "labId": "lab-zoology",
-    "name": "Preserved specimens",
-    "quantity": 35,
+    "labId": "lab-4",
+    "name": "Laser printer",
+    "quantity": 2,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-19",
-    "labId": "lab-zoology",
-    "name": "Dissection tray",
-    "quantity": 20,
+    "labId": "lab-4",
+    "name": "Network switch 24-port",
+    "quantity": 3,
     "unit": "nos",
-    "condition": "needs-repair"
+    "condition": "good"
   },
   {
     "id": "labit-20",
-    "labId": "lab-zoology",
-    "name": "Hand lens",
-    "quantity": 30,
+    "labId": "lab-4",
+    "name": "Projector",
+    "quantity": 1,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-21",
-    "labId": "lab-computer",
-    "name": "Desktop computer",
-    "quantity": 30,
+    "labId": "lab-5",
+    "name": "Desktop workstation",
+    "quantity": 36,
     "unit": "nos",
     "condition": "good"
   },
   {
     "id": "labit-22",
-    "labId": "lab-computer",
-    "name": "UPS 1 kVA",
+    "labId": "lab-5",
+    "name": "UPS 3 kVA",
     "quantity": 4,
     "unit": "nos",
-    "condition": "good"
+    "condition": "needs-repair"
   },
   {
     "id": "labit-23",
-    "labId": "lab-computer",
+    "labId": "lab-5",
     "name": "Laser printer",
     "quantity": 2,
     "unit": "nos",
@@ -185,9 +185,17 @@
   },
   {
     "id": "labit-24",
-    "labId": "lab-computer",
-    "name": "Network switch",
+    "labId": "lab-5",
+    "name": "Network switch 24-port",
     "quantity": 3,
+    "unit": "nos",
+    "condition": "good"
+  },
+  {
+    "id": "labit-25",
+    "labId": "lab-5",
+    "name": "Projector",
+    "quantity": 1,
     "unit": "nos",
     "condition": "good"
   }

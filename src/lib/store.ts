@@ -17,7 +17,7 @@ import type { CollectionName, Database } from '@/data/types';
  * and `hydrate()` swaps in the saved copy before the app renders.
  */
 
-const DB_NAME = 'scc';
+const DB_NAME = 'svc';
 const STORE = 'state';
 const KEY = 'db';
 // Bumped when the seed's shape changes, so a saved copy from an older build is
@@ -99,8 +99,8 @@ export async function hydrate(): Promise<void> {
   // An earlier build kept the database in localStorage, where it no longer
   // fits. Clear it so the quota is not held by a copy nothing reads.
   try {
-    localStorage.removeItem('scc.db');
-    localStorage.removeItem('scc.db.version');
+    localStorage.removeItem('svc.db');
+    localStorage.removeItem('svc.db.version');
   } catch {
     /* ignore */
   }
@@ -128,7 +128,7 @@ const snapshot = () => state;
 
 /* ── the active branch ─────────────────────────────────────────────────── */
 
-const BRANCH_KEY = 'scc.branch';
+const BRANCH_KEY = 'svc.institution';
 
 /**
  * Which school the app is currently looking at. Most people only ever have one,
@@ -142,11 +142,11 @@ let activeSchoolId: string =
     } catch {
       return '';
     }
-  })() || (state.schools.find((s) => s.isMain) ?? state.schools[0])!.id;
+  })() || (state.colleges.find((s) => s.isMain) ?? state.colleges[0])!.id;
 
 export function setActiveBranch(schoolId: string) {
   if (schoolId === activeSchoolId) return;
-  if (!state.schools.some((s) => s.id === schoolId)) return;
+  if (!state.colleges.some((s) => s.id === schoolId)) return;
   activeSchoolId = schoolId;
   try {
     localStorage.setItem(BRANCH_KEY, schoolId);

@@ -1,13 +1,14 @@
-# School demo — running sheet
+# College demo — running sheet
 
-A working prototype of **Sri Vidya Mandir Matriculation Hr. Sec. School**, Coimbatore —
-run by **Sri Vidya Educational Trust**, which has a second branch at Mettupalayam.
+A working prototype of **Sri Vidya Arts and Science College (Autonomous)**,
+Coimbatore — affiliated to Bharathiar University, NAAC A+.
 
-Classes **1 to 12**, including Higher Secondary groups, plus a second branch at
-Mettupalayam that is a primary school only. Runs entirely in the browser.
-**No server, no internet, nothing to start but the app.**
+Five programmes, fourteen cohorts, 468 students across semesters 1 to 5.
+Runs entirely in the browser. **No server, no internet, nothing to start but the app.**
 
-## Before you leave for the school
+> This is the `college` branch. The school version lives on `main`.
+
+## Before you leave for the college
 
 In Windows PowerShell, run each line on its own — PowerShell 5.1 rejects `&&`
 as a statement separator.
@@ -21,192 +22,133 @@ npm run preview
 
 Then open `http://localhost:4173`.
 
-`npm run seed` re-dates the demo to today and then runs 67 data checks — it will
-tell you if anything is wrong before a school sees it. The app also shifts every
-date forward by whole weeks at load time, so even the hosted version stays
-current; reseeding before a presentation keeps it exact.
+`npm run seed` re-dates the demo to today and then runs 48 data checks — it will
+tell you if anything is wrong before a Principal sees it. The app also shifts
+every date forward by whole weeks at load time, so even the hosted version stays
+current.
 
-If a previous run left changes behind, open **Settings → Reset demo**. Do this
-right before you present.
+If a previous run left changes behind, open **Settings → Reset demo**.
 
 ## Sign-ins
 
 | Who | Sign in with | Password |
 | --- | --- | --- |
-| **Parent** | `parent@school.edu` **or student ID `SVM20261230`** | `Parent@123` |
-| Class teacher (8-A) | `teacher@school.edu` | `Teacher@123` |
-| Correspondent / Trust | `admin@school.edu` | `Admin@123` |
-| Principal | `principal@school.edu` | `Principal@123` |
-| Vice Principal | `vp@school.edu` | `Vp@123` |
-| Accounts & Payroll | `accounts@school.edu` | `Accounts@123` |
-| Librarian | `library@school.edu` | `Library@123` |
-| Transport In-charge | `transport@school.edu` | `Transport@123` |
-| Student | `student@school.edu` | `Student@123` |
-| **Mettupalayam branch** | `hm.mettupalayam@school.edu` | `Branch@123` |
+| **Parent** | `parent@college.edu` **or register number `24UCS007`** | `Parent@123` |
+| **Student** | `student@college.edu` | `Student@123` |
+| Faculty (Computer Science) | `faculty@college.edu` | `Faculty@123` |
+| Principal | `principal@college.edu` | `Principal@123` |
+| Controller of Examinations | `coe@college.edu` | `Coe@123` |
+| Placement Officer | `placement@college.edu` | `Placement@123` |
+| Hostel Warden | `warden.men@college.edu` | `Warden@123` |
+| Accounts & Payroll | `accounts@college.edu` | `Accounts@123` |
+| Chairman / Trust | `admin@college.edu` | `Admin@123` |
 
-The child is **Vimal A., Class 8-A, roll 10**. His mother is the parent account.
+The student is **Aishwarya K., III B.Sc. Computer Science, register 24UCS007**.
+CGPA 8.71, no arrears, **short of attendance in one paper at 70%**, and holding a
+**Zoho offer at ₹7.5 LPA**.
 
-> Show the **student ID login** deliberately — it is how schools actually hand out
-> access, and it is the first question a correspondent asks.
-
-> Sign in as **Accounts & Payroll** when someone asks about roles: that one person
-> holds *two* roles, which is the honest answer to "our clerk does both jobs".
-
-> The **branch dropdown** at the top of the page only appears for the trust's own
-> account. Sign in as the Mettupalayam headmistress to show that a branch admin
-> sees her own school and nothing else — which is the question a trust asks.
+> Show the **register number login** deliberately — it is what a college hands a
+> parent, and it is the first thing they will ask about.
 
 ## The 7-minute parent run
 
-**1 · Open on a phone first.** Parent login. The whole pitch in one screen:
-attendance, fees outstanding, homework pending, Quarterly rank — and "Needs your
-attention" listing exactly what the parent must act on.
+**1 · Open on a phone first.** Parent login. "Needs attention" names the three
+things that matter: short of attendance in one paper, fees outstanding, an
+assignment due. Nothing else competes for the eye.
 
-**2 · Fees → Pay.** Pick the overdue item, pay by UPI, show the receipt with its
-number and the child's admission number. *"No queue at the office."*
+**2 · Attendance.** *This is the screen that makes a college different from a
+school.* Attendance is **per paper, per hour** — she is at 100% in four papers
+and **70% in Web Technology**. Say the rule plainly: below 75% no hall ticket is
+issued for that paper. Between 65% and 75% condonation may be applied for.
+**Apply for condonation** from here.
 
-**3 · Attendance.** The day-by-day calendar strip. *"The parent sees the same
-register the teacher marked."*
+**3 · Results.** CGPA 8.71, rank in cohort, credits earned, **zero arrears**.
+Open the transcript: grade, grade points and credits per paper, semester by
+semester. *"An arrear is the thing that decides whether a student graduates with
+their batch — and whether a recruiter will look at them."*
 
-**4 · Report Card.** Quarterly marks, grade, class rank, Tamil subject names.
+**4 · Placements.** The Zoho offer, ₹7.5 LPA. Then scroll to the open drives:
+each one says whether she may register **and why not** where she cannot. *"The
+CGPA and arrear bar is a condition of registering, not a surprise at the
+interview."*
 
-**5 · PTM & Meetings**, then **School Visits** — the gate pass with its pass number.
+**5 · Fees.** Semester tuition, examination fee, scholarship concession where it
+applies. Pay one by UPI and show the receipt.
 
-**6 · Switch to the class teacher.** Attendance → tap two children absent → Save.
-*"Parents of those two are notified before lunch."* Then Homework → set one.
+**6 · Hostel and Mentoring.** Room, warden, charges. Then the mentoring record —
+every student has a mentor who follows them across all papers and writes after
+each meeting. *"No school has this. It is how a college keeps hold of a student."*
 
-**7 · Switch to the correspondent.** The dashboard: students on roll, fees
-collected, overdue. 8-B flagged red for attendance.
+## The administration run — what a Principal actually buys
 
-**8 · Fees → Student ledger → Collect.** A parent pays cash at the office: pick
-the head, take the money, receipt issued, parent notified. *"Your clerk never
-writes a manual receipt again."*
+**A · Academic Setup.** Departments → programmes → cohorts. Click a cohort and
+see the papers its syllabus prescribes for the semester it has reached, each with
+its faculty. Change one — the dropdown only offers staff **qualified to teach it**
+(a postgraduate paper needs a doctorate or NET), and the timetable updates with
+it. **New cohort** creates its papers and a blank week together.
 
-## The administration run — what a correspondent actually buys
+**B · Timetable → Edit hours.** The week as a grid. Choose what is taught in each
+hour; the lecturer follows from Academic Setup. Badges show hours a week against
+what the syllabus allots, and a double-booking turns the cell red and names the
+clashing cohort.
 
-Sign in as **Correspondent** (`admin@school.edu`). These are the screens that
-answer "can it run my school", not just "can parents see marks".
+**C · Attendance (as Controller of Examinations).** The whole college: who is
+short, who is **below the 65% floor where nothing can be done**, and the
+condonation queue. Grant one — it raises the ₹500 fee and notifies the student.
+*"This is what you do before every hall ticket is printed."*
 
-**A · Academic Setup.** Click **1-A**, then **8-A**, then **11-A**.
-*"Class 1 studies four subjects. Class 8 studies seven. 11-A studies Tamil,
-English and the four subjects its Higher Secondary group dictates."* Then change
-a subject teacher from the dropdown — note it only offers staff of the right
-cadre (SGT for 1–5, B.T. for 6–10, P.G. for 11–12), and that the timetable
-updates with it. Then **New class** → Class 11, Section C, Group 2 — the group's
-subjects are created with the class. **Edit class** changes the room, the
-sanctioned strength or the class teacher — and refuses a strength below the
-number already on roll. **Add subject to catalogue** is for a subject we did not
-anticipate: Hindi, French, Yoga. *"You do not wait for us to add it."*
+**D · Results (as Controller).** Cohort standing by CGPA with arrears beside it —
+the two figures a recruiter screens on. Publish a semester's results and every
+student and parent hears at once.
 
-**A2 · Timetable → Edit periods.** Pick a class from the dropdown — every
-registered section is there, grouped by stage — then **Edit periods**. The grid is
-the week: choose what is taught in each period and the teacher follows from the
-assignment you just made. Badges along the top show periods a week against what
-each subject is owed, and putting a teacher where they are already booked turns
-the cell red and names the clashing class. *"This is the part a correspondent
-wants to do once in June and then leave alone."*
+**E · Placements (as Placement Officer).** **Announce a drive**: set the CGPA
+bar and the arrear limit, and the dialog tells you **how many students actually
+qualify before you announce it**. Only those students are notified. Then open a
+drive and move candidates through aptitude → technical → HR → selected.
 
-**B · Cover & Adjustments.** *"This is your 8:45 every morning."* Two teachers are
-on approved leave, so their periods are listed. Each one offers the teachers who
-are genuinely free that period, split into those who can teach the subject and
-those who can only supervise. Assign one — the covering teacher is notified.
+**F · Hostel (as Warden).** Beds taken against capacity, room by room, and the
+request queue. Allot one — rent and ten months of mess charges are billed.
 
-**C · Staff Recruitment.** Open a pending application. Documents are listed with
-what is still missing, and **Approve is disabled until the file is complete**.
-Approve one — *"that is the moment the staff account exists. Before that, they
-cannot sign in at all."*
+**G · Mentoring (as Faculty).** Mentees sorted worst-attendance first, with
+arrears beside. Open one: attendance paper by paper, and the note history. A note
+raising a concern notifies the parent.
 
-**D · Laboratories.** Pick **Chemistry** → **Batches**. *"The lab seats 24. Class
-11-A has 24 on roll, 12-A has 24 — so where a class is bigger, it splits, and the
-practical timetable runs one batch at a time."* **Move pupils** adjusts the split one child at a time, because siblings want the
-same day and the round-robin does not know that. Then **Apparatus** and
-**Breakages** — recording a breakage reduces stock and charges the parent.
-
-**E · Transport → Requests.** A parent has asked for a seat. The seats taken are
-shown against the bus's capacity, so you allot or decline on a real number.
-Allotting raises the bus fee. On **Routes**, **Allot a student** does the same
-from the counter — which is how most children actually get a seat — and **Edit
-route** reorders the stops and their pickup times. Then **Vehicles** — **Bus
-TN 38 AX 1207's fitness certificate has expired**. *"You should know that before
-the RTO does."*
-
-**F · Roles & Permissions.** *"Accounts Officer and Payroll Officer are the same
-person in your school. Here she holds both roles, and her permissions are the
-union."* Open a role and untick a permission — the menu entry it unlocks
-disappears for everyone holding it.
-
-**G · Payroll.** Pick the current month → **Run payroll**. Then pay **one person**
-from their own row — that is the common case, not the exception: somebody joins
-mid-month or a transfer bounces. **Pay all** does the rest in one go, and **Undo**
-puts a payslip back to draft to be corrected. Open a payslip for the breakdown,
-and scroll to **Salary structures** — a new joiner has none until someone sets
-one, and is skipped by every run until they do. Say the honest line printed on
-the screen: the deduction shapes are right, your sanctioned scales are what a
-real run needs.
-
-**H · Branches, and the branch switcher.** The trust, its two schools, and **Open
-a branch** — which creates the school and its Correspondent together.
-
-Then use the **dropdown beside the page title** to switch to *Mettupalayam*. The
-whole app follows: 5 classes instead of 15, 130 children instead of 436, its own
-staff, its own bus, its own circulars and its own fee figures. *"Your Coimbatore
-numbers and your Mettupalayam numbers never mix."* Switch back, then sign in as
-`hm.mettupalayam@school.edu` to show she has no dropdown at all — she sees her
-own school and cannot reach the other.
-
-Read the notice on the Branches screen aloud; see the limits below.
+**H · Payroll, Recruitment, Roles, Laboratories** work as on the school build,
+with college designations — Professor, Associate and Assistant Professor, and
+NET or a doctorate where the post requires it.
 
 ## What to say when asked
 
 **"Does it work without internet?"** This prototype does. The real product syncs
-to a server so several teachers can mark registers at once.
+to a server so several lecturers can mark registers at once.
 
-**"Can parents get SMS?"** The notification layer is built; SMS and WhatsApp are a
-connector away. Not every parent installs an app — that is designed for.
+**"Our syllabus is different."** Expected. Papers are data — programme, semester,
+credits, internal and external split. **Add a paper** on Academic Setup.
 
-**"Tamil?"** Subject names and circular titles are already bilingual. Full Tamil
-UI is a translation pass, not a rebuild.
+**"We are affiliated, not autonomous."** The grading scale and the internal split
+are data, not code. An affiliated college takes the university's scale instead.
 
-**"Our report card format is different."** Expected. The grading scale is data,
-not code.
-
-**"Our groups are different."** All five Higher Secondary groups are defined; this
-school offers Group 1 and Group 4. Adding Group 2, 3 or 5 is opening a class.
-
-**"We have three branches."** Show the switcher and the Mettupalayam login, then
-be straight about the limit below: the branches are real and separate in the data,
-but this build is not enforcing that separation the way the server will.
-
-**"Can a teacher see the whole school's timetable?"** Yes — the class dropdown on
-the Timetable lists every registered section, grouped by stage, with their own
-classes first. A parent sees only their child's.
+**"Can parents see this?"** Yes — the parent login is the same app scoped to one
+ward, and the register number is the credential they already have.
 
 ## Honest limits — say these before they are found
 
-These are the four places where the demo is not the product. Saying them first is
-what makes the rest credible.
-
-- **Branch separation is enforced in the app, not in a database.** Switching
-  branches genuinely re-scopes every screen, and a branch administrator cannot
-  reach the other school. But it is the app doing the filtering, so it is only as
-  good as the app. The real product does it with row-level security in Postgres,
-  where a mistake in a query cannot leak another school's children.
-- **Staff documents are recorded, not stored.** The system tracks that a B.Ed
-  certificate was received and verified; it does not hold the scan. File storage
-  is server work.
 - **Payroll arithmetic is indicative.** PF at 12% of basic against the ₹15,000
   ceiling, ESI below ₹21,000, professional tax by slab — right shapes, but your
-  sanctioned scales, registration numbers and challan formats are what a real run
-  needs.
+  sanctioned UGC scales and challan formats are what a real run needs.
+- **Staff documents are recorded, not stored.** The system tracks that a Ph.D.
+  certificate was received and verified; it does not hold the scan.
 - **Single device, one user at a time.** Multi-device and concurrent staff need
   the server. Payments are a simulated gateway; Razorpay is the real integration.
-  Report card, receipt and payslip PDF downloads are stubbed. The timetable is
-  editable with clash detection, but there is no automatic generator — you place
-  the periods yourself rather than pressing a button and getting a sound week.
+- **Hall tickets, mark sheets and payslips are not generated as PDFs.**
+- **The timetable is editable with clash detection, but there is no automatic
+  generator** — you place the hours yourself.
+- **One institution is seeded.** The switcher and the scoping are built, so a
+  second college can be opened, but branch isolation is enforced by the app
+  rather than by the database. The real product uses row-level security.
 
 ## If something goes wrong
 
-Reload the page — the data persists (in IndexedDB, so the full twelve-grade school
-fits). If it looks wrong, **Settings → Reset demo**. If the laptop has no `npm`,
-the built `dist/` folder is static files; `npx serve dist` will run it, or use the
-hosted Vercel link.
+Reload — the data persists in IndexedDB. If it looks wrong, **Settings → Reset
+demo**. If the laptop has no `npm`, `dist/` is static files; `npx serve dist`
+will run it.

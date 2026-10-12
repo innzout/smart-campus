@@ -6,13 +6,13 @@ import { GROUP_ORDER, groupLabel, navFor } from '@/app/nav';
 import { prefetchRoute } from '@/app/routes';
 import { useAuth } from '@/app/auth';
 import { useDatabase, useSelector } from '@/lib/store';
-import { theSchool, unreadCount } from '@/lib/queries';
+import { theCollege, unreadCount } from '@/lib/queries';
 import { Avatar } from '@/components/ui/misc';
 import { cn } from '@/lib/utils';
 import type { AuthUser } from '@/services/auth.service';
 
 function Brand({ onClose }: { onClose?: () => void }) {
-  const school = theSchool(useDatabase());
+  const school = theCollege(useDatabase());
   return (
     <div className="flex items-center gap-3 px-3 pt-1 pb-6">
       <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-sm">

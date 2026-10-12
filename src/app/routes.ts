@@ -7,7 +7,7 @@ import { lazy } from 'react';
 const loaders = {
   '/': () => import('@/pages/Dashboard'),
   '/attendance': () => import('@/pages/Attendance'),
-  '/homework': () => import('@/pages/Homework'),
+  '/assignments': () => import('@/pages/Assignments'),
   '/results': () => import('@/pages/Results'),
   '/fees': () => import('@/pages/Fees'),
   '/timetable': () => import('@/pages/Timetable'),
@@ -28,6 +28,9 @@ const loaders = {
   '/payroll': () => import('@/pages/Payroll'),
   '/roles': () => import('@/pages/Roles'),
   '/branches': () => import('@/pages/Branches'),
+  '/placements': () => import('@/pages/Placements'),
+  '/hostel': () => import('@/pages/Hostel'),
+  '/mentoring': () => import('@/pages/Mentoring'),
   '/settings': () => import('@/pages/Settings'),
 } as const;
 
@@ -67,7 +70,7 @@ export function prefetchAll(paths: string[]) {
 
 export const Dashboard = lazy(loaders['/']);
 export const Attendance = lazy(loaders['/attendance']);
-export const Homework = lazy(loaders['/homework']);
+export const Assignments = lazy(loaders['/assignments']);
 export const Results = lazy(loaders['/results']);
 export const Fees = lazy(loaders['/fees']);
 export const Timetable = lazy(loaders['/timetable']);
@@ -88,6 +91,9 @@ export const Labs = lazy(loaders['/labs']);
 export const Payroll = lazy(loaders['/payroll']);
 export const Roles = lazy(loaders['/roles']);
 export const Branches = lazy(loaders['/branches']);
+export const Placements = lazy(loaders['/placements']);
+export const Hostel = lazy(loaders['/hostel']);
+export const Mentoring = lazy(loaders['/mentoring']);
 export const Settings = lazy(loaders['/settings']);
 
 export const Login = lazy(() => import('@/pages/Login'));

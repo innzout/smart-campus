@@ -10,16 +10,16 @@ import {
   UtensilsCrossed,
 } from 'lucide-react';
 import { useDatabase } from '@/lib/store';
-import { theSchool } from '@/lib/queries';
+import { theCollege } from '@/lib/queries';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge, type Tone } from '@/components/ui/Badge';
 import { Input } from '@/components/ui/Field';
 import { EmptyState, PageHeader } from '@/components/ui/misc';
 import { cn } from '@/lib/utils';
-import type { SchoolPlace } from '@/data/types';
+import type { CampusPlace } from '@/data/types';
 
 const KIND: Record<
-  SchoolPlace['kind'],
+  CampusPlace['kind'],
   { tone: Tone; label: string; fill: string; icon: typeof Building2 }
 > = {
   academic: { tone: 'info', label: 'Academic', fill: 'var(--s1)', icon: Building2 },
@@ -27,11 +27,12 @@ const KIND: Record<
   sports: { tone: 'good', label: 'Sports', fill: 'var(--s3)', icon: Dumbbell },
   admin: { tone: 'brand', label: 'Office', fill: 'var(--s7)', icon: MapPin },
   lab: { tone: 'info', label: 'Laboratory', fill: 'var(--s2)', icon: FlaskConical },
+  hostel: { tone: 'serious', label: 'Hostel', fill: 'var(--s5)', icon: Building2 },
 };
 
 export default function SchoolMap() {
   const db = useDatabase();
-  const school = theSchool(db);
+  const school = theCollege(db);
   const [selected, setSelected] = useState<string | null>(db.places[0]?.id ?? null);
   const [query, setQuery] = useState('');
 

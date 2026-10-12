@@ -14,12 +14,12 @@ import {
 import { useCan } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
-  classesWithPracticals,
-  classSubjectsOf,
+  sectionsWithPracticals,
+  offeringsOf,
   labSessions,
   labSummary,
-  studentsInClass,
-  subjectById,
+  studentsInSection,
+  courseById,
   userById,
 } from '@/lib/queries';
 import {
@@ -78,7 +78,7 @@ export default function Labs() {
   const inCharge = userById(db, lab?.inChargeId);
   const assistant = userById(db, lab?.assistantId);
 
-  const practicalClasses = classesWithPracticals(db);
+  const practicalClasses = sectionsWithPracticals(db);
   const totalUnrecovered = db.labBreakages
     .filter((b) => !b.recovered)
     .reduce((t, b) => t + b.amount, 0);
@@ -185,7 +185,7 @@ export default function Labs() {
                   }}
                 >
                   {db.users
-                    .filter((u) => u.designation === 'pg-assistant' || u.designation === 'bt-assistant')
+                    .filter((u) => u.designation === 'associate-professor' || u.designation === 'assistant-professor')
                     .map((u) => (
                       <option key={u.id} value={u.id}>
                         {u.name}
@@ -203,7 +203,7 @@ export default function Labs() {
                   }}
                 >
                   {db.users
-                    .filter((u) => u.designation === 'lab-assistant')
+                    .filter((u) => u.designation === 'lab-instructor')
                     .map((u) => (
                       <option key={u.id} value={u.id}>
                         {u.name}
@@ -244,17 +244,17 @@ export default function Labs() {
               />
             ) : (
               <ul className="space-y-2">
-                {sessions.map(({ slot, cls, subject, batch, teacher }) => (
+                {sessions.map(({ slot, section: cls, course: subject, batch, faculty: teacher }) => (
                   <li
                     key={slot.id}
                     className="flex flex-wrap items-center gap-3 rounded-xl border border-line px-3.5 py-3"
                   >
                     <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-surface-2 text-[13px] font-semibold text-ink-2 tnum">
-                      P{slot.period}
+                      P{slot.hour}
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[13.5px] font-semibold text-ink">
-                        {cls?.label} · {subject?.name} practical
+                        {cls?.label} · {subject?.title} practical
                       </span>
                       <span className="mt-0.5 block truncate text-[12px] text-ink-3">
                         {DAYS[slot.day]} · {formatTime(slot.start)}–{formatTime(slot.end)} ·{' '}
@@ -282,8 +282,8 @@ export default function Labs() {
                 is what the bench capacity allows, and students are dealt round-robin by roll number
                 so each batch is a mix rather than the first half of the register.
               </p>
-              {practicalClasses.map(({ cls, practicals, batches }) => {
-                const roll = studentsInClass(db, cls.id);
+              {practicalClasses.map(({ section: cls, practicals, batches }) => {
+                const roll = studentsInSection(db, cls.id);
                 const tightest = Math.min(
                   ...practicals.map(
                     (s) => db.labs.find((l) => l.kind === s.labKind)?.capacity ?? 30,
@@ -299,7 +299,7 @@ export default function Labs() {
                           Class {cls.label}
                         </span>
                         <span className="mt-0.5 block text-[12px] text-ink-3">
-                          {roll.length} on roll · {practicals.map((s) => s.name).join(', ')} ·
+                          {roll.length} on roll · {practicals.map((s) => s.title).join(', ')} ·
                           tightest lab takes {tightest}
                         </span>
                       </span>
@@ -458,7 +458,7 @@ export default function Labs() {
                               {student?.name ?? '—'}
                             </span>
                             <span className="block text-[11.5px] text-ink-3">
-                              {db.classes.find((c) => c.id === student?.classId)?.label}
+                              {db.sections.find((c) => c.id === student?.sectionId)?.label}
                             </span>
                           </span>
                         );
@@ -522,7 +522,7 @@ export default function Labs() {
         <BreakageDialog labId={lab.id} onClose={() => setBreakageOpen(false)} />
       ) : null}
       {movingClassId ? (
-        <MoveBatchDialog classId={movingClassId} onClose={() => setMovingClassId(null)} />
+        <MoveBatchDialog sectionId={movingClassId} onClose={() => setMovingClassId(null)} />
       ) : null}
     </>
   );
@@ -537,16 +537,16 @@ export default function Labs() {
  * pupil at a time, and the batch sizes are shown against the lab's capacity so
  * a move that overfills a bench is visible before it is made.
  */
-function MoveBatchDialog({ classId, onClose }: { classId: string; onClose: () => void }) {
+function MoveBatchDialog({ sectionId, onClose }: { sectionId: string; onClose: () => void }) {
   const db = useDatabase();
-  const cls = db.classes.find((c) => c.id === classId);
-  const batches = db.labBatches.filter((b) => b.classId === classId);
+  const cls = db.sections.find((c) => c.id === sectionId);
+  const batches = db.labBatches.filter((b) => b.sectionId === sectionId);
 
   // The tightest lab this class uses is what a batch actually has to fit into.
   const capacity = Math.min(
-    ...classSubjectsOf(db, classId)
-      .map((cs) => subjectById(db, cs.subjectId))
-      .filter((sub) => sub?.hasPractical)
+    ...offeringsOf(db, sectionId)
+      .map((cs) => courseById(db, cs.courseId))
+      .filter((sub) => sub?.kind === 'practical')
       .map((sub) => db.labs.find((l) => l.kind === sub!.labKind)?.capacity ?? 30),
   );
 
@@ -707,13 +707,13 @@ function BreakageDialog({ labId, onClose }: { labId: string; onClose: () => void
   const items = db.labItems.filter((i) => i.labId === labId);
   // Only students who actually have a practical in this lab can break its glass.
   const lab = db.labs.find((l) => l.id === labId);
-  const eligible = db.classes
+  const eligible = db.sections
     .filter((c) =>
-      classSubjectsOf(db, c.id).some(
-        (cs) => subjectById(db, cs.subjectId)?.labKind === lab?.kind,
+      offeringsOf(db, c.id).some(
+        (cs) => courseById(db, cs.courseId)?.labKind === lab?.kind,
       ),
     )
-    .flatMap((c) => studentsInClass(db, c.id));
+    .flatMap((c) => studentsInSection(db, c.id));
 
   const [itemId, setItemId] = useState(items[0]?.id ?? '');
   const [studentId, setStudentId] = useState('');
@@ -768,7 +768,7 @@ function BreakageDialog({ labId, onClose }: { labId: string; onClose: () => void
             <option value="">Choose a student…</option>
             {eligible.map((s) => (
               <option key={s.id} value={s.id}>
-                {s.name} · {db.classes.find((c) => c.id === s.classId)?.label} · roll {s.rollNo}
+                {s.name} · {db.sections.find((c) => c.id === s.sectionId)?.label} · roll {s.rollNo}
               </option>
             ))}
           </Select>

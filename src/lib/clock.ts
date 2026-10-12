@@ -57,3 +57,25 @@ export function useNow(intervalMs = 60_000) {
   }, [intervalMs]);
   return now;
 }
+
+/**
+ * Greeting and the day's label, derived from the real clock.
+ *
+ * A dashboard that says "Good morning" at nine in the evening undermines
+ * everything else on the page, so this follows the actual time rather than a
+ * value baked in at build.
+ */
+export function useClock() {
+  const now = useNow();
+  const hour = now.getHours();
+  return {
+    now,
+    greeting: hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening',
+    todayLabel: now.toLocaleDateString('en-IN', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+    }),
+    dayIndex: now.getDay(),
+  };
+}

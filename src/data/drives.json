@@ -1,0 +1,133 @@
+[
+  {
+    "id": "drv-1",
+    "companyId": "cmp-1",
+    "role": "Member Technical Staff",
+    "packageLpa": 7.5,
+    "location": "Chennai",
+    "programmeIds": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "minCgpa": 7,
+    "maxArrears": 0,
+    "driveOn": "2026-09-30",
+    "registrationCloses": "2026-09-22",
+    "rounds": [
+      "Aptitude",
+      "Technical",
+      "HR"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": "drv-2",
+    "companyId": "cmp-2",
+    "role": "Programmer Analyst Trainee",
+    "packageLpa": 4.5,
+    "location": "Coimbatore",
+    "programmeIds": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "minCgpa": 6,
+    "maxArrears": 1,
+    "driveOn": "2026-10-18",
+    "registrationCloses": "2026-10-10",
+    "rounds": [
+      "Aptitude",
+      "Technical",
+      "HR"
+    ],
+    "status": "registration-open"
+  },
+  {
+    "id": "drv-3",
+    "companyId": "cmp-3",
+    "role": "Process Executive",
+    "packageLpa": 3.2,
+    "location": "Bengaluru",
+    "programmeIds": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-bcom",
+      "prg-bba",
+      "prg-msc-cs"
+    ],
+    "minCgpa": 5.5,
+    "maxArrears": 2,
+    "driveOn": "2026-10-26",
+    "registrationCloses": "2026-10-18",
+    "rounds": [
+      "Aptitude",
+      "Communication",
+      "HR"
+    ],
+    "status": "announced"
+  },
+  {
+    "id": "drv-4",
+    "companyId": "cmp-4",
+    "role": "Junior Software Engineer",
+    "packageLpa": 4,
+    "location": "Coimbatore",
+    "programmeIds": [
+      "prg-bsc-cs",
+      "prg-bca",
+      "prg-msc-cs"
+    ],
+    "minCgpa": 6.5,
+    "maxArrears": 0,
+    "driveOn": "2026-10-15",
+    "registrationCloses": "2026-10-08",
+    "rounds": [
+      "Written",
+      "Technical",
+      "HR"
+    ],
+    "status": "in-progress"
+  },
+  {
+    "id": "drv-5",
+    "companyId": "cmp-5",
+    "role": "Assistant Manager — Sales",
+    "packageLpa": 3.6,
+    "location": "Coimbatore",
+    "programmeIds": [
+      "prg-bcom",
+      "prg-bba"
+    ],
+    "minCgpa": 5.5,
+    "maxArrears": 2,
+    "driveOn": "2026-11-01",
+    "registrationCloses": "2026-10-23",
+    "rounds": [
+      "Group Discussion",
+      "HR"
+    ],
+    "status": "announced"
+  },
+  {
+    "id": "drv-6",
+    "companyId": "cmp-6",
+    "role": "Analyst — Audit",
+    "packageLpa": 5.5,
+    "location": "Hyderabad",
+    "programmeIds": [
+      "prg-bcom",
+      "prg-bba"
+    ],
+    "minCgpa": 7.5,
+    "maxArrears": 0,
+    "driveOn": "2026-09-17",
+    "registrationCloses": "2026-09-07",
+    "rounds": [
+      "Aptitude",
+      "Case Study",
+      "Partner Round"
+    ],
+    "status": "completed"
+  }
+]

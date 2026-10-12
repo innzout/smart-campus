@@ -1,16 +1,18 @@
-import { DESIGNATION_GRADES, STAGE_LABEL } from '@/data/types';
+import {
+  ATTENDANCE_MINIMUM,
+  CONDONATION_FLOOR,
+  GRADE_BANDS,
+  PASS_MARK,
+  PG_TEACHING,
+} from '@/data/types';
 import type {
-  AttendanceDay,
-  Designation,
-  DocumentKind,
-  Stage,
-  StaffApplication,
+  AttendanceHour,
+  Course,
+  CourseOffering,
   Database,
-  Exam,
-  Homework,
-  SchoolClass,
+  Drive,
   Role,
-  SubjectTemplate,
+  Section,
   User,
 } from '@/data/types';
 import { daysFromToday, sum, todayISO } from './utils';
@@ -18,11 +20,11 @@ import { getActiveBranch } from './store';
 
 /* ── lookups ───────────────────────────────────────────────────────────── */
 
-/** The branch currently being viewed. */
-export const theSchool = (db: Database) =>
-  db.schools.find((s) => s.id === getActiveBranch()) ??
-  db.schools.find((s) => s.isMain) ??
-  db.schools[0]!;
+/** The institution currently being viewed. */
+export const theCollege = (db: Database) =>
+  db.colleges.find((c) => c.id === getActiveBranch()) ??
+  db.colleges.find((c) => c.isMain) ??
+  db.colleges[0]!;
 
 export const theGroup = (db: Database) => db.group[0]!;
 
@@ -33,50 +35,73 @@ export const hasRole = (user: { roles: Role[] } | undefined, ...roles: Role[]) =
 export const userById = (db: Database, id: string | undefined) =>
   id ? db.users.find((u) => u.id === id) : undefined;
 
-export const classById = (db: Database, id: string | undefined) =>
-  id ? db.classes.find((c) => c.id === id) : undefined;
+export const sectionById = (db: Database, id: string | undefined) =>
+  id ? db.sections.find((s) => s.id === id) : undefined;
 
-export const subjectById = (db: Database, id: string | null | undefined) =>
-  id ? db.subjects.find((s) => s.id === id) : undefined;
+export const programmeById = (db: Database, id: string | undefined) =>
+  id ? db.programmes.find((p) => p.id === id) : undefined;
 
-export const classLabel = (db: Database, id: string | undefined) =>
-  classById(db, id)?.label ?? '—';
+export const departmentById = (db: Database, id: string | undefined) =>
+  id ? db.departments.find((d) => d.id === id) : undefined;
+
+export const courseById = (db: Database, id: string | null | undefined) =>
+  id ? db.courses.find((c) => c.id === id) : undefined;
+
+export const offeringById = (db: Database, id: string | null | undefined) =>
+  id ? db.offerings.find((o) => o.id === id) : undefined;
+
+/** The course behind an offering, which is what most screens actually want. */
+export const courseOf = (db: Database, offeringId: string | null | undefined) =>
+  courseById(db, offeringById(db, offeringId)?.courseId);
+
+export const sectionLabel = (db: Database, id: string | undefined) =>
+  sectionById(db, id)?.label ?? '—';
 
 export const studentsOf = (db: Database) => db.users.filter((u) => u.roles.includes('student'));
 
-export const studentsInClass = (db: Database, classId: string) =>
+export const studentsInSection = (db: Database, sectionId: string) =>
   db.users
-    .filter((u) => u.roles.includes('student') && u.classId === classId)
+    .filter((u) => u.roles.includes('student') && u.sectionId === sectionId)
     .sort((a, b) => (a.rollNo ?? 0) - (b.rollNo ?? 0));
 
-/** The subjects a class actually studies, in the order they are taught. */
-export const subjectsForClass = (db: Database, classId: string): SubjectTemplate[] =>
-  db.classSubjects
-    .filter((cs) => cs.classId === classId)
-    .map((cs) => db.subjects.find((s) => s.id === cs.subjectId))
-    .filter((s): s is SubjectTemplate => !!s);
+export const offeringsOf = (db: Database, sectionId: string) =>
+  db.offerings.filter((o) => o.sectionId === sectionId);
 
-/** The offerings of a class — subject plus the teacher who takes it. */
-export const classSubjectsOf = (db: Database, classId: string) =>
-  db.classSubjects.filter((cs) => cs.classId === classId);
+/** The papers a particular student sits, which excludes electives they dropped. */
+export const offeringsForStudent = (db: Database, studentId: string) =>
+  db.offerings.filter((o) => o.enrolledIds.includes(studentId));
 
-/** Who teaches a subject to a particular class. */
-export const teacherForClassSubject = (db: Database, classId: string, subjectId: string) =>
-  userById(
-    db,
-    db.classSubjects.find((cs) => cs.classId === classId && cs.subjectId === subjectId)?.teacherId,
-  );
+export const facultyOf = (db: Database) =>
+  db.users.filter((u) => u.roles.includes('faculty') || u.roles.includes('tutor'));
 
-/** The classes a teacher is responsible for — as class teacher or subject teacher. */
-export function classesForTeacher(db: Database, teacherId: string): SchoolClass[] {
-  const taught = new Set(
-    db.classSubjects.filter((cs) => cs.teacherId === teacherId).map((cs) => cs.classId),
-  );
-  return db.classes.filter((c) => c.classTeacherId === teacherId || taught.has(c.id));
+export const staffOf = (db: Database) => db.users.filter((u) => !!u.employeeId);
+
+/**
+ * Faculty who may be given a paper. A postgraduate paper needs a Ph.D. or NET,
+ * which is a university condition rather than a preference, so it is a rule.
+ */
+export function eligibleFaculty(db: Database, courseId: string | undefined) {
+  const course = courseById(db, courseId);
+  const programme = programmeById(db, course?.programmeId);
+  return facultyOf(db).filter((f) => {
+    if (programme?.level === 'pg') {
+      if (!f.netCleared && !(f.qualification ?? '').includes('Ph.D.')) return false;
+      if (f.designation && !PG_TEACHING.includes(f.designation)) return false;
+    }
+    return true;
+  });
 }
 
-export const classTeacherOf = (db: Database, classId: string | undefined) =>
-  userById(db, classById(db, classId)?.classTeacherId);
+/** The sections a member of staff is responsible for — as tutor or as teacher. */
+export function sectionsForFaculty(db: Database, facultyId: string): Section[] {
+  const taught = new Set(
+    db.offerings.filter((o) => o.facultyId === facultyId).map((o) => o.sectionId),
+  );
+  return db.sections.filter((s) => s.tutorId === facultyId || taught.has(s.id));
+}
+
+export const tutorOf = (db: Database, sectionId: string | undefined) =>
+  userById(db, sectionById(db, sectionId)?.tutorId);
 
 /** The students a parent account can see. */
 export const childrenOf = (db: Database, parent: User) =>
@@ -84,534 +109,267 @@ export const childrenOf = (db: Database, parent: User) =>
 
 /* ── attendance ────────────────────────────────────────────────────────── */
 
-export interface AttendanceSummary {
+export interface CourseAttendance {
+  offering: CourseOffering;
+  course: Course | undefined;
+  held: number;
   present: number;
   absent: number;
-  late: number;
-  leave: number;
-  total: number;
+  od: number;
   percent: number;
+  /** Below the 75% requirement. */
+  short: boolean;
+  /** Short, but above the floor, so condonation is still possible. */
+  condonable: boolean;
 }
 
-export function summariseAttendance(rows: AttendanceDay[]): AttendanceSummary {
-  const present = rows.filter((r) => r.status === 'present').length;
-  const late = rows.filter((r) => r.status === 'late').length;
-  const absent = rows.filter((r) => r.status === 'absent').length;
-  const leave = rows.filter((r) => r.status === 'leave').length;
-  const total = present + late + absent + leave;
-  // A late arrival still counts as attendance — the child was in school.
+/**
+ * Attendance for one student, paper by paper.
+ *
+ * This is the shape a college works in. A student is not "92% present" — they
+ * are fine in four papers and debarred from the fifth, and the examination hall
+ * ticket is issued per paper. Rolling it into one figure hides the only fact
+ * that matters.
+ */
+export function attendanceByCourse(db: Database, studentId: string): CourseAttendance[] {
+  const mine = db.attendance.filter((a) => a.studentId === studentId);
+  const byOffering = new Map<string, AttendanceHour[]>();
+  for (const row of mine) {
+    const list = byOffering.get(row.offeringId) ?? [];
+    list.push(row);
+    byOffering.set(row.offeringId, list);
+  }
+
+  return [...byOffering.entries()]
+    .map(([offeringId, rows]) => {
+      const offering = offeringById(db, offeringId)!;
+      const absent = rows.filter((r) => r.status === 'absent').length;
+      const od = rows.filter((r) => r.status === 'od').length;
+      const held = rows.length;
+      // On-duty counts as present, which is the whole point of granting it.
+      const present = held - absent;
+      const percent = held ? Math.round((present / held) * 100) : 100;
+      return {
+        offering,
+        course: courseById(db, offering?.courseId),
+        held,
+        present,
+        absent,
+        od,
+        percent,
+        short: percent < ATTENDANCE_MINIMUM,
+        condonable: percent < ATTENDANCE_MINIMUM && percent >= CONDONATION_FLOOR,
+      };
+    })
+    .filter((r) => r.offering)
+    .sort((a, b) => a.percent - b.percent);
+}
+
+/** The single figure a dashboard tile needs, across every paper. */
+export function overallAttendance(db: Database, studentId: string) {
+  const rows = db.attendance.filter((a) => a.studentId === studentId);
+  const held = rows.length;
+  const present = held - rows.filter((r) => r.status === 'absent').length;
   return {
+    held,
     present,
-    absent,
-    late,
-    leave,
-    total,
-    percent: total ? ((present + late) / total) * 100 : 0,
+    percent: held ? Math.round((present / held) * 100) : 100,
+    shortIn: attendanceByCourse(db, studentId).filter((c) => c.short).length,
   };
 }
 
-export const attendanceFor = (db: Database, studentId: string) =>
-  db.attendance
-    .filter((a) => a.studentId === studentId)
-    .sort((a, b) => a.date.localeCompare(b.date));
-
-export const attendanceOn = (db: Database, date: string, classId?: string) => {
-  const ids = classId ? new Set(studentsInClass(db, classId).map((s) => s.id)) : null;
-  return db.attendance.filter((a) => a.date === date && (!ids || ids.has(a.studentId)));
-};
-
-/** Month-by-month percentage, for the trend chart. */
-export function attendanceTrend(db: Database, studentId: string) {
-  const rows = attendanceFor(db, studentId);
-  const byMonth = new Map<string, AttendanceDay[]>();
+/** Day-by-day attendance across all papers, for a trend line. */
+export function attendanceTrend(db: Database, studentId: string, days = 12) {
+  const rows = db.attendance.filter((a) => a.studentId === studentId);
+  const byDate = new Map<string, { held: number; present: number }>();
   for (const r of rows) {
-    const key = r.date.slice(0, 7);
-    const bucket = byMonth.get(key);
-    if (bucket) bucket.push(r);
-    else byMonth.set(key, [r]);
+    const agg = byDate.get(r.date) ?? { held: 0, present: 0 };
+    agg.held += 1;
+    if (r.status !== 'absent') agg.present += 1;
+    byDate.set(r.date, agg);
   }
-  return [...byMonth.entries()].map(([month, group]) => ({
-    month: new Date(`${month}-01T00:00:00`).toLocaleDateString('en-IN', { month: 'short' }),
-    percent: Number(summariseAttendance(group).percent.toFixed(1)),
-  }));
+  return [...byDate.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .slice(-days)
+    .map(([date, agg]) => ({
+      name: date.slice(5),
+      value: agg.held ? Math.round((agg.present / agg.held) * 100) : 0,
+    }));
 }
 
-/** Whole-school attendance for a given day — the number a principal asks for. */
-export function schoolAttendanceOn(db: Database, date: string) {
-  return summariseAttendance(db.attendance.filter((a) => a.date === date));
-}
+/** The register for one hour of one paper. */
+export const registerFor = (db: Database, offeringId: string, date: string, hour: number) =>
+  db.attendance.filter(
+    (a) => a.offeringId === offeringId && a.date === date && a.hour === hour,
+  );
 
-export const ATTENDANCE_CONCERN = 85;
-
-/** Students whose attendance has slipped — the follow-up list. */
-export function studentsNeedingAttention(db: Database, classId?: string) {
-  const list = classId ? studentsInClass(db, classId) : studentsOf(db);
-  return list
-    .map((student) => ({
+/**
+ * Students short of attendance anywhere in the college — the list the
+ * examination cell works from before issuing hall tickets.
+ */
+export function studentsShortOfAttendance(db: Database) {
+  const out: {
+    student: User;
+    section: Section | undefined;
+    worst: CourseAttendance;
+    shortCount: number;
+  }[] = [];
+  for (const student of studentsOf(db)) {
+    const byCourse = attendanceByCourse(db, student.id);
+    const short = byCourse.filter((c) => c.short);
+    if (!short.length) continue;
+    out.push({
       student,
-      summary: summariseAttendance(attendanceFor(db, student.id)),
-    }))
-    .filter((r) => r.summary.percent < ATTENDANCE_CONCERN)
-    .sort((a, b) => a.summary.percent - b.summary.percent);
+      section: sectionById(db, student.sectionId),
+      worst: short[0]!,
+      shortCount: short.length,
+    });
+  }
+  return out.sort((a, b) => a.worst.percent - b.worst.percent);
 }
+
+/** Attendance for a whole section, paper by paper, for the tutor. */
+export function sectionAttendance(db: Database, sectionId: string) {
+  return studentsInSection(db, sectionId).map((student) => {
+    const byCourse = attendanceByCourse(db, student.id);
+    const held = sum(byCourse, (c) => c.held);
+    const present = sum(byCourse, (c) => c.present);
+    return {
+      student,
+      byCourse,
+      percent: held ? Math.round((present / held) * 100) : 100,
+      shortIn: byCourse.filter((c) => c.short).length,
+    };
+  });
+}
+
+export const condonationsFor = (db: Database, studentId: string) =>
+  db.condonations.filter((c) => c.studentId === studentId);
+
+export const pendingCondonations = (db: Database) =>
+  db.condonations.filter((c) => c.status === 'requested');
 
 /* ── timetable ─────────────────────────────────────────────────────────── */
 
-export interface ResolvedSlot {
-  id: string;
-  day: number;
-  period: number;
-  start: string;
-  end: string;
-  kind: string;
-  label: string;
-  labelTa?: string;
-  teacher: string;
-  phase: 'done' | 'now' | 'upcoming';
-}
-
-const minutes = (hhmm: string) => {
-  const [h, m] = hhmm.split(':').map(Number);
-  return h! * 60 + m!;
-};
-
-export function timetableForClass(db: Database, classId: string, day: number): ResolvedSlot[] {
+export function timetableForSection(db: Database, sectionId: string, day: number) {
   const now = new Date();
-  const nowMins = now.getHours() * 60 + now.getMinutes();
-  const isToday = day === now.getDay();
+  const minutes = now.getHours() * 60 + now.getMinutes();
+  const at = (hhmm: string) => {
+    const [h, m] = hhmm.split(':').map(Number);
+    return h! * 60 + m!;
+  };
 
   return db.timetable
-    .filter((s) => s.classId === classId && s.day === day)
-    .sort((a, b) => a.period - b.period)
+    .filter((s) => s.sectionId === sectionId && s.day === day)
+    .sort((a, b) => a.hour - b.hour)
     .map((slot) => {
-      const subject = subjectById(db, slot.subjectId);
-      const phase: ResolvedSlot['phase'] = !isToday
-        ? 'upcoming'
-        : nowMins >= minutes(slot.start) && nowMins < minutes(slot.end)
+      const course = courseOf(db, slot.offeringId);
+      const phase =
+        minutes >= at(slot.start) && minutes < at(slot.end)
           ? 'now'
-          : nowMins >= minutes(slot.end)
+          : at(slot.end) <= minutes
             ? 'done'
             : 'upcoming';
       return {
-        id: slot.id,
-        day: slot.day,
-        period: slot.period,
-        start: slot.start,
-        end: slot.end,
-        kind: slot.kind,
-        label: slot.title ?? subject?.name ?? 'Free period',
-        labelTa: subject?.nameTa,
-        teacher: userById(db, slot.teacherId ?? undefined)?.name ?? '—',
+        ...slot,
+        label: slot.title ?? course?.title ?? 'Free hour',
+        code: course?.code,
+        faculty: userById(db, slot.facultyId ?? undefined)?.name ?? '—',
         phase,
       };
     });
 }
 
-/** Where a teacher is expected today. */
-export function teacherDay(db: Database, teacherId: string, day: number) {
-  return db.timetable
-    .filter((s) => s.day === day && s.teacherId === teacherId)
-    .sort((a, b) => a.start.localeCompare(b.start))
+/** Where a member of staff is expected today. */
+export const facultyDay = (db: Database, facultyId: string, day: number) =>
+  db.timetable
+    .filter((s) => s.day === day && s.facultyId === facultyId)
+    .sort((a, b) => a.hour - b.hour)
     .map((slot) => ({
       ...slot,
-      className: classLabel(db, slot.classId),
-      subject: subjectById(db, slot.subjectId)?.name ?? '',
+      sectionName: sectionLabel(db, slot.sectionId),
+      course: courseOf(db, slot.offeringId)?.title ?? slot.title ?? '',
     }));
+
+export interface Clash {
+  sectionLabel: string;
+  facultyName: string;
 }
 
-/* ── homework ──────────────────────────────────────────────────────────── */
-
-export interface StudentHomework {
-  homework: Homework;
-  subject: SubjectTemplate | undefined;
-  done: boolean;
-  remark: string;
-  daysLeft: number;
-  state: 'done' | 'overdue' | 'due-soon' | 'pending';
-}
-
-export function homeworkForStudent(db: Database, student: User): StudentHomework[] {
-  return db.homework
-    .filter((h) => h.classId === student.classId)
-    .map((hw) => {
-      const status = db.homeworkStatus.find(
-        (s) => s.homeworkId === hw.id && s.studentId === student.id,
-      );
-      const daysLeft = daysFromToday(hw.dueOn);
-      const done = status?.done ?? false;
-      const state: StudentHomework['state'] = done
-        ? 'done'
-        : daysLeft < 0
-          ? 'overdue'
-          : daysLeft <= 1
-            ? 'due-soon'
-            : 'pending';
-      return {
-        homework: hw,
-        subject: subjectById(db, hw.subjectId),
-        done,
-        remark: status?.remark ?? '',
-        daysLeft,
-        state,
-      };
-    })
-    .sort((a, b) => a.homework.dueOn.localeCompare(b.homework.dueOn));
-}
-
-export function homeworkStats(db: Database, homeworkId: string) {
-  const rows = db.homeworkStatus.filter((s) => s.homeworkId === homeworkId);
-  const done = rows.filter((s) => s.done).length;
-  return { total: rows.length, done, pending: rows.length - done };
-}
-
-export const homeworkForClass = (db: Database, classId: string) =>
-  db.homework
-    .filter((h) => h.classId === classId)
-    .sort((a, b) => b.dueOn.localeCompare(a.dueOn));
-
-/* ── exams, marks, report card ────────────────────────────────────────── */
-
-export const examsForGrade = (db: Database, grade: number) =>
-  db.exams.filter((e) => e.grade === grade).sort((a, b) => a.startsOn.localeCompare(b.startsOn));
-
-export const publishedExamsFor = (db: Database, student: User) => {
-  const cls = classById(db, student.classId);
-  return cls ? examsForGrade(db, cls.grade).filter((e) => e.published) : [];
-};
-
-export interface ReportLine {
-  subject: SubjectTemplate | undefined;
-  marks: number | null;
-  maxMarks: number;
-  percent: number;
-  grade: string;
-  remark: string;
-}
-
-/** Tamil Nadu school grading — letter grades, not credit points. */
-export function gradeFor(percent: number): { grade: string; remark: string } {
-  if (percent >= 91) return { grade: 'A1', remark: 'Outstanding' };
-  if (percent >= 81) return { grade: 'A2', remark: 'Excellent' };
-  if (percent >= 71) return { grade: 'B1', remark: 'Very good' };
-  if (percent >= 61) return { grade: 'B2', remark: 'Good' };
-  if (percent >= 51) return { grade: 'C1', remark: 'Satisfactory' };
-  if (percent >= 41) return { grade: 'C2', remark: 'Needs improvement' };
-  if (percent >= 35) return { grade: 'D', remark: 'Just passed' };
-  return { grade: 'E', remark: 'Needs attention' };
-}
-
-export const PASS_MARK = 35;
-
-export function reportCard(db: Database, studentId: string, examId: string): ReportLine[] {
-  return db.marks
-    .filter((m) => m.studentId === studentId && m.examId === examId)
-    .map((m) => {
-      const percent = m.marks == null ? 0 : (m.marks / m.maxMarks) * 100;
-      const { grade, remark } = gradeFor(percent);
-      return {
-        subject: subjectById(db, m.subjectId),
-        marks: m.marks,
-        maxMarks: m.maxMarks,
-        percent,
-        grade,
-        remark,
-      };
-    })
-    .sort((a, b) => (a.subject?.name ?? '').localeCompare(b.subject?.name ?? ''));
-}
-
-export function reportTotals(lines: ReportLine[]) {
-  const obtained = sum(lines, (l) => l.marks ?? 0);
-  const max = sum(lines, (l) => l.maxMarks);
-  const percent = max ? (obtained / max) * 100 : 0;
+/** Whether the faculty in an hour is already in front of another section. */
+export function slotClash(db: Database, hourId: string): Clash | null {
+  const slot = db.timetable.find((s) => s.id === hourId);
+  if (!slot?.facultyId) return null;
+  const other = db.timetable.find(
+    (s) => s.id !== slot.id && s.day === slot.day && s.hour === slot.hour && s.facultyId === slot.facultyId,
+  );
+  if (!other) return null;
   return {
-    obtained,
-    max,
-    percent,
-    ...gradeFor(percent),
-    failed: lines.filter((l) => (l.percent ?? 0) < PASS_MARK).length,
+    sectionLabel: sectionLabel(db, other.sectionId),
+    facultyName: userById(db, slot.facultyId)?.name ?? 'The faculty member',
   };
 }
 
-/** Rank within the class for one exam — schools always ask for this. */
-export function classRank(db: Database, student: User, examId: string) {
-  if (!student.classId) return { rank: 0, outOf: 0 };
-  const peers = studentsInClass(db, student.classId).map((s) => ({
-    id: s.id,
-    total: sum(
-      db.marks.filter((m) => m.studentId === s.id && m.examId === examId),
-      (m) => m.marks ?? 0,
-    ),
-  }));
-  const ordered = peers.sort((a, b) => b.total - a.total);
-  return {
-    rank: ordered.findIndex((p) => p.id === student.id) + 1,
-    outOf: ordered.length,
-  };
-}
-
-/** Average percentage per subject for a class — shows where a class is weak. */
-export function classSubjectAverages(db: Database, classId: string, examId: string) {
-  const ids = new Set(studentsInClass(db, classId).map((s) => s.id));
-  return subjectsForClass(db, classId).map((subject) => {
-    const rows = db.marks.filter(
-      (m) => m.examId === examId && m.subjectId === subject.id && ids.has(m.studentId),
-    );
-    const avg = rows.length
-      ? rows.reduce((t, m) => t + ((m.marks ?? 0) / m.maxMarks) * 100, 0) / rows.length
-      : 0;
-    return { name: subject.code.replace(/\d+$/, ''), value: Number(avg.toFixed(1)), meta: subject.name };
-  });
-}
-
-export function gradeDistribution(db: Database, classId: string, examId: string) {
-  const buckets = new Map<string, number>([
-    ['A1', 0], ['A2', 0], ['B1', 0], ['B2', 0], ['C1', 0], ['C2', 0], ['D', 0], ['E', 0],
-  ]);
-  for (const student of studentsInClass(db, classId)) {
-    const totals = reportTotals(reportCard(db, student.id, examId));
-    if (!totals.max) continue;
-    buckets.set(totals.grade, (buckets.get(totals.grade) ?? 0) + 1);
-  }
-  return [...buckets].map(([grade, count]) => ({ name: grade, value: count }));
-}
-
-/* ── fees ──────────────────────────────────────────────────────────────── */
-
-export function feeSummary(db: Database, studentId: string) {
-  const rows = db.fees
-    .filter((f) => f.studentId === studentId)
-    .sort((a, b) => a.dueOn.localeCompare(b.dueOn));
-  const total = sum(rows, (f) => f.total);
-  const paid = sum(rows, (f) => f.paid);
-  const pending = total - paid;
-  const overdue = rows.filter((f) => f.paid < f.total && f.dueOn < todayISO());
-  const nextDue = rows.find((f) => f.paid < f.total);
-  return {
-    rows,
-    total,
-    paid,
-    pending,
-    percent: total ? (paid / total) * 100 : 0,
-    overdue,
-    overdueAmount: sum(overdue, (f) => f.total - f.paid),
-    nextDue,
-  };
-}
-
-export const feeStatus = (f: { paid: number; total: number }) =>
-  f.paid >= f.total ? 'paid' : f.paid > 0 ? 'partial' : 'due';
-
-/** Whole-school collection, for the correspondent's dashboard. */
-export function collectionSummary(db: Database) {
-  const total = sum(db.fees, (f) => f.total);
-  const paid = sum(db.fees, (f) => f.paid);
-  const today = todayISO();
-  const overdue = db.fees.filter((f) => f.paid < f.total && f.dueOn < today);
-  return {
-    total,
-    paid,
-    pending: total - paid,
-    percent: total ? (paid / total) * 100 : 0,
-    overdueAmount: sum(overdue, (f) => f.total - f.paid),
-    defaulters: new Set(overdue.map((f) => f.studentId)).size,
-  };
-}
-
-/** Outstanding by class — tells the office where to chase. */
-export function duesByClass(db: Database) {
-  return db.classes.map((cls) => {
-    const ids = new Set(studentsInClass(db, cls.id).map((s) => s.id));
-    const rows = db.fees.filter((f) => ids.has(f.studentId));
-    return {
-      name: cls.label,
-      value: sum(rows, (f) => f.total - f.paid),
-      meta: `Class ${cls.label}`,
-    };
-  });
-}
-
-export function defaulters(db: Database, classId?: string) {
-  const today = todayISO();
-  const list = classId ? studentsInClass(db, classId) : studentsOf(db);
-  return list
-    .map((student) => {
-      const rows = db.fees.filter((f) => f.studentId === student.id);
-      const due = rows.filter((f) => f.paid < f.total && f.dueOn < today);
-      return {
-        student,
-        amount: sum(due, (f) => f.total - f.paid),
-        heads: due.map((f) => f.head),
-      };
-    })
-    .filter((r) => r.amount > 0)
-    .sort((a, b) => b.amount - a.amount);
-}
-
-export const paymentsFor = (db: Database, studentId: string) =>
-  db.payments
-    .filter((p) => p.studentId === studentId)
-    .sort((a, b) => b.paidOn.localeCompare(a.paidOn));
-
-/* ── transport ─────────────────────────────────────────────────────────── */
-
-/** The bus a route runs on. Vehicles are separate so one can be swapped out. */
-export const vehicleForRoute = (db: Database, routeId: string | undefined) => {
-  const route = db.routes.find((r) => r.id === routeId);
-  return route ? db.vehicles.find((v) => v.id === route.vehicleId) : undefined;
-};
-
-export function transportFor(db: Database, studentId: string) {
-  const link = db.studentTransport.find((t) => t.studentId === studentId);
-  if (!link) return null;
-  const route = db.routes.find((r) => r.id === link.routeId);
-  if (!route) return null;
-  return {
-    route,
-    link,
-    vehicle: vehicleForRoute(db, route.id),
-    stop: link.stop,
-    pickup: route.stops.find((s) => s.name === link.stop),
-  };
-}
-
-/**
- * Vehicle papers that have lapsed or are about to. A school is answerable for
- * these, so the office needs them surfaced rather than filed.
- */
-export function vehicleCompliance(db: Database, withinDays = 45) {
-  const today = todayISO();
-  const rows: {
-    vehicle: Database['vehicles'][number];
-    paper: string;
-    expiresOn: string;
-    daysLeft: number;
-  }[] = [];
-  for (const vehicle of db.vehicles) {
-    const papers: [string, string][] = [
-      ['Fitness certificate', vehicle.fcExpiry],
-      ['Insurance', vehicle.insuranceExpiry],
-      ['Permit', vehicle.permitExpiry],
-    ];
-    for (const [paper, expiresOn] of papers) {
-      const daysLeft = daysFromToday(expiresOn);
-      if (expiresOn < today || daysLeft <= withinDays) {
-        rows.push({ vehicle, paper, expiresOn, daysLeft });
-      }
+export function allClashes(db: Database) {
+  const seen = new Map<string, string>();
+  const out: { hourId: string; facultyName: string; sectionLabel: string; other: string }[] = [];
+  for (const slot of db.timetable) {
+    if (!slot.facultyId || slot.kind === 'break' || slot.kind === 'lunch') continue;
+    const key = `${slot.day}-${slot.hour}-${slot.facultyId}`;
+    const previous = seen.get(key);
+    if (previous) {
+      const prev = db.timetable.find((s) => s.id === previous)!;
+      out.push({
+        hourId: slot.id,
+        facultyName: userById(db, slot.facultyId)?.name ?? '—',
+        sectionLabel: sectionLabel(db, slot.sectionId),
+        other: sectionLabel(db, prev.sectionId),
+      });
+    } else {
+      seen.set(key, slot.id);
     }
   }
-  return rows.sort((a, b) => a.daysLeft - b.daysLeft);
+  return out;
 }
 
-export const routeRiders = (db: Database, routeId: string) =>
-  db.studentTransport
-    .filter((t) => t.routeId === routeId)
-    .map((t) => ({ link: t, student: userById(db, t.studentId) }))
-    .filter((r) => r.student);
-
-/* ── circulars, events, requests ──────────────────────────────────────── */
-
-export const visibleCirculars = (db: Database) =>
-  [...db.circulars].sort(
-    (a, b) => Number(b.pinned) - Number(a.pinned) || b.postedOn.localeCompare(a.postedOn),
-  );
-
-export const upcomingEvents = (db: Database) =>
-  db.events.filter((e) => e.date >= todayISO()).sort((a, b) => a.date.localeCompare(b.date));
-
-export const requestsFor = (db: Database, userId: string) =>
-  db.requests.filter((r) => r.raisedBy === userId).sort((a, b) => b.createdOn.localeCompare(a.createdOn));
-
-export const allRequests = (db: Database) =>
-  [...db.requests].sort((a, b) => b.createdOn.localeCompare(a.createdOn));
-
-/* ── library ───────────────────────────────────────────────────────────── */
-
-export function loansFor(db: Database, studentId: string) {
-  return db.loans
-    .filter((l) => l.studentId === studentId)
-    .map((loan) => ({
-      loan,
-      book: db.books.find((b) => b.id === loan.bookId),
-      daysLeft: daysFromToday(loan.dueOn),
-      overdue: !loan.returnedOn && daysFromToday(loan.dueOn) < 0,
-    }))
-    .sort((a, b) => Number(!!a.loan.returnedOn) - Number(!!b.loan.returnedOn));
+/** Hours a week each paper actually gets, against what the syllabus allots. */
+export function hourBalance(db: Database, sectionId: string) {
+  return offeringsOf(db, sectionId)
+    .map((o) => {
+      const course = courseById(db, o.courseId);
+      return {
+        offering: o,
+        course,
+        want: course?.hoursPerWeek ?? 0,
+        got: db.timetable.filter((s) => s.sectionId === sectionId && s.offeringId === o.id).length,
+      };
+    })
+    .filter((r) => r.course);
 }
 
-export function availableCopies(db: Database, bookId: string) {
-  const book = db.books.find((b) => b.id === bookId);
-  if (!book) return 0;
-  const out = db.loans.filter((l) => l.bookId === bookId && !l.returnedOn).length;
-  return Math.max(0, book.copies - out);
-}
+/* ── staff, leave and cover ────────────────────────────────────────────── */
 
-/* ── notifications ─────────────────────────────────────────────────────── */
-
-export const notificationsFor = (db: Database, userId: string) =>
-  db.notifications
-    .filter((n) => n.userId === userId || n.userId === 'all')
-    .sort((a, b) => b.createdOn.localeCompare(a.createdOn));
-
-export const unreadCount = (db: Database, userId: string) =>
-  notificationsFor(db, userId).filter((n) => !n.read).length;
-
-/* ── exam helper ───────────────────────────────────────────────────────── */
-
-export const latestPublishedExam = (db: Database, student: User): Exam | undefined =>
-  publishedExamsFor(db, student).at(-1);
-
-/* ── staff, roles and the staff room ──────────────────────────────────── */
-
-/** Anyone on the payroll, as opposed to a student or a parent. */
-export const staffOf = (db: Database) => db.users.filter((u) => !!u.employeeId);
-
-export const teachersOf = (db: Database) =>
-  db.users.filter((u) => u.roles.includes('subject-teacher') || u.roles.includes('class-teacher'));
-
-/**
- * Teachers eligible to take a grade. Tamil Nadu grades the teaching cadre, and
- * a school that puts a Secondary Grade Teacher in front of class 11 has a
- * problem at inspection — so eligibility is a rule, not a preference.
- */
-export function eligibleTeachers(db: Database, grade: number, subjectId?: string) {
-  return teachersOf(db).filter((t) => {
-    const grades = t.designation ? DESIGNATION_GRADES[t.designation] : undefined;
-    if (grades && !grades.includes(grade)) return false;
-    if (subjectId && t.subjectIds?.length && !t.subjectIds.includes(subjectId)) return false;
-    return true;
-  });
-}
-
-/** Staff on approved leave on a given date. */
 export const staffOnLeave = (db: Database, date: string) =>
   db.leaves
     .filter((l) => l.status === 'approved' && l.from <= date && l.to >= date)
     .map((l) => ({ leave: l, staff: userById(db, l.staffId) }))
     .filter((r) => r.staff);
 
-/**
- * The periods left uncovered because their teacher is absent, with the teachers
- * who are free to take each one. This is the daily adjustment board, and it is
- * the first thing a vice principal does each morning.
- */
+/** The hours left uncovered today, with who is genuinely free to take them. */
 export function substitutionBoard(db: Database, date: string) {
   const day = new Date(date).getDay();
   const dow = day === 0 ? 7 : day;
   const absentIds = new Set(staffOnLeave(db, date).map((r) => r.staff!.id));
 
-  // Who is already standing in front of a class in each period.
-  const busyByPeriod = new Map<number, Set<string>>();
+  const busyByHour = new Map<number, Set<string>>();
   for (const slot of db.timetable) {
-    if (slot.day !== dow || !slot.teacherId) continue;
-    if (!busyByPeriod.has(slot.period)) busyByPeriod.set(slot.period, new Set());
-    busyByPeriod.get(slot.period)!.add(slot.teacherId);
+    if (slot.day !== dow || !slot.facultyId) continue;
+    if (!busyByHour.has(slot.hour)) busyByHour.set(slot.hour, new Set());
+    busyByHour.get(slot.hour)!.add(slot.facultyId);
   }
-  // A teacher already covering a period is no longer free for it.
   for (const sub of db.substitutions.filter((s) => s.date === date)) {
-    const slot = db.timetable.find((s) => s.id === sub.slotId);
-    if (!slot) continue;
-    busyByPeriod.get(slot.period)?.add(sub.coverTeacherId);
+    const slot = db.timetable.find((s) => s.id === sub.hourId);
+    if (slot) busyByHour.get(slot.hour)?.add(sub.coverFacultyId);
   }
 
   return db.timetable
@@ -620,48 +378,428 @@ export function substitutionBoard(db: Database, date: string) {
         s.day === dow &&
         s.kind !== 'break' &&
         s.kind !== 'lunch' &&
-        s.teacherId &&
-        absentIds.has(s.teacherId),
+        s.facultyId &&
+        absentIds.has(s.facultyId),
     )
-    .sort((a, b) => a.period - b.period || a.classId.localeCompare(b.classId))
+    .sort((a, b) => a.hour - b.hour || a.sectionId.localeCompare(b.sectionId))
     .map((slot) => {
-      const cls = classById(db, slot.classId);
-      const busy = busyByPeriod.get(slot.period) ?? new Set<string>();
-      const free = teachersOf(db).filter(
-        (t) => !busy.has(t.id) && !absentIds.has(t.id) && t.id !== slot.teacherId,
+      const section = sectionById(db, slot.sectionId);
+      const course = courseOf(db, slot.offeringId);
+      const busy = busyByHour.get(slot.hour) ?? new Set<string>();
+      const free = facultyOf(db).filter(
+        (f) => !busy.has(f.id) && !absentIds.has(f.id) && f.id !== slot.facultyId,
       );
-      // A teacher who knows the subject can actually teach the lesson; anyone
-      // else is supervision. The distinction matters, so it is surfaced.
-      const canTeach = free.filter(
-        (t) =>
-          t.subjectIds?.includes(slot.subjectId ?? '') &&
-          (!t.designation ||
-            !DESIGNATION_GRADES[t.designation] ||
-            DESIGNATION_GRADES[t.designation]!.includes(cls?.grade ?? 0)),
-      );
+      // Someone who teaches the paper can take the lesson; anyone else is
+      // supervision, and the distinction is worth putting on screen.
+      const canTeach = free.filter((f) => f.courseIds?.includes(course?.id ?? ''));
       return {
         slot,
-        cls,
-        subject: subjectById(db, slot.subjectId),
-        absentTeacher: userById(db, slot.teacherId ?? undefined),
-        cover: db.substitutions.find((s) => s.slotId === slot.id && s.date === date),
+        section,
+        course,
+        absentFaculty: userById(db, slot.facultyId ?? undefined),
+        cover: db.substitutions.find((s) => s.hourId === slot.id && s.date === date),
         canTeach,
-        otherFree: free.filter((t) => !canTeach.includes(t)),
+        otherFree: free.filter((f) => !canTeach.includes(f)),
       };
     });
 }
 
+/* ── coursework ────────────────────────────────────────────────────────── */
+
+export interface StudentAssignment {
+  assignment: Database['assignments'][number];
+  course: Course | undefined;
+  submittedOn: string | null;
+  marks: number | null;
+  remark: string;
+  daysLeft: number;
+  state: 'marked' | 'submitted' | 'overdue' | 'due-soon' | 'pending';
+}
+
+export function assignmentsForStudent(db: Database, studentId: string): StudentAssignment[] {
+  const mine = new Set(offeringsForStudent(db, studentId).map((o) => o.id));
+  return db.assignments
+    .filter((a) => mine.has(a.offeringId))
+    .map((assignment) => {
+      const status = db.assignmentStatus.find(
+        (s) => s.assignmentId === assignment.id && s.studentId === studentId,
+      );
+      const daysLeft = daysFromToday(assignment.dueOn);
+      const state: StudentAssignment['state'] =
+        status?.marks != null
+          ? 'marked'
+          : status?.submittedOn
+            ? 'submitted'
+            : daysLeft < 0
+              ? 'overdue'
+              : daysLeft <= 2
+                ? 'due-soon'
+                : 'pending';
+      return {
+        assignment,
+        course: courseOf(db, assignment.offeringId),
+        submittedOn: status?.submittedOn ?? null,
+        marks: status?.marks ?? null,
+        remark: status?.remark ?? '',
+        daysLeft,
+        state,
+      };
+    })
+    .sort((a, b) => a.assignment.dueOn.localeCompare(b.assignment.dueOn));
+}
+
+/* ── assessment ────────────────────────────────────────────────────────── */
+
+export const gradeFor = (total: number) =>
+  GRADE_BANDS.find((b) => total >= b.min) ?? GRADE_BANDS[GRADE_BANDS.length - 1]!;
+
+/** The internal assessment a student has accumulated in one paper. */
+export function ciaFor(db: Database, studentId: string, offeringId: string) {
+  const rows = db.internalMarks.filter(
+    (m) => m.studentId === studentId && m.offeringId === offeringId,
+  );
+  const held = rows.filter((r) => r.marks != null);
+  return {
+    components: rows,
+    scored: sum(held, (r) => r.marks ?? 0),
+    outOf: sum(held, (r) => r.maxMarks),
+    pending: rows.length - held.length,
+    max: sum(rows, (r) => r.maxMarks),
+  };
+}
+
+export interface SemesterReport {
+  semester: number;
+  lines: {
+    course: Course | undefined;
+    result: Database['results'][number];
+  }[];
+  credits: number;
+  earned: number;
+  gpa: number;
+  arrears: number;
+}
+
+/** Every completed semester for a student, newest first. */
+export function transcript(db: Database, studentId: string): SemesterReport[] {
+  const mine = db.results.filter((r) => r.studentId === studentId);
+  const semesters = [...new Set(mine.map((r) => r.semester))].sort((a, b) => b - a);
+
+  return semesters.map((semester) => {
+    const rows = mine.filter((r) => r.semester === semester);
+    const passed = rows.filter((r) => r.status === 'pass');
+    const credits = sum(rows, (r) => r.credits);
+    const earned = sum(passed, (r) => r.credits);
+    // A GPA counts only the credits actually earned; a failed paper scores zero
+    // until it is cleared, which is why an arrear hurts twice.
+    const gpa = credits ? sum(rows, (r) => r.gradePoint * r.credits) / credits : 0;
+    return {
+      semester,
+      lines: rows
+        .map((result) => ({ course: courseById(db, result.courseId), result }))
+        .sort((a, b) => (a.course?.code ?? '').localeCompare(b.course?.code ?? '')),
+      credits,
+      earned,
+      gpa,
+      arrears: rows.filter((r) => r.status === 'arrear').length,
+    };
+  });
+}
+
+/**
+ * The two numbers that define an undergraduate: the cumulative grade point
+ * average, and how many papers are still outstanding.
+ */
+export function academicStanding(db: Database, studentId: string) {
+  const mine = db.results.filter((r) => r.studentId === studentId);
+  const passed = mine.filter((r) => r.status === 'pass');
+  const credits = sum(passed, (r) => r.credits);
+  const arrears = mine.filter((r) => r.status === 'arrear');
+  return {
+    cgpa: credits ? sum(passed, (r) => r.gradePoint * r.credits) / credits : 0,
+    creditsEarned: credits,
+    arrears: arrears.length,
+    arrearPapers: arrears.map((r) => courseById(db, r.courseId)).filter(Boolean) as Course[],
+    semestersCompleted: new Set(mine.map((r) => r.semester)).size,
+  };
+}
+
+/** Rank within the cohort, by CGPA. */
+export function sectionRank(db: Database, studentId: string) {
+  const student = userById(db, studentId);
+  if (!student?.sectionId) return null;
+  const peers = studentsInSection(db, student.sectionId)
+    .map((s) => ({ id: s.id, cgpa: academicStanding(db, s.id).cgpa }))
+    .sort((a, b) => b.cgpa - a.cgpa);
+  const index = peers.findIndex((p) => p.id === studentId);
+  return index === -1 ? null : { rank: index + 1, of: peers.length };
+}
+
+/** Pass percentage per paper, which is how a department judges its teaching. */
+export function coursePassRates(db: Database, semester: number) {
+  const rows = db.results.filter((r) => r.semester === semester);
+  const byCourse = new Map<string, { pass: number; total: number }>();
+  for (const r of rows) {
+    const agg = byCourse.get(r.courseId) ?? { pass: 0, total: 0 };
+    agg.total += 1;
+    if (r.status === 'pass') agg.pass += 1;
+    byCourse.set(r.courseId, agg);
+  }
+  return [...byCourse.entries()]
+    .map(([courseId, agg]) => ({
+      course: courseById(db, courseId),
+      name: courseById(db, courseId)?.title ?? courseId,
+      value: Math.round((agg.pass / agg.total) * 100),
+      meta: `${agg.pass} of ${agg.total} passed`,
+    }))
+    .filter((r) => r.course)
+    .sort((a, b) => a.value - b.value);
+}
+
+export { PASS_MARK };
+
+/* ── fees ──────────────────────────────────────────────────────────────── */
+
+export function feeSummary(db: Database, studentId: string) {
+  const rows = db.fees.filter((f) => f.studentId === studentId);
+  const billed = sum(rows, (f) => f.total);
+  const paid = sum(rows, (f) => f.paid);
+  const today = todayISO();
+  return {
+    rows,
+    billed,
+    paid,
+    pending: billed - paid,
+    percent: billed ? Math.round((paid / billed) * 100) : 100,
+    overdue: rows.filter((f) => f.paid < f.total && f.dueOn < today),
+    overdueAmount: sum(
+      rows.filter((f) => f.paid < f.total && f.dueOn < today),
+      (f) => f.total - f.paid,
+    ),
+    // The next charge still to fall due, which is what a parent plans around.
+    nextDue: rows
+      .filter((f) => f.paid < f.total && f.dueOn >= today)
+      .sort((a, b) => a.dueOn.localeCompare(b.dueOn))[0],
+    total: billed,
+    concession: sum(rows, (f) => f.concession),
+  };
+}
+
+/** Whether a single charge is paid, part paid, overdue or simply due. */
+export function feeStatus(fee: Database['fees'][number]) {
+  if (fee.paid >= fee.total) return 'paid' as const;
+  if (fee.dueOn < todayISO()) return 'overdue' as const;
+  return fee.paid > 0 ? ('partial' as const) : ('due' as const);
+}
+
+export const paymentsFor = (db: Database, studentId: string) =>
+  db.payments.filter((p) => p.studentId === studentId).sort((a, b) => b.paidOn.localeCompare(a.paidOn));
+
+export function collectionSummary(db: Database) {
+  const billed = sum(db.fees, (f) => f.total);
+  const paid = sum(db.fees, (f) => f.paid);
+  const today = todayISO();
+  const overdue = db.fees.filter((f) => f.paid < f.total && f.dueOn < today);
+  return {
+    billed,
+    paid,
+    pending: billed - paid,
+    percent: billed ? Math.round((paid / billed) * 100) : 100,
+    overdueAmount: sum(overdue, (f) => f.total - f.paid),
+    total: billed,
+    defaulters: new Set(overdue.map((f) => f.studentId)).size,
+    scholarships: sum(db.fees, (f) => f.concession),
+  };
+}
+
+export function duesBySection(db: Database) {
+  return db.sections
+    .map((section) => {
+      const ids = new Set(studentsInSection(db, section.id).map((s) => s.id));
+      const rows = db.fees.filter((f) => ids.has(f.studentId));
+      return {
+        name: section.label,
+        value: sum(rows, (f) => f.total - f.paid),
+        meta: `${section.label} · semester ${section.semester}`,
+      };
+    })
+    .filter((r) => r.value > 0)
+    .sort((a, b) => b.value - a.value);
+}
+
+export function defaulters(db: Database) {
+  const today = todayISO();
+  return studentsOf(db)
+    .map((student) => {
+      const summary = feeSummary(db, student.id);
+      return { student, summary, section: sectionById(db, student.sectionId) };
+    })
+    .filter((r) => r.summary.rows.some((f) => f.paid < f.total && f.dueOn < today))
+    .sort((a, b) => b.summary.pending - a.summary.pending);
+}
+
+/* ── placements ────────────────────────────────────────────────────────── */
+
+export interface Eligibility {
+  eligible: boolean;
+  reasons: string[];
+}
+
+/**
+ * Whether a student may register for a drive.
+ *
+ * A recruiter's bar is a condition of registering, not something discovered at
+ * the interview, so the reason is spelled out rather than the button simply
+ * being disabled.
+ */
+export function eligibilityFor(db: Database, studentId: string, drive: Drive): Eligibility {
+  const student = userById(db, studentId);
+  const standing = academicStanding(db, studentId);
+  const reasons: string[] = [];
+
+  if (!student?.programmeId || !drive.programmeIds.includes(student.programmeId)) {
+    reasons.push('This drive is not open to your programme.');
+  }
+  if (standing.cgpa < drive.minCgpa) {
+    reasons.push(`CGPA ${standing.cgpa.toFixed(2)} is below the required ${drive.minCgpa.toFixed(1)}.`);
+  }
+  if (standing.arrears > drive.maxArrears) {
+    reasons.push(
+      drive.maxArrears === 0
+        ? `${standing.arrears} standing arrear${standing.arrears === 1 ? '' : 's'}; this recruiter allows none.`
+        : `${standing.arrears} arrears against a limit of ${drive.maxArrears}.`,
+    );
+  }
+  if (drive.registrationCloses < todayISO()) reasons.push('Registration has closed.');
+
+  return { eligible: reasons.length === 0, reasons };
+}
+
+export const applicationsFor = (db: Database, studentId: string) =>
+  db.driveApplications
+    .filter((a) => a.studentId === studentId)
+    .map((application) => {
+      const drive = db.drives.find((d) => d.id === application.driveId);
+      return {
+        application,
+        drive,
+        company: db.companies.find((c) => c.id === drive?.companyId),
+      };
+    })
+    .filter((r) => r.drive);
+
+export const driveRoster = (db: Database, driveId: string) =>
+  db.driveApplications
+    .filter((a) => a.driveId === driveId)
+    .map((application) => ({
+      application,
+      student: userById(db, application.studentId),
+      section: sectionById(db, userById(db, application.studentId)?.sectionId),
+      standing: academicStanding(db, application.studentId),
+    }))
+    .filter((r) => r.student);
+
+export function placementSummary(db: Database) {
+  const selected = db.driveApplications.filter((a) => a.stage === 'selected');
+  const placedIds = new Set(selected.map((a) => a.studentId));
+  // Only final-year students are counted as placeable, which is what a college
+  // reports to NAAC and to parents.
+  const finalYear = studentsOf(db).filter((s) => {
+    const section = sectionById(db, s.sectionId);
+    const programme = programmeById(db, s.programmeId);
+    if (!section || !programme) return false;
+    return section.semester >= programme.semesters - 1;
+  });
+  const packages = selected
+    .map((a) => db.drives.find((d) => d.id === a.driveId)?.packageLpa ?? 0)
+    .filter((p) => p > 0);
+  return {
+    drives: db.drives.length,
+    companies: db.companies.length,
+    applications: db.driveApplications.length,
+    offers: selected.length,
+    placed: placedIds.size,
+    eligible: finalYear.length,
+    percent: finalYear.length ? Math.round((placedIds.size / finalYear.length) * 100) : 0,
+    highest: packages.length ? Math.max(...packages) : 0,
+    average: packages.length ? packages.reduce((t, p) => t + p, 0) / packages.length : 0,
+  };
+}
+
+/* ── hostel ────────────────────────────────────────────────────────────── */
+
+export function hostelOccupancy(db: Database, blockId?: string) {
+  const rooms = db.hostelRooms.filter((r) => !blockId || r.blockId === blockId);
+  const allotted = db.hostelAllotments.filter((a) => a.status === 'allotted');
+  const byRoom = new Map<string, number>();
+  for (const a of allotted) byRoom.set(a.roomId, (byRoom.get(a.roomId) ?? 0) + 1);
+  const capacity = sum(rooms, (r) => r.capacity);
+  const filled = sum(rooms, (r) => byRoom.get(r.id) ?? 0);
+  return {
+    rooms,
+    byRoom,
+    capacity,
+    filled,
+    free: capacity - filled,
+    percent: capacity ? Math.round((filled / capacity) * 100) : 0,
+  };
+}
+
+export const hostelFor = (db: Database, studentId: string) => {
+  const allotment = db.hostelAllotments.find((a) => a.studentId === studentId);
+  if (!allotment) return null;
+  const room = db.hostelRooms.find((r) => r.id === allotment.roomId);
+  const block = db.hostelBlocks.find((b) => b.id === room?.blockId);
+  return { allotment, room, block, warden: userById(db, block?.wardenId) };
+};
+
+export const hostelRequests = (db: Database) =>
+  db.hostelAllotments
+    .filter((a) => a.status === 'requested')
+    .map((allotment) => ({
+      allotment,
+      student: userById(db, allotment.studentId),
+      room: db.hostelRooms.find((r) => r.id === allotment.roomId),
+    }))
+    .filter((r) => r.student);
+
+/* ── mentoring ─────────────────────────────────────────────────────────── */
+
+/**
+ * The students a member of staff mentors, with the two facts a mentor acts on:
+ * are they attending, and are they passing.
+ */
+export function menteesOf(db: Database, mentorId: string) {
+  return studentsOf(db)
+    .filter((s) => s.mentorId === mentorId)
+    .map((student) => ({
+      student,
+      section: sectionById(db, student.sectionId),
+      attendance: overallAttendance(db, student.id),
+      standing: academicStanding(db, student.id),
+      lastNote: db.mentorNotes
+        .filter((n) => n.studentId === student.id)
+        .sort((a, b) => b.on.localeCompare(a.on))[0],
+    }))
+    .sort((a, b) => a.attendance.percent - b.attendance.percent);
+}
+
+export const notesFor = (db: Database, studentId: string) =>
+  db.mentorNotes
+    .filter((n) => n.studentId === studentId)
+    .sort((a, b) => b.on.localeCompare(a.on));
+
 /* ── recruitment ──────────────────────────────────────────────────────── */
 
-/** Which documents an applicant still owes, given their post. */
-export function missingDocuments(app: StaffApplication): DocumentKind[] {
-  const required: DocumentKind[] = ['degree', 'aadhaar', 'pan', 'bank'];
-  const teaching: Designation[] = ['sgt', 'bt-assistant', 'pg-assistant'];
-  if (teaching.includes(app.designation)) required.push('bed');
-  if (app.tetCleared) required.push('tet');
-  if (app.experienceYears > 0) required.push('experience');
+export function missingDocuments(app: Database['applications'][number]) {
+  const required = ['degree', 'pg', 'aadhaar', 'pan', 'bank'] as const;
+  const extra: string[] = [];
+  if (app.phd) extra.push('phd');
+  if (app.netCleared) extra.push('net');
+  if (app.experienceYears > 0) extra.push('experience');
+  if (app.publications > 0) extra.push('publications');
   const held = new Set(app.documents.map((d) => d.kind));
-  return required.filter((k) => !held.has(k));
+  return [...required, ...extra].filter((k) => !held.has(k as never)) as string[];
 }
 
 export const pendingApplications = (db: Database) =>
@@ -669,32 +807,30 @@ export const pendingApplications = (db: Database) =>
 
 /* ── laboratories ─────────────────────────────────────────────────────── */
 
-export const batchesOf = (db: Database, classId: string) =>
-  db.labBatches.filter((b) => b.classId === classId);
+export const batchesOf = (db: Database, sectionId: string) =>
+  db.labBatches.filter((b) => b.sectionId === sectionId);
 
-/** The classes that have at least one practical subject, so need batches. */
-export function classesWithPracticals(db: Database) {
-  return db.classes
-    .map((cls) => {
-      const practicals = classSubjectsOf(db, cls.id)
-        .map((cs) => subjectById(db, cs.subjectId))
-        .filter((s): s is SubjectTemplate => !!s && s.hasPractical);
-      return { cls, practicals, batches: batchesOf(db, cls.id) };
+export function sectionsWithPracticals(db: Database) {
+  return db.sections
+    .map((section) => {
+      const practicals = offeringsOf(db, section.id)
+        .map((o) => courseById(db, o.courseId))
+        .filter((c): c is Course => !!c && c.kind === 'practical');
+      return { section, practicals, batches: batchesOf(db, section.id) };
     })
     .filter((r) => r.practicals.length > 0);
 }
 
-/** The practical periods a lab is used for across the week. */
 export const labSessions = (db: Database, labId: string) =>
   db.timetable
     .filter((s) => s.labId === labId)
-    .sort((a, b) => a.day - b.day || a.period - b.period)
+    .sort((a, b) => a.day - b.day || a.hour - b.hour)
     .map((slot) => ({
       slot,
-      cls: classById(db, slot.classId),
-      subject: subjectById(db, slot.subjectId),
+      section: sectionById(db, slot.sectionId),
+      course: courseOf(db, slot.offeringId),
       batch: db.labBatches.find((b) => b.id === slot.batchId),
-      teacher: userById(db, slot.teacherId ?? undefined),
+      faculty: userById(db, slot.facultyId ?? undefined),
     }));
 
 export function labSummary(db: Database, labId: string) {
@@ -704,14 +840,16 @@ export function labSummary(db: Database, labId: string) {
     items,
     needsRepair: items.filter((i) => i.condition !== 'good').length,
     breakages,
-    unrecovered: sum(breakages.filter((b) => !b.recovered), (b) => b.amount),
+    unrecovered: sum(
+      breakages.filter((b) => !b.recovered),
+      (b) => b.amount,
+    ),
     sessions: labSessions(db, labId).length,
   };
 }
 
 /* ── payroll ──────────────────────────────────────────────────────────── */
 
-/** The months payroll has been run for, most recent first. */
 export const payrollMonths = (db: Database) =>
   [...new Set(db.payslips.map((p) => p.month))].sort((a, b) => b.localeCompare(a));
 
@@ -735,104 +873,120 @@ export const payslipsFor = (db: Database, staffId: string) =>
 
 /* ── academic structure ───────────────────────────────────────────────── */
 
-/** Classes grouped by stage, which is how a school actually thinks of them. */
-export function classesByStage(db: Database) {
-  const order: Stage[] = ['pre-primary', 'primary', 'middle', 'secondary', 'higher-secondary'];
-  return order
-    .map((stage) => ({
-      stage,
-      label: STAGE_LABEL[stage],
-      classes: db.classes
-        .filter((c) => c.stage === stage)
-        .sort((a, b) => a.grade - b.grade || a.section.localeCompare(b.section)),
+/** Programmes grouped by department, which is how a prospectus reads. */
+export function programmesByDepartment(db: Database) {
+  return db.departments
+    .map((department) => ({
+      department,
+      hod: userById(db, department.hodId),
+      programmes: db.programmes.filter((p) => p.departmentId === department.id),
     }))
-    .filter((g) => g.classes.length > 0);
+    .filter((d) => d.programmes.length > 0);
 }
 
-/** The subjects the catalogue offers to a grade, for the assignment screen. */
-export const subjectsOfferedTo = (db: Database, grade: number) =>
-  db.subjects.filter((s) => s.grades.includes(grade));
+export const sectionsOfProgramme = (db: Database, programmeId: string) =>
+  db.sections.filter((s) => s.programmeId === programmeId).sort((a, b) => a.semester - b.semester);
 
-export const hscGroupOf = (db: Database, cls: SchoolClass | undefined) =>
-  cls?.hscGroupId ? db.hscGroups.find((g) => g.id === cls.hscGroupId) : undefined;
+export const coursesOfProgramme = (db: Database, programmeId: string, semester?: number) =>
+  db.courses
+    .filter((c) => c.programmeId === programmeId && (semester == null || c.semester === semester))
+    .sort((a, b) => a.semester - b.semester || a.code.localeCompare(b.code));
 
-/** Classes whose subject set has no teacher against one or more subjects. */
-export function unstaffedSubjects(db: Database) {
-  return db.classSubjects
-    .filter((cs) => !cs.teacherId || !db.users.some((u) => u.id === cs.teacherId))
-    .map((cs) => ({ cls: classById(db, cs.classId), subject: subjectById(db, cs.subjectId) }));
-}
+/** Papers with no member of staff against them. */
+export const unstaffedOfferings = (db: Database) =>
+  db.offerings
+    .filter((o) => !o.facultyId || !db.users.some((u) => u.id === o.facultyId))
+    .map((o) => ({ section: sectionById(db, o.sectionId), course: courseById(db, o.courseId) }));
 
-/* ── timetable clashes ────────────────────────────────────────────────── */
+/* ── circulars, events, requests, library, transport ──────────────────── */
 
-export interface Clash {
-  /** The other class this teacher is already due to be in. */
-  classLabel: string;
-  teacherName: string;
-}
-
-/**
- * Whether the teacher placed in a period is already standing in front of
- * another class at that moment.
- *
- * This is the check that makes a timetable editable at all: without it a school
- * discovers the double-booking on Monday morning, when two classes are waiting
- * for the same person. Lab clashes count too — a lab can only hold one batch.
- */
-export function slotClash(db: Database, slotId: string): Clash | null {
-  const slot = db.timetable.find((s) => s.id === slotId);
-  if (!slot?.teacherId) return null;
-
-  const other = db.timetable.find(
-    (s) =>
-      s.id !== slot.id &&
-      s.day === slot.day &&
-      s.period === slot.period &&
-      s.teacherId === slot.teacherId,
+export const visibleCirculars = (db: Database) =>
+  [...db.circulars].sort(
+    (a, b) => Number(b.pinned) - Number(a.pinned) || b.postedOn.localeCompare(a.postedOn),
   );
-  if (!other) return null;
 
+export const upcomingEvents = (db: Database) =>
+  db.events.filter((e) => e.date >= todayISO()).sort((a, b) => a.date.localeCompare(b.date));
+
+export const allRequests = (db: Database) =>
+  [...db.requests].sort((a, b) => b.createdOn.localeCompare(a.createdOn));
+
+export const requestsFor = (db: Database, userId: string) =>
+  db.requests
+    .filter((r) => r.raisedBy === userId)
+    .sort((a, b) => b.createdOn.localeCompare(a.createdOn));
+
+export const availableCopies = (db: Database, bookId: string) => {
+  const book = db.books.find((b) => b.id === bookId);
+  if (!book) return 0;
+  const out = db.loans.filter((l) => l.bookId === bookId && !l.returnedOn).length;
+  return Math.max(0, book.copies - out);
+};
+
+export const loansFor = (db: Database, studentId: string) =>
+  db.loans
+    .filter((l) => l.studentId === studentId)
+    .map((loan) => ({
+      loan,
+      book: db.books.find((b) => b.id === loan.bookId),
+      overdue: !loan.returnedOn && loan.dueOn < todayISO(),
+      daysLeft: daysFromToday(loan.dueOn),
+    }))
+    .sort((a, b) => Number(!!a.loan.returnedOn) - Number(!!b.loan.returnedOn));
+
+export const vehicleForRoute = (db: Database, routeId: string | undefined) => {
+  const route = db.routes.find((r) => r.id === routeId);
+  return route ? db.vehicles.find((v) => v.id === route.vehicleId) : undefined;
+};
+
+export function transportFor(db: Database, studentId: string) {
+  const link = db.studentTransport.find((t) => t.studentId === studentId);
+  if (!link) return null;
+  const route = db.routes.find((r) => r.id === link.routeId);
+  if (!route) return null;
   return {
-    classLabel: classById(db, other.classId)?.label ?? '—',
-    teacherName: userById(db, slot.teacherId)?.name ?? 'The teacher',
+    route,
+    link,
+    vehicle: vehicleForRoute(db, route.id),
+    stop: link.stop,
+    pickup: route.stops.find((s) => s.name === link.stop),
   };
 }
 
-/** Every double-booking across the school, for the editor's own warning. */
-export function allClashes(db: Database) {
-  const seen = new Map<string, string>();
-  const out: { slotId: string; teacherName: string; classLabel: string; other: string }[] = [];
-  for (const slot of db.timetable) {
-    if (!slot.teacherId || slot.kind === 'break' || slot.kind === 'lunch') continue;
-    const key = `${slot.day}-${slot.period}-${slot.teacherId}`;
-    const previous = seen.get(key);
-    if (previous) {
-      out.push({
-        slotId: slot.id,
-        teacherName: userById(db, slot.teacherId)?.name ?? '—',
-        classLabel: classById(db, slot.classId)?.label ?? '—',
-        other: classById(db, db.timetable.find((s) => s.id === previous)!.classId)?.label ?? '—',
-      });
-    } else {
-      seen.set(key, slot.id);
+export function vehicleCompliance(db: Database, withinDays = 45) {
+  const today = todayISO();
+  const rows: {
+    vehicle: Database['vehicles'][number];
+    paper: string;
+    expiresOn: string;
+    daysLeft: number;
+  }[] = [];
+  for (const vehicle of db.vehicles) {
+    const papers: [string, string][] = [
+      ['Fitness certificate', vehicle.fcExpiry],
+      ['Insurance', vehicle.insuranceExpiry],
+      ['Permit', vehicle.permitExpiry],
+    ];
+    for (const [paper, expiresOn] of papers) {
+      const daysLeft = daysFromToday(expiresOn);
+      if (expiresOn < today || daysLeft <= withinDays) rows.push({ vehicle, paper, expiresOn, daysLeft });
     }
   }
-  return out;
+  return rows.sort((a, b) => a.daysLeft - b.daysLeft);
 }
 
-/**
- * How many periods a week a class actually gets of each subject, against what
- * its offering says it should. A timetable that silently gives Tamil three
- * periods instead of six is the kind of error nobody notices until a parent does.
- */
-export function periodBalance(db: Database, classId: string) {
-  return classSubjectsOf(db, classId)
-    .map((cs) => ({
-      subject: subjectById(db, cs.subjectId),
-      want: cs.periodsPerWeek,
-      got: db.timetable.filter(
-        (s) => s.classId === classId && s.subjectId === cs.subjectId && s.kind !== 'break' && s.kind !== 'lunch',
-      ).length,
-    }))
-    .filter((r) => r.subject);
-}
+export const routeRiders = (db: Database, routeId: string) =>
+  db.studentTransport
+    .filter((t) => t.routeId === routeId)
+    .map((t) => ({ link: t, student: userById(db, t.studentId) }))
+    .filter((r) => r.student);
+
+/* ── notifications ────────────────────────────────────────────────────── */
+
+export const notificationsFor = (db: Database, userId: string) =>
+  db.notifications
+    .filter((n) => n.userId === userId || n.userId === 'all')
+    .sort((a, b) => b.createdOn.localeCompare(a.createdOn));
+
+export const unreadCount = (db: Database, userId: string) =>
+  notificationsFor(db, userId).filter((n) => !n.read).length;

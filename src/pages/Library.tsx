@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { useAuth, useCan } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { availableCopies, classById, classLabel, loansFor } from '@/lib/queries';
+import { availableCopies, sectionLabel, loansFor } from '@/lib/queries';
 import { addBook, borrowBook, renewLoan, returnBook, settleLoan } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
@@ -35,11 +35,10 @@ const MAX_RENEWALS = 2;
  * to a seven-year-old gets none of them back, so the limit rises with the
  * class, as it does in practice.
  */
-function loanLimitFor(grade: number | undefined) {
-  if (grade == null) return 3;
-  if (grade <= 5) return 1;
-  if (grade <= 8) return 2;
-  return 3;
+function loanLimitFor(db: { programmes: { id: string; level: string }[] }, programmeId: string | undefined) {
+  // A postgraduate reads more widely and is trusted with more at a time.
+  const programme = db.programmes.find((p) => p.id === programmeId);
+  return programme?.level === 'pg' ? 5 : 3;
 }
 
 export default function Library() {
@@ -57,8 +56,8 @@ export default function Library() {
   const overdue = active.filter((l) => l.overdue);
   const fines = myLoans.reduce((t, l) => t + l.loan.fine, 0);
 
-  const grade = student ? classById(db, student.classId)?.grade : undefined;
-  const maxLoans = loanLimitFor(grade);
+  const programmeId = student?.programmeId;
+  const maxLoans = loanLimitFor(db, programmeId);
   const manage = can('library.manage');
   const [accessionOpen, setAccessionOpen] = useState(false);
   const [settling, setSettling] = useState<Loan | null>(null);
@@ -69,7 +68,7 @@ export default function Library() {
     const matchesQuery = !q || b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q);
     const matchesCategory = category === 'all' || b.category === category;
     // Children only see books for their own level.
-    const matchesGrade = grade == null || b.forGrades.includes(grade);
+    const matchesGrade = programmeId == null || b.forProgrammes.includes(programmeId);
     return matchesQuery && matchesCategory && matchesGrade;
   });
 
@@ -77,7 +76,7 @@ export default function Library() {
     if (!student) return;
     if (active.length >= maxLoans) {
       toast.error('Borrowing limit reached', {
-        description: `A pupil in class ${grade} may hold ${maxLoans} book${maxLoans === 1 ? '' : 's'}. Please return one first.`,
+        description: `A student on this programme may hold ${maxLoans} books at a time. Please return one first.`,
       });
       return;
     }
@@ -102,7 +101,7 @@ export default function Library() {
       ),
     },
     { key: 'category', header: 'Category', hideOnMobile: true, sortBy: (b) => b.category, cell: (b) => <Badge tone="neutral">{b.category}</Badge> },
-    { key: 'grades', header: 'Classes', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum text-[12px]">{b.forGrades.join(', ')}</span> },
+    { key: 'programmeIds', header: 'Classes', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum text-[12px]">{b.forProgrammes.join(', ')}</span> },
     { key: 'shelf', header: 'Shelf', align: 'center', hideOnMobile: true, cell: (b) => <span className="tnum">{b.rack}</span> },
     {
       key: 'available',
@@ -148,14 +147,14 @@ export default function Library() {
         title="Library"
         subtitle={
           student
-            ? `${student.name} · ${classLabel(db, student.classId)} · up to ${maxLoans} book${maxLoans === 1 ? '' : 's'} at a time`
+            ? `${student.name} · ${sectionLabel(db, student.sectionId)} · up to ${maxLoans} books at a time`
             : `${num(db.books.length)} titles · ${num(db.books.reduce((t, b) => t + b.copies, 0))} copies`
         }
       />
 
       {student ? (
         <StatGrid>
-          <StatTile label="Books with you" value={active.length} note={`Limit is ${maxLoans} for class ${grade}`} icon={BookOpen} />
+          <StatTile label="Books with you" value={active.length} note={`Limit is ${maxLoans} for class ${programmeId}`} icon={BookOpen} />
           <StatTile
             label="Due soon"
             value={active.filter((l) => l.daysLeft >= 0 && l.daysLeft <= 3).length}
@@ -252,7 +251,7 @@ export default function Library() {
       <MotionCard delay={0.16} className={student ? 'mt-5' : ''}>
         <CardHeader
           title="Catalogue"
-          subtitle={`${books.length} of ${db.books.length} titles${grade ? ` suitable for Class ${grade}` : ''}`}
+          subtitle={`${books.length} of ${db.books.length} titles${programmeId ? ` suitable for Class ${programmeId}` : ''}`}
           action={
             <div className="flex flex-wrap items-center gap-2">
               <Input
@@ -373,7 +372,7 @@ function LibrarianBoard({ onSettle }: { onSettle: (loan: Loan) => void }) {
                           {book?.title ?? 'Unknown title'}
                         </span>
                         <span className="mt-0.5 block truncate text-[12px] text-ink-3">
-                          {borrower?.name ?? '—'} · {classLabel(db, borrower?.classId)} · rack{' '}
+                          {borrower?.name ?? '—'} · {sectionLabel(db, borrower?.sectionId)} · rack{' '}
                           {book?.rack} · due {formatDate(loan.dueOn)} ({relativeDay(loan.dueOn)})
                           {loan.renewals ? ` · renewed ${loan.renewals}×` : ''}
                         </span>
@@ -430,7 +429,7 @@ function SettleDialog({ loan, onClose }: { loan: Loan; onClose: () => void }) {
       open
       onClose={onClose}
       title={book?.title ?? 'Settle loan'}
-      description={`${borrower?.name ?? 'The borrower'} · ${classLabel(db, borrower?.classId)}`}
+      description={`${borrower?.name ?? 'The borrower'} · ${sectionLabel(db, borrower?.sectionId)}`}
       size="sm"
       footer={
         <>
@@ -477,6 +476,7 @@ function SettleDialog({ loan, onClose }: { loan: Loan; onClose: () => void }) {
 /* ── accessioning a new title ────────────────────────────────────────── */
 
 function AccessionDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const db = useDatabase();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publisher, setPublisher] = useState('');
@@ -485,10 +485,10 @@ function AccessionDialog({ open, onClose }: { open: boolean; onClose: () => void
   const [copies, setCopies] = useState(3);
   const [rack, setRack] = useState('');
   const [price, setPrice] = useState(200);
-  const [fromGrade, setFromGrade] = useState(6);
-  const [toGrade, setToGrade] = useState(10);
+  const [forProgrammes, setForProgrammes] = useState<string[]>([]);
 
-  const valid = title.trim().length > 2 && author.trim().length > 2 && toGrade >= fromGrade;
+  const valid =
+    title.trim().length > 2 && author.trim().length > 2 && forProgrammes.length > 0;
 
   return (
     <Modal
@@ -513,10 +513,7 @@ function AccessionDialog({ open, onClose }: { open: boolean; onClose: () => void
                 category,
                 copies,
                 rack: rack.trim() || 'Unshelved',
-                forGrades: Array.from(
-                  { length: toGrade - fromGrade + 1 },
-                  (_, i) => fromGrade + i,
-                ),
+                forProgrammes,
                 price,
               });
               toast.success(`${title.trim()} accessioned`, {
@@ -598,38 +595,37 @@ function AccessionDialog({ open, onClose }: { open: boolean; onClose: () => void
             />
           </Field>
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <Field label="Suitable from class" htmlFor="bfg">
-            <Select
-              id="bfg"
-              value={String(fromGrade)}
-              onChange={(e) => setFromGrade(Number(e.target.value))}
-            >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
-                <option key={g} value={g}>
-                  Class {g}
-                </option>
-              ))}
-            </Select>
-          </Field>
-          <Field
-            label="up to class"
-            htmlFor="btg"
-            error={toGrade < fromGrade ? 'Must not be below the lower class.' : undefined}
-          >
-            <Select
-              id="btg"
-              value={String(toGrade)}
-              onChange={(e) => setToGrade(Number(e.target.value))}
-            >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map((g) => (
-                <option key={g} value={g}>
-                  Class {g}
-                </option>
-              ))}
-            </Select>
-          </Field>
-        </div>
+        <Field
+          label="Which programmes is this for?"
+          required
+          htmlFor="bfp"
+          hint="Students only see titles meant for their own programme."
+        >
+          <div className="flex flex-wrap gap-1.5">
+            {db.programmes.map((programme) => {
+              const on = forProgrammes.includes(programme.id);
+              return (
+                <button
+                  key={programme.id}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() =>
+                    setForProgrammes((prev) =>
+                      on ? prev.filter((id) => id !== programme.id) : [...prev, programme.id],
+                    )
+                  }
+                  className={
+                    on
+                      ? 'rounded-lg border border-brand-500/50 bg-brand-500/12 px-2.5 py-1.5 text-[12.5px] font-medium text-brand-600 dark:text-brand-300'
+                      : 'rounded-lg border border-line bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink-2 hover:border-line-strong hover:text-ink'
+                  }
+                >
+                  {programme.shortName}
+                </button>
+              );
+            })}
+          </div>
+        </Field>
       </div>
     </Modal>
   );

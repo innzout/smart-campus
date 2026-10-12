@@ -1,1706 +1,1730 @@
 [
   {
-    "id": "stt-stu-8A-10",
-    "studentId": "stu-8A-10",
+    "id": "stt-stu-bsc-cs-2024-007",
+    "studentId": "stu-bsc-cs-2024-007",
     "routeId": "rt-3",
     "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-19"
-  },
-  {
-    "id": "stt-stu-1A-02",
-    "studentId": "stu-1A-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-06-13"
-  },
-  {
-    "id": "stt-stu-1A-03",
-    "studentId": "stu-1A-03",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-28"
-  },
-  {
-    "id": "stt-stu-1A-05",
-    "studentId": "stu-1A-05",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-12"
-  },
-  {
-    "id": "stt-stu-1A-06",
-    "studentId": "stu-1A-06",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-06-18"
-  },
-  {
-    "id": "stt-stu-1A-08",
-    "studentId": "stu-1A-08",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-10"
-  },
-  {
-    "id": "stt-stu-1A-09",
-    "studentId": "stu-1A-09",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-26"
-  },
-  {
-    "id": "stt-stu-1A-11",
-    "studentId": "stu-1A-11",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-06-21"
-  },
-  {
-    "id": "stt-stu-1A-12",
-    "studentId": "stu-1A-12",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-16"
-  },
-  {
-    "id": "stt-stu-1A-14",
-    "studentId": "stu-1A-14",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-14"
-  },
-  {
-    "id": "stt-stu-1A-15",
-    "studentId": "stu-1A-15",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-02"
-  },
-  {
-    "id": "stt-stu-1A-17",
-    "studentId": "stu-1A-17",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-05"
-  },
-  {
-    "id": "stt-stu-1A-18",
-    "studentId": "stu-1A-18",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-22"
-  },
-  {
-    "id": "stt-stu-1A-20",
-    "studentId": "stu-1A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-06-27"
-  },
-  {
-    "id": "stt-stu-1A-21",
-    "studentId": "stu-1A-21",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-14"
-  },
-  {
-    "id": "stt-stu-1A-23",
-    "studentId": "stu-1A-23",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-04"
-  },
-  {
-    "id": "stt-stu-1A-24",
-    "studentId": "stu-1A-24",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "requested",
-    "requestedOn": "2026-09-03"
-  },
-  {
-    "id": "stt-stu-1A-26",
-    "studentId": "stu-1A-26",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-06-13"
-  },
-  {
-    "id": "stt-stu-1A-27",
-    "studentId": "stu-1A-27",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-1A-29",
-    "studentId": "stu-1A-29",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-14"
-  },
-  {
-    "id": "stt-stu-1A-30",
-    "studentId": "stu-1A-30",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-1A-32",
-    "studentId": "stu-1A-32",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
     "status": "allotted",
     "requestedOn": "2026-07-07"
   },
   {
-    "id": "stt-stu-2A-01",
-    "studentId": "stu-2A-01",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-12"
-  },
-  {
-    "id": "stt-stu-2A-03",
-    "studentId": "stu-2A-03",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-15"
-  },
-  {
-    "id": "stt-stu-2A-04",
-    "studentId": "stu-2A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-03"
-  },
-  {
-    "id": "stt-stu-2A-06",
-    "studentId": "stu-2A-06",
+    "id": "stt-stu-bsc-cs-2026-002",
+    "studentId": "stu-bsc-cs-2026-002",
     "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "approved",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-06"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-003",
+    "studentId": "stu-bsc-cs-2026-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
     "requestedOn": "2026-07-18"
   },
   {
-    "id": "stt-stu-2A-07",
-    "studentId": "stu-2A-07",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-15"
-  },
-  {
-    "id": "stt-stu-2A-09",
-    "studentId": "stu-2A-09",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-01"
-  },
-  {
-    "id": "stt-stu-2A-10",
-    "studentId": "stu-2A-10",
+    "id": "stt-stu-bsc-cs-2026-006",
+    "studentId": "stu-bsc-cs-2026-006",
     "routeId": "rt-2",
-    "stop": "Nehru Stadium",
+    "stop": "Hope College",
     "status": "allotted",
-    "requestedOn": "2026-07-05"
+    "requestedOn": "2026-08-07"
   },
   {
-    "id": "stt-stu-2A-12",
-    "studentId": "stu-2A-12",
+    "id": "stt-stu-bsc-cs-2026-008",
+    "studentId": "stu-bsc-cs-2026-008",
     "routeId": "rt-4",
-    "stop": "R.S. Puram West",
+    "stop": "Mettupalayam Road",
     "status": "allotted",
-    "requestedOn": "2026-07-22"
+    "requestedOn": "2026-08-30"
   },
   {
-    "id": "stt-stu-2A-13",
-    "studentId": "stu-2A-13",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
+    "id": "stt-stu-bsc-cs-2026-011",
+    "studentId": "stu-bsc-cs-2026-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-13"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-012",
+    "studentId": "stu-bsc-cs-2026-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-17"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-014",
+    "studentId": "stu-bsc-cs-2026-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-19"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-015",
+    "studentId": "stu-bsc-cs-2026-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
     "status": "allotted",
     "requestedOn": "2026-08-18"
   },
   {
-    "id": "stt-stu-2A-15",
-    "studentId": "stu-2A-15",
+    "id": "stt-stu-bsc-cs-2026-018",
+    "studentId": "stu-bsc-cs-2026-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-18"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-020",
+    "studentId": "stu-bsc-cs-2026-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-22"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-023",
+    "studentId": "stu-bsc-cs-2026-023",
     "routeId": "rt-3",
-    "stop": "Vilankurichi",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-17"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-024",
+    "studentId": "stu-bsc-cs-2026-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-01"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-026",
+    "studentId": "stu-bsc-cs-2026-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-28"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-027",
+    "studentId": "stu-bsc-cs-2026-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-15"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2026-030",
+    "studentId": "stu-bsc-cs-2026-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
     "status": "requested",
-    "requestedOn": "2026-09-14"
+    "requestedOn": "2026-08-23"
   },
   {
-    "id": "stt-stu-2A-16",
-    "studentId": "stu-2A-16",
+    "id": "stt-stu-bsc-cs-2026-032",
+    "studentId": "stu-bsc-cs-2026-032",
     "routeId": "rt-4",
-    "stop": "R.S. Puram West",
+    "stop": "Mettupalayam Road",
     "status": "allotted",
-    "requestedOn": "2026-08-11"
+    "requestedOn": "2026-07-08"
   },
   {
-    "id": "stt-stu-2A-18",
-    "studentId": "stu-2A-18",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-05"
-  },
-  {
-    "id": "stt-stu-2A-19",
-    "studentId": "stu-2A-19",
+    "id": "stt-stu-bsc-cs-2026-035",
+    "studentId": "stu-bsc-cs-2026-035",
     "routeId": "rt-3",
-    "stop": "Vilankurichi",
+    "stop": "KCT Gate",
     "status": "allotted",
-    "requestedOn": "2026-07-25"
+    "requestedOn": "2026-09-03"
   },
   {
-    "id": "stt-stu-2A-21",
-    "studentId": "stu-2A-21",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-14"
-  },
-  {
-    "id": "stt-stu-2A-22",
-    "studentId": "stu-2A-22",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-09-06"
-  },
-  {
-    "id": "stt-stu-2A-24",
-    "studentId": "stu-2A-24",
+    "id": "stt-stu-bsc-cs-2026-036",
+    "studentId": "stu-bsc-cs-2026-036",
     "routeId": "rt-4",
-    "stop": "R.S. Puram West",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-25"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-002",
+    "studentId": "stu-bsc-cs-2025-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-25"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-003",
+    "studentId": "stu-bsc-cs-2025-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-09"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-006",
+    "studentId": "stu-bsc-cs-2025-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-008",
+    "studentId": "stu-bsc-cs-2025-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-26"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-011",
+    "studentId": "stu-bsc-cs-2025-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-19"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-012",
+    "studentId": "stu-bsc-cs-2025-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-23"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-014",
+    "studentId": "stu-bsc-cs-2025-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
     "status": "allotted",
     "requestedOn": "2026-06-24"
   },
   {
-    "id": "stt-stu-2A-25",
-    "studentId": "stu-2A-25",
+    "id": "stt-stu-bsc-cs-2025-015",
+    "studentId": "stu-bsc-cs-2025-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-07"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-018",
+    "studentId": "stu-bsc-cs-2025-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-16"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-020",
+    "studentId": "stu-bsc-cs-2025-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-10"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-023",
+    "studentId": "stu-bsc-cs-2025-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "requested",
+    "requestedOn": "2026-08-15"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-024",
+    "studentId": "stu-bsc-cs-2025-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-01"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-026",
+    "studentId": "stu-bsc-cs-2025-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-02"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-027",
+    "studentId": "stu-bsc-cs-2025-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-030",
+    "studentId": "stu-bsc-cs-2025-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-08"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-032",
+    "studentId": "stu-bsc-cs-2025-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-07"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-035",
+    "studentId": "stu-bsc-cs-2025-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-20"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2025-036",
+    "studentId": "stu-bsc-cs-2025-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-25"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-002",
+    "studentId": "stu-bsc-cs-2024-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-04"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-003",
+    "studentId": "stu-bsc-cs-2024-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-09"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-006",
+    "studentId": "stu-bsc-cs-2024-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-22"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-008",
+    "studentId": "stu-bsc-cs-2024-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-23"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-011",
+    "studentId": "stu-bsc-cs-2024-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-25"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-012",
+    "studentId": "stu-bsc-cs-2024-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-25"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-014",
+    "studentId": "stu-bsc-cs-2024-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-30"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-015",
+    "studentId": "stu-bsc-cs-2024-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-018",
+    "studentId": "stu-bsc-cs-2024-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-03"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-020",
+    "studentId": "stu-bsc-cs-2024-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-08"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-023",
+    "studentId": "stu-bsc-cs-2024-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-21"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-024",
+    "studentId": "stu-bsc-cs-2024-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-04"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-026",
+    "studentId": "stu-bsc-cs-2024-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-16"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-027",
+    "studentId": "stu-bsc-cs-2024-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-030",
+    "studentId": "stu-bsc-cs-2024-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-032",
+    "studentId": "stu-bsc-cs-2024-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-24"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-035",
+    "studentId": "stu-bsc-cs-2024-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-16"
+  },
+  {
+    "id": "stt-stu-bsc-cs-2024-036",
+    "studentId": "stu-bsc-cs-2024-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-29"
+  },
+  {
+    "id": "stt-stu-bca-2026-002",
+    "studentId": "stu-bca-2026-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bca-2026-003",
+    "studentId": "stu-bca-2026-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-31"
+  },
+  {
+    "id": "stt-stu-bca-2026-006",
+    "studentId": "stu-bca-2026-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-20"
+  },
+  {
+    "id": "stt-stu-bca-2026-008",
+    "studentId": "stu-bca-2026-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-26"
+  },
+  {
+    "id": "stt-stu-bca-2026-011",
+    "studentId": "stu-bca-2026-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-26"
+  },
+  {
+    "id": "stt-stu-bca-2026-012",
+    "studentId": "stu-bca-2026-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-18"
+  },
+  {
+    "id": "stt-stu-bca-2026-014",
+    "studentId": "stu-bca-2026-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-05"
+  },
+  {
+    "id": "stt-stu-bca-2026-015",
+    "studentId": "stu-bca-2026-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-15"
+  },
+  {
+    "id": "stt-stu-bca-2026-018",
+    "studentId": "stu-bca-2026-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-07"
+  },
+  {
+    "id": "stt-stu-bca-2026-020",
+    "studentId": "stu-bca-2026-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-26"
+  },
+  {
+    "id": "stt-stu-bca-2026-023",
+    "studentId": "stu-bca-2026-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-17"
+  },
+  {
+    "id": "stt-stu-bca-2026-024",
+    "studentId": "stu-bca-2026-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-07"
+  },
+  {
+    "id": "stt-stu-bca-2026-026",
+    "studentId": "stu-bca-2026-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-13"
+  },
+  {
+    "id": "stt-stu-bca-2026-027",
+    "studentId": "stu-bca-2026-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-18"
+  },
+  {
+    "id": "stt-stu-bca-2026-030",
+    "studentId": "stu-bca-2026-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-19"
+  },
+  {
+    "id": "stt-stu-bca-2026-032",
+    "studentId": "stu-bca-2026-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-16"
+  },
+  {
+    "id": "stt-stu-bca-2026-035",
+    "studentId": "stu-bca-2026-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-21"
+  },
+  {
+    "id": "stt-stu-bca-2026-036",
+    "studentId": "stu-bca-2026-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-09"
+  },
+  {
+    "id": "stt-stu-bca-2025-002",
+    "studentId": "stu-bca-2025-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "requested",
+    "requestedOn": "2026-09-02"
+  },
+  {
+    "id": "stt-stu-bca-2025-003",
+    "studentId": "stu-bca-2025-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-20"
+  },
+  {
+    "id": "stt-stu-bca-2025-006",
+    "studentId": "stu-bca-2025-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-13"
+  },
+  {
+    "id": "stt-stu-bca-2025-008",
+    "studentId": "stu-bca-2025-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-06"
+  },
+  {
+    "id": "stt-stu-bca-2025-011",
+    "studentId": "stu-bca-2025-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-12"
+  },
+  {
+    "id": "stt-stu-bca-2025-012",
+    "studentId": "stu-bca-2025-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-24"
+  },
+  {
+    "id": "stt-stu-bca-2025-014",
+    "studentId": "stu-bca-2025-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-29"
+  },
+  {
+    "id": "stt-stu-bca-2025-015",
+    "studentId": "stu-bca-2025-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-19"
+  },
+  {
+    "id": "stt-stu-bca-2025-018",
+    "studentId": "stu-bca-2025-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-21"
+  },
+  {
+    "id": "stt-stu-bca-2025-020",
+    "studentId": "stu-bca-2025-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-07"
+  },
+  {
+    "id": "stt-stu-bca-2025-023",
+    "studentId": "stu-bca-2025-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-01"
+  },
+  {
+    "id": "stt-stu-bca-2025-024",
+    "studentId": "stu-bca-2025-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-27"
+  },
+  {
+    "id": "stt-stu-bca-2025-026",
+    "studentId": "stu-bca-2025-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-14"
+  },
+  {
+    "id": "stt-stu-bca-2025-027",
+    "studentId": "stu-bca-2025-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-28"
+  },
+  {
+    "id": "stt-stu-bca-2025-030",
+    "studentId": "stu-bca-2025-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-03"
+  },
+  {
+    "id": "stt-stu-bca-2025-032",
+    "studentId": "stu-bca-2025-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-11"
+  },
+  {
+    "id": "stt-stu-bca-2025-035",
+    "studentId": "stu-bca-2025-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-06"
+  },
+  {
+    "id": "stt-stu-bca-2025-036",
+    "studentId": "stu-bca-2025-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-22"
+  },
+  {
+    "id": "stt-stu-bca-2024-002",
+    "studentId": "stu-bca-2024-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-21"
+  },
+  {
+    "id": "stt-stu-bca-2024-003",
+    "studentId": "stu-bca-2024-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-21"
+  },
+  {
+    "id": "stt-stu-bca-2024-006",
+    "studentId": "stu-bca-2024-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-17"
+  },
+  {
+    "id": "stt-stu-bca-2024-008",
+    "studentId": "stu-bca-2024-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-19"
+  },
+  {
+    "id": "stt-stu-bca-2024-011",
+    "studentId": "stu-bca-2024-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-28"
+  },
+  {
+    "id": "stt-stu-bca-2024-012",
+    "studentId": "stu-bca-2024-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-23"
+  },
+  {
+    "id": "stt-stu-bca-2024-014",
+    "studentId": "stu-bca-2024-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-01"
+  },
+  {
+    "id": "stt-stu-bca-2024-015",
+    "studentId": "stu-bca-2024-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-19"
+  },
+  {
+    "id": "stt-stu-bca-2024-018",
+    "studentId": "stu-bca-2024-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-17"
+  },
+  {
+    "id": "stt-stu-bca-2024-020",
+    "studentId": "stu-bca-2024-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-08"
+  },
+  {
+    "id": "stt-stu-bca-2024-023",
+    "studentId": "stu-bca-2024-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-21"
+  },
+  {
+    "id": "stt-stu-bca-2024-024",
+    "studentId": "stu-bca-2024-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "requested",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bca-2024-026",
+    "studentId": "stu-bca-2024-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-11"
+  },
+  {
+    "id": "stt-stu-bca-2024-027",
+    "studentId": "stu-bca-2024-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-08"
+  },
+  {
+    "id": "stt-stu-bca-2024-030",
+    "studentId": "stu-bca-2024-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-21"
+  },
+  {
+    "id": "stt-stu-bca-2024-032",
+    "studentId": "stu-bca-2024-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-31"
+  },
+  {
+    "id": "stt-stu-bca-2024-035",
+    "studentId": "stu-bca-2024-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-15"
+  },
+  {
+    "id": "stt-stu-bca-2024-036",
+    "studentId": "stu-bca-2024-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-16"
+  },
+  {
+    "id": "stt-stu-bcom-2026-002",
+    "studentId": "stu-bcom-2026-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-13"
+  },
+  {
+    "id": "stt-stu-bcom-2026-003",
+    "studentId": "stu-bcom-2026-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bcom-2026-006",
+    "studentId": "stu-bcom-2026-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-08"
+  },
+  {
+    "id": "stt-stu-bcom-2026-008",
+    "studentId": "stu-bcom-2026-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-24"
+  },
+  {
+    "id": "stt-stu-bcom-2026-011",
+    "studentId": "stu-bcom-2026-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-20"
+  },
+  {
+    "id": "stt-stu-bcom-2026-012",
+    "studentId": "stu-bcom-2026-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-02"
+  },
+  {
+    "id": "stt-stu-bcom-2026-014",
+    "studentId": "stu-bcom-2026-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-04"
+  },
+  {
+    "id": "stt-stu-bcom-2026-015",
+    "studentId": "stu-bcom-2026-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-26"
+  },
+  {
+    "id": "stt-stu-bcom-2026-018",
+    "studentId": "stu-bcom-2026-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-06-19"
+  },
+  {
+    "id": "stt-stu-bcom-2026-020",
+    "studentId": "stu-bcom-2026-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-07"
+  },
+  {
+    "id": "stt-stu-bcom-2026-023",
+    "studentId": "stu-bcom-2026-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-06-16"
+  },
+  {
+    "id": "stt-stu-bcom-2026-024",
+    "studentId": "stu-bcom-2026-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-25"
+  },
+  {
+    "id": "stt-stu-bcom-2026-026",
+    "studentId": "stu-bcom-2026-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-14"
+  },
+  {
+    "id": "stt-stu-bcom-2026-027",
+    "studentId": "stu-bcom-2026-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-20"
+  },
+  {
+    "id": "stt-stu-bcom-2026-030",
+    "studentId": "stu-bcom-2026-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-04"
+  },
+  {
+    "id": "stt-stu-bcom-2026-032",
+    "studentId": "stu-bcom-2026-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bcom-2026-035",
+    "studentId": "stu-bcom-2026-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-22"
+  },
+  {
+    "id": "stt-stu-bcom-2026-036",
+    "studentId": "stu-bcom-2026-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-08"
+  },
+  {
+    "id": "stt-stu-bcom-2025-002",
+    "studentId": "stu-bcom-2025-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bcom-2025-003",
+    "studentId": "stu-bcom-2025-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-27"
+  },
+  {
+    "id": "stt-stu-bcom-2025-006",
+    "studentId": "stu-bcom-2025-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-08"
+  },
+  {
+    "id": "stt-stu-bcom-2025-008",
+    "studentId": "stu-bcom-2025-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-14"
+  },
+  {
+    "id": "stt-stu-bcom-2025-011",
+    "studentId": "stu-bcom-2025-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-21"
+  },
+  {
+    "id": "stt-stu-bcom-2025-012",
+    "studentId": "stu-bcom-2025-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-11"
+  },
+  {
+    "id": "stt-stu-bcom-2025-014",
+    "studentId": "stu-bcom-2025-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-22"
+  },
+  {
+    "id": "stt-stu-bcom-2025-015",
+    "studentId": "stu-bcom-2025-015",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-02"
+  },
+  {
+    "id": "stt-stu-bcom-2025-018",
+    "studentId": "stu-bcom-2025-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-16"
+  },
+  {
+    "id": "stt-stu-bcom-2025-020",
+    "studentId": "stu-bcom-2025-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-28"
+  },
+  {
+    "id": "stt-stu-bcom-2025-023",
+    "studentId": "stu-bcom-2025-023",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-08-21"
+  },
+  {
+    "id": "stt-stu-bcom-2025-024",
+    "studentId": "stu-bcom-2025-024",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-18"
+  },
+  {
+    "id": "stt-stu-bcom-2025-026",
+    "studentId": "stu-bcom-2025-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-14"
+  },
+  {
+    "id": "stt-stu-bcom-2025-027",
+    "studentId": "stu-bcom-2025-027",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-07-19"
+  },
+  {
+    "id": "stt-stu-bcom-2025-030",
+    "studentId": "stu-bcom-2025-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-29"
+  },
+  {
+    "id": "stt-stu-bcom-2025-032",
+    "studentId": "stu-bcom-2025-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-31"
+  },
+  {
+    "id": "stt-stu-bcom-2025-035",
+    "studentId": "stu-bcom-2025-035",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "allotted",
+    "requestedOn": "2026-09-20"
+  },
+  {
+    "id": "stt-stu-bcom-2025-036",
+    "studentId": "stu-bcom-2025-036",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-28"
+  },
+  {
+    "id": "stt-stu-bcom-2024-002",
+    "studentId": "stu-bcom-2024-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-01"
+  },
+  {
+    "id": "stt-stu-bcom-2024-003",
+    "studentId": "stu-bcom-2024-003",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "requested",
+    "requestedOn": "2026-08-09"
+  },
+  {
+    "id": "stt-stu-bcom-2024-006",
+    "studentId": "stu-bcom-2024-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-25"
+  },
+  {
+    "id": "stt-stu-bcom-2024-008",
+    "studentId": "stu-bcom-2024-008",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-14"
+  },
+  {
+    "id": "stt-stu-bcom-2024-011",
+    "studentId": "stu-bcom-2024-011",
+    "routeId": "rt-4",
+    "stop": "Karamadai",
+    "status": "allotted",
+    "requestedOn": "2026-07-09"
+  },
+  {
+    "id": "stt-stu-bcom-2024-012",
+    "studentId": "stu-bcom-2024-012",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-11"
+  },
+  {
+    "id": "stt-stu-bcom-2024-014",
+    "studentId": "stu-bcom-2024-014",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-29"
+  },
+  {
+    "id": "stt-stu-bcom-2024-015",
+    "studentId": "stu-bcom-2024-015",
+    "routeId": "rt-4",
+    "stop": "Karamadai",
+    "status": "allotted",
+    "requestedOn": "2026-07-05"
+  },
+  {
+    "id": "stt-stu-bcom-2024-018",
+    "studentId": "stu-bcom-2024-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-18"
+  },
+  {
+    "id": "stt-stu-bcom-2024-020",
+    "studentId": "stu-bcom-2024-020",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-12"
+  },
+  {
+    "id": "stt-stu-bcom-2024-023",
+    "studentId": "stu-bcom-2024-023",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-06-22"
+  },
+  {
+    "id": "stt-stu-bcom-2024-024",
+    "studentId": "stu-bcom-2024-024",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-25"
+  },
+  {
+    "id": "stt-stu-bcom-2024-026",
+    "studentId": "stu-bcom-2024-026",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-08-08"
+  },
+  {
+    "id": "stt-stu-bcom-2024-027",
+    "studentId": "stu-bcom-2024-027",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-08-16"
+  },
+  {
+    "id": "stt-stu-bcom-2024-030",
+    "studentId": "stu-bcom-2024-030",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-12"
+  },
+  {
+    "id": "stt-stu-bcom-2024-032",
+    "studentId": "stu-bcom-2024-032",
+    "routeId": "rt-4",
+    "stop": "Mettupalayam Road",
+    "status": "requested",
+    "requestedOn": "2026-06-30"
+  },
+  {
+    "id": "stt-stu-bcom-2024-035",
+    "studentId": "stu-bcom-2024-035",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-09-19"
+  },
+  {
+    "id": "stt-stu-bcom-2024-036",
+    "studentId": "stu-bcom-2024-036",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-10"
+  },
+  {
+    "id": "stt-stu-bba-2026-002",
+    "studentId": "stu-bba-2026-002",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-07-10"
+  },
+  {
+    "id": "stt-stu-bba-2026-003",
+    "studentId": "stu-bba-2026-003",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-07-10"
+  },
+  {
+    "id": "stt-stu-bba-2026-006",
+    "studentId": "stu-bba-2026-006",
+    "routeId": "rt-2",
+    "stop": "Hope College",
+    "status": "allotted",
+    "requestedOn": "2026-09-12"
+  },
+  {
+    "id": "stt-stu-bba-2026-008",
+    "studentId": "stu-bba-2026-008",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-28"
+  },
+  {
+    "id": "stt-stu-bba-2026-011",
+    "studentId": "stu-bba-2026-011",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-09-21"
+  },
+  {
+    "id": "stt-stu-bba-2026-012",
+    "studentId": "stu-bba-2026-012",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-17"
+  },
+  {
+    "id": "stt-stu-bba-2026-014",
+    "studentId": "stu-bba-2026-014",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-21"
+  },
+  {
+    "id": "stt-stu-bba-2026-015",
+    "studentId": "stu-bba-2026-015",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-09-03"
+  },
+  {
+    "id": "stt-stu-bba-2026-018",
+    "studentId": "stu-bba-2026-018",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-22"
+  },
+  {
+    "id": "stt-stu-bba-2026-020",
+    "studentId": "stu-bba-2026-020",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-15"
+  },
+  {
+    "id": "stt-stu-bba-2026-023",
+    "studentId": "stu-bba-2026-023",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-08-04"
+  },
+  {
+    "id": "stt-stu-bba-2026-024",
+    "studentId": "stu-bba-2026-024",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-16"
+  },
+  {
+    "id": "stt-stu-bba-2026-026",
+    "studentId": "stu-bba-2026-026",
     "routeId": "rt-1",
     "stop": "Cross Cut Road",
     "status": "allotted",
     "requestedOn": "2026-06-28"
   },
   {
-    "id": "stt-stu-2A-27",
-    "studentId": "stu-2A-27",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
+    "id": "stt-stu-bba-2026-027",
+    "studentId": "stu-bba-2026-027",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
     "status": "allotted",
-    "requestedOn": "2026-08-17"
+    "requestedOn": "2026-09-11"
   },
   {
-    "id": "stt-stu-2A-28",
-    "studentId": "stu-2A-28",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-05"
-  },
-  {
-    "id": "stt-stu-2A-30",
-    "studentId": "stu-2A-30",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-09"
-  },
-  {
-    "id": "stt-stu-2A-31",
-    "studentId": "stu-2A-31",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-3A-01",
-    "studentId": "stu-3A-01",
+    "id": "stt-stu-bba-2026-030",
+    "studentId": "stu-bba-2026-030",
     "routeId": "rt-1",
     "stop": "Cross Cut Road",
     "status": "allotted",
-    "requestedOn": "2026-09-16"
+    "requestedOn": "2026-09-15"
   },
   {
-    "id": "stt-stu-3A-02",
-    "studentId": "stu-3A-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-31"
-  },
-  {
-    "id": "stt-stu-3A-04",
-    "studentId": "stu-3A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-06"
-  },
-  {
-    "id": "stt-stu-3A-05",
-    "studentId": "stu-3A-05",
+    "id": "stt-stu-bba-2026-032",
+    "studentId": "stu-bba-2026-032",
     "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-16"
-  },
-  {
-    "id": "stt-stu-3A-07",
-    "studentId": "stu-3A-07",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-09-16"
-  },
-  {
-    "id": "stt-stu-3A-08",
-    "studentId": "stu-3A-08",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-06-15"
-  },
-  {
-    "id": "stt-stu-3A-10",
-    "studentId": "stu-3A-10",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-06"
-  },
-  {
-    "id": "stt-stu-3A-11",
-    "studentId": "stu-3A-11",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "approved",
-    "requestedOn": "2026-06-20"
-  },
-  {
-    "id": "stt-stu-3A-13",
-    "studentId": "stu-3A-13",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
+    "stop": "Thudiyalur Road",
     "status": "allotted",
     "requestedOn": "2026-08-15"
   },
   {
-    "id": "stt-stu-3A-14",
-    "studentId": "stu-3A-14",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-09-02"
-  },
-  {
-    "id": "stt-stu-3A-16",
-    "studentId": "stu-3A-16",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-08"
-  },
-  {
-    "id": "stt-stu-3A-17",
-    "studentId": "stu-3A-17",
+    "id": "stt-stu-bba-2026-035",
+    "studentId": "stu-bba-2026-035",
     "routeId": "rt-1",
-    "stop": "Cross Cut Road",
+    "stop": "Sivananda Colony",
     "status": "allotted",
-    "requestedOn": "2026-07-14"
+    "requestedOn": "2026-07-09"
   },
   {
-    "id": "stt-stu-3A-19",
-    "studentId": "stu-3A-19",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-25"
-  },
-  {
-    "id": "stt-stu-3A-20",
-    "studentId": "stu-3A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-13"
-  },
-  {
-    "id": "stt-stu-3A-22",
-    "studentId": "stu-3A-22",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-03"
-  },
-  {
-    "id": "stt-stu-3A-23",
-    "studentId": "stu-3A-23",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-3A-25",
-    "studentId": "stu-3A-25",
+    "id": "stt-stu-bba-2026-036",
+    "studentId": "stu-bba-2026-036",
     "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-30"
-  },
-  {
-    "id": "stt-stu-3A-26",
-    "studentId": "stu-3A-26",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-22"
-  },
-  {
-    "id": "stt-stu-3A-28",
-    "studentId": "stu-3A-28",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-03"
-  },
-  {
-    "id": "stt-stu-3A-29",
-    "studentId": "stu-3A-29",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "requested",
-    "requestedOn": "2026-08-18"
-  },
-  {
-    "id": "stt-stu-3A-31",
-    "studentId": "stu-3A-31",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-07"
-  },
-  {
-    "id": "stt-stu-3A-32",
-    "studentId": "stu-3A-32",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-23"
-  },
-  {
-    "id": "stt-stu-4A-02",
-    "studentId": "stu-4A-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-09-20"
-  },
-  {
-    "id": "stt-stu-4A-03",
-    "studentId": "stu-4A-03",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-01"
-  },
-  {
-    "id": "stt-stu-4A-05",
-    "studentId": "stu-4A-05",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-12"
-  },
-  {
-    "id": "stt-stu-4A-06",
-    "studentId": "stu-4A-06",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-25"
-  },
-  {
-    "id": "stt-stu-4A-08",
-    "studentId": "stu-4A-08",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-03"
-  },
-  {
-    "id": "stt-stu-4A-09",
-    "studentId": "stu-4A-09",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-4A-11",
-    "studentId": "stu-4A-11",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-06-22"
-  },
-  {
-    "id": "stt-stu-4A-12",
-    "studentId": "stu-4A-12",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-28"
-  },
-  {
-    "id": "stt-stu-4A-14",
-    "studentId": "stu-4A-14",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-06-18"
-  },
-  {
-    "id": "stt-stu-4A-15",
-    "studentId": "stu-4A-15",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-29"
-  },
-  {
-    "id": "stt-stu-4A-17",
-    "studentId": "stu-4A-17",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-20"
-  },
-  {
-    "id": "stt-stu-4A-18",
-    "studentId": "stu-4A-18",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-04"
-  },
-  {
-    "id": "stt-stu-4A-20",
-    "studentId": "stu-4A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "requested",
-    "requestedOn": "2026-08-11"
-  },
-  {
-    "id": "stt-stu-4A-21",
-    "studentId": "stu-4A-21",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-18"
-  },
-  {
-    "id": "stt-stu-4A-23",
-    "studentId": "stu-4A-23",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-15"
-  },
-  {
-    "id": "stt-stu-4A-24",
-    "studentId": "stu-4A-24",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
+    "stop": "Thudiyalur Road",
     "status": "allotted",
     "requestedOn": "2026-08-06"
   },
   {
-    "id": "stt-stu-4A-26",
-    "studentId": "stu-4A-26",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-10"
-  },
-  {
-    "id": "stt-stu-4A-27",
-    "studentId": "stu-4A-27",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-24"
-  },
-  {
-    "id": "stt-stu-4A-29",
-    "studentId": "stu-4A-29",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-15"
-  },
-  {
-    "id": "stt-stu-4A-30",
-    "studentId": "stu-4A-30",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-09"
-  },
-  {
-    "id": "stt-stu-4A-32",
-    "studentId": "stu-4A-32",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-12"
-  },
-  {
-    "id": "stt-stu-5A-01",
-    "studentId": "stu-5A-01",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-15"
-  },
-  {
-    "id": "stt-stu-5A-03",
-    "studentId": "stu-5A-03",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-18"
-  },
-  {
-    "id": "stt-stu-5A-04",
-    "studentId": "stu-5A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-02"
-  },
-  {
-    "id": "stt-stu-5A-06",
-    "studentId": "stu-5A-06",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-31"
-  },
-  {
-    "id": "stt-stu-5A-07",
-    "studentId": "stu-5A-07",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-08"
-  },
-  {
-    "id": "stt-stu-5A-09",
-    "studentId": "stu-5A-09",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-09"
-  },
-  {
-    "id": "stt-stu-5A-10",
-    "studentId": "stu-5A-10",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-19"
-  },
-  {
-    "id": "stt-stu-5A-12",
-    "studentId": "stu-5A-12",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-07"
-  },
-  {
-    "id": "stt-stu-5A-13",
-    "studentId": "stu-5A-13",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-18"
-  },
-  {
-    "id": "stt-stu-5A-15",
-    "studentId": "stu-5A-15",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-04"
-  },
-  {
-    "id": "stt-stu-5A-16",
-    "studentId": "stu-5A-16",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-03"
-  },
-  {
-    "id": "stt-stu-5A-18",
-    "studentId": "stu-5A-18",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-20"
-  },
-  {
-    "id": "stt-stu-5A-19",
-    "studentId": "stu-5A-19",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-08"
-  },
-  {
-    "id": "stt-stu-5A-21",
-    "studentId": "stu-5A-21",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "approved",
-    "requestedOn": "2026-06-19"
-  },
-  {
-    "id": "stt-stu-5A-22",
-    "studentId": "stu-5A-22",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-01"
-  },
-  {
-    "id": "stt-stu-5A-24",
-    "studentId": "stu-5A-24",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-20"
-  },
-  {
-    "id": "stt-stu-5A-25",
-    "studentId": "stu-5A-25",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-07"
-  },
-  {
-    "id": "stt-stu-5A-27",
-    "studentId": "stu-5A-27",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-20"
-  },
-  {
-    "id": "stt-stu-5A-28",
-    "studentId": "stu-5A-28",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-23"
-  },
-  {
-    "id": "stt-stu-5A-30",
-    "studentId": "stu-5A-30",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-09-01"
-  },
-  {
-    "id": "stt-stu-5A-31",
-    "studentId": "stu-5A-31",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-31"
-  },
-  {
-    "id": "stt-stu-6A-01",
-    "studentId": "stu-6A-01",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-03"
-  },
-  {
-    "id": "stt-stu-6A-02",
-    "studentId": "stu-6A-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "requested",
-    "requestedOn": "2026-08-05"
-  },
-  {
-    "id": "stt-stu-6A-04",
-    "studentId": "stu-6A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-26"
-  },
-  {
-    "id": "stt-stu-6A-05",
-    "studentId": "stu-6A-05",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-23"
-  },
-  {
-    "id": "stt-stu-6A-07",
-    "studentId": "stu-6A-07",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-15"
-  },
-  {
-    "id": "stt-stu-6A-08",
-    "studentId": "stu-6A-08",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-06-20"
-  },
-  {
-    "id": "stt-stu-6A-10",
-    "studentId": "stu-6A-10",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-06-21"
-  },
-  {
-    "id": "stt-stu-6A-11",
-    "studentId": "stu-6A-11",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-20"
-  },
-  {
-    "id": "stt-stu-6A-13",
-    "studentId": "stu-6A-13",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-25"
-  },
-  {
-    "id": "stt-stu-6A-14",
-    "studentId": "stu-6A-14",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-05"
-  },
-  {
-    "id": "stt-stu-6A-16",
-    "studentId": "stu-6A-16",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-12"
-  },
-  {
-    "id": "stt-stu-6A-17",
-    "studentId": "stu-6A-17",
+    "id": "stt-stu-bba-2025-002",
+    "studentId": "stu-bba-2025-002",
     "routeId": "rt-1",
     "stop": "Cross Cut Road",
     "status": "allotted",
     "requestedOn": "2026-09-11"
   },
   {
-    "id": "stt-stu-6A-19",
-    "studentId": "stu-6A-19",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-07-15"
-  },
-  {
-    "id": "stt-stu-6A-20",
-    "studentId": "stu-6A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-27"
-  },
-  {
-    "id": "stt-stu-6A-22",
-    "studentId": "stu-6A-22",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-07-10"
-  },
-  {
-    "id": "stt-stu-6A-23",
-    "studentId": "stu-6A-23",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "allotted",
-    "requestedOn": "2026-08-12"
-  },
-  {
-    "id": "stt-stu-6A-25",
-    "studentId": "stu-6A-25",
+    "id": "stt-stu-bba-2025-003",
+    "studentId": "stu-bba-2025-003",
     "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "requested",
-    "requestedOn": "2026-07-16"
-  },
-  {
-    "id": "stt-stu-6A-26",
-    "studentId": "stu-6A-26",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "approved",
-    "requestedOn": "2026-07-14"
-  },
-  {
-    "id": "stt-stu-6A-28",
-    "studentId": "stu-6A-28",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-10"
-  },
-  {
-    "id": "stt-stu-6A-29",
-    "studentId": "stu-6A-29",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-19"
-  },
-  {
-    "id": "stt-stu-7A-01",
-    "studentId": "stu-7A-01",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-21"
-  },
-  {
-    "id": "stt-stu-7A-02",
-    "studentId": "stu-7A-02",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "allotted",
-    "requestedOn": "2026-06-27"
-  },
-  {
-    "id": "stt-stu-7A-04",
-    "studentId": "stu-7A-04",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-07-04"
-  },
-  {
-    "id": "stt-stu-7A-05",
-    "studentId": "stu-7A-05",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-28"
-  },
-  {
-    "id": "stt-stu-7A-07",
-    "studentId": "stu-7A-07",
-    "routeId": "rt-1",
-    "stop": "Thudiyalur Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-09"
-  },
-  {
-    "id": "stt-stu-7A-08",
-    "studentId": "stu-7A-08",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-06-18"
-  },
-  {
-    "id": "stt-stu-7A-10",
-    "studentId": "stu-7A-10",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "allotted",
-    "requestedOn": "2026-06-28"
-  },
-  {
-    "id": "stt-stu-7A-11",
-    "studentId": "stu-7A-11",
-    "routeId": "rt-1",
-    "stop": "Thudiyalur Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-18"
-  },
-  {
-    "id": "stt-stu-7A-13",
-    "studentId": "stu-7A-13",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-02"
-  },
-  {
-    "id": "stt-stu-7A-14",
-    "studentId": "stu-7A-14",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "allotted",
-    "requestedOn": "2026-08-27"
-  },
-  {
-    "id": "stt-stu-7A-16",
-    "studentId": "stu-7A-16",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-07-07"
-  },
-  {
-    "id": "stt-stu-7A-17",
-    "studentId": "stu-7A-17",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-20"
-  },
-  {
-    "id": "stt-stu-7A-19",
-    "studentId": "stu-7A-19",
-    "routeId": "rt-1",
-    "stop": "Thudiyalur Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-30"
-  },
-  {
-    "id": "stt-stu-7A-20",
-    "studentId": "stu-7A-20",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-08-27"
-  },
-  {
-    "id": "stt-stu-7A-22",
-    "studentId": "stu-7A-22",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "allotted",
-    "requestedOn": "2026-07-07"
-  },
-  {
-    "id": "stt-stu-7A-23",
-    "studentId": "stu-7A-23",
-    "routeId": "rt-1",
-    "stop": "Thudiyalur Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-18"
-  },
-  {
-    "id": "stt-stu-7A-25",
-    "studentId": "stu-7A-25",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-29"
-  },
-  {
-    "id": "stt-stu-7A-26",
-    "studentId": "stu-7A-26",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "allotted",
-    "requestedOn": "2026-09-12"
-  },
-  {
-    "id": "stt-stu-7A-28",
-    "studentId": "stu-7A-28",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-06-18"
-  },
-  {
-    "id": "stt-stu-7A-29",
-    "studentId": "stu-7A-29",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-16"
-  },
-  {
-    "id": "stt-stu-8A-01",
-    "studentId": "stu-8A-01",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-07-05"
-  },
-  {
-    "id": "stt-stu-8A-02",
-    "studentId": "stu-8A-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-07"
-  },
-  {
-    "id": "stt-stu-8A-04",
-    "studentId": "stu-8A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-06-19"
-  },
-  {
-    "id": "stt-stu-8A-05",
-    "studentId": "stu-8A-05",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-21"
-  },
-  {
-    "id": "stt-stu-8A-07",
-    "studentId": "stu-8A-07",
-    "routeId": "rt-4",
-    "stop": "Puliakulam",
-    "status": "allotted",
-    "requestedOn": "2026-07-17"
-  },
-  {
-    "id": "stt-stu-8A-08",
-    "studentId": "stu-8A-08",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-09-19"
-  },
-  {
-    "id": "stt-stu-8A-11",
-    "studentId": "stu-8A-11",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "requested",
-    "requestedOn": "2026-06-28"
-  },
-  {
-    "id": "stt-stu-8A-13",
-    "studentId": "stu-8A-13",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-17"
-  },
-  {
-    "id": "stt-stu-8A-14",
-    "studentId": "stu-8A-14",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-09-09"
-  },
-  {
-    "id": "stt-stu-8A-16",
-    "studentId": "stu-8A-16",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-07-29"
-  },
-  {
-    "id": "stt-stu-8A-17",
-    "studentId": "stu-8A-17",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-08-13"
-  },
-  {
-    "id": "stt-stu-8A-19",
-    "studentId": "stu-8A-19",
-    "routeId": "rt-4",
-    "stop": "Puliakulam",
-    "status": "allotted",
-    "requestedOn": "2026-06-22"
-  },
-  {
-    "id": "stt-stu-8A-20",
-    "studentId": "stu-8A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "allotted",
-    "requestedOn": "2026-08-05"
-  },
-  {
-    "id": "stt-stu-8A-22",
-    "studentId": "stu-8A-22",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-22"
-  },
-  {
-    "id": "stt-stu-8A-23",
-    "studentId": "stu-8A-23",
-    "routeId": "rt-1",
-    "stop": "Thudiyalur Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-21"
-  },
-  {
-    "id": "stt-stu-8A-25",
-    "studentId": "stu-8A-25",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-17"
-  },
-  {
-    "id": "stt-stu-8A-26",
-    "studentId": "stu-8A-26",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-24"
-  },
-  {
-    "id": "stt-stu-8A-28",
-    "studentId": "stu-8A-28",
-    "routeId": "rt-1",
-    "stop": "Gandhipuram Bus Stand",
-    "status": "allotted",
-    "requestedOn": "2026-09-02"
-  },
-  {
-    "id": "stt-stu-8A-29",
-    "studentId": "stu-8A-29",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-06-24"
-  },
-  {
-    "id": "stt-stu-8B-01",
-    "studentId": "stu-8B-01",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-09"
-  },
-  {
-    "id": "stt-stu-8B-02",
-    "studentId": "stu-8B-02",
-    "routeId": "rt-2",
-    "stop": "Nehru Stadium",
-    "status": "allotted",
-    "requestedOn": "2026-08-19"
-  },
-  {
-    "id": "stt-stu-8B-04",
-    "studentId": "stu-8B-04",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "requested",
-    "requestedOn": "2026-08-06"
-  },
-  {
-    "id": "stt-stu-8B-05",
-    "studentId": "stu-8B-05",
-    "routeId": "rt-2",
-    "stop": "Hope College",
-    "status": "allotted",
-    "requestedOn": "2026-07-19"
-  },
-  {
-    "id": "stt-stu-8B-07",
-    "studentId": "stu-8B-07",
-    "routeId": "rt-2",
-    "stop": "Avinashi Road",
-    "status": "allotted",
-    "requestedOn": "2026-09-04"
-  },
-  {
-    "id": "stt-stu-8B-08",
-    "studentId": "stu-8B-08",
-    "routeId": "rt-2",
-    "stop": "Peelamedu Signal",
-    "status": "allotted",
-    "requestedOn": "2026-09-15"
-  },
-  {
-    "id": "stt-stu-8B-10",
-    "studentId": "stu-8B-10",
-    "routeId": "rt-4",
-    "stop": "Race Course",
-    "status": "approved",
-    "requestedOn": "2026-06-22"
-  },
-  {
-    "id": "stt-stu-9A-17",
-    "studentId": "stu-9A-17",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "approved",
-    "requestedOn": "2026-06-14"
-  },
-  {
-    "id": "stt-stu-9A-20",
-    "studentId": "stu-9A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "requested",
-    "requestedOn": "2026-09-04"
-  },
-  {
-    "id": "stt-stu-10A-13",
-    "studentId": "stu-10A-13",
-    "routeId": "rt-3",
-    "stop": "Kalapatti Road",
-    "status": "requested",
-    "requestedOn": "2026-09-12"
-  },
-  {
-    "id": "stt-stu-11B-05",
-    "studentId": "stu-11B-05",
-    "routeId": "rt-1",
-    "stop": "Cross Cut Road",
-    "status": "requested",
-    "requestedOn": "2026-06-25"
-  },
-  {
-    "id": "stt-stu-11B-07",
-    "studentId": "stu-11B-07",
-    "routeId": "rt-3",
-    "stop": "Vilankurichi",
-    "status": "approved",
-    "requestedOn": "2026-09-03"
-  },
-  {
-    "id": "stt-stu-12A-04",
-    "studentId": "stu-12A-04",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "requested",
-    "requestedOn": "2026-09-15"
-  },
-  {
-    "id": "stt-stu-12A-20",
-    "studentId": "stu-12A-20",
-    "routeId": "rt-4",
-    "stop": "R.S. Puram West",
-    "status": "approved",
-    "requestedOn": "2026-07-04"
-  },
-  {
-    "id": "stt-stu-m1A-01",
-    "studentId": "stu-m1A-01",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
-    "requestedOn": "2026-08-03"
-  },
-  {
-    "id": "stt-stu-m1A-05",
-    "studentId": "stu-m1A-05",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-06"
-  },
-  {
-    "id": "stt-stu-m1A-09",
-    "studentId": "stu-m1A-09",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-07-08"
-  },
-  {
-    "id": "stt-stu-m1A-13",
-    "studentId": "stu-m1A-13",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-05"
-  },
-  {
-    "id": "stt-stu-m1A-17",
-    "studentId": "stu-m1A-17",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-25"
-  },
-  {
-    "id": "stt-stu-m1A-21",
-    "studentId": "stu-m1A-21",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
-    "requestedOn": "2026-09-07"
-  },
-  {
-    "id": "stt-stu-m1A-25",
-    "studentId": "stu-m1A-25",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-07-09"
-  },
-  {
-    "id": "stt-stu-m2A-03",
-    "studentId": "stu-m2A-03",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-09-21"
-  },
-  {
-    "id": "stt-stu-m2A-07",
-    "studentId": "stu-m2A-07",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-24"
-  },
-  {
-    "id": "stt-stu-m2A-11",
-    "studentId": "stu-m2A-11",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-19"
-  },
-  {
-    "id": "stt-stu-m2A-15",
-    "studentId": "stu-m2A-15",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
-    "requestedOn": "2026-07-11"
-  },
-  {
-    "id": "stt-stu-m2A-19",
-    "studentId": "stu-m2A-19",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "stop": "Sivananda Colony",
     "status": "allotted",
     "requestedOn": "2026-09-05"
   },
   {
-    "id": "stt-stu-m2A-23",
-    "studentId": "stu-m2A-23",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-006",
+    "studentId": "stu-bba-2025-006",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
     "status": "allotted",
-    "requestedOn": "2026-08-29"
+    "requestedOn": "2026-06-20"
   },
   {
-    "id": "stt-stu-m3A-01",
-    "studentId": "stu-m3A-01",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-008",
+    "studentId": "stu-bba-2025-008",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
     "status": "allotted",
-    "requestedOn": "2026-07-05"
-  },
-  {
-    "id": "stt-stu-m3A-05",
-    "studentId": "stu-m3A-05",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-09-06"
-  },
-  {
-    "id": "stt-stu-m3A-09",
-    "studentId": "stu-m3A-09",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
     "requestedOn": "2026-08-11"
   },
   {
-    "id": "stt-stu-m3A-13",
-    "studentId": "stu-m3A-13",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-07-11"
-  },
-  {
-    "id": "stt-stu-m3A-17",
-    "studentId": "stu-m3A-17",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-09-19"
-  },
-  {
-    "id": "stt-stu-m3A-21",
-    "studentId": "stu-m3A-21",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-07-06"
-  },
-  {
-    "id": "stt-stu-m3A-25",
-    "studentId": "stu-m3A-25",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-011",
+    "studentId": "stu-bba-2025-011",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
     "status": "allotted",
     "requestedOn": "2026-08-28"
   },
   {
-    "id": "stt-stu-m4A-03",
-    "studentId": "stu-m4A-03",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
-    "requestedOn": "2026-07-23"
-  },
-  {
-    "id": "stt-stu-m4A-07",
-    "studentId": "stu-m4A-07",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-012",
+    "studentId": "stu-bba-2025-012",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
     "status": "allotted",
-    "requestedOn": "2026-09-20"
+    "requestedOn": "2026-07-21"
   },
   {
-    "id": "stt-stu-m4A-11",
-    "studentId": "stu-m4A-11",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-014",
+    "studentId": "stu-bba-2025-014",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
     "status": "allotted",
-    "requestedOn": "2026-09-07"
+    "requestedOn": "2026-06-21"
   },
   {
-    "id": "stt-stu-m4A-15",
-    "studentId": "stu-m4A-15",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-03"
-  },
-  {
-    "id": "stt-stu-m4A-19",
-    "studentId": "stu-m4A-19",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-07-07"
-  },
-  {
-    "id": "stt-stu-m4A-23",
-    "studentId": "stu-m4A-23",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "requested",
-    "requestedOn": "2026-07-27"
-  },
-  {
-    "id": "stt-stu-m5A-01",
-    "studentId": "stu-m5A-01",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-09-10"
-  },
-  {
-    "id": "stt-stu-m5A-05",
-    "studentId": "stu-m5A-05",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-28"
-  },
-  {
-    "id": "stt-stu-m5A-09",
-    "studentId": "stu-m5A-09",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
-    "status": "allotted",
-    "requestedOn": "2026-08-02"
-  },
-  {
-    "id": "stt-stu-m5A-13",
-    "studentId": "stu-m5A-13",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-015",
+    "studentId": "stu-bba-2025-015",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
     "status": "allotted",
     "requestedOn": "2026-08-07"
   },
   {
-    "id": "stt-stu-m5A-17",
-    "studentId": "stu-m5A-17",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2025-018",
+    "studentId": "stu-bba-2025-018",
+    "routeId": "rt-2",
+    "stop": "Hope College",
     "status": "requested",
+    "requestedOn": "2026-07-08"
+  },
+  {
+    "id": "stt-stu-bba-2025-020",
+    "studentId": "stu-bba-2025-020",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-10"
+  },
+  {
+    "id": "stt-stu-bba-2025-023",
+    "studentId": "stu-bba-2025-023",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-07-24"
+  },
+  {
+    "id": "stt-stu-bba-2025-024",
+    "studentId": "stu-bba-2025-024",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-23"
+  },
+  {
+    "id": "stt-stu-bba-2025-026",
+    "studentId": "stu-bba-2025-026",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-09-14"
+  },
+  {
+    "id": "stt-stu-bba-2025-027",
+    "studentId": "stu-bba-2025-027",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-07-26"
+  },
+  {
+    "id": "stt-stu-bba-2025-030",
+    "studentId": "stu-bba-2025-030",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-27"
+  },
+  {
+    "id": "stt-stu-bba-2025-032",
+    "studentId": "stu-bba-2025-032",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-04"
+  },
+  {
+    "id": "stt-stu-bba-2025-035",
+    "studentId": "stu-bba-2025-035",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-07-06"
+  },
+  {
+    "id": "stt-stu-bba-2025-036",
+    "studentId": "stu-bba-2025-036",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bba-2024-002",
+    "studentId": "stu-bba-2024-002",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-06"
+  },
+  {
+    "id": "stt-stu-bba-2024-003",
+    "studentId": "stu-bba-2024-003",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
     "requestedOn": "2026-07-29"
   },
   {
-    "id": "stt-stu-m5A-21",
-    "studentId": "stu-m5A-21",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2024-006",
+    "studentId": "stu-bba-2024-006",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
     "status": "allotted",
-    "requestedOn": "2026-08-01"
+    "requestedOn": "2026-07-01"
   },
   {
-    "id": "stt-stu-m5A-25",
-    "studentId": "stu-m5A-25",
-    "routeId": "rt-m1",
-    "stop": "Annur Road Junction",
+    "id": "stt-stu-bba-2024-008",
+    "studentId": "stu-bba-2024-008",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
     "status": "allotted",
-    "requestedOn": "2026-09-21"
+    "requestedOn": "2026-07-23"
+  },
+  {
+    "id": "stt-stu-bba-2024-011",
+    "studentId": "stu-bba-2024-011",
+    "routeId": "rt-3",
+    "stop": "KCT Gate",
+    "status": "requested",
+    "requestedOn": "2026-09-05"
+  },
+  {
+    "id": "stt-stu-bba-2024-012",
+    "studentId": "stu-bba-2024-012",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-16"
+  },
+  {
+    "id": "stt-stu-bba-2024-014",
+    "studentId": "stu-bba-2024-014",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-04"
+  },
+  {
+    "id": "stt-stu-bba-2024-015",
+    "studentId": "stu-bba-2024-015",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-06-30"
+  },
+  {
+    "id": "stt-stu-bba-2024-018",
+    "studentId": "stu-bba-2024-018",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-23"
+  },
+  {
+    "id": "stt-stu-bba-2024-020",
+    "studentId": "stu-bba-2024-020",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-06-20"
+  },
+  {
+    "id": "stt-stu-bba-2024-023",
+    "studentId": "stu-bba-2024-023",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-09-10"
+  },
+  {
+    "id": "stt-stu-bba-2024-024",
+    "studentId": "stu-bba-2024-024",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-31"
+  },
+  {
+    "id": "stt-stu-bba-2024-026",
+    "studentId": "stu-bba-2024-026",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-07-06"
+  },
+  {
+    "id": "stt-stu-bba-2024-027",
+    "studentId": "stu-bba-2024-027",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-06-27"
+  },
+  {
+    "id": "stt-stu-bba-2024-030",
+    "studentId": "stu-bba-2024-030",
+    "routeId": "rt-1",
+    "stop": "Cross Cut Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-19"
+  },
+  {
+    "id": "stt-stu-bba-2024-032",
+    "studentId": "stu-bba-2024-032",
+    "routeId": "rt-1",
+    "stop": "Thudiyalur Road",
+    "status": "allotted",
+    "requestedOn": "2026-08-22"
+  },
+  {
+    "id": "stt-stu-bba-2024-035",
+    "studentId": "stu-bba-2024-035",
+    "routeId": "rt-1",
+    "stop": "Sivananda Colony",
+    "status": "allotted",
+    "requestedOn": "2026-09-22"
   }
 ]

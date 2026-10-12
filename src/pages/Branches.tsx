@@ -13,7 +13,7 @@ import {
 import { useCan } from '@/app/auth';
 import { useWholeDatabase } from '@/lib/store';
 import { theGroup } from '@/lib/queries';
-import { createBranch } from '@/lib/actions';
+import { createInstitution } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -48,7 +48,7 @@ export default function Branches() {
     <>
       <PageHeader
         title={group.name}
-        subtitle={`${group.trustName} · ${group.registrationNo} · ${db.schools.length} branches`}
+        subtitle={`${group.trustName} · ${group.registrationNo} · ${db.colleges.length} branches`}
         action={
           manage ? (
             <Button icon={<Plus className="size-4" />} onClick={() => setOpen(true)}>
@@ -59,7 +59,7 @@ export default function Branches() {
       />
 
       <StatGrid>
-        <StatTile label="Branches" value={db.schools.length} note="Under the trust" icon={Building2} />
+        <StatTile label="Branches" value={db.colleges.length} note="Under the trust" icon={Building2} />
         <StatTile
           label="Students"
           value={num(students.length)}
@@ -98,16 +98,16 @@ export default function Branches() {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2">
-        {db.schools.map((school, i) => {
+        {db.colleges.map((school, i) => {
           const admins = db.users.filter(
-            (u) => u.schoolId === school.id && u.roles.includes('correspondent'),
+            (u) => u.collegeId === school.id && u.roles.includes('principal'),
           );
-          const onRoll = students.filter((u) => u.schoolId === school.id).length;
+          const onRoll = students.filter((u) => u.collegeId === school.id).length;
           return (
             <MotionCard key={school.id} delay={0.1 + i * 0.06}>
               <CardHeader
                 title={school.shortName}
-                subtitle={`${school.board} · ${school.code}`}
+                subtitle={`${school.affiliatedTo} · ${school.code}`}
                 action={
                   school.isMain ? (
                     <Badge tone="brand">Main campus</Badge>
@@ -200,7 +200,7 @@ function NewBranchDialog({ open, onClose }: { open: boolean; onClose: () => void
 
   const submit = () => {
     if (!valid) return;
-    createBranch({
+    createInstitution({
       name: name.trim(),
       shortName: shortName.trim(),
       code: code.trim() || '—',

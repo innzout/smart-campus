@@ -9,28 +9,30 @@ import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
 import { EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
 import { cn, daysFromToday, formatDate, formatTime, relativeDay, todayISO } from '@/lib/utils';
-import type { SchoolEvent } from '@/data/types';
+import type { CollegeEvent } from '@/data/types';
 
-const CATEGORY_TONE: Record<SchoolEvent['category'], Tone> = {
+const CATEGORY_TONE: Record<CollegeEvent['category'], Tone> = {
   Cultural: 'brand',
   Sports: 'warning',
   Academic: 'info',
-  PTM: 'good',
+  Seminar: 'good',
+  Placement: 'serious',
   Holiday: 'neutral',
 };
 
-const GRADIENTS: Record<SchoolEvent['category'], string> = {
+const GRADIENTS: Record<CollegeEvent['category'], string> = {
   Cultural: 'from-[#6963f1] to-[#a855f7]',
   Sports: 'from-[#eda100] to-[#eb6834]',
   Academic: 'from-[#2a78d6] to-[#22d3ee]',
-  PTM: 'from-[#1baf7a] to-[#34d399]',
+  Seminar: 'from-[#1baf7a] to-[#34d399]',
+  Placement: 'from-[#ec4899] to-[#f43f5e]',
   Holiday: 'from-[#64748b] to-[#94a3b8]',
 };
 
 export default function Events() {
   const db = useDatabase();
   const [filter, setFilter] = useState<'upcoming' | 'all'>('upcoming');
-  const [detail, setDetail] = useState<SchoolEvent | null>(null);
+  const [detail, setDetail] = useState<CollegeEvent | null>(null);
 
   const all = [...db.events].sort((a, b) => a.date.localeCompare(b.date));
   const list = all.filter((e) => (filter === 'upcoming' ? e.date >= todayISO() : true));
@@ -57,7 +59,7 @@ export default function Events() {
         <StatTile label="Upcoming" value={all.filter((e) => e.date >= todayISO()).length} note="Through the term" icon={CalendarDays} />
         <StatTile label="Next event" value={next ? formatDate(next.date, { year: undefined }) : '—'} note={next?.title ?? 'Nothing scheduled'} icon={Clock} tone={next ? 'good' : 'neutral'} delay={0.06} />
         <StatTile label="This month" value={all.filter((e) => e.date.slice(0, 7) === todayISO().slice(0, 7)).length} note="On the calendar" icon={PartyPopper} delay={0.12} />
-        <StatTile label="Parent meetings" value={all.filter((e) => e.category === 'PTM').length} note="PTM this year" icon={Users} delay={0.18} />
+        <StatTile label="Parent meetings" value={all.filter((e) => e.category === 'Academic').length} note="PTM this year" icon={Users} delay={0.18} />
       </StatGrid>
 
       {list.length === 0 ? (
@@ -133,7 +135,7 @@ export default function Events() {
               ['Date', formatDate(detail.date)],
               ['Time', formatTime(detail.time)],
               ['Venue', detail.venue],
-              ['Open to', detail.forClasses === 'all' ? 'All classes' : (detail.forClasses as string[]).join(', ')],
+              ['Open to', detail.forSections === 'all' ? 'All classes' : (detail.forSections as string[]).join(', ')],
             ].map(([label, value]) => (
               <div key={label} className="rounded-xl bg-surface-2 px-3.5 py-3">
                 <dt className="text-[11px] font-semibold tracking-wider text-ink-3 uppercase">{label}</dt>

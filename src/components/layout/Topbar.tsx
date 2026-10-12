@@ -25,15 +25,15 @@ function BranchSwitcher({ user }: { user: AuthUser }) {
   const activeId = useActiveBranch();
   const [open, setOpen] = useState(false);
 
-  const active = db.schools.find((b) => b.id === activeId) ?? db.schools[0];
+  const active = db.colleges.find((b) => b.id === activeId) ?? db.colleges[0];
   // Only the trust's own account may look at a branch that is not its own.
-  const canSwitch = user.permissions.includes('org.view') && db.schools.length > 1;
+  const canSwitch = user.permissions.includes('org.view') && db.colleges.length > 1;
 
   if (!active) return null;
 
   if (!canSwitch) {
     // One school, so name it rather than offering a choice.
-    return db.schools.length > 1 ? (
+    return db.colleges.length > 1 ? (
       <span className="hidden items-center gap-2 rounded-xl border border-line bg-surface-2 px-3 py-1.5 lg:inline-flex">
         <Building2 className="size-3.5 shrink-0 text-ink-3" aria-hidden />
         <span className="max-w-[13rem] truncate text-[12.5px] font-medium text-ink-2">
@@ -80,9 +80,9 @@ function BranchSwitcher({ user }: { user: AuthUser }) {
                   {db.group[0]?.name ?? 'Branches'}
                 </p>
               </li>
-              {db.schools.map((branch) => {
+              {db.colleges.map((branch) => {
                 const onRoll = db.users.filter(
-                  (u) => u.schoolId === branch.id && u.roles.includes('student'),
+                  (u) => u.collegeId === branch.id && u.roles.includes('student'),
                 ).length;
                 return (
                   <li key={branch.id}>

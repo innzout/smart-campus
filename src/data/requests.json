@@ -2,78 +2,79 @@
   {
     "id": "req-1",
     "ref": "REQ/2026/101",
-    "raisedBy": "par-8A-10",
-    "aboutStudentId": "stu-8A-10",
-    "title": "Leave for two days — family function",
-    "category": "Leave",
-    "description": "Requesting leave on Thursday and Friday for a family wedding in Madurai. Kindly permit.",
-    "status": "in-progress",
-    "createdOn": "2026-10-08",
+    "raisedBy": "par-bsc-cs-2024-007",
+    "aboutStudentId": "stu-bsc-cs-2024-007",
+    "title": "Bonafide certificate for passport",
+    "category": "Certificate",
+    "description": "Bonafide certificate required for a passport application. Kindly issue at the earliest.",
+    "status": "resolved",
+    "createdOn": "2026-10-01",
     "updates": [
       {
-        "on": "2026-10-09",
-        "note": "Acknowledged by the school office."
+        "on": "2026-10-02",
+        "note": "Received at the college office."
+      },
+      {
+        "on": "2026-10-04",
+        "note": "Certificate issued. Please collect from the office."
       }
     ]
   },
   {
     "id": "req-2",
     "ref": "REQ/2026/102",
-    "raisedBy": "par-8A-10",
-    "aboutStudentId": "stu-8A-10",
-    "title": "Bonafide certificate required",
-    "category": "Certificate",
-    "description": "Bonafide certificate needed for a bank scholarship application. Kindly issue at the earliest.",
-    "status": "resolved",
-    "createdOn": "2026-09-29",
+    "raisedBy": "par-bsc-cs-2024-007",
+    "aboutStudentId": "stu-bsc-cs-2024-007",
+    "title": "Attendance condonation — Web Technology",
+    "category": "Exam",
+    "description": "My ward was hospitalised for ten days. Requesting condonation of the attendance shortage in one paper. Medical records enclosed.",
+    "status": "in-progress",
+    "createdOn": "2026-10-08",
     "updates": [
       {
-        "on": "2026-09-30",
-        "note": "Received at the school office."
-      },
-      {
-        "on": "2026-10-01",
-        "note": "Certificate issued. Please collect from the office."
+        "on": "2026-10-09",
+        "note": "Forwarded to the Principal for orders."
       }
     ]
   },
   {
     "id": "req-3",
     "ref": "REQ/2026/103",
-    "raisedBy": "par-1A-05",
-    "aboutStudentId": "stu-1A-05",
-    "title": "Request to change bus stop",
-    "category": "Transport",
-    "description": "We have shifted house to Vilankurichi. Requesting a change of boarding point on Route 3.",
+    "raisedBy": "stu-bsc-cs-2026-009",
+    "aboutStudentId": "stu-bsc-cs-2026-009",
+    "title": "Change of elective",
+    "category": "Other",
+    "description": "Requesting a change of elective from Cloud Computing to Mobile Application Development before the internal assessment begins.",
     "status": "open",
-    "createdOn": "2026-10-09",
+    "createdOn": "2026-10-10",
     "updates": []
   },
   {
     "id": "req-4",
     "ref": "REQ/2026/104",
-    "raisedBy": "usr-t1",
-    "title": "Fan not working in Room 21",
-    "category": "Facility",
-    "description": "The ceiling fan near the last bench has not been working for a week. Children are finding it difficult in the afternoon.",
+    "raisedBy": "stu-bsc-cs-2026-021",
+    "aboutStudentId": "stu-bsc-cs-2026-021",
+    "title": "Hostel room change",
+    "category": "Hostel",
+    "description": "Requesting a change of room owing to a persistent dust allergy. A ground floor room would be preferable.",
     "status": "in-progress",
     "createdOn": "2026-10-06",
     "updates": [
       {
         "on": "2026-10-07",
-        "note": "Acknowledged by the school office."
+        "note": "Forwarded to the Principal for orders."
       }
     ]
   },
   {
     "id": "req-5",
     "ref": "REQ/2026/105",
-    "raisedBy": "usr-p3",
-    "title": "Burette replacement for Chemistry lab",
+    "raisedBy": "usr-f3",
+    "title": "Projector not working — CS-301",
     "category": "Facility",
-    "description": "Six burettes are cracked and cannot be used for volumetric analysis. Requesting replacement before the practical examination.",
+    "description": "The projector in CS-301 has not been working for a week. Practical demonstrations are affected.",
     "status": "open",
-    "createdOn": "2026-10-07",
+    "createdOn": "2026-10-09",
     "updates": []
   }
 ]

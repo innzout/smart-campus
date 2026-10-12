@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2, Clock, LifeBuoy, Send, Wrench } from 'lucide-react';
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { allRequests, classLabel, requestsFor, userById } from '@/lib/queries';
+import { allRequests, sectionLabel, requestsFor, userById } from '@/lib/queries';
 import { advanceRequest, raiseRequest } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
@@ -183,7 +183,7 @@ export default function Requests() {
                       {isStaff ? (
                         <p className="mt-1.5 text-[11.5px] text-ink-3">
                           Raised by {raiser?.name ?? 'Unknown'}
-                          {about ? ` · about ${about.name} (${classLabel(db, about.classId)})` : ''}
+                          {about ? ` · about ${about.name} (${sectionLabel(db, about.sectionId)})` : ''}
                         </p>
                       ) : null}
 
@@ -211,7 +211,7 @@ export default function Requests() {
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => {
-                                  advanceRequest(r.id, 'in-progress', 'Acknowledged by the school office.');
+                                  advanceRequest(r.id, 'Acknowledged by the school office.');
                                   toast.success(`${r.ref} acknowledged`);
                                 }}
                               >
@@ -221,7 +221,7 @@ export default function Requests() {
                             <Button
                               size="sm"
                               onClick={() => {
-                                advanceRequest(r.id, 'resolved', 'Completed. Please collect from the office if applicable.');
+                                advanceRequest(r.id, 'Completed. Please collect from the office if applicable.');
                                 toast.success(`${r.ref} resolved`);
                               }}
                             >

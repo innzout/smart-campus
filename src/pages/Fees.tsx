@@ -18,14 +18,14 @@ import {
 import { useAuth, useCan } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
 import {
-  classLabel,
+  sectionLabel,
   collectionSummary,
   defaulters,
-  duesByClass,
+  duesBySection,
   feeStatus,
   feeSummary,
   paymentsFor,
-  theSchool,
+  theCollege,
 } from '@/lib/queries';
 import { payFee } from '@/lib/actions';
 import { StatGrid, StatTile } from '@/components/StatTile';
@@ -67,7 +67,7 @@ function paySchema(maxAmount: number) {
 
 function PayDialog({ fee, student, onClose }: { fee: FeeItem; student: User; onClose: () => void }) {
   const db = useDatabase();
-  const school = theSchool(db);
+  const school = theCollege(db);
   const outstanding = fee.total - fee.paid;
   const schema = paySchema(outstanding);
   const [receipt, setReceipt] = useState<{ receiptNo: string; amount: number; method: string } | null>(null);
@@ -115,8 +115,8 @@ function PayDialog({ fee, student, onClose }: { fee: FeeItem; student: User; onC
           <dl className="mt-6 w-full space-y-2.5 rounded-xl bg-surface-2 px-4 py-3.5 text-left text-[12.5px]">
             {[
               ['Receipt no.', receipt.receiptNo],
-              ['Student', `${student.name} · ${classLabel(db, student.classId)}`],
-              ['Admission no.', student.admissionNo ?? '—'],
+              ['Student', `${student.name} · ${sectionLabel(db, student.sectionId)}`],
+              ['Admission no.', student.registerNo ?? '—'],
               ['Paid by', receipt.method.toUpperCase()],
               ['Date', formatDate(new Date().toISOString().slice(0, 10))],
             ].map(([k, v]) => (
@@ -151,14 +151,14 @@ function PayDialog({ fee, student, onClose }: { fee: FeeItem; student: User; onC
         className="space-y-5"
         onSubmit={handleSubmit(async (values) => {
           await new Promise((r) => setTimeout(r, 900)); // gateway round-trip
-          const result = payFee({
+          // payFee returns the receipt number it allotted.
+          const receiptNo = payFee({
             feeId: fee.id,
-            studentId: student.id,
             amount: Number(values.amount),
             method: values.method as 'upi' | 'card' | 'netbanking',
           });
-          setReceipt({ receiptNo: result.receiptNo, amount: Number(values.amount), method: values.method as string });
-          toast.success('Payment received', { description: `Receipt ${result.receiptNo}` });
+          setReceipt({ receiptNo, amount: Number(values.amount), method: values.method as string });
+          toast.success('Payment received', { description: `Receipt ${receiptNo}` });
         })}
       >
         <Field label="Amount" error={errors.amount?.message} hint={`Pay the full ${money(outstanding)} or part of it.`} required htmlFor="amount">
@@ -267,7 +267,7 @@ function ChildFees({ student }: { student: User }) {
     <>
       <PageHeader
         title="Fees"
-        subtitle={`${student.name} · ${classLabel(db, student.classId)} · admission no. ${student.admissionNo}`}
+        subtitle={`${student.name} · ${sectionLabel(db, student.sectionId)} · admission no. ${student.registerNo}`}
       />
 
       <StatGrid>
@@ -358,7 +358,7 @@ function OfficeFees() {
         id: student.id,
         student,
         name: student.name,
-        cls: classLabel(db, student.classId),
+        cls: sectionLabel(db, student.sectionId),
         billed: s.total,
         paid: s.paid,
         pending: s.pending,
@@ -376,7 +376,7 @@ function OfficeFees() {
           <Avatar name={r.student.name} hue={r.student.avatarHue} size="sm" />
           <div className="min-w-0">
             <p className="truncate font-semibold text-ink">{r.name}</p>
-            <p className="mt-0.5 text-[11.5px] text-ink-3">{r.student.admissionNo}</p>
+            <p className="mt-0.5 text-[11.5px] text-ink-3">{r.student.registerNo}</p>
           </div>
         </div>
       ),
@@ -443,7 +443,7 @@ function OfficeFees() {
         <MotionCard delay={0.16}>
           <CardHeader title="Outstanding by class" subtitle="Where to chase first" />
           <CardBody className="pt-2">
-            <BarList data={duesByClass(db)} valueLabel="Outstanding" height={250} />
+            <BarList data={duesBySection(db)} valueLabel="Outstanding" height={250} />
           </CardBody>
         </MotionCard>
       </div>
@@ -461,11 +461,11 @@ function OfficeFees() {
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-semibold text-ink">{d.student.name}</span>
                     <span className="block truncate text-[11.5px] text-ink-3">
-                      {classLabel(db, d.student.classId)} · {d.heads.join(', ')}
+                      {sectionLabel(db, d.student.sectionId)} · {d.summary.overdue.map((f) => f.head).join(', ')}
                     </span>
                   </span>
                   <span className="tnum shrink-0 text-[13.5px] font-semibold text-[--color-critical]">
-                    {money(d.amount)}
+                    {money(d.summary.overdueAmount)}
                   </span>
                 </li>
               ))}
@@ -493,7 +493,7 @@ export default function Fees() {
   const { subject } = useAuth();
   const can = useCan();
 
-  if (can('fee.view.school')) return <OfficeFees />;
+  if (can('fee.view.college')) return <OfficeFees />;
   if (!subject) return <EmptyState icon={<WalletCards className="size-6" />} title="No student linked to this account" />;
   return <ChildFees student={subject} />;
 }

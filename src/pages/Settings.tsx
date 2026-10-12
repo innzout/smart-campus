@@ -17,8 +17,8 @@ import {
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { useTheme, type ThemePref } from '@/app/theme';
 import { resetDatabase, useDatabase } from '@/lib/store';
-import { updateUser } from '@/lib/actions';
-import { childrenOf, classLabel, theSchool } from '@/lib/queries';
+import { updatePassword, updateUser } from '@/lib/actions';
+import { childrenOf, sectionLabel, theCollege } from '@/lib/queries';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Field, Input } from '@/components/ui/Field';
@@ -68,7 +68,7 @@ export default function Settings() {
   const { logout, setActiveChild } = useAuth();
   const { preference, setPreference, resolved } = useTheme();
   const db = useDatabase();
-  const school = theSchool(db);
+  const school = theCollege(db);
   const [resetOpen, setResetOpen] = useState(false);
 
   const children = user.roles.includes('parent') ? childrenOf(db, user) : [];
@@ -106,7 +106,7 @@ export default function Settings() {
                   <p className="mt-0.5 truncate text-[12.5px] text-ink-3">
                     {user.designation ? DESIGNATION_LABEL[user.designation] : user.roleName}
                     {user.employeeId ? ` · ${user.employeeId}` : ''}
-                    {user.admissionNo ? ` · ${user.admissionNo}` : ''}
+                    {user.registerNo ? ` · ${user.registerNo}` : ''}
                   </p>
                   {/* Every role, not only the senior one — someone who is both
                       Accounts and Payroll Officer should see both. */}
@@ -170,7 +170,7 @@ export default function Settings() {
                     return;
                   }
                   await new Promise((r) => setTimeout(r, 350));
-                  updateUser(user.id, { password: values.next });
+                  updatePassword(user.id, values.next);
                   passwordForm.reset();
                   toast.success('Password changed', { description: 'Use the new password next time you sign in.' });
                 })}
@@ -242,7 +242,7 @@ export default function Settings() {
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-[13.5px] font-semibold text-ink">{child.name}</span>
                         <span className="block truncate text-[11.5px] text-ink-3">
-                          {classLabel(db, child.classId)} · roll {child.rollNo} · {child.admissionNo}
+                          {sectionLabel(db, child.sectionId)} · roll {child.rollNo} · {child.registerNo}
                         </span>
                       </span>
                       {active ? <span className="shrink-0 text-[11.5px] font-medium text-brand-600 dark:text-brand-300">Viewing</span> : null}
@@ -290,7 +290,7 @@ export default function Settings() {
               <dl className="space-y-2.5 text-[13px]">
                 {[
                   ['School', school.shortName],
-                  ['Board', school.board],
+                  ['Board', school.affiliatedTo],
                   ['Academic year', school.academicYear],
                   ['Current term', `Term ${school.currentTerm}`],
                   ['Office', school.phone],

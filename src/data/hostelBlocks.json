@@ -1,0 +1,20 @@
+[
+  {
+    "id": "hbk-1",
+    "collegeId": "col-1",
+    "name": "Thiruvalluvar Block",
+    "forGender": "men",
+    "wardenId": "usr-warden-m",
+    "floors": 3,
+    "messCharge": 3200
+  },
+  {
+    "id": "hbk-2",
+    "collegeId": "col-1",
+    "name": "Avvaiyar Block",
+    "forGender": "women",
+    "wardenId": "usr-warden-w",
+    "floors": 4,
+    "messCharge": 3200
+  }
+]

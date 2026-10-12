@@ -1,0 +1,22 @@
+[
+  {
+    "id": "col-1",
+    "groupId": "grp-1",
+    "name": "Sri Vidya Arts and Science College (Autonomous)",
+    "shortName": "Sri Vidya College",
+    "code": "C-41238",
+    "affiliatedTo": "Bharathiar University, Coimbatore",
+    "autonomous": true,
+    "naacGrade": "A+ (CGPA 3.41)",
+    "tagline": "அறிவே ஆற்றல்",
+    "taglineEn": "Knowledge is power",
+    "address": "Saravanampatti Main Road",
+    "city": "Coimbatore",
+    "phone": "+91 422 265 4400",
+    "email": "office@srividyacollege.ac.in",
+    "academicYear": "2026-27",
+    "currentTerm": "odd",
+    "isMain": true,
+    "seededOn": "2026-10-12"
+  }
+]

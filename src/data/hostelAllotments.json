@@ -1,0 +1,821 @@
+[
+  {
+    "id": "hal-1",
+    "roomId": "hrm-hbk-2-101",
+    "studentId": "stu-bsc-cs-2026-001",
+    "allottedOn": "2026-07-05",
+    "status": "requested"
+  },
+  {
+    "id": "hal-2",
+    "roomId": "hrm-hbk-2-101",
+    "studentId": "stu-bsc-cs-2026-005",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-3",
+    "roomId": "hrm-hbk-2-101",
+    "studentId": "stu-bsc-cs-2026-009",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-4",
+    "roomId": "hrm-hbk-2-101",
+    "studentId": "stu-bsc-cs-2026-013",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-5",
+    "roomId": "hrm-hbk-2-102",
+    "studentId": "stu-bsc-cs-2026-017",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-6",
+    "roomId": "hrm-hbk-2-102",
+    "studentId": "stu-bsc-cs-2026-021",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-7",
+    "roomId": "hrm-hbk-2-102",
+    "studentId": "stu-bsc-cs-2026-025",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-8",
+    "roomId": "hrm-hbk-2-103",
+    "studentId": "stu-bsc-cs-2026-029",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-9",
+    "roomId": "hrm-hbk-2-103",
+    "studentId": "stu-bsc-cs-2026-033",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-10",
+    "roomId": "hrm-hbk-1-101",
+    "studentId": "stu-bsc-cs-2025-001",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-11",
+    "roomId": "hrm-hbk-1-101",
+    "studentId": "stu-bsc-cs-2025-005",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-12",
+    "roomId": "hrm-hbk-1-101",
+    "studentId": "stu-bsc-cs-2025-009",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-13",
+    "roomId": "hrm-hbk-1-101",
+    "studentId": "stu-bsc-cs-2025-013",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-14",
+    "roomId": "hrm-hbk-1-102",
+    "studentId": "stu-bsc-cs-2025-017",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-15",
+    "roomId": "hrm-hbk-1-102",
+    "studentId": "stu-bsc-cs-2025-021",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-16",
+    "roomId": "hrm-hbk-1-102",
+    "studentId": "stu-bsc-cs-2025-025",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-17",
+    "roomId": "hrm-hbk-1-103",
+    "studentId": "stu-bsc-cs-2025-029",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-18",
+    "roomId": "hrm-hbk-1-103",
+    "studentId": "stu-bsc-cs-2025-033",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-19",
+    "roomId": "hrm-hbk-2-104",
+    "studentId": "stu-bsc-cs-2024-001",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-20",
+    "roomId": "hrm-hbk-2-104",
+    "studentId": "stu-bsc-cs-2024-005",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-21",
+    "roomId": "hrm-hbk-2-104",
+    "studentId": "stu-bsc-cs-2024-009",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-22",
+    "roomId": "hrm-hbk-2-105",
+    "studentId": "stu-bsc-cs-2024-013",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-23",
+    "roomId": "hrm-hbk-2-105",
+    "studentId": "stu-bsc-cs-2024-017",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-24",
+    "roomId": "hrm-hbk-2-105",
+    "studentId": "stu-bsc-cs-2024-021",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-25",
+    "roomId": "hrm-hbk-2-105",
+    "studentId": "stu-bsc-cs-2024-025",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-26",
+    "roomId": "hrm-hbk-2-106",
+    "studentId": "stu-bsc-cs-2024-029",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-27",
+    "roomId": "hrm-hbk-2-106",
+    "studentId": "stu-bsc-cs-2024-033",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-28",
+    "roomId": "hrm-hbk-2-107",
+    "studentId": "stu-bca-2026-001",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-29",
+    "roomId": "hrm-hbk-2-107",
+    "studentId": "stu-bca-2026-005",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-30",
+    "roomId": "hrm-hbk-2-107",
+    "studentId": "stu-bca-2026-009",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-31",
+    "roomId": "hrm-hbk-2-107",
+    "studentId": "stu-bca-2026-013",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-32",
+    "roomId": "hrm-hbk-2-108",
+    "studentId": "stu-bca-2026-017",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-33",
+    "roomId": "hrm-hbk-2-108",
+    "studentId": "stu-bca-2026-021",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-34",
+    "roomId": "hrm-hbk-2-108",
+    "studentId": "stu-bca-2026-025",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-35",
+    "roomId": "hrm-hbk-2-201",
+    "studentId": "stu-bca-2026-029",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-36",
+    "roomId": "hrm-hbk-2-201",
+    "studentId": "stu-bca-2026-033",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-37",
+    "roomId": "hrm-hbk-1-104",
+    "studentId": "stu-bca-2025-001",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-38",
+    "roomId": "hrm-hbk-1-104",
+    "studentId": "stu-bca-2025-005",
+    "allottedOn": "2025-07-05",
+    "status": "requested"
+  },
+  {
+    "id": "hal-39",
+    "roomId": "hrm-hbk-1-104",
+    "studentId": "stu-bca-2025-009",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-40",
+    "roomId": "hrm-hbk-1-105",
+    "studentId": "stu-bca-2025-013",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-41",
+    "roomId": "hrm-hbk-1-105",
+    "studentId": "stu-bca-2025-017",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-42",
+    "roomId": "hrm-hbk-1-105",
+    "studentId": "stu-bca-2025-021",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-43",
+    "roomId": "hrm-hbk-1-105",
+    "studentId": "stu-bca-2025-025",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-44",
+    "roomId": "hrm-hbk-1-106",
+    "studentId": "stu-bca-2025-029",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-45",
+    "roomId": "hrm-hbk-1-106",
+    "studentId": "stu-bca-2025-033",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-46",
+    "roomId": "hrm-hbk-2-201",
+    "studentId": "stu-bca-2024-001",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-47",
+    "roomId": "hrm-hbk-2-201",
+    "studentId": "stu-bca-2024-005",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-48",
+    "roomId": "hrm-hbk-2-202",
+    "studentId": "stu-bca-2024-009",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-49",
+    "roomId": "hrm-hbk-2-202",
+    "studentId": "stu-bca-2024-013",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-50",
+    "roomId": "hrm-hbk-2-202",
+    "studentId": "stu-bca-2024-017",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-51",
+    "roomId": "hrm-hbk-2-203",
+    "studentId": "stu-bca-2024-021",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-52",
+    "roomId": "hrm-hbk-2-203",
+    "studentId": "stu-bca-2024-025",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-53",
+    "roomId": "hrm-hbk-2-204",
+    "studentId": "stu-bca-2024-029",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-54",
+    "roomId": "hrm-hbk-2-204",
+    "studentId": "stu-bca-2024-033",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-55",
+    "roomId": "hrm-hbk-2-204",
+    "studentId": "stu-bcom-2026-001",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-56",
+    "roomId": "hrm-hbk-2-205",
+    "studentId": "stu-bcom-2026-005",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-57",
+    "roomId": "hrm-hbk-2-205",
+    "studentId": "stu-bcom-2026-009",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-58",
+    "roomId": "hrm-hbk-2-205",
+    "studentId": "stu-bcom-2026-013",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-59",
+    "roomId": "hrm-hbk-2-205",
+    "studentId": "stu-bcom-2026-017",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-60",
+    "roomId": "hrm-hbk-2-206",
+    "studentId": "stu-bcom-2026-021",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-61",
+    "roomId": "hrm-hbk-2-206",
+    "studentId": "stu-bcom-2026-025",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-62",
+    "roomId": "hrm-hbk-2-207",
+    "studentId": "stu-bcom-2026-029",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-63",
+    "roomId": "hrm-hbk-2-207",
+    "studentId": "stu-bcom-2026-033",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-64",
+    "roomId": "hrm-hbk-1-107",
+    "studentId": "stu-bcom-2025-001",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-65",
+    "roomId": "hrm-hbk-1-107",
+    "studentId": "stu-bcom-2025-005",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-66",
+    "roomId": "hrm-hbk-1-107",
+    "studentId": "stu-bcom-2025-009",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-67",
+    "roomId": "hrm-hbk-1-107",
+    "studentId": "stu-bcom-2025-013",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-68",
+    "roomId": "hrm-hbk-1-108",
+    "studentId": "stu-bcom-2025-017",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-69",
+    "roomId": "hrm-hbk-1-108",
+    "studentId": "stu-bcom-2025-021",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-70",
+    "roomId": "hrm-hbk-1-108",
+    "studentId": "stu-bcom-2025-025",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-71",
+    "roomId": "hrm-hbk-1-201",
+    "studentId": "stu-bcom-2025-029",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-72",
+    "roomId": "hrm-hbk-1-201",
+    "studentId": "stu-bcom-2025-033",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-73",
+    "roomId": "hrm-hbk-2-207",
+    "studentId": "stu-bcom-2024-001",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-74",
+    "roomId": "hrm-hbk-2-207",
+    "studentId": "stu-bcom-2024-005",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-75",
+    "roomId": "hrm-hbk-2-208",
+    "studentId": "stu-bcom-2024-009",
+    "allottedOn": "2024-07-05",
+    "status": "requested"
+  },
+  {
+    "id": "hal-76",
+    "roomId": "hrm-hbk-2-208",
+    "studentId": "stu-bcom-2024-013",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-77",
+    "roomId": "hrm-hbk-2-208",
+    "studentId": "stu-bcom-2024-017",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-78",
+    "roomId": "hrm-hbk-2-301",
+    "studentId": "stu-bcom-2024-021",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-79",
+    "roomId": "hrm-hbk-2-301",
+    "studentId": "stu-bcom-2024-025",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-80",
+    "roomId": "hrm-hbk-2-301",
+    "studentId": "stu-bcom-2024-029",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-81",
+    "roomId": "hrm-hbk-2-301",
+    "studentId": "stu-bcom-2024-033",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-82",
+    "roomId": "hrm-hbk-2-302",
+    "studentId": "stu-bba-2026-001",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-83",
+    "roomId": "hrm-hbk-2-302",
+    "studentId": "stu-bba-2026-005",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-84",
+    "roomId": "hrm-hbk-2-302",
+    "studentId": "stu-bba-2026-009",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-85",
+    "roomId": "hrm-hbk-2-303",
+    "studentId": "stu-bba-2026-013",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-86",
+    "roomId": "hrm-hbk-2-303",
+    "studentId": "stu-bba-2026-017",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-87",
+    "roomId": "hrm-hbk-2-304",
+    "studentId": "stu-bba-2026-021",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-88",
+    "roomId": "hrm-hbk-2-304",
+    "studentId": "stu-bba-2026-025",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-89",
+    "roomId": "hrm-hbk-2-304",
+    "studentId": "stu-bba-2026-029",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-90",
+    "roomId": "hrm-hbk-2-305",
+    "studentId": "stu-bba-2026-033",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-91",
+    "roomId": "hrm-hbk-1-201",
+    "studentId": "stu-bba-2025-001",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-92",
+    "roomId": "hrm-hbk-1-201",
+    "studentId": "stu-bba-2025-005",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-93",
+    "roomId": "hrm-hbk-1-202",
+    "studentId": "stu-bba-2025-009",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-94",
+    "roomId": "hrm-hbk-1-202",
+    "studentId": "stu-bba-2025-013",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-95",
+    "roomId": "hrm-hbk-1-202",
+    "studentId": "stu-bba-2025-017",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-96",
+    "roomId": "hrm-hbk-1-203",
+    "studentId": "stu-bba-2025-021",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-97",
+    "roomId": "hrm-hbk-1-203",
+    "studentId": "stu-bba-2025-025",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-98",
+    "roomId": "hrm-hbk-1-204",
+    "studentId": "stu-bba-2025-029",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-99",
+    "roomId": "hrm-hbk-1-204",
+    "studentId": "stu-bba-2025-033",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-100",
+    "roomId": "hrm-hbk-2-305",
+    "studentId": "stu-bba-2024-001",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-101",
+    "roomId": "hrm-hbk-2-305",
+    "studentId": "stu-bba-2024-005",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-102",
+    "roomId": "hrm-hbk-2-305",
+    "studentId": "stu-bba-2024-009",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-103",
+    "roomId": "hrm-hbk-2-306",
+    "studentId": "stu-bba-2024-013",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-104",
+    "roomId": "hrm-hbk-2-306",
+    "studentId": "stu-bba-2024-017",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-105",
+    "roomId": "hrm-hbk-2-307",
+    "studentId": "stu-bba-2024-021",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-106",
+    "roomId": "hrm-hbk-2-307",
+    "studentId": "stu-bba-2024-025",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-107",
+    "roomId": "hrm-hbk-2-307",
+    "studentId": "stu-bba-2024-029",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-108",
+    "roomId": "hrm-hbk-2-307",
+    "studentId": "stu-bba-2024-033",
+    "allottedOn": "2024-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-109",
+    "roomId": "hrm-hbk-2-308",
+    "studentId": "stu-msc-cs-2026-001",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-110",
+    "roomId": "hrm-hbk-2-308",
+    "studentId": "stu-msc-cs-2026-005",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-111",
+    "roomId": "hrm-hbk-2-308",
+    "studentId": "stu-msc-cs-2026-009",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-112",
+    "roomId": "hrm-hbk-2-401",
+    "studentId": "stu-msc-cs-2026-013",
+    "allottedOn": "2026-07-05",
+    "status": "requested"
+  },
+  {
+    "id": "hal-113",
+    "roomId": "hrm-hbk-2-401",
+    "studentId": "stu-msc-cs-2026-017",
+    "allottedOn": "2026-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-114",
+    "roomId": "hrm-hbk-1-204",
+    "studentId": "stu-msc-cs-2025-003",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-115",
+    "roomId": "hrm-hbk-1-205",
+    "studentId": "stu-msc-cs-2025-007",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-116",
+    "roomId": "hrm-hbk-1-205",
+    "studentId": "stu-msc-cs-2025-011",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  },
+  {
+    "id": "hal-117",
+    "roomId": "hrm-hbk-1-205",
+    "studentId": "stu-msc-cs-2025-015",
+    "allottedOn": "2025-07-05",
+    "status": "allotted"
+  }
+]

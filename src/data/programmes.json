@@ -1,0 +1,72 @@
+[
+  {
+    "id": "prg-bsc-cs",
+    "collegeId": "col-1",
+    "departmentId": "dep-cs",
+    "name": "B.Sc. Computer Science",
+    "shortName": "B.Sc. CS",
+    "level": "ug",
+    "durationYears": 3,
+    "semesters": 6,
+    "totalCredits": 140,
+    "intake": 36,
+    "selfFinancing": true,
+    "code": "UCS"
+  },
+  {
+    "id": "prg-bca",
+    "collegeId": "col-1",
+    "departmentId": "dep-cs",
+    "name": "Bachelor of Computer Applications",
+    "shortName": "B.C.A.",
+    "level": "ug",
+    "durationYears": 3,
+    "semesters": 6,
+    "totalCredits": 140,
+    "intake": 36,
+    "selfFinancing": true,
+    "code": "UCA"
+  },
+  {
+    "id": "prg-bcom",
+    "collegeId": "col-1",
+    "departmentId": "dep-com",
+    "name": "B.Com. (Computer Applications)",
+    "shortName": "B.Com. CA",
+    "level": "ug",
+    "durationYears": 3,
+    "semesters": 6,
+    "totalCredits": 140,
+    "intake": 36,
+    "selfFinancing": true,
+    "code": "UCM"
+  },
+  {
+    "id": "prg-bba",
+    "collegeId": "col-1",
+    "departmentId": "dep-mgt",
+    "name": "Bachelor of Business Administration",
+    "shortName": "B.B.A.",
+    "level": "ug",
+    "durationYears": 3,
+    "semesters": 6,
+    "totalCredits": 140,
+    "intake": 36,
+    "selfFinancing": true,
+    "code": "UBA"
+  },
+  {
+    "id": "prg-msc-cs",
+    "collegeId": "col-1",
+    "departmentId": "dep-cs",
+    "name": "M.Sc. Computer Science",
+    "shortName": "M.Sc. CS",
+    "level": "pg",
+    "durationYears": 2,
+    "semesters": 4,
+    "totalCredits": 90,
+    "intake": 18,
+    "selfFinancing": true,
+    "code": "PCS"
+  }
+]

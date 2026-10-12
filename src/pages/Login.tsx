@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { theSchool } from '@/lib/queries';
+import { theCollege } from '@/lib/queries';
 import { Button } from '@/components/ui/Button';
 import { Field, Input } from '@/components/ui/Field';
 import { Modal } from '@/components/ui/Modal';
@@ -84,7 +84,7 @@ const HIGHLIGHTS = [
 export default function Login() {
   const { login } = useAuth();
   const db = useDatabase();
-  const school = theSchool(db);
+  const school = theCollege(db);
   const navigate = useNavigate();
   const location = useLocation();
   const [formError, setFormError] = useState('');
@@ -104,7 +104,7 @@ export default function Login() {
 
   // The student ID a parent would actually be given by the school.
   const demoAdmissionNo =
-    db.users.find((u) => u.email === 'student@school.edu')?.admissionNo ?? '';
+    db.users.find((u) => u.email === 'student@school.edu')?.registerNo ?? '';
 
   const onSubmit = async (values: FormValues) => {
     setFormError('');

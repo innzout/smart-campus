@@ -64,15 +64,15 @@ export function CommandPalette({
       }
     }
 
-    for (const s of db.subjects) {
-      if (matches(s.name, s.code)) {
-        out.push({ id: `sub-${s.id}`, label: s.name, hint: `${s.code} · attendance`, group: 'Subjects', to: '/attendance' });
+    for (const s of db.courses) {
+      if (matches(s.title, s.code)) {
+        out.push({ id: `crs-${s.id}`, label: s.title, hint: `${s.code} · attendance`, group: 'Courses', to: '/attendance' });
       }
     }
 
-    for (const h of db.homework) {
+    for (const h of db.assignments) {
       if (matches(h.title)) {
-        out.push({ id: `hw-${h.id}`, label: h.title, hint: `Due ${h.dueOn}`, group: 'Homework', to: '/homework' });
+        out.push({ id: `asg-${h.id}`, label: h.title, hint: `Due ${h.dueOn}`, group: 'Assignments', to: '/assignments' });
       }
     }
 
@@ -102,8 +102,8 @@ export function CommandPalette({
 
     if (permissions.includes('user.view')) {
       for (const u of db.users) {
-        if (matches(u.name, u.email, u.admissionNo, u.employeeId)) {
-          out.push({ id: `usr-${u.id}`, label: u.name, hint: u.admissionNo ?? u.employeeId ?? roleName(primaryRole(u.roles)), group: 'People', to: '/students' });
+        if (matches(u.name, u.email, u.registerNo, u.employeeId)) {
+          out.push({ id: `usr-${u.id}`, label: u.name, hint: u.registerNo ?? u.employeeId ?? roleName(primaryRole(u.roles)), group: 'People', to: '/students' });
         }
       }
     }

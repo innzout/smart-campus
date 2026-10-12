@@ -1,10 +1,12 @@
 import group from './group.json';
-import schools from './schools.json';
-import hscGroups from './hscGroups.json';
-import classes from './classes.json';
-import subjects from './subjects.json';
-import classSubjects from './classSubjects.json';
+import colleges from './colleges.json';
+import departments from './departments.json';
+import programmes from './programmes.json';
+import sections from './sections.json';
+import courses from './courses.json';
+import offerings from './offerings.json';
 import users from './users.json';
+import mentorNotes from './mentorNotes.json';
 import applications from './applications.json';
 import leaves from './leaves.json';
 import substitutions from './substitutions.json';
@@ -14,14 +16,22 @@ import labBatches from './labBatches.json';
 import labItems from './labItems.json';
 import labBreakages from './labBreakages.json';
 import attendance from './attendance.json';
-import homework from './homework.json';
-import homeworkStatus from './homeworkStatus.json';
+import condonations from './condonations.json';
+import assignments from './assignments.json';
+import assignmentStatus from './assignmentStatus.json';
+import internalMarks from './internalMarks.json';
 import exams from './exams.json';
-import marks from './marks.json';
+import results from './results.json';
 import fees from './fees.json';
 import payments from './payments.json';
 import salaries from './salaries.json';
 import payslips from './payslips.json';
+import companies from './companies.json';
+import drives from './drives.json';
+import driveApplications from './driveApplications.json';
+import hostelBlocks from './hostelBlocks.json';
+import hostelRooms from './hostelRooms.json';
+import hostelAllotments from './hostelAllotments.json';
 import circulars from './circulars.json';
 import events from './events.json';
 import requests from './requests.json';
@@ -43,8 +53,8 @@ import type { Database } from './types';
  *
  * A deployed demo is built once but shown for weeks, so every date is shifted
  * forward at load time. The shift is a whole number of **weeks**: that keeps
- * each record on the same weekday, so attendance never lands on a Sunday and
- * the timetable still lines up. Drift is therefore at most six days.
+ * each record on the same weekday, so an hour of attendance never lands on a
+ * Sunday and the timetable still lines up. Drift is therefore at most six days.
  */
 
 const DAY_MS = 86_400_000;
@@ -65,7 +75,7 @@ function weekShiftDays(seededOn: string): number {
   return days <= 0 ? 0 : Math.floor(days / 7) * 7;
 }
 
-/** Shift a `YYYY-MM-DD` or `YYYY-MM-DDTHH:mm:ss` value, preserving any time part. */
+/** Shift a `YYYY-MM-DD` value, preserving any time part. */
 function shift(value: string, days: number): string {
   const d = parseISO(value);
   d.setDate(d.getDate() + days);
@@ -75,17 +85,21 @@ function shift(value: string, days: number): string {
 /** Every date-bearing field, by collection. */
 const DATE_FIELDS: Partial<Record<keyof Database, string[]>> = {
   users: ['joinedOn', 'dateOfJoining'],
+  mentorNotes: ['on'],
   applications: ['submittedOn', 'reviewedOn'],
   leaves: ['from', 'to'],
   substitutions: ['date'],
   labBreakages: ['date'],
   attendance: ['date'],
-  homework: ['assignedOn', 'dueOn'],
-  homeworkStatus: ['submittedOn'],
+  assignments: ['assignedOn', 'dueOn'],
+  assignmentStatus: ['submittedOn'],
   exams: ['startsOn', 'endsOn'],
   fees: ['dueOn'],
   payments: ['paidOn'],
   payslips: ['paidOn'],
+  drives: ['driveOn', 'registrationCloses'],
+  driveApplications: ['appliedOn'],
+  hostelAllotments: ['allottedOn'],
   circulars: ['postedOn'],
   events: ['date'],
   requests: ['createdOn'],
@@ -101,7 +115,7 @@ const DATE_FIELDS: Partial<Record<keyof Database, string[]>> = {
 
 function rebase(db: Database): Database {
   const today = toISO(new Date());
-  const days = weekShiftDays(db.schools[0]?.seededOn ?? today);
+  const days = weekShiftDays(db.colleges[0]?.seededOn ?? today);
 
   if (days > 0) {
     for (const [collection, fields] of Object.entries(DATE_FIELDS)) {
@@ -115,12 +129,8 @@ function rebase(db: Database): Database {
       }
     }
 
-    // Help-desk updates carry their own dates.
-    for (const r of db.requests) {
-      for (const u of r.updates) u.on = shift(u.on, days);
-    }
-
-    // Application documents are uploaded before the application is reviewed.
+    // Help-desk updates and application documents carry their own dates.
+    for (const r of db.requests) for (const u of r.updates) u.on = shift(u.on, days);
     for (const a of db.applications) {
       for (const d of a.documents) d.uploadedOn = shift(d.uploadedOn, days);
     }
@@ -132,22 +142,35 @@ function rebase(db: Database): Database {
       loan.fine = 0;
       continue;
     }
-    const overdueDays = Math.round(
+    const overdue = Math.round(
       (startOfDay(parseISO(today)) - startOfDay(parseISO(loan.dueOn))) / DAY_MS,
     );
-    loan.fine = overdueDays > 0 ? overdueDays * 2 : 0;
+    loan.fine = overdue > 0 ? overdue * 2 : 0;
   }
 
-  // An exam is published once it has been sat.
+  // Results are published once the examination has been sat.
   for (const exam of db.exams) exam.published = exam.endsOn < today;
 
-  // The term follows the calendar: June–Sept 1, Oct–Dec 2, Jan–May 3.
-  const month = new Date().getMonth();
-  const term = (month >= 5 && month <= 8 ? 1 : month >= 9 && month <= 11 ? 2 : 3) as 1 | 2 | 3;
-  for (const school of db.schools) school.currentTerm = term;
+  // A campus drive moves through its own states as its dates pass.
+  for (const drive of db.drives) {
+    if (drive.status === 'cancelled') continue;
+    drive.status =
+      drive.driveOn < today
+        ? 'completed'
+        : drive.registrationCloses < today
+          ? 'in-progress'
+          : drive.registrationCloses < shift(today, 10)
+            ? 'registration-open'
+            : 'announced';
+  }
 
-  // Substitutions are arranged for a single day, so only today's are relevant.
-  // Pull the whole set onto today rather than leaving a stale, empty board.
+  // The semester follows the calendar: June–November odd, December–May even.
+  const month = new Date().getMonth();
+  const term = month >= 5 && month <= 10 ? 'odd' : 'even';
+  for (const college of db.colleges) college.currentTerm = term;
+
+  // Cover is arranged for a single day, so pull today's board onto today
+  // rather than leaving it empty.
   for (const s of db.substitutions) s.date = today;
 
   return db;
@@ -157,12 +180,14 @@ export const seedDatabase = (): Database =>
   rebase(
     structuredClone({
       group,
-      schools,
-      hscGroups,
-      classes,
-      subjects,
-      classSubjects,
+      colleges,
+      departments,
+      programmes,
+      sections,
+      courses,
+      offerings,
       users,
+      mentorNotes,
       applications,
       leaves,
       substitutions,
@@ -172,14 +197,22 @@ export const seedDatabase = (): Database =>
       labItems,
       labBreakages,
       attendance,
-      homework,
-      homeworkStatus,
+      condonations,
+      assignments,
+      assignmentStatus,
+      internalMarks,
       exams,
-      marks,
+      results,
       fees,
       payments,
       salaries,
       payslips,
+      companies,
+      drives,
+      driveApplications,
+      hostelBlocks,
+      hostelRooms,
+      hostelAllotments,
       circulars,
       events,
       requests,

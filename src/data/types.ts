@@ -1,15 +1,28 @@
 /**
- * Domain model for the school ERP.
+ * Domain model for the college ERP.
  *
- * Shaped around a Tamil Nadu private school run by a trust, which is the
- * structure most Indian private schools share: a trust owns one or more
- * branches, each branch has a Correspondent as its legal head, and teaching
- * staff carry a graded designation (SGT / BT Assistant / PG Assistant).
+ * Shaped around a Tamil Nadu arts and science college affiliated to a
+ * university, which is the structure most Indian private colleges share: a
+ * trust owns the college, the college is organised into departments, each
+ * department runs programmes, and a programme admits a batch that moves
+ * through semesters together.
+ *
+ * The things that make this a college rather than a school, and that the model
+ * has to get right:
+ *
+ *  - Attendance is per course-hour, not per day. A student can be at 90% in one
+ *    course and 60% in another, and the 75% rule is applied per course.
+ *  - Assessment is internal (CIA) plus end-semester, carrying credits, and
+ *    produces a GPA and a CGPA rather than a percentage.
+ *  - A failed course becomes an arrear the student carries and re-sits, which
+ *    is the single most consequential fact in an Indian undergraduate's record.
+ *  - Students choose electives, so two students in the same section do not
+ *    necessarily sit the same papers.
  */
 
 /* ── organisation ──────────────────────────────────────────────────────── */
 
-/** The trust or society that owns the schools. One per deployment. */
+/** The trust or society that runs the institution. */
 export interface Group {
   id: string;
   name: string;
@@ -21,185 +34,218 @@ export interface Group {
   email: string;
 }
 
-export interface School {
+export interface College {
   id: string;
   groupId: string;
   name: string;
   shortName: string;
-  /** DSE recognition code. */
+  /** AISHE code, which every Indian college has. */
   code: string;
-  board: string;
-  /** School motto, in Tamil. */
+  /** The university this college's degrees are awarded by. */
+  affiliatedTo: string;
+  /** Autonomous colleges set their own syllabus and conduct their own exams. */
+  autonomous: boolean;
+  naacGrade: string;
   tagline: string;
-  /** The same motto in English, shown alongside. */
   taglineEn: string;
   address: string;
   city: string;
   phone: string;
   email: string;
+  /** "2026-27" */
   academicYear: string;
-  currentTerm: 1 | 2 | 3;
-  /** The branch the trust treats as its main campus. */
+  /** Odd semesters run June–November, even December–April. */
+  currentTerm: 'odd' | 'even';
   isMain: boolean;
   /** Date the JSON was generated; the app rebases forward from it. */
   seededOn: string;
 }
 
-/* ── academic structure ────────────────────────────────────────────────── */
-
-/**
- * Tamil Nadu school stages. Subjects, teacher grades and assessment all differ
- * by stage, which is why a single flat "class" model does not survive contact
- * with a real school.
- */
-export type Stage = 'pre-primary' | 'primary' | 'middle' | 'secondary' | 'higher-secondary';
-
-export const STAGE_LABEL: Record<Stage, string> = {
-  'pre-primary': 'Pre-Primary',
-  primary: 'Primary',
-  middle: 'Middle',
-  secondary: 'Secondary',
-  'higher-secondary': 'Higher Secondary',
-};
-
-/**
- * Higher Secondary groups. A class 11 or 12 student takes a language, English
- * and four subjects fixed by the group they choose.
- */
-export interface HscGroup {
+export interface Department {
   id: string;
-  /** G1 … G5 */
-  code: string;
+  collegeId: string;
   name: string;
-  description: string;
-  /** Subject template ids, beyond the two compulsory languages. */
-  subjectIds: string[];
+  shortName: string;
+  /** The Head of Department, who is a member of the teaching staff. */
+  hodId: string;
+  establishedIn: number;
 }
 
-export interface SchoolClass {
+export type ProgrammeLevel = 'ug' | 'pg' | 'research';
+
+export const LEVEL_LABEL: Record<ProgrammeLevel, string> = {
+  ug: 'Undergraduate',
+  pg: 'Postgraduate',
+  research: 'Research',
+};
+
+export interface Programme {
   id: string;
-  schoolId: string;
-  /** 0 = LKG, -1 = UKG are avoided; pre-primary uses `name` instead. */
-  grade: number;
+  collegeId: string;
+  departmentId: string;
+  /** "B.Sc. Computer Science" */
+  name: string;
+  /** "B.Sc. CS" */
+  shortName: string;
+  level: ProgrammeLevel;
+  /** Years; 3 for most UG, 2 for PG. */
+  durationYears: number;
+  /** 6 for a three-year UG, 4 for a two-year PG. */
+  semesters: number;
+  /** Credits needed to graduate. */
+  totalCredits: number;
+  intake: number;
+  /** Self-financing programmes charge more and are not government-aided. */
+  selfFinancing: boolean;
+}
+
+/**
+ * A group of students admitted together and moving through the programme as a
+ * cohort. A college calls this a class, but it is a batch plus a section.
+ */
+export interface Section {
+  id: string;
+  collegeId: string;
+  programmeId: string;
+  /** Admission year, e.g. 2024 for the 2024–27 batch. */
+  batch: number;
+  /** "A", "B" */
   section: string;
-  /** "8-A", "11-A" */
+  /** Which semester this cohort is currently in. */
+  semester: number;
+  /** "III B.Sc. CS — A" */
   label: string;
-  stage: Stage;
-  /** Only for classes 11 and 12. */
-  hscGroupId?: string;
-  classTeacherId: string;
+  /** The class advisor, called a tutor in most Tamil Nadu colleges. */
+  tutorId: string;
   room: string;
   strength: number;
 }
 
-export type SubjectKind = 'language' | 'core' | 'elective' | 'co-curricular';
+/* ── courses ───────────────────────────────────────────────────────────── */
+
+export type CourseKind =
+  | 'core'
+  | 'allied'
+  | 'elective'
+  | 'practical'
+  | 'project'
+  | 'language'
+  | 'skill';
+
+export const COURSE_KIND_LABEL: Record<CourseKind, string> = {
+  core: 'Core',
+  allied: 'Allied',
+  elective: 'Elective',
+  practical: 'Practical',
+  project: 'Project',
+  language: 'Language',
+  skill: 'Skill / Value-added',
+};
 
 /**
- * A subject as the school offers it, independent of any class. Which classes
- * it applies to is expressed by `grades` — that is what lets Classes 1–5 carry
- * four subjects while 11-A Group 1 carries six.
+ * A paper in the syllabus. Courses belong to a programme and a semester, which
+ * is why a college cannot share one flat subject list the way a school can.
  */
-export interface SubjectTemplate {
+export interface Course {
   id: string;
+  /** University course code, e.g. 23UCS301. */
   code: string;
-  name: string;
-  nameTa?: string;
-  kind: SubjectKind;
-  /** The grades this subject is offered to. */
-  grades: number[];
-  maxMarks: number;
-  /** Higher Secondary science subjects carry a practical component. */
-  hasPractical: boolean;
-  practicalMarks: number;
-  /** Which lab the practical runs in, if any. */
+  title: string;
+  programmeId: string;
+  semester: number;
+  kind: CourseKind;
+  credits: number;
+  /** Teaching hours a week. */
+  hoursPerWeek: number;
+  /** Continuous internal assessment, usually out of 25. */
+  ciaMax: number;
+  /** End-semester examination, usually out of 75. */
+  eseMax: number;
+  /** A practical runs in a laboratory. */
   labKind?: LabKind;
 }
 
-/** A subject actually offered to one class-section, with its teacher. */
-export interface ClassSubject {
+/** A course actually being taught this semester, by a named member of staff. */
+export interface CourseOffering {
   id: string;
-  classId: string;
-  subjectId: string;
-  teacherId: string;
-  periodsPerWeek: number;
+  sectionId: string;
+  courseId: string;
+  facultyId: string;
+  /** Electives are taken by some of the cohort, not all of it. */
+  isElective: boolean;
+  /** For an elective, who chose it. Empty on a core paper, which everyone takes. */
+  enrolledIds: string[];
 }
 
 /* ── people ────────────────────────────────────────────────────────────── */
 
 /**
- * Role is what a person may *do*. It is separate from designation, and a
- * person holds several — an Accounts Officer in a small school is usually the
- * Payroll Officer too.
+ * Role is what a person may *do*, and a person holds several. Designation is
+ * what they are *employed as*, and is separate.
  */
 export type Role =
   | 'group-admin'
-  | 'correspondent'
+  | 'chairman'
   | 'principal'
-  | 'headmaster'
   | 'vice-principal'
+  | 'dean'
+  | 'hod'
+  | 'faculty'
+  | 'tutor'
+  | 'controller-of-exams'
   | 'office-superintendent'
   | 'accounts-officer'
   | 'payroll-officer'
-  | 'class-teacher'
-  | 'subject-teacher'
   | 'librarian'
-  | 'lab-incharge'
-  | 'lab-assistant'
+  | 'lab-instructor'
+  | 'placement-officer'
   | 'transport-incharge'
-  | 'warden'
+  | 'hostel-warden'
   | 'parent'
   | 'student';
 
-/**
- * Designation is what a person is *employed as*. The teaching ladder is the
- * Tamil Nadu one, and the grade determines which classes they may teach.
- */
 export type Designation =
-  | 'correspondent'
+  | 'chairman'
   | 'principal'
-  | 'headmaster'
   | 'vice-principal'
-  | 'pg-assistant'
-  | 'bt-assistant'
-  | 'sgt'
-  | 'pet'
+  | 'dean'
+  | 'professor'
+  | 'associate-professor'
+  | 'assistant-professor'
+  | 'physical-director'
   | 'librarian'
-  | 'lab-assistant'
+  | 'lab-instructor'
   | 'office-superintendent'
   | 'accounts-officer'
-  | 'attender';
+  | 'placement-officer'
+  | 'office-assistant';
 
 export const DESIGNATION_LABEL: Record<Designation, string> = {
-  correspondent: 'Correspondent',
+  chairman: 'Chairman',
   principal: 'Principal',
-  headmaster: 'Headmaster / Headmistress',
   'vice-principal': 'Vice Principal',
-  'pg-assistant': 'P.G. Assistant',
-  'bt-assistant': 'B.T. Assistant',
-  sgt: 'Secondary Grade Teacher',
-  pet: 'Physical Education Teacher',
+  dean: 'Dean',
+  professor: 'Professor',
+  'associate-professor': 'Associate Professor',
+  'assistant-professor': 'Assistant Professor',
+  'physical-director': 'Physical Director',
   librarian: 'Librarian',
-  'lab-assistant': 'Lab Assistant',
+  'lab-instructor': 'Lab Instructor',
   'office-superintendent': 'Office Superintendent',
   'accounts-officer': 'Accounts Officer',
-  attender: 'Attender',
+  'placement-officer': 'Placement Officer',
+  'office-assistant': 'Office Assistant',
 };
 
-/** The grades a teaching designation is qualified to handle. */
-export const DESIGNATION_GRADES: Partial<Record<Designation, number[]>> = {
-  sgt: [1, 2, 3, 4, 5],
-  'bt-assistant': [6, 7, 8, 9, 10],
-  'pg-assistant': [11, 12],
-  pet: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-};
+/** Which designations may teach a postgraduate programme. */
+export const PG_TEACHING: Designation[] = ['professor', 'associate-professor', 'assistant-professor'];
 
 export interface User {
   id: string;
-  schoolId: string;
+  collegeId: string;
   name: string;
   email: string;
   password: string;
-  /** A person may hold several roles. */
   roles: Role[];
   phone: string;
   status: 'active' | 'inactive';
@@ -207,12 +253,18 @@ export interface User {
   avatarHue: number;
 
   /* students */
-  admissionNo?: string;
+  /** University register number, e.g. 23UCS001. */
+  registerNo?: string;
   rollNo?: number;
-  classId?: string;
+  sectionId?: string;
+  programmeId?: string;
   dateOfBirth?: string;
   bloodGroup?: string;
   guardianIds?: string[];
+  /** The faculty member who mentors this student. */
+  mentorId?: string;
+  /** Quota the student was admitted under. */
+  admissionQuota?: 'management' | 'government' | 'sports' | 'first-graduate';
 
   /* parents */
   childIds?: string[];
@@ -221,143 +273,272 @@ export interface User {
   /* staff */
   employeeId?: string;
   designation?: Designation;
+  departmentId?: string;
   qualification?: string;
-  /** Teacher Eligibility Test — required for several posts in Tamil Nadu. */
-  tetCleared?: boolean;
+  /** NET or SET clearance, which matters for UGC pay scales and for teaching PG. */
+  netCleared?: boolean;
+  /** Years of teaching experience at appointment. */
+  experienceYears?: number;
   dateOfJoining?: string;
-  /** Subject templates this member of staff is qualified to teach. */
-  subjectIds?: string[];
+  /** Course ids this member of staff is competent to teach. */
+  courseIds?: string[];
 }
 
-/* ── staff recruitment ─────────────────────────────────────────────────── */
+/* ── mentoring ─────────────────────────────────────────────────────────── */
 
-export type DocumentKind =
-  | 'degree'
-  | 'bed'
-  | 'tet'
-  | 'aadhaar'
-  | 'pan'
-  | 'bank'
-  | 'experience';
-
-export const DOCUMENT_LABEL: Record<DocumentKind, string> = {
-  degree: 'Degree certificate',
-  bed: 'B.Ed certificate',
-  tet: 'TET certificate',
-  aadhaar: 'Aadhaar card',
-  pan: 'PAN card',
-  bank: 'Bank passbook',
-  experience: 'Experience certificate',
-};
-
-export interface StaffDocument {
-  kind: DocumentKind;
-  fileName: string;
-  uploadedOn: string;
-  verified: boolean;
-}
-
-export type ApplicationStatus = 'draft' | 'submitted' | 'under-review' | 'approved' | 'rejected';
-
-/** A teaching or non-teaching applicant, pending the Principal's approval. */
-export interface StaffApplication {
+/**
+ * Most Tamil Nadu colleges assign every student a mentor who follows their
+ * attendance and marks across all courses and meets them each month. It is the
+ * one piece of pastoral structure a college has that a school does not.
+ */
+export interface MentorNote {
   id: string;
-  ref: string;
-  schoolId: string;
-  name: string;
-  email: string;
-  phone: string;
-  designation: Designation;
-  qualification: string;
-  tetCleared: boolean;
-  experienceYears: number;
-  /** Subject template ids the applicant can teach. */
-  subjectIds: string[];
-  documents: StaffDocument[];
-  status: ApplicationStatus;
-  submittedOn: string;
-  reviewedById?: string;
-  reviewedOn?: string;
-  reviewNote: string;
+  mentorId: string;
+  studentId: string;
+  on: string;
+  note: string;
+  concern: 'attendance' | 'academic' | 'personal' | 'none';
 }
 
-/* ── leave and substitution ────────────────────────────────────────────── */
+/* ── attendance ────────────────────────────────────────────────────────── */
 
-export type LeaveKind = 'casual' | 'medical' | 'earned' | 'on-duty' | 'maternity';
+export type AttendanceStatus = 'present' | 'absent' | 'od' | 'leave';
 
-export interface StaffLeave {
+/**
+ * One hour of one course for one student.
+ *
+ * This is the central difference from a school. A school marks a child present
+ * for the day; a college marks attendance against each hour of each paper, and
+ * the shortage rule is applied per course, so a student can be debarred from
+ * one examination and not another.
+ */
+export interface AttendanceHour {
   id: string;
-  staffId: string;
-  kind: LeaveKind;
-  from: string;
-  to: string;
+  studentId: string;
+  offeringId: string;
+  date: string;
+  /** Which hour of the day, 1-based. */
+  hour: number;
+  status: AttendanceStatus;
+  markedBy?: string;
+}
+
+/** The threshold below which a student is short of attendance. */
+export const ATTENDANCE_MINIMUM = 75;
+/** Between this and the minimum, a student may apply for condonation. */
+export const CONDONATION_FLOOR = 65;
+
+export interface Condonation {
+  id: string;
+  studentId: string;
+  offeringId: string;
+  semester: number;
+  percent: number;
   reason: string;
   status: 'requested' | 'approved' | 'rejected';
-  approvedById?: string;
+  fee: number;
+  decidedById?: string;
+}
+
+/* ── coursework and assessment ─────────────────────────────────────────── */
+
+export interface Assignment {
+  id: string;
+  offeringId: string;
+  title: string;
+  description: string;
+  assignedOn: string;
+  dueOn: string;
+  maxMarks: number;
+  assignedById: string;
+}
+
+export interface AssignmentStatus {
+  id: string;
+  assignmentId: string;
+  studentId: string;
+  submittedOn: string | null;
+  marks: number | null;
+  remark: string;
+}
+
+export type CiaComponent = 'CIA-1' | 'CIA-2' | 'Model' | 'Assignment' | 'Attendance';
+
+/** A single internal assessment component for one student on one paper. */
+export interface InternalMark {
+  id: string;
+  studentId: string;
+  offeringId: string;
+  component: CiaComponent;
+  marks: number | null;
+  maxMarks: number;
+}
+
+export interface Exam {
+  id: string;
+  collegeId: string;
+  name: string;
+  shortName: string;
+  /** Which semester's end-semester examination this is. */
+  semester: number;
+  academicYear: string;
+  startsOn: string;
+  endsOn: string;
+  /** Results are withheld until the Controller of Examinations publishes them. */
+  published: boolean;
 }
 
 /**
- * Cover for a period whose teacher is absent. Schools call this the daily
- * "adjustment", and it is the academic coordinator's first job each morning.
+ * A student's outcome in one paper: internal out of 25, external out of 75,
+ * a letter grade, grade points and the credits earned.
  */
-export interface Substitution {
+export interface Result {
   id: string;
-  date: string;
-  slotId: string;
-  classId: string;
-  absentTeacherId: string;
-  coverTeacherId: string;
-  assignedById: string;
+  studentId: string;
+  examId: string;
+  courseId: string;
+  semester: number;
+  cia: number;
+  ese: number | null;
+  total: number;
+  grade: string;
+  gradePoint: number;
+  credits: number;
+  /** An arrear is carried until it is cleared at a later attempt. */
+  status: 'pass' | 'arrear' | 'absent' | 'withheld';
+  /** 1 for the first sitting, 2 upward for arrear attempts. */
+  attempt: number;
+}
+
+/* ── placements ────────────────────────────────────────────────────────── */
+
+/**
+ * The placement cell. For a final-year student and for the parent paying the
+ * fees, this is the part of a college that justifies the rest of it.
+ */
+export interface Company {
+  id: string;
+  collegeId: string;
+  name: string;
+  sector: string;
+  website: string;
+  contactName: string;
+  contactEmail: string;
+}
+
+export interface Drive {
+  id: string;
+  companyId: string;
+  role: string;
+  /** Annual package in rupees. */
+  packageLpa: number;
+  location: string;
+  /** Programmes invited to apply. */
+  programmeIds: string[];
+  minCgpa: number;
+  /** Most recruiters will not consider a candidate carrying arrears. */
+  maxArrears: number;
+  driveOn: string;
+  registrationCloses: string;
+  rounds: string[];
+  status: 'announced' | 'registration-open' | 'in-progress' | 'completed' | 'cancelled';
+}
+
+export type DriveStage =
+  | 'applied'
+  | 'shortlisted'
+  | 'aptitude'
+  | 'technical'
+  | 'hr'
+  | 'selected'
+  | 'rejected';
+
+export interface DriveApplication {
+  id: string;
+  driveId: string;
+  studentId: string;
+  appliedOn: string;
+  stage: DriveStage;
   note: string;
+}
+
+/* ── hostel ────────────────────────────────────────────────────────────── */
+
+export interface HostelBlock {
+  id: string;
+  collegeId: string;
+  name: string;
+  forGender: 'men' | 'women';
+  wardenId: string;
+  floors: number;
+  messCharge: number;
+}
+
+export interface HostelRoom {
+  id: string;
+  blockId: string;
+  number: string;
+  floor: number;
+  /** Two, three or four sharing, which is what the rent follows from. */
+  capacity: number;
+  rentPerYear: number;
+}
+
+export interface HostelAllotment {
+  id: string;
+  roomId: string;
+  studentId: string;
+  allottedOn: string;
+  status: 'requested' | 'allotted' | 'vacated' | 'rejected';
 }
 
 /* ── timetable ─────────────────────────────────────────────────────────── */
 
-export interface ClassSlot {
+export interface ClassHour {
   id: string;
-  classId: string;
+  sectionId: string;
   /** 1 = Monday … 6 = Saturday */
   day: number;
-  period: number;
+  /** Hour of the college day, 1-based. */
+  hour: number;
   start: string;
   end: string;
-  subjectId: string | null;
-  teacherId: string | null;
+  offeringId: string | null;
+  facultyId: string | null;
+  room: string;
   title?: string;
-  kind: 'period' | 'break' | 'lunch' | 'activity' | 'lab';
-  /** Set when this period is a practical. */
+  kind: 'hour' | 'break' | 'lunch' | 'lab' | 'library' | 'mentoring';
   labId?: string;
   batchId?: string;
 }
 
 /* ── laboratories ──────────────────────────────────────────────────────── */
 
-export type LabKind = 'physics' | 'chemistry' | 'botany' | 'zoology' | 'computer';
+export type LabKind = 'computer' | 'physics' | 'chemistry' | 'electronics' | 'language';
 
 export const LAB_LABEL: Record<LabKind, string> = {
+  computer: 'Computer Laboratory',
   physics: 'Physics Laboratory',
   chemistry: 'Chemistry Laboratory',
-  botany: 'Botany Laboratory',
-  zoology: 'Zoology Laboratory',
-  computer: 'Computer Laboratory',
+  electronics: 'Electronics Laboratory',
+  language: 'Language Laboratory',
 };
 
 export interface Lab {
   id: string;
-  schoolId: string;
+  collegeId: string;
+  departmentId: string;
   name: string;
   kind: LabKind;
   room: string;
-  /** How many students can work at once — this is why classes split into batches. */
   capacity: number;
   inChargeId: string;
   assistantId: string;
 }
 
-/** A class too large for the lab is split into batches that attend separately. */
 export interface LabBatch {
   id: string;
-  classId: string;
+  sectionId: string;
   name: string;
   studentIds: string[];
 }
@@ -379,64 +560,8 @@ export interface LabBreakage {
   date: string;
   quantity: number;
   note: string;
-  /** Schools recover breakage cost from the student. */
   amount: number;
   recovered: boolean;
-}
-
-/* ── attendance, coursework, assessment ───────────────────────────────── */
-
-export type AttendanceStatus = 'present' | 'absent' | 'late' | 'leave' | 'holiday';
-
-export interface AttendanceDay {
-  id: string;
-  studentId: string;
-  date: string;
-  status: AttendanceStatus;
-  reason?: string;
-  markedBy?: string;
-}
-
-export interface Homework {
-  id: string;
-  classId: string;
-  subjectId: string;
-  title: string;
-  description: string;
-  assignedOn: string;
-  dueOn: string;
-  assignedById: string;
-}
-
-export interface HomeworkStatus {
-  id: string;
-  homeworkId: string;
-  studentId: string;
-  done: boolean;
-  submittedOn: string | null;
-  remark: string;
-}
-
-export interface Exam {
-  id: string;
-  name: string;
-  shortName: string;
-  term: 1 | 2 | 3;
-  grade: number;
-  startsOn: string;
-  endsOn: string;
-  published: boolean;
-}
-
-export interface Mark {
-  id: string;
-  studentId: string;
-  examId: string;
-  subjectId: string;
-  marks: number | null;
-  maxMarks: number;
-  /** Higher Secondary science subjects are marked out of theory + practical. */
-  practicalMarks: number | null;
 }
 
 /* ── money ─────────────────────────────────────────────────────────────── */
@@ -445,12 +570,14 @@ export interface FeeItem {
   id: string;
   studentId: string;
   head: string;
-  term: 1 | 2 | 3 | 0;
+  /** Which semester this charge belongs to; 0 for a one-off. */
+  semester: number;
   total: number;
   paid: number;
   dueOn: string;
-  /** Concession granted by the school, already deducted from `total`. */
   concession: number;
+  /** Scholarships are a large part of how Tamil Nadu students pay. */
+  scholarship?: string;
 }
 
 export interface Payment {
@@ -458,14 +585,94 @@ export interface Payment {
   studentId: string;
   feeId: string;
   amount: number;
-  method: 'upi' | 'card' | 'netbanking' | 'cash' | 'cheque';
+  method: 'upi' | 'card' | 'netbanking' | 'cash' | 'cheque' | 'dd';
   paidOn: string;
   reference: string;
   receiptNo: string;
   collectedById?: string;
 }
 
-/* ── payroll ───────────────────────────────────────────────────────────── */
+/* ── staff recruitment, leave and payroll ──────────────────────────────── */
+
+export type DocumentKind =
+  | 'degree'
+  | 'pg'
+  | 'phd'
+  | 'net'
+  | 'aadhaar'
+  | 'pan'
+  | 'bank'
+  | 'experience'
+  | 'publications';
+
+export const DOCUMENT_LABEL: Record<DocumentKind, string> = {
+  degree: 'Degree certificate',
+  pg: 'Postgraduate certificate',
+  phd: 'Ph.D. certificate',
+  net: 'NET / SET certificate',
+  aadhaar: 'Aadhaar card',
+  pan: 'PAN card',
+  bank: 'Bank passbook',
+  experience: 'Experience certificate',
+  publications: 'List of publications',
+};
+
+export interface StaffDocument {
+  kind: DocumentKind;
+  fileName: string;
+  uploadedOn: string;
+  verified: boolean;
+}
+
+export type ApplicationStatus = 'draft' | 'submitted' | 'under-review' | 'approved' | 'rejected';
+
+export interface StaffApplication {
+  id: string;
+  ref: string;
+  collegeId: string;
+  name: string;
+  email: string;
+  phone: string;
+  designation: Designation;
+  departmentId: string;
+  qualification: string;
+  netCleared: boolean;
+  phd: boolean;
+  experienceYears: number;
+  /** Papers published, which is what a college actually screens on. */
+  publications: number;
+  courseIds: string[];
+  documents: StaffDocument[];
+  status: ApplicationStatus;
+  submittedOn: string;
+  reviewedById?: string;
+  reviewedOn?: string;
+  reviewNote: string;
+}
+
+export type LeaveKind = 'casual' | 'medical' | 'earned' | 'on-duty' | 'maternity' | 'academic';
+
+export interface StaffLeave {
+  id: string;
+  staffId: string;
+  kind: LeaveKind;
+  from: string;
+  to: string;
+  reason: string;
+  status: 'requested' | 'approved' | 'rejected';
+  approvedById?: string;
+}
+
+export interface Substitution {
+  id: string;
+  date: string;
+  hourId: string;
+  sectionId: string;
+  absentFacultyId: string;
+  coverFacultyId: string;
+  assignedById: string;
+  note: string;
+}
 
 export interface SalaryStructure {
   id: string;
@@ -475,7 +682,6 @@ export interface SalaryStructure {
   hra: number;
   conveyance: number;
   otherAllowance: number;
-  /** Employee contributions, deducted from gross. */
   pf: number;
   esi: number;
   professionalTax: number;
@@ -498,30 +704,30 @@ export interface Payslip {
 
 export interface Circular {
   id: string;
-  schoolId: string;
+  collegeId: string;
   title: string;
   titleTa?: string;
   body: string;
-  category: 'Exam' | 'Holiday' | 'Event' | 'Fee' | 'PTM' | 'General' | 'Transport';
+  category: 'Exam' | 'Holiday' | 'Event' | 'Fee' | 'Placement' | 'General' | 'Transport' | 'Hostel';
   postedOn: string;
   author: string;
   pinned: boolean;
-  /** Class ids, or 'all'. */
+  /** Section ids, programme ids, or 'all'. */
   audience: string[] | 'all';
   acknowledgedBy: string[];
 }
 
-export interface SchoolEvent {
+export interface CollegeEvent {
   id: string;
-  schoolId: string;
+  collegeId: string;
   title: string;
   description: string;
-  category: 'Cultural' | 'Sports' | 'Academic' | 'PTM' | 'Holiday';
+  category: 'Cultural' | 'Sports' | 'Academic' | 'Placement' | 'Holiday' | 'Seminar';
   date: string;
   time: string;
   venue: string;
   organiser: string;
-  forClasses: string[] | 'all';
+  forSections: string[] | 'all';
 }
 
 export type RequestStatus = 'open' | 'in-progress' | 'resolved';
@@ -532,7 +738,7 @@ export interface HelpRequest {
   raisedBy: string;
   aboutStudentId?: string;
   title: string;
-  category: 'Leave' | 'Transport' | 'Fee' | 'Certificate' | 'Facility' | 'Other';
+  category: 'Leave' | 'Transport' | 'Fee' | 'Certificate' | 'Hostel' | 'Facility' | 'Exam' | 'Other';
   description: string;
   status: RequestStatus;
   createdOn: string;
@@ -544,8 +750,8 @@ export interface MeetingSlot {
   date: string;
   start: string;
   end: string;
-  teacherId: string;
-  classId: string;
+  facultyId: string;
+  sectionId: string;
   capacity: number;
 }
 
@@ -557,7 +763,7 @@ export interface MeetingBooking {
   bookedOn: string;
   status: 'booked' | 'completed' | 'cancelled';
   note: string;
-  teacherNote: string;
+  facultyNote: string;
 }
 
 export interface Visit {
@@ -568,9 +774,9 @@ export interface Visit {
   visitorName: string;
   purpose:
     | 'Parent-Teacher Meeting'
-    | 'Meet a teacher'
+    | 'Meet a faculty member'
     | 'Fee payment'
-    | 'Collect child'
+    | 'Hostel'
     | 'Document collection'
     | 'Other';
   date: string;
@@ -589,10 +795,9 @@ export interface BusStop {
   time: string;
 }
 
-/** Vehicle papers a school must keep current — the compliance side of transport. */
 export interface Vehicle {
   id: string;
-  schoolId: string;
+  collegeId: string;
   busNo: string;
   model: string;
   capacity: number;
@@ -601,7 +806,6 @@ export interface Vehicle {
   driverLicenceNo: string;
   attendantName: string;
   attendantPhone: string;
-  /** Fitness certificate, insurance and permit expiry. */
   fcExpiry: string;
   insuranceExpiry: string;
   permitExpiry: string;
@@ -609,11 +813,10 @@ export interface Vehicle {
 
 export interface TransportRoute {
   id: string;
-  schoolId: string;
+  collegeId: string;
   name: string;
   vehicleId: string;
   stops: BusStop[];
-  /** Annual fee for this route. */
   fee: number;
 }
 
@@ -622,7 +825,6 @@ export interface StudentTransport {
   studentId: string;
   routeId: string;
   stop: string;
-  /** Parents may request transport; the office allots it. */
   status: 'requested' | 'approved' | 'allotted' | 'rejected';
   requestedOn: string;
 }
@@ -631,7 +833,7 @@ export interface StudentTransport {
 
 export interface Book {
   id: string;
-  schoolId: string;
+  collegeId: string;
   accessionNo: string;
   title: string;
   author: string;
@@ -640,7 +842,8 @@ export interface Book {
   category: string;
   copies: number;
   rack: string;
-  forGrades: number[];
+  /** Programme ids this title is meant for. */
+  forProgrammes: string[];
   price: number;
   addedOn: string;
 }
@@ -662,29 +865,30 @@ export interface Loan {
 export interface Notification {
   id: string;
   userId: string | 'all';
-  /** Set on a notice to everyone, so it stays inside its own branch. */
-  schoolId?: string;
+  collegeId?: string;
   title: string;
   body: string;
   kind:
     | 'attendance'
     | 'fee'
-    | 'homework'
+    | 'assignment'
     | 'event'
     | 'result'
     | 'transport'
     | 'staff'
+    | 'placement'
+    | 'hostel'
     | 'system';
   createdOn: string;
   read: boolean;
   link?: string;
 }
 
-export interface SchoolPlace {
+export interface CampusPlace {
   id: string;
-  schoolId: string;
+  collegeId: string;
   name: string;
-  kind: 'academic' | 'amenity' | 'sports' | 'admin' | 'lab';
+  kind: 'academic' | 'amenity' | 'sports' | 'admin' | 'lab' | 'hostel';
   x: number;
   y: number;
   w: number;
@@ -697,31 +901,41 @@ export interface SchoolPlace {
 
 export interface Database {
   group: Group[];
-  schools: School[];
-  hscGroups: HscGroup[];
-  classes: SchoolClass[];
-  subjects: SubjectTemplate[];
-  classSubjects: ClassSubject[];
+  colleges: College[];
+  departments: Department[];
+  programmes: Programme[];
+  sections: Section[];
+  courses: Course[];
+  offerings: CourseOffering[];
   users: User[];
+  mentorNotes: MentorNote[];
   applications: StaffApplication[];
   leaves: StaffLeave[];
   substitutions: Substitution[];
-  timetable: ClassSlot[];
+  timetable: ClassHour[];
   labs: Lab[];
   labBatches: LabBatch[];
   labItems: LabItem[];
   labBreakages: LabBreakage[];
-  attendance: AttendanceDay[];
-  homework: Homework[];
-  homeworkStatus: HomeworkStatus[];
+  attendance: AttendanceHour[];
+  condonations: Condonation[];
+  assignments: Assignment[];
+  assignmentStatus: AssignmentStatus[];
+  internalMarks: InternalMark[];
   exams: Exam[];
-  marks: Mark[];
+  results: Result[];
   fees: FeeItem[];
   payments: Payment[];
   salaries: SalaryStructure[];
   payslips: Payslip[];
+  companies: Company[];
+  drives: Drive[];
+  driveApplications: DriveApplication[];
+  hostelBlocks: HostelBlock[];
+  hostelRooms: HostelRoom[];
+  hostelAllotments: HostelAllotment[];
   circulars: Circular[];
-  events: SchoolEvent[];
+  events: CollegeEvent[];
   requests: HelpRequest[];
   meetingSlots: MeetingSlot[];
   meetingBookings: MeetingBooking[];
@@ -732,7 +946,26 @@ export interface Database {
   books: Book[];
   loans: Loan[];
   notifications: Notification[];
-  places: SchoolPlace[];
+  places: CampusPlace[];
 }
 
 export type CollectionName = keyof Database;
+
+/* ── grading ───────────────────────────────────────────────────────────── */
+
+/**
+ * The ten-point scale most Tamil Nadu autonomous colleges use. A paper is
+ * passed at 40 overall, and anything below that is an arrear carried to the
+ * next attempt rather than a mark on a report card.
+ */
+export const GRADE_BANDS: { min: number; grade: string; point: number; remark: string }[] = [
+  { min: 91, grade: 'O', point: 10, remark: 'Outstanding' },
+  { min: 81, grade: 'D+', point: 9, remark: 'Excellent' },
+  { min: 71, grade: 'D', point: 8, remark: 'Distinction' },
+  { min: 61, grade: 'A+', point: 7, remark: 'Very good' },
+  { min: 51, grade: 'A', point: 6, remark: 'Good' },
+  { min: 40, grade: 'B', point: 5, remark: 'Average' },
+  { min: 0, grade: 'RA', point: 0, remark: 'Reappear' },
+];
+
+export const PASS_MARK = 40;

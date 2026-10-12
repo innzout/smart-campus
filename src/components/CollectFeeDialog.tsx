@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Banknote, CheckCircle2, CreditCard, Printer, Receipt, Smartphone } from 'lucide-react';
+import { useCurrentUser } from '@/app/auth';
 import { useDatabase } from '@/lib/store';
-import { classLabel, feeSummary } from '@/lib/queries';
+import { sectionLabel, feeSummary } from '@/lib/queries';
 import { payFee } from '@/lib/actions';
 import { Button } from '@/components/ui/Button';
 import { Field, Input } from '@/components/ui/Field';
@@ -27,6 +28,8 @@ type Method = (typeof METHODS)[number]['value'];
  * clerk's daily screen — pick the head, take the money, hand over a receipt.
  */
 export function CollectFeeDialog({ student, onClose }: { student: User; onClose: () => void }) {
+  // The receipt records who took the money, which is the point of a counter.
+  const me = useCurrentUser();
   const db = useDatabase();
   const summary = feeSummary(db, student.id);
   const outstanding = summary.rows.filter((f) => f.paid < f.total);
@@ -60,9 +63,10 @@ export function CollectFeeDialog({ student, onClose }: { student: User; onClose:
       setError(`That is more than the ${money(due)} outstanding on this head.`);
       return;
     }
-    const result = payFee({ feeId: fee.id, studentId: student.id, amount: value, method });
-    setReceipt({ receiptNo: result.receiptNo, amount: value });
-    toast.success('Payment recorded', { description: `Receipt ${result.receiptNo}` });
+    // payFee returns the receipt number it allotted.
+    const receiptNo = payFee({ feeId: fee.id, amount: value, method, collectedById: me.id });
+    setReceipt({ receiptNo, amount: value });
+    toast.success('Payment recorded', { description: `Receipt ${receiptNo}` });
   };
 
   if (receipt) {
@@ -95,8 +99,8 @@ export function CollectFeeDialog({ student, onClose }: { student: User; onClose:
           <dl className="mt-6 w-full space-y-2.5 rounded-xl bg-surface-2 px-4 py-3.5 text-left text-[12.5px]">
             {[
               ['Receipt no.', receipt.receiptNo],
-              ['Student', `${student.name} · ${classLabel(db, student.classId)}`],
-              ['Admission no.', student.admissionNo ?? '—'],
+              ['Student', `${student.name} · ${sectionLabel(db, student.sectionId)}`],
+              ['Admission no.', student.registerNo ?? '—'],
               ['Method', method.toUpperCase()],
               ['Collected on', formatDate(todayISO())],
             ].map(([k, v]) => (
@@ -119,7 +123,7 @@ export function CollectFeeDialog({ student, onClose }: { student: User; onClose:
       open
       onClose={onClose}
       title="Collect fee at the counter"
-      description={`${student.name} · ${classLabel(db, student.classId)} · ${student.admissionNo}`}
+      description={`${student.name} · ${sectionLabel(db, student.sectionId)} · ${student.registerNo}`}
       footer={
         <>
           <Button variant="secondary" onClick={onClose}>

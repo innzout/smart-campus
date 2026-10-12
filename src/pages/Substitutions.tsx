@@ -141,8 +141,8 @@ export default function Substitutions() {
               />
             ) : (
               <ul className="space-y-2.5">
-                {board.map(({ slot, cls, subject, absentTeacher, cover, canTeach, otherFree }) => {
-                  const coverTeacher = cover ? userById(db, cover.coverTeacherId) : undefined;
+                {board.map(({ slot, section: cls, course: subject, absentFaculty, cover, canTeach, otherFree }) => {
+                  const coverTeacher = cover ? userById(db, cover.coverFacultyId) : undefined;
                   return (
                     <li
                       key={slot.id}
@@ -150,16 +150,16 @@ export default function Substitutions() {
                     >
                       <div className="flex flex-wrap items-center gap-3">
                         <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-surface-2 text-[13px] font-semibold text-ink-2 tnum">
-                          P{slot.period}
+                          P{slot.hour}
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block truncate text-[13.5px] font-semibold text-ink">
-                            {cls?.label} · {subject?.name ?? slot.title ?? 'Lesson'}
+                            {cls?.label} · {subject?.title ?? slot.title ?? 'Lesson'}
                             {slot.kind === 'lab' ? ' (practical)' : ''}
                           </span>
                           <span className="mt-0.5 block truncate text-[12px] text-ink-3">
                             {formatTime(slot.start)}–{formatTime(slot.end)} · {cls?.room} ·{' '}
-                            {absentTeacher?.name ?? 'Teacher'} absent
+                            {absentFaculty?.name ?? 'Teacher'} absent
                           </span>
                         </span>
 
@@ -184,30 +184,30 @@ export default function Substitutions() {
                           </span>
                         ) : manage ? (
                           <Select
-                            aria-label={`Assign cover for period ${slot.period}, ${cls?.label}`}
+                            aria-label={`Assign cover for period ${slot.hour}, ${cls?.label}`}
                             value=""
                             className="h-9 min-w-[15rem] text-[13px]"
                             onChange={(e) => {
-                              const teacherId = e.target.value;
-                              if (!teacherId) return;
-                              const supervisionOnly = !canTeach.some((t) => t.id === teacherId);
+                              const facultyId = e.target.value;
+                              if (!facultyId) return;
+                              const supervisionOnly = !canTeach.some((t) => t.id === facultyId);
                               assignSubstitution({
                                 date,
-                                slotId: slot.id,
-                                coverTeacherId: teacherId,
+                                hourId: slot.id,
+                                coverFacultyId: facultyId,
                                 assignedById: me.id,
                                 note: supervisionOnly
-                                  ? `Supervision only — not a ${subject?.name ?? 'subject'} teacher.`
+                                  ? `Supervision only — not a ${subject?.title ?? 'subject'} teacher.`
                                   : '',
                               });
                               toast.success('Cover assigned', {
-                                description: `${userById(db, teacherId)?.name} has been notified.`,
+                                description: `${userById(db, facultyId)?.name} has been notified.`,
                               });
                             }}
                           >
                             <option value="">Assign cover…</option>
                             {canTeach.length > 0 ? (
-                              <optgroup label={`Free and can teach ${subject?.name ?? 'this'}`}>
+                              <optgroup label={`Free and can teach ${subject?.title ?? 'this'}`}>
                                 {canTeach.map((t) => (
                                   <option key={t.id} value={t.id}>
                                     {t.name}

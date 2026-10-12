@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dep-cs",
+    "collegeId": "col-1",
+    "name": "Computer Science",
+    "shortName": "CS",
+    "hodId": "usr-f1",
+    "establishedIn": 1998
+  },
+  {
+    "id": "dep-com",
+    "collegeId": "col-1",
+    "name": "Commerce",
+    "shortName": "COM",
+    "hodId": "usr-f8",
+    "establishedIn": 1992
+  },
+  {
+    "id": "dep-mgt",
+    "collegeId": "col-1",
+    "name": "Management Studies",
+    "shortName": "MGT",
+    "hodId": "usr-f13",
+    "establishedIn": 2004
+  },
+  {
+    "id": "dep-mat",
+    "collegeId": "col-1",
+    "name": "Mathematics",
+    "shortName": "MAT",
+    "hodId": "usr-f16",
+    "establishedIn": 1992
+  },
+  {
+    "id": "dep-eng",
+    "collegeId": "col-1",
+    "name": "English",
+    "shortName": "ENG",
+    "hodId": "usr-f18",
+    "establishedIn": 1992
+  }
+]

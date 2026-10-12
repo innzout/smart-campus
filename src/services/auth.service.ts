@@ -8,30 +8,25 @@ import type { Role, User } from '@/data/types';
  * a backend that didn't start. The permission model is the real one and is what
  * an API would enforce; only the credential check is local.
  *
- * A person holds **several roles**, and their permissions are the union. This
- * is not a convenience: in a school of this size the Accounts Officer is also
- * the Payroll Officer, a Vice Principal still teaches a subject, and a class
- * teacher is a subject teacher elsewhere. One role per account cannot describe
- * that without inventing combined roles that no school would recognise.
+ * A person holds **several roles** and their permissions are the union. In a
+ * college this is not a convenience but the normal case: a Head of Department
+ * still teaches, a tutor is a subject teacher for other cohorts, the Accounts
+ * Officer also runs payroll, and a warden holds a teaching post as well.
  */
 
-const SESSION_KEY = 'svm.session';
-const OVERRIDES_KEY = 'svm.permissions';
+const SESSION_KEY = 'svc.session';
+const OVERRIDES_KEY = 'svc.permissions';
 
 export interface AuthUser extends User {
   permissions: string[];
   /** The label shown for this person, taken from their most senior role. */
   roleName: string;
-  /** For parents: the child currently being viewed. */
+  /** For parents: the student currently being viewed. */
   activeChildId?: string;
 }
 
 /* ── permission catalogue ──────────────────────────────────────────────── */
 
-/**
- * Every permission the app checks, grouped for the Roles screen. Keeping this
- * list explicit is what lets a permission set be edited without code changes.
- */
 export const PERMISSION_GROUPS: { label: string; items: { key: string; label: string }[] }[] = [
   {
     label: 'General',
@@ -42,48 +37,75 @@ export const PERMISSION_GROUPS: { label: string; items: { key: string; label: st
       { key: 'circular.post', label: 'Post circulars' },
       { key: 'circular.delete', label: 'Withdraw circulars' },
       { key: 'event.view', label: 'See events' },
-      { key: 'map.view', label: 'See the school map' },
-      { key: 'settings.manage', label: 'Change school settings' },
+      { key: 'map.view', label: 'See the campus map' },
+      { key: 'settings.manage', label: 'Change institution settings' },
     ],
   },
   {
-    label: 'Organisation',
+    label: 'Institution',
     items: [
-      { key: 'org.view', label: 'See branches' },
-      { key: 'org.manage', label: 'Create branches and branch admins' },
+      { key: 'org.view', label: 'See institutions' },
+      { key: 'org.manage', label: 'Open institutions and appoint their heads' },
       { key: 'role.view', label: 'See roles and permissions' },
       { key: 'role.manage', label: 'Change what a role may do' },
     ],
   },
   {
-    label: 'Academic setup',
+    label: 'Academic structure',
     items: [
-      { key: 'academic.view', label: 'See classes and subjects' },
-      { key: 'academic.manage', label: 'Create classes, assign subjects and teachers' },
+      { key: 'academic.view', label: 'See programmes, courses and sections' },
+      { key: 'academic.manage', label: 'Create programmes, courses and assign faculty' },
+      { key: 'timetable.view', label: 'See the timetable' },
+      { key: 'timetable.manage', label: 'Build the timetable' },
     ],
   },
   {
     label: 'Attendance',
     items: [
       { key: 'attendance.view.self', label: 'See own attendance' },
-      { key: 'attendance.view.child', label: 'See their child’s attendance' },
-      { key: 'attendance.view.class', label: 'See a class register' },
-      { key: 'attendance.view.school', label: 'See attendance for the whole school' },
-      { key: 'attendance.mark', label: 'Mark the register' },
+      { key: 'attendance.view.child', label: 'See their ward’s attendance' },
+      { key: 'attendance.view.class', label: 'See attendance for a section' },
+      { key: 'attendance.view.college', label: 'See attendance for the whole college' },
+      { key: 'attendance.mark', label: 'Mark the hour register' },
+      { key: 'condonation.request', label: 'Apply for condonation of shortage' },
+      { key: 'condonation.approve', label: 'Grant or refuse condonation' },
     ],
   },
   {
     label: 'Coursework and results',
     items: [
-      { key: 'timetable.view', label: 'See the timetable' },
-      { key: 'homework.view', label: 'See homework' },
-      { key: 'homework.create', label: 'Set homework' },
-      { key: 'homework.update', label: 'Mark homework done' },
-      { key: 'result.view.self', label: 'See own report card' },
-      { key: 'result.view.child', label: 'See their child’s report card' },
-      { key: 'result.view.class', label: 'See a class’s results' },
-      { key: 'result.enter', label: 'Enter marks' },
-      { key: 'result.publish', label: 'Publish results' },
+      { key: 'assignment.view', label: 'See assignments' },
+      { key: 'assignment.create', label: 'Set assignments' },
+      { key: 'assignment.grade', label: 'Mark assignments' },
+      { key: 'result.view.self', label: 'See own results' },
+      { key: 'result.view.child', label: 'See their ward’s results' },
+      { key: 'result.view.class', label: 'See a section’s results' },
+      { key: 'result.enter', label: 'Enter internal marks' },
+      { key: 'result.publish', label: 'Publish end-semester results' },
+      { key: 'exam.manage', label: 'Run the examination cell' },
+    ],
+  },
+  {
+    label: 'Placements',
+    items: [
+      { key: 'placement.view', label: 'See drives and offers' },
+      { key: 'placement.apply', label: 'Register for a drive' },
+      { key: 'placement.manage', label: 'Run the placement cell' },
+    ],
+  },
+  {
+    label: 'Hostel',
+    items: [
+      { key: 'hostel.view', label: 'See hostel blocks and allotments' },
+      { key: 'hostel.request', label: 'Apply for a hostel place' },
+      { key: 'hostel.manage', label: 'Allot rooms and manage residents' },
+    ],
+  },
+  {
+    label: 'Mentoring',
+    items: [
+      { key: 'mentor.view', label: 'See their mentees' },
+      { key: 'mentor.note', label: 'Record a mentoring note' },
     ],
   },
   {
@@ -96,7 +118,7 @@ export const PERMISSION_GROUPS: { label: string; items: { key: string; label: st
       { key: 'leave.request', label: 'Apply for leave' },
       { key: 'leave.approve', label: 'Approve staff leave' },
       { key: 'substitution.view', label: 'See the day’s adjustments' },
-      { key: 'substitution.manage', label: 'Arrange cover for absent teachers' },
+      { key: 'substitution.manage', label: 'Arrange cover for absent faculty' },
       { key: 'payroll.view', label: 'See payslips' },
       { key: 'payroll.manage', label: 'Run payroll' },
     ],
@@ -106,8 +128,8 @@ export const PERMISSION_GROUPS: { label: string; items: { key: string; label: st
     items: [
       { key: 'student.view', label: 'See the student directory' },
       { key: 'student.manage', label: 'Admit and edit students' },
-      { key: 'fee.view.child', label: 'See their child’s fees' },
-      { key: 'fee.view.school', label: 'See fees for the whole school' },
+      { key: 'fee.view.child', label: 'See their ward’s fees' },
+      { key: 'fee.view.college', label: 'See fees for the whole college' },
       { key: 'fee.pay', label: 'Pay fees online' },
       { key: 'fee.collect', label: 'Collect fees at the counter' },
       { key: 'report.view', label: 'See management reports' },
@@ -148,7 +170,7 @@ export const PERMISSION_GROUPS: { label: string; items: { key: string; label: st
       { key: 'meeting.view', label: 'See PTM slots' },
       { key: 'meeting.book', label: 'Book a PTM slot' },
       { key: 'meeting.manage', label: 'Open and manage PTM slots' },
-      { key: 'visit.view', label: 'See school visits' },
+      { key: 'visit.view', label: 'See campus visits' },
       { key: 'visit.request', label: 'Request a visit' },
       { key: 'visit.approve', label: 'Approve visits and check visitors in' },
     ],
@@ -160,78 +182,93 @@ export const ALL_PERMISSIONS = PERMISSION_GROUPS.flatMap((g) => g.items.map((i) 
 const COMMON = ['dashboard.view', 'notification.view', 'circular.view', 'event.view', 'map.view'];
 
 const PARENT = [
-  ...COMMON, 'timetable.view', 'attendance.view.child', 'homework.view',
+  ...COMMON, 'timetable.view', 'attendance.view.child', 'assignment.view',
   'result.view.child', 'fee.view.child', 'fee.pay', 'transport.view',
   'transport.request', 'request.raise', 'request.view.self', 'meeting.view',
   'meeting.book', 'visit.view', 'visit.request', 'library.view',
+  'placement.view', 'hostel.view', 'hostel.request', 'condonation.request',
 ];
 
 const STUDENT = [
-  ...COMMON, 'timetable.view', 'attendance.view.self', 'homework.view',
-  'homework.update', 'result.view.self', 'library.view', 'library.borrow',
-  'transport.view', 'request.raise', 'request.view.self', 'meeting.view',
-  'visit.view', 'lab.view',
+  ...COMMON, 'timetable.view', 'attendance.view.self', 'assignment.view',
+  'result.view.self', 'library.view', 'library.borrow', 'transport.view',
+  'transport.request', 'request.raise', 'request.view.self', 'meeting.view',
+  'visit.view', 'lab.view', 'placement.view', 'placement.apply',
+  'hostel.view', 'hostel.request', 'condonation.request',
 ];
 
-/** What any teacher may do, whatever grade they teach. */
-const SUBJECT_TEACHER = [
-  ...COMMON, 'timetable.view', 'attendance.view.class', 'homework.view',
-  'homework.create', 'result.view.class', 'result.enter', 'student.view',
-  'staff.view', 'leave.request', 'substitution.view', 'library.view',
-  'transport.view', 'meeting.view', 'visit.view', 'payroll.view', 'lab.view',
-  'academic.view', 'request.view.all',
+/** What any member of teaching staff may do. */
+const FACULTY = [
+  ...COMMON, 'timetable.view', 'attendance.view.class', 'attendance.mark',
+  'assignment.view', 'assignment.create', 'assignment.grade',
+  'result.view.class', 'result.enter', 'student.view', 'staff.view',
+  'leave.request', 'substitution.view', 'library.view', 'transport.view',
+  'meeting.view', 'visit.view', 'payroll.view', 'lab.view', 'academic.view',
+  'request.view.all', 'placement.view', 'mentor.view', 'mentor.note',
 ];
 
-/** A class teacher additionally owns the register and the class's parents. */
-const CLASS_TEACHER = [
-  ...SUBJECT_TEACHER, 'attendance.mark', 'circular.post', 'meeting.manage',
-  'request.resolve', 'visit.approve',
+/** A tutor owns a cohort: its register, its parents and its mentoring. */
+const TUTOR = [
+  ...FACULTY, 'circular.post', 'meeting.manage', 'request.resolve',
+  'visit.approve', 'condonation.request', 'attendance.view.college',
 ];
 
 const HEAD = [
-  ...CLASS_TEACHER, 'attendance.view.school', 'result.publish', 'academic.manage',
+  ...TUTOR, 'result.publish', 'academic.manage', 'timetable.manage',
   'staff.manage', 'recruitment.view', 'recruitment.review', 'leave.approve',
   'substitution.manage', 'student.manage', 'report.view', 'circular.delete',
-  'lab.manage', 'org.view', 'role.view',
+  'lab.manage', 'org.view', 'role.view', 'condonation.approve',
 ];
 
-/**
- * The default permission set for each role. A school can change these on the
- * Roles screen; the edited version is kept separately so an upgrade does not
- * silently reinstate a permission the school removed.
- */
 export const ROLE_CATALOGUE: Record<Role, { name: string; blurb: string; permissions: string[] }> = {
   'group-admin': {
     name: 'Group Administrator',
-    blurb: 'The trust’s own account. Opens branches and appoints their administrators.',
-    permissions: [...HEAD, 'org.manage', 'role.manage', 'settings.manage', 'fee.view.school', 'payroll.view', 'transport.compliance'],
+    blurb: 'The trust’s own account. Opens institutions and appoints their heads.',
+    permissions: [...HEAD, 'org.manage', 'role.manage', 'settings.manage', 'fee.view.college', 'payroll.view', 'transport.compliance', 'placement.manage', 'hostel.view'],
   },
-  correspondent: {
-    name: 'Correspondent',
-    blurb: 'Legal head of the school under the Directorate of School Education.',
-    permissions: [
-      ...HEAD, 'role.manage', 'settings.manage', 'fee.view.school', 'fee.collect',
-      'payroll.view', 'payroll.manage', 'library.manage', 'transport.manage',
-      'transport.compliance',
-    ],
+  chairman: {
+    name: 'Chairman',
+    blurb: 'Head of the trust that runs the college.',
+    permissions: [...HEAD, 'role.manage', 'settings.manage', 'fee.view.college', 'fee.collect', 'payroll.view', 'payroll.manage', 'library.manage', 'transport.manage', 'transport.compliance', 'placement.manage', 'hostel.view'],
   },
   principal: {
     name: 'Principal',
-    blurb: 'Runs the school day to day and signs off on appointments.',
-    permissions: [...HEAD, 'fee.view.school', 'settings.manage'],
-  },
-  headmaster: {
-    name: 'Headmaster / Headmistress',
-    blurb: 'Heads the primary section.',
-    permissions: [...HEAD],
+    blurb: 'Runs the college and signs off on appointments and condonation.',
+    permissions: [...HEAD, 'fee.view.college', 'settings.manage', 'placement.view', 'hostel.view', 'exam.manage'],
   },
   'vice-principal': {
     name: 'Vice Principal',
     blurb: 'Academic coordination — timetable, cover and discipline.',
+    permissions: [...TUTOR, 'substitution.manage', 'leave.approve', 'academic.manage', 'timetable.manage', 'result.publish', 'report.view', 'condonation.approve'],
+  },
+  dean: {
+    name: 'Dean',
+    blurb: 'Oversees a faculty and its departments.',
+    permissions: [...HEAD],
+  },
+  hod: {
+    name: 'Head of Department',
+    blurb: 'Runs a department: its faculty, its syllabus and its results.',
+    permissions: [...TUTOR, 'academic.manage', 'timetable.manage', 'leave.approve', 'substitution.manage', 'recruitment.view', 'report.view', 'lab.manage', 'condonation.request'],
+  },
+  faculty: {
+    name: 'Faculty',
+    blurb: 'Teaches papers across sections.',
+    permissions: FACULTY,
+  },
+  tutor: {
+    name: 'Tutor',
+    blurb: 'Class advisor for one cohort — its register, parents and mentoring.',
+    permissions: TUTOR,
+  },
+  'controller-of-exams': {
+    name: 'Controller of Examinations',
+    blurb: 'Hall tickets, results, arrears and condonation.',
     permissions: [
-      ...CLASS_TEACHER, 'attendance.view.school', 'substitution.manage',
-      'leave.approve', 'academic.view', 'academic.manage', 'result.publish',
-      'staff.view', 'report.view',
+      ...COMMON, 'exam.manage', 'result.publish', 'result.view.class', 'result.enter',
+      'condonation.approve', 'attendance.view.college', 'student.view', 'academic.view',
+      'report.view', 'circular.post', 'staff.view', 'leave.request', 'payroll.view',
+      'timetable.view',
     ],
   },
   'office-superintendent': {
@@ -239,38 +276,25 @@ export const ROLE_CATALOGUE: Record<Role, { name: string; blurb: string; permiss
     blurb: 'Admissions, records, certificates and the front desk.',
     permissions: [
       ...COMMON, 'student.view', 'student.manage', 'staff.view', 'academic.view',
-      'attendance.view.school', 'request.view.all', 'request.resolve',
-      'visit.view', 'visit.approve', 'meeting.view', 'meeting.manage',
-      'transport.view', 'transport.manage', 'circular.post', 'report.view',
-      'recruitment.view', 'leave.request', 'payroll.view',
+      'attendance.view.college', 'request.view.all', 'request.resolve', 'visit.view',
+      'visit.approve', 'meeting.view', 'meeting.manage', 'transport.view',
+      'transport.manage', 'circular.post', 'report.view', 'recruitment.view',
+      'leave.request', 'payroll.view', 'hostel.view', 'timetable.view',
     ],
   },
   'accounts-officer': {
     name: 'Accounts Officer',
     blurb: 'Fee collection, receipts and the defaulter list.',
     permissions: [
-      ...COMMON, 'fee.view.school', 'fee.collect', 'student.view', 'report.view',
-      'transport.view', 'visit.view', 'visit.approve', 'meeting.view',
-      'leave.request', 'payroll.view',
+      ...COMMON, 'fee.view.college', 'fee.collect', 'student.view', 'report.view',
+      'transport.view', 'visit.view', 'visit.approve', 'meeting.view', 'leave.request',
+      'payroll.view', 'hostel.view',
     ],
   },
   'payroll-officer': {
     name: 'Payroll Officer',
     blurb: 'Salary, PF and ESI. Usually the same person as Accounts.',
-    permissions: [
-      ...COMMON, 'payroll.view', 'payroll.manage', 'staff.view', 'report.view',
-      'leave.request',
-    ],
-  },
-  'class-teacher': {
-    name: 'Class Teacher',
-    blurb: 'Owns one class — its register, its parents and its report cards.',
-    permissions: CLASS_TEACHER,
-  },
-  'subject-teacher': {
-    name: 'Subject Teacher',
-    blurb: 'Teaches a subject across several classes.',
-    permissions: SUBJECT_TEACHER,
+    permissions: [...COMMON, 'payroll.view', 'payroll.manage', 'staff.view', 'report.view', 'leave.request'],
   },
   librarian: {
     name: 'Librarian',
@@ -280,19 +304,21 @@ export const ROLE_CATALOGUE: Record<Role, { name: string; blurb: string; permiss
       'staff.view', 'leave.request', 'payroll.view', 'visit.view',
     ],
   },
-  'lab-incharge': {
-    name: 'Lab In-charge',
-    blurb: 'Responsible for a laboratory, its batches and its apparatus.',
-    permissions: [
-      ...SUBJECT_TEACHER, 'lab.manage', 'lab.breakage.record', 'academic.view',
-    ],
-  },
-  'lab-assistant': {
-    name: 'Lab Assistant',
+  'lab-instructor': {
+    name: 'Lab Instructor',
     blurb: 'Sets up practicals and keeps the apparatus register.',
     permissions: [
-      ...COMMON, 'lab.view', 'lab.breakage.record', 'student.view', 'timetable.view',
-      'leave.request', 'payroll.view',
+      ...COMMON, 'lab.view', 'lab.manage', 'lab.breakage.record', 'student.view',
+      'timetable.view', 'leave.request', 'payroll.view', 'attendance.view.class',
+    ],
+  },
+  'placement-officer': {
+    name: 'Placement Officer',
+    blurb: 'Recruiters, drives, eligibility and offers.',
+    permissions: [
+      ...COMMON, 'placement.view', 'placement.manage', 'student.view', 'report.view',
+      'circular.post', 'academic.view', 'result.view.class', 'leave.request',
+      'payroll.view', 'staff.view',
     ],
   },
   'transport-incharge': {
@@ -304,24 +330,24 @@ export const ROLE_CATALOGUE: Record<Role, { name: string; blurb: string; permiss
       'request.view.all', 'request.resolve',
     ],
   },
-  warden: {
-    name: 'Warden',
-    blurb: 'Hostel supervision.',
+  'hostel-warden': {
+    name: 'Hostel Warden',
+    blurb: 'Blocks, rooms, allotment and residents.',
     permissions: [
-      ...COMMON, 'student.view', 'attendance.view.school', 'leave.request',
-      'payroll.view', 'visit.view',
+      ...COMMON, 'hostel.view', 'hostel.manage', 'student.view', 'attendance.view.college',
+      'leave.request', 'payroll.view', 'visit.view', 'request.view.all', 'request.resolve',
     ],
   },
-  parent: { name: 'Parent', blurb: 'Sees only their own children.', permissions: PARENT },
+  parent: { name: 'Parent', blurb: 'Sees only their own ward.', permissions: PARENT },
   student: { name: 'Student', blurb: 'Sees only their own record.', permissions: STUDENT },
 };
 
 /** Roles ordered by seniority, used to pick the label shown for a person. */
 const SENIORITY: Role[] = [
-  'group-admin', 'correspondent', 'principal', 'headmaster', 'vice-principal',
-  'office-superintendent', 'accounts-officer', 'payroll-officer', 'transport-incharge',
-  'librarian', 'lab-incharge', 'warden', 'class-teacher', 'subject-teacher',
-  'lab-assistant', 'parent', 'student',
+  'group-admin', 'chairman', 'principal', 'vice-principal', 'dean',
+  'controller-of-exams', 'hod', 'office-superintendent', 'accounts-officer',
+  'payroll-officer', 'placement-officer', 'hostel-warden', 'transport-incharge',
+  'librarian', 'tutor', 'faculty', 'lab-instructor', 'parent', 'student',
 ];
 
 /* ── editable permission sets ──────────────────────────────────────────── */
@@ -404,26 +430,24 @@ export const authService = {
     const db = getDatabase();
     const identifier = email.trim().toLowerCase();
 
-    // Schools hand parents the child's student ID, not an email address — so
-    // an admission number signs in the guardian linked to that student.
+    // A college hands out a register number, not an email address, and that is
+    // what a parent has written down — so it signs in the guardian.
     let found = db.users.find((u) => u.email.toLowerCase() === identifier);
     if (!found) {
       const student = db.users.find(
-        (u) => u.roles.includes('student') && u.admissionNo?.toLowerCase() === identifier,
+        (u) => u.roles.includes('student') && u.registerNo?.toLowerCase() === identifier,
       );
       if (student) {
         found = db.users.find((u) => u.id === student.guardianIds?.[0]) ?? student;
       }
     }
-    if (!found) return { ok: false, error: 'No account found for that email or student ID.' };
+    if (!found) return { ok: false, error: 'No account found for that email or register number.' };
     if (found.password !== password) return { ok: false, error: 'That password is incorrect.' };
     if (found.status !== 'active') {
-      return { ok: false, error: 'This account is inactive. Please contact the school office.' };
+      return { ok: false, error: 'This account is inactive. Please contact the college office.' };
     }
     writeSession(found.id);
-    // Everyone lands on their own school. The trust's account can move between
-    // branches afterwards; nobody else is offered the choice.
-    setActiveBranch(found.schoolId);
+    setActiveBranch(found.collegeId);
     return { ok: true, user: present(found) };
   },
 
@@ -434,10 +458,10 @@ export const authService = {
     if (!found || found.status !== 'active') return null;
 
     const user = present(found);
-    // The chosen branch outlives a reload, which is right for the trust's
-    // account. For anyone else it must not: on a shared office machine they
-    // would otherwise come back to whichever branch was last looked at.
-    if (!user.permissions.includes('org.view')) setActiveBranch(found.schoolId);
+    // The chosen institution outlives a reload for the trust's account. For
+    // anyone else it must not: on a shared office machine they would otherwise
+    // come back to whichever institution was last looked at.
+    if (!user.permissions.includes('org.view')) setActiveBranch(found.collegeId);
     return user;
   },
 

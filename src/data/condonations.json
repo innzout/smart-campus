@@ -1,0 +1,115 @@
+[
+  {
+    "id": "cond-1",
+    "studentId": "stu-bca-2025-015",
+    "offeringId": "off-25",
+    "semester": 3,
+    "percent": 70,
+    "reason": "Hospitalised for a week with dengue; records enclosed.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-2",
+    "studentId": "stu-bsc-cs-2025-006",
+    "offeringId": "off-7",
+    "semester": 3,
+    "percent": 70,
+    "reason": "Prolonged illness; medical certificate submitted.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-3",
+    "studentId": "stu-bba-2026-013",
+    "offeringId": "off-55",
+    "semester": 1,
+    "percent": 70,
+    "reason": "Family bereavement.",
+    "status": "approved",
+    "fee": 500,
+    "decidedById": "usr-coe"
+  },
+  {
+    "id": "cond-4",
+    "studentId": "stu-bcom-2024-019",
+    "offeringId": "off-49",
+    "semester": 5,
+    "percent": 70,
+    "reason": "Hospitalised for a week with dengue; records enclosed.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-5",
+    "studentId": "stu-bcom-2024-033",
+    "offeringId": "off-49",
+    "semester": 5,
+    "percent": 70,
+    "reason": "Represented the college at the inter-zone tournament.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-6",
+    "studentId": "stu-msc-cs-2025-008",
+    "offeringId": "off-81",
+    "semester": 3,
+    "percent": 70,
+    "reason": "Prolonged illness; medical certificate submitted.",
+    "status": "approved",
+    "fee": 500,
+    "decidedById": "usr-coe"
+  },
+  {
+    "id": "cond-7",
+    "studentId": "stu-bca-2025-008",
+    "offeringId": "off-26",
+    "semester": 3,
+    "percent": 70,
+    "reason": "Prolonged illness; medical certificate submitted.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-8",
+    "studentId": "stu-bca-2025-035",
+    "offeringId": "off-26",
+    "semester": 3,
+    "percent": 70,
+    "reason": "Family bereavement.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-9",
+    "studentId": "stu-bba-2024-031",
+    "offeringId": "off-67",
+    "semester": 5,
+    "percent": 70,
+    "reason": "Hospitalised for a week with dengue; records enclosed.",
+    "status": "approved",
+    "fee": 500,
+    "decidedById": "usr-coe"
+  },
+  {
+    "id": "cond-10",
+    "studentId": "stu-bsc-cs-2024-007",
+    "offeringId": "off-13",
+    "semester": 5,
+    "percent": 70,
+    "reason": "Hospitalised for a week with dengue; records enclosed.",
+    "status": "requested",
+    "fee": 500
+  },
+  {
+    "id": "cond-11",
+    "studentId": "stu-bca-2024-007",
+    "offeringId": "off-31",
+    "semester": 5,
+    "percent": 70,
+    "reason": "Family bereavement.",
+    "status": "requested",
+    "fee": 500
+  }
+]

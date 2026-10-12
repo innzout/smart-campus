@@ -1,32 +1,102 @@
 [
   {
     "id": "sbt-1",
-    "date": "2026-10-11",
-    "slotId": "slot-23",
-    "classId": "cls-9A",
-    "absentTeacherId": "usr-t4",
-    "coverTeacherId": "usr-t2",
+    "date": "2026-10-12",
+    "hourId": "hr-5",
+    "sectionId": "sec-bca-2024",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f8",
     "assignedById": "usr-vp",
-    "note": "Supervision only — Science teacher unavailable."
+    "note": "Supervision only — not a Python Programming teacher."
   },
   {
     "id": "sbt-2",
-    "date": "2026-10-11",
-    "slotId": "slot-104",
-    "classId": "cls-6A",
-    "absentTeacherId": "usr-t4",
-    "coverTeacherId": "usr-t3",
+    "date": "2026-10-12",
+    "hourId": "hr-18",
+    "sectionId": "sec-bca-2024",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f8",
     "assignedById": "usr-vp",
-    "note": "Supervision only — Science teacher unavailable."
+    "note": "Supervision only — not a Python Programming teacher."
   },
   {
     "id": "sbt-3",
-    "date": "2026-10-11",
-    "slotId": "slot-115",
-    "classId": "cls-8A",
-    "absentTeacherId": "usr-t4",
-    "coverTeacherId": "usr-t1",
+    "date": "2026-10-12",
+    "hourId": "hr-53",
+    "sectionId": "sec-bsc-cs-2026",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f6",
     "assignedById": "usr-vp",
-    "note": "Supervision only — Science teacher unavailable."
+    "note": "Supervision only — not a Tamil — Paper I teacher."
+  },
+  {
+    "id": "sbt-4",
+    "date": "2026-10-12",
+    "hourId": "hr-66",
+    "sectionId": "sec-bsc-cs-2026",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f8",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Tamil — Paper I teacher."
+  },
+  {
+    "id": "sbt-5",
+    "date": "2026-10-12",
+    "hourId": "hr-95",
+    "sectionId": "sec-bca-2026",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f9",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Programming in C teacher."
+  },
+  {
+    "id": "sbt-6",
+    "date": "2026-10-12",
+    "hourId": "hr-107",
+    "sectionId": "sec-bsc-cs-2024",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f7",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Elective — Cloud Computing teacher."
+  },
+  {
+    "id": "sbt-7",
+    "date": "2026-10-12",
+    "hourId": "hr-119",
+    "sectionId": "sec-bsc-cs-2025",
+    "absentFacultyId": "usr-f4",
+    "coverFacultyId": "usr-f8",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Operating Systems teacher."
+  },
+  {
+    "id": "sbt-8",
+    "date": "2026-10-12",
+    "hourId": "hr-7",
+    "sectionId": "sec-bcom-2025",
+    "absentFacultyId": "usr-f11",
+    "coverFacultyId": "usr-f8",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Banking Theory, Law and Practice teacher."
+  },
+  {
+    "id": "sbt-9",
+    "date": "2026-10-12",
+    "hourId": "hr-21",
+    "sectionId": "sec-bcom-2024",
+    "absentFacultyId": "usr-f11",
+    "coverFacultyId": "usr-f8",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Auditing and Assurance teacher."
+  },
+  {
+    "id": "sbt-10",
+    "date": "2026-10-12",
+    "hourId": "hr-112",
+    "sectionId": "sec-bcom-2025",
+    "absentFacultyId": "usr-f11",
+    "coverFacultyId": "usr-f7",
+    "assignedById": "usr-vp",
+    "note": "Supervision only — not a Banking Theory, Law and Practice teacher."
   }
 ]

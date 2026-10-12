@@ -2,34 +2,41 @@
   {
     "id": "app-1",
     "ref": "APP/2026/31",
-    "schoolId": "sch-1",
-    "name": "Mrs. K. Sumathi",
+    "collegeId": "col-1",
+    "name": "Dr. K. Sumathi",
     "email": "sumathi.k@gmail.com",
-    "phone": "+91 99525 63025",
-    "designation": "bt-assistant",
-    "qualification": "B.Sc. (Maths), B.Ed.",
-    "tetCleared": true,
-    "experienceYears": 6,
-    "subjectIds": [
-      "sub-mat2"
-    ],
+    "phone": "+91 96856 27602",
+    "designation": "assistant-professor",
+    "departmentId": "dep-cs",
+    "qualification": "M.Sc., M.Phil., Ph.D.",
+    "netCleared": true,
+    "phd": true,
+    "experienceYears": 8,
+    "publications": 11,
+    "courseIds": [],
     "documents": [
       {
         "kind": "degree",
         "fileName": "degree-sumathi.pdf",
+        "uploadedOn": "2026-10-10",
+        "verified": false
+      },
+      {
+        "kind": "pg",
+        "fileName": "pg-sumathi.pdf",
+        "uploadedOn": "2026-10-07",
+        "verified": false
+      },
+      {
+        "kind": "phd",
+        "fileName": "phd-sumathi.pdf",
         "uploadedOn": "2026-10-08",
         "verified": false
       },
       {
-        "kind": "bed",
-        "fileName": "bed-sumathi.pdf",
-        "uploadedOn": "2026-10-08",
-        "verified": false
-      },
-      {
-        "kind": "tet",
-        "fileName": "tet-sumathi.pdf",
-        "uploadedOn": "2026-10-08",
+        "kind": "net",
+        "fileName": "net-sumathi.pdf",
+        "uploadedOn": "2026-10-09",
         "verified": false
       },
       {
@@ -43,107 +50,10 @@
         "fileName": "pan-sumathi.pdf",
         "uploadedOn": "2026-10-09",
         "verified": false
-      }
-    ],
-    "status": "submitted",
-    "submittedOn": "2026-10-09",
-    "reviewNote": ""
-  },
-  {
-    "id": "app-2",
-    "ref": "APP/2026/32",
-    "schoolId": "sch-1",
-    "name": "Mr. R. Vetrivel",
-    "email": "vetrivel.r@gmail.com",
-    "phone": "+91 95571 18047",
-    "designation": "pg-assistant",
-    "qualification": "M.Sc. (Physics), M.Ed.",
-    "tetCleared": false,
-    "experienceYears": 9,
-    "subjectIds": [
-      "sub-phy"
-    ],
-    "documents": [
-      {
-        "kind": "degree",
-        "fileName": "degree-vetrivel.pdf",
-        "uploadedOn": "2026-10-06",
-        "verified": false
-      },
-      {
-        "kind": "bed",
-        "fileName": "bed-vetrivel.pdf",
-        "uploadedOn": "2026-10-03",
-        "verified": false
-      },
-      {
-        "kind": "aadhaar",
-        "fileName": "aadhaar-vetrivel.pdf",
-        "uploadedOn": "2026-10-03",
-        "verified": false
-      },
-      {
-        "kind": "pan",
-        "fileName": "pan-vetrivel.pdf",
-        "uploadedOn": "2026-10-03",
-        "verified": false
       },
       {
         "kind": "bank",
-        "fileName": "bank-vetrivel.pdf",
-        "uploadedOn": "2026-10-05",
-        "verified": false
-      }
-    ],
-    "status": "under-review",
-    "submittedOn": "2026-10-06",
-    "reviewedById": "usr-principal",
-    "reviewedOn": "2026-10-08",
-    "reviewNote": "Qualification verified. Awaiting demonstration class."
-  },
-  {
-    "id": "app-3",
-    "ref": "APP/2026/33",
-    "schoolId": "sch-1",
-    "name": "Mrs. A. Priyadharshini",
-    "email": "priya.a@gmail.com",
-    "phone": "+91 96018 69609",
-    "designation": "sgt",
-    "qualification": "D.T.Ed., B.A. (Tamil)",
-    "tetCleared": true,
-    "experienceYears": 3,
-    "subjectIds": [
-      "sub-tam1",
-      "sub-evs"
-    ],
-    "documents": [
-      {
-        "kind": "degree",
-        "fileName": "degree-priyadharshini.pdf",
-        "uploadedOn": "2026-10-08",
-        "verified": false
-      },
-      {
-        "kind": "bed",
-        "fileName": "bed-priyadharshini.pdf",
-        "uploadedOn": "2026-10-09",
-        "verified": false
-      },
-      {
-        "kind": "tet",
-        "fileName": "tet-priyadharshini.pdf",
-        "uploadedOn": "2026-10-09",
-        "verified": false
-      },
-      {
-        "kind": "aadhaar",
-        "fileName": "aadhaar-priyadharshini.pdf",
-        "uploadedOn": "2026-10-09",
-        "verified": false
-      },
-      {
-        "kind": "pan",
-        "fileName": "pan-priyadharshini.pdf",
+        "fileName": "bank-sumathi.pdf",
         "uploadedOn": "2026-10-09",
         "verified": false
       }
@@ -153,36 +63,165 @@
     "reviewNote": ""
   },
   {
+    "id": "app-2",
+    "ref": "APP/2026/32",
+    "collegeId": "col-1",
+    "name": "Mr. R. Vetrivelan",
+    "email": "vetrivelan@gmail.com",
+    "phone": "+91 99193 74584",
+    "designation": "assistant-professor",
+    "departmentId": "dep-com",
+    "qualification": "M.Com., NET",
+    "netCleared": true,
+    "phd": false,
+    "experienceYears": 4,
+    "publications": 2,
+    "courseIds": [],
+    "documents": [
+      {
+        "kind": "degree",
+        "fileName": "degree-vetrivelan.pdf",
+        "uploadedOn": "2026-10-05",
+        "verified": false
+      },
+      {
+        "kind": "pg",
+        "fileName": "pg-vetrivelan.pdf",
+        "uploadedOn": "2026-10-04",
+        "verified": false
+      },
+      {
+        "kind": "net",
+        "fileName": "net-vetrivelan.pdf",
+        "uploadedOn": "2026-10-03",
+        "verified": false
+      },
+      {
+        "kind": "aadhaar",
+        "fileName": "aadhaar-vetrivelan.pdf",
+        "uploadedOn": "2026-10-04",
+        "verified": false
+      },
+      {
+        "kind": "pan",
+        "fileName": "pan-vetrivelan.pdf",
+        "uploadedOn": "2026-10-05",
+        "verified": false
+      },
+      {
+        "kind": "bank",
+        "fileName": "bank-vetrivelan.pdf",
+        "uploadedOn": "2026-10-05",
+        "verified": false
+      },
+      {
+        "kind": "experience",
+        "fileName": "experience-vetrivelan.pdf",
+        "uploadedOn": "2026-10-05",
+        "verified": false
+      }
+    ],
+    "status": "under-review",
+    "submittedOn": "2026-10-06",
+    "reviewedById": "usr-principal",
+    "reviewedOn": "2026-10-09",
+    "reviewNote": "Qualification verified. Demonstration class scheduled."
+  },
+  {
+    "id": "app-3",
+    "ref": "APP/2026/33",
+    "collegeId": "col-1",
+    "name": "Mrs. A. Priyadharshini",
+    "email": "priya.a@gmail.com",
+    "phone": "+91 97108 23497",
+    "designation": "assistant-professor",
+    "departmentId": "dep-eng",
+    "qualification": "M.A., M.Phil.",
+    "netCleared": false,
+    "phd": false,
+    "experienceYears": 3,
+    "publications": 0,
+    "courseIds": [],
+    "documents": [
+      {
+        "kind": "degree",
+        "fileName": "degree-priyadharshini.pdf",
+        "uploadedOn": "2026-10-09",
+        "verified": false
+      },
+      {
+        "kind": "pg",
+        "fileName": "pg-priyadharshini.pdf",
+        "uploadedOn": "2026-10-11",
+        "verified": false
+      },
+      {
+        "kind": "aadhaar",
+        "fileName": "aadhaar-priyadharshini.pdf",
+        "uploadedOn": "2026-10-08",
+        "verified": false
+      },
+      {
+        "kind": "pan",
+        "fileName": "pan-priyadharshini.pdf",
+        "uploadedOn": "2026-10-10",
+        "verified": false
+      }
+    ],
+    "status": "submitted",
+    "submittedOn": "2026-10-11",
+    "reviewNote": ""
+  },
+  {
     "id": "app-4",
     "ref": "APP/2026/34",
-    "schoolId": "sch-1",
-    "name": "Mr. S. Bhuvanesh",
+    "collegeId": "col-1",
+    "name": "Dr. S. Bhuvanesh",
     "email": "bhuvanesh.s@gmail.com",
-    "phone": "+91 96828 14984",
-    "designation": "pet",
-    "qualification": "B.P.Ed., M.P.Ed.",
-    "tetCleared": false,
-    "experienceYears": 4,
-    "subjectIds": [
-      "sub-pe"
-    ],
+    "phone": "+91 98080 76323",
+    "designation": "associate-professor",
+    "departmentId": "dep-mgt",
+    "qualification": "MBA, Ph.D.",
+    "netCleared": true,
+    "phd": true,
+    "experienceYears": 12,
+    "publications": 19,
+    "courseIds": [],
     "documents": [
       {
         "kind": "degree",
         "fileName": "degree-bhuvanesh.pdf",
+        "uploadedOn": "2026-09-20",
+        "verified": true
+      },
+      {
+        "kind": "pg",
+        "fileName": "pg-bhuvanesh.pdf",
+        "uploadedOn": "2026-09-19",
+        "verified": true
+      },
+      {
+        "kind": "phd",
+        "fileName": "phd-bhuvanesh.pdf",
+        "uploadedOn": "2026-09-19",
+        "verified": true
+      },
+      {
+        "kind": "net",
+        "fileName": "net-bhuvanesh.pdf",
         "uploadedOn": "2026-09-21",
         "verified": true
       },
       {
         "kind": "aadhaar",
         "fileName": "aadhaar-bhuvanesh.pdf",
-        "uploadedOn": "2026-09-20",
+        "uploadedOn": "2026-09-22",
         "verified": true
       },
       {
         "kind": "pan",
         "fileName": "pan-bhuvanesh.pdf",
-        "uploadedOn": "2026-09-23",
+        "uploadedOn": "2026-09-19",
         "verified": true
       },
       {
@@ -194,30 +233,84 @@
       {
         "kind": "experience",
         "fileName": "experience-bhuvanesh.pdf",
-        "uploadedOn": "2026-09-20",
+        "uploadedOn": "2026-09-19",
+        "verified": true
+      },
+      {
+        "kind": "publications",
+        "fileName": "publications-bhuvanesh.pdf",
+        "uploadedOn": "2026-09-22",
         "verified": true
       }
     ],
     "status": "approved",
-    "submittedOn": "2026-09-23",
+    "submittedOn": "2026-09-22",
     "reviewedById": "usr-principal",
     "reviewedOn": "2026-09-25",
-    "reviewNote": "Demonstration session satisfactory. Approved for appointment."
+    "reviewNote": "Strong publication record. Approved for appointment."
   },
   {
     "id": "app-5",
     "ref": "APP/2026/35",
-    "schoolId": "sch-1",
+    "collegeId": "col-1",
+    "name": "Mr. V. Ashokkumar",
+    "email": "ashok.v@gmail.com",
+    "phone": "+91 95563 92736",
+    "designation": "lab-instructor",
+    "departmentId": "dep-cs",
+    "qualification": "M.Sc. (CS)",
+    "netCleared": false,
+    "phd": false,
+    "experienceYears": 5,
+    "publications": 0,
+    "courseIds": [],
+    "documents": [
+      {
+        "kind": "degree",
+        "fileName": "degree-ashokkumar.pdf",
+        "uploadedOn": "2026-09-30",
+        "verified": false
+      },
+      {
+        "kind": "aadhaar",
+        "fileName": "aadhaar-ashokkumar.pdf",
+        "uploadedOn": "2026-09-30",
+        "verified": false
+      },
+      {
+        "kind": "pan",
+        "fileName": "pan-ashokkumar.pdf",
+        "uploadedOn": "2026-10-01",
+        "verified": false
+      },
+      {
+        "kind": "bank",
+        "fileName": "bank-ashokkumar.pdf",
+        "uploadedOn": "2026-10-02",
+        "verified": false
+      }
+    ],
+    "status": "under-review",
+    "submittedOn": "2026-10-03",
+    "reviewedById": "usr-principal",
+    "reviewedOn": "2026-10-06",
+    "reviewNote": "Bank passbook copy still awaited."
+  },
+  {
+    "id": "app-6",
+    "ref": "APP/2026/36",
+    "collegeId": "col-1",
     "name": "Mrs. N. Gowthami",
     "email": "gowthami.n@gmail.com",
-    "phone": "+91 98168 95125",
-    "designation": "bt-assistant",
-    "qualification": "B.A. (English), B.Ed.",
-    "tetCleared": false,
-    "experienceYears": 2,
-    "subjectIds": [
-      "sub-eng2"
-    ],
+    "phone": "+91 99966 39114",
+    "designation": "assistant-professor",
+    "departmentId": "dep-mat",
+    "qualification": "M.Sc.",
+    "netCleared": false,
+    "phd": false,
+    "experienceYears": 1,
+    "publications": 0,
+    "courseIds": [],
     "documents": [
       {
         "kind": "degree",
@@ -226,9 +319,9 @@
         "verified": true
       },
       {
-        "kind": "bed",
-        "fileName": "bed-gowthami.pdf",
-        "uploadedOn": "2026-09-17",
+        "kind": "pg",
+        "fileName": "pg-gowthami.pdf",
+        "uploadedOn": "2026-09-14",
         "verified": true
       },
       {
@@ -240,70 +333,26 @@
       {
         "kind": "pan",
         "fileName": "pan-gowthami.pdf",
-        "uploadedOn": "2026-09-14",
+        "uploadedOn": "2026-09-15",
         "verified": true
       },
       {
         "kind": "bank",
         "fileName": "bank-gowthami.pdf",
-        "uploadedOn": "2026-09-14",
+        "uploadedOn": "2026-09-15",
         "verified": true
       },
       {
         "kind": "experience",
         "fileName": "experience-gowthami.pdf",
-        "uploadedOn": "2026-09-14",
+        "uploadedOn": "2026-09-16",
         "verified": true
       }
     ],
     "status": "rejected",
-    "submittedOn": "2026-09-17",
+    "submittedOn": "2026-09-16",
     "reviewedById": "usr-principal",
     "reviewedOn": "2026-09-19",
-    "reviewNote": "TET not cleared. May reapply after clearing Paper II."
-  },
-  {
-    "id": "app-6",
-    "ref": "APP/2026/36",
-    "schoolId": "sch-1",
-    "name": "Mr. V. Ashokkumar",
-    "email": "ashok.v@gmail.com",
-    "phone": "+91 98318 10260",
-    "designation": "lab-assistant",
-    "qualification": "B.Sc. (Chemistry)",
-    "tetCleared": false,
-    "experienceYears": 5,
-    "subjectIds": [],
-    "documents": [
-      {
-        "kind": "degree",
-        "fileName": "degree-ashokkumar.pdf",
-        "uploadedOn": "2026-10-02",
-        "verified": false
-      },
-      {
-        "kind": "aadhaar",
-        "fileName": "aadhaar-ashokkumar.pdf",
-        "uploadedOn": "2026-10-01",
-        "verified": false
-      },
-      {
-        "kind": "pan",
-        "fileName": "pan-ashokkumar.pdf",
-        "uploadedOn": "2026-10-03",
-        "verified": false
-      },
-      {
-        "kind": "bank",
-        "fileName": "bank-ashokkumar.pdf",
-        "uploadedOn": "2026-10-03",
-        "verified": false
-      }
-    ],
-    "status": "under-review",
-    "submittedOn": "2026-10-03",
-    "reviewedById": "usr-principal",
-    "reviewedOn": "2026-10-05",
-    "reviewNote": "Bank passbook copy still awaited."
+    "reviewNote": "NET not cleared and experience insufficient for the post."
   }
 ]

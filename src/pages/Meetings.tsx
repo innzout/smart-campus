@@ -3,7 +3,7 @@ import { toast } from 'sonner';
 import { CalendarCheck, Clock, MessageSquare, Users } from 'lucide-react';
 import { useAuth, useCan, useCurrentUser } from '@/app/auth';
 import { mutate, useDatabase, newId } from '@/lib/store';
-import { classById, classLabel, userById } from '@/lib/queries';
+import { sectionById, sectionLabel, userById } from '@/lib/queries';
 import { StatGrid, StatTile } from '@/components/StatTile';
 import { CardBody, CardHeader, MotionCard } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -36,7 +36,7 @@ function bookSlot(slotId: string, parentId: string, studentId: string, note: str
       bookedOn: todayISO(),
       status: 'booked',
       note,
-      teacherNote: '',
+      facultyNote: '',
     });
   });
 }
@@ -52,7 +52,7 @@ function addTeacherNote(bookingId: string, note: string) {
   mutate((db) => {
     const booking = db.meetingBookings.find((b) => b.id === bookingId);
     if (booking) {
-      booking.teacherNote = note;
+      booking.facultyNote = note;
       booking.status = 'completed';
     }
   });
@@ -67,13 +67,13 @@ function ParentMeetings({ student }: { student: User }) {
   const [choosing, setChoosing] = useState<MeetingSlot | null>(null);
   const canBook = useCan()('meeting.book');
 
-  const cls = classById(db, student.classId);
-  const slots = db.meetingSlots.filter((s) => s.classId === student.classId);
+  const cls = sectionById(db, student.sectionId);
+  const slots = db.meetingSlots.filter((s) => s.sectionId === student.sectionId);
   const booking = db.meetingBookings.find(
     (b) => b.studentId === student.id && b.status !== 'cancelled',
   );
   const bookedSlot = booking ? slots.find((s) => s.id === booking.slotId) : undefined;
-  const teacher = userById(db, cls?.classTeacherId);
+  const teacher = userById(db, cls?.tutorId);
 
   const takenCount = (slotId: string) =>
     db.meetingBookings.filter((b) => b.slotId === slotId && b.status === 'booked').length;
@@ -174,8 +174,8 @@ function ParentMeetings({ student }: { student: User }) {
                     <p className="text-[13px] font-semibold text-ink">
                       {slot ? formatDate(slot.date) : formatDate(b.bookedOn)}
                     </p>
-                    {b.teacherNote ? (
-                      <p className="mt-1 text-[12.5px] leading-relaxed text-ink-2">{b.teacherNote}</p>
+                    {b.facultyNote ? (
+                      <p className="mt-1 text-[12.5px] leading-relaxed text-ink-2">{b.facultyNote}</p>
                     ) : (
                       <p className="mt-1 text-[12.5px] text-ink-3">No remarks recorded.</p>
                     )}
@@ -235,9 +235,9 @@ function StaffMeetings() {
   const db = useDatabase();
   const can = useCan();
 
-  const myClass = db.classes.find((c) => c.classTeacherId === user.id);
-  const [classId, setClassId] = useState(myClass?.id ?? db.classes[0]?.id ?? '');
-  const slots = db.meetingSlots.filter((s) => s.classId === classId);
+  const myClass = db.sections.find((c) => c.tutorId === user.id);
+  const [sectionId, setClassId] = useState(myClass?.id ?? db.sections[0]?.id ?? '');
+  const slots = db.meetingSlots.filter((s) => s.sectionId === sectionId);
   const [noting, setNoting] = useState<string | null>(null);
   const [note, setNote] = useState('');
 
@@ -252,15 +252,15 @@ function StaffMeetings() {
     <>
       <PageHeader
         title="Parent–Teacher Meeting"
-        subtitle={slots.length ? `${formatDate(slots[0]!.date)} · appointments for ${classLabel(db, classId)}` : 'No meeting scheduled.'}
+        subtitle={slots.length ? `${formatDate(slots[0]!.date)} · appointments for ${sectionLabel(db, sectionId)}` : 'No meeting scheduled.'}
         action={
           <select
-            value={classId}
+            value={sectionId}
             onChange={(e) => setClassId(e.target.value)}
             aria-label="Class"
             className="h-9 rounded-xl border border-line bg-surface px-3 text-[13px] text-ink outline-none focus:border-brand-500"
           >
-            {db.classes.map((c) => (
+            {db.sections.map((c) => (
               <option key={c.id} value={c.id}>{c.label}</option>
             ))}
           </select>
@@ -270,8 +270,8 @@ function StaffMeetings() {
       <StatGrid>
         <StatTile label="Appointments" value={booked.length} note={`Across ${slots.length} slots`} icon={CalendarCheck} />
         <StatTile label="Slots free" value={slots.filter((s) => bookingsFor(s.id).length < s.capacity).length} note="Still bookable" icon={Clock} delay={0.06} />
-        <StatTile label="Parents yet to book" value={Math.max(0, db.users.filter((u) => u.roles.includes('student') && u.classId === classId).length - booked.length)} note="Consider a reminder circular" icon={Users} tone="warning" delay={0.12} />
-        <StatTile label="Remarks recorded" value={db.meetingBookings.filter((b) => b.teacherNote).length} note="After the meeting" icon={MessageSquare} delay={0.18} />
+        <StatTile label="Parents yet to book" value={Math.max(0, db.users.filter((u) => u.roles.includes('student') && u.sectionId === sectionId).length - booked.length)} note="Consider a reminder circular" icon={Users} tone="warning" delay={0.12} />
+        <StatTile label="Remarks recorded" value={db.meetingBookings.filter((b) => b.facultyNote).length} note="After the meeting" icon={MessageSquare} delay={0.18} />
       </StatGrid>
 
       <MotionCard delay={0.1}>
@@ -314,9 +314,9 @@ function StaffMeetings() {
                                 {b.note ? (
                                   <span className="mt-1 block text-[12px] text-ink-2">“{b.note}”</span>
                                 ) : null}
-                                {b.teacherNote ? (
+                                {b.facultyNote ? (
                                   <span className="mt-1 block text-[12px] text-ink-2">
-                                    <span className="font-medium text-ink">Your remark:</span> {b.teacherNote}
+                                    <span className="font-medium text-ink">Your remark:</span> {b.facultyNote}
                                   </span>
                                 ) : null}
                               </span>

@@ -17,7 +17,7 @@ import { Modal } from '@/components/ui/Modal';
 import { EmptyState, PageHeader, Segmented } from '@/components/ui/misc';
 import { cn, formatDate, num, relativeTime } from '@/lib/utils';
 
-const CATEGORIES = ['Exam', 'Holiday', 'Event', 'Fee', 'PTM', 'Transport', 'General'] as const;
+const CATEGORIES = ['Exam', 'Holiday', 'Event', 'Fee', 'Placement', 'Transport', 'General'] as const;
 
 const CATEGORY_TONE: Record<string, Tone> = {
   Exam: 'critical',
