@@ -30,7 +30,7 @@ const KIND: Record<
   hostel: { tone: 'serious', label: 'Hostel', fill: 'var(--s5)', icon: Building2 },
 };
 
-export default function SchoolMap() {
+export default function CampusMap() {
   const db = useDatabase();
   const school = theCollege(db);
   const [selected, setSelected] = useState<string | null>(db.places[0]?.id ?? null);

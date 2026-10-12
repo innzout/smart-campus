@@ -10,9 +10,9 @@
     "driverLicenceNo": "TN38 20110004521",
     "attendantName": "Mr. A. Selvam",
     "attendantPhone": "+91 99445 31001",
-    "fcExpiry": "2027-01-15",
-    "insuranceExpiry": "2027-03-01",
-    "permitExpiry": "2027-11-26"
+    "fcExpiry": "2027-01-16",
+    "insuranceExpiry": "2027-03-02",
+    "permitExpiry": "2027-11-27"
   },
   {
     "id": "veh-2",
@@ -25,9 +25,9 @@
     "driverLicenceNo": "TN38 20090011874",
     "attendantName": "Mr. R. Kannan",
     "attendantPhone": "+91 99445 31002",
-    "fcExpiry": "2026-11-03",
-    "insuranceExpiry": "2026-12-11",
-    "permitExpiry": "2027-08-08"
+    "fcExpiry": "2026-11-04",
+    "insuranceExpiry": "2026-12-12",
+    "permitExpiry": "2027-08-09"
   },
   {
     "id": "veh-3",
@@ -40,9 +40,9 @@
     "driverLicenceNo": "TN38 20140007733",
     "attendantName": "Mr. M. Bhuvan",
     "attendantPhone": "+91 99445 31003",
-    "fcExpiry": "2027-05-10",
-    "insuranceExpiry": "2026-10-30",
-    "permitExpiry": "2028-03-15"
+    "fcExpiry": "2027-05-11",
+    "insuranceExpiry": "2026-10-31",
+    "permitExpiry": "2028-03-16"
   },
   {
     "id": "veh-4",
@@ -55,8 +55,8 @@
     "driverLicenceNo": "TN38 20120003290",
     "attendantName": "Mr. P. Nirmal",
     "attendantPhone": "+91 99445 31004",
-    "fcExpiry": "2026-09-30",
-    "insuranceExpiry": "2027-01-15",
-    "permitExpiry": "2027-06-29"
+    "fcExpiry": "2026-10-01",
+    "insuranceExpiry": "2027-01-16",
+    "permitExpiry": "2027-06-30"
   }
 ]

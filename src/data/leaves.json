@@ -3,8 +3,8 @@
     "id": "lv-1",
     "staffId": "usr-f4",
     "kind": "medical",
-    "from": "2026-10-12",
-    "to": "2026-10-13",
+    "from": "2026-10-13",
+    "to": "2026-10-14",
     "reason": "Viral fever. Medical certificate attached.",
     "status": "approved",
     "approvedById": "usr-principal"
@@ -13,8 +13,8 @@
     "id": "lv-2",
     "staffId": "usr-f11",
     "kind": "on-duty",
-    "from": "2026-10-12",
-    "to": "2026-10-12",
+    "from": "2026-10-13",
+    "to": "2026-10-13",
     "reason": "Attending the Board of Studies meeting at the university.",
     "status": "approved",
     "approvedById": "usr-principal"
@@ -23,8 +23,8 @@
     "id": "lv-3",
     "staffId": "usr-f17",
     "kind": "casual",
-    "from": "2026-10-13",
-    "to": "2026-10-13",
+    "from": "2026-10-14",
+    "to": "2026-10-14",
     "reason": "Personal.",
     "status": "requested"
   },
@@ -32,8 +32,8 @@
     "id": "lv-4",
     "staffId": "usr-f20",
     "kind": "academic",
-    "from": "2026-10-03",
-    "to": "2026-10-05",
+    "from": "2026-10-04",
+    "to": "2026-10-06",
     "reason": "Presented a paper at the national conference, Madurai.",
     "status": "approved",
     "approvedById": "usr-principal"

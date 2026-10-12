@@ -35,7 +35,7 @@ If a previous run left changes behind, open **Settings → Reset demo**.
 | --- | --- | --- |
 | **Parent** | `parent@college.edu` **or register number `24UCS007`** | `Parent@123` |
 | **Student** | `student@college.edu` | `Student@123` |
-| Faculty (Computer Science) | `faculty@college.edu` | `Faculty@123` |
+| Professor (Computer Science) | `faculty@college.edu` | `Faculty@123` |
 | Principal | `principal@college.edu` | `Principal@123` |
 | Controller of Examinations | `coe@college.edu` | `Coe@123` |
 | Placement Officer | `placement@college.edu` | `Placement@123` |

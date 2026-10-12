@@ -7,12 +7,11 @@ import { motion } from 'motion/react';
 import {
   AlertCircle,
   ArrowRight,
-  Bus,
+  Briefcase,
   Eye,
   EyeOff,
   GraduationCap,
   IdCard,
-  Receipt,
   ShieldCheck,
   UserCog,
   UserRound,
@@ -35,49 +34,49 @@ type FormValues = z.infer<typeof schema>;
 const DEMO = [
   {
     role: 'Parent',
-    identifier: 'parent@school.edu',
+    identifier: 'parent@college.edu',
     password: 'Parent@123',
     icon: UserRound,
-    blurb: 'Attendance, fees, report card, bus',
-  },
-  {
-    role: 'Class Teacher',
-    identifier: 'teacher@school.edu',
-    password: 'Teacher@123',
-    icon: Users,
-    blurb: 'Mark the register, set homework, enter marks',
-  },
-  {
-    role: 'Correspondent',
-    identifier: 'admin@school.edu',
-    password: 'Admin@123',
-    icon: UserCog,
-    blurb: 'Fee collection, attendance, whole school',
+    blurb: 'Attendance per paper, CGPA, fees, placements',
   },
   {
     role: 'Student',
-    identifier: 'student@school.edu',
+    identifier: 'student@college.edu',
     password: 'Student@123',
     icon: GraduationCap,
-    blurb: 'Homework, timetable, report card',
+    blurb: 'Timetable, assignments, results, campus drives',
+  },
+  {
+    role: 'Professor',
+    identifier: 'faculty@college.edu',
+    password: 'Faculty@123',
+    icon: Users,
+    blurb: 'Hour register, assignments, internal marks, mentees',
+  },
+  {
+    role: 'Principal',
+    identifier: 'principal@college.edu',
+    password: 'Principal@123',
+    icon: UserCog,
+    blurb: 'The whole college — attendance, condonation, approvals',
   },
 ];
 
 const HIGHLIGHTS = [
   {
     icon: ShieldCheck,
-    title: 'Parents know the same day',
-    body: 'Absent marked at assembly, parent notified before lunch — no phone calls to the office.',
+    title: 'Attendance counted the way the university counts it',
+    body: 'Per paper, per hour — so a student short in one subject is caught before the hall ticket is refused, not after.',
   },
   {
-    icon: Receipt,
-    title: 'Fees collected without the queue',
-    body: 'Pay term and bus fees from the phone, receipt issued instantly, defaulter list always current.',
+    icon: GraduationCap,
+    title: 'CGPA and arrears, not a percentage',
+    body: 'Credits, grade points and the papers still to clear — the two figures that decide a degree and a job.',
   },
   {
-    icon: Bus,
-    title: 'Everything parents ask about',
-    body: 'Report cards, circulars, PTM slots, bus route and gate pass — in one app.',
+    icon: Briefcase,
+    title: 'Placements with the bar made plain',
+    body: 'A student sees which drives they qualify for and exactly why they do not, before the recruiter arrives.',
   },
 ];
 
@@ -103,8 +102,8 @@ export default function Login() {
   });
 
   // The student ID a parent would actually be given by the school.
-  const demoAdmissionNo =
-    db.users.find((u) => u.email === 'student@school.edu')?.registerNo ?? '';
+  const demoRegisterNo =
+    db.users.find((u) => u.email === 'student@college.edu')?.registerNo ?? '';
 
   const onSubmit = async (values: FormValues) => {
     setFormError('');
@@ -150,11 +149,11 @@ export default function Login() {
           </div>
 
           <h1 className="max-w-xl text-[42px] leading-[1.08] font-semibold tracking-tight text-ink">
-            The whole school, <span className="text-gradient">in every parent’s pocket.</span>
+            The whole college, <span className="text-gradient">in every parent’s pocket.</span>
           </h1>
           <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-ink-2">
-            Attendance, fees, homework, report cards and circulars — one app for parents, one
-            register for teachers, and one clear picture for the office.
+            Attendance, internal marks, results, fees and placements — one app for parents, one
+            register for faculty, and one clear picture for the office.
           </p>
 
           <ul className="mt-10 space-y-5">
@@ -195,12 +194,12 @@ export default function Login() {
 
           <h2 className="text-[22px] font-semibold tracking-tight text-ink">Sign in</h2>
           <p className="mt-1.5 text-[13.5px] text-ink-3">
-            Parents can use the student ID printed on the diary.
+            Parents can use the register number printed on the identity card.
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} noValidate className="mt-6 space-y-4">
             <Field
-              label="Email or Student ID"
+              label="Email or register number"
               error={errors.identifier?.message}
               required
               htmlFor="email"
@@ -208,7 +207,7 @@ export default function Login() {
               <Input
                 id="email"
                 autoComplete="username"
-                placeholder={demoAdmissionNo || 'you@school.edu'}
+                placeholder={demoRegisterNo || 'you@college.edu'}
                 leading={<IdCard className="size-4" />}
                 invalid={!!errors.identifier}
                 {...register('identifier')}
@@ -295,14 +294,14 @@ export default function Login() {
               ))}
             </div>
 
-            {demoAdmissionNo ? (
+            {demoRegisterNo ? (
               <button
                 type="button"
-                onClick={() => useDemo(demoAdmissionNo, 'Parent@123')}
+                onClick={() => useDemo(demoRegisterNo, 'Parent@123')}
                 className="mt-2 w-full rounded-xl border border-dashed border-line px-3 py-2.5 text-left text-[12px] text-ink-3 transition-colors hover:border-brand-500/40 hover:text-ink-2"
               >
-                <span className="font-medium text-ink-2">Or sign in as a parent with the student ID:</span>{' '}
-                <span className="tnum">{demoAdmissionNo}</span>
+                <span className="font-medium text-ink-2">Or sign in as a parent with the register number:</span>{' '}
+                <span className="tnum">{demoRegisterNo}</span>
               </button>
             ) : null}
           </div>
@@ -319,16 +318,16 @@ export default function Login() {
       >
         <ul className="space-y-3 text-[13.5px] leading-relaxed text-ink-2">
           <li>
-            <span className="font-semibold text-ink">Parents</span> sign in with the student ID
-            printed on the school diary — for example <span className="tnum">{demoAdmissionNo}</span> — or
-            with their registered email address.
+            <span className="font-semibold text-ink">Parents</span> sign in with their ward’s
+            register number — for example <span className="tnum">{demoRegisterNo}</span> — or with
+            their own registered email address.
           </li>
           <li>
-            <span className="font-semibold text-ink">Teachers and office staff</span> sign in with
-            their school email address.
+            <span className="font-semibold text-ink">Faculty and office staff</span> sign in with
+            their college email address.
           </li>
           <li>
-            Forgotten your password? The school office can reset it from the Students &amp; Staff
+            Forgotten your password? The college office can reset it from the Students &amp; Staff
             page. In this demo, use the accounts listed on the sign-in screen.
           </li>
         </ul>

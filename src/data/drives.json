@@ -12,8 +12,8 @@
     ],
     "minCgpa": 7,
     "maxArrears": 0,
-    "driveOn": "2026-09-30",
-    "registrationCloses": "2026-09-22",
+    "driveOn": "2026-10-01",
+    "registrationCloses": "2026-09-23",
     "rounds": [
       "Aptitude",
       "Technical",
@@ -34,8 +34,8 @@
     ],
     "minCgpa": 6,
     "maxArrears": 1,
-    "driveOn": "2026-10-18",
-    "registrationCloses": "2026-10-10",
+    "driveOn": "2026-10-19",
+    "registrationCloses": "2026-10-11",
     "rounds": [
       "Aptitude",
       "Technical",
@@ -58,8 +58,8 @@
     ],
     "minCgpa": 5.5,
     "maxArrears": 2,
-    "driveOn": "2026-10-26",
-    "registrationCloses": "2026-10-18",
+    "driveOn": "2026-10-27",
+    "registrationCloses": "2026-10-19",
     "rounds": [
       "Aptitude",
       "Communication",
@@ -80,8 +80,8 @@
     ],
     "minCgpa": 6.5,
     "maxArrears": 0,
-    "driveOn": "2026-10-15",
-    "registrationCloses": "2026-10-08",
+    "driveOn": "2026-10-16",
+    "registrationCloses": "2026-10-09",
     "rounds": [
       "Written",
       "Technical",
@@ -101,8 +101,8 @@
     ],
     "minCgpa": 5.5,
     "maxArrears": 2,
-    "driveOn": "2026-11-01",
-    "registrationCloses": "2026-10-23",
+    "driveOn": "2026-11-02",
+    "registrationCloses": "2026-10-24",
     "rounds": [
       "Group Discussion",
       "HR"
@@ -121,8 +121,8 @@
     ],
     "minCgpa": 7.5,
     "maxArrears": 0,
-    "driveOn": "2026-09-17",
-    "registrationCloses": "2026-09-07",
+    "driveOn": "2026-09-18",
+    "registrationCloses": "2026-09-08",
     "rounds": [
       "Aptitude",
       "Case Study",

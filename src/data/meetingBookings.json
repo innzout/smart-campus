@@ -4,9 +4,9 @@
     "slotId": "ms-sec-bsc-cs-2026-1",
     "parentId": "par-bsc-cs-2026-001",
     "studentId": "stu-bsc-cs-2026-001",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -14,9 +14,9 @@
     "slotId": "ms-sec-bsc-cs-2026-5",
     "parentId": "par-bsc-cs-2026-005",
     "studentId": "stu-bsc-cs-2026-005",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -24,9 +24,9 @@
     "slotId": "ms-sec-bsc-cs-2026-1",
     "parentId": "par-bsc-cs-2026-009",
     "studentId": "stu-bsc-cs-2026-009",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -36,7 +36,7 @@
     "studentId": "stu-bsc-cs-2026-013",
     "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -44,9 +44,9 @@
     "slotId": "ms-sec-bsc-cs-2026-1",
     "parentId": "par-bsc-cs-2026-017",
     "studentId": "stu-bsc-cs-2026-017",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -54,7 +54,7 @@
     "slotId": "ms-sec-bsc-cs-2026-5",
     "parentId": "par-bsc-cs-2026-021",
     "studentId": "stu-bsc-cs-2026-021",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-11",
     "status": "booked",
     "note": "Placement prospects.",
     "facultyNote": ""
@@ -64,9 +64,9 @@
     "slotId": "ms-sec-bsc-cs-2026-1",
     "parentId": "par-bsc-cs-2026-025",
     "studentId": "stu-bsc-cs-2026-025",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -74,9 +74,9 @@
     "slotId": "ms-sec-bsc-cs-2026-5",
     "parentId": "par-bsc-cs-2026-029",
     "studentId": "stu-bsc-cs-2026-029",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -84,7 +84,7 @@
     "slotId": "ms-sec-bsc-cs-2026-1",
     "parentId": "par-bsc-cs-2026-033",
     "studentId": "stu-bsc-cs-2026-033",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-07",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -94,9 +94,9 @@
     "slotId": "ms-sec-bsc-cs-2025-5",
     "parentId": "par-bsc-cs-2025-001",
     "studentId": "stu-bsc-cs-2025-001",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -104,9 +104,9 @@
     "slotId": "ms-sec-bsc-cs-2025-1",
     "parentId": "par-bsc-cs-2025-005",
     "studentId": "stu-bsc-cs-2025-005",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -114,7 +114,7 @@
     "slotId": "ms-sec-bsc-cs-2025-5",
     "parentId": "par-bsc-cs-2025-009",
     "studentId": "stu-bsc-cs-2025-009",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-07",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -124,9 +124,9 @@
     "slotId": "ms-sec-bsc-cs-2025-1",
     "parentId": "par-bsc-cs-2025-013",
     "studentId": "stu-bsc-cs-2025-013",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -134,9 +134,9 @@
     "slotId": "ms-sec-bsc-cs-2025-5",
     "parentId": "par-bsc-cs-2025-017",
     "studentId": "stu-bsc-cs-2025-017",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -144,7 +144,7 @@
     "slotId": "ms-sec-bsc-cs-2025-1",
     "parentId": "par-bsc-cs-2025-021",
     "studentId": "stu-bsc-cs-2025-021",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-12",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -154,9 +154,9 @@
     "slotId": "ms-sec-bsc-cs-2025-5",
     "parentId": "par-bsc-cs-2025-025",
     "studentId": "stu-bsc-cs-2025-025",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -166,7 +166,7 @@
     "studentId": "stu-bsc-cs-2025-029",
     "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -174,7 +174,7 @@
     "slotId": "ms-sec-bsc-cs-2025-5",
     "parentId": "par-bsc-cs-2025-033",
     "studentId": "stu-bsc-cs-2025-033",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -186,7 +186,7 @@
     "studentId": "stu-bsc-cs-2024-001",
     "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -194,9 +194,9 @@
     "slotId": "ms-sec-bsc-cs-2024-5",
     "parentId": "par-bsc-cs-2024-005",
     "studentId": "stu-bsc-cs-2024-005",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -204,9 +204,9 @@
     "slotId": "ms-sec-bsc-cs-2024-1",
     "parentId": "par-bsc-cs-2024-009",
     "studentId": "stu-bsc-cs-2024-009",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -214,9 +214,9 @@
     "slotId": "ms-sec-bsc-cs-2024-5",
     "parentId": "par-bsc-cs-2024-013",
     "studentId": "stu-bsc-cs-2024-013",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -224,9 +224,9 @@
     "slotId": "ms-sec-bsc-cs-2024-1",
     "parentId": "par-bsc-cs-2024-017",
     "studentId": "stu-bsc-cs-2024-017",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -234,9 +234,9 @@
     "slotId": "ms-sec-bsc-cs-2024-5",
     "parentId": "par-bsc-cs-2024-021",
     "studentId": "stu-bsc-cs-2024-021",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -244,9 +244,9 @@
     "slotId": "ms-sec-bsc-cs-2024-1",
     "parentId": "par-bsc-cs-2024-025",
     "studentId": "stu-bsc-cs-2024-025",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -254,9 +254,9 @@
     "slotId": "ms-sec-bsc-cs-2024-5",
     "parentId": "par-bsc-cs-2024-029",
     "studentId": "stu-bsc-cs-2024-029",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -264,9 +264,9 @@
     "slotId": "ms-sec-bsc-cs-2024-1",
     "parentId": "par-bsc-cs-2024-033",
     "studentId": "stu-bsc-cs-2024-033",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -276,7 +276,7 @@
     "studentId": "stu-bca-2026-001",
     "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -294,9 +294,9 @@
     "slotId": "ms-sec-bca-2026-5",
     "parentId": "par-bca-2026-009",
     "studentId": "stu-bca-2026-009",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -304,9 +304,9 @@
     "slotId": "ms-sec-bca-2026-1",
     "parentId": "par-bca-2026-013",
     "studentId": "stu-bca-2026-013",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -314,9 +314,9 @@
     "slotId": "ms-sec-bca-2026-5",
     "parentId": "par-bca-2026-017",
     "studentId": "stu-bca-2026-017",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -324,7 +324,7 @@
     "slotId": "ms-sec-bca-2026-1",
     "parentId": "par-bca-2026-021",
     "studentId": "stu-bca-2026-021",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-12",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -334,9 +334,9 @@
     "slotId": "ms-sec-bca-2026-5",
     "parentId": "par-bca-2026-025",
     "studentId": "stu-bca-2026-025",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -344,7 +344,7 @@
     "slotId": "ms-sec-bca-2026-1",
     "parentId": "par-bca-2026-029",
     "studentId": "stu-bca-2026-029",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-10",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -354,9 +354,9 @@
     "slotId": "ms-sec-bca-2026-5",
     "parentId": "par-bca-2026-033",
     "studentId": "stu-bca-2026-033",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -366,7 +366,7 @@
     "studentId": "stu-bca-2025-001",
     "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -376,7 +376,7 @@
     "studentId": "stu-bca-2025-005",
     "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -386,7 +386,7 @@
     "studentId": "stu-bca-2025-009",
     "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -394,9 +394,9 @@
     "slotId": "ms-sec-bca-2025-5",
     "parentId": "par-bca-2025-013",
     "studentId": "stu-bca-2025-013",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -406,7 +406,7 @@
     "studentId": "stu-bca-2025-017",
     "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -414,9 +414,9 @@
     "slotId": "ms-sec-bca-2025-5",
     "parentId": "par-bca-2025-021",
     "studentId": "stu-bca-2025-021",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -424,9 +424,9 @@
     "slotId": "ms-sec-bca-2025-1",
     "parentId": "par-bca-2025-025",
     "studentId": "stu-bca-2025-025",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -434,7 +434,7 @@
     "slotId": "ms-sec-bca-2025-5",
     "parentId": "par-bca-2025-029",
     "studentId": "stu-bca-2025-029",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Placement prospects.",
     "facultyNote": ""
@@ -444,9 +444,9 @@
     "slotId": "ms-sec-bca-2025-1",
     "parentId": "par-bca-2025-033",
     "studentId": "stu-bca-2025-033",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -454,9 +454,9 @@
     "slotId": "ms-sec-bca-2024-5",
     "parentId": "par-bca-2024-001",
     "studentId": "stu-bca-2024-001",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -464,9 +464,9 @@
     "slotId": "ms-sec-bca-2024-1",
     "parentId": "par-bca-2024-005",
     "studentId": "stu-bca-2024-005",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -474,7 +474,7 @@
     "slotId": "ms-sec-bca-2024-5",
     "parentId": "par-bca-2024-009",
     "studentId": "stu-bca-2024-009",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-08",
     "status": "booked",
     "note": "Placement prospects.",
     "facultyNote": ""
@@ -484,7 +484,7 @@
     "slotId": "ms-sec-bca-2024-1",
     "parentId": "par-bca-2024-013",
     "studentId": "stu-bca-2024-013",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-12",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -494,9 +494,9 @@
     "slotId": "ms-sec-bca-2024-5",
     "parentId": "par-bca-2024-017",
     "studentId": "stu-bca-2024-017",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -504,7 +504,7 @@
     "slotId": "ms-sec-bca-2024-1",
     "parentId": "par-bca-2024-021",
     "studentId": "stu-bca-2024-021",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -514,9 +514,9 @@
     "slotId": "ms-sec-bca-2024-5",
     "parentId": "par-bca-2024-025",
     "studentId": "stu-bca-2024-025",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -524,9 +524,9 @@
     "slotId": "ms-sec-bca-2024-1",
     "parentId": "par-bca-2024-029",
     "studentId": "stu-bca-2024-029",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -534,9 +534,9 @@
     "slotId": "ms-sec-bca-2024-5",
     "parentId": "par-bca-2024-033",
     "studentId": "stu-bca-2024-033",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -544,9 +544,9 @@
     "slotId": "ms-sec-bcom-2026-1",
     "parentId": "par-bcom-2026-001",
     "studentId": "stu-bcom-2026-001",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -554,9 +554,9 @@
     "slotId": "ms-sec-bcom-2026-5",
     "parentId": "par-bcom-2026-005",
     "studentId": "stu-bcom-2026-005",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -566,7 +566,7 @@
     "studentId": "stu-bcom-2026-009",
     "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -574,9 +574,9 @@
     "slotId": "ms-sec-bcom-2026-5",
     "parentId": "par-bcom-2026-013",
     "studentId": "stu-bcom-2026-013",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -584,9 +584,9 @@
     "slotId": "ms-sec-bcom-2026-1",
     "parentId": "par-bcom-2026-017",
     "studentId": "stu-bcom-2026-017",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -594,9 +594,9 @@
     "slotId": "ms-sec-bcom-2026-5",
     "parentId": "par-bcom-2026-021",
     "studentId": "stu-bcom-2026-021",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -604,9 +604,9 @@
     "slotId": "ms-sec-bcom-2026-1",
     "parentId": "par-bcom-2026-025",
     "studentId": "stu-bcom-2026-025",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -624,9 +624,9 @@
     "slotId": "ms-sec-bcom-2026-1",
     "parentId": "par-bcom-2026-033",
     "studentId": "stu-bcom-2026-033",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -634,9 +634,9 @@
     "slotId": "ms-sec-bcom-2025-5",
     "parentId": "par-bcom-2025-001",
     "studentId": "stu-bcom-2025-001",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -646,7 +646,7 @@
     "studentId": "stu-bcom-2025-005",
     "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -654,7 +654,7 @@
     "slotId": "ms-sec-bcom-2025-5",
     "parentId": "par-bcom-2025-009",
     "studentId": "stu-bcom-2025-009",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "About arrears.",
     "facultyNote": ""
@@ -666,7 +666,7 @@
     "studentId": "stu-bcom-2025-013",
     "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -674,9 +674,9 @@
     "slotId": "ms-sec-bcom-2025-5",
     "parentId": "par-bcom-2025-017",
     "studentId": "stu-bcom-2025-017",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -684,9 +684,9 @@
     "slotId": "ms-sec-bcom-2025-1",
     "parentId": "par-bcom-2025-021",
     "studentId": "stu-bcom-2025-021",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -694,7 +694,7 @@
     "slotId": "ms-sec-bcom-2025-5",
     "parentId": "par-bcom-2025-025",
     "studentId": "stu-bcom-2025-025",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-08",
     "status": "booked",
     "note": "About arrears.",
     "facultyNote": ""
@@ -704,9 +704,9 @@
     "slotId": "ms-sec-bcom-2025-1",
     "parentId": "par-bcom-2025-029",
     "studentId": "stu-bcom-2025-029",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -716,7 +716,7 @@
     "studentId": "stu-bcom-2025-033",
     "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -724,9 +724,9 @@
     "slotId": "ms-sec-bcom-2024-1",
     "parentId": "par-bcom-2024-001",
     "studentId": "stu-bcom-2024-001",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -734,7 +734,7 @@
     "slotId": "ms-sec-bcom-2024-5",
     "parentId": "par-bcom-2024-005",
     "studentId": "stu-bcom-2024-005",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-12",
     "status": "booked",
     "note": "Placement prospects.",
     "facultyNote": ""
@@ -744,9 +744,9 @@
     "slotId": "ms-sec-bcom-2024-1",
     "parentId": "par-bcom-2024-009",
     "studentId": "stu-bcom-2024-009",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -754,9 +754,9 @@
     "slotId": "ms-sec-bcom-2024-5",
     "parentId": "par-bcom-2024-013",
     "studentId": "stu-bcom-2024-013",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -764,9 +764,9 @@
     "slotId": "ms-sec-bcom-2024-1",
     "parentId": "par-bcom-2024-017",
     "studentId": "stu-bcom-2024-017",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -784,9 +784,9 @@
     "slotId": "ms-sec-bcom-2024-1",
     "parentId": "par-bcom-2024-025",
     "studentId": "stu-bcom-2024-025",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -794,7 +794,7 @@
     "slotId": "ms-sec-bcom-2024-5",
     "parentId": "par-bcom-2024-029",
     "studentId": "stu-bcom-2024-029",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -814,9 +814,9 @@
     "slotId": "ms-sec-bba-2026-5",
     "parentId": "par-bba-2026-001",
     "studentId": "stu-bba-2026-001",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -824,7 +824,7 @@
     "slotId": "ms-sec-bba-2026-1",
     "parentId": "par-bba-2026-005",
     "studentId": "stu-bba-2026-005",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-10",
     "status": "booked",
     "note": "About arrears.",
     "facultyNote": ""
@@ -834,9 +834,9 @@
     "slotId": "ms-sec-bba-2026-5",
     "parentId": "par-bba-2026-009",
     "studentId": "stu-bba-2026-009",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -844,9 +844,9 @@
     "slotId": "ms-sec-bba-2026-1",
     "parentId": "par-bba-2026-013",
     "studentId": "stu-bba-2026-013",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -854,7 +854,7 @@
     "slotId": "ms-sec-bba-2026-5",
     "parentId": "par-bba-2026-017",
     "studentId": "stu-bba-2026-017",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-08",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -864,7 +864,7 @@
     "slotId": "ms-sec-bba-2026-1",
     "parentId": "par-bba-2026-021",
     "studentId": "stu-bba-2026-021",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Placement prospects.",
     "facultyNote": ""
@@ -874,9 +874,9 @@
     "slotId": "ms-sec-bba-2026-5",
     "parentId": "par-bba-2026-025",
     "studentId": "stu-bba-2026-025",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -884,7 +884,7 @@
     "slotId": "ms-sec-bba-2026-1",
     "parentId": "par-bba-2026-029",
     "studentId": "stu-bba-2026-029",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -894,9 +894,9 @@
     "slotId": "ms-sec-bba-2026-5",
     "parentId": "par-bba-2026-033",
     "studentId": "stu-bba-2026-033",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -904,9 +904,9 @@
     "slotId": "ms-sec-bba-2025-1",
     "parentId": "par-bba-2025-001",
     "studentId": "stu-bba-2025-001",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -914,7 +914,7 @@
     "slotId": "ms-sec-bba-2025-5",
     "parentId": "par-bba-2025-005",
     "studentId": "stu-bba-2025-005",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -924,9 +924,9 @@
     "slotId": "ms-sec-bba-2025-1",
     "parentId": "par-bba-2025-009",
     "studentId": "stu-bba-2025-009",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -934,7 +934,7 @@
     "slotId": "ms-sec-bba-2025-5",
     "parentId": "par-bba-2025-013",
     "studentId": "stu-bba-2025-013",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-12",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -944,9 +944,9 @@
     "slotId": "ms-sec-bba-2025-1",
     "parentId": "par-bba-2025-017",
     "studentId": "stu-bba-2025-017",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-12",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -954,9 +954,9 @@
     "slotId": "ms-sec-bba-2025-5",
     "parentId": "par-bba-2025-021",
     "studentId": "stu-bba-2025-021",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -966,7 +966,7 @@
     "studentId": "stu-bba-2025-025",
     "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "Would like to discuss attendance.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -974,7 +974,7 @@
     "slotId": "ms-sec-bba-2025-5",
     "parentId": "par-bba-2025-029",
     "studentId": "stu-bba-2025-029",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-11",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -984,9 +984,9 @@
     "slotId": "ms-sec-bba-2025-1",
     "parentId": "par-bba-2025-033",
     "studentId": "stu-bba-2025-033",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -994,9 +994,9 @@
     "slotId": "ms-sec-bba-2024-5",
     "parentId": "par-bba-2024-001",
     "studentId": "stu-bba-2024-001",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Placement prospects.",
     "facultyNote": ""
   },
   {
@@ -1014,9 +1014,9 @@
     "slotId": "ms-sec-bba-2024-5",
     "parentId": "par-bba-2024-009",
     "studentId": "stu-bba-2024-009",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -1024,9 +1024,9 @@
     "slotId": "ms-sec-bba-2024-1",
     "parentId": "par-bba-2024-013",
     "studentId": "stu-bba-2024-013",
-    "bookedOn": "2026-10-06",
+    "bookedOn": "2026-10-08",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -1034,9 +1034,9 @@
     "slotId": "ms-sec-bba-2024-5",
     "parentId": "par-bba-2024-017",
     "studentId": "stu-bba-2024-017",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -1044,9 +1044,9 @@
     "slotId": "ms-sec-bba-2024-1",
     "parentId": "par-bba-2024-021",
     "studentId": "stu-bba-2024-021",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -1054,7 +1054,7 @@
     "slotId": "ms-sec-bba-2024-5",
     "parentId": "par-bba-2024-025",
     "studentId": "stu-bba-2024-025",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-07",
     "status": "booked",
     "note": "About arrears.",
     "facultyNote": ""
@@ -1064,9 +1064,9 @@
     "slotId": "ms-sec-bba-2024-1",
     "parentId": "par-bba-2024-029",
     "studentId": "stu-bba-2024-029",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -1074,9 +1074,9 @@
     "slotId": "ms-sec-bba-2024-5",
     "parentId": "par-bba-2024-033",
     "studentId": "stu-bba-2024-033",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-11",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -1084,7 +1084,7 @@
     "slotId": "ms-sec-msc-cs-2026-1",
     "parentId": "par-msc-cs-2026-001",
     "studentId": "stu-msc-cs-2026-001",
-    "bookedOn": "2026-10-09",
+    "bookedOn": "2026-10-08",
     "status": "booked",
     "note": "About arrears.",
     "facultyNote": ""
@@ -1094,7 +1094,7 @@
     "slotId": "ms-sec-msc-cs-2026-5",
     "parentId": "par-msc-cs-2026-005",
     "studentId": "stu-msc-cs-2026-005",
-    "bookedOn": "2026-10-07",
+    "bookedOn": "2026-10-11",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -1104,9 +1104,9 @@
     "slotId": "ms-sec-msc-cs-2026-1",
     "parentId": "par-msc-cs-2026-009",
     "studentId": "stu-msc-cs-2026-009",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -1114,7 +1114,7 @@
     "slotId": "ms-sec-msc-cs-2026-5",
     "parentId": "par-msc-cs-2026-013",
     "studentId": "stu-msc-cs-2026-013",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-09",
     "status": "booked",
     "note": "Would like to discuss attendance.",
     "facultyNote": ""
@@ -1124,9 +1124,9 @@
     "slotId": "ms-sec-msc-cs-2026-1",
     "parentId": "par-msc-cs-2026-017",
     "studentId": "stu-msc-cs-2026-017",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "",
     "facultyNote": ""
   },
   {
@@ -1136,7 +1136,7 @@
     "studentId": "stu-msc-cs-2025-003",
     "bookedOn": "2026-10-10",
     "status": "booked",
-    "note": "",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -1144,7 +1144,7 @@
     "slotId": "ms-sec-msc-cs-2025-1",
     "parentId": "par-msc-cs-2025-007",
     "studentId": "stu-msc-cs-2025-007",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-08",
     "status": "booked",
     "note": "",
     "facultyNote": ""
@@ -1154,9 +1154,9 @@
     "slotId": "ms-sec-msc-cs-2025-5",
     "parentId": "par-msc-cs-2025-011",
     "studentId": "stu-msc-cs-2025-011",
-    "bookedOn": "2026-10-08",
+    "bookedOn": "2026-10-07",
     "status": "booked",
-    "note": "About arrears.",
+    "note": "Would like to discuss attendance.",
     "facultyNote": ""
   },
   {
@@ -1164,9 +1164,9 @@
     "slotId": "ms-sec-msc-cs-2025-1",
     "parentId": "par-msc-cs-2025-015",
     "studentId": "stu-msc-cs-2025-015",
-    "bookedOn": "2026-10-11",
+    "bookedOn": "2026-10-09",
     "status": "booked",
-    "note": "Placement prospects.",
+    "note": "About arrears.",
     "facultyNote": ""
   },
   {
@@ -1174,7 +1174,7 @@
     "slotId": "ms-sec-bsc-cs-2024-1",
     "parentId": "par-bsc-cs-2024-007",
     "studentId": "stu-bsc-cs-2024-007",
-    "bookedOn": "2026-10-10",
+    "bookedOn": "2026-10-11",
     "status": "booked",
     "note": "Would like to discuss the attendance shortage and the Zoho offer.",
     "facultyNote": ""

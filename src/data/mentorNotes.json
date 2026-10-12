@@ -3,7 +3,7 @@
     "id": "mnt-1",
     "mentorId": "usr-f2",
     "studentId": "stu-bsc-cs-2026-001",
-    "on": "2026-09-27",
+    "on": "2026-09-12",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -11,7 +11,7 @@
     "id": "mnt-2",
     "mentorId": "usr-f1",
     "studentId": "stu-bsc-cs-2026-007",
-    "on": "2026-09-17",
+    "on": "2026-09-19",
     "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
@@ -19,7 +19,7 @@
     "id": "mnt-3",
     "mentorId": "usr-f7",
     "studentId": "stu-bsc-cs-2026-013",
-    "on": "2026-09-21",
+    "on": "2026-09-20",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -27,7 +27,7 @@
     "id": "mnt-4",
     "mentorId": "usr-f6",
     "studentId": "stu-bsc-cs-2026-019",
-    "on": "2026-09-07",
+    "on": "2026-09-13",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -35,7 +35,7 @@
     "id": "mnt-5",
     "mentorId": "usr-f5",
     "studentId": "stu-bsc-cs-2026-025",
-    "on": "2026-09-11",
+    "on": "2026-09-21",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -43,15 +43,15 @@
     "id": "mnt-6",
     "mentorId": "usr-f4",
     "studentId": "stu-bsc-cs-2026-031",
-    "on": "2026-09-18",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-26",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
     "id": "mnt-7",
     "mentorId": "usr-f2",
     "studentId": "stu-bsc-cs-2025-001",
-    "on": "2026-09-19",
+    "on": "2026-09-22",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -59,15 +59,15 @@
     "id": "mnt-8",
     "mentorId": "usr-f1",
     "studentId": "stu-bsc-cs-2025-007",
-    "on": "2026-09-12",
-    "note": "Discussed the elective choice for the coming semester.",
+    "on": "2026-09-03",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-9",
     "mentorId": "usr-f7",
     "studentId": "stu-bsc-cs-2025-013",
-    "on": "2026-09-25",
+    "on": "2026-09-10",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -75,7 +75,7 @@
     "id": "mnt-10",
     "mentorId": "usr-f6",
     "studentId": "stu-bsc-cs-2025-019",
-    "on": "2026-10-04",
+    "on": "2026-09-23",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -83,7 +83,7 @@
     "id": "mnt-11",
     "mentorId": "usr-f5",
     "studentId": "stu-bsc-cs-2025-025",
-    "on": "2026-09-21",
+    "on": "2026-09-17",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -91,15 +91,15 @@
     "id": "mnt-12",
     "mentorId": "usr-f4",
     "studentId": "stu-bsc-cs-2025-031",
-    "on": "2026-09-02",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-11",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
     "id": "mnt-13",
     "mentorId": "usr-f2",
     "studentId": "stu-bsc-cs-2024-001",
-    "on": "2026-09-09",
+    "on": "2026-09-13",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -107,8 +107,8 @@
     "id": "mnt-14",
     "mentorId": "usr-f1",
     "studentId": "stu-bsc-cs-2024-007",
-    "on": "2026-09-22",
-    "note": "Discussed the elective choice for the coming semester.",
+    "on": "2026-09-25",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
@@ -123,7 +123,7 @@
     "id": "mnt-16",
     "mentorId": "usr-f6",
     "studentId": "stu-bsc-cs-2024-019",
-    "on": "2026-10-09",
+    "on": "2026-09-24",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -131,7 +131,7 @@
     "id": "mnt-17",
     "mentorId": "usr-f5",
     "studentId": "stu-bsc-cs-2024-025",
-    "on": "2026-09-12",
+    "on": "2026-10-07",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -139,15 +139,15 @@
     "id": "mnt-18",
     "mentorId": "usr-f4",
     "studentId": "stu-bsc-cs-2024-031",
-    "on": "2026-09-24",
-    "note": "Monthly review. Progressing well; interested in placements.",
+    "on": "2026-09-17",
+    "note": "Discussed the elective choice for the coming semester.",
     "concern": "none"
   },
   {
     "id": "mnt-19",
     "mentorId": "usr-f2",
     "studentId": "stu-bca-2026-001",
-    "on": "2026-09-09",
+    "on": "2026-09-19",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -155,7 +155,7 @@
     "id": "mnt-20",
     "mentorId": "usr-f1",
     "studentId": "stu-bca-2026-007",
-    "on": "2026-09-23",
+    "on": "2026-09-08",
     "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
@@ -163,7 +163,7 @@
     "id": "mnt-21",
     "mentorId": "usr-f7",
     "studentId": "stu-bca-2026-013",
-    "on": "2026-09-16",
+    "on": "2026-10-02",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -171,7 +171,7 @@
     "id": "mnt-22",
     "mentorId": "usr-f6",
     "studentId": "stu-bca-2026-019",
-    "on": "2026-09-16",
+    "on": "2026-09-30",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -179,7 +179,7 @@
     "id": "mnt-23",
     "mentorId": "usr-f5",
     "studentId": "stu-bca-2026-025",
-    "on": "2026-09-18",
+    "on": "2026-09-10",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -187,7 +187,7 @@
     "id": "mnt-24",
     "mentorId": "usr-f4",
     "studentId": "stu-bca-2026-031",
-    "on": "2026-09-07",
+    "on": "2026-09-11",
     "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
@@ -195,7 +195,7 @@
     "id": "mnt-25",
     "mentorId": "usr-f2",
     "studentId": "stu-bca-2025-001",
-    "on": "2026-10-01",
+    "on": "2026-09-24",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -203,7 +203,7 @@
     "id": "mnt-26",
     "mentorId": "usr-f1",
     "studentId": "stu-bca-2025-007",
-    "on": "2026-09-29",
+    "on": "2026-10-04",
     "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
@@ -211,7 +211,7 @@
     "id": "mnt-27",
     "mentorId": "usr-f7",
     "studentId": "stu-bca-2025-013",
-    "on": "2026-09-10",
+    "on": "2026-09-18",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -219,7 +219,7 @@
     "id": "mnt-28",
     "mentorId": "usr-f6",
     "studentId": "stu-bca-2025-019",
-    "on": "2026-10-07",
+    "on": "2026-09-04",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -227,7 +227,7 @@
     "id": "mnt-29",
     "mentorId": "usr-f5",
     "studentId": "stu-bca-2025-025",
-    "on": "2026-09-23",
+    "on": "2026-10-04",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -235,15 +235,15 @@
     "id": "mnt-30",
     "mentorId": "usr-f4",
     "studentId": "stu-bca-2025-031",
-    "on": "2026-10-03",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-05",
+    "note": "Discussed the elective choice for the coming semester.",
     "concern": "none"
   },
   {
     "id": "mnt-31",
     "mentorId": "usr-f2",
     "studentId": "stu-bca-2024-001",
-    "on": "2026-09-17",
+    "on": "2026-09-23",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -251,15 +251,15 @@
     "id": "mnt-32",
     "mentorId": "usr-f1",
     "studentId": "stu-bca-2024-007",
-    "on": "2026-09-03",
-    "note": "Monthly review. Progressing well; interested in placements.",
+    "on": "2026-09-30",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-33",
     "mentorId": "usr-f7",
     "studentId": "stu-bca-2024-013",
-    "on": "2026-09-04",
+    "on": "2026-09-10",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -267,7 +267,7 @@
     "id": "mnt-34",
     "mentorId": "usr-f6",
     "studentId": "stu-bca-2024-019",
-    "on": "2026-09-17",
+    "on": "2026-09-21",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -275,7 +275,7 @@
     "id": "mnt-35",
     "mentorId": "usr-f5",
     "studentId": "stu-bca-2024-025",
-    "on": "2026-09-22",
+    "on": "2026-09-13",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -283,7 +283,7 @@
     "id": "mnt-36",
     "mentorId": "usr-f4",
     "studentId": "stu-bca-2024-031",
-    "on": "2026-09-29",
+    "on": "2026-09-27",
     "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
@@ -291,7 +291,7 @@
     "id": "mnt-37",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2026-001",
-    "on": "2026-09-09",
+    "on": "2026-10-05",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -299,15 +299,15 @@
     "id": "mnt-38",
     "mentorId": "usr-f10",
     "studentId": "stu-bcom-2026-007",
-    "on": "2026-09-20",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-30",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
     "id": "mnt-39",
     "mentorId": "usr-f11",
     "studentId": "stu-bcom-2026-013",
-    "on": "2026-09-26",
+    "on": "2026-09-16",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -315,7 +315,7 @@
     "id": "mnt-40",
     "mentorId": "usr-f12",
     "studentId": "stu-bcom-2026-019",
-    "on": "2026-09-07",
+    "on": "2026-09-08",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -323,7 +323,7 @@
     "id": "mnt-41",
     "mentorId": "usr-f8",
     "studentId": "stu-bcom-2026-025",
-    "on": "2026-10-04",
+    "on": "2026-09-04",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -331,15 +331,15 @@
     "id": "mnt-42",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2026-031",
-    "on": "2026-09-29",
-    "note": "Monthly review. Progressing well; interested in placements.",
+    "on": "2026-10-03",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-43",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2025-001",
-    "on": "2026-09-15",
+    "on": "2026-10-08",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -347,15 +347,15 @@
     "id": "mnt-44",
     "mentorId": "usr-f10",
     "studentId": "stu-bcom-2025-007",
-    "on": "2026-09-07",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-10-07",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
     "id": "mnt-45",
     "mentorId": "usr-f11",
     "studentId": "stu-bcom-2025-013",
-    "on": "2026-10-02",
+    "on": "2026-09-08",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -363,7 +363,7 @@
     "id": "mnt-46",
     "mentorId": "usr-f12",
     "studentId": "stu-bcom-2025-019",
-    "on": "2026-09-10",
+    "on": "2026-10-10",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -371,7 +371,7 @@
     "id": "mnt-47",
     "mentorId": "usr-f8",
     "studentId": "stu-bcom-2025-025",
-    "on": "2026-10-07",
+    "on": "2026-10-04",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -379,7 +379,7 @@
     "id": "mnt-48",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2025-031",
-    "on": "2026-10-06",
+    "on": "2026-10-07",
     "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
@@ -387,7 +387,7 @@
     "id": "mnt-49",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2024-001",
-    "on": "2026-09-07",
+    "on": "2026-09-24",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -395,7 +395,7 @@
     "id": "mnt-50",
     "mentorId": "usr-f10",
     "studentId": "stu-bcom-2024-007",
-    "on": "2026-10-09",
+    "on": "2026-09-07",
     "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
@@ -403,7 +403,7 @@
     "id": "mnt-51",
     "mentorId": "usr-f11",
     "studentId": "stu-bcom-2024-013",
-    "on": "2026-10-06",
+    "on": "2026-09-27",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -411,7 +411,7 @@
     "id": "mnt-52",
     "mentorId": "usr-f12",
     "studentId": "stu-bcom-2024-019",
-    "on": "2026-10-02",
+    "on": "2026-09-26",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -419,7 +419,7 @@
     "id": "mnt-53",
     "mentorId": "usr-f8",
     "studentId": "stu-bcom-2024-025",
-    "on": "2026-09-23",
+    "on": "2026-09-29",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -427,15 +427,15 @@
     "id": "mnt-54",
     "mentorId": "usr-f9",
     "studentId": "stu-bcom-2024-031",
-    "on": "2026-09-06",
-    "note": "Monthly review. Progressing well; interested in placements.",
+    "on": "2026-09-27",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-55",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-001",
-    "on": "2026-09-26",
+    "on": "2026-09-11",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -443,15 +443,15 @@
     "id": "mnt-56",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-007",
-    "on": "2026-09-25",
-    "note": "Monthly review. Progressing well; interested in placements.",
+    "on": "2026-09-27",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-57",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-013",
-    "on": "2026-09-26",
+    "on": "2026-10-06",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -459,7 +459,7 @@
     "id": "mnt-58",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-019",
-    "on": "2026-09-08",
+    "on": "2026-09-22",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -467,7 +467,7 @@
     "id": "mnt-59",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-025",
-    "on": "2026-09-10",
+    "on": "2026-09-19",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -475,15 +475,15 @@
     "id": "mnt-60",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2026-031",
-    "on": "2026-09-26",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-15",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   },
   {
     "id": "mnt-61",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-001",
-    "on": "2026-10-05",
+    "on": "2026-10-10",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -491,15 +491,15 @@
     "id": "mnt-62",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-007",
-    "on": "2026-09-21",
-    "note": "Discussed the elective choice for the coming semester.",
+    "on": "2026-10-09",
+    "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
   {
     "id": "mnt-63",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-013",
-    "on": "2026-09-14",
+    "on": "2026-09-11",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -507,7 +507,7 @@
     "id": "mnt-64",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-019",
-    "on": "2026-10-03",
+    "on": "2026-09-09",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -515,7 +515,7 @@
     "id": "mnt-65",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-025",
-    "on": "2026-10-09",
+    "on": "2026-09-09",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -523,7 +523,7 @@
     "id": "mnt-66",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2025-031",
-    "on": "2026-10-08",
+    "on": "2026-10-10",
     "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
@@ -531,7 +531,7 @@
     "id": "mnt-67",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-001",
-    "on": "2026-09-10",
+    "on": "2026-09-14",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -539,7 +539,7 @@
     "id": "mnt-68",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-007",
-    "on": "2026-09-08",
+    "on": "2026-09-13",
     "note": "No concerns. Encouraged to take part in the symposium.",
     "concern": "none"
   },
@@ -547,7 +547,7 @@
     "id": "mnt-69",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-013",
-    "on": "2026-10-09",
+    "on": "2026-09-07",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -555,7 +555,7 @@
     "id": "mnt-70",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-019",
-    "on": "2026-09-12",
+    "on": "2026-09-24",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -563,7 +563,7 @@
     "id": "mnt-71",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-025",
-    "on": "2026-09-13",
+    "on": "2026-09-22",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -571,15 +571,15 @@
     "id": "mnt-72",
     "mentorId": "usr-f14",
     "studentId": "stu-bba-2024-031",
-    "on": "2026-09-12",
-    "note": "No concerns. Encouraged to take part in the symposium.",
+    "on": "2026-09-29",
+    "note": "Discussed the elective choice for the coming semester.",
     "concern": "none"
   },
   {
     "id": "mnt-73",
     "mentorId": "usr-f2",
     "studentId": "stu-msc-cs-2026-001",
-    "on": "2026-09-06",
+    "on": "2026-10-01",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -587,7 +587,7 @@
     "id": "mnt-74",
     "mentorId": "usr-f1",
     "studentId": "stu-msc-cs-2026-007",
-    "on": "2026-09-23",
+    "on": "2026-09-28",
     "note": "Discussed the elective choice for the coming semester.",
     "concern": "none"
   },
@@ -595,7 +595,7 @@
     "id": "mnt-75",
     "mentorId": "usr-f7",
     "studentId": "stu-msc-cs-2026-013",
-    "on": "2026-09-28",
+    "on": "2026-09-07",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -603,7 +603,7 @@
     "id": "mnt-76",
     "mentorId": "usr-f2",
     "studentId": "stu-msc-cs-2025-001",
-    "on": "2026-09-25",
+    "on": "2026-10-07",
     "note": "Attendance short in two papers. Parent informed by telephone; the student has undertaken to attend regularly.",
     "concern": "attendance"
   },
@@ -611,7 +611,7 @@
     "id": "mnt-77",
     "mentorId": "usr-f1",
     "studentId": "stu-msc-cs-2025-007",
-    "on": "2026-09-30",
+    "on": "2026-09-18",
     "note": "Struggling with the practical component. Advised to attend the remedial class on Saturdays.",
     "concern": "academic"
   },
@@ -619,8 +619,8 @@
     "id": "mnt-78",
     "mentorId": "usr-f7",
     "studentId": "stu-msc-cs-2025-013",
-    "on": "2026-09-27",
-    "note": "Discussed the elective choice for the coming semester.",
+    "on": "2026-09-18",
+    "note": "Monthly review. Progressing well; interested in placements.",
     "concern": "none"
   }
 ]

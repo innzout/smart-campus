@@ -31,7 +31,7 @@ import {
   Requests,
   Results,
   Roles,
-  SchoolMap,
+  CampusMap,
   Settings,
   Substitutions,
   Timetable,
@@ -106,7 +106,7 @@ function AppRoutes() {
         <Route path="transport" element={<Guard path="/transport"><Transport /></Guard>} />
         <Route path="library" element={<Guard path="/library"><Library /></Guard>} />
         <Route path="requests" element={<Guard path="/requests"><Requests /></Guard>} />
-        <Route path="campus" element={<Guard path="/campus"><SchoolMap /></Guard>} />
+        <Route path="campus" element={<Guard path="/campus"><CampusMap /></Guard>} />
         <Route path="notifications" element={<Guard path="/notifications"><Notifications /></Guard>} />
         <Route path="students" element={<Guard path="/students"><People /></Guard>} />
         <Route path="academics" element={<Guard path="/academics"><Academics /></Guard>} />

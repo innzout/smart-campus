@@ -272,7 +272,7 @@ export function Topbar({
           className="ml-auto flex h-10 items-center gap-2.5 rounded-xl border border-line bg-surface-2 px-3 text-ink-3 transition-colors hover:border-line-strong hover:text-ink-2 lg:w-72"
         >
           <Search className="size-4 shrink-0" aria-hidden />
-          <span className="hidden text-[13px] lg:block">Search school…</span>
+          <span className="hidden text-[13px] lg:block">Search the college…</span>
           <kbd className="ml-auto hidden rounded border border-line bg-surface px-1.5 py-0.5 text-[10px] font-medium lg:block">
             Ctrl K
           </kbd>

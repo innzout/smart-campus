@@ -8,14 +8,14 @@
     "category": "Certificate",
     "description": "Bonafide certificate required for a passport application. Kindly issue at the earliest.",
     "status": "resolved",
-    "createdOn": "2026-10-01",
+    "createdOn": "2026-10-02",
     "updates": [
       {
-        "on": "2026-10-02",
+        "on": "2026-10-03",
         "note": "Received at the college office."
       },
       {
-        "on": "2026-10-04",
+        "on": "2026-10-05",
         "note": "Certificate issued. Please collect from the office."
       }
     ]
@@ -29,10 +29,10 @@
     "category": "Exam",
     "description": "My ward was hospitalised for ten days. Requesting condonation of the attendance shortage in one paper. Medical records enclosed.",
     "status": "in-progress",
-    "createdOn": "2026-10-08",
+    "createdOn": "2026-10-09",
     "updates": [
       {
-        "on": "2026-10-09",
+        "on": "2026-10-10",
         "note": "Forwarded to the Principal for orders."
       }
     ]
@@ -46,7 +46,7 @@
     "category": "Other",
     "description": "Requesting a change of elective from Cloud Computing to Mobile Application Development before the internal assessment begins.",
     "status": "open",
-    "createdOn": "2026-10-10",
+    "createdOn": "2026-10-11",
     "updates": []
   },
   {
@@ -58,10 +58,10 @@
     "category": "Hostel",
     "description": "Requesting a change of room owing to a persistent dust allergy. A ground floor room would be preferable.",
     "status": "in-progress",
-    "createdOn": "2026-10-06",
+    "createdOn": "2026-10-07",
     "updates": [
       {
-        "on": "2026-10-07",
+        "on": "2026-10-08",
         "note": "Forwarded to the Principal for orders."
       }
     ]
@@ -74,7 +74,7 @@
     "category": "Facility",
     "description": "The projector in CS-301 has not been working for a week. Practical demonstrations are affected.",
     "status": "open",
-    "createdOn": "2026-10-09",
+    "createdOn": "2026-10-10",
     "updates": []
   }
 ]

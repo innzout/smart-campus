@@ -2,7 +2,7 @@
   {
     "id": "bok-1",
     "collegeId": "col-1",
-    "accessionNo": "ACC/01309",
+    "accessionNo": "ACC/01809",
     "title": "Let Us C",
     "author": "Yashavant Kanetkar",
     "publisher": "BPB Publications",
@@ -16,12 +16,12 @@
       "prg-msc-cs"
     ],
     "price": 425,
-    "addedOn": "2024-05-06"
+    "addedOn": "2025-04-27"
   },
   {
     "id": "bok-2",
     "collegeId": "col-1",
-    "accessionNo": "ACC/02210",
+    "accessionNo": "ACC/02610",
     "title": "Introduction to Algorithms",
     "author": "Cormen, Leiserson, Rivest",
     "publisher": "MIT Press",
@@ -35,12 +35,12 @@
       "prg-msc-cs"
     ],
     "price": 1250,
-    "addedOn": "2024-12-28"
+    "addedOn": "2024-11-25"
   },
   {
     "id": "bok-3",
     "collegeId": "col-1",
-    "accessionNo": "ACC/03529",
+    "accessionNo": "ACC/03918",
     "title": "Database System Concepts",
     "author": "Silberschatz, Korth",
     "publisher": "McGraw Hill",
@@ -54,12 +54,12 @@
       "prg-msc-cs"
     ],
     "price": 980,
-    "addedOn": "2024-02-20"
+    "addedOn": "2025-02-24"
   },
   {
     "id": "bok-4",
     "collegeId": "col-1",
-    "accessionNo": "ACC/04460",
+    "accessionNo": "ACC/04368",
     "title": "Java: The Complete Reference",
     "author": "Herbert Schildt",
     "publisher": "McGraw Hill",
@@ -73,12 +73,12 @@
       "prg-msc-cs"
     ],
     "price": 875,
-    "addedOn": "2024-10-22"
+    "addedOn": "2025-01-04"
   },
   {
     "id": "bok-5",
     "collegeId": "col-1",
-    "accessionNo": "ACC/05584",
+    "accessionNo": "ACC/05790",
     "title": "Operating System Concepts",
     "author": "Silberschatz, Galvin",
     "publisher": "Wiley",
@@ -92,12 +92,12 @@
       "prg-msc-cs"
     ],
     "price": 920,
-    "addedOn": "2023-10-08"
+    "addedOn": "2025-03-04"
   },
   {
     "id": "bok-6",
     "collegeId": "col-1",
-    "accessionNo": "ACC/06510",
+    "accessionNo": "ACC/06622",
     "title": "Advanced Accountancy — Volume I",
     "author": "S.P. Jain and K.L. Narang",
     "publisher": "Kalyani",
@@ -110,12 +110,12 @@
       "prg-bba"
     ],
     "price": 560,
-    "addedOn": "2025-08-18"
+    "addedOn": "2024-10-02"
   },
   {
     "id": "bok-7",
     "collegeId": "col-1",
-    "accessionNo": "ACC/07551",
+    "accessionNo": "ACC/07639",
     "title": "Income Tax Law and Practice",
     "author": "V.P. Gaur and D.B. Narang",
     "publisher": "Kalyani",
@@ -128,12 +128,12 @@
       "prg-bba"
     ],
     "price": 640,
-    "addedOn": "2024-03-14"
+    "addedOn": "2024-04-12"
   },
   {
     "id": "bok-8",
     "collegeId": "col-1",
-    "accessionNo": "ACC/08503",
+    "accessionNo": "ACC/08849",
     "title": "Principles of Management",
     "author": "Harold Koontz",
     "publisher": "McGraw Hill",
@@ -146,12 +146,12 @@
       "prg-bba"
     ],
     "price": 710,
-    "addedOn": "2024-10-07"
+    "addedOn": "2024-04-10"
   },
   {
     "id": "bok-9",
     "collegeId": "col-1",
-    "accessionNo": "ACC/09627",
+    "accessionNo": "ACC/09719",
     "title": "Marketing Management",
     "author": "Philip Kotler",
     "publisher": "Pearson",
@@ -164,12 +164,12 @@
       "prg-bba"
     ],
     "price": 899,
-    "addedOn": "2024-09-17"
+    "addedOn": "2024-01-23"
   },
   {
     "id": "bok-10",
     "collegeId": "col-1",
-    "accessionNo": "ACC/10768",
+    "accessionNo": "ACC/10454",
     "title": "Ponniyin Selvan (Part 1)",
     "author": "Kalki Krishnamurthy",
     "publisher": "Vanathi Pathippagam",
@@ -185,12 +185,12 @@
       "prg-msc-cs"
     ],
     "price": 420,
-    "addedOn": "2024-01-01"
+    "addedOn": "2025-04-15"
   },
   {
     "id": "bok-11",
     "collegeId": "col-1",
-    "accessionNo": "ACC/11769",
+    "accessionNo": "ACC/11205",
     "title": "Wings of Fire",
     "author": "A.P.J. Abdul Kalam",
     "publisher": "Universities Press",
@@ -206,12 +206,12 @@
       "prg-msc-cs"
     ],
     "price": 295,
-    "addedOn": "2024-06-09"
+    "addedOn": "2023-07-02"
   },
   {
     "id": "bok-12",
     "collegeId": "col-1",
-    "accessionNo": "ACC/12832",
+    "accessionNo": "ACC/12244",
     "title": "Quantitative Aptitude for Competitive Examinations",
     "author": "R.S. Aggarwal",
     "publisher": "S. Chand",
@@ -227,6 +227,6 @@
       "prg-msc-cs"
     ],
     "price": 545,
-    "addedOn": "2025-05-03"
+    "addedOn": "2025-10-23"
   }
 ]

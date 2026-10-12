@@ -6,8 +6,8 @@
     "shortName": "ESE Sem 1",
     "semester": 1,
     "academicYear": "2026-27",
-    "startsOn": "2024-09-22",
-    "endsOn": "2024-10-06",
+    "startsOn": "2024-09-23",
+    "endsOn": "2024-10-07",
     "published": true
   },
   {
@@ -17,8 +17,8 @@
     "shortName": "ESE Sem 2",
     "semester": 2,
     "academicYear": "2026-27",
-    "startsOn": "2025-03-21",
-    "endsOn": "2025-04-04",
+    "startsOn": "2025-03-22",
+    "endsOn": "2025-04-05",
     "published": true
   },
   {
@@ -28,8 +28,8 @@
     "shortName": "ESE Sem 3",
     "semester": 3,
     "academicYear": "2026-27",
-    "startsOn": "2025-09-17",
-    "endsOn": "2025-10-01",
+    "startsOn": "2025-09-18",
+    "endsOn": "2025-10-02",
     "published": true
   },
   {
@@ -39,8 +39,8 @@
     "shortName": "ESE Sem 4",
     "semester": 4,
     "academicYear": "2026-27",
-    "startsOn": "2026-03-16",
-    "endsOn": "2026-03-30",
+    "startsOn": "2026-03-17",
+    "endsOn": "2026-03-31",
     "published": true
   },
   {
@@ -50,8 +50,8 @@
     "shortName": "ESE Sem 5",
     "semester": 5,
     "academicYear": "2026-27",
-    "startsOn": "2026-12-06",
-    "endsOn": "2026-12-21",
+    "startsOn": "2026-12-07",
+    "endsOn": "2026-12-22",
     "published": false
   }
 ]
